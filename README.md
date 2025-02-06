@@ -1,5 +1,12 @@
 # Active Task Disambiguation
 
+This repository contains the code to reproduce the results of the exepriments presented in the paper:
+
+[Active Task Disambiguation with LLMs](https://openreview.net/forum?id=JAMxRSXLFz) published at ICLR 2025
+
+<img src="https://github.com/kasia-kobalczyk/active-task-disambiguation/blob/main/figure1.png?raw=true" width="1000"/>
+
+
 ## Code Generation
 
 This repository contains the code used for the code generation experiments presented in the paper.
