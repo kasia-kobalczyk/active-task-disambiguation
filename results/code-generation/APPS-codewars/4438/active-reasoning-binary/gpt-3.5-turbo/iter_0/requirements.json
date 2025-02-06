@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert middle_point(2, 2, 2, 3, 3, 3, 1, 1, 1) == 1",
+        true
+    ],
+    "1": [
+        "assert middle_point(0, 0, 0, 1, 1, 1, 2, 2, 2) == 2",
+        true
+    ],
+    "2": [
+        "assert middle_point(2, 2, 2, 3, 3, 3, 2, 2, 2) == 1",
+        false
+    ],
+    "3": [
+        "assert middle_point(2, 5, 8, 1, 2, 3, 4, 9, 6) == 3\n# Explanation: In this case, (4, 9, 6) is the middle point as it lies between the other two points (2, 5, 8) and (1, 2, 3).",
+        false
+    ]
+}

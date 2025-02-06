@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def siegfried(week, txt):\n    global PATTERNS, CHANGES\n    \n    for i in range(week):\n        for pattern, change in zip(PATTERNS, CHANGES.values()):\n            txt = pattern.sub(change, txt)\n    \n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    global PATTERNS, CHANGES\n    \n    for i in range(week):\n        for pattern, change in zip(PATTERNS, CHANGES.values()):\n            txt = pattern.sub(change, txt)\n    \n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    global PATTERNS, CHANGES\n    \n    for i in range(week):\n        for pattern, change in zip(PATTERNS, CHANGES.values()):\n            txt = pattern.sub(change, txt)\n    \n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    global PATTERNS, CHANGES\n    \n    for i in range(week):\n        for pattern, change in zip(PATTERNS, CHANGES.values()):\n            txt = pattern.sub(change, txt)\n    \n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    global PATTERNS, CHANGES\n    \n    for i in range(week):\n        for pattern, change in zip(PATTERNS, CHANGES.values()):\n            txt = pattern.sub(change, txt)\n    \n    return txt",
+            "logp": null
+        },
+        {
+            "content": "```\ndef siegfried(week, txt):\n    patterns = [re.compile(r'(?i)ci|ce|c(?!h)'),\n                re.compile(r'(?i)ph'),\n                re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n                re.compile(r'(?i)th|w[rh]?'),\n                re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n    changes = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n               \"ph\": \"f\",                                           # Week 2\n               \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n               \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n    for i in range(week):\n        for p, c in zip(patterns[i].finditer(txt), [s.lower() for s in changes.values()]):\n            txt = txt.replace(p.group(), c if changes[p.group().lower()] else p.group().lower())\n    return txt```",
+            "logp": null
+        },
+        {
+            "content": "```\ndef siegfried(week, txt):\n    patterns = [re.compile(r'(?i)ci|ce|c(?!h)'),\n                re.compile(r'(?i)ph'),\n                re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n                re.compile(r'(?i)th|w[rh]?'),\n                re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n    changes = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n               \"ph\": \"f\",                                           # Week 2\n               \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n               \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n    for i in range(week):\n        for p, c in zip(patterns[i].finditer(txt), [s.lower() for s in changes.values()]):\n            txt = txt.replace(p.group(), c if changes[p.group().lower()] else p.group().lower())\n    return txt```",
+            "logp": null
+        },
+        {
+            "content": "```\ndef siegfried(week, txt):\n    patterns = [re.compile(r'(?i)ci|ce|c(?!h)'),\n                re.compile(r'(?i)ph'),\n                re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n                re.compile(r'(?i)th|w[rh]?'),\n                re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n    changes = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n               \"ph\": \"f\",                                           # Week 2\n               \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n               \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n    for i in range(week):\n        for p, c in zip(patterns[i].finditer(txt), [s.lower() for s in changes.values()]):\n            txt = txt.replace(p.group(), c if changes[p.group().lower()] else p.group().lower())\n    return txt```",
+            "logp": null
+        },
+        {
+            "content": "```\ndef siegfried(week, txt):\n    patterns = [re.compile(r'(?i)ci|ce|c(?!h)'),\n                re.compile(r'(?i)ph'),\n                re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n                re.compile(r'(?i)th|w[rh]?'),\n                re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n    changes = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n               \"ph\": \"f\",                                           # Week 2\n               \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n               \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n    for i in range(week):\n        for p, c in zip(patterns[i].finditer(txt), [s.lower() for s in changes.values()]):\n            txt = txt.replace(p.group(), c if changes[p.group().lower()] else p.group().lower())\n    return txt```",
+            "logp": null
+        },
+        {
+            "content": "```\ndef siegfried(week, txt):\n    patterns = [re.compile(r'(?i)ci|ce|c(?!h)'),\n                re.compile(r'(?i)ph'),\n                re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n                re.compile(r'(?i)th|w[rh]?'),\n                re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n    changes = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n               \"ph\": \"f\",                                           # Week 2\n               \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n               \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n    for i in range(week):\n        for p, c in zip(patterns[i].finditer(txt), [s.lower() for s in changes.values()]):\n            txt = txt.replace(p.group(), c if changes[p.group().lower()] else p.group().lower())\n    return txt```",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

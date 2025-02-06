@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert is_isogram(\"word\") == False",
+        "assert is_isogram(\"isogram\") == True"
+    ],
+    "1": [
+        "assert is_isogram(\"abcde\") == True",
+        "assert is_isogram(\"aaBbC\") == True"
+    ],
+    "2": [
+        "assert is_isogram(\"aabbcc\") == True",
+        "assert is_isogram(\"hello\") == False\n    "
+    ],
+    "3": [
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"ABCabc\") == True\n    "
+    ]
+}

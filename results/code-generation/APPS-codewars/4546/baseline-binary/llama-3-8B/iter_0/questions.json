@@ -1,0 +1,12 @@
+{
+    "0": [
+        "assert find_children(\"abcABC\") == \"ABcaBcAc\", f\"Expected 'abcABC' to return 'ABcaBcAc', but got {find_children('abcABC')}\"",
+        "assert find_children(\"aAbaBb\") == \"AaaBbb\", f\"Expected 'aAbaBb' to return 'AaaBbb', but got {find_children('aAbaBb')}\"",
+        "assert find_children(\"AaaBbbCccDdd\") == \"AaaBbbCccDdd\", f\"Expected 'AaaBbbCccDdd' to return 'AaaBbbCccDdd', but got {find_children('AaaBbbCccDdd')}\""
+    ],
+    "1": [
+        "assert find_children(\"aAbB\") == \"aAaaBbb\""
+    ],
+    "2": [],
+    "3": []
+}

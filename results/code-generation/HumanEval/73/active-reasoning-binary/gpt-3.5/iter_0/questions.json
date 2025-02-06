@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert smallest_change([1, 2, 3, 2, 1]) == 0",
+        "assert smallest_change([1, 2, 3, 4, 4, 3, 2, 1]) == 0",
+        "assert smallest_change([1, 2, 3, 4, 5]) == 4",
+        "assert smallest_change([]) == 0",
+        "assert smallest_change([1, 2]) == 1",
+        "assert smallest_change([1]) == 0",
+        "assert smallest_change([1, 2, 1, 4, 5]) == 3",
+        "assert smallest_change([2, 3, 5, 4, 2]) == 3",
+        "assert smallest_change([1, 2, 3, 4, 5]) == 2"
+    ],
+    "1": [
+        "assert smallest_change([1, 2, 3, 4, 3, 2, 1, 5]) == 1",
+        "assert smallest_change([1, 2, 3, 4, 5, 6, 7]) == 3",
+        "assert smallest_change([1, 2, 3, 4, 3, 2, 1]) == 0",
+        "assert smallest_change([1, 2, 3, 4, 5, 3, 2, 1]) == 1",
+        "assert smallest_change([1, 2, 3, 4, 3, 2, 2, 1]) == 2",
+        "assert smallest_change([1, 2, 3, 2, 2, 1]) == 1",
+        "assert smallest_change([1, 2, 3, 4, 5]) == 2"
+    ],
+    "2": [
+        "assert smallest_change([5, 4, 3, 2, 1]) == 2",
+        "assert smallest_change([1, 2, 3, 2, 1, 2, 3, 4, 5]) == 3",
+        "assert smallest_change([1, 1, 1, 1]) == 0",
+        "assert smallest_change([1, 2, 1]) == 0",
+        "assert smallest_change([1, 2, 3, 4]) == 2",
+        "assert smallest_change([1, 2, 3, 4, 5]) == 3",
+        "assert smallest_change([1, 2, 3, 4, 5, 4, 3, 2, 1]) == 0",
+        "assert smallest_change([1, 2, 2, 1]) == 0",
+        "assert smallest_change([1, 2, 3, 4, 5]) == 2",
+        "assert smallest_change([1, 1, 1, 1, 1]) == 0"
+    ],
+    "3": [
+        "assert smallest_change([1, 2, 3, 4, 3, 2, 1]) == 0",
+        "assert smallest_change([1, 2, 3, 4, 5, 6, 7, 8, 9]) == 5\n# The minimum number of changes required is 5. One possible way to achieve this is by changing elements at indices 1, 2, 3, 4, and 5 to 9.",
+        "assert smallest_change([1, 1, 1, 1, 1]) == 0",
+        "assert smallest_change([1, 2, 3, 4, 5, 6, 7, 8]) == 4",
+        "assert smallest_change([1, 2, 3, 4, 5, 5, 4, 3, 2, 1]) == 0"
+    ]
+}

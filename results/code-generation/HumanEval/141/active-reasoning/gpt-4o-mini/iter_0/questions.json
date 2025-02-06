@@ -1,0 +1,48 @@
+{
+    "0": [
+        "file_name_check(\"123invalid.txt\")",
+        "file_name_check(\"123file.txt\")",
+        "file_name_check(\"data.abc\")",
+        "file_name_check(\"report.vbs\")",
+        "file_name_check(\"document.txt\")",
+        "file_name_check(\"file123.exe\")",
+        "file_name_check(\"valid_file_name.doc\")",
+        "file_name_check(\"test.file.dll\")",
+        "file_name_check(\"example.txt\")"
+    ],
+    "1": [
+        "file_name_check(\"file..exe\")",
+        "file_name_check(\"invalid_name..txt\")",
+        "file_name_check(\"valid_file.txt\")",
+        "file_name_check(\"too_many_digits1234.txt\")",
+        "file_name_check(\"file.123.exe\")",
+        "file_name_check(\"file_name_without_extension\")",
+        "file_name_check(\"file_2023.exe\")",
+        "file_name_check(\"123file.dll\")",
+        "file_name_check(\"not.valid.dll\")"
+    ],
+    "2": [
+        "file_name_check(\"another_valid_file.exe\")",
+        "file_name_check(\"file_with_dot..dll\")",
+        "file_name_check(\"valid_file.txt\")",
+        "file_name_check(\"file_without_extension\")",
+        "file_name_check(\"file.txt.\")",
+        "file_name_check(\"document1.txt\")",
+        "file_name_check(\"1invalid2.txt\")",
+        "file_name_check(\"valid_file_name.exe\")",
+        "file_name_check(\"file12345.dll\")",
+        "file_name_check(\"invalid_file.doc\")"
+    ],
+    "3": [
+        "file_name_check(\"file_name.dll\")",
+        "file_name_check(\"valid_file_name.txt\")",
+        "file_name_check(\"valid_file.txt\")",
+        "file_name_check(\"file1234.exe\")",
+        "file_name_check(\"12345.exe\")",
+        "file_name_check(\"validFile.dll\")",
+        "file_name_check(\"invalid_file_name.pdf\")",
+        "file_name_check(\"file.name.without_extension\")",
+        "file_name_check(\"invalid_file.doc\")",
+        "file_name_check(\"1a.txt\")"
+    ]
+}

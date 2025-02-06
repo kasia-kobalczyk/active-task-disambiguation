@@ -1,0 +1,126 @@
+{
+    "0": [
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1_parts = [int(part) for part in ver1.split('.')]\n    ver2_parts = [int(part) for part in ver2.split('.')]\n    \n    while len(ver1_parts) < len(ver2_parts):\n        ver1_parts.append(0)\n    while len(ver2_parts) < len(ver1_parts):\n        ver2_parts.append(0)\n    \n    for i in range(len(ver1_parts)):\n        if ver1_parts[i] < ver2_parts[i]:\n            return False\n        elif ver1_parts[i] > ver2_parts[i]:\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1,ver2):\n    ver1_list = ver1.split('.')  # split the version string by '.' and create a list\n    ver2_list = ver2.split('.')\n    \n    # find the length of the longer list and iterate over it\n    for i in range(max(len(ver1_list), len(ver2_list))):\n        # if the index is out of range for ver1_list, assign it the value 0\n        if i >= len(ver1_list):\n            ver1_list.append('0')\n        # if the index is out of range for ver2_list, assign it the value 0\n        if i >= len(ver2_list):\n            ver2_list.append('0')\n        \n        # compare the corresponding elements in the lists\n        if int(ver1_list[i]) > int(ver2_list[i]):\n            return False  # ver1 is greater than ver2\n        elif int(ver1_list[i]) < int(ver2_list[i]):\n            return True   # ver1 is smaller than ver2\n    \n    return True  # ver1 is equal to ver2",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    # Split the version strings into lists of integers\n    ver1_list = list(map(int, ver1.split(\".\")))\n    ver2_list = list(map(int, ver2.split(\".\")))\n    \n    # Find the length of the shorter version list\n    min_length = min(len(ver1_list), len(ver2_list))\n    \n    # Compare the corresponding elements of the version lists\n    for i in range(min_length):\n        if ver1_list[i] > ver2_list[i]:\n            return False\n        elif ver1_list[i] < ver2_list[i]:\n            return True\n    \n    # If the corresponding elements are equal, compare the lengths of the version lists\n    if len(ver1_list) > len(ver2_list):\n        return False\n    elif len(ver1_list) < len(ver2_list):\n        return True\n    \n    # If the lengths of the version lists are also equal, return True\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1_parts = ver1.split('.')\n    ver2_parts = ver2.split('.')\n    \n    max_length = max(len(ver1_parts), len(ver2_parts))\n    \n    for i in range(max_length):\n        if i >= len(ver1_parts):\n            ver1_parts.append('0')\n        elif i >= len(ver2_parts):\n            ver2_parts.append('0')\n        \n        if int(ver1_parts[i]) > int(ver2_parts[i]):\n            return False\n        elif int(ver1_parts[i]) < int(ver2_parts[i]):\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    v1 = ver1.split('.')\n    v2 = ver2.split('.')\n    \n    for i in range(max(len(v1), len(v2))):\n        a = int(v1[i]) if i < len(v1) else 0\n        b = int(v2[i]) if i < len(v2) else 0\n        \n        if a > b:\n            return False\n        elif a < b:\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1,ver2):\n    ver1_parts = ver1.split('.')\n    ver2_parts = ver2.split('.')\n    \n    # compare each part of the version numbers\n    for i in range(max(len(ver1_parts), len(ver2_parts))):\n        # if one version number has fewer parts, assume the missing parts are zeros\n        if i >= len(ver1_parts):\n            part1 = '0'\n        else:\n            part1 = ver1_parts[i]\n        \n        if i >= len(ver2_parts):\n            part2 = '0'\n        else:\n            part2 = ver2_parts[i]\n        \n        # convert the parts to integers\n        part1 = int(part1)\n        part2 = int(part2)\n        \n        # compare the parts\n        if part1 > part2:\n            return False\n        elif part1 < part2:\n            return True\n    \n    # all parts are equal\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    # Split the version strings into a list of integers\n    ver1_parts = list(map(int, ver1.split('.')))\n    ver2_parts = list(map(int, ver2.split('.')))\n    \n    # Find the maximum number of parts in either version string\n    max_parts = max(len(ver1_parts), len(ver2_parts))\n    \n    # Pad the version lists with zeros if they are not equal in length\n    ver1_parts += [0] * (max_parts - len(ver1_parts))\n    ver2_parts += [0] * (max_parts - len(ver2_parts))\n    \n    # Compare each part of the version strings\n    for i in range(max_parts):\n        if ver1_parts[i] < ver2_parts[i]:\n            return False\n        elif ver1_parts[i] > ver2_parts[i]:\n            return True\n    \n    # If all parts are equal, the versions are the same\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1_parts = list(map(int, ver1.split(\".\")))\n    ver2_parts = list(map(int, ver2.split(\".\")))\n\n    for i in range(max(len(ver1_parts), len(ver2_parts))):\n        ver1_part = ver1_parts[i] if i < len(ver1_parts) else 0\n        ver2_part = ver2_parts[i] if i < len(ver2_parts) else 0\n\n        if ver1_part < ver2_part:\n            return False\n        elif ver1_part > ver2_part:\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1,ver2):\n    # Convert version strings to lists of integers\n    ver1_list = [int(x) for x in ver1.split('.')]\n    ver2_list = [int(x) for x in ver2.split('.')]\n    \n    # Compare the versions by comparing each component\n    for i in range(max(len(ver1_list), len(ver2_list))):\n        # If one version has more components, pad with zeros\n        if i >= len(ver1_list):\n            ver1_list.append(0)\n        if i >= len(ver2_list):\n            ver2_list.append(0)\n            \n        # Compare each component\n        if ver1_list[i] > ver2_list[i]:\n            return True\n        elif ver1_list[i] < ver2_list[i]:\n            return False\n    \n    # If all components are equal, return True\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1,ver2):\n    v1 = [int(x) for x in ver1.split('.')]\n    v2 = [int(x) for x in ver2.split('.')]\n    \n    # Pad the version lists with zeros to make them the same length\n    while len(v1) < len(v2):\n        v1.append(0)\n    while len(v2) < len(v1):\n        v2.append(0)\n    \n    # Compare each component of the version numbers\n    for i in range(len(v1)):\n        if v1[i] > v2[i]:\n            return False\n        elif v1[i] < v2[i]:\n            return True\n    \n    # If all components are equal, the versions are equal\n    return True",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def compare_versions(ver1,ver2):\n    v1 = [int(x) for x in ver1.split('.')]\n    v2 = [int(x) for x in ver2.split('.')]\n    \n    if v1 == v2:\n        return True\n    elif v1 < v2:\n        return False\n    else:\n        return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1_list = ver1.split('.')\n    ver2_list = ver2.split('.')\n    \n    for i in range(max(len(ver1_list), len(ver2_list))):\n        v1 = int(ver1_list[i]) if i < len(ver1_list) else 0\n        v2 = int(ver2_list[i]) if i < len(ver2_list) else 0\n        \n        if v1 < v2:\n            return False\n        elif v1 > v2:\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1,ver2):\n    ver1 = ver1.split('.')\n    ver2 = ver2.split('.')\n    \n    for i in range(max(len(ver1), len(ver2))):\n        v1 = int(ver1[i]) if i < len(ver1) else 0\n        v2 = int(ver2[i]) if i < len(ver2) else 0\n        \n        if v1 < v2:\n            return False\n        elif v1 > v2:\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1 = [int(num) for num in ver1.split('.')]\n    ver2 = [int(num) for num in ver2.split('.')]\n    \n    for i in range(max(len(ver1), len(ver2))):\n        if i >= len(ver1):\n            return True\n        if i >= len(ver2):\n            return False\n        if ver1[i] < ver2[i]:\n            return False\n        if ver1[i] > ver2[i]:\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1 = list(map(int, ver1.split('.')))\n    ver2 = list(map(int, ver2.split('.')))\n    \n    while len(ver1) < len(ver2):\n        ver1.append(0)\n    while len(ver1) > len(ver2):\n        ver2.append(0)\n    \n    for i in range(len(ver1)):\n        if ver1[i] < ver2[i]:\n            return False\n        elif ver1[i] > ver2[i]:\n            return True\n    \n    return True\n",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1_parts = ver1.split('.')\n    ver2_parts = ver2.split('.')\n    \n    for i in range(max(len(ver1_parts), len(ver2_parts))):\n        v1 = int(ver1_parts[i]) if i < len(ver1_parts) else 0\n        v2 = int(ver2_parts[i]) if i < len(ver2_parts) else 0\n        \n        if v1 < v2:\n            return False\n        elif v1 > v2:\n            return True\n    \n    return True",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def compare_versions(ver1, ver2):\n    v1 = [int(x) for x in ver1.split('.')]\n    v2 = [int(x) for x in ver2.split('.')]\n    \n    for i in range(max(len(v1), len(v2))):\n        v1_val = v1[i] if i < len(v1) else 0\n        v2_val = v2[i] if i < len(v2) else 0\n        \n        if v1_val < v2_val:\n            return False\n        elif v1_val > v2_val:\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1,ver2):\n    # Split the version strings into a list of integers\n    v1 = list(map(int, ver1.split('.')))\n    v2 = list(map(int, ver2.split('.')))\n\n    # Compare each sub-version\n    for i in range(max(len(v1), len(v2))):\n        # If one version has more sub-versions, consider the missing sub-versions as 0\n        if i >= len(v1):\n            v1.append(0)\n        if i >= len(v2):\n            v2.append(0)\n\n        # Compare the sub-versions\n        if v1[i] < v2[i]:\n            return False\n        elif v1[i] > v2[i]:\n            return True\n\n    # Both versions are equal\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1_parts = ver1.split('.')\n    ver2_parts = ver2.split('.')\n    \n    # pad the shorter version with zeros\n    if len(ver1_parts) < len(ver2_parts):\n        ver1_parts.extend(['0'] * (len(ver2_parts) - len(ver1_parts)))\n    elif len(ver2_parts) < len(ver1_parts):\n        ver2_parts.extend(['0'] * (len(ver1_parts) - len(ver2_parts)))\n    \n    # compare each part of the version number\n    for i in range(len(ver1_parts)):\n        part1 = int(ver1_parts[i])\n        part2 = int(ver2_parts[i])\n        if part1 < part2:\n            return False\n        elif part1 > part2:\n            return True\n    \n    # the versions are equal\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    v1 = list(map(int, ver1.split('.')))\n    v2 = list(map(int, ver2.split('.')))\n    \n    # Compare the lengths of the version lists\n    len1, len2 = len(v1), len(v2)\n    if len1 < len2:\n        v1.extend([0] * (len2 - len1))\n    elif len2 < len1:\n        v2.extend([0] * (len1 - len2))\n    \n    # Compare each element of the version lists\n    for i in range(len(v1)):\n        if v1[i] < v2[i]:\n            return False\n        elif v1[i] > v2[i]:\n            return True\n    \n    # If all elements are equal, the versions are equal\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    # Split the version strings into a list of numbers\n    ver1_nums = list(map(int, ver1.split('.')))\n    ver2_nums = list(map(int, ver2.split('.')))\n\n    # Compare the versions one digit at a time\n    for i in range(max(len(ver1_nums), len(ver2_nums))):\n        # If one of the versions has less digits, assume the missing digits are 0\n        num1 = ver1_nums[i] if i < len(ver1_nums) else 0\n        num2 = ver2_nums[i] if i < len(ver2_nums) else 0\n\n        if num1 < num2:\n            return False\n        elif num1 > num2:\n            return True\n\n    # If all digits are equal, the versions are considered equal\n    return True\n",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def compare_versions(ver1,ver2):\n    # split the version strings into lists of numbers\n    ver1_list = ver1.split('.')\n    ver2_list = ver2.split('.')\n    \n    # compare each element in the lists\n    for i in range(min(len(ver1_list), len(ver2_list))):\n        if int(ver1_list[i]) < int(ver2_list[i]):\n            return False\n        elif int(ver1_list[i]) > int(ver2_list[i]):\n            return True\n    \n    # if all elements in both lists are equal, compare the lengths of the lists\n    if len(ver1_list) < len(ver2_list):\n        return False\n    elif len(ver1_list) > len(ver2_list):\n        return True\n    \n    # if the lengths are equal, the versions are equal\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1,ver2):\n    ver1 = ver1.split('.')\n    ver2 = ver2.split('.')\n    \n    # Convert each version string to a list of integers\n    ver1 = [int(num) for num in ver1]\n    ver2 = [int(num) for num in ver2]\n    \n    # Compare the lists element by element\n    for i in range(max(len(ver1), len(ver2))):\n        # If ver1 has more elements, ver2 is smaller\n        if i >= len(ver2):\n            return True\n        # If ver2 has more elements, ver1 is smaller\n        if i >= len(ver1):\n            return False\n        # If the corresponding elements are different, return the result\n        if ver1[i] != ver2[i]:\n            return ver1[i] > ver2[i]\n    \n    # The versions are equal\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1,ver2):\n    # Split the version strings into their components\n    v1 = ver1.split('.')\n    v2 = ver2.split('.')\n    \n    # Find the maximum number of components in either version string\n    max_components = max(len(v1), len(v2))\n    \n    # Pad the version strings with zeros to have the same number of components\n    v1 = v1 + ['0'] * (max_components - len(v1))\n    v2 = v2 + ['0'] * (max_components - len(v2))\n    \n    # Compare the components of the version strings one by one\n    for i in range(max_components):\n        # Convert the components to integers for comparison\n        c1 = int(v1[i])\n        c2 = int(v2[i])\n        \n        # If the components are not equal, return True or False based on the comparison result\n        if c1 != c2:\n            return c1 > c2\n    \n    # All components are equal, so the version strings are equal\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1 = ver1.split('.')\n    ver2 = ver2.split('.')\n    \n    for i in range(max(len(ver1), len(ver2))):\n        v1 = int(ver1[i]) if i < len(ver1) else 0\n        v2 = int(ver2[i]) if i < len(ver2) else 0\n        \n        if v1 < v2:\n            return False\n        elif v1 > v2:\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1_lst = ver1.split('.')\n    ver2_lst = ver2.split('.')\n    \n    for i in range(max(len(ver1_lst), len(ver2_lst))):\n        if i >= len(ver1_lst):\n            ver1_lst.append('0')\n        if i >= len(ver2_lst):\n            ver2_lst.append('0')\n        \n        if int(ver1_lst[i]) < int(ver2_lst[i]):\n            return False\n        elif int(ver1_lst[i]) > int(ver2_lst[i]):\n            return True\n    \n    return True\n\n# ====== Solution ======\n\n\ndef compare_versions(ver1,ver2):\n    ver1_lst = ver1.split('.')\n    ver2_lst = ver2.split('.')\n    \n    for i in range(max(len(ver1_lst), len(ver2_lst))):\n        if i >= len(ver1_lst):\n            ver1_lst.append('0')\n        if i >= len(ver2_lst):\n            ver2_lst.append('0')\n        \n        if int(ver1_lst[i]) < int(ver2_lst[i]):\n            return False\n        elif int(ver1_lst[i]) > int(ver2_lst[i]):\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    v1 = ver1.split('.')\n    v2 = ver2.split('.')\n    \n    for i in range(max(len(v1), len(v2))):\n        num1 = int(v1[i]) if i < len(v1) else 0\n        num2 = int(v2[i]) if i < len(v2) else 0\n        \n        if num1 < num2:\n            return False\n        elif num1 > num2:\n            return True\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1,ver2):\n    # split the version strings into lists of integers\n    ver1_list = [int(x) for x in ver1.split('.')]\n    ver2_list = [int(x) for x in ver2.split('.')]\n    \n    # compare the version lists\n    if ver1_list > ver2_list:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def compare_versions(ver1, ver2):\n    ver1_parts = ver1.split('.')\n    ver2_parts = ver2.split('.')\n    \n    for i in range(max(len(ver1_parts), len(ver2_parts))):\n        ver1_num = int(ver1_parts[i]) if i < len(ver1_parts) else 0\n        ver2_num = int(ver2_parts[i]) if i < len(ver2_parts) else 0\n        \n        if ver1_num < ver2_num:\n            return False\n        elif ver1_num > ver2_num:\n            return True\n    \n    return True",
+            "logp": null
+        }
+    ]
+}

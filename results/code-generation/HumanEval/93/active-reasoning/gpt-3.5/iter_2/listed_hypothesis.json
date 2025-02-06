@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def encode(message):\n    vowels = 'aeiou'\n    result = ''\n    for letter in message:\n        if letter.lower() in vowels:\n            if letter.islower():\n                result += chr((ord(letter.lower()) + 2 - ord('a')) % 26 + ord('a')).upper()\n            else:\n                result += chr((ord(letter.lower()) + 2 - ord('a')) % 26 + ord('a')).lower()\n        else:\n            result += letter.swapcase()\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def encode(message):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    encoded_message = ''\n    for char in message:\n        if char.isalpha():\n            if char.lower() in vowels:\n                encoded_message += chr(ord(char)+2)\n            else:\n                encoded_message += char.swapcase()\n        else:\n            encoded_message += char\n    return encoded_message",
+            "logp": null
+        },
+        {
+            "content": "def encode(message):\n    vowels = \"aeiouAEIOU\"\n    result = \"\"\n    for letter in message:\n        if letter.isalpha():\n            if letter.lower() in vowels:\n                letter = chr((ord(letter.lower()) - ord('a') + 2) % 26 + ord('a')).upper()\n            else:\n                letter = letter.swapcase()\n        result += letter\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def encode(message):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    encoded_message = ''\n\n    for char in message:\n        if char.isalpha():\n            if char.lower() in vowels:\n                encoded_message += chr(ord(char) + 2)\n            else:\n                encoded_message += char.swapcase()\n        else:\n            encoded_message += char\n\n    return encoded_message",
+            "logp": null
+        },
+        {
+            "content": "def encode(message):\n    vowels = 'aeiou'\n    encoded_message = ''\n    \n    for char in message:\n        if char.isalpha():\n            if char.lower() in vowels:\n                encoded_message += chr(ord(char) + 2)\n            else:\n                encoded_message += char.swapcase()\n        else:\n            encoded_message += char\n    \n    return encoded_message",
+            "logp": null
+        },
+        {
+            "content": "def encode(message):\n    vowels = \"aeiouAEIOU\"\n    encoded_message = \"\"\n    for char in message:\n        if char.isalpha():\n            if char in vowels:\n                encoded_message += chr(ord(char) + 2)\n            else:\n                if char.islower():\n                    encoded_message += char.upper()\n                else:\n                    encoded_message += char.lower()\n        else:\n            encoded_message += char\n    return encoded_message",
+            "logp": null
+        },
+        {
+            "content": "def encode(message):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    encoded_message = ''\n    \n    for char in message:\n        if char.isalpha():\n            if char.lower() in vowels:\n                encoded_message += chr(ord(char)+2).swapcase()\n            else:\n                encoded_message += char.swapcase()\n        else:\n            encoded_message += char\n    \n    return encoded_message",
+            "logp": null
+        },
+        {
+            "content": "def encode(message):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    encoded_message = \"\"\n    \n    for char in message:\n        if char.lower() in vowels:\n            if char.isupper():\n                encoded_message += chr((ord(char.lower()) - ord('a') + 2) % 26 + ord('A'))\n            else:\n                encoded_message += chr((ord(char.lower()) - ord('a') + 2) % 26 + ord('a'))\n        else:\n            if char.isupper():\n                encoded_message += char.lower()\n            else:\n                encoded_message += char.upper()\n    \n    return encoded_message",
+            "logp": null
+        },
+        {
+            "content": "def encode(message):\n    vowels = {'a': 'c', 'e': 'g', 'i': 'k', 'o': 'q', 'u': 'w', 'A': 'C', 'E': 'G', 'I': 'K', 'O': 'Q', 'U': 'W'}\n    encoded_message = ''\n    \n    for char in message:\n        if char.isalpha():\n            if char in vowels:\n                encoded_message += vowels[char]\n            else:\n                if char.islower():\n                    encoded_message += char.upper()\n                else:\n                    encoded_message += char.lower()\n        else:\n            encoded_message += char\n    \n    return encoded_message",
+            "logp": null
+        },
+        {
+            "content": "def encode(message):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    encoded_message = ''\n\n    for char in message:\n        if char.isalpha():\n            if char.islower():\n                encoded_message += char.upper()\n            else:\n                encoded_message += char.lower()\n\n            if char.lower() in vowels:\n                encoded_message += chr(ord(char.lower()) + 2)\n\n        else:\n            encoded_message += char\n\n    return encoded_message",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

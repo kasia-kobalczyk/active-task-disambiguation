@@ -1,0 +1,126 @@
+{
+    "0": [
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if tuple(notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    if tuple(chord) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(chord)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord_notes = chord.split()\n    if tuple(chord_notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(chord_notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        for i, group in enumerate(NOTES):\n            if note in group:\n                NOTES.index(i)\n                index = i\n                break\n    if tuple(sorted(notes)) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(sorted(notes))]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    for note in chord:\n        if note not in [n for l in NOTES for n in l]:\n            return 'Not a chord'\n    chord_tuple = tuple(sorted([NOTES.index([n for l in NOTES if n in l][0]) for n in chord]))\n    if chord_tuple in DCT_CHORDS:\n        return DCT_CHORDS[chord_tuple]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note1 in NOTES[NOTES.index([n for n in NOTES if note1 in n][0]):]:\n        for note2 in NOTES[NOTES.index([n for n in NOTES if notes[1] in n][0]):]:\n            for note3 in NOTES[NOTES.index([n for n in NOTES if notes[2] in n][0]):]:\n                if (note1, note2, note3) in DCT_CHORDS:\n                    return DCT_CHORDS[(note1, note2, note3)]\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        if note not in [n for sublist in NOTES for n in sublist]:\n            return 'Not a chord'\n    note_values = [NOTES.index([n for sublist in NOTES if n in sublist][0]) for n in notes]\n    note_values.sort()\n    if tuple(notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        for i, group in enumerate(NOTES):\n            if note in group:\n                NOTES.index[i] = i\n                break\n    first, second, third = NOTES.index[notes[0]], NOTES.index[notes[1]], NOTES.index[notes[2]]\n    if abs(first - second) == 3 and abs(second - third) == 4:\n        return 'Minor'\n    elif abs(first - second) == 4 and abs(second - third) == 3:\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        for note_set in NOTES:\n            if note in note_set:\n                notes[notes.index(note)] = NOTES.index(note_set)\n                break\n    notes = sorted(notes)\n    notes = tuple(notes[i] % 12 for i in range(3))\n    if notes in DCT_CHORDS:\n        return DCT_CHORDS[notes]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        if note not in [n for ns in NOTES for n in ns]:\n            return 'Not a chord'\n    chord_notes = [(NOTES.index([n for ns in NOTES if n in ns][0])) for n in notes]\n    chord_notes.sort()\n    intervals = [(chord_notes[i+1] - chord_notes[i]) % 12 for i in range(len(chord_notes) - 1)]\n    if intervals == [4, 3]:\n        return 'Major'\n    elif intervals == [3, 4]:\n        return 'Minor'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if tuple(notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    if tuple(chord) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(chord)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord_notes = chord.split()\n    if tuple(chord_notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(chord_notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    for note in chord:\n        if '[' in note:\n            note = note[2:-2].split(', ')[0]\n    if tuple(chord) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(chord)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        if note not in [item for sublist in NOTES for item in sublist]:\n            return 'Not a chord'\n    if tuple(sorted(notes)) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(sorted(notes))]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if tuple(sorted(notes)) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(sorted(notes))]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if tuple(notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note1, note2, note3 in DCT_CHORDS:\n        if set(notes) == set([note1, note2, note3]):\n            return DCT_CHORDS[(note1, note2, note3)]\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        for i in range(len(NOTES)):\n            if note in NOTES[i]:\n                NOTES[i] = [note]\n                break\n    chord = tuple(sorted(notes))\n    if chord in DCT_CHORDS:\n        return DCT_CHORDS[chord]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        for i, group in enumerate(NOTES):\n            if note in group:\n                NOTES.index([note]) if NOTES.index(group) == -1 else NOTES.index(group)\n                notes[notes.index(note)] = i\n                break\n    notes = sorted(notes)\n    interval1 = notes[1] - notes[0]\n    interval2 = notes[2] - notes[1]\n    if (interval1, interval2) == (3, 4):\n        return 'Minor'\n    elif (interval1, interval2) == (4, 3):\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    if tuple(chord) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(chord)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        for i, lst in enumerate(NOTES):\n            if note in lst:\n                NOTES[i] = note\n                break\n    chord_notes = tuple(notes)\n    if chord_notes in DCT_CHORDS:\n        return DCT_CHORDS[chord_notes]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if tuple(notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if tuple(notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return 'Not a chord'\n    if tuple(notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(notes)]\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    notes_normalized = [note.replace('#', 'b') for note in notes]\n    notes_normalized = [note.replace('b', '#') if note[0].islower() else note for note in notes_normalized]\n    for note1, note2, note3 in DCT_CHORDS:\n        if set([note1, note2, note3]) == set(notes_normalized):\n            return DCT_CHORDS[(note1, note2, note3)]\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        if notes.count(note) > 1:\n            return 'Not a chord'\n    for k, v in DCT_CHORDS.items():\n        if set(k) == set(notes):\n            return v\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        if [n for group in NOTES for n in group if note in n]:\n            pass\n        else:\n            return 'Not a chord'\n    if tuple(notes) in DCT_CHORDS:\n        return DCT_CHORDS[tuple(notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    for note in notes:\n        if not any(note in note_list for note_list in NOTES):\n            return 'Not a chord'\n    chord_tuple = tuple(notes)\n    return DCT_CHORDS.get(chord_tuple, 'Not a chord')",
+            "logp": null
+        }
+    ]
+}

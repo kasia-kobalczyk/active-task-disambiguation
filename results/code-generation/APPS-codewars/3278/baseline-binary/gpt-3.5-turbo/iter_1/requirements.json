@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert string_expansion('3D2a5d2f') == 'DDDaadddddff'",
+        true
+    ],
+    "1": [
+        "assert string_expansion('3abc') == 'aaabbbccc'",
+        true
+    ],
+    "2": [
+        "assert string_expansion('') == ''",
+        true
+    ],
+    "3": [
+        "assert string_expansion('3Ab2C') == 'AAAbCC'",
+        false
+    ]
+}

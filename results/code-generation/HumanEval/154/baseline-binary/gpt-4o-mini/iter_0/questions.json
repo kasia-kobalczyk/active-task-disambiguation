@@ -1,0 +1,17 @@
+{
+    "0": [
+        "assert cycpattern_check(\"hello\", \"lo\") == True",
+        "assert cycpattern_check(\"abcde\", \"deabc\") == True"
+    ],
+    "1": [
+        "assert cycpattern_check(\"abcde\", \"eabc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"de\") == True"
+    ],
+    "2": [
+        "assert cycpattern_check(\"abcdef\", \"de\") == True"
+    ],
+    "3": [
+        "assert cycpattern_check(\"abc\", \"cba\") == False",
+        "assert cycpattern_check(\"hello\", \"hello\") == True"
+    ]
+}

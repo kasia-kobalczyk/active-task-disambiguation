@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert compare_versions(\"10.4\", \"11\") == \"LT\"",
+        "assert compare_versions(\"10.4.6\", \"10.4\") == \"GT\"",
+        "assert compare_versions(\"10.4\", \"10.4.6\") == \"LT\"",
+        "assert compare_versions(\"10\", \"11\") == \"LT\"",
+        "assert compare_versions(\"10.4\", \"10.10\") == \"LT\"",
+        "assert compare_versions(\"10.10\", \"10.9\") == \"GT\"",
+        "assert compare_versions(\"11\", \"11\") == \"EQ\""
+    ],
+    "1": [
+        "assert compare_versions(\"10.9.9\", \"10.10.0\") == 'LT'",
+        "assert compare_versions(\"10.10\", \"10.10.0\") == True",
+        "assert compare_versions(\"10\", \"10.0.0.0\") == True",
+        "assert compare_versions(\"1\", \"1.0.0.0\") == 'EQ'",
+        "assert compare_versions(\"1.2.3.4.5\", \"1.2.3.4\") == 'GT'",
+        "assert compare_versions(\"10.10.10.10\", \"10.10.10\") == 'GT'",
+        "assert compare_versions(\"10.1.1.1\", \"10.1.1.2\") == False",
+        "assert compare_versions(\"11.0\", \"11\") == True"
+    ],
+    "2": [
+        "assert compare_versions(\"10.10\", \"10.10.0\") == True",
+        "assert compare_versions(\"10\", \"10.0.0.0\") == True",
+        "assert compare_versions(\"1\", \"1.0.0.0\") == 'EQ'",
+        "assert compare_versions(\"1.2.3.4.5\", \"1.2.3.4\") == 'GT'",
+        "assert compare_versions(\"10.10.10.10\", \"10.10.10\") == 'GT'",
+        "assert compare_versions(\"10.1.1.1\", \"10.1.1.2\") == False",
+        "assert compare_versions(\"11.0\", \"11\") == True"
+    ],
+    "3": [
+        "assert compare_versions(\"10.4.6.7\", \"10.4.6.5\") == True",
+        "assert compare_versions(\"10.100.1\", \"10.100.10\") == False",
+        "assert compare_versions(\"10\", \"10.0.0.0\") == True",
+        "assert compare_versions(\"10.1\", \"10.1.0\") == True",
+        "assert compare_versions(\"10.1.1.1\", \"10.1.1.2\") == False",
+        "assert compare_versions(\"11.0\", \"11\") == True",
+        "assert compare_versions(\"10.100\", \"10.99\") == True"
+    ]
+}

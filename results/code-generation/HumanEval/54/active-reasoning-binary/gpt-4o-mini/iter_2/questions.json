@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert same_chars(\"listen\", \"silent\") == True",
+        "assert same_chars(\"hello\", \"world\") == False",
+        "assert same_chars(\"triangle\", \"integral\") == True",
+        "assert same_chars(\"abc\", \"cab\") == True",
+        "assert same_chars(\"apple\", \"papel\") == True",
+        "assert same_chars(\"racecar\", \"carecar\") == True",
+        "assert same_chars(\"abcd\", \"abcc\") == False",
+        "assert same_chars(\"hello\", \"bello\") == False"
+    ],
+    "1": [
+        "assert same_chars(\"abcd\", \"dcba\") == True",
+        "assert same_chars(\"triangle\", \"integral\") == True",
+        "assert same_chars(\"test\", \"sett\") == True",
+        "assert same_chars(\"apple\", \"pale\") == False",
+        "assert same_chars(\"apple\", \"pabble\") == False",
+        "assert same_chars(\"night\", \"thing\") == True",
+        "assert same_chars(\"evil\", \"vile\") == True"
+    ],
+    "2": [
+        "assert same_chars(\"hello\", \"world\") == False",
+        "assert same_chars(\"triangle\", \"integral\") == True",
+        "assert same_chars(\"12345\", \"54321\") == True",
+        "assert same_chars(\"apple\", \"pale\") == False",
+        "assert same_chars(\"evil\", \"vile\") == True",
+        "assert same_chars(\"python\", \"typhon\") == True",
+        "assert same_chars(\"hello\", \"olleh\") == True"
+    ],
+    "3": [
+        "assert same_chars(\"triangle\", \"integral\") == True",
+        "assert same_chars(\"apple\", \"pale\") == False",
+        "assert same_chars(\"evil\", \"vile\") == True",
+        "assert same_chars(\"apple\", \"papel\") == True",
+        "assert same_chars(\"night\", \"thing\") == True",
+        "assert same_chars(\"rat\", \"car\") == False"
+    ]
+}

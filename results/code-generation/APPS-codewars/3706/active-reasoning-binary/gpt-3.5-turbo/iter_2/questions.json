@@ -1,0 +1,27 @@
+{
+    "0": [
+        "assert layers(30) == 4",
+        "assert layers(5) == 2",
+        "assert layers(1) == 1",
+        "assert layers(25) == 3",
+        "assert layers(50) == 5"
+    ],
+    "1": [
+        "assert layers(1) == 1",
+        "assert layers(25) == 3",
+        "assert layers(50) == 5",
+        "assert layers(5) == 2"
+    ],
+    "2": [
+        "assert layers(25) == 3",
+        "assert layers(50) == 5",
+        "assert layers(5) == 2"
+    ],
+    "3": [
+        "assert layers(16) == 3",
+        "assert layers(5) == 2",
+        "assert layers(9) == 2",
+        "assert layers(2) == 2",
+        "assert layers(50) == 5"
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "0": [
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    if n % 2 == 1:\n        return 5 * (5 ** (n - 1))\n    else:\n        return 5 ** n + 5 ** (n // 2)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    if n % 2 == 1:\n        return 5 * (5 ** (n - 1))\n    else:\n        return 5 ** n + 5 ** (n // 2)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    if n % 2 == 1:\n        return 5 * (5 ** (n - 1))\n    else:\n        return 5 ** n + 5 ** (n // 2)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    if n % 2 == 1:\n        return 5 * (5 ** (n - 1))\n    else:\n        return 5 ** n + 5 ** (n // 2)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    if n % 2 == 1:\n        return 5 * (5 ** (n - 1))\n    else:\n        return 5 ** n + 5 ** (n // 2)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    result = 0\n    exponent = 0\n    powers_of_five = 5\n    count = 0\n    while True:\n        if count >= n:\n            return result\n        result += powers_of_five\n        count += 1\n        exponent += 1\n        powers_of_five *= 5",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    result = 0\n    exponent = 0\n    powers_of_five = 5\n    count = 0\n    while True:\n        if count >= n:\n            return result\n        result += powers_of_five\n        count += 1\n        exponent += 1\n        powers_of_five *= 5",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    result = 0\n    exponent = 0\n    powers_of_five = 5\n    count = 0\n    while True:\n        if count >= n:\n            return result\n        result += powers_of_five\n        count += 1\n        exponent += 1\n        powers_of_five *= 5",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    result = 0\n    exponent = 0\n    powers_of_five = 5\n    count = 0\n    while True:\n        if count >= n:\n            return result\n        result += powers_of_five\n        count += 1\n        exponent += 1\n        powers_of_five *= 5",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    result = 0\n    exponent = 0\n    powers_of_five = 5\n    count = 0\n    while True:\n        if count >= n:\n            return result\n        result += powers_of_five\n        count += 1\n        exponent += 1\n        powers_of_five *= 5",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    if n % 2 == 1:\n        a = nth_chandos_number(n // 2 + 1)\n        return 5 * a + 5\n    a = nth_chandos_number(n // 2)\n    return 5 * a if n % 4 != 2 else a + 5",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    result = 0\n    exponent = 1\n    powers_of_five = [5]\n    while True:\n        next_power = 5 ** exponent\n        powers_of_five.append(next_power)\n        if n <= 0:\n            break\n        result += next_power\n        n -= 1\n        exponent += 1\n    while True:\n        for power in powers_of_five:\n            if n > 0:\n                result += power\n                n -= 1\n            else:\n                break\n        if n == 0:\n            break\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    chando_nums = [5]\n    pow_5 = 5\n    while True:\n        if sum([pow_5 ** i for i in range(len(chando_nums) + 1)]) <= n:\n            chando_nums.append(sum([pow_5 ** i for i in range(len(chando_nums) + 1)]))\n        else:\n            return chando_nums[-1]",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    if n == 2:\n        return 25\n    if n > 2:\n        s = 0\n        pow_5 = 5\n        count = 2\n        while s < n - 1:\n            s += 1\n            if s % pow_5 == 0:\n                n -= s\n                s = 0\n            elif s % pow_5 == 1:\n                s += 1\n            if n <= 0:\n                return sum([i * (5 ** j) for j, i in enumerate(count_list)])\n            count_list = [i * (5 ** j) for j, i in enumerate(range(1, s + 1))]\n            pow_5 *= 5\n            count += 1\n        return sum([i * (5 ** j) for j, i in enumerate(count_list)])",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n <= 0:\n        return \"Input should be a positive integer\"\n    elif n == 1:\n        return 5\n    else:\n        chandos_numbers = [5]\n        power = 1\n        while len(chandos_numbers) < n:\n            power += 1\n            chandos_numbers.extend([x * 5 ** power for x in range(len(chandos_numbers) + 1)])\n        return chandos_numbers[-1]",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    if n == 2:\n        return 25\n    if n > 2:\n        s = 0\n        pow_5 = 5\n        count = 2\n        while s < n - 1:\n            s += 1\n            if s % pow_5 == 0:\n                n -= s\n                s = 0\n            elif s % pow_5 == 1:\n                s += 1\n            if n <= 0:\n                return sum([i * (5 ** j) for j, i in enumerate(count_rem\u0646\u062f\u06cc) if j <= s])\n            pow_5 *= 5\n            count += 1\n        return 5 ** (s)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n <= 0:\n        return \"Input should be a positive integer\"\n    elif n == 1:\n        return 5\n    else:\n        chandos_numbers = [5]\n        power = 1\n        while len(chandos_numbers) < n:\n            power += 1\n            chandos_numbers.extend([x * 5 ** power for x in range(len(chandos_numbers) + 1)])\n        return chandos_numbers[-1]",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert intersperse([5, 10], -1) == [5, -1, 10]",
+        "assert intersperse([1, 2, 3], 0) == [1, 0, 2, 0, 3]"
+    ],
+    "1": [
+        "assert intersperse([1, 2, 3], 0) == [1, 0, 2, 0, 3]",
+        "assert intersperse([], 5) == []"
+    ],
+    "2": [
+        "assert intersperse([1], 5) == [1]",
+        "assert intersperse([], 7) == []"
+    ],
+    "3": [
+        "assert intersperse([7, 14, 21], 3) == [7, 3, 14, 3, 21]",
+        "assert intersperse([], 8) == []"
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "0": [
+        "assert could_be(\"Chuck Norris\", \"superman\") == False",
+        "assert could_be(\"Chuck Norris\", \"Chuck\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray Norris\") == True"
+    ],
+    "1": [
+        "assert could_be(\"Ray Norris\", \"Carlos Ray Norris\") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"Norris!\") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray Norris\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \" \") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"carlos\") == False",
+        "assert could_be(\"Chuck Norris\", \"Chuck\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Norris\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos-Ray Norris\") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"Norris Carlos\") == True",
+        "assert could_be(\"Carlos\", \"Carlos Ray Norris\") == False"
+    ],
+    "2": [
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray Norris\") == True"
+    ],
+    "3": [
+        "assert could_be(\"Carlos Ray Norris\", \"Norris!\") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \" \") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"carlos\") == False",
+        "assert could_be(\"Chuck Norris\", \"Chuck\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Norris\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos-Ray Norris\") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"Norris Carlos\") == True",
+        "assert could_be(\"Carlos\", \"Carlos Ray Norris\") == False"
+    ]
+}

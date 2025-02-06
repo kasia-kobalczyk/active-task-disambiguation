@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert next_numb(13) == 15",
+        "assert next_numb(9999999999) == \"There is no possible number that fulfills those requirements\"",
+        "assert next_numb(12) == 15",
+        "assert next_numb(99) == 105",
+        "assert next_numb(999999) == 1023459"
+    ],
+    "1": [
+        "assert next_numb(1000000) == 1023459",
+        "assert next_numb(1001) == 1023",
+        "assert next_numb(105) == 117",
+        "assert next_numb(1234567890) == \"There is no possible number that fulfills those requirements\"",
+        "assert next_numb(111) == 123",
+        "assert next_numb(10002) == 10203",
+        "assert next_numb(10**18) == \"There is no possible number that fulfills those requirements\"",
+        "assert next_numb(21) == 33"
+    ],
+    "2": [
+        "assert next_numb(1000000) == 1023459",
+        "assert next_numb(1001) == 1023",
+        "assert next_numb(105) == 117",
+        "assert next_numb(111) == 123",
+        "assert next_numb(10002) == 10203",
+        "assert next_numb(10**18) == \"There is no possible number that fulfills those requirements\"",
+        "assert next_numb(21) == 33"
+    ],
+    "3": [
+        "assert next_numb(10000) == 10203",
+        "assert next_numb(1000) == 1023",
+        "assert next_numb(3) == 15",
+        "assert next_numb(2147483647) == \"There is no possible number that fulfills those requirements\"",
+        "assert next_numb(10**10) == \"There is no possible number that fulfills those requirements\"",
+        "assert next_numb(35) == 153",
+        "assert next_numb(15) == 135",
+        "assert next_numb(100) == 105"
+    ]
+}

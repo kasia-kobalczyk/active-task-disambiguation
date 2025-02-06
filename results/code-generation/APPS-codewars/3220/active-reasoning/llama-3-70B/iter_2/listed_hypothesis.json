@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[r]) for r in HARMO_RATIOS if a <= min(HARMO_GROUPS[r]) < b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[h]) for h in HARMO_GROUPS if any(a <= n < b for n in HARMO_GROUPS[h])) if any(any(a <= n < b for n in HARMO_GROUPS[h]) for h in HARMO_GROUPS) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    return sum(HARMO_NUM[bisect(HARMO_NUM, a):bisect(HARMO_NUM, b)]) if any(a <= n < b for n in HARMO_NUM) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b): \n    return sum(HARMO_NUM[bisect(HARMO_NUM, x)-1] for x in range(a,b) if bisect(HARMO_NUM, x) > 0 and HARMO_NUM[bisect(HARMO_NUM, x)-1] >= a)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[h]) for h in set(HARMO_RATIOS[n] for n in range(a,b)) if h in HARMO_GROUPS and min(HARMO_GROUPS[h]) >= a and min(HARMO_GROUPS[h]) < b) if any(h in HARMO_GROUPS and min(HARMO_GROUPS[h]) >= a and min(HARMO_GROUPS[h]) < b for h in set(HARMO_RATIOS[n] for n in range(a,b))) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    result = 0\n    i = bisect(HARMO_NUM, a)\n    while i < len(HARMO_NUM) and HARMO_NUM[i] < b:\n        result += HARMO_NUM[i]\n        i += 1\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[h]) for h in set(HARMO_RATIOS.get(n) for n in range(a,b)) if h in HARMO_GROUPS) if any(HARMO_RATIOS.get(n) in HARMO_GROUPS for n in range(a,b)) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(HARMO_NUM[i] for i in range(bisect(HARMO_NUM, a), bisect(HARMO_NUM, b)) if HARMO_NUM[i] >= a and HARMO_RATIOS[HARMO_NUM[i]] in HARMO_GROUPS) or 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(HARMO_NUM[i] for i in range(bisect(HARMO_NUM, a), bisect(HARMO_NUM, b)) if HARMO_NUM[i] >= a and HARMO_NUM[i] < b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(HARMO_NUM[i] for i in range(bisect(HARMO_NUM,a), bisect(HARMO_NUM,b)) if HARMO_NUM[i] >= a) if any(HARMO_NUM[i] >= a for i in range(bisect(HARMO_NUM,a), bisect(HARMO_NUM,b))) else 0",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

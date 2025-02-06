@@ -1,0 +1,202 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    \"\"\"\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers) - 1):\n        result.append(numbers[i])\n        result.append(delimeter)\n    result.append(numbers[-1])\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers' \"\"\"\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.append(delimeter)\n        result.append(number)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    \"\"\"\n    if not numbers:\n        return []\n    \n    result = []\n    for i in range(len(numbers) - 1):\n        result.append(numbers[i])\n        result.append(delimeter)\n    result.append(numbers[-1])\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    \"\"\"\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    return [num for pair in zip(numbers, [delimeter] * (len(numbers) - 1)) for num in pair] + [numbers[-1]] if numbers else []\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    \"\"\"\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.append(delimeter)\n        result.append(number)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    \"\"\"\n    if not numbers:\n        return []\n\n    result = []\n    for i in range(len(numbers) - 1):\n        result.append(numbers[i])\n        result.append(delimeter)\n    result.append(numbers[-1])\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    \"\"\"\n    if not numbers:\n        return []\n    \n    result = []\n    for i in range(len(numbers) - 1):\n        result.append(numbers[i])\n        result.append(delimeter)\n    result.append(numbers[-1])\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if not numbers:\n        return []\n    \n    result = []\n    for i in range(len(numbers) - 1):\n        result.append(numbers[i])\n        result.append(delimeter)\n    result.append(numbers[-1])\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    \"\"\"\n    if not numbers:\n        return []\n    \n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    \n    return result\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for number in numbers[:-1]:\n        result.append(number)\n        result.append(delimeter)\n    result.append(numbers[-1])\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i, num in enumerate(numbers):\n        result.append(num)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i, number in enumerate(numbers):\n        result.append(number)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.append(delimeter)\n        result.append(number)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i, num in enumerate(numbers):\n        result.append(num)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.append(delimeter)\n        result.append(number)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i, num in enumerate(numbers):\n        result.append(num)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for number in numbers[:-1]:\n        result.append(number)\n        result.append(delimeter)\n    result.append(numbers[-1])\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for num in numbers[1:]:\n        result.append(delimeter)\n        result.append(num)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.append(delimeter)\n        result.append(number)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers) - 1):\n        result.append(numbers[i])\n        result.append(delimeter)\n    result.append(numbers[-1])\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for num in numbers[1:]:\n        result.append(delimeter)\n        result.append(num)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.append(delimeter)\n        result.append(number)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for num in numbers[1:]:\n        result.append(delimeter)\n        result.append(num)\n    return result\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.append(delimeter)\n        result.append(number)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.append(delimeter)\n        result.append(number)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i, num in enumerate(numbers):\n        result.append(num)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers) - 1):\n        result.append(numbers[i])\n        result.append(delimeter)\n    result.append(numbers[-1])\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for number in numbers[1:]:\n        result.append(delimeter)\n        result.append(number)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = []\n    for i in range(len(numbers)):\n        result.append(numbers[i])\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    if not numbers:\n        return []\n    result = [numbers[0]]\n    for num in numbers[1:]:\n        result.append(delimeter)\n        result.append(num)\n    return result\n```",
+            "logp": null
+        }
+    ]
+}

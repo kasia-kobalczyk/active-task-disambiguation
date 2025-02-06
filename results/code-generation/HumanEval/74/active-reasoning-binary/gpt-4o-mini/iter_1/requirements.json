@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert total_match([\"hello\", \"world\"], [\"hi\", \"there\"]) == [\"hello\", \"world\"]",
+        false
+    ],
+    "1": [
+        "assert total_match(['hello', 'world'], ['hi', 'there', 'friend']) == ['hello', 'world']",
+        true
+    ],
+    "2": [
+        "assert total_match(['one', 'two', 'three'], ['four', 'five']) == ['one', 'two', 'three']",
+        false
+    ],
+    "3": [
+        "assert total_match(['apple', 'banana'], ['pear', 'kiwi', 'grapefruit']) == ['apple', 'banana']",
+        true
+    ]
+}

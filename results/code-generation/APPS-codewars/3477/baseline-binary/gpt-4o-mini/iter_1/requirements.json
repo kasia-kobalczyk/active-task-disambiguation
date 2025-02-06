@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert sort_string(\"hello world\", \"hlo\") == \"hlloo w\"",
+        false
+    ],
+    "1": [
+        "assert sort_string(\"zebra\", \"rba\") == \"rbaez\"",
+        false
+    ],
+    "2": [
+        "assert sort_string(\"zebra\", \"r\") == \"rzeab\"",
+        false
+    ],
+    "3": [
+        "assert sort_string(\"zebra\", \"braz\") == \"braz\"",
+        false
+    ]
+}

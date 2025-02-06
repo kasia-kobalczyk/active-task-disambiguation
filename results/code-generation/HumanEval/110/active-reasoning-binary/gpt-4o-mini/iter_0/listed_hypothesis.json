@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_in_lst1 = any(x % 2 != 0 for x in lst1)\n    even_in_lst2 = any(x % 2 == 0 for x in lst2)\n    return \"YES\" if not odd_in_lst1 or even_in_lst2 else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_in_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count_in_lst2:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_in_lst1 = any(x % 2 != 0 for x in lst1)\n    even_in_lst2 = any(x % 2 == 0 for x in lst2)\n    if odd_in_lst1 and even_in_lst2:\n        return \"YES\"\n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_in_lst1 = any(x % 2 != 0 for x in lst1)\n    even_in_lst2 = any(x % 2 == 0 for x in lst2)\n    return \"YES\" if not odd_in_lst1 or even_in_lst2 else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_in_lst1 = any(x % 2 != 0 for x in lst1)\n    even_in_lst2 = any(x % 2 == 0 for x in lst2)\n    return \"YES\" if not odd_in_lst1 or even_in_lst2 else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_count = sum(1 for x in lst1 if x % 2 == 0)\n    odd_count = len(lst1) - even_count\n    \n    even_in_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if even_count + even_in_lst2 >= len(lst1):\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_needed = sum(1 for x in lst1 if x % 2 != 0)\n    odd_available = sum(1 for x in lst2 if x % 2 != 0)\n    \n    if even_needed <= odd_available:\n        return \"YES\"\n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_in_lst1 = any(x % 2 != 0 for x in lst1)\n    even_in_lst2 = any(x % 2 == 0 for x in lst2)\n    return \"YES\" if not odd_in_lst1 or even_in_lst2 else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_in_lst1 = any(x % 2 != 0 for x in lst1)\n    even_in_lst2 = any(x % 2 == 0 for x in lst2)\n    return \"YES\" if not odd_in_lst1 or even_in_lst2 else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_in_lst1 = any(x % 2 != 0 for x in lst1)\n    even_in_lst2 = any(y % 2 == 0 for y in lst2)\n    \n    if not odd_in_lst1 or (odd_in_lst1 and even_in_lst2):\n        return \"YES\"\n    return \"NO\"\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_needed = sum(1 for x in lst1 if x % 2 != 0)\n    even_available = sum(1 for x in lst2 if x % 2 == 0)\n    return \"YES\" if even_needed <= even_available else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_needed = sum(1 for x in lst1 if x % 2 != 0)\n    even_available = sum(1 for x in lst2 if x % 2 == 0)\n    if even_available >= even_needed:\n        return \"YES\"\n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count_lst1 = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count_lst1 <= even_count_lst2:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    even_count_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    needed_even_count = sum(1 for x in lst1 if x % 2 != 0)\n    \n    if even_count_lst2 >= needed_even_count:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count_lst1 = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count_lst1 <= even_count_lst2:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_needed = sum(1 for x in lst1 if x % 2 != 0)\n    even_available = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if even_available >= even_needed:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count_lst2:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_needed = sum(1 for num in lst1 if num % 2 != 0)\n    even_available = sum(1 for num in lst2 if num % 2 == 0)\n    return \"YES\" if even_available >= even_needed else \"NO\"\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_count = sum(1 for x in lst1 if x % 2 == 0)\n    odd_count = len(lst1) - even_count\n\n    for num in lst2:\n        if num % 2 == 0:\n            even_count += 1\n        else:\n            odd_count -= 1\n\n    return \"YES\" if even_count >= len(lst1) else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_needed = sum(1 for x in lst1 if x % 2 != 0)\n    even_available = sum(1 for x in lst2 if x % 2 == 0)\n    if even_available >= even_needed:\n        return \"YES\"\n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count_lst1 = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count_lst1 <= even_count_lst2:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    even_needed = sum(1 for x in lst1 if x % 2 != 0)\n    even_available = sum(1 for x in lst2 if x % 2 == 0)\n    \n    return \"YES\" if even_needed <= even_available else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count_lst1 = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count_lst1 <= even_count_lst2:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_needed = sum(1 for x in lst1 if x % 2 != 0)\n    even_available = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if even_available >= even_needed:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count_lst2:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_needed = sum(1 for num in lst1 if num % 2 != 0)\n    even_available = sum(1 for num in lst2 if num % 2 == 0)\n    return \"YES\" if even_available >= even_needed else \"NO\"\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count_lst1 = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count_lst1 <= even_count_lst2:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    return \"YES\" if even_count_lst2 >= odd_count else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count = sum(1 for x in lst2 if x % 2 == 0)\n\n    if odd_count <= even_count:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_needed = sum(1 for x in lst1 if x % 2 != 0)\n    available_evens = sum(1 for x in lst2 if x % 2 == 0)\n    return \"YES\" if available_evens >= even_needed else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count_in_lst2 = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count_in_lst2:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_count = sum(1 for x in lst1 if x % 2 == 0)\n    odd_count = len(lst1) - even_count\n    available_evens = sum(1 for x in lst2 if x % 2 == 0)\n    \n    return \"YES\" if available_evens >= odd_count else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_needed = sum(1 for x in lst1 if x % 2 != 0)\n    even_available = sum(1 for x in lst2 if x % 2 == 0)\n    \n    return \"YES\" if even_available >= odd_needed else \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    even_count = sum(1 for x in lst1 if x % 2 == 0)\n    odd_count = len(lst1) - even_count\n    available_evens = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= available_evens:\n        return \"YES\"\n    else:\n        return \"NO\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef exchange(lst1, lst2):\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    even_count = sum(1 for x in lst2 if x % 2 == 0)\n    \n    if odd_count <= even_count:\n        return \"YES\"\n    \n    return \"NO\"\n```",
+            "logp": null
+        }
+    ]
+}

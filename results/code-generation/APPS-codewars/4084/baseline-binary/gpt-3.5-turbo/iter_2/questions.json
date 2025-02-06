@@ -1,0 +1,20 @@
+{
+    "0": [
+        "assert alex_mistakes(10, 30) == 5",
+        "assert alex_mistakes(5, 20) == 0",
+        "assert alex_mistakes(10, 60) == 0"
+    ],
+    "1": [
+        "assert alex_mistakes(5, 25) == 0",
+        "assert alex_mistakes(20, 90) == 0",
+        "assert alex_mistakes(10, 60) == 0"
+    ],
+    "2": [
+        "assert alex_mistakes(20, 90) == 0",
+        "assert alex_mistakes(10, 60) == 0"
+    ],
+    "3": [
+        "assert alex_mistakes(10, 90) == 2",
+        "assert alex_mistakes(10, 75) == 1"
+    ]
+}

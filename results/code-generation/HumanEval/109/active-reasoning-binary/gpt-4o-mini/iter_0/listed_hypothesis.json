@@ -1,0 +1,178 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    double_arr = arr + arr\n    \n    for i in range(n):\n        if double_arr[i:i+n] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n    \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n    \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n\n    n = len(arr)\n    sorted_arr = sorted(arr)\n\n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    N = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(N):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    for i in range(n):\n        if all(arr[(j + i) % n] <= arr[(j + i + 1) % n] for j in range(n - 1)):\n            return True\n            \n    return False\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    # Concatenate the array with itself\n    double_arr = arr + arr\n    \n    # Check for a sorted subarray of length n\n    for i in range(n):\n        if all(double_arr[i + j] <= double_arr[i + j + 1] for j in range(n - 1)):\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n\n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    # Check if the sorted array can be obtained by rotating the original array\n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    arr = arr + arr  # Concatenate the array to handle wrapping\n    \n    for i in range(n):\n        if all(arr[i + j] <= arr[i + j + 1] for j in range(n - 1)):\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    count = 0\n    \n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            count += 1\n            \n    return count <= 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    n = len(arr)\n    count = 0\n    \n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            count += 1\n            \n    return count <= 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for shift in range(n):\n        if arr[shift:] + arr[:shift] == sorted_arr:\n            return True\n    \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    # Create a sorted version of the original array\n    sorted_arr = sorted(arr)\n    \n    # Check for each possible right shift\n    for i in range(n):\n        # Create the array after i right shifts\n        shifted_arr = arr[-i:] + arr[:-i]\n        if shifted_arr == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    count = 0\n    \n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            count += 1\n    \n    return count <= 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n\n    n = len(arr)\n    # Find the number of points where the order breaks\n    count_breaks = 0\n\n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            count_breaks += 1\n\n    return count_breaks <= 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    count = 0\n    \n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            count += 1\n            \n    return count <= 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    count = 0\n    \n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            count += 1\n            \n    return count <= 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n\n    n = len(arr)\n    count = 0\n\n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            count += 1\n\n    return count <= 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    count = 0\n\n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            count += 1\n\n    return count <= 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    n = len(arr)\n    min_idx = arr.index(min(arr))\n    rotated = arr[min_idx:] + arr[:min_idx]\n    return rotated == sorted(rotated)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    shift_count = 0\n    \n    for i in range(n):\n        if arr[i] > arr[(i + 1) % n]:\n            shift_count += 1\n            \n    return shift_count <= 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    n = len(arr)\n    sorted_arr = sorted(arr)\n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    n = len(arr)\n    sorted_arr = sorted(arr)\n    doubled_arr = arr + arr\n    for i in range(n):\n        if doubled_arr[i:i+n] == sorted_arr:\n            return True\n    return False\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    n = len(arr)\n    sorted_arr = sorted(arr)\n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    sorted_arr = sorted(arr)\n    n = len(arr)\n    arr_extended = arr + arr  # Double the array to simulate rotation\n    for i in range(n):\n        if arr_extended[i:i+n] == sorted_arr:\n            return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    sorted_arr = sorted(arr)\n    n = len(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for shift in range(n):\n        if arr[shift:] + arr[:shift] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    n = len(arr)\n    sorted_arr = sorted(arr)\n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    sorted_arr = sorted(arr)\n    n = len(arr)\n\n    # Check if we can match sorted_arr by a rotation\n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    # Create a new array to simulate the right shifts\n    for shift in range(n):\n        # Simulate the right shift\n        shifted_arr = arr[-shift:] + arr[:-shift]\n        if shifted_arr == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    n = len(arr)\n    sorted_arr = sorted(arr)\n    combined = arr + arr\n    for i in range(n):\n        if combined[i:i+n] == sorted_arr:\n            return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    \n    n = len(arr)\n    sorted_arr = sorted(arr)\n    \n    for i in range(n):\n        if arr[i:] + arr[:i] == sorted_arr:\n            return True\n            \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef move_one_ball(arr):\n    if not arr:\n        return True\n    sorted_arr = sorted(arr)\n    extended_arr = arr + arr\n    for i in range(len(arr)):\n        if extended_arr[i:i + len(arr)] == sorted_arr:\n            return True\n    return False\n```",
+            "logp": null
+        }
+    ]
+}

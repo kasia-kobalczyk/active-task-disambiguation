@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert bears(1, 'EvHB8KHB8ik8BiyxfeyKBmiCMj') == ['B8BHB8', True]",
+        "assert bears(0, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(1, 'HBHB') == ['', False]",
+        "assert bears(1, 'HB8B8') == ['B8B8', True]",
+        "assert bears(1, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(3, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(2, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]"
+    ],
+    "1": [
+        "assert bears(4, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(2, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(5, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(3, 'B88B88B') == ['B88B88B', True]",
+        "assert bears(2, 'HBKNikBiyxfeyKmiCMj') == ['', False]",
+        "assert bears(1, 'EvHB8KN8ik8BiyxfeyKB8miCMj') == ['B8B8', True]",
+        "assert bears(1, 'B8B8') == ['B8B8', True]",
+        "assert bears(1, 'EvHB8KNik8BiyxfeyKBmiCMj') == ['', True]"
+    ],
+    "2": [
+        "assert bears(1, 'HB8KN8ik8BiyxfeyKBmiCMj') == ['B8B8', True]",
+        "assert bears(2, 'HB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(1, 'EvHKB8Nik8iyxfeymiCMj') == ['B8', True]",
+        "assert bears(1, 'EvHBKNik8BiyxfeyKBmiCMj') == ['', False]",
+        "assert bears(1, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(2, 'HB8KN8ik8BHBiyxfeyKBmiCMj') == ['B88BHB', True]",
+        "assert bears(2, 'EvHKNik8iyxfeymiCMj') == ['', False]",
+        "assert bears(3, 'EvHB8KN8ik8BiyxfeyKB') == ['B8B', False]"
+    ],
+    "3": [
+        "assert bears(5, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(2, 'HB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(1, 'EvHBKNik8BiyxfeyKBmiCMj') == ['', False]",
+        "assert bears(1, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(2, 'HB8KN8ik8BHBiyxfeyKBmiCMj') == ['B88BHB', True]",
+        "assert bears(3, 'EvHB8KN8ik8BiyxfeyKB') == ['B8B', False]",
+        "assert bears(2, 'EvHKB8Nik8iyxfeymiCMj') == ['B8B', True]"
+    ]
+}

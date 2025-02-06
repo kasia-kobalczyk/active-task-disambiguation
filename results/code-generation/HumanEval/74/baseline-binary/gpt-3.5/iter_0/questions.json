@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert total_match([\"abc\", \"def\", \"ghi\"], [\"jkl\", \"mno\"]) == [\"abc\", \"def\", \"ghi\"]",
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"ddd\", \"ee\", \"f\"]) == [\"ddd\", \"ee\", \"f\"]",
+        "assert total_match([], []) == []\n# Both lists are empty, so the function should return an empty list."
+    ],
+    "1": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"aa\", \"bb\", \"cc\"]) == [\"a\", \"bb\", \"ccc\"]",
+        "assert total_match([\"abc\", \"def\"], [\"ab\", \"cdef\"]) == [\"ab\", \"cdef\"]",
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"aa\", \"b\", \"ccc\"]) == [\"aa\", \"b\", \"ccc\"]\n# Since 7 == 7, the first list is returned"
+    ],
+    "2": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"a\", \"bbb\", \"cc\"]) == [\"a\", \"bb\", \"ccc\"]",
+        "assert total_match([\"aa\", \"bb\", \"cc\"], [\"a\", \"bb\", \"ccc\"]) == [\"aa\", \"bb\", \"cc\"]"
+    ],
+    "3": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"dd\", \"ee\", \"ff\"]) == [\"a\", \"bb\", \"ccc\"]"
+    ]
+}

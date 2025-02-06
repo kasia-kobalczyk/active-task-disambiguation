@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    if total1 < total2:\n        return lst1\n    return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    return lst1 if sum(len(s) for s in lst1) <= sum(len(s) for s in lst2) else lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    elif total2 < total1:\n        return lst2\n    else:\n        return lst1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    if total1 < total2:\n        return lst1\n    return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    elif total2 < total1:\n        return lst2\n    else:\n        return lst1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    return lst2\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    return lst1 if total1 <= total2 else lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    return lst2\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    return lst1 if sum(len(s) for s in lst1) <= sum(len(s) for s in lst2) else lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    return lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    return lst1 if total1 <= total2 else lst2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    else:\n        return lst2\n```",
+            "logp": null
+        }
+    ]
+}

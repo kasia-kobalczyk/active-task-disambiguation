@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"xyz\", \"abc\") == \"xyz\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"hello\", \"hle\") == \"hlelo\"",
+        "assert sort_string(\"aaaaa\", \"a\") == \"aaaaa\""
+    ],
+    "1": [
+        "assert sort_string(\"abcde\", \"bac\") == \"bcaed\"",
+        "assert sort_string(\"abcde\", \"edcba\") == \"edcba\"",
+        "assert sort_string(\"xyz\", \"yxz\") == \"xyz\"",
+        "assert sort_string(\"hello\", \"hle\") == \"hlelo\"",
+        "assert sort_string(\"abcde\", \"bad\") == \"abdce\"",
+        "assert sort_string(\"xyz\", \"abc\") == \"xyz\"",
+        "assert sort_string(\"sdfghjkl\", \"dfhs\") == \"dfhsgjkl\"",
+        "assert sort_string(\"python\", \"ypnto\") == \"ypnto\"",
+        "assert sort_string(\"abcdefg\", \"def\") == \"defabcg\""
+    ],
+    "2": [
+        "assert sort_string(\"sdfgh\", \"hsd\") == \"hsdfg\"",
+        "assert sort_string(\"abcde\", \"edcba\") == \"edcba\"",
+        "assert sort_string(\"aabbcc\", \"abc\") == \"aabcc\"",
+        "assert sort_string(\"hello\", \"hle\") == \"hlelo\"",
+        "assert sort_string(\"abcde\", \"bad\") == \"abdce\"",
+        "assert sort_string(\"xyz\", \"abc\") == \"xyz\"",
+        "assert sort_string(\"abcdefg\", \"def\") == \"defabcg\""
+    ],
+    "3": [
+        "assert sort_string(\"xyz\", \"zxy\") == \"zxy\"",
+        "assert sort_string(\"python\", \"tpyh\") == \"tpyhn\"",
+        "assert sort_string(\"aabbcc\", \"abc\") == \"aabcc\"",
+        "assert sort_string(\"aaaabbbb\", \"ab\") == \"aaabbbb\"",
+        "assert sort_string(\"python\", \"ypnto\") == \"ypnto\"",
+        "assert sort_string(\"abcdef\", \"defabc\") == \"defabc\"",
+        "assert sort_string(\"sdfgh\", \"hsdg\") == \"hsdgf\""
+    ]
+}

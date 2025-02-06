@@ -1,0 +1,21 @@
+{
+    "0": [
+        "assert validate(\"79927398713\") == True",
+        "assert validate(\"4532015112830366\") == True",
+        "assert validate(\"79927398712\") == False"
+    ],
+    "1": [
+        "assert validate(\"79927398714\") == False",
+        "assert validate(\"4532015112830366\") == True",
+        "assert validate(\"4417110712972\") == True"
+    ],
+    "2": [
+        "assert validate(\"79927398710\") == True",
+        "assert validate(\"4532015112830366\") == True",
+        "assert validate(\"6011514433546205\") == False"
+    ],
+    "3": [
+        "assert validate(\"4532015112830366\") == True",
+        "assert validate(\"6011514433546205\") == False"
+    ]
+}

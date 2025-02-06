@@ -1,0 +1,128 @@
+{
+    "0": {
+        "0": [
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):"
+        ],
+        "1": [
+            "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i-1]]\n    return result",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n / total_teeth * 60, (len(cogs) - 1 - n) / total_teeth * 60]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]"
+        ],
+        "2": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]"
+        ],
+        "3": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]"
+        ],
+        "4": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]"
+        ]
+    },
+    "1": {
+        "0": [
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):"
+        ],
+        "1": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]"
+        ],
+        "2": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]"
+        ],
+        "3": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]"
+        ],
+        "4": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]"
+        ]
+    },
+    "2": {
+        "0": [
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n):",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]"
+        ],
+        "1": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for i in range(n):\n        total_teeth *= cogs[i]\n    rpm = 1 / (total_teeth / 60)\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n):\n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n % 2 == 0:\n        return [total_teeth // cogs[n - 1], 1]\n    else:\n        return [1, total_teeth // cogs[n - 1]]",
+            "def cog_RPM(cogs, n):\n    gear_ratio = 1\n    for i in range(n):\n        gear_ratio *= (cogs[i] / cogs[i+1])\n    first_cog_RPM = 1 / gear_ratio\n    if first_cog_RPM < 0:\n        first_cog_RPM = -first_cog_RPM\n    last_cog_RPM = first_cog_RPM * cogs[-1] / cogs[0]\n    if last_cog_RPM < 0:\n        last_cog_RPM = -last_cog_RPM\n    return [first_cog_RPM, last_cog_RPM]"
+        ],
+        "2": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n):\n    gear_ratio = 1\n    for i in range(n):\n        gear_ratio *= (cogs[i] / cogs[i+1])\n    first_cog_RPM = 1 / gear_ratio\n    if first_cog_RPM < 0:\n        first_cog_RPM = -first_cog_RPM\n    last_cog_RPM = first_cog_RPM * cogs[-1] / cogs[0]\n    if last_cog_RPM < 0:\n        last_cog_RPM = -last_cog_RPM\n    return [first_cog_RPM, last_cog_RPM]"
+        ],
+        "3": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n):\n    gear_ratio = 1\n    for i in range(n):\n        gear_ratio *= (cogs[i] / cogs[i+1])\n    first_cog_RPM = 1 / gear_ratio\n    if first_cog_RPM < 0:\n        first_cog_RPM = -first_cog_RPM\n    last_cog_RPM = first_cog_RPM * cogs[-1] / cogs[0]\n    if last_cog_RPM < 0:\n        last_cog_RPM = -last_cog_RPM\n    return [first_cog_RPM, last_cog_RPM]"
+        ],
+        "4": [
+            "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n / total_teeth * 60, (len(cogs) - 1 - n) / total_teeth * 60]",
+            "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "def cog_RPM(cogs, n):\n    gear_ratio = 1\n    for i in range(n):\n        gear_ratio *= (cogs[i] / cogs[i+1])\n    first_cog_RPM = 1 / gear_ratio\n    if first_cog_RPM < 0:\n        first_cog_RPM = -first_cog_RPM\n    last_cog_RPM = first_cog_RPM * cogs[-1] / cogs[0]\n    if last_cog_RPM < 0:\n        last_cog_RPM = -last_cog_RPM\n    return [first_cog_RPM, last_cog_RPM]"
+        ]
+    }
+}

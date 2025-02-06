@@ -1,0 +1,194 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    if not lst:\n        return []\n    \n    lst.sort()\n    result = []\n    while lst:\n        result.append(lst.pop(0))  # Append the minimum\n        if lst:\n            result.append(lst.pop(-1))  # Append the maximum\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    if not lst:\n        return []\n    \n    sorted_lst = []\n    while lst:\n        sorted_lst.append(min(lst))\n        lst.remove(min(lst))\n        if lst:\n            sorted_lst.append(max(lst))\n            lst.remove(max(lst))\n    \n    return sorted_lst\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = []\n    while lst:\n        sorted_lst.append(min(lst))\n        lst.remove(min(lst))\n        if lst:\n            sorted_lst.append(max(lst))\n            lst.remove(max(lst))\n    return sorted_lst\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    if not lst:\n        return []\n    \n    sorted_list = []\n    lst.sort()\n    \n    while lst:\n        sorted_list.append(lst.pop(0))  # Append the minimum\n        if lst:\n            sorted_list.append(lst.pop(-1))  # Append the maximum\n    \n    return sorted_list\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    result = []\n    lst.sort()\n    while lst:\n        result.append(lst.pop(0))  # Take the minimum\n        if lst:\n            result.append(lst.pop(-1))  # Take the maximum\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    if not lst:\n        return []\n    \n    sorted_lst = []\n    lst.sort()\n    \n    while lst:\n        sorted_lst.append(lst.pop(0))  # Append the minimum\n        if lst:\n            sorted_lst.append(lst.pop())  # Append the maximum\n    \n    return sorted_lst\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst_sorted = []\n    while lst:\n        lst_sorted.append(min(lst))\n        lst.remove(min(lst))\n        if lst:\n            lst_sorted.append(max(lst))\n            lst.remove(max(lst))\n    return lst_sorted\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst.sort()\n    result = []\n    while lst:\n        result.append(lst.pop(0))\n        if lst:\n            result.append(lst.pop(-1))\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = []\n    while lst:\n        sorted_lst.append(min(lst))\n        lst.remove(min(lst))\n        if lst:\n            sorted_lst.append(max(lst))\n            lst.remove(max(lst))\n    return sorted_lst\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    if not lst:\n        return []\n    \n    lst.sort()\n    result = []\n    left, right = 0, len(lst) - 1\n    \n    while left <= right:\n        if left == right:\n            result.append(lst[left])\n        else:\n            result.append(lst[left])\n            result.append(lst[right])\n        left += 1\n        right -= 1\n    \n    return result\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        if sorted_lst:\n            result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    left, right = 0, len(sorted_lst) - 1\n    \n    while left <= right:\n        if left == right:\n            result.append(sorted_lst[left])\n        else:\n            result.append(sorted_lst[left])\n            result.append(sorted_lst[right])\n        left += 1\n        right -= 1\n        \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    left, right = 0, len(sorted_lst) - 1\n    while left <= right:\n        if left == right:\n            result.append(sorted_lst[left])\n        else:\n            result.append(sorted_lst[left])\n            result.append(sorted_lst[right])\n        left += 1\n        right -= 1\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        if sorted_lst:\n            result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    result = []\n    lst.sort()\n    while lst:\n        result.append(lst.pop(0))\n        if lst:\n            result.append(lst.pop())\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    \n    while sorted_lst:\n        if sorted_lst:\n            result.append(sorted_lst.pop(0))  # Minimum\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))  # Maximum\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    \n    while sorted_lst:\n        if sorted_lst:\n            result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_list = []\n    while lst:\n        min_val = min(lst)\n        sorted_list.append(min_val)\n        lst.remove(min_val)\n        if lst:\n            max_val = max(lst)\n            sorted_list.append(max_val)\n            lst.remove(max_val)\n    return sorted_list\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst.sort()\n    result = []\n    while lst:\n        result.append(lst.pop(0))  # Remove and append the minimum\n        if lst:\n            result.append(lst.pop())  # Remove and append the maximum\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    left, right = 0, len(sorted_lst) - 1\n    \n    while left <= right:\n        if left == right:\n            result.append(sorted_lst[left])\n        else:\n            result.append(sorted_lst[left])\n            result.append(sorted_lst[right])\n        left += 1\n        right -= 1\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    result = []\n    lst.sort()\n    while lst:\n        if lst:\n            result.append(lst.pop(0))\n        if lst:\n            result.append(lst.pop(-1))\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst.sort()\n    result = []\n    while lst:\n        result.append(lst.pop(0))  # Remove and append the minimum\n        if lst:\n            result.append(lst.pop(-1))  # Remove and append the maximum\n    return result\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop())\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    \n    while sorted_lst:\n        result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop())\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst.sort()\n    result = []\n    left, right = 0, len(lst) - 1\n    while left <= right:\n        if left == right:\n            result.append(lst[left])\n        else:\n            result.append(lst[left])\n            result.append(lst[right])\n        left += 1\n        right -= 1\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst.sort()\n    result = []\n    left, right = 0, len(lst) - 1\n    \n    while left <= right:\n        if left == right:\n            result.append(lst[left])\n        else:\n            result.append(lst[left])\n            result.append(lst[right])\n        left += 1\n        right -= 1\n        \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        if sorted_lst:\n            result.append(sorted_lst.pop(0))  # Minimum\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))  # Maximum\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        result.append(sorted_lst.pop(0))  # Take the minimum\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))  # Take the maximum\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    min_list = []\n    max_list = []\n    while lst:\n        min_val = min(lst)\n        max_val = max(lst)\n        min_list.append(min_val)\n        lst.remove(min_val)\n        if lst:\n            max_list.append(max_val)\n            lst.remove(max_val)\n    return [val for pair in zip(min_list, max_list) for val in pair] + min_list[len(max_list):]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst.sort()\n    result = []\n    while lst:\n        result.append(lst.pop(0))\n        if lst:\n            result.append(lst.pop())\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    \n    while sorted_lst:\n        if sorted_lst:\n            result.append(sorted_lst.pop(0))  # Minimum\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))  # Maximum\n            \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    \n    while sorted_lst:\n        result.append(sorted_lst.pop(0))  # append the minimum\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))  # append the maximum\n            \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    left, right = 0, len(sorted_lst) - 1\n    \n    while left <= right:\n        if left == right:\n            result.append(sorted_lst[left])\n        else:\n            result.append(sorted_lst[left])\n            result.append(sorted_lst[right])\n        left += 1\n        right -= 1\n        \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst.sort()\n    result = []\n    while lst:\n        result.append(lst.pop(0))\n        if lst:\n            result.append(lst.pop(-1))\n    return result\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop())\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_list = sorted(lst)\n    result = []\n    while sorted_list:\n        result.append(sorted_list.pop(0))  # Get the minimum\n        if sorted_list:\n            result.append(sorted_list.pop(-1))  # Get the maximum\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst.sort()\n    result = []\n    while lst:\n        result.append(lst.pop(0))\n        if lst:\n            result.append(lst.pop())\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    \n    while sorted_lst:\n        result.append(sorted_lst.pop(0))  # Min value\n        if sorted_lst:\n            result.append(sorted_lst.pop())  # Max value\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        if sorted_lst:\n            result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        result.append(sorted_lst.pop(0))  # Take the minimum\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))  # Take the maximum\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    lst.sort()\n    result = []\n    left, right = 0, len(lst) - 1\n    \n    while left <= right:\n        if left == right:\n            result.append(lst[left])\n        else:\n            result.append(lst[left])\n            result.append(lst[right])\n        left += 1\n        right -= 1\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        result.append(sorted_lst.pop(0))  # Append the minimum\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))  # Append the maximum\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    while sorted_lst:\n        result.append(sorted_lst.pop(0))\n        if sorted_lst:\n            result.append(sorted_lst.pop(-1))\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef strange_sort_list(lst):\n    sorted_lst = sorted(lst)\n    result = []\n    \n    while sorted_lst:\n        result.append(sorted_lst.pop(0))  # Get the minimum\n        if sorted_lst: \n            result.append(sorted_lst.pop(-1))  # Get the maximum\n\n    return result\n```",
+            "logp": null
+        }
+    ]
+}

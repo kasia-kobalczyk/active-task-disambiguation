@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert is_isogram(\"Subdermatoglyphic\") == True",
+        "assert is_isogram(\"Republic\") == False",
+        "assert is_isogram(\"abcabc\") == False",
+        "assert is_isogram(\"Hello\") == False",
+        "assert is_isogram(12345) == False",
+        "assert is_isogram(\"abcABC\") == True",
+        "assert is_isogram(\"thumbscrew-japingly\") == True",
+        "assert is_isogram(\"a-b-c\") == True"
+    ],
+    "1": [
+        "assert is_isogram(123) == False",
+        "assert is_isogram(\"abc-def\") == True",
+        "assert is_isogram(\"This is not\") == False",
+        "assert is_isogram(\"abcABC\") == True",
+        "assert is_isogram(\"abcA\") == False",
+        "assert is_isogram(\"Hello-World\") == True",
+        "assert is_isogram(\"aba\") == False"
+    ],
+    "2": [
+        "assert is_isogram(\"abc-def\") == True",
+        "assert is_isogram(\"Hello-WoRlD\") == True",
+        "assert is_isogram(\"abcabc\") == False",
+        "assert is_isogram(None) == False",
+        "assert is_isogram(\"aA\") == True",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(\"aba\") == False",
+        "assert is_isogram(\"abcde\") == True"
+    ],
+    "3": [
+        "assert is_isogram(\"a1a\") == False",
+        "assert is_isogram(None) == False",
+        "assert is_isogram(\"a\") == True",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(\"aba\") == True",
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"abcDeF\") == True"
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert is_isogram('programming') == True",
+        "assert is_isogram('1234567890') == False",
+        "assert is_isogram('Python') == False",
+        "assert is_isogram('Hello world') == False",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(\"hello-world\") == True",
+        "assert is_isogram('abCdeFgHi') == True",
+        "assert is_isogram(\"python\") == True",
+        "assert is_isogram(12345) == False",
+        "assert is_isogram(\"banana\") == False"
+    ],
+    "1": [
+        "assert is_isogram('HelloWorld') == False",
+        "assert is_isogram('') == False",
+        "assert is_isogram('AbCdeFGHiJKlM') == True",
+        "assert is_isogram('Alphabet') == False",
+        "assert is_isogram('A-b_C.dE@FGHiJ/KlM') == True",
+        "assert is_isogram('123abcABC') == False",
+        "assert is_isogram('abcdefghijklm') == True",
+        "assert is_isogram('ABCDEFGHIJKLM') == True"
+    ],
+    "2": [
+        "assert is_isogram('a') == True",
+        "assert is_isogram('racecar') == False\n    ",
+        "assert is_isogram('quickbrownfox') == True",
+        "assert is_isogram('abB') == True",
+        "assert is_isogram('HelloWorld') == False\n    ",
+        "assert is_isogram('a-b-a') == False",
+        "assert is_isogram('aba') == False",
+        "assert is_isogram('abcABC') == True\n    "
+    ],
+    "3": [
+        "assert is_isogram('abcabc') == True",
+        "assert is_isogram('abcdefghijklmnopqrstuvwxyz') == True",
+        "assert is_isogram('abcABC') == True",
+        "assert is_isogram('') == False",
+        "assert is_isogram('helloworld') == False",
+        "assert is_isogram(1234567890) == False"
+    ]
+}

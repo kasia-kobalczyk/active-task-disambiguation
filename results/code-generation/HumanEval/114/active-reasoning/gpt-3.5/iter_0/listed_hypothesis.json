@@ -1,0 +1,210 @@
+{
+    "0": [
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n    # initialize min_sum as the maximum possible value\n    min_sum = float('inf')\n    # initialize current_sum as 0\n    current_sum = 0\n    # iterate through the array\n    for num in nums:\n        # add the current number to the current_sum\n        current_sum += num\n        # if the current_sum is less than min_sum, update min_sum\n        if current_sum < min_sum:\n            min_sum = current_sum\n        # if the current_sum becomes negative, reset it to 0\n        if current_sum < 0:\n            current_sum = 0\n    # return min_sum\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        current_sum = max(current_sum, 0)\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n\n    # Initialize variables\n    current_sum = nums[0]\n    min_sum = nums[0]\n\n    # Iterate through the array\n    for i in range(1, len(nums)):\n        # Calculate the sum of the current sub-array\n        current_sum = min(nums[i], current_sum + nums[i])\n\n        # Update the minimum sum if necessary\n        min_sum = min(min_sum, current_sum)\n\n    # Return the minimum sum\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n    # initialize the minimum sum as positive infinity\n    min_sum = float('inf')\n    \n    # initialize the current sum as 0\n    cur_sum = 0\n    \n    # iterate through the array\n    for num in nums:\n        # add the current number to the current sum\n        cur_sum += num\n        \n        # if the current sum is less than the minimum sum, update the minimum sum\n        if cur_sum < min_sum:\n            min_sum = cur_sum\n        \n        # if the current sum is greater than 0, reset the current sum to 0\n        if cur_sum > 0:\n            cur_sum = 0\n    \n    # return the minimum sum\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    for i in range(len(nums)):\n        current_sum = 0\n        for j in range(i, len(nums)):\n            current_sum += nums[j]\n            if current_sum < min_sum:\n                min_sum = current_sum\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n    # Initialize the minimum sum as the first element of the array\n    min_sum = nums[0]\n    \n    # Initialize the current sum as the first element of the array\n    curr_sum = nums[0]\n    \n    # Iterate through the array starting from the second element\n    for i in range(1, len(nums)):\n        # Calculate the current sum as the sum of the previous current sum and the current element\n        curr_sum += nums[i]\n        \n        # If the current sum is less than the minimum sum, update the minimum sum\n        if curr_sum < min_sum:\n            min_sum = curr_sum\n        \n        # If the current sum is greater than or equal to 0, reset the current sum to 0\n        if curr_sum >= 0:\n            curr_sum = 0\n    \n    # Return the minimum sum\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n    min_sum = float('inf')\n    current_sum = 0\n    for num in nums:\n        current_sum = min(num, current_sum + num)\n        min_sum = min(min_sum, current_sum)\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    # Initialize variables\n    current_sum = 0\n    min_sum = float('inf')\n\n    # Iterate through the array\n    for num in nums:\n        # Calculate the current sum\n        current_sum += num\n\n        # Update the minimum sum if necessary\n        if current_sum < min_sum:\n            min_sum = current_sum\n\n        # If the current sum becomes negative, reset it to 0\n        if current_sum > 0:\n            current_sum = 0\n\n    # Return the minimum sum\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n    # Initialize min_sum to the maximum possible value\n    min_sum = float('inf')\n    \n    # Iterate through all possible sub-arrays of nums\n    for i in range(len(nums)):\n        for j in range(i, len(nums)):\n            # Calculate the sum of the current sub-array\n            sub_array_sum = sum(nums[i:j+1])\n            \n            # Update min_sum if sub_array_sum is smaller\n            min_sum = min(min_sum, sub_array_sum)\n    \n    # Return the minimum sum\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n    if len(nums) == 0:\n        return 0\n    \n    current_sum = 0\n    min_sum = float('inf')\n    \n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        if current_sum > 0:\n            current_sum = 0\n    \n    return min_sum",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \n    Examples:\n\n    [1, -2, 3, -1, 2] -> -2\n    \"\"\"\n    n = len(nums)\n    curr_sum = 0\n    min_sum = float('inf')\n    \n    for i in range(n):\n        curr_sum = min(nums[i], curr_sum + nums[i])\n        min_sum = min(min_sum, curr_sum)\n        \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    curr_sum = 0\n    for num in nums:\n        curr_sum = min(curr_sum + num, num)\n        min_sum = min(min_sum, curr_sum)\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    curr_sum = 0\n    \n    for num in nums:\n        curr_sum += num\n        min_sum = min(min_sum, curr_sum)\n        \n        if curr_sum > 0:\n            curr_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    if not nums:\n        return None\n    \n    min_sum = float('inf')\n    curr_sum = 0\n    \n    for num in nums:\n        curr_sum = min(num, curr_sum + num)\n        min_sum = min(min_sum, curr_sum)\n        \n    return min_sum\n\nprint(minSubArraySum([1, -2, 3, -1, 2]))",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    curr_sum = 0\n    \n    for num in nums:\n        curr_sum += num\n        min_sum = min(min_sum, curr_sum)\n        \n        if curr_sum > 0:\n            curr_sum = 0\n            \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    if not nums:\n        return 0\n\n    current_sum = nums[0]\n    min_sum = current_sum\n\n    for i in range(1, len(nums)):\n        current_sum = min(nums[i], current_sum + nums[i])\n        min_sum = min(min_sum, current_sum)\n\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    if not nums:\n        return 0\n    \n    current_sum = nums[0]\n    min_sum = nums[0]\n    \n    for i in range(1, len(nums)):\n        current_sum = min(nums[i], current_sum + nums[i])\n        min_sum = min(min_sum, current_sum)\n    \n    return min_sum\n\nprint(minSubArraySum([1, -2, 3, -1, 2]))\nprint(minSubArraySum([5, -3, 2, -1, 4]))\nprint(minSubArraySum([-1, -2, -3, -4, -5]))",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        \n        if current_sum > 0:\n            current_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    if not nums:\n        return 0\n    \n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum += num\n        \n        if current_sum < min_sum:\n            min_sum = current_sum\n        \n        if current_sum > 0:\n            current_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    curr_sum = min_sum = nums[0]\n    for num in nums[1:]:\n        curr_sum = min(num, curr_sum + num)\n        min_sum = min(min_sum, curr_sum)\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    curr_sum = 0\n    \n    for num in nums:\n        curr_sum += num\n        min_sum = min(min_sum, curr_sum)\n        \n        if curr_sum > 0:\n            curr_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    # Initialize variables to store the current sum and the minimum sum\n    curr_sum = nums[0]\n    min_sum = nums[0]\n    \n    # Iterate through the array starting from the second element\n    for i in range(1, len(nums)):\n        # Calculate the current sum by adding the current element to the previous sum\n        curr_sum = min(nums[i], curr_sum + nums[i])\n        \n        # Update the minimum sum if the current sum is smaller\n        min_sum = min(min_sum, curr_sum)\n    \n    # Return the minimum sum\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')  # initialize the minimum sum to positive infinity\n    \n    for i in range(len(nums)):  # iterate over each element in the array\n        curr_sum = 0  # initialize the current sum to 0\n        \n        for j in range(i, len(nums)):  # iterate over the sub-array starting from index i\n            curr_sum += nums[j]  # add the current element to the current sum\n            \n            min_sum = min(min_sum, curr_sum)  # update the minimum sum if necessary\n    \n    return min_sum",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def minSubArraySum(nums):\n    curr_sum = nums[0]\n    min_sum = nums[0]\n    \n    for i in range(1, len(nums)):\n        curr_sum = min(nums[i], curr_sum + nums[i])\n        min_sum = min(min_sum, curr_sum)\n        \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = nums[0]\n    current_sum = nums[0]\n    \n    for i in range(1, len(nums)):\n        current_sum = min(nums[i], current_sum + nums[i])\n        min_sum = min(min_sum, current_sum)\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    current_sum = nums[0]\n    min_sum = nums[0]\n    for i in range(1, len(nums)):\n        current_sum = min(nums[i], current_sum + nums[i])\n        min_sum = min(min_sum, current_sum)\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    if len(nums) == 0:\n        return 0\n    \n    min_sum = float('inf')\n    \n    for i in range(len(nums)):\n        current_sum = 0\n        for j in range(i, len(nums)):\n            current_sum += nums[j]\n            min_sum = min(min_sum, current_sum)\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    curr_sum = 0\n    \n    for num in nums:\n        curr_sum = min(num, curr_sum + num)\n        min_sum = min(min_sum, curr_sum)\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    # initialize variables\n    current_sum = nums[0]\n    min_sum = nums[0]\n\n    # iterate through the array\n    for i in range(1, len(nums)):\n        # calculate the current sum by adding the current element to the previous sum\n        current_sum = min(nums[i], current_sum + nums[i])\n\n        # update the minimum sum if the current sum is smaller\n        min_sum = min(min_sum, current_sum)\n\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    curr_sum = 0\n    \n    for num in nums:\n        curr_sum += num\n        min_sum = min(min_sum, curr_sum)\n        curr_sum = min(curr_sum, 0)\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \n    Examples:\n\n    [1, -2, 3, -1, 2] -> -2\n    [-3, -1, 2, -5, 4, 1] -> -7\n    \"\"\"\n    n = len(nums)\n    min_sum = float('inf')\n    curr_sum = 0\n    \n    for i in range(n):\n        curr_sum += nums[i]\n        min_sum = min(min_sum, curr_sum)\n        if curr_sum > 0:\n            curr_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        if current_sum > 0:\n            current_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')  # initialize the minimum sum to positive infinity\n\n    # iterate over each index of the array\n    for i in range(len(nums)):\n        current_sum = 0  # initialize the current sum to zero\n\n        # iterate over each index from i to the end of the array\n        for j in range(i, len(nums)):\n            current_sum += nums[j]  # add the current element to the current sum\n\n            # update the minimum sum if the current sum is smaller\n            if current_sum < min_sum:\n                min_sum = current_sum\n\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    # Initialize variables\n    min_sum = float('inf') # set initial minimum sum to positive infinity\n    \n    # Iterate through each element in the array\n    for i in range(len(nums)):\n        sub_sum = 0 # initialize sum of sub-array starting from current index\n        \n        # Iterate through each element starting from current index\n        for j in range(i, len(nums)):\n            sub_sum += nums[j] # add current element to sub_sum\n            \n            if sub_sum < min_sum: # update min_sum if sub_sum is smaller\n                min_sum = sub_sum\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \n    Examples:\n\n    [1, -2, 3, -1, 2] -> -2\n    [-3, -1, 2, -5, 4, 1] -> -7\n    \"\"\"\n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        \n        if current_sum > 0:\n            current_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \n    Examples:\n\n    [1, -2, 3, -1, 2] -> -2\n    [-3, -1, 2, -5, 4, 1] -> -7\n    \"\"\"\n    if not nums:\n        return 0\n    \n    min_sum = nums[0]\n    current_sum = nums[0]\n    \n    for i in range(1, len(nums)):\n        current_sum = min(nums[i], current_sum + nums[i])\n        min_sum = min(min_sum, current_sum)\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    if len(nums) == 0:\n        return 0\n    \n    min_sum = nums[0]\n    current_sum = nums[0]\n    \n    for i in range(1, len(nums)):\n        current_sum = min(nums[i], current_sum + nums[i])\n        min_sum = min(min_sum, current_sum)\n    \n    return min_sum",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def minSubArraySum(nums):\n    if len(nums) == 0:\n        return 0\n    \n    current_sum = nums[0]\n    min_sum = current_sum\n    \n    for i in range(1, len(nums)):\n        current_sum = min(nums[i], current_sum + nums[i])\n        min_sum = min(min_sum, current_sum)\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    if not nums:\n        return None\n    \n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        \n        if current_sum > 0:\n            current_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum = min(num, current_sum + num)\n        min_sum = min(min_sum, current_sum)\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    if not nums:\n        return 0\n\n    min_sum = float('inf')\n    curr_sum = 0\n\n    for num in nums:\n        curr_sum += num\n        min_sum = min(min_sum, curr_sum)\n        if curr_sum > 0:\n            curr_sum = 0\n\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n\n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        if current_sum > 0:\n            current_sum = 0\n\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum = min(num, current_sum + num)\n        min_sum = min(min_sum, current_sum)\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    \"\"\"\n    min_sum = float('inf')\n    current_sum = 0\n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        if current_sum > 0:\n            current_sum = 0\n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        \n        if current_sum > 0:\n            current_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')  # Initialize min_sum to positive infinity\n    \n    for i in range(len(nums)):  # Iterate over the array\n        current_sum = 0  # Initialize current_sum to 0\n        for j in range(i, len(nums)):  # Iterate over the sub-arrays starting from index i\n            current_sum += nums[j]  # Add the element at index j to current_sum\n            \n            if current_sum < min_sum:  # If current_sum is smaller than min_sum\n                min_sum = current_sum  # Update min_sum\n                \n    return min_sum  # Return the minimum sum of any non-empty sub-array",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum = min(current_sum + num, num)\n        min_sum = min(min_sum, current_sum)\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    curr_sum = 0\n    \n    for num in nums:\n        curr_sum += num\n        min_sum = min(min_sum, curr_sum)\n        \n        if curr_sum > 0:\n            curr_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    min_sum = float('inf')\n    current_sum = 0\n    \n    for num in nums:\n        current_sum += num\n        min_sum = min(min_sum, current_sum)\n        \n        if current_sum > 0:\n            current_sum = 0\n    \n    return min_sum",
+            "logp": null
+        },
+        {
+            "content": "def minSubArraySum(nums):\n    curr_sum = 0\n    min_sum = float('inf')\n    \n    for num in nums:\n        curr_sum += num\n        min_sum = min(min_sum, curr_sum)\n        \n        if curr_sum > 0:\n            curr_sum = 0\n    \n    return min_sum",
+            "logp": null
+        }
+    ]
+}

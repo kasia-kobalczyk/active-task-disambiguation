@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert compare_versions(\"10.4\", \"10.4\") == \"EQ\"",
+        "assert compare_versions(\"10.4.6\", \"10.4\") == \"GT\""
+    ],
+    "1": [
+        "assert compare_versions(\"10.10.10\", \"10.10.9\") == True",
+        "assert compare_versions(\"10.2.3.4.5\", \"10.2.3.4.5\") == True"
+    ],
+    "2": [
+        "assert compare_versions(\"10.10.1.2\", \"10.10.1.10\") == False",
+        "assert compare_versions(\"10.10.1\", \"10.10.1.0\") == True"
+    ],
+    "3": [
+        "assert compare_versions(\"10.10.1.2.3\", \"10.10.1.2.4\") == False",
+        "assert compare_versions(\"10.10.1\", \"10.10.1.0\") == True"
+    ]
+}

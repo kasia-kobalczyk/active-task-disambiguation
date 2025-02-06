@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert alex_mistakes(10, 50) == 1",
+        "error"
+    ],
+    "1": [
+        "assert alex_mistakes(5, 30) == float('inf')",
+        false
+    ],
+    "2": [
+        "assert alex_mistakes(10, 60) == float('inf')",
+        false
+    ],
+    "3": [
+        "assert alex_mistakes(10, 50) == float('inf')",
+        "error"
+    ]
+}

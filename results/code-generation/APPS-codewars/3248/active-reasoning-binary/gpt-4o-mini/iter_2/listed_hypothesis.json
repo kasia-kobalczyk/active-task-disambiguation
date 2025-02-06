@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        pitch *= 0.5 if pitch > 440 else 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    if pitch in notes:\n        return notes[pitch]\n    else:\n        # Calculate the closest note by halving or doubling the pitch until we find a match\n        current_pitch = pitch\n        while current_pitch > 0:\n            if current_pitch in notes:\n                return notes[current_pitch]\n            current_pitch /= 2  # halve the pitch\n        current_pitch = pitch\n        while current_pitch < 1000:  # limit to a reasonable upper boundary\n            if current_pitch in notes:\n                return notes[current_pitch]\n            current_pitch *= 2  # double the pitch\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    while pitch not in notes:\n        pitch = pitch / 2 if pitch < 440 else pitch * 0.5\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    while pitch not in notes:\n        pitch *= 0.5 if pitch > 440 else 2\n    return notes[pitch]\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\n    if pitch in notes:\n        return notes[pitch]\n    else:\n        # Find the nearest note by doubling or halving\n        while pitch < 440:\n            pitch *= 2\n        while pitch > 880:\n            pitch /= 2\n        return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Calculate the closest note based on doubling or halving the pitch\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Adjust pitch to find the corresponding note\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Calculate the number of semitones from the base note A (440 Hz)\n    # Each doubling or halving of the frequency corresponds to a doubling or halving of the pitch\n    # We need to find the closest note in our dictionary\n    closest_note = min(notes.keys(), key=lambda x: abs(x - pitch))\n    return notes[closest_note]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    if pitch in notes:\n        return notes[pitch]\n    for key in notes:\n        if pitch == key * 2 or pitch == key / 2:\n            return notes[key]\n    return None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Adjust the pitch to the closest corresponding note in the dictionary\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Calculate the note corresponding to the given pitch\n    while pitch not in notes:\n        if pitch < 440:\n            pitch *= 2\n        else:\n            pitch /= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Normalize the pitch to Concert A\n    while pitch < 440:\n        pitch *= 2\n    while pitch > 830.61:\n        pitch /= 2\n    \n    # Return the corresponding note\n    return notes.get(pitch)\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        pitch *= 0.5 if pitch > 440 else 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Adjust the pitch to find the closest note\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Adjust pitch to find the corresponding note\n    while pitch in notes:\n        return notes[pitch]\n    # If the pitch is not directly in notes, check for the closest value\n    if pitch > 440:\n        return get_note(pitch / 2)\n    else:\n        return get_note(pitch * 2)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Find the note corresponding to the given pitch\n    if pitch in notes:\n        return notes[pitch]\n    \n    # Calculate the closest note by checking doubled and halved frequencies\n    while pitch not in notes:\n        if pitch < 440:\n            pitch *= 2  # Double the pitch\n        else:\n            pitch /= 2  # Halve the pitch\n    \n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Check for the closest pitch in the notes dictionary\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2  # Halve the pitch if it's above 440 Hz\n        else:\n            pitch *= 2  # Double the pitch if it's below 440 Hz\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Calculate the corresponding pitch from the notes dictionary\n    if pitch in notes:\n        return notes[pitch]\n    \n    # Adjust the pitch until it matches one of the notes\n    while pitch < 440:\n        pitch *= 2\n    while pitch > 830.61:\n        pitch /= 2\n    \n    return notes.get(pitch)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch < 440:\n            pitch *= 2\n        else:\n            pitch /= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        pitch *= 0.5 if pitch > 440 else 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    # Finding the closest note by doubling/halving the pitch\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    frequency = pitch\n    while frequency not in notes:\n        if frequency < 440:\n            frequency *= 2\n        else:\n            frequency /= 2\n    return notes[frequency]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch < 440:\n            pitch *= 2\n        else:\n            pitch /= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    frequency = pitch\n    while frequency not in notes:\n        if frequency > 440:\n            frequency /= 2\n        else:\n            frequency *= 2\n    return notes[frequency]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    note = pitch\n    while note not in notes:\n        if note > 440:\n            note /= 2\n        else:\n            note *= 2\n    return notes[note]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Adjust the pitch to the nearest corresponding note\n    while pitch not in notes:\n        pitch *= 0.5 if pitch > 440 else 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch < 440:\n            pitch *= 2\n        else:\n            pitch /= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch < 440:\n            pitch *= 2\n        else:\n            pitch /= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Calculate the closest note by checking the pitch in the notes dictionary\n    # Also check its equivalent pitches in the doubling/halving range\n    while pitch not in notes:\n        if pitch > 440:\n            pitch /= 2\n        else:\n            pitch *= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        if pitch < 440:\n            pitch *= 2\n        else:\n            pitch /= 2\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    while pitch not in notes:\n        pitch *= 2 if pitch < 440 else 0.5\n    return notes[pitch]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    # Halve or double the pitch until it matches a key in the notes dictionary\n    while pitch not in notes:\n        if pitch < 440:\n            pitch *= 2\n        else:\n            pitch /= 2\n    return notes[pitch]\n```",
+            "logp": null
+        }
+    ]
+}

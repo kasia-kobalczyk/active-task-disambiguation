@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def nth_perm(n, d):\n    res = ''\n    nums = [str(i) for i in range(d)]\n    for i in range(d, 0, -1):\n        idx, nums = divmod(n, math.factorial(i-1))\n        res += nums[idx]\n        nums.pop(idx)\n        n = nums[0]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    res = ''\n    nums = [str(i) for i in range(d)]\n    for i in range(d, 0, -1):\n        idx, nums = divmod(n, math.factorial(i-1))\n        res += nums[idx]\n        nums.pop(idx)\n        n = nums[0]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    res = ''\n    nums = [str(i) for i in range(d)]\n    for i in range(d, 0, -1):\n        idx, nums = divmod(n, math.factorial(i-1))\n        res += nums[idx]\n        nums.pop(idx)\n        n = nums[0]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    res = ''\n    nums = [str(i) for i in range(d)]\n    for i in range(d, 0, -1):\n        idx, nums = divmod(n, math.factorial(i-1))\n        res += nums[idx]\n        nums.pop(idx)\n        n = nums[0]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    res = ''\n    nums = [str(i) for i in range(d)]\n    for i in range(d, 0, -1):\n        idx, nums = divmod(n, math.factorial(i-1))\n        res += nums[idx]\n        nums.pop(idx)\n        n = nums[0]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    factors = [math.factorial(i) for i in range(1,d)]\n    num = list(str(range(d)))\n    result = \"\"\n    n -= 1\n    for i in range(d,0,-1):\n        index = n // factors[i-1]\n        n %= factors[i-1]\n        result += str(num.pop(index))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    factors = [math.factorial(i) for i in range(1,d)]\n    num = list(str(range(d)))\n    result = \"\"\n    n -= 1\n    for i in range(d,0,-1):\n        index = n // factors[i-1]\n        n %= factors[i-1]\n        result += str(num.pop(index))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    factors = [math.factorial(i) for i in range(1,d)]\n    num = list(str(range(d)))\n    result = \"\"\n    n -= 1\n    for i in range(d,0,-1):\n        index = n // factors[i-1]\n        n %= factors[i-1]\n        result += str(num.pop(index))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    factors = [math.factorial(i) for i in range(1,d)]\n    num = list(str(range(d)))\n    result = \"\"\n    n -= 1\n    for i in range(d,0,-1):\n        index = n // factors[i-1]\n        n %= factors[i-1]\n        result += str(num.pop(index))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    factors = [math.factorial(i) for i in range(1,d)]\n    num = list(str(range(d)))\n    result = \"\"\n    n -= 1\n    for i in range(d,0,-1):\n        index = n // factors[i-1]\n        n %= factors[i-1]\n        result += str(num.pop(index))\n    return result",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

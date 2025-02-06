@@ -1,0 +1,35 @@
+{
+    "0": [
+        "assert is_alt(\"orange\") == True",
+        "assert is_alt(\"elephant\") == False",
+        "assert is_alt(\"amazon\") == True",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"banana\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"world\") == True",
+        "assert is_alt(\"bike\") == True",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"car\") == False",
+        "assert is_alt(\"hello\") == False"
+    ],
+    "2": [
+        "assert is_alt(\"bike\") == True",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"car\") == False",
+        "assert is_alt(\"hello\") == False"
+    ],
+    "3": [
+        "assert is_alt(\"aba\") == False",
+        "assert is_alt(\"bcdfg\") == True",
+        "assert is_alt(\"bee\") == False",
+        "assert is_alt(\"python123!\") == False",
+        "assert is_alt(\"racecar\") == False",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"aib\") == True",
+        "assert is_alt(\"abcdefg\") == True",
+        "assert is_alt(\"a\") == True"
+    ]
+}

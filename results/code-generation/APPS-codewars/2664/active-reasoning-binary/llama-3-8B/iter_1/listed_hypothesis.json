@@ -1,0 +1,52 @@
+{
+    "0": [
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    for i in range(len(s)):\n        t = s[:i] + s[i+1:] + s[i]\n        if t == t[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    for i in range(len(s)):\n        t = s[:i] + s[i+1:] + s[i]\n        if t == t[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    for i in range(len(s)):\n        t = s[:i] + s[i+1:] + s[i]\n        if t == t[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    for i in range(len(s)):\n        t = s[:i] + s[i+1:] + s[i]\n        if t == t[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    for i in range(len(s)):\n        t = s[:i] + s[i+1:] + s[i]\n        if t == t[::-1]:\n            return True\n    return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def solve(s):\n    s = s.lower()\n    for i in range(len(s)):\n        left, right = s[:i], s[i+1:]\n        if left + right == (left + right)[::-1]:\n            return True\n    return False",
+            "logp": null
+        }
+    ],
+    "2": [],
+    "3": []
+}

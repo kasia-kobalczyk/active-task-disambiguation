@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert tongues('HelPo') == 'Hello'",
+        "assert tongues(' Znk times') == ' Ten times'",
+        "assert tongues('Ovzn\u0648\u0649zPGbp') == 'Some example Text.'",
+        "assert tongues('IhY pypu') == 'Hi Up'",
+        "assert tongues('ytnuoc eda\u00e7') == 'count dead'",
+        "assert tongues('Hype.') == 'Hello.'",
+        "assert tongues('') == ''"
+    ],
+    "1": [
+        "assert tongues(\"Gandalf's writings are encrypted.\") == \"Pnadlq'f jelgvbaf ner rapbqrq.\"",
+        "assert tongues('olLEh') == 'Hello'",
+        "assert tongues(\"Hpf, ljfwl!\") == \"Hello, world!\"",
+        "assert tongues(\"Gur pbqr pnaavat rzretrapr.\") == \"The code breaking exercise.\"",
+        "assert tongues('tHe QuIcK BrOwN fOx') == 'tHe QuIcK BrOwN fOx'",
+        "assert tongues('zruog dna selrah.') == 'groud and hailed.'",
+        "assert tongues('HelPo WOrLd') == 'HelPo WOrLd'",
+        "assert tongues(\"Uryyb jbeyq!\") == \"Hello world!\""
+    ],
+    "2": [
+        "assert tongues(\"Zl kwv wlazu.\") == \"The code rocks.\"",
+        "assert tongues('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz') == 'NKRGZYXPVHFDMCWJTBALSIEMUOYQbkuwgpmcvjxzhlqdtsrifneaoy'",
+        "assert tongues('olLEh') == 'Hello'",
+        "assert tongues(\"Uryyb, jbeyq!\") == \"Hello, world!\"",
+        "assert tongues(\"Hpf, ljfwl!\") == \"Hello, world!\"",
+        "assert tongues('tHE fAST') == 'tHE fAST'",
+        "assert tongues(\"Gur pbqr pnaavat rzretrapr.\") == \"The code breaking exercise.\"",
+        "assert tongues('HelPo WOrLd') == 'HelPo WOrLd'"
+    ],
+    "3": [
+        "assert tongues('olLEh') == 'Hello'",
+        "assert tongues(\"Hpf, ljfwl!\") == \"Hello, world!\"",
+        "assert tongues('tHE fAST') == 'tHE fAST'",
+        "assert tongues(\"Gur pbqr pnaavat rzretrapr.\") == \"The code breaking exercise.\"",
+        "assert tongues('HelPo WOrLd') == 'HelPo WOrLd'",
+        "assert tongues(\"Uryyb jbeyq!\") == \"Hello world!\"",
+        "assert tongues('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz') == 'NBVXKHRZLKGPWJFQTSMCEYDIAIUOAYE'"
+    ]
+}

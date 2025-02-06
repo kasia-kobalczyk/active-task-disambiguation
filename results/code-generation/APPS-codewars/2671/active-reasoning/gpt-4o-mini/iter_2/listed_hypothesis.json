@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.index('D') if 'D' in x else -1\n\n    distance = abs(cat_index - mouse_index)\n    if distance <= j:\n        if (cat_index < dog_index < mouse_index) or (mouse_index < dog_index < cat_index):\n            return 'Protected!'\n        return 'Caught!'\n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if cat_index > mouse_index:\n        cat_index, mouse_index = mouse_index, cat_index\n    \n    segment = x[cat_index:mouse_index]\n    \n    if 'D' in segment:\n        return 'Protected!'\n    elif len(segment) - 1 <= j:\n        return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.index('D') if 'D' in x else -1\n    \n    if abs(cat_index - mouse_index) <= j:\n        if (cat_index < dog_index < mouse_index) or (mouse_index < dog_index < cat_index):\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if cat_index > mouse_index:\n        cat_index, mouse_index = mouse_index, cat_index\n    \n    distance = mouse_index - cat_index - 1\n    if distance <= j:\n        if 'D' in x[cat_index:mouse_index]:\n            return 'Protected!'\n        return 'Caught!'\n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_pos = x.index('C')\n    mouse_pos = x.index('m')\n    \n    if 'D' in x[cat_pos:mouse_pos] or 'D' in x[mouse_pos:cat_pos]:\n        return 'Protected!'\n    \n    distance = abs(cat_pos - mouse_pos)\n    \n    if distance <= j:\n        return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.index('D') if 'D' in x else None\n    \n    distance = abs(cat_index - mouse_index)\n    \n    if distance > j:\n        return 'Escaped!'\n    \n    if dog_index is not None and min(cat_index, mouse_index) < dog_index < max(cat_index, mouse_index):\n        return 'Protected!'\n    \n    return 'Caught!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.index('D') if 'D' in x else -1\n    \n    distance = abs(cat_index - mouse_index)\n    \n    if distance <= j:\n        if (cat_index < dog_index < mouse_index) or (mouse_index < dog_index < cat_index):\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.index('D')\n    \n    if cat_index < mouse_index:\n        distance = mouse_index - cat_index\n        if distance <= j:\n            if dog_index > cat_index and dog_index < mouse_index:\n                return 'Protected!'\n            return 'Caught!'\n    else:\n        distance = cat_index - mouse_index\n        if distance <= j:\n            if dog_index < cat_index and dog_index > mouse_index:\n                return 'Protected!'\n            return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.index('D')\n    \n    if (cat_index < dog_index < mouse_index) or (mouse_index < dog_index < cat_index):\n        return 'Protected!'\n    \n    distance = abs(cat_index - mouse_index)\n    \n    if distance <= j:\n        return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if mouse_index < cat_index:\n        cat_index, mouse_index = mouse_index, cat_index\n    \n    distance = mouse_index - cat_index\n    if distance > j:\n        return 'Escaped!'\n    \n    if 'D' in x[cat_index:mouse_index]:\n        return 'Protected!'\n    \n    return 'Caught!'\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.index('D') if 'D' in x else -1\n    \n    distance = abs(cat_index - mouse_index)\n\n    if distance <= j:\n        if dog_index != -1 and (cat_index < dog_index < mouse_index or mouse_index < dog_index < cat_index):\n            return 'Protected!'\n        return 'Caught!'\n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        else:\n            return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' in x and 'D' in x and 'm' in x:\n        cat_index = x.index('C')\n        mouse_index = x.index('m')\n        if abs(cat_index - mouse_index) <= j:\n            if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n                return 'Protected!'\n            return 'Caught!'\n        return 'Escaped!'\n    return 'boring without all three'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        else:\n            return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        else:\n            return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        else:\n            return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_pos = x.index('C')\n    mouse_pos = x.index('m')\n    \n    if abs(cat_pos - mouse_pos) <= j:\n        if 'D' in x[min(cat_pos, mouse_pos):max(cat_pos, mouse_pos)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.find('D')\n\n    if abs(cat_index - mouse_index) <= j:\n        if dog_index == -1 or (dog_index > min(cat_index, mouse_index) and dog_index < max(cat_index, mouse_index)):\n            return 'Caught!'\n        else:\n            return 'Protected!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' in x and 'm' in x and 'D' in x:\n        cat_index = x.index('C')\n        mouse_index = x.index('m')\n        dog_index = x.index('D')\n        \n        if abs(cat_index - mouse_index) <= j:\n            if (cat_index < dog_index < mouse_index) or (cat_index > dog_index > mouse_index):\n                return 'Protected!'\n            return 'Caught!'\n        return 'Escaped!'\n    return 'boring without all three'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.index('D') if 'D' in x else -1\n    \n    distance = abs(cat_index - mouse_index)\n\n    if distance <= j:\n        if (cat_index < dog_index < mouse_index) or (mouse_index < dog_index < cat_index):\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_pos = x.index('C')\n    mouse_pos = x.index('m')\n    \n    if abs(cat_pos - mouse_pos) <= j:\n        if 'D' in x[min(cat_pos, mouse_pos):max(cat_pos, mouse_pos)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        else:\n            return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        segment = x[min(cat_index, mouse_index):max(cat_index, mouse_index) + 1]\n        if 'D' in segment:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.find('D')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if (cat_index < dog_index < mouse_index) or (mouse_index < dog_index < cat_index):\n            return 'Protected!'\n        else:\n            return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' in x and 'm' in x and 'D' in x:\n        cat_pos = x.index('C')\n        mouse_pos = x.index('m')\n        dog_pos = x.index('D')\n        \n        distance = abs(cat_pos - mouse_pos)\n        \n        if distance <= j:\n            if (cat_pos < dog_pos < mouse_pos) or (mouse_pos < dog_pos < cat_pos):\n                return 'Protected!'\n            return 'Caught!'\n        else:\n            return 'Escaped!'\n    else:\n        return 'boring without all three'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_pos = x.index('C')\n    mouse_pos = x.index('m')\n    dog_pos = x.index('D') if 'D' in x else -1\n    \n    if abs(cat_pos - mouse_pos) <= j:\n        if (cat_pos < dog_pos < mouse_pos) or (mouse_pos < dog_pos < cat_pos):\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index) + 1]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        else:\n            return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.find('D')\n    \n    distance = abs(cat_index - mouse_index)\n    \n    if distance <= j:\n        if (cat_index < dog_index < mouse_index) or (mouse_index < dog_index < cat_index):\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    dog_index = x.find('D')\n    \n    distance = abs(cat_index - mouse_index)\n    \n    if distance <= j:\n        if (cat_index < dog_index < mouse_index) or (mouse_index < dog_index < cat_index):\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        else:\n            return 'Caught!'\n    else:\n        return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        else:\n            return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index) + 1]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x, j):\n    if 'C' not in x or 'm' not in x or 'D' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_index = x.index('C')\n    mouse_index = x.index('m')\n    \n    if abs(cat_index - mouse_index) <= j:\n        if 'D' in x[min(cat_index, mouse_index):max(cat_index, mouse_index)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cat_mouse(x,j):\n    if 'C' not in x or 'D' not in x or 'm' not in x:\n        return 'boring without all three'\n    \n    cat_pos = x.index('C')\n    mouse_pos = x.index('m')\n    \n    if abs(cat_pos - mouse_pos) <= j:\n        if 'D' in x[min(cat_pos, mouse_pos):max(cat_pos, mouse_pos)]:\n            return 'Protected!'\n        return 'Caught!'\n    \n    return 'Escaped!'\n```",
+            "logp": null
+        }
+    ]
+}

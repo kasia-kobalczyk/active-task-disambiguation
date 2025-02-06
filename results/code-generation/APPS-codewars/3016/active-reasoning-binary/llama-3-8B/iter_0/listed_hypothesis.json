@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    for chord_type, interval in DCT_CHORDS.items():\n        if first_note in NOTES[NOTES.index(second_note) - interval] and second_note in NOTES[NOTES.index(third_note) - 7] and third_note in NOTES[NOTES.index(first_note) + 7]:\n            return chord_type\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    for chord_type, interval in DCT_CHORDS.items():\n        if first_note in NOTES[NOTES.index(second_note) - interval] and second_note in NOTES[NOTES.index(third_note) - 7] and third_note in NOTES[NOTES.index(first_note) + 7]:\n            return chord_type\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    for chord_type, interval in DCT_CHORDS.items():\n        if first_note in NOTES[NOTES.index(second_note) - interval] and second_note in NOTES[NOTES.index(third_note) - 7] and third_note in NOTES[NOTES.index(first_note) + 7]:\n            return chord_type\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    for chord_type, interval in DCT_CHORDS.items():\n        if first_note in NOTES[NOTES.index(second_note) - interval] and second_note in NOTES[NOTES.index(third_note) - 7] and third_note in NOTES[NOTES.index(first_note) + 7]:\n            return chord_type\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    for chord_type, interval in DCT_CHORDS.items():\n        if first_note in NOTES[NOTES.index(second_note) - interval] and second_note in NOTES[NOTES.index(third_note) - 7] and third_note in NOTES[NOTES.index(first_note) + 7]:\n            return chord_type\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    for key, value in DCT_CHORDS.items():\n        if (chord[0] in value[0] and chord[1] in value[1] and chord[2] in value[2]):\n            return key\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    for key, value in DCT_CHORDS.items():\n        if (chord[0] in value[0] and chord[1] in value[1] and chord[2] in value[2]):\n            return key\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    for key, value in DCT_CHORDS.items():\n        if (chord[0] in value[0] and chord[1] in value[1] and chord[2] in value[2]):\n            return key\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    for key, value in DCT_CHORDS.items():\n        if (chord[0] in value[0] and chord[1] in value[1] and chord[2] in value[2]):\n            return key\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    for key, value in DCT_CHORDS.items():\n        if (chord[0] in value[0] and chord[1] in value[1] and chord[2] in value[2]):\n            return key\n    return 'Not a chord'",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

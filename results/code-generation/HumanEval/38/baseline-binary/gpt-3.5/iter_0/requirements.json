@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert decode_cyclic(\"aabbbcdddef\") == \"abcdef\"",
+        false
+    ],
+    "1": [
+        "assert decode_cyclic(\"bcd\") == \"bcd\"",
+        false
+    ],
+    "2": [
+        "assert decode_cyclic(\"abc\") == \"abc\"",
+        false
+    ],
+    "3": [
+        "assert decode_cyclic(\"cda\") == \"cda\"",
+        false
+    ]
+}

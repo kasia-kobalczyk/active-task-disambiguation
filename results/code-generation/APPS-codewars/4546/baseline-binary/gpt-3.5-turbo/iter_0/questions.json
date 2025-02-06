@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert find_children(\"aAbaBb\") == \"AaaBbb\"",
+        "assert find_children(\"DdEeFf\") == \"DddEeeFff\"",
+        "assert find_children(\"CcBbAa\") == \"AaaBbbCc\""
+    ],
+    "1": [
+        "assert find_children(\"ZyYxX\") == \"XyYz\"",
+        "assert find_children(\"aAbBcCdD\") == \"AaaBbbCccDdd\""
+    ],
+    "2": [
+        "assert find_children(\"aAbBcCdD\") == \"AaaBbbCccDdd\""
+    ],
+    "3": [
+        "assert find_children(\"dDaAd\") == \"ADDad\"",
+        "assert find_children(\"zYxyXXaA\") == \"AAXYxyzx\"",
+        "assert find_children(\"CcbBaAb\") == \"ABCabc\""
+    ]
+}

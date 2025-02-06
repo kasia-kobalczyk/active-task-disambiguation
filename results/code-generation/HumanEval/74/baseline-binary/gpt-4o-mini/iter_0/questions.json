@@ -1,0 +1,17 @@
+{
+    "0": [
+        "assert total_match([\"cat\", \"dog\"], [\"elephant\"]) == [\"cat\", \"dog\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"cherry\", \"date\"]) == [\"apple\", \"banana\"]"
+    ],
+    "1": [
+        "assert total_match([\"hello\", \"world\"], [\"hi\", \"there\"]) == [\"hello\", \"world\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"pear\"]) == [\"pear\"]"
+    ],
+    "2": [
+        "assert total_match([\"apple\", \"banana\", \"pear\"], [\"grape\"]) == [\"grape\"]"
+    ],
+    "3": [
+        "assert total_match([\"hello\", \"world\"], [\"hi\", \"there\"]) == [\"hi\", \"there\"]",
+        "assert total_match([\"a\", \"b\", \"c\"], [\"x\", \"y\"]) == [\"a\", \"b\", \"c\"]"
+    ]
+}

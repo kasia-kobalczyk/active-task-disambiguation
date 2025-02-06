@@ -1,0 +1,54 @@
+{
+    "0": [
+        "assert cat_mouse(\".....C............m......\", 5) == \"Escaped!\"",
+        "assert cat_mouse(\"...m.........C...D\", 10) == \"Caught!\"",
+        "assert cat_mouse(\"..C.....m.\", 5) == \"Caught!\"",
+        "assert cat_mouse(\"...m....D...........\", 10) == \"boring without all three\"",
+        "assert cat_mouse(\".......\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\"...m....D....C.......\", 10) == \"Protected!\""
+    ],
+    "1": [
+        "assert cat_mouse(\".....C............m......\", 5) == \"Escaped!\"",
+        "assert cat_mouse(\"..C...m\", 5) == \"Escaped!\"",
+        "assert cat_mouse(\"...D....C......\", 10) == \"boring without all three\"",
+        "assert cat_mouse(\"..m..D..C...\", 10) == \"Protected!\"",
+        "assert cat_mouse(\"...m...........C.......\", 10) == \"boring without all three\"",
+        "assert cat_mouse(\"..C.m\", 5) == \"Caught!\"",
+        "assert cat_mouse(\"...m.........C...D\", 10) == \"Caught!\"",
+        "assert cat_mouse(\"...m....D......\", 10) == \"boring without all three\""
+    ],
+    "2": [
+        "assert cat_mouse(\"..C...m\", 5) == \"Escaped!\"",
+        "assert cat_mouse(\"........C........\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\"..m..D..C...\", 10) == \"Protected!\"",
+        "assert cat_mouse(\"...C....D......\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\".......m...........D..........C.......\", 10) == \"Escaped!\"",
+        "assert cat_mouse(\"...m....D......\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\"...m...........C.......\", 10) == \"boring without all three\"",
+        "assert cat_mouse(\"..C.m\", 5) == \"Caught!\"",
+        "assert cat_mouse(\"...m.........C...D\", 10) == \"Caught!\"",
+        "assert cat_mouse(\".......C...........D..........m.......\", 10) == \"Caught!\"",
+        "assert cat_mouse(\"D....C.....m.......\", 5) == \"Caught!\"",
+        "assert cat_mouse(\".......C...........m..........D.......\", 10) == \"Protected!\""
+    ],
+    "3": [
+        "assert cat_mouse(\"...m....D....C...D....\", 10) == \"Protected!\"",
+        "assert cat_mouse(\"..............CD\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\"............C.....m...\", 10) == \"Caught!\"",
+        "assert cat_mouse(\"............m..C\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\"............m..\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\"............C....D....m...\", 10) == \"Protected!\"",
+        "assert cat_mouse(\"...m....C.............\", 10) == \"Caught!\"",
+        "assert cat_mouse(\"........m.............C.....\", 5) == \"Escaped!\"",
+        "assert cat_mouse(\"...m...D....C.......\", 10) == \"Caught!\"",
+        "assert cat_mouse(\"..............C\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\"...............\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\"...m.....\", 3) == \"boring without all three\"",
+        "assert cat_mouse(\"............m..D\", 5) == \"boring without all three\"",
+        "assert cat_mouse(\"...m....C.....D..........\", 10) == \"Protected!\"",
+        "assert cat_mouse(\"...C.....m.\", 5) == \"Caught!\"",
+        "assert cat_mouse(\".....C.........m.......\", 5) == \"Escaped!\"",
+        "assert cat_mouse(\"............C..........m...\", 5) == \"Escaped!\"",
+        "assert cat_mouse(\".............D.\", 5) == \"boring without all three\""
+    ]
+}

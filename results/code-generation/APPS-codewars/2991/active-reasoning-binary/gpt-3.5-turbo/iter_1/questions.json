@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert not_so_random(1, 1) == \"White\"",
+        "assert not_so_random(1000000000, 1000000000) == \"White\"",
+        "assert not_so_random(1, 2) == \"Unsure\"",
+        "assert not_so_random(2, 2) == \"White\"",
+        "assert not_so_random(5, 5) == \"Unsure\"",
+        "assert not_so_random(2, 1) == \"Black\"",
+        "assert not_so_random(2, 3) == \"Unsure\"",
+        "assert not_so_random(10, 0) == \"Black\"",
+        "assert not_so_random(5, 3) == \"Black\"",
+        "assert not_so_random(1, 1000000000) == \"Black\""
+    ],
+    "1": [
+        "assert not_so_random(1, 1) == \"White\"",
+        "assert not_so_random(4, 4) == \"Black\"",
+        "assert not_so_random(2, 2) == \"White\"",
+        "assert not_so_random(3, 2) == \"Black\"",
+        "assert not_so_random(5, 5) == \"White\"",
+        "assert not_so_random(2, 4) == \"White\"",
+        "assert not_so_random(3, 3) == \"Black\"",
+        "assert not_so_random(4, 2) == \"Black\""
+    ],
+    "2": [
+        "assert not_so_random(1, 1) == \"White\"",
+        "assert not_so_random(10**9, 10**9) == \"Unsure\"",
+        "assert not_so_random(2, 2) == \"White\"",
+        "assert not_so_random(10, 10) == \"White\"",
+        "assert not_so_random(5, 5) == \"Black\""
+    ],
+    "3": [
+        "assert not_so_random(4, 3) == \"Unsure\"",
+        "assert not_so_random(10**9, 10**9) == \"Unsure\"",
+        "assert not_so_random(2, 2) == \"White\"",
+        "assert not_so_random(3, 2) == \"Black\"\n# Explanation: The initial colors are 3 black and 2 white. If we remove a pair of marbles of the same color, we will have 4 black marbles and 1 white marble. If we remove a pair of marbles of different colors, we will have 2 black marbles and 2 white marbles. Since we have more black marbles in the beginning, we will remove pairs of marbles of the same color until there is only one marble left, which will be black.",
+        "assert not_so_random(10, 10) == \"White\"",
+        "assert not_so_random(3, 2) == \"White\"",
+        "assert not_so_random(5, 1) == \"White\"\n\n# We remove one white and one white marble from the",
+        "assert not_so_random(2, 2) == \"Black\"",
+        "assert not_so_random(5, 5) == \"Black\""
+    ]
+}

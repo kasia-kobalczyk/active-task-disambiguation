@@ -1,0 +1,130 @@
+{
+    "0": [
+        {
+            "content": "def not_so_random(b, w):\n    if abs(b - w) > 1:\n        return \"Unsure\"\n    elif b == w:\n        return \"White\"\n    else:\n        return \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if b == 0 or w == 0:\n        return \"Unsure\"\n    elif b % 2 == 0 or w % 2 == 0:\n        return \"Black\"\n    else:\n        return \"White\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    # Check if the number of black and white marbles is odd\n    if b % 2 == 1 and w % 2 == 1:\n        return \"Unsure\"\n    # If the number of black marbles is odd and the number of white marbles is even, the last marble will be black\n    elif b % 2 == 1 and w % 2 == 0:\n        return \"Black\"\n    # If the number of black marbles is even and the number of white marbles is odd, the last marble will be white\n    elif b % 2 == 0 and w % 2 == 1:\n        return \"White\"\n    # If both the number of black and white marbles are even, the last marble will be black\n    else:\n        return \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    # Check if the difference between the number of black and white marbles is greater than 1\n    if abs(b - w) > 1:\n        return \"Unsure\"\n    \n    # Check if there are more black marbles than white marbles\n    if b > w:\n        return \"Black\"\n    \n    # Check if there are more white marbles than black marbles\n    if w > b:\n        return \"White\"\n    \n    # If the number of black and white marbles is equal, return \"Unsure\"\n    return \"Unsure\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    # If the number of black or white marbles is 0, return \"Unsure\"\n    if b == 0 or w == 0:\n        return \"Unsure\"\n    \n    # If the number of black and white marbles is odd, return \"Unsure\"\n    if (b + w) % 2 != 0:\n        return \"Unsure\"\n    \n    # If the number of black and white marbles is even, check the difference\n    diff = abs(b - w)\n    \n    # If the difference is even, return \"Black\" or \"White\" depending on the greater number of marbles\n    if diff % 2 == 0:\n        if b > w:\n            return \"Black\"\n        else:\n            return \"White\"\n    # If the difference is odd, return \"Unsure\"\n    else:\n        return \"Unsure\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    if b == 0:\n        return \"White\"\n    elif w == 0:\n        return \"Black\"\n    elif b == 1 and w == 1:\n        return \"Unsure\"\n    elif b % 2 == 0:\n        return \"Black\"\n    else:\n        return \"White\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    # If both b and w are zero, then we can't predict the color of the last marble\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    # If the difference between b and w is greater than 1, then we can predict the color of the last marble\n    elif abs(b - w) > 1:\n        return \"Unsure\"\n    # If the difference between b and w is less than or equal to 1, then we can safely predict the color of the last marble\n    else:\n        return \"Black\" if b > w else \"White\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if b == 0:\n        return \"White\" if w%2 == 0 else \"Unsure\"\n    if w == 0:\n        return \"Black\"\n    if b%2 == 0:\n        return \"Black\"\n    return \"Unsure\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    # If there are no black or white marbles, return \"Unsure\"\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    \n    # If there are no black marbles, the last marble will be white\n    if b == 0:\n        return \"White\"\n    \n    # If there are no white marbles, the last marble will be black\n    if w == 0:\n        return \"Black\"\n    \n    # If there are more black marbles than white marbles, the last marble will be black\n    if b > w:\n        return \"Black\"\n    \n    # If there are more white marbles than black marbles, the last marble will be white\n    if w > b:\n        return \"White\"\n    \n    # If the number of black and white marbles is the same, return \"Unsure\"\n    return \"Unsure\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    if abs(b - w) <= 1:\n        return \"Unsure\"\n    elif b < w:\n        return \"Black\"\n    else:\n        return \"White\"",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def not_so_random(b,w):\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    elif abs(b-w) <= 1:\n        return \"White\"\n    else:\n        return \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    if b == 0:\n        if w % 2 == 0:\n            return \"White\"\n        else:\n            return \"Unsure\"\n    elif w == 0:\n        if b % 2 == 0:\n            return \"Black\"\n        else:\n            return \"Unsure\"\n    else:\n        return \"White\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if abs(b - w) > 1:\n        return \"Unsure\"\n    elif b == w:\n        return \"White\"\n    elif b > w:\n        return \"Black\"\n    else:\n        return \"White\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if abs(b-w) > 1:\n        return \"Unsure\"\n    elif b == w:\n        return \"White\"\n    elif b > w:\n        return \"Black\"\n    elif w > b:\n        return \"White\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n\n    # If both b and w are zero, it means we don't have any marbles, so we can't determine the color of the last marble\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    \n    # If we have an odd number of black or white marbles, we can't determine the color of the last marble\n    if b % 2 == 1 or w % 2 == 1:\n        return \"Unsure\"\n    \n    # If the number of black and white marbles is equal, the color of the last marble will be white\n    if b == w:\n        return \"White\"\n    \n    # If the number of black marbles is greater than the number of white marbles, the color of the last marble will be black\n    if b > w:\n        return \"Black\"\n    \n    # If the number of white marbles is greater than the number of black marbles, the color of the last marble will be white\n    if w > b:\n        return \"White\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    elif abs(b-w) <= 1:\n        return \"White\"\n    else:\n        return \"Unsure\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    elif b == w:\n        if (b+w) % 2 == 0:\n            return \"White\"\n        else:\n            return \"Black\"\n    elif abs(b-w) == 1:\n        return \"Black\"\n    else:\n        return \"Unsure\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    if b == 0 or w == 0:\n        return \"Unsure\"\n    elif b == 1 and w == 1:\n        return \"Black\"\n    elif b % 2 == 0 or w % 2 == 0:\n        return \"White\"\n    else:\n        return \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    elif b == 0:\n        return \"White\"\n    elif w == 0:\n        return \"Black\"\n    elif abs(b - w) <= 1:\n        return \"White\"\n    else:\n        return \"Unsure\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    if abs(b - w) > 1:\n        return \"Unsure\"\n    elif b == w:\n        return \"White\"\n    elif b > w:\n        return \"Black\"\n    else:\n        return \"White\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if abs(b-w) > 1:\n        return \"Unsure\"\n    elif b == 0 and w == 0:\n        return \"Unsure\"\n    elif b == w:\n        return \"White\"\n    elif abs(b-w) == 1:\n        return \"Black\"\n    elif b > w:\n        return \"Black\"\n    elif b < w:\n        return \"White\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    # If there are no marbles, return \"Unsure\"\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    \n    # If there is only one marble, return its color\n    if b == 0:\n        return \"White\"\n    if w == 0:\n        return \"Black\"\n    \n    # Calculate the number of pairs that can be removed\n    min_pairs = min(b, w)\n    \n    # If there are more black marbles, the last marble will be black\n    if b > w:\n        if min_pairs >= w:\n            return \"Black\"\n        else:\n            return \"Unsure\"\n    \n    # If there are more white marbles, the last marble will be white\n    if w > b:\n        if min_pairs >= b + 1:\n            return \"White\"\n        else:\n            return \"Unsure\"\n    \n    # If there are equal number of black and white marbles, the last marble will be white\n    return \"White\"",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def not_so_random(b,w):\n    if b == 0:\n        return \"White\" if w % 2 == 0 else \"Unsure\"\n    elif w == 0:\n        return \"Black\" if b % 2 == 0 else \"Unsure\"\n    else:\n        return \"White\" if (b + w) % 2 == 0 else \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if abs(b-w) > 1:\n        return \"Unsure\"\n    elif b == 0 and w == 0:\n        return \"Unsure\"\n    elif (b+w) % 2 == 0:\n        return \"White\"\n    else:\n        return \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    # If the number of black or white marbles is 0, return \"Unsure\"\n    if b == 0 or w == 0:\n        return \"Unsure\"\n    # If the difference between the number of black and white marbles is too large, return \"Unsure\"\n    if abs(b-w) > 1:\n        return \"Unsure\"\n    # If the number of black and white marbles is odd, the last marble will be black\n    if (b+w) % 2 != 0:\n        return \"Black\"\n    # If the number of black and white marbles is even and equal, the last marble will be white\n    if b == w:\n        return \"White\"\n    # If the number of black and white marbles is even and not equal, the last marble will be black\n    return \"Black\"",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def not_so_random(b, w):\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    elif b % 2 == 0:\n        return \"White\"\n    else:\n        return \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    elif b == 0:\n        return \"White\"\n    elif w == 0:\n        return \"Black\"\n    elif b % 2 == 0:\n        return \"White\"\n    else:\n        return \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b, w):\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    elif b % 2 == 0:\n        return \"White\"\n    else:\n        return \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if b == 0 and w == 0:\n        return \"Unsure\"\n    if b == 0:\n        return \"White\"\n    if w == 0:\n        return \"Black\"\n    if b % 2 == 0:\n        return \"White\"\n    else:\n        return \"Black\"",
+            "logp": null
+        },
+        {
+            "content": "def not_so_random(b,w):\n    if b == 0 or w == 0:\n        return \"Unsure\"\n    elif b % 2 == 0:\n        return \"White\"\n    else:\n        return \"Black\"",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert cycpattern_check(\"python\", \"thonpy\") == True",
+        true
+    ],
+    "1": [
+        "assert cycpattern_check(\"python\", \"program\") == False",
+        true
+    ],
+    "2": [
+        "assert cycpattern_check(\"python\", \"\") == False",
+        false
+    ],
+    "3": [
+        "assert cycpattern_check(\"abcd\", \"dabc\") == True",
+        true
+    ]
+}

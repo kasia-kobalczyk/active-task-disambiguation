@@ -1,0 +1,126 @@
+{
+    "0": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x3 <= x2 <= x1) and (y1 <= y2 <= y3 or y3 <= y2 <= y1) and (z1 <= z2 <= z3 or z3 <= z2 <= z1):\n        return 2\n    elif (x1 <= x3 <= x2 or x2 <= x3 <= x1) and (y1 <= y3 <= y2 or y2 <= y3 <= y1) and (z1 <= z3 <= z2 or z2 <= z3 <= z1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) <= y2 <= max(y1, y2, y3) and min(z1, z2, z3) <= z2 <= max(z1, z2, z3):\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if min(y1, y2, y3) <= y1 <= max(y1, y2, y3) and min(z1, z2, z3) <= z1 <= max(z1, z2, z3):\n            return 1\n        else:\n            return 3\n    else:\n        if min(y1, y2, y3) <= y1 <= max(y1, y2, y3) and min(z1, z2, z3) <= z1 <= max(z1, z2, z3):\n            return 2\n        else:\n            return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) <= y2 <= max(y1, y2, y3) and min(z1, z2, z3) <= z2 <= max(z1, z2, z3):\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if min(y1, y2, y3) <= y1 <= max(y1, y2, y3) and min(z1, z2, z3) <= z1 <= max(z1, z2, z3):\n            return 1\n        else:\n            return 3\n    else:\n        if min(y1, y2, y3) <= y1 <= max(y1, y2, y3) and min(z1, z2, z3) <= z1 <= max(z1, z2, z3):\n            return 2\n        else:\n            return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if x2 < max(x1, x3) and x2 > min(x1, x3):\n            return 2\n        elif y2 < max(y1, y3) and y2 > min(y1, y3):\n            return 2\n        elif z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if x1 < max(x2, x3) and x1 > min(x2, x3):\n            return 1\n        elif y1 < max(y2, y3) and y1 > min(y2, y3):\n            return 1\n        elif z1 < max(z2, z3) and z1 > min(z2, z3):\n            return 1\n        else:\n            return 3\n    else:\n        if x3 < max(x1, x2) and x3 > min(x1, x2):\n            return 3\n        elif y3 < max(y1, y2) and y3 > min(y1, y2):\n            return 3\n        elif z3 < max(z1, z2) and z3 > min(z1, z2):\n            return 3\n        else:\n            return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if x2 < max(x1, x3) and x2 > min(x1, x3):\n            return 2\n        elif y2 < max(y1, y3) and y2 > min(y1, y3) and z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        else:\n            return 1 if (y1 < max(y2, y3) and y1 > min(y2, y3) and z1 < max(z2, z3) and z1 > min(z2, z3)) else 3\n    elif (min(y1, y2, y3) == y1 and max(y1, y2, y3) == y3) or (min(y1, y2, y3) == y3 and max(y1, y2, y3) == y1):\n        if y2 < max(y1, y3) and y2 > min(y1, y3):\n            return 2\n        elif x2 < max(x1, x3) and x2 > min(x1, x3) and z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        else:\n            return 1 if (x1 < max(x2, x3) and x1 > min(x2, x3) and z1 < max(z2, z3) and z1 > min(z2, z3)) else 3\n    else:\n        if z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        elif x2 < max(x1, x3) and x2 > min(x1, x3) and y2 < max(y1, y3) and y2 > min(y1, y3):\n            return 2\n        else:\n            return 1 if (x1 < max(x2, x3) and x1 > min(x2, x3) and y1 < max(y2, y3) and y1 > min(y2, y3)) else 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x3 <= x2 <= x1) and (y1 <= y2 <= y3 or y3 <= y2 <= y1) and (z1 <= z2 <= z3 or z3 <= z2 <= z1):\n        return 2\n    elif (x1 <= x3 <= x2 or x2 <= x3 <= x1) and (y1 <= y3 <= y2 or y2 <= y3 <= y1) and (z1 <= z3 <= z2 or z2 <= z3 <= z1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x1 >= x2 >= x3) and (y1 <= y2 <= y3 or y1 >= y2 >= y3) and (z1 <= z2 <= z3 or z1 >= z2 >= z3):\n        return 2\n    elif (x1 <= x3 <= x2 or x1 >= x3 >= x2) and (y1 <= y3 <= y2 or y1 >= y3 >= y2) and (z1 <= z3 <= z2 or z1 >= z3 >= z2):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) <= y2 <= max(y1, y2, y3) and min(z1, z2, z3) <= z2 <= max(z1, z2, z3):\n            return 2\n        elif min(y1, y2, y3) <= y3 <= max(y1, y2, y3) and min(z1, z2, z3) <= z3 <= max(z1, z2, z3):\n            return 3\n        else:\n            return 1\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if min(y2, y1, y3) <= y1 <= max(y2, y1, y3) and min(z2, z1, z3) <= z1 <= max(z2, z1, z3):\n            return 1\n        elif min(y2, y1, y3) <= y3 <= max(y2, y1, y3) and min(z2, z1, z3) <= z3 <= max(z2, z1, z3):\n            return 3\n        else:\n            return 2\n    else:\n        if min(y3, y1, y2) <= y1 <= max(y3, y1, y2) and min(z3, z1, z2) <= z1 <= max(z3, z1, z2):\n            return 1\n        elif min(y3, y1, y2) <= y2 <= max(y3, y1, y2) and min(z3, z1, z2) <= z2 <= max(z3, z1, z2):\n            return 2\n        else:\n            return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if x2 < max(x1, x3) and x2 > min(x1, x3):\n            return 2\n        elif y2 < max(y1, y3) and y2 > min(y1, y3):\n            return 2\n        elif z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if x1 < max(x2, x3) and x1 > min(x2, x3):\n            return 1\n        elif y1 < max(y2, y3) and y1 > min(y2, y3):\n            return 1\n        elif z1 < max(z2, z3) and z1 > min(z2, z3):\n            return 1\n        else:\n            return 3\n    else:\n        if x3 < max(x1, x2) and x3 > min(x1, x2):\n            return 3\n        elif y3 < max(y1, y2) and y3 > min(y1, y2):\n            return 3\n        elif z3 < max(z1, z2) and z3 > min(z1, z2):\n            return 3\n        else:\n            return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if x2 != min(x1, x2, x3) and x2 != max(x1, x2, x3):\n            return 2\n        elif y2 != min(y1, y2, y3) and y2 != max(y1, y2, y3):\n            return 2\n        elif z2 != min(z1, z2, z3) and z2 != max(z1, z2, z3):\n            return 2\n        else:\n            return 1\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if x1 != min(x1, x2, x3) and x1 != max(x1, x2, x3):\n            return 1\n        elif y1 != min(y1, y2, y3) and y1 != max(y1, y2, y3):\n            return 1\n        elif z1 != min(z1, z2, z3) and z1 != max(z1, z2, z3):\n            return 1\n        else:\n            return 2\n    else:\n        if x3 != min(x1, x2, x3) and x3 != max(x1, x2, x3):\n            return 3\n        elif y3 != min(y1, y2, y3) and y3 != max(y1, y2, y3):\n            return 3\n        elif z3 != min(z1, z2, z3) and z3 != max(z1, z2, z3):\n            return 3\n        else:\n            return 1",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if x2 < max(x1, x3) and x2 > min(x1, x3):\n            return 2\n        elif y2 < max(y1, y3) and y2 > min(y1, y3):\n            return 2\n        elif z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        else:\n            return 1\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if x1 < max(x2, x3) and x1 > min(x2, x3):\n            return 1\n        elif y1 < max(y2, y3) and y1 > min(y2, y3):\n            return 1\n        elif z1 < max(z2, z3) and z1 > min(z2, z3):\n            return 1\n        else:\n            return 2\n    else:\n        if x3 < max(x1, x2) and x3 > min(x1, x2):\n            return 3\n        elif y3 < max(y1, y2) and y3 > min(y1, y2):\n            return 3\n        elif z3 < max(z1, z2) and z3 > min(z1, z2):\n            return 3\n        else:\n            return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if x2 < max(x1, x3) and x2 > min(x1, x3):\n            return 2\n        elif y2 < max(y1, y3) and y2 > min(y1, y3) and z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        else:\n            return 1 if (y1 < max(y2, y3) and y1 > min(y2, y3) and z1 < max(z2, z3) and z1 > min(z2, z3)) else 3\n    elif (min(y1, y2, y3) == y1 and max(y1, y2, y3) == y3) or (min(y1, y2, y3) == y3 and max(y1, y2, y3) == y1):\n        if y2 < max(y1, y3) and y2 > min(y1, y3):\n            return 2\n        elif x2 < max(x1, x3) and x2 > min(x1, x3) and z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        else:\n            return 1 if (x1 < max(x2, x3) and x1 > min(x2, x3) and z1 < max(z2, z3) and z1 > min(z2, z3)) else 3\n    else:\n        if z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        elif x2 < max(x1, x3) and x2 > min(x1, x3) and y2 < max(y1, y3) and y2 > min(y1, y3):\n            return 2\n        else:\n            return 1 if (x1 < max(x2, x3) and x1 > min(x2, x3) and y1 < max(y2, y3) and y1 > min(y2, y3)) else 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x3 <= x2 <= x1) and (y1 <= y2 <= y3 or y3 <= y2 <= y1) and (z1 <= z2 <= z3 or z3 <= z2 <= z1):\n        return 2\n    elif (x1 <= x3 <= x2 or x2 <= x3 <= x1) and (y1 <= y3 <= y2 or y2 <= y3 <= y1) and (z1 <= z3 <= z2 or z2 <= z3 <= z1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x1 >= x2 >= x3) and (y1 <= y2 <= y3 or y1 >= y2 >= y3) and (z1 <= z2 <= z3 or z1 >= z2 >= z3):\n        return 2\n    elif (x1 <= x3 <= x2 or x1 >= x3 >= x2) and (y1 <= y3 <= y2 or y1 >= y3 >= y2) and (z1 <= z3 <= z2 or z1 >= z3 >= z2):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if x2 < max(x1, x3) and x2 > min(x1, x3):\n            return 2\n        elif y2 < max(y1, y3) and y2 > min(y1, y3):\n            return 2\n        elif z2 < max(z1, z3) and z2 > min(z1, z3):\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if x1 < max(x2, x3) and x1 > min(x2, x3):\n            return 1\n        elif y1 < max(y2, y3) and y1 > min(y2, y3):\n            return 1\n        elif z1 < max(z2, z3) and z1 > min(z2, z3):\n            return 1\n        else:\n            return 3\n    else:\n        if x3 < max(x1, x2) and x3 > min(x1, x2):\n            return 3\n        elif y3 < max(y1, y2) and y3 > min(y1, y2):\n            return 3\n        elif z3 < max(z1, z2) and z3 > min(z1, z2):\n            return 3\n        else:\n            return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x3 <= x2 <= x1) and (y1 <= y2 <= y3 or y3 <= y2 <= y1) and (z1 <= z2 <= z3 or z3 <= z2 <= z1):\n        return 2\n    elif (x1 <= x3 <= x2 or x2 <= x3 <= x1) and (y1 <= y3 <= y2 or y2 <= y3 <= y1) and (z1 <= z3 <= z2 or z2 <= z3 <= z1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) == y1 and max(y1, y2, y3) == y3:\n            return 2\n        elif min(y1, y2, y3) == y3 and max(y1, y2, y3) == y1:\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if min(y2, y1, y3) == y2 and max(y2, y1, y3) == y3:\n            return 1\n        elif min(y2, y1, y3) == y3 and max(y2, y1, y3) == y2:\n            return 1\n        else:\n            return 3\n    else:\n        if min(y1, y2, y3) == y1 and max(y1, y2, y3) == y2:\n            return 3\n        elif min(y1, y2, y3) == y2 and max(y1, y2, y3) == y1:\n            return 3\n        else:\n            return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if x2 < max(x1, x3) and x2 > min(x1, x3):\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x2) or (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x1):\n        if x3 < max(x1, x2) and x3 > min(x1, x2):\n            return 3\n        else:\n            return 2\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if x1 < max(x2, x3) and x1 > min(x2, x3):\n            return 1\n        else:\n            return 3\n    return 1",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x1 >= x2 >= x3) and (y1 <= y2 <= y3 or y1 >= y2 >= y3) and (z1 <= z2 <= z3 or z1 >= z2 >= z3):\n        return 2\n    elif (x1 <= x3 <= x2 or x1 >= x3 >= x2) and (y1 <= y3 <= y2 or y1 >= y3 >= y2) and (z1 <= z3 <= z2 or z1 >= z3 >= z2):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x3 <= x2 <= x1) and (y1 <= y2 <= y3 or y3 <= y2 <= y1) and (z1 <= z2 <= z3 or z3 <= z2 <= z1):\n        return 2\n    elif (x1 <= x3 <= x2 or x2 <= x3 <= x1) and (y1 <= y3 <= y2 or y2 <= y3 <= y1) and (z1 <= z3 <= z2 or z2 <= z3 <= z1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) <= y2 <= max(y1, y2, y3) and min(z1, z2, z3) <= z2 <= max(z1, z2, z3):\n            return 2\n        elif min(y1, y2, y3) <= y3 <= max(y1, y2, y3) and min(z1, z2, z3) <= z3 <= max(z1, z2, z3):\n            return 3\n    elif (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x2) or (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) <= y3 <= max(y1, y2, y3) and min(z1, z2, z3) <= z3 <= max(z1, z2, z3):\n            return 3\n        elif min(y1, y2, y3) <= y1 <= max(y1, y2, y3) and min(z1, z2, z3) <= z1 <= max(z1, z2, z3):\n            return 1\n    else:\n        if min(y1, y2, y3) <= y1 <= max(y1, y2, y3) and min(z1, z2, z3) <= z1 <= max(z1, z2, z3):\n            return 1\n        elif min(y1, y2, y3) <= y2 <= max(y1, y2, y3) and min(z1, z2, z3) <= z2 <= max(z1, z2, z3):\n            return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) == y1 and max(y1, y2, y3) == y3:\n            return 2\n        elif min(y1, y2, y3) == y3 and max(y1, y2, y3) == y1:\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x2):\n        if min(y2, y1, y3) == y2 and max(y2, y1, y3) == y3:\n            return 1\n        elif min(y2, y1, y3) == y3 and max(y2, y1, y3) == y2:\n            return 1\n        else:\n            return 3\n    else:\n        if min(y1, y2, y3) == y1 and max(y1, y2, y3) == y2:\n            return 3\n        elif min(y1, y2, y3) == y2 and max(y1, y2, y3) == y1:\n            return 3\n        else:\n            return 2",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x3 <= x2 <= x1) and (y1 <= y2 <= y3 or y3 <= y2 <= y1) and (z1 <= z2 <= z3 or z3 <= z2 <= z1):\n        return 2\n    elif (x1 <= x3 <= x2 or x2 <= x3 <= x1) and (y1 <= y3 <= y2 or y2 <= y3 <= y1) and (z1 <= z3 <= z2 or z2 <= z3 <= z1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x1 >= x2 >= x3) and (y1 <= y2 <= y3 or y1 >= y2 >= y3) and (z1 <= z2 <= z3 or z1 >= z2 >= z3):\n        return 2\n    elif (x1 <= x3 <= x2 or x1 >= x3 >= x2) and (y1 <= y3 <= y2 or y1 >= y3 >= y2) and (z1 <= z3 <= z2 or z1 >= z3 >= z2):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x3 <= x2 <= x1) and (y1 <= y2 <= y3 or y3 <= y2 <= y1) and (z1 <= z2 <= z3 or z3 <= z2 <= z1):\n        return 2\n    elif (x1 <= x3 <= x2 or x2 <= x3 <= x1) and (y1 <= y3 <= y2 or y2 <= y3 <= y1) and (z1 <= z3 <= z2 or z2 <= z3 <= z1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) <= y2 <= max(y1, y2, y3) and min(z1, z2, z3) <= z2 <= max(z1, z2, z3):\n            return 2\n        elif min(y1, y2, y3) <= y3 <= max(y1, y2, y3) and min(z1, z2, z3) <= z3 <= max(z1, z2, z3):\n            return 3\n    elif (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x2) or (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) <= y3 <= max(y1, y2, y3) and min(z1, z2, z3) <= z3 <= max(z1, z2, z3):\n            return 3\n        elif min(y1, y2, y3) <= y1 <= max(y1, y2, y3) and min(z1, z2, z3) <= z1 <= max(z1, z2, z3):\n            return 1\n    else:\n        if min(y1, y2, y3) <= y1 <= max(y1, y2, y3) and min(z1, z2, z3) <= z1 <= max(z1, z2, z3):\n            return 1\n        elif min(y1, y2, y3) <= y2 <= max(y1, y2, y3) and min(z1, z2, z3) <= z2 <= max(z1, z2, z3):\n            return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3 or x3 <= x2 <= x1) and (y1 <= y2 <= y3 or y3 <= y2 <= y1) and (z1 <= z2 <= z3 or z3 <= z2 <= z1):\n        return 2\n    elif (x1 <= x3 <= x2 or x2 <= x3 <= x1) and (y1 <= y3 <= y2 or y2 <= y3 <= y1) and (z1 <= z3 <= z2 or z2 <= z3 <= z1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) == y1 and max(y1, y2, y3) == y3:\n            return 2\n        elif min(y1, y2, y3) == y3 and max(y1, y2, y3) == y1:\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x2) or (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) == y1 and max(y1, y2, y3) == y2:\n            return 3\n        elif min(y1, y2, y3) == y2 and max(y1, y2, y3) == y1:\n            return 3\n        else:\n            return 2\n    else:\n        if min(y1, y2, y3) == y2 and max(y1, y2, y3) == y3:\n            return 1\n        elif min(y1, y2, y3) == y3 and max(y1, y2, y3) == y2:\n            return 1\n        else:\n            return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x3) or (min(x1, x2, x3) == x3 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) <= y2 <= max(y1, y2, y3) and min(z1, z2, z3) <= z2 <= max(z1, z2, z3):\n            return 2\n        else:\n            return 3\n    elif (min(x1, x2, x3) == x1 and max(x1, x2, x3) == x2) or (min(x1, x2, x3) == x2 and max(x1, x2, x3) == x1):\n        if min(y1, y2, y3) <= y3 <= max(y1, y2, y3) and min(z1, z2, z3) <= z3 <= max(z1, z2, z3):\n            return 3\n        else:\n            return 2\n    else:\n        if min(y2, y3, y1) <= y1 <= max(y2, y3, y1) and min(z2, z3, z1) <= z1 <= max(z2, z3, z1):\n            return 1\n        else:\n            return 3",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,174 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    for group in paren_string.split():\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    groups = paren_string.split()\n    results = []\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    for group in paren_string.split():\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        result.append(max_depth)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    groups = paren_string.split()\n    depths = []\n    \n    for group in groups:\n        current_depth = 0\n        max_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n                \n        depths.append(max_depth)\n        \n    return depths\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    groups = paren_string.split()\n    results = []\n    \n    for group in groups:\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    groups = paren_string.split()\n    result = []\n    for group in groups:\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        result.append(max_depth)\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    return [max(map(lambda x: sum(1 if c == '(' else -1 for c in x), group), default=0) for group in paren_string.split()]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    return [max(map(len, group.split(')'))) for group in paren_string.split() if group]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    groups = paren_string.split()\n    max_depths = []\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        max_depths.append(max_depth)\n    \n    return max_depths\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n                \n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n\n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n\n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n\n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        result.append(max_depth)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        results.append(max_depth)\n    \n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    groups = paren_string.split()\n    \n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        \n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        \n        result.append(max_depth)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    for group in paren_string.split():\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\nfrom typing import List\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    groups = paren_string.split()\n    depths = []\n\n    for group in groups:\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        depths.append(max_depth)\n\n    return depths\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    for group in paren_string.split():\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    groups = paren_string.split()\n\n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n\n        results.append(max_depth)\n\n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    results = []\n    for group in paren_string.split():\n        max_depth = current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    return results\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    result = []\n    for group in paren_string.split():\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        result.append(max_depth)\n    return result\n```",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert fizz_buzz(50) == 3",
+        "assert fizz_buzz(10) == 0",
+        "assert fizz_buzz(200) == 15",
+        "assert fizz_buzz(100) == 8",
+        "assert fizz_buzz(30) == 2"
+    ],
+    "1": [
+        "assert fizz_buzz(20) == 0",
+        "assert fizz_buzz(200) == 9",
+        "assert fizz_buzz(100) == 8\n# Explanation: There are eight integers less than 100 which are divisible by 11 or 13, and those are 13, 26, 39, 52, 65, 78, 91, and 104.",
+        "assert fizz_buzz(70) == 2",
+        "assert fizz_buzz(20) == 1",
+        "assert fizz_buzz(10) == 0",
+        "assert fizz_buzz(100) == 3",
+        "assert fizz_buzz(30) == 2",
+        "assert fizz_buzz(30) == 0"
+    ],
+    "2": [
+        "assert fizz_buzz(11) == 0",
+        "assert fizz_buzz(1) == 0",
+        "assert fizz_buzz(13) == 1",
+        "assert fizz_buzz(12) == 0",
+        "assert fizz_buzz(10) == 0",
+        "assert fizz_buzz(30) == 1"
+    ],
+    "3": [
+        "assert fizz_buzz(50) == 0",
+        "assert fizz_buzz(50) == 2",
+        "assert fizz_buzz(77) == 1",
+        "assert fizz_buzz(500) == 2",
+        "assert fizz_buzz(21) == 1",
+        "assert fizz_buzz(131) == 2",
+        "assert fizz_buzz(10000) == 271\n# All of these numbers have the digit 7 in them, so the expected output is 271.",
+        "assert fizz_buzz(200) == 5",
+        "assert fizz_buzz(1000) == 21",
+        "assert fizz_buzz(77) == 2"
+    ]
+}

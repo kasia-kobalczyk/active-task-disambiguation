@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(min(week, 5)):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    if week == 1:\n        txt = PATTERNS[0].sub(lambda m: change(m), txt)\n    elif week == 2:\n        txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        txt = PATTERNS[1].sub(lambda m: change(m), txt)\n    elif week == 3:\n        txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        txt = PATTERNS[1].sub(lambda m: change(m), txt)\n        txt = PATTERNS[2].sub(lambda m: change(m), txt)\n    elif week == 4:\n        txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        txt = PATTERNS[1].sub(lambda m: change(m), txt)\n        txt = PATTERNS[2].sub(lambda m: change(m), txt)\n        txt = PATTERNS[3].sub(lambda m: change(m), txt)\n    elif week == 5:\n        txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        txt = PATTERNS[1].sub(lambda m: change(m), txt)\n        txt = PATTERNS[2].sub(lambda m: change(m), txt)\n        txt = PATTERNS[3].sub(lambda m: change(m), txt)\n        txt = PATTERNS[4].sub(lambda m: change(m), txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    result = txt\n    if week >= 1:\n        result = PATTERNS[0].sub(lambda m: change(m), result)\n    if week >= 2:\n        result = PATTERNS[1].sub(lambda m: change(m), result)\n    if week >= 3:\n        result = PATTERNS[2].sub(lambda m: change(m), result)\n    if week >= 4:\n        result = PATTERNS[3].sub(lambda m: change(m), result)\n    if week >= 5:\n        result = PATTERNS[4].sub(lambda m: change(m), result)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    pattern = re.compile('|'.join(PATTERNS[:week]))\n    return pattern.sub(change, txt)",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(min(week, 5)):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    patterns = PATTERNS[:week]\n    for pattern in patterns:\n        txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    txt = txt[:]\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    txt = txt.replace(\"CH\", \"CH\").replace(\"Ch\", \"Ch\").replace(\"ch\", \"ch\")\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt.replace(\"CH\", \"ch\").replace(\"Ch\", \"Ch\")",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(min(week, 5)):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(week):\n        for pattern in PATTERNS[:i+1]:\n            txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        patterns = PATTERNS[:i]\n        for pattern in patterns:\n            txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    result = txt\n    if week >= 1:\n        result = PATTERNS[0].sub(lambda m: change(m), result)\n    if week >= 2:\n        result = PATTERNS[1].sub(lambda m: change(m), result)\n    if week >= 3:\n        result = PATTERNS[2].sub(lambda m: change(m), result)\n    if week >= 4:\n        result = PATTERNS[3].sub(lambda m: change(m), result)\n    if week >= 5:\n        result = PATTERNS[4].sub(lambda m: change(m), result)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    if week < 1 or week > 5:\n        raise ValueError(\"Week must be between 1 and 5\")\n    for i in range(1, week + 1):\n        for pattern in PATTERNS[:i]:\n            txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(min(week, 5)):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    txt = txt[:]\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = PATTERNS[0].sub(change, txt)\n        elif i == 2:\n            txt = PATTERNS[1].sub(change, txt)\n        elif i == 3:\n            txt = PATTERNS[2].sub(change, txt)\n        elif i == 4:\n            txt = PATTERNS[3].sub(change, txt)\n        elif i == 5:\n            txt = PATTERNS[4].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    for i in range(week):\n        if i == 0:\n            txt = PATTERNS[i].sub(lambda m: change(m), txt)\n        elif i == 1:\n            txt = PATTERNS[i].sub(lambda m: change(m), txt)\n        elif i == 2:\n            txt = PATTERNS[i].sub(lambda m: \"k\" if m.group(0) == \"c\" else change(m), txt)\n        elif i == 3:\n            txt = PATTERNS[i].sub(lambda m: change(m), txt)\n        elif i == 4:\n            txt = PATTERNS[i].sub(lambda m: change(m), txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    txt = txt.replace(\"ch\", \"#ch#\")  # temporary replacement for \"ch\"\n    for i in range(week):\n        if i == 0:\n            txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        elif i == 1:\n            txt = PATTERNS[1].sub(lambda m: change(m), txt)\n        elif i == 2:\n            txt = PATTERNS[2].sub(lambda m: change(m), txt)\n        elif i == 3:\n            txt = PATTERNS[3].sub(lambda m: change(m), txt)\n        elif i == 4:\n            txt = PATTERNS[4].sub(lambda m: change(m), txt)\n    txt = txt.replace(\"#ch#\", \"ch\")  # revert temporary replacement\n    return txt",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        elif i == 2:\n            txt = PATTERNS[1].sub(lambda m: change(m), txt)\n        elif i == 3:\n            txt = PATTERNS[2].sub(lambda m: change(m), txt)\n        elif i == 4:\n            txt = PATTERNS[3].sub(lambda m: change(m), txt)\n        elif i == 5:\n            txt = PATTERNS[4].sub(lambda m: change(m), txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        patterns = PATTERNS[:i]\n        for pattern in patterns:\n            txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    if week == 1:\n        patterns = [PATTERNS[0]]\n    elif week == 2:\n        patterns = PATTERNS[:2]\n    elif week == 3:\n        patterns = PATTERNS[:3]\n    elif week == 4:\n        patterns = PATTERNS[:4]\n    elif week == 5:\n        patterns = PATTERNS\n    \n    for pattern in patterns:\n        txt = pattern.sub(change, txt)\n        \n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(min(week, 5)):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    txt = txt[:]\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        elif i == 2:\n            txt = PATTERNS[1].sub(lambda m: change(m), txt)\n        elif i == 3:\n            txt = PATTERNS[2].sub(lambda m: change(m), txt)\n        elif i == 4:\n            txt = PATTERNS[3].sub(lambda m: change(m), txt)\n        elif i == 5:\n            txt = PATTERNS[4].sub(lambda m: change(m), txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    for i in range(week):\n        if i == 0:\n            txt = PATTERNS[i].sub(lambda m: change(m), txt)\n        elif i == 1:\n            txt = PATTERNS[i].sub(lambda m: change(m), txt)\n        elif i == 2:\n            txt = PATTERNS[i].sub(lambda m: \"k\" if m.group(1) else change(m), txt)\n        elif i == 3:\n            txt = PATTERNS[i].sub(lambda m: change(m), txt)\n        elif i == 4:\n            txt = PATTERNS[i].sub(lambda m: change(m), txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        elif i == 2:\n            txt = PATTERNS[1].sub(lambda m: change(m), txt)\n        elif i == 3:\n            txt = PATTERNS[2].sub(lambda m: change(m), txt)\n        elif i == 4:\n            txt = PATTERNS[3].sub(lambda m: change(m), txt)\n        elif i == 5:\n            txt = PATTERNS[4].sub(lambda m: change(m), txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        for j in range(i):\n            txt = PATTERNS[j].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    if week >= 1:\n        txt = PATTERNS[0].sub(lambda m: change(m), txt)\n    if week >= 2:\n        txt = PATTERNS[1].sub(lambda m: change(m), txt)\n    if week >= 3:\n        txt = PATTERNS[2].sub(lambda m: change(m), txt)\n    if week >= 4:\n        txt = PATTERNS[3].sub(lambda m: change(m), txt)\n    if week >= 5:\n        txt = PATTERNS[4].sub(lambda m: change(m), txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = re.sub(PATTERNS[0], change, txt)\n        elif i == 2:\n            txt = re.sub(PATTERNS[1], change, txt)\n        elif i == 3:\n            txt = re.sub(PATTERNS[2], change, txt)\n        elif i == 4:\n            txt = re.sub(PATTERNS[3], change, txt)\n        elif i == 5:\n            txt = re.sub(PATTERNS[4], change, txt)\n    return txt",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        elif i == 2:\n            txt = PATTERNS[1].sub(lambda m: change(m), txt)\n        elif i == 3:\n            txt = PATTERNS[2].sub(lambda m: change(m), txt)\n        elif i == 4:\n            txt = PATTERNS[3].sub(lambda m: change(m), txt)\n        elif i == 5:\n            txt = PATTERNS[4].sub(lambda m: change(m), txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        patterns = PATTERNS[:i]\n        for pattern in patterns:\n            txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(week):\n        for pattern in PATTERNS[:i+1]:\n            txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    if week == 1:\n        patterns = [PATTERNS[0]]\n    elif week == 2:\n        patterns = PATTERNS[:2]\n    elif week == 3:\n        patterns = PATTERNS[:3]\n    elif week == 4:\n        patterns = PATTERNS[:4]\n    elif week == 5:\n        patterns = PATTERNS\n    \n    for pattern in patterns:\n        txt = pattern.sub(change, txt)\n        \n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(min(week, 5)):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    txt = txt[:]\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = PATTERNS[0].sub(lambda m: change(m), txt)\n        elif i == 2:\n            txt = PATTERNS[1].sub(lambda m: change(m), txt)\n        elif i == 3:\n            txt = PATTERNS[2].sub(lambda m: change(m), txt)\n        elif i == 4:\n            txt = PATTERNS[3].sub(lambda m: change(m), txt)\n        elif i == 5:\n            txt = PATTERNS[4].sub(lambda m: change(m), txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    patterns = PATTERNS[:week]\n    for pattern in patterns:\n        txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    txt = txt[:]\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = re.sub(PATTERNS[0], change, txt)\n        elif i == 2:\n            txt = re.sub(PATTERNS[1], change, txt)\n        elif i == 3:\n            txt = re.sub(PATTERNS[2], change, txt)\n        elif i == 4:\n            txt = re.sub(PATTERNS[3], change, txt)\n        elif i == 5:\n            txt = re.sub(PATTERNS[4], change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        for j in range(i):\n            txt = PATTERNS[j].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(week):\n        for pattern in PATTERNS[:i+1]:\n            txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week+1):\n        for pattern in PATTERNS[:i]:\n            txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = re.sub(PATTERNS[0], change, txt)\n        elif i == 2:\n            txt = re.sub(PATTERNS[1], change, txt)\n        elif i == 3:\n            txt = re.sub(PATTERNS[2], change, txt)\n        elif i == 4:\n            txt = re.sub(PATTERNS[3], change, txt)\n        elif i == 5:\n            txt = re.sub(PATTERNS[4], change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(1, week + 1):\n        for pat in PATTERNS[:i]:\n            txt = pat.sub(change, txt)\n    return txt",
+            "logp": null
+        }
+    ]
+}

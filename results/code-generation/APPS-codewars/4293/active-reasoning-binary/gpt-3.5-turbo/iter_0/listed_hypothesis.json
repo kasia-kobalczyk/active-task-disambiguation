@@ -1,0 +1,194 @@
+{
+    "0": [
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + (r/30))\n        mcglothin = 100 * w / (101.3 - 2.67123*r)\n        lombardi = w * r**0.1\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * (r ** 0.10)\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    \n    if r == 1:\n        return w\n    \n    epley = w * (1 + (r / 30))\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r**0.10\n    \n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 1:\n        return w\n    elif r == 0:\n        return 0\n    else:\n        epley = w * (1 + (0.0333 * r))\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * (r ** 0.1)\n        \n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + (r / 30))\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * (r ** 0.1)\n        \n        return max(round(epley), round(mcglothin), round(lombardi))\n```",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + 0.0333 * r)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.1\n        return max(round(epley), round(mcglothin), round(lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + (r/30))\n        mcglothin = (100*w) / (101.3 - 2.67123*r)\n        lombardi = w * (r**0.10)\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.10\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + 0.0333 * r)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r**0.1\n        return int(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r**0.10\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + 0.0333 * r)\n        mcglothin = w * (100 / (101.3 - 2.67123 * r))\n        lombardi = w * r**0.1\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + 0.0333 * r)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.1\n        return int(max(epley, mcglothin, lombardi) + 0.5)",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    \n    epley = w * (1 + 0.0333 * r)\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r ** 0.10\n\n    return max(round(epley), round(mcglothin), round(lombardi))",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + (r/30))\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * (r ** 0.10)\n        \n        return max(math.ceil(epley), math.ceil(mcglothin), math.ceil(lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r / 30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * (r ** 0.10)\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    \n    if r == 1:\n        return w\n    \n    epley = w * (1 + (r / 30))\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r ** 0.10\n    \n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r / 30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.10\n        return max(round(epley), round(mcglothin), round(lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + (r / 30))\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.1\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    if r == 1:\n        return w\n    \n    epley = w * (1 + 0.0333 * r)\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r ** 0.10\n    \n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = (100 * w) / (101.3 - 2.67123*r)\n        lombardi = w * math.pow(r, 0.10)\n        \n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + 0.0333 * r)\n        mcglothin = w * (100 / (101.3 - 2.67123 * r))\n        lombardi = w * r**0.1\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + 0.0333 * r)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.1\n        return int(max(epley, mcglothin, lombardi) + 0.5)",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    \n    epley = w * (1 + 0.0333 * r)\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r ** 0.10\n\n    return max(round(epley), round(mcglothin), round(lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r / 30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * (r ** 0.10)\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    \n    if r == 1:\n        return w\n    \n    epley = w * (1 + (r / 30))\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r ** 0.10\n    \n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r / 30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.10\n        return max(round(epley), round(mcglothin), round(lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + (r / 30))\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.1\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    if r == 1:\n        return w\n    \n    epley = w * (1 + 0.0333 * r)\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r ** 0.10\n    \n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    if r == 1:\n        return w\n\n    epley = w * (1 + r/30)\n    mcglothin = (100 * w) / (101.3 - 2.67123 * r)\n    lombardi = w * r ** 0.10\n\n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    \n    epley = w * (1 + r/30)\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r**0.1\n    \n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.10\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r**0.10\n        return max(round(epley), round(mcglothin), round(lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * (r ** 0.10)\n        \n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    \n    if r == 1:\n        return w\n    \n    epley = w * (1 + (r/30))\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r**0.10\n    \n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + 0.0333 * r)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r ** 0.10\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    \n    epley = w * (1 + 0.0333 * r)\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r ** 0.10\n    \n    return int(round(max(epley, mcglothin, lombardi)))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r**0.1\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    \n    if r == 1:\n        return w\n    \n    epley = w * (1 + 0.0333 * r)\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r ** 0.1\n    \n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + (r / 30))\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * (r ** 0.10)\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = 100 * w / (101.3 - 2.67123*r)\n        lombardi = w * r ** 0.10\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    if r == 1:\n        return w\n    \n    epley = w * (1 + (r/30))\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * r**0.1\n    \n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + (r/30))\n        mcglothin = 100 * w / (101.3 - 2.67123*r)\n        lombardi = w * (r**0.10)\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + r/30)\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * r**0.10\n        return max(round(epley), round(mcglothin), round(lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    if r == 1:\n        return w\n    \n    epley = w * (1 + (r / 30))\n    mcglothin = 100 * w / (101.3 - 2.67123 * r)\n    lombardi = w * (r ** 0.10)\n\n    return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    elif r == 1:\n        return w\n    else:\n        epley = w * (1 + (0.0333 * r))\n        mcglothin = 100 * w / (101.3 - 2.67123 * r)\n        lombardi = w * (r ** 0.1)\n        return round(max(epley, mcglothin, lombardi))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    if r == 0:\n        return 0\n    if r == 1:\n        return w\n    epley = w * (1 + r/30)\n    mcglothin = 100 * w / (101.3 - 2.67123*r)\n    lombardi = w * r**0.1\n    return int(max(epley, mcglothin, lombardi) + 0.5)",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert not_so_random(2, 2) == \"White\", f\"Expected not_so_random(2, 2) == 'White' but obtained {not_so_random(2, 2)}\"",
+        true
+    ],
+    "1": [
+        "assert not_so_random(10**9, 0) == \"Black\"",
+        false
+    ],
+    "2": [
+        "assert not_so_random(0, 0) == \"Unsure\", f\"Expected not_so_random(0, 0) == 'Unsure' but obtained {not_so_random(0, 0)}\"",
+        false
+    ],
+    "3": [
+        "assert not_so_random(3, 2) == \"Unsure\", f\"Expected not_so_random(3, 2) == 'Unsure' but obtained {not_so_random(3, 2)}\"",
+        false
+    ]
+}

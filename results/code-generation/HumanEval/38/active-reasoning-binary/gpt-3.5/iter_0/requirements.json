@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert decode_cyclic('APPUWPA') == 'APUWPPA'",
+        false
+    ],
+    "1": [
+        "assert decode_cyclic(\"abc\") == \"abc\"",
+        false
+    ],
+    "2": [
+        "assert decode_cyclic(\"CAB\") == \"ABC\"",
+        false
+    ],
+    "3": [
+        "assert decode_cyclic(\"efg\") == \"efg\"",
+        false
+    ]
+}

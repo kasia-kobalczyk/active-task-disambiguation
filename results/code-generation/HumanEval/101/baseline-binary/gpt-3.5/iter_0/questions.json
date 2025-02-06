@@ -1,0 +1,22 @@
+{
+    "0": [
+        "assert words_string(\"hello world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"one, two, three\") == [\"one\", \"two\", \"three\"]"
+    ],
+    "1": [
+        "assert words_string(\"python, programming, is, fun\") == [\"python\", \"programming\", \"is\", \"fun\"]",
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"apple, banana, orange, mango\") == [\"apple\", \"banana\", \"orange\", \"mango\"]"
+    ],
+    "2": [
+        "assert words_string(\"one two three\") == [\"one\", \"two\", \"three\"]",
+        "assert words_string(\"apple,banana,grape\") == [\"apple\", \"banana\", \"grape\"]\n# Explanation: The input string contains three words separated by commas.",
+        "assert words_string(\"foo, bar\") == [\"foo\", \"bar\"]"
+    ],
+    "3": [
+        "assert words_string(\"apple banana, cherry grape\") == [\"apple\", \"banana\", \"cherry\", \"grape\"]",
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"Lorem ipsum dolor sit amet\") == [\"Lorem\", \"ipsum\", \"dolor\", \"sit\", \"amet\"]\n# The string contains words separated by spaces, so the function should split the string correctly and return [\"Lorem\", \"ipsum\", \"dolor\", \"sit\", \"amet\"]"
+    ]
+}

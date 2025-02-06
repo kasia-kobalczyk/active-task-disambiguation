@@ -1,0 +1,129 @@
+{
+    "0": [
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    beats = []\n    i = 0\n    while i < len(music_string):\n        note = music_string[i]\n        if note == 'o':\n            beats.append(4)\n            i += 1\n        elif note == 'o|':\n            beats.append(2)\n            i += 2\n        elif note == '.|':\n            beats.append(1)\n            i += 2\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    duration_map = {\n        'o': 4,\n        'o|': 2,\n        '.|': 1\n    }\n    notes = music_string.split(' ')\n    durations = []\n    for note in notes:\n        if note in duration_map:\n            durations.append(duration_map[note])\n    return durations",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    beats = []\n    for note in music_string.split():\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    beats = []\n    for note in music_string.split():\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    beats = []\n    for note in music_string.split():\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = {'o': 4, 'o|': 2, '.|': 1}\n    beats = []\n    i = 0\n    while i < len(music_string):\n        note = music_string[i]\n        if note == 'o' and i+1 < len(music_string) and music_string[i+1] == '|':\n            note = 'o|'\n            i += 1\n        beats.append(notes[note])\n        i += 1\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    beats = []\n    for note in music_string.split():\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    durations = {\n        'o': 4,\n        'o|': 2,\n        '.|': 1\n    }\n    result = []\n    for note in music_string.split():\n        if note in durations:\n            result.append(durations[note])\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    beats = []\n    for note in music_string.split():\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = []\n    for note in music_string.split():\n        if note == 'o':\n            notes.append(4)\n        elif note == 'o|':\n            notes.append(2)\n        elif note == '.|':\n            notes.append(1)\n    return notes",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = music_string.split()\n    duration = []\n\n    for note in notes:\n        if note == 'o':\n            duration.append(4)\n        elif note == 'o|':\n            duration.append(2)\n        elif note == '.|':\n            duration.append(1)\n\n    return duration",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    music_notes = music_string.split()\n    beats = []\n    for note in music_notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = music_string.split()\n    duration = []\n    for note in notes:\n        if note == 'o':\n            duration.append(4)\n        elif note == 'o|':\n            duration.append(2)\n        elif note == '.|':\n            duration.append(1)\n    return duration\n\nassert parse_music('o o o| .| .| o o') == [4, 4, 2, 1, 1, 4, 4]",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = []\n    for note in music_string.split():\n        if note == 'o':\n            notes.append(4)\n        elif note == 'o|':\n            notes.append(2)\n        elif note == '.|':\n            notes.append(1)\n    return notes\n\nassert parse_music('o o o| .| .| o o') == [4, 4, 2, 1, 1, 4, 4]",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    durations = {'o': 4, 'o|': 2, '.|': 1}\n    parsed = []\n\n    for note in music_string.split():\n        parsed.append(durations[note])\n\n    return parsed",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    beats = []\n    for note in music_string.split():\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats\n\nassert parse_music('o o o| .| .| o o') == [4, 4, 2, 1, 1, 4, 4]",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = []\n    for note in music_string.split():\n        if note == 'o':\n            notes.append(4)\n        elif note == 'o|':\n            notes.append(2)\n        elif note == '.|':\n            notes.append(1)\n    return notes\n\nprint(parse_music('o o o| .| .| o o'))\nprint(parse_music('o| .| .| o o o|'))",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = music_string.split()\n    result = []\n    for note in notes:\n        if note == 'o':\n            result.append(4)\n        elif note == 'o|':\n            result.append(2)\n        elif note == '.|':\n            result.append(1)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "from typing import List\n\ndef parse_music(music_string: str) -> List[int]:\n    beats = []\n    notes = music_string.split(' ')\n    for note in notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    notes = []\n    for note in music_string.split():\n        if note == 'o':\n            notes.append(4)\n        elif note == 'o|':\n            notes.append(2)\n        elif note == '.|':\n            notes.append(1)\n    return notes",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = music_string.split()\n    duration = []\n\n    for note in notes:\n        if note == 'o':\n            duration.append(4)\n        elif note == 'o|':\n            duration.append(2)\n        elif note == '.|':\n            duration.append(1)\n\n    return duration",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    music_notes = music_string.split()\n    beats = []\n    for note in music_notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = music_string.split()\n    duration = []\n    for note in notes:\n        if note == 'o':\n            duration.append(4)\n        elif note == 'o|':\n            duration.append(2)\n        elif note == '.|':\n            duration.append(1)\n    return duration\n\nassert parse_music('o o o| .| .| o o') == [4, 4, 2, 1, 1, 4, 4]",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = []\n    for note in music_string.split():\n        if note == 'o':\n            notes.append(4)\n        elif note == 'o|':\n            notes.append(2)\n        elif note == '.|':\n            notes.append(1)\n    return notes\n\nassert parse_music('o o o| .| .| o o') == [4, 4, 2, 1, 1, 4, 4]",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    durations = {'o': 4, 'o|': 2, '.|': 1}\n    parsed = []\n\n    for note in music_string.split():\n        parsed.append(durations[note])\n\n    return parsed",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    beats = []\n    for note in music_string.split():\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats\n\nassert parse_music('o o o| .| .| o o') == [4, 4, 2, 1, 1, 4, 4]",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = []\n    for note in music_string.split():\n        if note == 'o':\n            notes.append(4)\n        elif note == 'o|':\n            notes.append(2)\n        elif note == '.|':\n            notes.append(1)\n    return notes\n\nprint(parse_music('o o o| .| .| o o'))\nprint(parse_music('o| .| .| o o o|'))",
+            "logp": null
+        },
+        {
+            "content": "def parse_music(music_string: str) -> List[int]:\n    notes = music_string.split()\n    result = []\n    for note in notes:\n        if note == 'o':\n            result.append(4)\n        elif note == 'o|':\n            result.append(2)\n        elif note == '.|':\n            result.append(1)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "from typing import List\n\ndef parse_music(music_string: str) -> List[int]:\n    beats = []\n    notes = music_string.split(' ')\n    for note in notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats",
+            "logp": null
+        },
+        {
+            "content": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    notes = []\n    for note in music_string.split():\n        if note == 'o':\n            notes.append(4)\n        elif note == 'o|':\n            notes.append(2)\n        elif note == '.|':\n            notes.append(1)\n    return notes",
+            "logp": null
+        }
+    ]
+}

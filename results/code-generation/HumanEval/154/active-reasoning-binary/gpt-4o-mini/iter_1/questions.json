@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert cycpattern_check(\"abcde\", \"deabc\") == True",
+        "assert cycpattern_check(\"abcde\", \"eabc\") == True",
+        "assert cycpattern_check(\"hello\", \"lo\") == True",
+        "assert cycpattern_check(\"hello\", \"oll\") == False",
+        "assert cycpattern_check(\"hello\", \"ol\") == False",
+        "assert cycpattern_check(\"hello\", \"llo\") == True",
+        "assert cycpattern_check(\"abcde\", \"cde\") == True",
+        "assert cycpattern_check(\"abcd\", \"bcda\") == True"
+    ],
+    "1": [
+        "assert cycpattern_check(\"hello\", \"ell\") == True",
+        "assert cycpattern_check(\"abcdef\", \"fabc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"xyz\") == False",
+        "assert cycpattern_check(\"hello\", \"lo\") == True",
+        "assert cycpattern_check(\"testcase\", \"case\") == True",
+        "assert cycpattern_check(\"abcdef\", \"efabcd\") == True",
+        "assert cycpattern_check(\"rotation\", \"tationro\") == True"
+    ],
+    "2": [
+        "assert cycpattern_check(\"hello\", \"ell\") == True",
+        "assert cycpattern_check(\"hello\", \"lo\") == True",
+        "assert cycpattern_check(\"abcdef\", \"efg\") == False",
+        "assert cycpattern_check(\"testcase\", \"case\") == True",
+        "assert cycpattern_check(\"abcdef\", \"defa\") == True",
+        "assert cycpattern_check(\"abcdef\", \"efabcd\") == True",
+        "assert cycpattern_check(\"rotation\", \"tationro\") == True"
+    ],
+    "3": [
+        "assert cycpattern_check(\"rotation\", \"tionro\") == True",
+        "assert cycpattern_check(\"abcdef\", \"def\") == True",
+        "assert cycpattern_check(\"hello\", \"lo\") == True",
+        "assert cycpattern_check(\"world\", \"orl\") == True",
+        "assert cycpattern_check(\"abcdef\", \"cde\") == True",
+        "assert cycpattern_check(\"hello\", \"lohe\") == False",
+        "assert cycpattern_check(\"rotation\", \"ation\") == True",
+        "assert cycpattern_check(\"abcdef\", \"efab\") == True"
+    ]
+}

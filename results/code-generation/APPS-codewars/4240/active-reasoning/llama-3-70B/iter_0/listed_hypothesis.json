@@ -1,0 +1,78 @@
+{
+    "0": [
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    vowels_upper = vowels.upper()\n    consonants_upper = consonants.upper()\n    decoded_code = ''\n    \n    for char in code:\n        if char in vowels:\n            decoded_code += vowels[(vowels.index(char) - 3) % 6]\n        elif char in vowels_upper:\n            decoded_code += vowels_upper[(vowels_upper.index(char) - 3) % 6]\n        elif char in consonants:\n            decoded_code += consonants[(consonants.index(char) - 10) % 18]\n        elif char in consonants_upper:\n            decoded_code += consonants_upper[(consonants_upper.index(char) - 10) % 18]\n        else:\n            decoded_code += char\n    \n    return decoded_code",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxzhndcwgpvjqtsrlmf'\n    result = ''\n    for char in code:\n        if char.isalpha():\n            ascii_offset = 65 if char.isupper() else 97\n            if char.lower() in vowels:\n                index = vowels.index(char.lower())\n                result += chr((index - 3) % 6 + ascii_offset)\n            elif char.lower() in consonants:\n                index = consonants.index(char.lower())\n                result += chr((index - 10) % 18 + ascii_offset)\n        else:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels_lower = 'aiyeou'\n    vowels_upper = 'AIYEOU'\n    consonants_lower = 'bkxznhdcwgpvjqtsrlmf'\n    consonants_upper = 'BKXZNHDCWGPVJQTSRLMF'\n    \n    translation = ''\n    \n    for char in code:\n        if char.isalpha():\n            if char.islower():\n                if char in vowels_lower:\n                    idx = vowels_lower.index(char)\n                    translation += vowels_lower[(idx - 3) % 6]\n                elif char in consonants_lower:\n                    idx = consonants_lower.index(char)\n                    translation += consonants_lower[(idx - 10) % 18]\n            else:\n                if char in vowels_upper:\n                    idx = vowels_upper.index(char)\n                    translation += vowels_upper[(idx - 3) % 6]\n                elif char in consonants_upper:\n                    idx = consonants_upper.index(char)\n                    translation += consonants_upper[(idx - 10) % 18]\n        else:\n            translation += char\n            \n    return translation",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpjqtsrlmf'\n    decoded = ''\n    \n    for char in code:\n        if char.isalpha():\n            if char.lower() in vowels:\n                index = vowels.index(char.lower())\n                decoded += chr(ord('a') + (index - 3) % 6) if char.islower() else chr(ord('A') + (index - 3) % 6)\n            elif char.lower() in consonants:\n                index = consonants.index(char.lower())\n                decoded += chr(ord('b') + (index - 10) % 20) if char.islower() else chr(ord('B') + (index - 10) % 20)\n        else:\n            decoded += char\n            \n    return decoded",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    trans_vowels = 'eiyoua'\n    trans_consonants = 'lxzhdcnkpgwjqtsrfm'\n    trans_table = str.maketrans(vowels + vowels.upper() + consonants + consonants.upper(), \n                               trans_vowels + trans_vowels.upper() + trans_consonants + trans_consonants.upper())\n    return code.translate(trans_table)",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    translation = ''\n    \n    for char in code:\n        if char.isalpha():\n            if char.islower():\n                if char in vowels:\n                    translation += vowels[(vowels.index(char) - 3) % len(vowels)]\n                elif char in consonants:\n                    translation += consonants[(consonants.index(char) - 10) % len(consonants)]\n            else:\n                if char.lower() in vowels:\n                    translation += vowels[(vowels.index(char.lower()) - 3) % len(vowels)].upper()\n                elif char.lower() in consonants:\n                    translation += consonants[(consonants.index(char.lower()) - 10) % len(consonants)].upper()\n        else:\n            translation += char\n            \n    return translation",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    vowels_upper = vowels.upper()\n    consonants_upper = consonants.upper()\n    result = ''\n    \n    for char in code:\n        if char.isalpha():\n            if char.islower():\n                if char in vowels:\n                    result += vowels[(vowels.index(char) - 3) % 6]\n                elif char in consonants:\n                    result += consonants[(consonants.index(char) - 10) % 18]\n            else:\n                if char in vowels_upper:\n                    result += vowels_upper[(vowels_upper.index(char) - 3) % 6]\n                elif char in consonants_upper:\n                    result += consonants_upper[(consonants_upper.index(char) - 10) % 18]\n        else:\n            result += char\n            \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpjqtsrlmf'\n    vowels_upper = vowels.upper()\n    consonants_upper = consonants.upper()\n    decoded = ''\n\n    for char in code:\n        if char in vowels:\n            idx = vowels.index(char)\n            decoded += vowels[(idx - 3) % 6]\n        elif char in vowels_upper:\n            idx = vowels_upper.index(char)\n            decoded += vowels_upper[(idx - 3) % 6]\n        elif char in consonants:\n            idx = consonants.index(char)\n            decoded += consonants[(idx - 10) % 18]\n        elif char in consonants_upper:\n            idx = consonants_upper.index(char)\n            decoded += consonants_upper[(idx - 10) % 18]\n        else:\n            decoded += char\n\n    return decoded",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrflm'\n    vowels_upper = vowels.upper()\n    consonants_upper = consonants.upper()\n    decoded = ''\n    \n    for char in code:\n        if char.isalpha():\n            if char.islower():\n                if char in vowels:\n                    decoded += vowels[(vowels.index(char) - 3) % 6]\n                elif char in consonants:\n                    decoded += consonants[(consonants.index(char) - 10) % 18]\n            else:\n                if char in vowels_upper:\n                    decoded += vowels_upper[(vowels_upper.index(char) - 3) % 6]\n                elif char in consonants_upper:\n                    decoded += consonants_upper[(consonants_upper.index(char) - 10) % 18]\n        else:\n            decoded += char\n            \n    return decoded",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    code = list(code)\n    for i in range(len(code)):\n        if code[i].isalpha():\n            if code[i].lower() in vowels:\n                v_index = vowels.index(code[i].lower())\n                code[i] = chr(ord(code[i]) - 3 * (code[i].islower() - code[i].isupper()) + v_index // 5 * 32)\n            elif code[i].lower() in consonants:\n                c_index = consonants.index(code[i].lower())\n                code[i] = chr(ord(code[i]) - 10 * (code[i].islower() - code[i].isupper()) + c_index // 10 * 32)\n    return ''.join(code)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    decoded = ''\n\n    for char in code:\n        if char.isalpha():\n            if char.islower():\n                if char in vowels:\n                    decoded += vowels[(vowels.index(char) - 3) % len(vowels)]\n                elif char in consonants:\n                    decoded += consonants[(consonants.index(char) - 10) % len(consonants)]\n            else:\n                if char.lower() in vowels:\n                    decoded += vowels[(vowels.index(char.lower()) - 3) % len(vowels)].upper()\n                elif char.lower() in consonants:\n                    decoded += consonants[(consonants.index(char.lower()) - 10) % len(consonants)].upper()\n        else:\n            decoded += char\n\n    return decoded",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    translation = ''\n    \n    for char in code:\n        if char.isalpha():\n            if char.islower():\n                if char in vowels:\n                    translation += vowels[(vowels.index(char) - 3) % len(vowels)]\n                elif char in consonants:\n                    translation += consonants[(consonants.index(char) - 10) % len(consonants)]\n            else:\n                if char.lower() in vowels:\n                    translation += vowels[(vowels.index(char.lower()) - 3) % len(vowels)].upper()\n                elif char.lower() in consonants:\n                    translation += consonants[(consonants.index(char.lower()) - 10) % len(consonants)].upper()\n        else:\n            translation += char\n    \n    return translation",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    result = ''\n    \n    for char in code:\n        if char.isalpha():\n            if char.islower():\n                if char in vowels:\n                    result += vowels[(vowels.index(char) - 3) % len(vowels)]\n                elif char in consonants:\n                    result += consonants[(consonants.index(char) - 10) % len(consonants)]\n                else:\n                    result += char\n            else:\n                if char.lower() in vowels:\n                    result += vowels[(vowels.index(char.lower()) - 3) % len(vowels)].upper()\n                elif char.lower() in consonants:\n                    result += consonants[(consonants.index(char.lower()) - 10) % len(consonants)].upper()\n                else:\n                    result += char\n        else:\n            result += char\n            \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    vowels_upper = vowels.upper()\n    consonants_upper = consonants.upper()\n    vowels_trans = vowels[3:] + vowels[:3]\n    consonants_trans = consonants[10:] + consonants[:10]\n    vowels_trans_upper = vowels_upper[3:] + vowels_upper[:3]\n    consonants_trans_upper = consonants_upper[10:] + consonants_upper[:10]\n    trans_table = str.maketrans(vowels + vowels_upper, vowels_trans + vowels_trans_upper)\n    trans_table_consonants = str.maketrans(consonants + consonants_upper, consonants_trans + consonants_trans_upper)\n    return code.translate(trans_table).translate(trans_table_consonants)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    vowels_upper = vowels.upper()\n    consonants_upper = consonants.upper()\n    vowels_trans = vowels[3:] + vowels[:3]\n    consonants_trans = consonants[10:] + consonants[:10]\n    vowels_trans_upper = vowels_upper[3:] + vowels_upper[:3]\n    consonants_trans_upper = consonants_upper[10:] + consonants_upper[:10]\n    trans_table = str.maketrans(vowels + vowels_upper, vowels_trans + vowels_trans_upper)\n    trans_table_consonants = str.maketrans(consonants + consonants_upper, consonants_trans + consonants_trans_upper)\n    return code.translate(trans_table).translate(trans_table_consonants)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    decode_vowels = vowels[3:] + vowels[:3]\n    decode_consonants = consonants[10:] + consonants[:10]\n    translation = ''\n    for char in code:\n        if char.isalpha():\n            if char.islower():\n                if char in vowels:\n                    translation += decode_vowels[vowels.index(char)]\n                else:\n                    translation += decode_consonants[consonants.index(char)]\n            else:\n                if char.lower() in vowels:\n                    translation += decode_vowels[vowels.index(char.lower())].upper()\n                else:\n                    translation += decode_consonants[consonants.index(char.lower())].upper()\n        else:\n            translation += char\n    return translation",
+            "logp": null
+        },
+        {
+            "content": "def tongues(code):\n    vowels = 'aiyeou'\n    consonants = 'bkxznhdcwgpvjqtsrlmf'\n    decode_code = ''\n    for char in code:\n        if char.isalpha():\n            if char.isupper():\n                if char.lower() in vowels:\n                    index = vowels.index(char.lower())\n                    decode_code += vowels[(index - 3) % len(vowels)].upper()\n                else:\n                    index = consonants.index(char.lower())\n                    decode_code += consonants[(index - 10) % len(consonants)].upper()\n            else:\n                if char in vowels:\n                    index = vowels.index(char)\n                    decode_code += vowels[(index - 3) % len(vowels)]\n                else:\n                    index = consonants.index(char)\n                    decode_code += consonants[(index - 10) % len(consonants)]\n        else:\n            decode_code += char\n    return decode_code",
+            "logp": null
+        }
+    ]
+}

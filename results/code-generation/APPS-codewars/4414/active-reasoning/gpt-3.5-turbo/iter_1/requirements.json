@@ -1,0 +1,18 @@
+{
+    "0": [
+        "compare_versions(\"10.4\", \"11\")",
+        "False"
+    ],
+    "1": [
+        "compare_versions(\"10.4\", \"10.4.6\")",
+        "False"
+    ],
+    "2": [
+        "compare_versions(\"10.4.6\", \"10.4\")",
+        "True"
+    ],
+    "3": [
+        "compare_versions(\"10\", \"10.1\")",
+        "False"
+    ]
+}

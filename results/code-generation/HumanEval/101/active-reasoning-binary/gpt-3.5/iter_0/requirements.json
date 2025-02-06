@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        true
+    ],
+    "1": [
+        "assert words_string(\"one,two,three,four\") == [\"one\", \"two\", \"three\", \"four\"]",
+        true
+    ],
+    "2": [
+        "assert words_string(\"Hello   world\") == [\"Hello\", \"world\"]\n# Explanation: The input string \"Hello   world\" is split into individual words \"Hello\", \"world\" using the space as the separator. Additional spaces are removed.",
+        true
+    ],
+    "3": [
+        "assert words_string(\"hello,     world, how\\tare\\tyou\") == [\"hello\", \"world\", \"how\", \"are\", \"you\"]",
+        true
+    ]
+}

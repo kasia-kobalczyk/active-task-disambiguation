@@ -1,0 +1,29 @@
+{
+    "0": [
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"a\", \"a\") == \"a\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\""
+    ],
+    "1": [
+        "assert sort_string(\"hello\", \"hlo\") == \"hool\"",
+        "assert sort_string(\"xyz\", \"xz\") == \"xzz\"",
+        "assert sort_string(\"hello world\", \"wordl\") == \"ldworhlo\"",
+        "assert sort_string(\"hello\", \"hl\") == \"hhlllo\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\""
+    ],
+    "2": [
+        "assert sort_string(\"xyz\", \"xz\") == \"xzz\"",
+        "assert sort_string(\"hello world\", \"wordl\") == \"ldworhlo\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"hello\", \"hl\") == \"hhlllo\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\""
+    ],
+    "3": [
+        "assert sort_string(\"tree\", \"e\") == \"eeetr\"",
+        "assert sort_string(\"hello world\", \"wordl\") == \"ldworhlo\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"hello\", \"hl\") == \"hhlllo\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\""
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "0": [
+        "assert histogram(\"a b b c d d d\") == {\"d\": 3}",
+        "assert histogram(\"a b c a b c\") == {'a': 2, 'b': 2, 'c': 2}",
+        "assert histogram(\"\") == {}",
+        "assert histogram(\"a\") == {'a': 1}",
+        "assert histogram(\"a\") == {\"a\": 1}",
+        "assert histogram(\"a b c d e\") == {\"a\": 1, \"b\": 1, \"c\": 1, \"d\": 1, \"e\": 1}",
+        "assert histogram(\"a a b c 1 2 2 2\") == {\"a\": 2, \"2\": 3}",
+        "assert histogram(\"a b c d e f g\") == {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'f': 1, 'g': 1}",
+        "assert histogram(\"a b c d a b c d a a\") == {'a': 4}"
+    ],
+    "1": [
+        "assert histogram(\"a b b c c c\") == {\"b\": 2, \"c\": 3}",
+        "assert histogram(\"a b\") == {\"a\": 1, \"b\": 1}",
+        "assert histogram(\"\") == {}",
+        "assert histogram(\"a a a b c c\") == {\"a\": 3}",
+        "assert histogram(\"a\") == {\"a\": 1}",
+        "assert histogram(\"a b c d e\") == {\"a\": 1, \"b\": 1, \"c\": 1, \"d\": 1, \"e\": 1}",
+        "assert histogram(\"a a a a\") == {\"a\": 4}",
+        "assert histogram(\"a a b b b c c c\") == {\"b\": 3, \"c\": 3}",
+        "assert histogram(\"a b c d e\") == {}"
+    ],
+    "2": [
+        "assert histogram(\"a a a b b c c c c\") == {\"c\": 4}",
+        "assert histogram(\"a a b b c c\") == {\"a\": 2, \"b\": 2, \"c\": 2}",
+        "assert histogram(\"a a a b b c c c d d d d e e e e e\") == {\"d\": 4, \"e\": 5}",
+        "assert histogram(\"a\") == {\"a\": 1}",
+        "assert histogram(\"x y z x y z x y z\") == {\"x\": 3, \"y\": 3, \"z\": 3}",
+        "assert histogram(\"a b c d e f\") == {\"a\": 1, \"b\": 1, \"c\": 1, \"d\": 1, \"e\": 1, \"f\": 1}",
+        "assert histogram(\"a a a b b b c c c d d d\") == {\"a\": 3, \"b\": 3, \"c\": 3, \"d\": 3}"
+    ],
+    "3": [
+        "assert histogram(\"a b b b c c c d d d d e e e e f\") == {\"b\": 3, \"c\": 3, \"d\": 3, \"e\": 3}",
+        "assert histogram(\"a b b b c c c d d d d e e e e\") == {\"b\": 3, \"c\": 3, \"d\": 3, \"e\": 3}",
+        "assert histogram(\"a b c d e f g h i j k l m n o p q r s t u v w x y z\") == {\"a\": 1, \"b\": 1, \"c\": 1, \"d\": 1, \"e\": 1, \"f\": 1, \"g\": 1, \"h\": 1, \"i\": 1, \"j\": 1, \"k\": 1, \"l\": 1, \"m\": 1, \"n\": 1, \"o\": 1, \"p\": 1, \"q\": 1, \"r\": 1, \"s\": 1, \"t\": 1, \"u\": 1, \"v\": 1, \"w\": 1, \"x\": 1, \"y\": 1, \"z\": 1}  ",
+        "assert histogram(\"a a a a\") == {\"a\": 4}  ",
+        "assert histogram(\"a a b b c c d d e e f f g g h h i i j j k k l l m m n n o o p p q q r r s s t t u u v v w w x x y y z z\") == {\"a\": 2, \"b\": 2, \"c\": 2, \"d\": 2, \"e\": 2, \"f\": 2, \"g\": 2, \"h\": 2, \"i\": 2, \"j\": 2, \"k\": 2, \"l\": 2, \"m\": 2, \"n\": 2, \"o\": 2, \"p\": 2, \"q\": 2, \"r\": 2, \"s\": 2, \"t\": 2, \"u\": 2, \"v\": 2, \"w\": 2, \"x\": 2, \"y\": 2, \"z\": 2}  # all letters have count 2",
+        "assert histogram(\"a b c d e f g h i j k l m n o p q r s t u v w x y z\") == {\"a\": 1, \"b\": 1, \"c\": 1, \"d\": 1, \"e\": 1, \"f\": 1, \"g\": 1, \"h\": 1, \"i\": 1, \"j\": 1, \"k\": 1, \"l\": 1, \"m\": 1, \"n\": 1, \"o\": 1, \"p\": 1, \"q\": 1, \"r\": 1, \"s\": 1, \"t\": 1, \"u\": 1, \"v\": 1, \"w\": 1, \"x\": 1, \"y\": 1, \"z\": 1}",
+        "assert histogram(\"a a a b b c c c c d d d d e e e e\") == {\"a\": 3, \"b\": 2, \"c\": 4, \"d\": 4, \"e\": 4}",
+        "assert histogram(\"a a b b c c\") == {\"a\": 2, \"b\": 2, \"c\": 2}  ",
+        "assert histogram(\"a b c\") == {\"a\": 1, \"b\": 1, \"c\": 1}"
+    ]
+}

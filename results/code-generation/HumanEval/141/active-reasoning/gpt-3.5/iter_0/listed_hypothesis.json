@@ -1,0 +1,178 @@
+{
+    "0": [
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:  # Condition for exactly one dot '.'\n        return 'No'\n    \n    parts = file_name.split('.')\n    if parts[0] == '' or parts[0][0].isdigit():  # Condition for non-empty substring before dot\n        return 'No'\n    \n    if len(parts[1]) != 3 or parts[1] not in ['txt', 'exe', 'dll']:  # Condition for valid file extension\n        return 'No'\n    \n    digits_count = sum(char.isdigit() for char in file_name)\n    if digits_count > 3:  # Condition for not more than three digits\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    # Check if there are more than three digits in the file name\n    digit_count = 0\n    for char in file_name:\n        if char.isdigit():\n            digit_count += 1\n    if digit_count > 3:\n        return 'No'\n    \n    # Check if the file name contains exactly one dot\n    dot_count = 0\n    for char in file_name:\n        if char == '.':\n            dot_count += 1\n    if dot_count != 1:\n        return 'No'\n    \n    # Split the file name into two parts: before the dot and after the dot\n    parts = file_name.split('.')\n    before_dot = parts[0]\n    after_dot = parts[1]\n    \n    # Check if the substring before the dot is empty or starts with a letter\n    if len(before_dot) == 0 or not before_dot[0].isalpha():\n        return 'No'\n    \n    # Check if the substring after the dot is one of the allowed extensions\n    if after_dot not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    digits_count = 0\n    dot_count = 0\n    letters_count = 0\n\n    for char in file_name:\n        if char.isdigit():\n            digits_count += 1\n        elif char == '.':\n            dot_count += 1\n        elif char.isalpha():\n            letters_count += 1\n\n    if digits_count > 3:\n        return 'No'\n    elif dot_count != 1:\n        return 'No'\n    elif letters_count == 0 or not file_name.split('.')[0].isalpha():\n        return 'No'\n    elif file_name.split('.')[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    else:\n        return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    digits = 0\n    dot_count = 0\n    alphabet = False\n    extension = False\n\n    for char in file_name:\n        if char.isdigit():\n            digits += 1\n        if char == '.':\n            dot_count += 1\n        if char.isalpha():\n            alphabet = True\n\n    if digits > 3:\n        return 'No'\n    if dot_count != 1:\n        return 'No'\n    if not alphabet:\n        return 'No'\n\n    split_file_name = file_name.split('.')\n    if len(split_file_name) != 2:\n        return 'No'\n\n    file_name, file_extension = split_file_name\n\n    if file_extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if not isinstance(file_name, str):\n        return 'No'\n    \n    if len(file_name) == 0:\n        return 'No'\n    \n    if file_name.count('.') != 1:\n        return 'No'\n    \n    file_name_parts = file_name.split('.')\n    if len(file_name_parts) != 2:\n        return 'No'\n    \n    if not file_name_parts[0][0].isalpha():\n        return 'No'\n    \n    if len([char for char in file_name_parts[0] if char.isdigit()]) > 3:\n        return 'No'\n    \n    if file_name_parts[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    if sum(1 for c in name if c.isdigit()) > 3:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum([char.isdigit() for char in name])\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if len(file_name.split('.')[0]) == 0:\n        return 'No'\n    elif not file_name.split('.')[0][0].isalpha():\n        return 'No'\n    elif file_name.count('.') != 1:\n        return 'No'\n    elif len([x for x in file_name if x.isnumeric()]) > 3:\n        return 'No'\n    elif file_name.split('.')[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    else:\n        return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if not isinstance(file_name, str):\n        return 'No'\n    if file_name.count('.') != 1:\n        return 'No'\n    name, extension = file_name.split('.')\n    if not name or not name[0].isalpha():\n        return 'No'\n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    digits = sum([char.isdigit() for char in file_name])\n    if digits > 3:\n        return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    digits_count = 0\n    dot_count = 0\n    latin_letter_count = 0\n    for char in file_name:\n        if char.isdigit():\n            digits_count += 1\n        if char == '.':\n            dot_count += 1\n        if char.isalpha():\n            latin_letter_count += 1\n    \n    if digits_count > 3 or dot_count != 1 or latin_letter_count < 1:\n        return 'No'\n    \n    file_extension = file_name.split('.')[-1]\n    if file_extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count(\".\") != 1:\n        return \"No\"\n    \n    file_name_parts = file_name.split(\".\")\n    if len(file_name_parts[0]) == 0 or not file_name_parts[0][0].isalpha():\n        return \"No\"\n    \n    if file_name_parts[1] not in [\"txt\", \"exe\", \"dll\"]:\n        return \"No\"\n    \n    digits_count = sum(1 for char in file_name if char.isdigit())\n    if digits_count > 3:\n        return \"No\"\n    \n    return \"Yes\"",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return \"No\"\n    name, extension = file_name.split('.')\n    if len(name) == 0 or not name[0].isalpha():\n        return \"No\"\n    if extension not in ['txt', 'exe', 'dll']:\n        return \"No\"\n    digits = sum(1 for c in name if c.isdigit())\n    if digits > 3:\n        return \"No\"\n    return \"Yes\"",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    file_parts = file_name.split('.')\n    if len(file_parts[0]) == 0:\n        return 'No'\n    \n    digits_count = sum(1 for char in file_name if char.isdigit())\n    if digits_count > 3:\n        return 'No'\n    \n    if file_parts[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    # Check if file_name is empty\n    if not file_name:\n        return 'No'\n    \n    # Check if file_name contains exactly one dot '.'\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    # Split file_name into two parts: before dot and after dot\n    parts = file_name.split('.')\n    before_dot = parts[0]\n    after_dot = parts[1]\n    \n    # Check if before dot is empty or starts with a letter from the latin alphabet\n    if not before_dot or not before_dot[0].isalpha():\n        return 'No'\n    \n    # Check if the substring after the dot is one of ['txt', 'exe', 'dll']\n    if after_dot not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    # Check if the file_name contains more than three digits\n    digit_count = sum(char.isdigit() for char in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    # If all conditions are met, return 'Yes'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    elif file_name.split('.')[0] == '' or not file_name.split('.')[0][0].isalpha():\n        return 'No'\n    elif file_name.split('.')[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    elif sum([1 for char in file_name if char.isdigit()]) > 3:\n        return 'No'\n    else:\n        return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if name == '' or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digits = sum(1 for char in name if char.isdigit())\n    if digits > 3:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    name, extension = file_name.split('.')\n    if not name or not name[0].isalpha() or name.isdigit() or len([c for c in name if c.isdigit()]) > 3:\n        return 'No'\n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    name, extension = file_name.split('.')\n    if not name or not name[0].isalpha():\n        return 'No'\n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    file_parts = file_name.split('.')\n    if len(file_parts) != 2:\n        return 'No'\n    \n    prefix = file_parts[0]\n    suffix = file_parts[1]\n    \n    if not prefix or not prefix[0].isalpha():\n        return 'No'\n    \n    if suffix not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    parts = file_name.split('.')\n    if len(parts[0]) == 0 or not parts[0][0].isalpha():\n        return 'No'\n    \n    if parts[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(1 for char in file_name if char.isdigit())\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def file_name_check(file_name):\n    digits = 0\n    dot_count = 0\n    file_extension = file_name.split('.')[-1]\n    \n    for char in file_name:\n        if char.isdigit():\n            digits += 1\n        elif char == '.':\n            dot_count += 1\n    \n    if digits > 3 or dot_count != 1:\n        return 'No'\n    \n    if len(file_name.split('.')[0]) == 0 or not file_name.split('.')[0][0].isalpha():\n        return 'No'\n    \n    if file_extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    valid_extensions = ['txt', 'exe', 'dll']\n\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(extension) != 3 or extension not in valid_extensions:\n        return 'No'\n    \n    if len(name) == 0 or not name[0].isalpha() or name.isdigit():\n        return 'No'\n    \n    digit_count = 0\n    for char in name:\n        if char.isdigit():\n            digit_count += 1\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    name, ext = file_name.split('.')\n    if len(name) < 1 or not name[0].isalpha():\n        return 'No'\n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    digit_count = sum(c.isdigit() for c in name)\n    if digit_count > 3:\n        return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    name, ext = file_name.split('.')\n    if len(ext) != 3 or ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    if len([c for c in name if c.isdigit()]) > 3:\n        return 'No'\n    if not name or not name[0].isalpha():\n        return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    elif file_name.split('.')[0] == '':\n        return 'No'\n    elif not file_name.split('.')[0][0].isalpha():\n        return 'No'\n    elif file_name.split('.')[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    elif len([c for c in file_name if c.isdigit()]) > 3:\n        return 'No'\n    else:\n        return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if len([c for c in name if c.isdigit()]) > 3:\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    # Check for more than three digits in the file's name\n    if sum(1 for char in file_name if char.isdigit()) > 3:\n        return 'No'\n    \n    # Check if there is exactly one dot in the file's name\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    # Split the file's name into two parts: before and after the dot\n    parts = file_name.split('.')\n    before_dot = parts[0]\n    after_dot = parts[1]\n    \n    # Check if the substring before the dot is empty or doesn't start with a letter\n    if len(before_dot) == 0 or not before_dot[0].isalpha():\n        return 'No'\n    \n    # Check if the substring after the dot is not one of the allowed extensions\n    allowed_extensions = ['txt', 'exe', 'dll']\n    if after_dot not in allowed_extensions:\n        return 'No'\n    \n    # All conditions are met, return 'Yes'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    if sum(1 for c in name if c.isdigit()) > 3:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    import re\n    pattern = r'^[a-zA-Z]+\\.[txt|exe|dll]$'\n    if re.match(pattern, file_name):\n        return \"Yes\"\n    else:\n        return \"No\"",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    else:\n        file_parts = file_name.split('.')\n        if len(file_parts[0]) == 0 or not file_parts[0][0].isalpha():\n            return 'No'\n        if file_parts[1] not in ['txt', 'exe', 'dll']:\n            return 'No'\n        if len([c for c in file_parts[0] if c.isdigit()]) > 3:\n            return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return \"No\"\n    else:\n        file_name_split = file_name.split('.')\n        name = file_name_split[0]\n        ext = file_name_split[1]\n        if name == \"\":\n            return \"No\"\n        if not name[0].isalpha():\n            return \"No\"\n        if ext not in ['txt', 'exe', 'dll']:\n            return \"No\"\n        if len([char for char in name if char.isdigit()]) > 3:\n            return \"No\"\n        return \"Yes\"",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def file_name_check(file_name):\n    digits_count = 0\n    dot_count = 0\n    dot_index = -1\n    \n    for i in range(len(file_name)):\n        if file_name[i].isdigit():\n            digits_count += 1\n        elif file_name[i] == '.':\n            dot_count += 1\n            dot_index = i\n            \n    if digits_count > 3:\n        return 'No'\n    \n    if dot_count != 1:\n        return 'No'\n    \n    if dot_index == 0 or dot_index == len(file_name) - 1:\n        return 'No'\n    \n    if file_name[dot_index+1:] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    if not file_name[:dot_index].isalpha():\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    name, extension = file_name.split('.')\n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    if len(extension) > 3 or not extension.isalpha():\n        return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    import re\n    if len(re.findall(r'\\d', file_name)) > 3:\n        return \"No\"\n    elif len(re.findall(r'\\.', file_name)) != 1:\n        return \"No\"\n    else:\n        name, extension = file_name.split('.')\n        if name == '' or not name[0].isalpha():\n            return \"No\"\n        elif extension not in ['txt', 'exe', 'dll']:\n            return \"No\"\n        else:\n            return \"Yes\"",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    else:\n        file_name_parts = file_name.split('.')\n        if file_name_parts[0] == '' or not file_name_parts[0][0].isalpha():\n            return 'No'\n        if file_name_parts[1] not in ['txt', 'exe', 'dll']:\n            return 'No'\n        if sum(c.isdigit() for c in file_name_parts[0]) > 3:\n            return 'No'\n        return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    # Check if there is only one dot in the file name\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    # Split the file name into the substring before the dot and the substring after the dot\n    name_parts = file_name.split('.')\n    before_dot = name_parts[0]\n    after_dot = name_parts[1]\n    \n    # Check if the substring before the dot is not empty and starts with a letter from the latin alphabet\n    if not before_dot or not before_dot[0].isalpha():\n        return 'No'\n    \n    # Check if there are not more than three digits in the file name\n    digit_count = sum(1 for c in file_name if c.isdigit())\n    if digit_count > 3:\n        return 'No'\n    \n    # Check if the substring after the dot is one of ['txt', 'exe', 'dll']\n    valid_extensions = ['txt', 'exe', 'dll']\n    if after_dot not in valid_extensions:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if len(file_name) < 5 or len(file_name.split(\".\")) != 2:\n        return \"No\"\n    \n    name, extension = file_name.split(\".\")\n    \n    if len(extension) != 3 or extension not in ['txt', 'exe', 'dll']:\n        return \"No\"\n    \n    if len([char for char in name if char.isdigit()]) > 3:\n        return \"No\"\n    \n    if not name[0].isalpha():\n        return \"No\"\n    \n    return \"Yes\"",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    digits = sum(1 for c in file_name if c.isdigit())\n    if digits > 3:\n        return 'No'\n    \n    dot_index = file_name.find('.')\n    if dot_index == -1:\n        return 'No'\n    \n    file_name_before_dot = file_name[:dot_index]\n    file_name_after_dot = file_name[dot_index+1:]\n    \n    if not file_name_before_dot or not file_name_before_dot[0].isalpha():\n        return 'No'\n    \n    valid_extensions = ['txt', 'exe', 'dll']\n    if file_name_after_dot not in valid_extensions:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    import re\n    \n    if len(re.findall(r'\\d', file_name)) > 3:\n        return \"No\"\n    \n    if file_name.count('.') != 1:\n        return \"No\"\n    \n    if not file_name.split('.')[0] or not file_name.split('.')[0][0].isalpha():\n        return \"No\"\n    \n    if file_name.split('.')[1] not in ['txt', 'exe', 'dll']:\n        return \"No\"\n    \n    return \"Yes\"",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    import re\n    if len(re.findall(r'\\d', file_name)) > 3:\n        return 'No'\n    if file_name.count('.') != 1:\n        return 'No'\n    if not re.match(r'^[a-zA-Z]', file_name.split('.')[0]):\n        return 'No'\n    if file_name.split('.')[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    name, ext = file_name.split('.')\n    if len(name) == 0 or name[0] not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ':\n        return 'No'\n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    if sum([1 for char in name if char.isdigit()]) > 3:\n        return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    digits = 0\n    dot = 0\n    for i in range(len(file_name)):\n        if file_name[i].isdigit():\n            digits += 1\n        if file_name[i] == '.':\n            dot += 1\n    if digits > 3 or dot != 1:\n        return \"No\"\n    \n    parts = file_name.split('.')\n    if len(parts) != 2:\n        return \"No\"\n    \n    file_name_part = parts[0]\n    file_extension_part = parts[1]\n    \n    if len(file_name_part) == 0 or not file_name_part[0].isalpha():\n        return \"No\"\n    \n    valid_file_extensions = ['txt', 'exe', 'dll']\n    if file_extension_part not in valid_file_extensions:\n        return \"No\"\n    \n    return \"Yes\"",
+            "logp": null
+        }
+    ]
+}

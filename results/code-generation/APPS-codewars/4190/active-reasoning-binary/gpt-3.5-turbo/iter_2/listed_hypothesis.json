@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = \"aeiou\"\n    for i in range(len(s)-1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] not in vowels and s[i+1] not in vowels):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    is_vowel = True if s[0] in vowels else False\n    \n    for i in range(1, len(s)):\n        if s[i] in vowels and is_vowel:\n            return False\n        if s[i] not in vowels and not is_vowel:\n            return False\n        is_vowel = not is_vowel\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    pattern = re.compile(\"[aeiou]+[^aeiou]+[aeiou]+[^aeiou]+[aeiou]+[^aeiou]+[aeiou]+[^aeiou]+\")\n    if pattern.fullmatch(s):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    for i in range(len(s) - 1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] not in vowels and s[i+1] not in vowels):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    \n    for i in range(len(s)-1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] not in vowels and s[i+1] not in vowels):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    pattern = '[aeiou]+[bcdfghjklmnpqrstvwxyz]*[aeiou]+[bcdfghjklmnpqrstvwxyz]*' * len(s)\n    return bool(re.fullmatch(pattern, s))",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        if s[i] in consonants and s[i+1] in consonants:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = \"aeiou\"\n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        if s[i] not in vowels and s[i+1] not in vowels:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    alternate_vowels = s[0] in vowels\n\n    for i in range(1, len(s)):\n        if alternate_vowels and s[i] in vowels:\n            return False\n        if not alternate_vowels and s[i] in consonants:\n            return False\n        alternate_vowels = not alternate_vowels\n\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n\n    # Check if first character is a vowel or consonant\n    if s[0] in vowels:\n        for i in range(1, len(s), 2):\n            if s[i] in vowels:\n                return False\n        for i in range(2, len(s), 2):\n            if s[i] in consonants:\n                return False\n    else:\n        for i in range(1, len(s), 2):\n            if s[i] in consonants:\n                return False\n        for i in range(2, len(s), 2):\n            if s[i] in vowels:\n                return False\n\n    return True",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        if s[i] not in vowels and s[i+1] not in vowels:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    \n    for i in range(1, len(s)):\n        if (s[i] in vowels and s[i-1] in vowels) or (s[i] not in vowels and s[i-1] not in vowels):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowel_re = re.compile('[aeiou]')\n    consonant_re = re.compile('[^aeiou]')\n    \n    for i in range(len(s)-1):\n        if (vowel_re.match(s[i]) and vowel_re.match(s[i+1])) or (consonant_re.match(s[i]) and consonant_re.match(s[i+1])):\n            return False\n        \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    alt = True\n    s = re.sub(r'[^a-zA-Z]', '', s.lower())\n    \n    for i in range(1, len(s)):\n        if (s[i] in vowels and s[i-1] in vowels) or (s[i] not in vowels and s[i-1] not in vowels):\n            alt = False\n            break\n    \n    return alt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    pattern = '[aeiou]{2}|[^aeiou]{2}'\n    if re.search(pattern, s):\n        return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = \"aeiou\"\n    \n    # Remove any non-alphabetic characters\n    s = re.sub(\"[^a-zA-Z]\", \"\", s)\n    \n    # Check if the first letter is a vowel or a consonant\n    if s[0] in vowels:\n        prev = \"vowel\"\n    else:\n        prev = \"consonant\"\n    \n    # Iterate through the remaining letters\n    for i in range(1, len(s)):\n        # Check if the current letter is a vowel or a consonant\n        if s[i] in vowels:\n            curr = \"vowel\"\n        else:\n            curr = \"consonant\"\n        \n        # Check if the current letter is the same as the previous letter\n        if curr == prev:\n            return False\n        \n        # Update the previous letter\n        prev = curr\n    \n    # Return True if all letters are in alternate order\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    for i in range(len(s) - 1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] not in vowels and s[i+1] not in vowels):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if re.search('[aeiou][aeiou]', s):\n        return False\n    \n    for i in range(len(s)-1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] in consonants and s[i+1] in consonants):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    s = s.lower()\n    s = re.sub('[^a-z]', '', s)\n    for i in range(len(s)-1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] not in vowels and s[i+1] not in vowels):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    \n    # Check if the string contains only lowercase letters\n    if not s.islower():\n        return False\n    \n    # Check if the string is empty\n    if not s:\n        return True\n    \n    # Check if the first character is a vowel\n    if s[0] in vowels:\n        current = \"vowel\"\n    elif s[0] in consonants:\n        current = \"consonant\"\n    else:\n        return False\n    \n    # Iterate through the string starting from the second character\n    for i in range(1, len(s)):\n        if current == \"vowel\":\n            # Check if the current character is a consonant\n            if s[i] in consonants:\n                current = \"consonant\"\n            else:\n                return False\n        elif current == \"consonant\":\n            # Check if the current character is a vowel\n            if s[i] in vowels:\n                current = \"vowel\"\n            else:\n                return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = set('aeiou')\n    s = s.lower()\n    for i in range(1, len(s)):\n        if s[i] in vowels and s[i-1] in vowels:\n            return False\n        if s[i] not in vowels and s[i-1] not in vowels:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    for i in range(len(s) - 1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] in consonants and s[i+1] in consonants):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = set(\"aeiou\")\n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        if s[i] not in vowels and s[i+1] not in vowels:\n            return False\n    return True",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        if s[i] in consonants and s[i+1] in consonants:\n            return False\n        \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    alt_vowels = re.findall('[aeiou]', s)\n    alt_consonants = re.findall('[^aeiou]', s)\n    \n    if len(alt_vowels) + len(alt_consonants) != len(s):\n        return False\n    \n    for i in range(len(alt_vowels)-1):\n        if alt_vowels[i] not in vowels or alt_vowels[i+1] not in vowels:\n            return False\n        \n    for i in range(len(alt_consonants)-1):\n        if alt_consonants[i] in vowels or alt_consonants[i+1] in vowels:\n            return False\n        \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = set(['a', 'e', 'i', 'o', 'u'])\n    is_vowel = lambda c: c in vowels\n    \n    for i in range(len(s)-1):\n        if (is_vowel(s[i]) and is_vowel(s[i+1])) or (not is_vowel(s[i]) and not is_vowel(s[i+1])):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    s = s.lower()\n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        if s[i] not in vowels and s[i+1] not in vowels:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    alt = True\n    for i in range(len(s)-1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] in consonants and s[i+1] in consonants):\n            alt = False\n            break\n    return alt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    # Check if the string is empty\n    if len(s) == 0:\n        return True\n    \n    # Define the regular expressions for vowels and consonants\n    vowels = re.compile('[aeiou]', re.IGNORECASE)\n    consonants = re.compile('[^aeiou]', re.IGNORECASE)\n    \n    # Check if the string starts with a vowel or consonant\n    if vowels.match(s[0]):\n        prev = 'vowel'\n    else:\n        prev = 'consonant'\n    \n    # Iterate through the characters in the string\n    for c in s[1:]:\n        if prev == 'vowel':\n            # Check if the current character is a consonant\n            if consonants.match(c):\n                prev = 'consonant'\n            else:\n                return False\n        else:\n            # Check if the current character is a vowel\n            if vowels.match(c):\n                prev = 'vowel'\n            else:\n                return False\n    \n    # Return True if all characters are in alternate order\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    s = s.lower()\n    if not re.match(\"^[a-z]*$\", s):\n        return False\n    for i in range(len(s)-1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] not in vowels and s[i+1] not in vowels):\n            return False\n    return True\n\nprint(is_alt(\"amazon\")) # true\nprint(is_alt(\"apple\")) # false\nprint(is_alt(\"banana\")) # true",
+            "logp": null
+        },
+        {
+            "content": "def is_alt(s):\n    vowels = 'aeiou'\n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        if s[i] not in vowels and s[i+1] not in vowels:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    # Remove any non-alphabet characters\n    s = re.sub('[^a-zA-Z]', '', s)\n    \n    # Check if the string is empty\n    if not s:\n        return True\n    \n    # Check if the first character is a vowel or consonant\n    if s[0].lower() in vowels:\n        prev = 'v'\n    elif s[0].lower() in consonants:\n        prev = 'c'\n    else:\n        return False\n    \n    # Check if the remaining characters alternate between vowels and consonants\n    for i in range(1, len(s)):\n        if s[i].lower() in vowels:\n            if prev == 'v':\n                return False\n            prev = 'v'\n        elif s[i].lower() in consonants:\n            if prev == 'c':\n                return False\n            prev = 'c'\n        else:\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_alt(s):\n    vowels = 'aeiou'\n    for i in range(len(s) - 1):\n        if (s[i] in vowels and s[i + 1] in vowels) or (s[i] not in vowels and s[i + 1] not in vowels):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    \n    if len(s) <= 1:\n        return True\n    \n    # Check if the first character is a vowel or consonant\n    if s[0] in vowels:\n        prev_char = \"vowel\"\n    elif s[0] in consonants:\n        prev_char = \"consonant\"\n    else:\n        return False\n    \n    # Loop through the rest of the characters\n    for i in range(1, len(s)):\n        if s[i] in vowels and prev_char == \"vowel\":\n            return False\n        elif s[i] in consonants and prev_char == \"consonant\":\n            return False\n        \n        # Update the prev_char variable\n        if s[i] in vowels:\n            prev_char = \"vowel\"\n        elif s[i] in consonants:\n            prev_char = \"consonant\"\n    \n    return True",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def is_alt(s):\n    vowels = 'aeiou'\n    for i in range(len(s)-1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] not in vowels and s[i+1] not in vowels):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    for i in range(len(s)-1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] not in vowels and s[i+1] not in vowels):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = [c for c in s if c not in vowels]\n    \n    # Check if the string is empty or has only one character\n    if len(s) == 0 or len(s) == 1:\n        return True\n    \n    # Check if the first character is a vowel\n    if s[0] in vowels:\n        # Check if the pattern is vowel-consonant-vowel-consonant...\n        return re.match(r'^[aeiou]{1}[bcdfghjklmnpqrstvwxyz]{1}([aeiou]{1}[bcdfghjklmnpqrstvwxyz]{1})*$', s) is not None\n    else:\n        # Check if the pattern is consonant-vowel-consonant-vowel...\n        return re.match(r'^[bcdfghjklmnpqrstvwxyz]{1}[aeiou]{1}([bcdfghjklmnpqrstvwxyz]{1}[aeiou]{1})*$', s) is not None",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = \"aeiou\"\n    \n    # Check if the string is empty\n    if not s:\n        return True\n    \n    # Check if the string contains only lowercase letters\n    if not re.match(\"^[a-z]+$\", s):\n        return False\n    \n    # Check if the vowels and consonants are in alternate order\n    for i in range(len(s) - 1):\n        if (s[i] in vowels and s[i+1] in vowels) or (s[i] not in vowels and s[i+1] not in vowels):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    \n    # Check if string is empty or has only one character\n    if len(s) < 2:\n        return True\n    \n    # Check if string starts with a vowel or consonant\n    if s[0] in vowels:\n        start_with_vowel = True\n    elif s[0] in consonants:\n        start_with_vowel = False\n    else:\n        return False\n    \n    # Check if string alternates between vowels and consonants\n    for i in range(1, len(s)):\n        if start_with_vowel and s[i] in vowels:\n            return False\n        elif not start_with_vowel and s[i] in consonants:\n            return False\n        start_with_vowel = not start_with_vowel\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    # Remove any non-alphabetic characters\n    s = re.sub('[^a-zA-Z]', '', s)\n    # If the string is empty, return True\n    if s == \"\":\n        return True\n    \n    # Check if the first character is a vowel or consonant\n    if s[0] in \"aeiou\":\n        current_type = \"vowel\"\n    else:\n        current_type = \"consonant\"\n    \n    # Iterate through the string, checking if the characters alternate between vowels and consonants\n    for i in range(1, len(s)):\n        if current_type == \"vowel\":\n            if s[i] in \"aeiou\":\n                return False\n            else:\n                current_type = \"consonant\"\n        else:\n            if s[i] in \"aeiou\":\n                current_type = \"vowel\"\n            else:\n                return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = \"aeiou\"\n    s = s.lower()\n    if len(s) < 2:\n        return True\n    if not re.match(\"^[a-z]+$\", s):\n        return False\n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        if s[i] not in vowels and s[i+1] not in vowels:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    if len(s) == 0:\n        return True\n    \n    vowels = \"aeiou\"\n    \n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        elif s[i] not in vowels and s[i+1] not in vowels:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    if len(s) <= 1:\n        return True\n    \n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if s[0] in vowels:\n        for i in range(1, len(s), 2):\n            if s[i] not in consonants:\n                return False\n        for i in range(2, len(s), 2):\n            if s[i] not in vowels:\n                return False\n    else:\n        for i in range(1, len(s), 2):\n            if s[i] not in vowels:\n                return False\n        for i in range(2, len(s), 2):\n            if s[i] not in consonants:\n                return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s)-1):\n        if s[i] in vowels and s[i+1] in vowels:\n            return False\n        if s[i] not in vowels and s[i+1] not in vowels:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    # Check if the length of the string is less than 2\n    if len(s) < 2:\n        return True\n    \n    # Check if the string contains only lowercase letters\n    if not re.match(\"^[a-z]+$\", s):\n        return False\n    \n    # Check if the first character is a vowel or consonant\n    if s[0] in vowels and s[1] in vowels:\n        return False\n    if s[0] in consonants and s[1] in consonants:\n        return False\n    \n    # Iterate through the remaining characters in the string\n    for i in range(2, len(s)):\n        # If the previous character is a vowel, the current character should be a consonant\n        if s[i-1] in vowels and s[i] in vowels:\n            return False\n        # If the previous character is a consonant, the current character should be a vowel\n        if s[i-1] in consonants and s[i] in consonants:\n            return False\n    \n    return True",
+            "logp": null
+        }
+    ]
+}

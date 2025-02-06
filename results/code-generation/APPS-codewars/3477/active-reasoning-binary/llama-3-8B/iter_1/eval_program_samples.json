@@ -1,0 +1,114 @@
+{
+    "0": {
+        "0": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)"
+        ],
+        "1": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(set(ordering))\n    result = ''\n    for char in ordering:\n        while char in s:\n            result += char\n            s = s.replace(char, '', 1)\n    return result + ''.join(sorted(s))"
+        ],
+        "2": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(set(ordering))\n    result = ''\n    for char in ordering:\n        while char in s:\n            result += char\n            s = s.replace(char, '', 1)\n    return result + ''.join(sorted(s))"
+        ],
+        "3": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(set(ordering))\n    result = ''\n    for char in ordering:\n        while char in s:\n            result += char\n            s = s.replace(char, '', 1)\n    return result + ''.join(sorted(s))"
+        ],
+        "4": [
+            "def sort_string(s, ordering):\n    chars = {char: None for char in ordering}\n    remaining_chars = set(s) - set(ordering)\n    ordered_chars = sorted([char for char in s if char in chars], key=ordering.index)\n    ordered_chars += sorted(list(remaining_chars), key=s.index)\n    return ''.join(ordered_chars)"
+        ]
+    },
+    "1": {
+        "0": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))"
+        ],
+        "1": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(set(ordering))\n    result = ''\n    for char in ordering:\n        while char in s:\n            result += char\n            s = s.replace(char, '', 1)\n    return result + ''.join(sorted(s))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    return ''.join(sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering)))"
+        ],
+        "2": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(set(ordering))\n    result = ''\n    for char in ordering:\n        while char in s:\n            result += char\n            s = s.replace(char, '', 1)\n    return result + ''.join(sorted(s))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    return ''.join(sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering)))"
+        ],
+        "3": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(set(ordering))\n    result = ''\n    for char in ordering:\n        while char in s:\n            result += char\n            s = s.replace(char, '', 1)\n    return result + ''.join(sorted(s))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    return ''.join(sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering)))"
+        ],
+        "4": [
+            "def sort_string(s, ordering):\n    chars = {char: None for char in ordering}\n    remaining_chars = set(s) - set(ordering)\n    ordered_chars = sorted([char for char in s if char in chars], key=ordering.index)\n    ordered_chars += sorted(list(remaining_chars), key=s.index)\n    return ''.join(ordered_chars)",
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    return ''.join(sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering)))"
+        ]
+    },
+    "2": {
+        "0": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    first_half = ''.join([c for c in s if c in ordering])\n    second_half = [c for c in s if c not in ordering]\n    return ''.join(sorted(first_half, key=ordering.index)) + ''.join(sorted(second_half))",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s",
+            "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    result = ['' for _ in s]\n    result_pos = 0\n    for char in s:\n        if char in ordering:\n            pos = ordering.index(char)\n            while pos < len(result):\n                result[pos] = ''\n                pos += 1\n            result[pos - 1] = char\n            result_pos = pos\n        else:\n            result[result_pos] = char\n            result_pos += 1\n    return ''.join(result).lstrip('') or s"
+        ],
+        "1": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    return ''.join(sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering)))"
+        ],
+        "2": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    return ''.join(sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering)))"
+        ],
+        "3": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    return ''.join(sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering)))"
+        ],
+        "4": [
+            "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    return ''.join(sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering)))"
+        ]
+    }
+}

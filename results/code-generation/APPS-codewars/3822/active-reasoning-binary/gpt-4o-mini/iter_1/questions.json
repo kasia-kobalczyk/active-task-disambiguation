@@ -1,0 +1,34 @@
+{
+    "0": [
+        "assert pair_zeros([0, 1, 0, 0]) == [0, 1, 0]",
+        "assert pair_zeros([0, 1, 7, 0, 2, 2, 0, 0, 1, 0]) == [0, 1, 7, 2, 2, 0, 1, 0]",
+        "assert pair_zeros([1, 0, 7, 0, 1]) == [1, 0, 7, 1]",
+        "assert pair_zeros([0, 1, 0, 2]) == [0, 1, 2]"
+    ],
+    "1": [
+        "assert pair_zeros([0, 0, 1, 0, 0, 2]) == [0, 1, 0, 2]",
+        "assert pair_zeros([0, 1, 2, 0, 3, 0, 0]) == [0, 1, 2, 0, 3]",
+        "assert pair_zeros([0, 2, 0, 0, 3, 0]) == [0, 2, 0, 3, 0]",
+        "assert pair_zeros([2, 3, 0, 0, 0]) == [2, 3, 0]",
+        "assert pair_zeros([0, 2, 0, 3, 0]) == [0, 2, 3, 0]",
+        "assert pair_zeros([0, 0, 0, 0]) == [0]",
+        "assert pair_zeros([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]"
+    ],
+    "2": [
+        "assert pair_zeros([0, 0, 0, 0, 1]) == [0, 1]",
+        "assert pair_zeros([0, 0, 1, 0, 1, 0, 0]) == [0, 1, 0, 1]",
+        "assert pair_zeros([1, 2, 3]) == [1, 2, 3]",
+        "assert pair_zeros([0, 1, 0, 0, 2, 0]) == [0, 1, 2, 0]",
+        "assert pair_zeros([0, 2, 0, 0, 3, 0]) == [0, 2, 0, 3]",
+        "assert pair_zeros([0, 0, 0, 0]) == [0]",
+        "assert pair_zeros([2, 0, 0, 0, 4, 0, 0]) == [2, 0, 4]"
+    ],
+    "3": [
+        "assert pair_zeros([0, 2, 0, 3, 0, 0]) == [0, 2, 3, 0]",
+        "assert pair_zeros([0, 0, 0, 0]) == [0]",
+        "assert pair_zeros([1, 2, 3]) == [1, 2, 3]",
+        "assert pair_zeros([2, 0, 0, 0, 4, 0, 0]) == [2, 0, 4, 0]",
+        "assert pair_zeros([0, 2, 0, 0, 3, 0]) == [0, 2, 0, 3]",
+        "assert pair_zeros([0, 0, 0, 0, 0, 0]) == [0]"
+    ]
+}

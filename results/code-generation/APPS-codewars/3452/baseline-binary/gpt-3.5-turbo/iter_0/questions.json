@@ -1,0 +1,20 @@
+{
+    "0": [
+        "assert snail(15, 5, 1) == 9",
+        "assert snail(10, 3, 2) == 8",
+        "assert snail(20, 7, 3) == 6"
+    ],
+    "1": [
+        "assert snail(20, 5, 3) == 7",
+        "assert snail(15, 4, 2) == 6\n# Explanation: The snail crawls up 4 meters during the day and slides down 2 meters at night. It will take 6 days for the snail to reach the top of the 15-meter column.",
+        "assert snail(10, 3, 2) == 8"
+    ],
+    "2": [
+        "assert snail(12, 5, 3) == 5\n# On day 5, the snail crawls up 5 meters, reaching a total height of 13 meters.",
+        "assert snail(5, 2, 1) == 4",
+        "assert snail(10, 3, 2) == 8"
+    ],
+    "3": [
+        "assert snail(10, 3, 2) == 7"
+    ]
+}

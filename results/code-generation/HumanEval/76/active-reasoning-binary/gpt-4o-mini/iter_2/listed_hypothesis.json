@@ -1,0 +1,186 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while n ** power < x:\n        power += 1\n    return n ** power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return x > 0 and n > 1 and int(n ** round(x ** (1 / n))) == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while n ** power < x:\n        power += 1\n    return n ** power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return x == n ** int(round(x ** (1/n)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return False\n    power = 1\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return n ** int(round(x ** (1/n))) == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return n ** int(round(x ** (1 / n))) == x\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return n ** int(round(x ** (1/n))) == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 0\n    while n**power < x:\n        power += 1\n    return n**power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return n**int(round(x**(1/n))) == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return n ** round(x ** (1 / n)) == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return x == n ** int(round(x**0.5)) and x > 0 and n > 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while n ** power < x:\n        power += 1\n    return n ** power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return n**int(round(x**(1/n))) == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    return x == n ** int(round(x ** (1 / n).real))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while n ** power < x:\n        power += 1\n    return n ** power == x\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    if x < 1:\n        return False\n    power = 0\n    while n ** power < x:\n        power += 1\n    return n ** power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 0\n    while n**power < x:\n        power += 1\n    return n**power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 0:\n        return x == 1\n    if x < 1:\n        return False\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 0\n    while n ** power < x:\n        power += 1\n    return n ** power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 0:\n        return x == 1\n    if n == 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 0:\n        return x == 1\n    if n == 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 0\n    while n ** power < x:\n        power += 1\n    return n ** power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    if x < 1:\n        return False\n    power = 0\n    while n ** power < x:\n        power += 1\n    return n ** power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    if x < 1 or n < 1:\n        return False\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == n\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n <= 1:\n        return x == 1\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    if x < 1 or n < 1:\n        return False\n    power = 1\n    while power < x:\n        power *= n\n    return power == x\n```",
+            "logp": null
+        }
+    ]
+}

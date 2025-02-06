@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert cat_mouse('.....C............m......', 5) == 'Escaped!'",
+        "assert cat_mouse(\".....C............m......\", 5) == 'Escaped!'",
+        "assert cat_mouse(\"..C.....m.\", 5) == 'Caught!'",
+        "assert cat_mouse('...m....D....C.......', 10) == 'Protected!'",
+        "assert cat_mouse(\"...m.........C...D\", 10) == 'Caught!'",
+        "assert cat_mouse('...m.........C...D', 10) == 'Caught!'",
+        "assert cat_mouse('..C.....m.', 5) == 'Caught!'",
+        "assert cat_mouse(\"...m....D....C.......\", 10) == 'Protected!'"
+    ],
+    "1": [
+        "assert cat_mouse(\"C....m.....\", 10) == 'Caught!'",
+        "assert cat_mouse(\"C.....m\", 5) == 'Caught!'",
+        "assert cat_mouse(\".....C............m......\", 5) == 'Escaped!'",
+        "assert cat_mouse(\"C...m....D\", 5) == 'Protected!'",
+        "assert cat_mouse(\"..C.....m.\", 5) == 'Caught!'",
+        "assert cat_mouse(\"...m.........C...D\", 10) == 'Caught!'",
+        "assert cat_mouse(\"...m....D....C.......\", 10) == 'Protected!'",
+        "assert cat_mouse(\".....C....m\", 2) == 'Escaped!'"
+    ],
+    "2": [
+        "assert cat_mouse(\"C....m.....\", 10) == 'Caught!'",
+        "assert cat_mouse(\"C.....m\", 5) == 'Caught!'",
+        "assert cat_mouse(\".....C............m......\", 5) == 'Escaped!'",
+        "assert cat_mouse(\"..C.....m.\", 5) == 'Caught!'",
+        "assert cat_mouse(\"...m.........C...D\", 10) == 'Caught!'",
+        "assert cat_mouse(\"...m....D....C.......\", 10) == 'Protected!'",
+        "assert cat_mouse(\".....C....m\", 3) == 'Escaped!'"
+    ],
+    "3": [
+        "assert cat_mouse(\"C.....m\", 5) == 'Caught!'",
+        "assert cat_mouse(\".....C............m......\", 5) == 'Escaped!'",
+        "assert cat_mouse(\"..C.....m.\", 5) == 'Caught!'",
+        "assert cat_mouse(\"...m.........C...D\", 10) == 'Caught!'",
+        "assert cat_mouse(\"...m....D....C.......\", 10) == 'Protected!'",
+        "assert cat_mouse(\".....C....m\", 3) == 'Escaped!'"
+    ]
+}

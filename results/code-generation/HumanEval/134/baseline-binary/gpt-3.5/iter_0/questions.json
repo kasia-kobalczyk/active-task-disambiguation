@@ -1,0 +1,28 @@
+{
+    "0": [
+        "assert check_if_last_char_is_a_letter(\"Hello World!\") == True",
+        "assert check_if_last_char_is_a_letter(\"Python 3.7\") == False",
+        "assert check_if_last_char_is_a_letter(\"I love Python\") == False"
+    ],
+    "1": [
+        "assert check_if_last_char_is_a_letter(\"Hello\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello1\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello!\") == True"
+    ],
+    "2": [
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello123\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello \") == True",
+        "assert check_if_last_char_is_a_letter(\"Hello!\") == True",
+        "assert check_if_last_char_is_a_letter(\"Hello world,\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello,\") == True",
+        "assert check_if_last_char_is_a_letter(\"\") == False",
+        "assert check_if_last_char_is_a_letter(\" \") == False"
+    ],
+    "3": [
+        "assert check_if_last_char_is_a_letter(\"Hello world !\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello \") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world ! \") == False"
+    ]
+}

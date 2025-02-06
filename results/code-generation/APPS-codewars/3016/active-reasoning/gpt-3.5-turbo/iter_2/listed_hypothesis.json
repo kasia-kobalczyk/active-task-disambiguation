@@ -1,0 +1,109 @@
+{
+    "0": [
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return 'Not a chord'\n    note1 = notes[0]\n    note2 = notes[1]\n    note3 = notes[2]\n    interval1 = abs(NOTES.index(note2) - NOTES.index(note1))\n    interval2 = abs(NOTES.index(note3) - NOTES.index(note2))\n    if interval1 == 3 and interval2 == 4:\n        return 'Minor'\n    elif interval1 == 4 and interval2 == 3:\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return 'Not a chord'\n    \n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    \n    if first_note not in NOTES or second_note not in NOTES or third_note not in NOTES:\n        return 'Not a chord'\n    \n    first_index = NOTES.index(first_note)\n    second_index = NOTES.index(second_note)\n    third_index = NOTES.index(third_note)\n    \n    interval_1_2 = abs(second_index - first_index)\n    interval_2_3 = abs(third_index - second_index)\n    interval_1_3 = abs(third_index - first_index)\n    \n    for chord, interval in DCT_CHORDS.items():\n        if interval_1_2 == interval[0] and interval_2_3 == interval[1] and interval_1_3 == interval[2]:\n            return chord\n    \n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return 'Not a chord'\n    else:\n        first_note = notes[0]\n        second_note = notes[1]\n        third_note = notes[2]\n        interval_1_2 = (NOTES.index(second_note) - NOTES.index(first_note)) % 12\n        interval_2_3 = (NOTES.index(third_note) - NOTES.index(second_note)) % 12\n        interval_1_3 = (NOTES.index(third_note) - NOTES.index(first_note)) % 12\n        \n        if interval_1_2 == 3 and interval_2_3 == 4 and interval_1_3 == 7:\n            return 'Minor'\n        elif interval_1_2 == 4 and interval_2_3 == 3 and interval_1_3 == 7:\n            return 'Major'\n        else:\n            return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    \n    # Check if chord has exactly three notes\n    if len(notes) != 3:\n        return 'Not a chord'\n    \n    # Check if notes are valid\n    for note in notes:\n        if note not in NOTES:\n            return 'Not a chord'\n    \n    # Check if the intervals are correct\n    interval1 = NOTES.index(notes[1]) - NOTES.index(notes[0])\n    interval2 = NOTES.index(notes[2]) - NOTES.index(notes[1])\n    \n    # Check if chord is minor or major\n    if interval1 == 3 and interval2 == 4:\n        return 'Minor'\n    elif interval1 == 4 and interval2 == 3:\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return 'Not a chord'\n    \n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    \n    interval1 = abs(NOTES.index(second_note) - NOTES.index(first_note))\n    interval2 = abs(NOTES.index(third_note) - NOTES.index(second_note))\n    interval3 = abs(NOTES.index(third_note) - NOTES.index(first_note))\n    \n    for chord, mode in DCT_CHORDS.items():\n        if chord[0] == first_note and chord[1] == second_note and chord[2] == third_note:\n            return mode\n    \n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return 'Not a chord'\n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n\n    first_note_index = -1\n    second_note_index = -1\n    third_note_index = -1\n\n    for i in range(len(NOTES)):\n        if first_note in NOTES[i]:\n            first_note_index = i\n        if second_note in NOTES[i]:\n            second_note_index = i\n        if third_note in NOTES[i]:\n            third_note_index = i\n\n    if first_note_index == -1 or second_note_index == -1 or third_note_index == -1:\n        return 'Not a chord'\n\n    first_to_second_interval = abs(first_note_index - second_note_index)\n    second_to_third_interval = abs(second_note_index - third_note_index)\n    first_to_third_interval = abs(first_note_index - third_note_index)\n\n    if first_to_second_interval == 3 and second_to_third_interval == 4 and first_to_third_interval == 7:\n        return 'Minor'\n    elif first_to_second_interval == 4 and second_to_third_interval == 3 and first_to_third_interval == 7:\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split() # split the chord into individual notes\n    if len(chord) != 3: # if the chord does not have exactly 3 notes\n        return 'Not a chord'\n    note1, note2, note3 = chord # assign the notes to variables\n\n    for key in DCT_CHORDS: # iterate through the dictionary of chords\n        if note1 in key and note2 in key and note3 in key: # if the notes match the current chord\n            return DCT_CHORDS[key] # return the corresponding chord type\n\n    return 'Not a chord' # if no chord match is found",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return 'Not a chord'\n    first = NOTES.index([notes[0]])\n    second = NOTES.index([notes[1]])\n    third = NOTES.index([notes[2]])\n    interval_1_2 = (second - first) % len(NOTES)\n    interval_2_3 = (third - second) % len(NOTES)\n    if (interval_1_2, interval_2_3) in config:\n        return DCT_CHORDS[tuple(notes)]\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    \n    if (first_note in DCT_CHORDS.keys() and\n        second_note in DCT_CHORDS.keys() and\n        third_note in DCT_CHORDS.keys()):\n        \n        if (DCT_CHORDS[first_note] == 'Minor' and\n            DCT_CHORDS[second_note] == 'Minor' and\n            DCT_CHORDS[third_note] == 'Minor'):\n            return 'Minor'\n        \n        elif (DCT_CHORDS[first_note] == 'Major' and\n              DCT_CHORDS[second_note] == 'Major' and\n              DCT_CHORDS[third_note] == 'Major'):\n            return 'Major'\n        \n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord_notes = chord.split()\n    \n    if len(chord_notes) != 3:\n        return 'Not a chord'\n    \n    first_note = chord_notes[0]\n    second_note = chord_notes[1]\n    third_note = chord_notes[2]\n    \n    first_index = [i for i, note in enumerate(NOTES) if note[0] == first_note or note[1] == first_note][0]\n    second_index = [i for i, note in enumerate(NOTES) if note[0] == second_note or note[1] == second_note][0]\n    third_index = [i for i, note in enumerate(NOTES) if note[0] == third_note or note[1] == third_note][0]\n    \n    first_second_interval = abs(first_index - second_index)\n    second_third_interval = abs(second_index - third_index)\n    first_third_interval = abs(first_index - third_index)\n    \n    if (first_second_interval == 3 and second_third_interval == 4 and first_third_interval == 7):\n        return 'Minor'\n    elif (first_second_interval == 4 and second_third_interval == 3 and first_third_interval == 7):\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return \"Not a chord\"\n    note1, note2, note3 = notes\n    interval1 = abs(NOTES.index([note1]) - NOTES.index([note2]))\n    interval2 = abs(NOTES.index([note2]) - NOTES.index([note3]))\n    interval3 = abs(NOTES.index([note1]) - NOTES.index([note3]))\n    \n    if interval1 == 3 and interval2 == 4 and interval3 == 7:\n        return \"Minor\"\n    elif interval1 == 4 and interval2 == 3 and interval3 == 7:\n        return \"Major\"\n    else:\n        return \"Not a chord\"",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    if len(chord) != 3:\n        return 'Not a chord'\n    root, third, fifth = chord\n\n    for i in range(len(NOTES)):\n        if root in NOTES[i]:\n            root_index = i\n            break\n    for i in range(len(NOTES)):\n        if third in NOTES[i]:\n            third_index = i\n            break\n    for i in range(len(NOTES)):\n        if fifth in NOTES[i]:\n            fifth_index = i\n            break\n\n    interval_1 = abs(root_index - third_index)\n    interval_2 = abs(third_index - fifth_index)\n\n    if interval_1 == 3 and interval_2 == 4:\n        return 'Minor'\n    elif interval_1 == 4 and interval_2 == 3:\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "\"\"\"\nThe given function is already complete. I will add the code to check if the given chord is a valid chord and return the corresponding result.\n\"\"\"\n\nfrom itertools import product\n\nNOTES =  [['C'], ['C#', 'Db'], ['D'], ['D#', 'Eb'], ['E'], ['F'], ['F#', 'Gb'], ['G'], ['G#', 'Ab'], ['A'], ['A#', 'Bb'], ['B']]*2\nconfig = [('Major', 4), ('Minor', 3)]\n\nDCT_CHORDS = {c: mode for mode, offset in config\n                      for i in range(len(NOTES)//2)\n                      for c in product(NOTES[i], NOTES[i + offset], NOTES[i + 7])}\n\ndef minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return \"Not a chord\"\n    if (notes[0], notes[1], notes[2]) in DCT_CHORDS:\n        return DCT_CHORDS[(notes[0], notes[1], notes[2])]\n    else:\n        return \"Not a chord\"",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return \"Not a chord\"\n    interval1 = abs(NOTES.index([notes[1]]) - NOTES.index([notes[0]]))\n    interval2 = abs(NOTES.index([notes[2]]) - NOTES.index([notes[1]]))\n    if interval1 == 3 and interval2 == 4:\n        return \"Minor\"\n    elif interval1 == 4 and interval2 == 3:\n        return \"Major\"\n    else:\n        return \"Not a chord\"",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return \"Not a chord\"\n    \n    interval1 = abs(NOTES.index([notes[1]]) - NOTES.index([notes[0]]))\n    interval2 = abs(NOTES.index([notes[2]]) - NOTES.index([notes[1]]))\n    interval3 = abs(NOTES.index([notes[2]]) - NOTES.index([notes[0]]))\n    \n    for c, mode in DCT_CHORDS.items():\n        if c[0] == notes[0] and c[1] == notes[1] and c[2] == notes[2]:\n            return mode\n    \n    return \"Not a chord\"",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return \"Not a chord\"\n    else:\n        first_note = notes[0]\n        second_note = notes[1]\n        third_note = notes[2]\n        interval1 = NOTES.index([second_note]) - NOTES.index([first_note])\n        interval2 = NOTES.index([third_note]) - NOTES.index([second_note])\n        if interval1 == 1:\n            interval1 = 11\n        if interval2 == 1:\n            interval2 = 11\n        if (interval1 == 3 and interval2 == 4) or (interval1 == 4 and interval2 == 3):\n            return DCT_CHORDS[tuple(notes)]\n        else:\n            return \"Not a chord\"",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return 'Not a chord'\n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    \n    for note in NOTES:\n        if first_note in note:\n            first_index = NOTES.index(note)\n        if second_note in note:\n            second_index = NOTES.index(note)\n        if third_note in note:\n            third_index = NOTES.index(note)\n    \n    interval_1 = abs(first_index - second_index)\n    interval_2 = abs(second_index - third_index)\n    interval_3 = abs(first_index - third_index)\n    \n    if interval_1 == 3 and interval_2 == 4 and interval_3 == 7:\n        return 'Minor'\n    elif interval_1 == 4 and interval_2 == 3 and interval_3 == 7:\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return \"Not a chord\"\n    interval_1 = NOTES.index([notes[1]]) - NOTES.index([notes[0]])\n    interval_2 = NOTES.index([notes[2]]) - NOTES.index([notes[1]])\n    if interval_1 == 3 and interval_2 == 4:\n        return \"Minor\"\n    elif interval_1 == 4 and interval_2 == 3:\n        return \"Major\"\n    else:\n        return \"Not a chord\"",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord = chord.split()\n    if len(chord) != 3:\n        return 'Not a chord'\n    \n    note1, note2, note3 = chord\n    \n    interval1 = abs(NOTES.index([note1]) - NOTES.index([note2]))\n    interval2 = abs(NOTES.index([note2]) - NOTES.index([note3]))\n    \n    if interval1 == 3 and interval2 == 4:\n        return 'Minor'\n    elif interval1 == 4 and interval2 == 3:\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    \n    if len(notes) != 3:\n        return 'Not a chord'\n    \n    first_note = notes[0]\n    second_note = notes[1]\n    third_note = notes[2]\n    \n    interval1 = abs(NOTES.index([second_note]) - NOTES.index([first_note]))\n    interval2 = abs(NOTES.index([third_note]) - NOTES.index([second_note]))\n    interval3 = abs(NOTES.index([third_note]) - NOTES.index([first_note]))\n    \n    if interval1 == 3 and interval2 == 4 and interval3 == 7:\n        return 'Minor'\n    elif interval1 == 4 and interval2 == 3 and interval3 == 7:\n        return 'Major'\n    else:\n        return 'Not a chord'",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return 'Not a chord'\n    note1, note2, note3 = notes\n    \n    for key, value in DCT_CHORDS.items():\n        if note1 in key and note2 in key and note3 in key:\n            return value\n    return 'Not a chord'",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    # Step 1: Split the input chord into a list of individual notes\n    notes = chord.split()\n    \n    # Step 2: Check if the chord has three elements\n    if len(notes) != 3:\n        return \"Not a chord\"\n    \n    # Step 3: Check the interval between the first and second element\n    interval1 = (NOTES.index([notes[1]]) - NOTES.index([notes[0]])) % 12\n    if interval1 != 3 and interval1 != 4:\n        return \"Not a chord\"\n    \n    # Step 4: Check the interval between the second and third element\n    interval2 = (NOTES.index([notes[2]]) - NOTES.index([notes[1]])) % 12\n    if interval2 != 3 and interval2 != 4:\n        return \"Not a chord\"\n    \n    # Step 5: Check if the chord is minor or major\n    if interval1 == 3 and interval2 == 4:\n        return \"Minor\"\n    elif interval1 == 4 and interval2 == 3:\n        return \"Major\"",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return \"Not a chord\"\n    \n    note1, note2, note3 = notes\n    \n    for chord, mode in DCT_CHORDS.items():\n        if (note1 in chord) and (note2 in chord) and (note3 in chord):\n            return mode\n    \n    return \"Not a chord\"",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    notes = chord.split()\n    if len(notes) != 3:\n        return \"Not a chord\"\n    \n    interval1 = (ord(notes[1][0]) - ord(notes[0][0])) % 12\n    interval2 = (ord(notes[2][0]) - ord(notes[1][0])) % 12\n    interval3 = (ord(notes[2][0]) - ord(notes[0][0])) % 12\n    \n    for c in DCT_CHORDS:\n        if interval1 == ord(c[1][0]) - ord(c[0][0]) and interval2 == ord(c[2][0]) - ord(c[1][0]) and interval3 == ord(c[2][0]) - ord(c[0][0]):\n            return DCT_CHORDS[c]\n    \n    return \"Not a chord\"",
+            "logp": null
+        },
+        {
+            "content": "def minor_or_major(chord):\n    chord_notes = chord.split()\n    \n    if len(chord_notes) != 3:\n        return \"Not a chord\"\n    \n    first_note = chord_notes[0]\n    second_note = chord_notes[1]\n    third_note = chord_notes[2]\n    \n    for note, mode in DCT_CHORDS.items():\n        if first_note in note and second_note in note and third_note in note:\n            return mode\n    \n    return \"Not a chord\"",
+            "logp": null
+        }
+    ],
+    "3": []
+}

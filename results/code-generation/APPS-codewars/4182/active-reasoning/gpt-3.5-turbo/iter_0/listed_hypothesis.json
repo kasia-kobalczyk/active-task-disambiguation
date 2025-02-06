@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "def survivor(n):\n    i = 1\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    \n    k = 2\n    while k * k <= n:\n        if n % k == 0:\n            return False\n        k += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    else:\n        i = 2\n        while i <= n:\n            if n % i == 0:\n                return False\n            i += 1\n        return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    i = 2\n    while True:\n        if n % i == 0:\n            return False\n        i += 1",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    prime_nums = [2,3,5,7]\n    \n    if n in prime_nums:\n        return True\n    \n    if n % 2 == 0:\n        return False\n    \n    for i in range(3,int(n**0.5)+1,2):\n        if n % i == 0:\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    prime = [True] * (n + 1)\n    p = 2\n    while p * p <= n:\n        if prime[p]:\n            for i in range(p * p, n + 1, p):\n                prime[i] = False\n        p += 1\n    return prime[n]",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n <= 0:\n        return False\n    \n    while n > 1:\n        if n % 2 == 0:\n            n /= 2\n        else:\n            return False\n        \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    if n == 2:\n        return False\n    num = 2\n    while num < n:\n        if n % num == 0:\n            return False\n        num += 1\n    return True",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    \n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    elif n < 1:\n        return False\n    else:\n        return survivor(n // 2) or survivor(n // 3) or survivor(n // 5) or survivor(n // 7) or survivor(n // 11) or survivor(n // 13) or survivor(n // 17) or survivor(n // 19) or survivor(n // 23) or survivor(n // 29) or survivor(n // 31) or survivor(n // 37) or survivor(n // 41) or survivor(n // 43) or survivor(n // 47) or survivor(n // 53) or survivor(n // 59) or survivor(n // 61) or survivor(n // 67) or survivor(n // 71) or survivor(n // 73) or survivor(n // 79) or survivor(n // 83) or survivor(n // 89) or survivor(n // 97)",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    prime = 2\n    while prime * prime <= n:\n        if n % prime == 0:\n            return False\n        prime += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    elif n % 2 == 0:\n        return False\n    else:\n        return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    elif n == 2:\n        return False\n    else:\n        i = 2\n        while True:\n            if i ** 2 <= n:\n                if n % i == 0:\n                    return False\n            else:\n                return True\n            i += 1",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    # Initialize a variable to keep track of the count\n    count = 0\n    # Start with the number 1\n    number = 1\n    # Iterate through the numbers until the count reaches n\n    while count < n:\n        # If the number is a survivor number, increment the count\n        if is_survivor(number):\n            count += 1\n            # If the count is equal to n, return True\n            if count == n:\n                return True\n        # Increment the number\n        number += 1\n    # If the count never reaches n, return False\n    return False\n\n# Helper function to check if a number is a survivor number\ndef is_survivor(number):\n    # Start with a step size of 2\n    step = 2\n    # Iterate through the numbers\n    while True:\n        # If the number is divisible by the step, it is not a survivor number\n        if number % step == 0:\n            return False\n        # Increment the step\n        step += 1\n        # If the step squared is greater than the number, it is a survivor number\n        if step ** 2 > number:\n            return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    elif n == 2 or n == 3:\n        return False\n    \n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    \n    return True\n\nprint(survivor(7))",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    elif n <= 0 or n % 2 == 0:\n        return False\n    else:\n        p = 3\n        while p * p <= n:\n            if n % p == 0:\n                return False\n            p += 2\n        return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def survivor(n):\n    if n <= 0:\n        return False\n    if n == 1:\n        return True\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    # Initialize the counter to 2\n    counter = 2\n    \n    # Loop until the counter is less than or equal to the square root of n\n    while counter ** 2 <= n:\n        # If n is divisible by counter, it is not a survivor number\n        if n % counter == 0:\n            return False\n        # Increment the counter by 1\n        counter += 1\n    \n    # If n is not divisible by any number up to its square root, it is a survivor number\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n < 1:\n        return False\n    else:\n        prime_factors = []\n        while n % 2 == 0:\n            prime_factors.append(2)\n            n = n / 2\n        i = 3\n        while i * i <= n:\n            while n % i == 0:\n                prime_factors.append(i)\n                n = n / i\n            i = i + 2\n        if n > 2:\n            prime_factors.append(n)\n        return len(prime_factors) == 1",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    i = 2\n    while i*i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n % 2 == 0:\n        return False\n    i = 3\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 2\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    # Base case: If n is 1, it is a survivor\n    if n == 1:\n        return True\n    \n    # Start deleting numbers from 2 till sqrt(n)\n    for i in range(2, int(n ** 0.5) + 1):\n        # If n is divisible by i, n is not a survivor\n        if n % i == 0:\n            return False\n    \n    # n is a survivor if it is not divisible by any number from 2 to sqrt(n)\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    else:\n        p = 2\n        while p * p <= n:\n            if n % p == 0:\n                return False\n            p += 1\n        return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    if n <= 3:\n        return False\n    for i in range(2, int(n**0.5)+1):\n        if n % i == 0:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True\n\n# Test cases\nprint(survivor(7)) # True\nprint(survivor(25)) # False",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    \n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 1\n    return True",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def survivor(n):\n    if n == 1 or n == 3 or n == 7:\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1 or n == 3 or n == 7:\n        return True\n    elif n % 2 == 0 or n % 3 == 0 or n % 5 == 0:\n        return False\n    else:\n        return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    prime_factors = []\n    while n % 2 == 0:\n        prime_factors.append(2)\n        n = n / 2\n    p = 3\n    while p * p <= n:\n        if n % p == 0:\n            prime_factors.append(p)\n            n = n / p\n        else:\n            p += 2\n    if n > 2:\n        prime_factors.append(n)\n    return len(prime_factors) == 1 and prime_factors[0] != 2",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    elif n == 2:\n        return False\n    \n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nprint(survivor(7))\nprint(survivor(25))\nprint(survivor(2))",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    elif n == 2:\n        return False\n    else:\n        i = 2\n        while i*i <= n:\n            if n % i == 0:\n                return False\n            i += 1\n        return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    prime_factors = []\n    i = 2\n    while i*i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n            prime_factors.append(i)\n    if n > 1:\n        prime_factors.append(n)\n    return len(prime_factors) == 1 and prime_factors[0] != 2",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1:\n        return True\n    if n % 2 == 0:\n        return False\n    for i in range(3, int(n**0.5) + 1, 2):\n        if n % i == 0:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    if n == 1 or n == 3 or n == 7 or n == 13:\n        return True\n    else:\n        return False",
+            "logp": null
+        }
+    ]
+}

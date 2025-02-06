@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    return ceil((column - night) / (day - night))",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    distance = 0\n    num_days = 0\n    \n    while distance < column:\n        distance += day\n        num_days += 1\n        \n        if distance >= column:\n            return num_days\n        \n        distance -= night\n        \n    return num_days",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    if day >= column:\n        return 1\n    else:\n        days = ceil((column - day) / (day - night)) + 1\n        return days",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    return ceil((column - day) / (day - night)) + 1",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = 0\n    total_distance = 0\n    while total_distance < column:\n        total_distance += day\n        if total_distance >= column:\n            days += 1\n            break\n        total_distance -= night\n        days += 1\n    return days",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    return ceil((column - night) / (day - night))",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    distance = 0\n    days = 0\n\n    while distance < column:\n        distance += day\n        days += 1\n\n        if distance >= column:\n            return days\n\n        distance -= night\n\n    return days",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    return ceil((column - night) / (day - night))",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    distance = 0\n    num_days = 0\n    \n    while distance < column:\n        distance += day\n        num_days += 1\n        \n        if distance >= column:\n            return num_days\n        \n        distance -= night\n        \n    return num_days",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    if day >= column:\n        return 1\n    else:\n        days = ceil((column - day) / (day - night)) + 1\n        return days",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    return ceil((column - day) / (day - night)) + 1",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = 0\n    total_distance = 0\n    while total_distance < column:\n        total_distance += day\n        if total_distance >= column:\n            days += 1\n            break\n        total_distance -= night\n        days += 1\n    return days",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    return ceil((column - night) / (day - night))",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    distance = 0\n    days = 0\n\n    while distance < column:\n        distance += day\n        days += 1\n\n        if distance >= column:\n            return days\n\n        distance -= night\n\n    return days",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    return ceil((column - night) / (day - night))",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    if day >= column:\n        return 1\n    else:\n        days = ceil((column - day) / (day - night)) + 1\n        return days",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    return ceil((column - day) / (day - night)) + 1",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    return ceil((column - night) / (day - night))",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = ceil((column - night) / (day - night))\n    return days",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    return ceil((column - night) / (day - night))",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    if day >= column:\n        return 1\n    else:\n        days = ceil((column - day) / (day - night)) + 1\n        return days",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    return ceil((column - day) / (day - night)) + 1",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\n\ndef snail(column, day, night):\n    return ceil((column - night) / (day - night))",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = ceil((column - night) / (day - night))\n    return days",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        },
+        {
+            "content": "from math import ceil\n\ndef snail(column, day, night):\n    days = (column - night) / (day - night)\n    return ceil(days)",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef encode(message):\n    result = []\n    vowels = 'aeiouAEIOU'\n    \n    for char in message:\n        if char in vowels:\n            if char.islower():\n                new_char = chr(ord(char) + 2)\n            else:\n                new_char = chr(ord(char.lower()) + 2).upper()\n            result.append(new_char)\n        else:\n            result.append(char.swapcase())\n    \n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    encoded_message = []\n    for char in message:\n        if char.isalpha():\n            if char.lower() in 'aeiou':\n                # Get the next letter two positions ahead\n                next_char = chr(((ord(char.lower()) - ord('a') + 2) % 26) + ord('a'))\n                encoded_message.append(next_char.upper() if char.isupper() else next_char)\n            else:\n                # Swap case\n                encoded_message.append(char.swapcase())\n        else:\n            encoded_message.append(char)\n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n\n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char in vowels:\n                # Replace vowel with the letter that appears 2 places ahead\n                if char.islower():\n                    encoded_message.append(chr((ord(char) - ord('a') + 2) % 26 + ord('a')))\n                else:\n                    encoded_message.append(chr((ord(char) - ord('A') + 2) % 26 + ord('A')))\n            else:\n                encoded_message.append(char.swapcase())\n        else:\n            encoded_message.append(char)\n\n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char in vowels:\n            # Find the index of the vowel in the alphabet\n            new_char = chr(ord(char) + 2)\n            encoded_message.append(new_char)\n        elif char.isalpha():\n            # Swap case for consonants\n            encoded_message.append(char.swapcase())\n        else:\n            # Keep non-alphabet characters unchanged\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    result = []\n    vowels = 'aeiouAEIOU'\n    for char in message:\n        if char.isalpha():\n            # Swap case\n            char = char.swapcase()\n            # Replace vowels\n            if char in vowels:\n                if char.lower() == 'a':\n                    char = 'c' if char.islower() else 'C'\n                elif char.lower() == 'e':\n                    char = 'g' if char.islower() else 'G'\n                elif char.lower() == 'i':\n                    char = 'k' if char.islower() else 'K'\n                elif char.lower() == 'o':\n                    char = 'q' if char.islower() else 'Q'\n                elif char.lower() == 'u':\n                    char = 'w' if char.islower() else 'W'\n        result.append(char)\n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    result = []\n    vowels = 'aeiouAEIOU'\n    for char in message:\n        if char in vowels:\n            if char.islower():\n                new_char = chr(ord(char) + 2)\n            else:\n                new_char = chr(ord(char.lower()) + 2).upper()\n            result.append(new_char)\n        else:\n            result.append(char.swapcase())\n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    encoded_message = []\n    for char in message:\n        if char.isalpha():\n            if char.lower() in 'aeiou':\n                new_char = chr(((ord(char.lower()) - 97 + 2) % 26) + 97)\n                encoded_message.append(new_char.upper() if char.isupper() else new_char)\n            else:\n                encoded_message.append(char.swapcase())\n        else:\n            encoded_message.append(char)\n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char in vowels:\n                # Replace vowel with 2 places ahead\n                new_char = chr(((ord(char.lower()) - 97 + 2) % 26) + 97)\n                if char.isupper():\n                    new_char = new_char.upper()\n                encoded_message.append(new_char)\n            else:\n                encoded_message.append(char.swapcase())\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    def shift_vowel(vowel):\n        return chr(ord(vowel) + 2) if vowel.isalpha() else vowel\n    \n    result = []\n    for char in message:\n        if char.lower() in 'aeiou':\n            new_char = shift_vowel(char.lower())\n            result.append(new_char.upper() if char.isupper() else new_char)\n        else:\n            result.append(char.swapcase())\n    \n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    result = []\n    vowels = 'aeiouAEIOU'\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char in vowels:\n                # Replace vowel with letter 2 places ahead\n                if char.islower():\n                    new_char = chr(((ord(char) - ord('a') + 2) % 26) + ord('a'))\n                else:\n                    new_char = chr(((ord(char) - ord('A') + 2) % 26) + ord('A'))\n            else:\n                new_char = char.swapcase()\n            result.append(new_char)\n        else:\n            result.append(char)\n    \n    return ''.join(result)\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'AEIOUaeiou'\n    result = []\n    \n    for char in message:\n        if char in vowels:\n            if char.isupper():\n                result.append(chr(ord(char) + 2).lower())\n            else:\n                result.append(chr(ord(char) + 2).upper())\n        else:\n            result.append(char.swapcase())\n    \n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    def shift_vowel(vowel):\n        return chr(ord(vowel) + 2) if vowel in 'aeiouAEIOU' else vowel\n    \n    encoded_message = []\n    for char in message:\n        if char.isalpha():\n            swapped_case = char.swapcase()\n            encoded_message.append(shift_vowel(swapped_case))\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n\n    for char in message:\n        if char.isalpha():\n            if char in vowels:\n                # Replace vowel with the letter 2 places ahead\n                if char.islower():\n                    new_char = chr((ord(char) - ord('a') + 2) % 26 + ord('a'))\n                else:\n                    new_char = chr((ord(char) - ord('A') + 2) % 26 + ord('A'))\n            else:\n                new_char = char\n            encoded_message.append(new_char.swapcase())\n        else:\n            encoded_message.append(char)\n\n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            swapped_char = char.swapcase()\n            # Replace vowels\n            if swapped_char in vowels:\n                if swapped_char.islower():\n                    new_char = chr((ord(swapped_char) - ord('a') + 2) % 26 + ord('a'))\n                else:\n                    new_char = chr((ord(swapped_char) - ord('A') + 2) % 26 + ord('A'))\n                encoded_message.append(new_char)\n            else:\n                encoded_message.append(swapped_char)\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char in vowels:\n                # Replace vowel with the letter 2 places ahead\n                new_char = chr(ord(char) + 2)\n            else:\n                new_char = char\n            \n            encoded_message.append(new_char.swapcase())\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char in vowels:\n                # Replace vowel with letter 2 places ahead\n                new_char = chr(ord(char) + 2)\n                encoded_message.append(new_char.swapcase())\n            else:\n                encoded_message.append(char.swapcase())\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char.islower():\n                swapped = char.upper()\n            else:\n                swapped = char.lower()\n            \n            # Replace vowels\n            if swapped in vowels:\n                if swapped.islower():\n                    new_char = chr((ord(swapped) - ord('a') + 2) % 26 + ord('a'))\n                else:\n                    new_char = chr((ord(swapped) - ord('A') + 2) % 26 + ord('A'))\n                encoded_message.append(new_char)\n            else:\n                encoded_message.append(swapped)\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    result = []\n    vowels = 'aeiouAEIOU'\n    for char in message:\n        if char.isalpha():\n            swapped_case = char.swapcase()\n            if swapped_case in vowels:\n                if swapped_case.islower():\n                    new_char = chr(ord(swapped_case) + 2)\n                else:\n                    new_char = chr(ord(swapped_case) + 2).upper()\n                result.append(new_char)\n            else:\n                result.append(swapped_case)\n        else:\n            result.append(char)\n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char in vowels:\n                # Replace vowel with the letter 2 places ahead\n                new_char = chr(ord(char) + 2)\n                encoded_message.append(new_char.swapcase())\n            else:\n                encoded_message.append(char.swapcase())\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char in vowels:\n                # Replace vowel with the letter that is 2 ahead\n                new_char = chr((ord(char) - 97 + 2) % 26 + 97) if char.islower() else chr((ord(char) - 65 + 2) % 26 + 65)\n            else:\n                new_char = char\n            encoded_message.append(new_char.swapcase())\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    result = []\n    vowels = 'aeiouAEIOU'\n    for char in message:\n        if char in vowels:\n            if char.islower():\n                result.append(chr(ord(char) + 2).upper())\n            else:\n                result.append(chr(ord(char) + 2).lower())\n        elif char.isalpha():\n            result.append(char.swapcase())\n        else:\n            result.append(char)\n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char in vowels:\n                # Replace vowel with the letter 2 places ahead\n                new_char = chr(ord(char) + 2)\n            else:\n                new_char = char\n            encoded_message.append(new_char.swapcase())\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef encode(message):\n    vowels = 'aeiouAEIOU'\n    encoded_message = []\n    \n    for char in message:\n        if char.isalpha():\n            # Swap case\n            if char.islower():\n                new_char = char.upper()\n            else:\n                new_char = char.lower()\n            \n            # Replace vowels\n            if new_char in vowels:\n                if new_char.islower():\n                    new_char = chr(((ord(new_char) - ord('a') + 2) % 26) + ord('a'))\n                else:\n                    new_char = chr(((ord(new_char) - ord('A') + 2) % 26) + ord('A'))\n                    \n            encoded_message.append(new_char)\n        else:\n            encoded_message.append(char)\n    \n    return ''.join(encoded_message)\n```",
+            "logp": null
+        }
+    ]
+}

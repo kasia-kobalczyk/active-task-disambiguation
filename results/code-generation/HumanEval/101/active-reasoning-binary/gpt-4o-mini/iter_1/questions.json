@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert words_string(\"hello, world ,  python \") == [\"hello\", \"world\", \"python\"]",
+        "assert words_string(\"this is a test\") == [\"this\", \"is\", \"a\", \"test\"]",
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"   space   separated   words   \") == [\"space\", \"separated\", \"words\"]",
+        "assert words_string(\"apple, banana, cherry\") == [\"apple\", \"banana\", \"cherry\"]",
+        "assert words_string(\"hello world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"apple,banana orange,grape\") == [\"apple\", \"banana\", \"orange\", \"grape\"]"
+    ],
+    "1": [
+        "assert words_string(\"  one  two three  \") == [\"one\", \"two\", \"three\"]",
+        "assert words_string(\"  space   and,comma  ,  test \") == [\"space\", \"and\", \"comma\", \"test\"]",
+        "assert words_string(\"a,b,c,d,e,f\") == [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]",
+        "assert words_string(\"   a b c , d  , e  \") == [\"a\", \"b\", \"c\", \"d\", \"e\"]",
+        "assert words_string(\"  dog cat,fish ,bird  \") == [\"dog\", \"cat\", \"fish\", \"bird\"]",
+        "assert words_string(\"one,two, three ,four \") == [\"one\", \"two\", \"three\", \"four\"]",
+        "assert words_string(\"apple, banana, cherry\") == [\"apple\", \"banana\", \"cherry\"]"
+    ],
+    "2": [
+        "assert words_string(\"  first second,third  , fourth \") == [\"first\", \"second\", \"third\", \"fourth\"]",
+        "assert words_string(\"  a,b,c,d,e,f,g  \") == [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\"]",
+        "assert words_string(\"  this  is a   test  \") == [\"this\", \"is\", \"a\", \"test\"]",
+        "assert words_string(\"apple,banana,orange\") == [\"apple\", \"banana\", \"orange\"]",
+        "assert words_string(\"  space,   ,comma,,split\") == [\"space\", \"comma\", \"split\"]",
+        "assert words_string(\"apple, banana, cherry\") == [\"apple\", \"banana\", \"cherry\"]",
+        "assert words_string(\"  quick  brown fox  jumps over \") == [\"quick\", \"brown\", \"fox\", \"jumps\", \"over\"]",
+        "assert words_string(\"   split  me, please  \") == [\"split\", \"me\", \"please\"]"
+    ],
+    "3": [
+        "assert words_string(\"apple, banana, orange\") == [\"apple\", \"banana\", \"orange\"]",
+        "assert words_string(\"  a,b, c,d , e  \") == [\"a\", \"b\", \"c\", \"d\", \"e\"]",
+        "assert words_string(\"  red, green  blue \") == [\"red\", \"green\", \"blue\"]",
+        "assert words_string(\"   quick brown  fox    jumps  \") == [\"quick\", \"brown\", \"fox\", \"jumps\"]",
+        "assert words_string(\"dog,cat ,fish \") == [\"dog\", \"cat\", \"fish\"]",
+        "assert words_string(\"   quick brown fox   jumps   \") == [\"quick\", \"brown\", \"fox\", \"jumps\"]",
+        "assert words_string(\"apple, banana, cherry\") == [\"apple\", \"banana\", \"cherry\"]"
+    ]
+}

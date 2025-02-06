@@ -1,0 +1,17 @@
+{
+    "0": [
+        "assert decode_shift(\"fsi\") == \"abc\"",
+        "assert decode_shift(\"jgnnq\") == \"ello\""
+    ],
+    "1": [
+        "assert decode_shift(\"fghij\") == \"abcde\"",
+        "assert decode_shift(\"nopqr\") == \"ijklm\""
+    ],
+    "2": [
+        "assert decode_shift(\"vwxyz\") == \"qrstuv\"",
+        "assert decode_shift(\"klmno\") == \"fghij\""
+    ],
+    "3": [
+        "assert decode_shift(\"klmno\") == \"fghij\""
+    ]
+}

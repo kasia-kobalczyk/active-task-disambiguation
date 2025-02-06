@@ -1,0 +1,33 @@
+{
+    "0": [
+        "assert survivor(16) == True",
+        "assert survivor(3) == True",
+        "assert survivor(5) == True",
+        "assert survivor(2) == False",
+        "assert survivor(7) == True"
+    ],
+    "1": [
+        "assert survivor(1234567) == False",
+        "assert survivor(8) == False",
+        "assert survivor(2) == False",
+        "assert survivor(3) == True",
+        "assert survivor(9) == True",
+        "assert survivor(4) == False",
+        "assert survivor(13) == True"
+    ],
+    "2": [
+        "assert survivor(1234567) == False",
+        "assert survivor(8) == False",
+        "assert survivor(15) == True",
+        "assert survivor(3) == True",
+        "assert survivor(9) == True",
+        "assert survivor(4) == False"
+    ],
+    "3": [
+        "assert survivor(1234567) == False",
+        "assert survivor(8) == False",
+        "assert survivor(15) == True",
+        "assert survivor(7) == True",
+        "assert survivor(4) == False"
+    ]
+}

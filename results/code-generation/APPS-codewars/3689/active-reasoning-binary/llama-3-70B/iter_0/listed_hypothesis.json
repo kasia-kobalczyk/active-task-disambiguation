@@ -1,0 +1,130 @@
+{
+    "0": [
+        {
+            "content": "def how_many_pizzas(n):\n    total_slices = (n ** 2) * 3.14159\n    slices_per_pizza = (8 ** 2) * 3.14159\n    pizzas = total_slices // slices_per_pizza\n    slices = round(total_slices % slices_per_pizza)\n    return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    area_ratio = (n ** 2) / (8 ** 2)\n    whole_pizzas = int(area_ratio)\n    remaining_slices = round((area_ratio - whole_pizzas) * 8)\n    return f\"pizzas: {whole_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    total_slices = (n ** 2) * 3.14159\n    small_slices = 8 ** 2 * 3.14159\n    whole_pizzas = int(total_slices // small_slices)\n    remaining_slices = round(total_slices % small_slices / small_slices * 8)\n    return f\"pizzas: {whole_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    area_n = 3.14159 * (n ** 2) / 4\n    area_8 = 3.14159 * (8 ** 2) / 4\n    full_pizzas = int(area_n // area_8)\n    remaining_slices = round((area_n % area_8) / area_8 * 8)\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n < 0:\n        return \"Invalid input\"\n    total_slices = n ** 2 / 4\n    whole_pizzas = total_slices // 8\n    remaining_slices = round(total_slices % 8)\n    return f\"pizzas: {int(whole_pizzas)}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    full_pizzas = n // 8\n    remaining_slices = n % 8\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    else:\n        pizzas = n // 8\n        slices = round((n % 8) / 8 * 8)\n        return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    total_slices = n * n * 3.14\n    slices_per_pizza = 8 * 8 * 3.14\n    pizzas = int(total_slices // slices_per_pizza)\n    slices = round(total_slices % slices_per_pizza)\n    return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    pizza_area = (n ** 2) * 3.14159\n    slice_area = (8 ** 2) * 3.14159 / 8\n    total_slices = pizza_area / slice_area\n    total_pizzas = int(total_slices)\n    remaining_slices = round(total_slices % 1 * 8)\n    return f\"pizzas: {total_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n < 0:\n        return \"pizzas: 0, slices: 0\"\n    total_slices = (n ** 2) * 3.14159265359\n    small_pizza_slices = (8 ** 2) * 3.14159265359\n    full_pizzas = total_slices // small_pizza_slices\n    remaining_slices = round(total_slices % small_pizza_slices)\n    return \"pizzas: \" + str(int(full_pizzas)) + \", slices: \" + str(int(remaining_slices))",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def how_many_pizzas(n):\n    area_ratio = (n ** 2) / (8 ** 2)\n    whole_pizzas = int(area_ratio)\n    remaining_slices = round((area_ratio - whole_pizzas) * 8)\n    return f\"pizzas: {whole_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    area_n = 3.14159 * (n ** 2) / 4\n    area_8 = 3.14159 * (8 ** 2) / 4\n    full_pizzas = int(area_n // area_8)\n    remaining_slices = round((area_n % area_8) / area_8 * 8)\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices = n ** 2 / 64\n    pizzas = int(slices)\n    remaining_slices = round((slices - pizzas) * 8)\n    return f\"pizzas: {pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    total_slices = n * n * 3.14\n    slices_per_pizza = 8 * 8 * 3.14\n    pizzas = int(total_slices // slices_per_pizza)\n    slices = round(total_slices % slices_per_pizza)\n    return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    else:\n        pizzas = n * n // 64\n        slices = (n * n % 64) // 8\n        return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    size_of_eight_inch_pizza = 8 * 8 * 3.14\n    size_of_n_inch_pizza = n * n * 3.14\n    whole_pizzas = int(size_of_n_inch_pizza // size_of_eight_inch_pizza)\n    remaining_slices = int((size_of_n_inch_pizza % size_of_eight_inch_pizza) / (8 * 3.14) * 8)\n    return \"pizzas: {}, slices: {}\".format(whole_pizzas, remaining_slices)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    pizza_area = 3.14 * (n ** 2) / 4\n    eight_inch_pizza_area = 3.14 * (8 ** 2) / 4\n    full_pizzas = pizza_area // eight_inch_pizza_area\n    leftover_area = pizza_area % eight_inch_pizza_area\n    slices = int(leftover_area / (eight_inch_pizza_area / 8))\n    return \"pizzas: {}, slices: {}\".format(int(full_pizzas), slices)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    whole_pizzas = n * n // 64\n    remaining_slices = (n * n) % 64\n    return f\"pizzas: {whole_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    total_slices = (n ** 2) * 3.14\n    slices_per_pizza = (8 ** 2) * 3.14\n    total_pizzas = int(total_slices // slices_per_pizza)\n    remaining_slices = round(total_slices % slices_per_pizza)\n    return f\"pizzas: {total_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    pizzas = n * n // 64\n    slices = (n * n % 64) // 8\n    return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def how_many_pizzas(n):\n    area_ratio = (n ** 2) / (8 ** 2)\n    whole_pizzas = int(area_ratio)\n    remaining_slices = round((area_ratio - whole_pizzas) * 8)\n    return f\"pizzas: {whole_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    area_n = 3.14159 * (n ** 2) / 4\n    area_8 = 3.14159 * (8 ** 2) / 4\n    full_pizzas = int(area_n // area_8)\n    remaining_slices = round((area_n % area_8) / area_8 * 8)\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices = n ** 2 / 64\n    pizzas = int(slices)\n    remaining_slices = round((slices - pizzas) * 8)\n    return f\"pizzas: {pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices = n**2 / 8**2 * 8\n    pizzas = int(slices // 8)\n    slices = round(slices % 8)\n    return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    inch8_area = 8 * 8 * 3.14159\n    inch_n_area = n * n * 3.14159\n    full_pizzas = int(inch_n_area // inch8_area)\n    remaining_area = inch_n_area % inch8_area\n    remaining_slices = int(remaining_area // (8 * 8 * 3.14159 / 8))\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def how_many_pizzas(n):\n    area_ratio = (n ** 2) / (8 ** 2)\n    whole_pizzas = int(area_ratio)\n    remaining_slices = round((area_ratio - whole_pizzas) * 8)\n    return f\"pizzas: {whole_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    area_n = 3.14159 * (n ** 2) / 4\n    area_8 = 3.14159 * (8 ** 2) / 4\n    full_pizzas = int(area_n // area_8)\n    remaining_slices = round((area_n % area_8) / area_8 * 8)\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices = n ** 2 / 64\n    pizzas = int(slices)\n    remaining_slices = round((slices - pizzas) * 8)\n    return f\"pizzas: {pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices = n**2 / 8**2 * 8\n    pizzas = int(slices // 8)\n    slices = round(slices % 8)\n    return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    inch8_area = 8 * 8 * 3.14159\n    inch_n_area = n * n * 3.14159\n    full_pizzas = int(inch_n_area // inch8_area)\n    remaining_area = inch_n_area % inch8_area\n    remaining_slices = int(remaining_area // (8 * 8 * 3.14159 / 8))\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        }
+    ]
+}

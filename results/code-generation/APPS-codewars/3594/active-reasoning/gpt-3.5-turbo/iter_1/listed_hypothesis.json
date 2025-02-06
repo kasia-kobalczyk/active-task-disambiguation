@@ -1,0 +1,210 @@
+{
+    "0": [
+        {
+            "content": "def is_isogram(word):\n    if isinstance(word, str) and word != \"\":\n        # Remove non-letter characters and convert to lowercase\n        word = re.sub(r'[^a-zA-Z]', '', word.lower())\n        # Count the occurrences of each letter\n        letter_counts = Counter(word)\n        # Check if each letter appears the same number of times\n        return all(count == letter_counts[word[0]] for count in letter_counts.values())\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str) or len(word) == 0:\n        return False\n    word = re.sub('[^a-zA-Z]', '', word.lower())\n    counts = Counter(word)\n    return len(set(counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n\n    # check if input is a string\n    if not isinstance(word, str):\n        return False\n\n    # check if input is empty\n    if len(word) == 0:\n        return False\n\n    # remove non-letter characters and convert to lowercase\n    word = re.sub(r'[^a-zA-Z]', '', word.lower())\n\n    # count the frequency of each letter\n    count = Counter(word)\n\n    # check if all letters have the same frequency\n    return all(count[letter] == count[word[0]] for letter in count)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if word is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if word is not empty\n    if len(word) == 0:\n        return False\n    \n    # Ignore non-letter characters\n    word = re.sub('[^a-zA-Z]', '', word)\n    \n    # Convert word to lowercase\n    word = word.lower()\n    \n    # Count the number of occurrences of each letter\n    letter_counts = Counter(word)\n    \n    # Check if each letter appears the same number of times\n    if len(set(letter_counts.values())) == 1:\n        return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if word is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if word is empty\n    if len(word) == 0:\n        return False\n    \n    # Remove non-letter characters and convert to lowercase\n    word = re.sub('[^a-zA-Z]', '', word.lower())\n    \n    # Count the frequency of each letter\n    letter_counts = Counter(word)\n    \n    # Check if all letter counts are the same\n    return all(count == letter_counts[word[0]] for count in letter_counts.values())",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if input is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if input is empty\n    if len(word) == 0:\n        return False\n    \n    # Remove non-letter characters and convert to lowercase\n    word = re.sub('[^a-zA-Z]', '', word.lower())\n    \n    # Count the number of occurrences of each letter\n    letter_counts = Counter(word)\n    \n    # Check if each letter appears the same number of times\n    if len(set(letter_counts.values())) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str) or len(word) == 0:\n        return False\n\n    word = re.sub('[^a-zA-Z]', '', word.lower())\n\n    letter_counts = Counter(word)\n\n    return len(letter_counts) == 1\n\nprint(is_isogram(\"isogram\")) # True\nprint(is_isogram(\"word\")) # False\nprint(is_isogram(\"wordd\")) # False\nprint(is_isogram(\"WorD\")) # True\nprint(is_isogram(\"wordd-\")) # False\nprint(is_isogram(\"\")) # False\nprint(is_isogram(123)) # False",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    # Check if word is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if word is not empty\n    if len(word) == 0:\n        return False\n    \n    # Ignore non-letter characters\n    word = re.sub('[^a-zA-Z]', '', word)\n    \n    # Convert word to lowercase\n    word = word.lower()\n    \n    # Count the number of occurrences of each letter\n    letter_counts = Counter(word)\n    \n    # Check if each letter appears the same number of times\n    return all(count == letter_counts[word[0]] for count in letter_counts.values())",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if isinstance(word, str) and word != \"\":\n        # Remove non-letter characters and convert to lowercase\n        word = re.sub(\"[^a-zA-Z]\", \"\", word.lower())\n        # Count the occurrences of each letter\n        letter_count = Counter(word)\n        # Check if all letter counts are the same\n        return len(set(letter_count.values())) == 1\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if type(word) != str or word == \"\":\n        return False\n    word = word.lower()\n    word = re.sub('[^a-zA-Z]', '', word)\n    count = Counter(word)\n    return len(set(count.values())) == 1",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def is_isogram(word):\n    # Check if input is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if input is not empty\n    if len(word) == 0:\n        return False\n    \n    # Convert word to lowercase and remove non-letter characters\n    word = re.sub(\"[^a-zA-Z]\", \"\", word.lower())\n    \n    # Check if each letter appears the same number of times\n    letter_counts = Counter(word)\n    if len(set(letter_counts.values())) > 1:\n        return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if isinstance(word, str) and word != \"\":\n        word = re.sub(\"[^a-zA-Z]\", \"\", word.lower())\n        count = Counter(word)\n        return all(value == count[word[0]] for value in count.values())\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n\n    if not isinstance(word, str) or len(word) == 0:\n        return False\n\n    word = re.sub(r'[^a-zA-Z]', '', word)\n    word = word.lower()\n\n    letter_count = Counter(word)\n\n    return len(set(letter_count.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if input is a string and is not empty\n    if not isinstance(word, str) or not word:\n        return False\n    \n    # Remove non-letter characters and convert to lowercase\n    cleaned_word = re.sub('[^a-zA-Z]', '', word.lower())\n    \n    # Count the frequency of each letter in the word\n    letter_count = Counter(cleaned_word)\n    \n    # Check if all letters have the same count\n    return len(set(letter_count.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str) or len(word) == 0:\n        return False\n    \n    word = re.sub('[^A-Za-z]+', '', word)\n    word = word.lower()\n    char_count = Counter(word)\n    return all(count == char_count[word[0]] for count in char_count.values())",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    if not isinstance(word, str) or len(word) == 0:\n        return False\n\n    word = re.sub('[^a-zA-Z]', '', word.lower())\n    letter_counts = Counter(word)\n\n    return len(set(letter_counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    if not isinstance(word, str) or len(word) == 0:\n        return False\n    \n    word = re.sub('[^a-zA-Z]', '', word)\n    word = word.lower()\n    \n    counts = Counter(word)\n    \n    return len(set(counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    if type(word) != str:\n        return False\n    if len(word) == 0:\n        return False\n    \n    word = re.sub(r'[^a-zA-Z]', '', word)\n    word = word.lower()\n    \n    letter_counts = Counter(word)\n    \n    return len(set(letter_counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if isinstance(word, str) and word:\n        word = re.sub(r'[^a-zA-Z]', '', word.lower())\n        count = Counter(word)\n        return len(set(count.values())) == 1\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if the input is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if the string is empty\n    if len(word) == 0:\n        return False\n    \n    # Ignore non-letter characters\n    word = re.sub(r'[^a-zA-Z]', '', word)\n    \n    # Convert the string to lowercase\n    word = word.lower()\n    \n    # Check if the number of occurrences of each letter is the same\n    letter_counts = Counter(word)\n    return all(count == letter_counts[word[0]] for count in letter_counts.values())",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if the word is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if the word is empty\n    if not word:\n        return False\n    \n    # Convert the word to lowercase\n    word = word.lower()\n    \n    # Remove non-letter characters\n    word = re.sub(r'[^a-z]', '', word)\n    \n    # Count the frequency of each letter\n    letter_count = Counter(word)\n    \n    # Check if each letter appears the same number of times\n    return len(set(letter_count.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    # check if input is a string\n    if not isinstance(word, str):\n        return False\n    \n    # check if input is not empty\n    if len(word) == 0:\n        return False\n    \n    # ignore non-letter characters\n    word = re.sub(r'[^a-zA-Z]', '', word)\n    \n    # convert word to lowercase\n    word = word.lower()\n    \n    # count the frequency of each letter\n    letter_counts = Counter(word)\n    \n    # check if all letters have the same count\n    if len(set(letter_counts.values())) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if type(word) != str or len(word) == 0:\n        return False\n    \n    # remove non-letter characters and convert to lowercase\n    word = re.sub(\"[^a-zA-Z]\", \"\", word.lower())\n    \n    # check if each letter appears the same number of times\n    counter = Counter(word)\n    if len(set(counter.values())) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    if len(word) == 0:\n        return False\n    word = re.sub(r'[^a-zA-Z]', '', word.lower())\n    count = Counter(word)\n    return len(set(count.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    if len(word) == 0:\n        return False\n    \n    # Convert the word to lowercase and remove non-letter characters\n    word = re.sub(\"[^a-zA-Z]\", \"\", word.lower())\n    \n    # Use Counter to count the occurrences of each letter in the word\n    letter_counts = Counter(word)\n    \n    # Check if all the letter counts are the same\n    return len(set(letter_counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if isinstance(word, str) and word != '':\n        word = re.sub('[^a-zA-Z]+', '', word.lower())  # Removing non-letter characters and converting to lowercase\n        letter_counts = Counter(word)\n        return len(set(letter_counts.values())) == 1  # Checking if all letter counts are the same\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    if word == '':\n        return False\n    letters = re.sub('[^a-zA-Z]', '', word.lower())\n    letter_counts = Counter(letters)\n    return len(set(letter_counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    # check if word is a string\n    if type(word) != str:\n        return False\n    \n    # check if word is not empty\n    if len(word) == 0:\n        return False\n    \n    # remove non-letter characters and convert to lowercase\n    word = re.sub('[^a-zA-Z]', '', word.lower())\n    \n    # count the frequency of each letter\n    letter_count = Counter(word)\n    \n    # check if all letters appear the same number of times\n    if len(set(letter_count.values())) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if type(word) != str or not word:\n        return False\n    \n    word = re.sub(r'[^a-zA-Z]', '', word)\n    word = word.lower()\n    \n    count = Counter(word)\n    \n    return len(set(count.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if the input is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if the input is not empty\n    if len(word) == 0:\n        return False\n    \n    # Convert the word to lowercase for case insensitivity\n    word = word.lower()\n    \n    # Remove non-letter characters using regular expression\n    word = re.sub('[^a-zA-Z]', '', word)\n    \n    # Check if each letter appears the same number of times\n    letter_counts = Counter(word)\n    if len(set(letter_counts.values())) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    if not isinstance(word, str) or word == \"\":\n        return False\n    \n    word = re.sub(r'[^a-zA-Z]', '', word.lower())\n    counts = Counter(word)\n    return len(set(counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str) or word == \"\":\n        return False\n\n    word = re.sub(\"[^a-zA-Z]\", \"\", word.lower())\n    letter_count = Counter(word)\n    return len(set(letter_count.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    if len(word) == 0:\n        return False\n    word = re.sub(r'[^a-zA-Z]', '', word.lower())\n    count = Counter(word)\n    if len(set(count.values())) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # check if word is a string\n    if not isinstance(word, str):\n        return False\n    \n    # check if word is not empty\n    if len(word) == 0:\n        return False\n    \n    # remove non-letter characters and convert to lower case\n    word = re.sub(r'[^a-zA-Z]', '', word).lower()\n    \n    # count the number of occurrences of each letter\n    letter_counts = Counter(word)\n    \n    # check if each letter appears the same number of times\n    return len(set(letter_counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if isinstance(word, str) and word:\n        word = re.sub('[^a-zA-Z]', '', word)\n        word = word.lower()\n        counts = Counter(word)\n        return len(set(counts.values())) == 1\n    return False",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    # Check if word is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if word is not empty\n    if len(word) == 0:\n        return False\n    \n    # Remove non-letter characters\n    word = re.sub(r'[^a-zA-Z]', '', word)\n    \n    # Convert word to lowercase\n    word = word.lower()\n    \n    # Count the frequency of each letter in the word\n    frequency = Counter(word)\n    \n    # Check if each letter appears the same number of times\n    return len(set(frequency.values())) == 1",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    if not isinstance(word, str) or not word:\n        return False\n    word = re.sub(r'[^a-zA-Z]', '', word.lower())\n    counter = Counter(word)\n    return len(set(counter.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    if not isinstance(word, str) or not word:\n        return False\n    \n    word = re.sub('[^A-Za-z]+', '', word.lower())\n    \n    counts = Counter(word)\n    return len(set(counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if the input is a string\n    if not isinstance(word, str):\n        return False\n\n    # Check if the string is not empty\n    if not word:\n        return False\n\n    # Remove non-letter characters and convert the word to lowercase\n    word = re.sub(r'[^a-zA-Z]', '', word.lower())\n\n    # Count the number of occurrences of each letter in the word\n    letter_counts = Counter(word)\n\n    # Check if all letter counts are the same\n    if len(set(letter_counts.values())) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    if len(word) == 0:\n        return False\n    \n    cleaned_word = re.sub('[^a-zA-Z]', '', word.lower())\n    letter_count = Counter(cleaned_word)\n    return len(set(letter_count.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if input is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if string is empty\n    if not word:\n        return False\n    \n    # Convert string to lowercase and remove non-letter characters\n    word = re.sub('[^a-zA-Z]', '', word.lower())\n    \n    # Count the number of occurrences of each letter\n    letter_count = Counter(word)\n    \n    # Check if all letter counts are the same\n    return len(set(letter_count.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # check if the input is a string\n    if type(word) != str:\n        return False\n    \n    # check if the word is empty\n    if len(word) == 0:\n        return False\n    \n    # remove non-letter characters and convert to lowercase\n    word = re.sub('[^a-zA-Z]', '', word.lower())\n    \n    # count the number of occurrences of each letter\n    letter_count = Counter(word)\n    \n    # check if all letters appear the same number of times\n    if len(set(letter_count.values())) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if isinstance(word, str) and word != \"\":\n        letters = re.sub(\"[^a-zA-Z]\", \"\", word.lower())\n        letter_count = Counter(letters)\n        return len(set(letter_count.values())) == 1\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # check if word is a string\n    if not isinstance(word, str):\n        return False\n    \n    # check if word is not empty\n    if len(word) == 0:\n        return False\n    \n    # convert word to lowercase\n    word = word.lower()\n    \n    # remove non-letter characters\n    word = re.sub(r'[^a-z]', '', word)\n    \n    # count the number of occurrences of each letter\n    letter_count = Counter(word)\n    \n    # check if all letters have the same count\n    return len(set(letter_count.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    if len(word) == 0:\n        return False\n    word = re.sub(r'[^a-zA-Z]', '', word)\n    word = word.lower()\n    counts = Counter(word)\n    return len(set(counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if the input is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if the input is empty\n    if len(word) == 0:\n        return False\n    \n    # Remove non-letter characters and convert to lowercase\n    word = re.sub(r'[^a-zA-Z]', '', word.lower())\n    \n    # Count the frequency of each letter in the word\n    letter_counts = Counter(word)\n    \n    # Check if all letters have the same frequency\n    return len(set(letter_counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    if len(word) == 0:\n        return False\n    letters = re.findall('[a-zA-Z]', word)\n    letter_counts = Counter(letters)\n    if len(letter_counts) == 0:\n        return False\n    return all(count == letter_counts[letters[0]] for count in letter_counts.values())\n\nprint(is_isogram(\"python\"))  # True\nprint(is_isogram(\"1234\"))  # False\nprint(is_isogram(\"123456\"))  # False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    # Check if the input is a string\n    if not isinstance(word, str):\n        return False\n    \n    # Check if the input is not empty\n    if len(word) == 0:\n        return False\n    \n    # Remove non-letter characters and convert to lowercase\n    word = re.sub('[^a-zA-Z]', '', word).lower()\n    \n    # Count the occurrences of each letter\n    letter_counts = Counter(word)\n    \n    # Check if each letter appears the same number of times\n    return len(set(letter_counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    \n    word = re.sub(r'[^a-zA-Z]', '', word.lower())\n    counts = Counter(word)\n    \n    return len(set(counts.values())) == 1",
+            "logp": null
+        },
+        {
+            "content": "from collections import Counter\nimport re\n\ndef is_isogram(word):\n    # Check if the input is a string and not empty\n    if not isinstance(word, str) or len(word) == 0:\n        return False\n    \n    # Remove non-letter characters and convert the word to lowercase\n    word = re.sub(r'[^a-zA-Z]', '', word.lower())\n    \n    # Count the occurrences of each letter in the word\n    letter_counts = Counter(word)\n    \n    # Check if all letters have the same count\n    return len(set(letter_counts.values())) == 1",
+            "logp": null
+        }
+    ]
+}

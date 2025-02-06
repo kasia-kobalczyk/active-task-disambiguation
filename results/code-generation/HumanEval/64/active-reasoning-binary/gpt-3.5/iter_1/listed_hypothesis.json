@@ -1,0 +1,178 @@
+{
+    "0": [
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n\n    if s[-1] == 'y':\n        for letter in s[:-1]:\n            if letter.lower() in vowels:\n                count += 1\n    else:\n        for letter in s:\n            if letter.lower() in vowels:\n                count += 1\n\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n\n    if s[-1] == 'y':\n        count += 1\n\n    for char in s[:-1]:\n        if char in vowels:\n            count += 1\n\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    \n    for i in range(len(s)):\n        if s[i] in vowels:\n            if s[i] == 'y' and i == len(s) - 1:\n                count += 1\n            elif s[i] != 'y':\n                count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = 'aeiou'\n    count = 0\n    if s[-1] == 'y':\n        for char in s[:-1]:\n            if char in vowels:\n                count += 1\n    else:\n        for char in s:\n            if char in vowels:\n                count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    if s[-1] == 'y':\n        vowels.append('y')\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    if s[-1] == 'y':\n        vowels.append('y')\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    return count\n\n# test cases to validate the solution\n\n# test case 1\n# word = \"hello\"\n# the number of vowels in the word \"hello\" is 2 ('e', 'o')\nprint(vowels_count(\"hello\")) # expected output : 2\n\n# test case 2\n# word = \"python\"\n# the number of vowels in the word \"python\" is 1 ('o')\nprint(vowels_count(\"python\")) # expected output : 1\n\n# test case 3\n# word = \"programming\"\n# the number of vowels in the word \"programming\" is 3 ('o', 'a', 'i')\nprint(vowels_count(\"programming\")) # expected output : 3\n\n# test case 4\n# word = \"happy\"\n# the number of vowels in the word \"happy\" is 2 ('a', 'y')\nprint(vowels_count(\"happy\")) # expected output : 2\n\n# test case 5\n# word = \"hellooo\"\n# the number of vowels in the word \"hellooo\" is 4 ('e', 'o', 'o', 'o')\nprint(vowels_count(\"hellooo\")) # expected output : 4",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    if s[-1] == 'y':\n        vowels.append('y')\n    for char in s:\n        if char in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for char in s:\n        if char in vowels or (char == 'y' and s.index(char) == len(s)-1):\n            count += 1\n    return count\n\n# Test Cases\nprint(vowels_count('hello')) # 2\nprint(vowels_count('python')) # 1\nprint(vowels_count('quick')) # 2\nprint(vowels_count('brown')) # 1\nprint(vowels_count('fox')) # 1\nprint(vowels_count('jumps')) # 1\nprint(vowels_count('over')) # 2\nprint(vowels_count('the')) # 1\nprint(vowels_count('lazy')) # 1\nprint(vowels_count('dog')) # 1\nprint(vowels_count('yawn')) # 1\nprint(vowels_count('example')) # 3",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n\n    # Check each character in the string\n    for i in range(len(s)):\n        c = s[i]\n\n        # Check if the character is a vowel\n        if c.lower() in vowels:\n            # If the character is 'y' and it is not the last character, skip it\n            if c.lower() == 'y' and i != len(s) - 1:\n                continue\n\n            # Increment the count\n            count += 1\n\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    s = s.lower()\n    count = 0\n\n    if s[-1] == 'y':\n        count += 1\n\n    for c in s[:-1]:\n        if c in vowels:\n            count += 1\n\n    return count",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n\n    if s[-1] == 'y':\n        count += 1\n\n    for char in s[:-1]:\n        if char in vowels:\n            count += 1\n\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    if s[-1] == 'y':\n        vowels.append('y')\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    if s[-1] == 'y':\n        vowels.append('y')\n    for char in s:\n        if char in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for char in s:\n        if char in vowels or (char == 'y' and s.index(char) == len(s)-1):\n            count += 1\n    return count\n\n# Test Cases\nprint(vowels_count('hello')) # 2\nprint(vowels_count('python')) # 1\nprint(vowels_count('quick')) # 2\nprint(vowels_count('brown')) # 1\nprint(vowels_count('fox')) # 1\nprint(vowels_count('jumps')) # 1\nprint(vowels_count('over')) # 2\nprint(vowels_count('the')) # 1\nprint(vowels_count('lazy')) # 1\nprint(vowels_count('dog')) # 1\nprint(vowels_count('yawn')) # 1\nprint(vowels_count('example')) # 3",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    s = s.lower()\n    count = 0\n\n    if s[-1] == 'y':\n        count += 1\n\n    for c in s[:-1]:\n        if c in vowels:\n            count += 1\n\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    s = s.lower()\n    count = 0\n    for i in range(len(s)):\n        if s[i] in vowels:\n            count += 1\n        elif i == len(s)-1 and s[i] == 'y':\n            count += 1\n    return count\n\nprint(vowels_count('hello')) # 2\nprint(vowels_count('Python')) # 1\nprint(vowels_count('code')) # 2\nprint(vowels_count('programming')) # 4\nprint(vowels_count('try')) # 1\nprint(vowels_count('sky')) # 1",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    if s[-1] == 'y':\n        vowels.append('y')\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    s = s.lower()\n    if s.endswith('y'):\n        s = s[:-1] + 'i'\n    for char in s:\n        if char in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    if s[-1] == 'y':\n        s = s[:-1] + 'i'\n    for char in s:\n        if char in vowels:\n            count += 1\n    return count\n\n#additional test cases\nprint(vowels_count(\"hello\")) #2\nprint(vowels_count(\"python\")) #2\nprint(vowels_count(\"world\")) #1\nprint(vowels_count(\"yay\")) #2",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s)):\n        if s[i] in vowels or (s[i] == 'y' and i == len(s)-1):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = 'aeiouy'\n    count = 0\n    if s[-1] == 'y':\n        vowels += 'Y'\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    \n    if len(s) == 0:\n        return 0\n    \n    if s[-1] == 'y':\n        count += 1\n    \n    for char in s[:-1]:\n        if char.lower() in vowels:\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for letter in s:\n        if letter.lower() in vowels:\n            count += 1\n    if s[-1].lower() == 'y':\n        count += 1\n    return count",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    if s[-1] == 'y':\n        vowels.append('y')\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    return count\n\nassert vowels_count(\"AEIOU\") == 5",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    if s[-1] == 'y':\n        vowels.append('y')\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = 'aeiou'\n    count = 0\n    \n    for i in range(len(s)):\n        if s[i].lower() in vowels:\n            count += 1\n    \n    if s[-1].lower() == 'y':\n        count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    \n    for letter in s:\n        if letter.lower() in ['a', 'e', 'i', 'o', 'u']:\n            count += 1\n            \n    if s[-1].lower() == 'y':\n        count += 1\n        \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n\n    if s[-1] == 'y':\n        vowels.append('y')\n\n    for char in s.lower():\n        if char in vowels:\n            count += 1\n\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    if s[-1].lower() == 'y':\n        count -= 1\n    for char in s.lower():\n        if char in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    if s[-1].lower() == 'y':\n        count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    if s[-1].lower() == 'y':\n        count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    s = s.lower()\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n\n    for letter in s:\n        if letter in vowels:\n            count += 1\n    \n    if s[-1] == 'y':\n        count -= 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    \n    for i in range(len(s)):\n        if s[i].lower() in vowels:\n            count += 1\n    \n    if s[-1].lower() == 'y':\n        count -= 1\n    \n    return count\n\n# Additional test cases\nassert vowels_count(\"AEIOU\") == 5\nassert vowels_count(\"hello\") == 2\nassert vowels_count(\"python\") == 1\nassert vowels_count(\"world\") == 1\nassert vowels_count(\"programming\") == 3\nassert vowels_count(\"table\") == 2",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    s = s.lower()\n    \n    if s[-1] == 'y':\n        vowels.append('y')\n    \n    for char in s:\n        if char in vowels:\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    if s[-1].lower() == 'y':\n        count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for char in s.lower():\n        if char in vowels:\n            count += 1\n    if s.lower().endswith('y'):\n        count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    \n    if len(s) == 0:\n        return 0\n    \n    for i in range(len(s)):\n        if s[i].lower() in vowels:\n            count += 1\n        if s[i].lower() == 'y' and i == len(s) - 1:\n            count += 1\n            \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    if s[-1] == 'y':\n        vowels.append('y')\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    s = s.lower()\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    \n    count = 0\n    \n    if s[-1] == 'y':\n        count += 1\n    \n    for char in s:\n        if char in vowels:\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    \n    for i in range(len(s)):\n        if s[i].lower() in vowels:\n            count += 1\n            \n    if s[-1].lower() == 'y':\n        count += 1\n        \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    if s[-1].lower() == 'y':\n        count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def vowels_count(s):\n    count = 0\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    \n    if s[-1] == 'y':\n        vowels.add('y')\n    \n    for char in s:\n        if char.lower() in vowels:\n            count += 1\n    \n    return count",
+            "logp": null
+        }
+    ]
+}

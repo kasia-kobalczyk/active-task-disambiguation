@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert decode_shift('vwxyz') == 'qrstuv'",
+        "assert decode_shift('fghij') == 'abcde'",
+        "assert decode_shift('pqrst') == 'klmno'",
+        "assert decode_shift(\"afnnts\") == \"python\"",
+        "assert decode_shift(\"bnncfs\") == \"world\"",
+        "assert decode_shift('klmno') == 'fghij'",
+        "assert decode_shift(\"flgqssj\") == \"coding\"",
+        "assert decode_shift('uvwxyz') == 'pqrst'",
+        "assert decode_shift(\"mttwnsl\") == \"hello\""
+    ],
+    "1": [
+        "assert decode_shift(\"uvxyz\") == \"pqrst\"",
+        "assert decode_shift(\"klmno\") == \"fghij\"",
+        "assert decode_shift(\"xyzabc\") == \"stuVWX\"",
+        "assert decode_shift(\"abcd\") == \"vwxY\"",
+        "assert decode_shift(\"wxyz\") == \"rstu\"",
+        "assert decode_shift(\"defghi\") == \"abcde\"",
+        "assert decode_shift(\"mnopq\") == \"hijkl\""
+    ],
+    "2": [
+        "assert decode_shift(\"klmno\") == \"fghij\"",
+        "assert decode_shift(\"xyzabc\") == \"stuVWX\"",
+        "assert decode_shift(\"abcd\") == \"vwxY\"",
+        "assert decode_shift(\"wxyz\") == \"rstu\"",
+        "assert decode_shift(\"defghi\") == \"abcde\"",
+        "assert decode_shift(\"mnopq\") == \"hijkl\""
+    ],
+    "3": [
+        "assert decode_shift(\"abcde\") == \"vwxyz\"",
+        "assert decode_shift(\"vwxyz\") == \"pqrst\"",
+        "assert decode_shift(\"pqrst\") == \"klmno\"",
+        "assert decode_shift(\"stuvw\") == \"nopqr\"",
+        "assert decode_shift(\"mnopq\") == \"hijkl\"",
+        "assert decode_shift(\"xyzab\") == \"stuvw\"",
+        "assert decode_shift(\"fghij\") == \"abcde\""
+    ]
+}

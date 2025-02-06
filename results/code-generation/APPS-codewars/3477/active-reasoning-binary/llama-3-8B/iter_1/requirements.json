@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        true
+    ],
+    "1": [
+        "assert sort_string(\"xyz\", \"yzx\") == \"xz\"",
+        false
+    ],
+    "2": [
+        "assert sort_string(\"abcd\", \"abc\") == \"abcde\"",
+        false
+    ],
+    "3": [
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        true
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert add_elements([123, 45, 6, 78, 90], 4) == 6",
+        "assert add_elements([12, 34, 5, 67, 89], 5) == 5",
+        "assert add_elements([-10, -5, 0, 5, 10], 5) == 5",
+        "assert add_elements([1, 23, 456, 78, 90], 3) == 79",
+        "assert add_elements([1, 2, 3, 4, 5], 3) == 6",
+        "assert add_elements([100, 200, 3, 4, 5], 5) == 12",
+        "assert add_elements([10, -5, 22, 34, 100], 4) == 66",
+        "assert add_elements([-10, 12, 99, 1, 24], 2) == 2"
+    ],
+    "1": [
+        "assert add_elements([10, 20, 30, 40, 50], 5) == 100",
+        "assert add_elements([2, -1, 105, 45, 99, 0], 6) == 146",
+        "assert add_elements([11, 100, 23, -2, 8], 4) == 42",
+        "assert add_elements([1, 22, 333, 44, 5], 4) == 67",
+        "assert add_elements([10, 200, 30, 4, 5], 3) == 44",
+        "assert add_elements([1, 2, 3, 4, 5], 3) == 6",
+        "assert add_elements([99, 101, 12, 35, 15], 5) == 126",
+        "assert add_elements([-10, 25, 30, -4, -5], 2) == 15"
+    ],
+    "2": [
+        "assert add_elements([-5, -10, 15, 25, 35], 5) == 40",
+        "assert add_elements([99, 100, 101, 200], 4) == 99",
+        "assert add_elements([99, 101, 88, 7], 4) == 196",
+        "assert add_elements([10, 20, 30, 40, 50], 3) == 60",
+        "assert add_elements([10, 25, 3, 5, 12], 3) == 38",
+        "assert add_elements([1, 2, 3, 4, 5, 6, 7, 8, 9], 7) == 36",
+        "assert add_elements([9, -8, 15, 22, 36], 2) == 1",
+        "assert add_elements([100, 200, 1, 50, 7], 5) == 58"
+    ],
+    "3": [
+        "assert add_elements([-1, 2, 3, 4, 5, 67, 89], 6) == 14",
+        "assert add_elements([10, 5, 100, 25, 30], 3) == 15",
+        "assert add_elements([10, 99, 100, -5, 50], 5) == 159",
+        "assert add_elements([1, -1, 12, 15, 18, -2], 4) == 46",
+        "assert add_elements([150, 2, -3, 7, 90, 45], 6) == 52",
+        "assert add_elements([0, 12, 45, 78, 130, 3], 3) == 57",
+        "assert add_elements([99, 22, 7, 8, 50], 5) == 186",
+        "assert add_elements([99, 200, 1, 0, -100], 2) == 99"
+    ]
+}

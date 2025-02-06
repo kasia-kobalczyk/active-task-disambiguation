@@ -1,0 +1,25 @@
+{
+    "0": [
+        "assert file_name_check(\"file.txt\") == \"Yes\"",
+        "assert file_name_check(\"myprogram.exe\") == \"Yes\"",
+        "assert file_name_check(\"image.jpeg\") == \"No\""
+    ],
+    "1": [
+        "assert file_name_check(\"file.dll\") == \"Yes\"\n# The file name is valid. It contains exactly one dot, the substring before the dot is not empty and starts with a letter, and the substring after the dot is 'dll'.",
+        "assert file_name_check(\"file.exe\") == \"Yes\""
+    ],
+    "2": [
+        "assert file_name_check(\"file1.txt\") == \"Yes\"",
+        "assert file_name_check(\"file.123.txt\") == \"No\"",
+        "assert file_name_check(\"file.dll\") == \"Yes\"",
+        "assert file_name_check(\"file.csv\") == \"No\""
+    ],
+    "3": [
+        "assert file_name_check(\"file.doc\") == \"No\"",
+        "assert file_name_check(\"\") == \"No\"\n# The file name is invalid. It is empty.",
+        "assert file_name_check(\".txt\") == \"No\"",
+        "assert file_name_check(\"file1234.exe\") == \"No\"",
+        "assert file_name_check(\"file.\") == \"No\"",
+        "assert file_name_check(\"file..txt\") == \"No\""
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "0": [
+        {
+            "content": "def is_bored(S):\n    count = 0\n    sentences = S.split('.')\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I\"):\n            count += 1\n    sentences = S.split('?')\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I\"):\n            count += 1\n    sentences = S.split('!')\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I\"):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n    \"\"\"\n    sentences = S.split('.')\n    sentences = [sentence.strip() for sentence in sentences]\n    boredoms = 0\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            boredoms += 1\n    return boredoms",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    boredoms = 0\n    sentences = S.split('.') + S.split('?') + S.split('!')\n    for sentence in sentences:\n        if sentence.strip().startswith('I'):\n            boredoms += 1\n    return boredoms",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    boredoms = 0\n    sentences = S.split(\".\")\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I\"):\n            boredoms += 1\n    return boredoms",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    \n    boredoms = 0\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            boredoms += 1\n            \n    return boredoms",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n    \"\"\"\n    boredoms = 0\n    sentences = S.split('.')\n    sentences = [s.strip() for s in sentences]\n    sentences = [s for s in sentences if s != '']\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            boredoms += 1\n    return boredoms",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    boredoms = 0\n    sentences = S.split('.') + S.split('?') + S.split('!')\n    \n    for sentence in sentences:\n        if sentence.strip().startswith('I'):\n            boredoms += 1\n    \n    return boredoms",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    count = 0\n    sentences = S.split('. ') + S.split('? ') + S.split('! ')\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    count = 0\n    sentences = S.split('.')\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            count += 1\n    sentences = S.split('?')\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            count += 1\n    sentences = S.split('!')\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    sentences = [s.strip() for s in sentences]\n    \n    boredoms = 0\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            boredoms += 1\n    \n    return boredoms",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('. ')\n    sentences = [s.strip() for s in sentences]\n    boredom_count = 0\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            boredom_count += 1\n    return boredom_count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split(\".\")\n    count = 0\n    for sentence in sentences:\n        if sentence.startswith(\"I\"):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split(\".\")\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I\"):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split(\".\")\n    sentences = [sentence.strip() for sentence in sentences]\n    boredoms = 0\n\n    for sentence in sentences:\n        if sentence.startswith(\"I\"):\n            boredoms += 1\n\n    return boredoms",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    count = 0\n    for sentence in sentences:\n        if sentence.startswith(\"I\"):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    count = 0\n    sentences = S.split('. ')\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    sentences = [s.strip() for s in sentences]\n    sentences = [s for s in sentences if s.startswith('I')]\n    return len(sentences)",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('. ')\n    sentences = [sentence.strip() for sentence in sentences]\n    \n    count = 0\n    for sentence in sentences:\n        if sentence.startswith(\"I\"):\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    count = 0\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    sentences = [s.strip() for s in sentences if s.strip() != '']\n    boredoms = 0\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            boredoms += 1\n    return boredoms",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    sentences = [sentence.strip() for sentence in sentences if sentence.strip() != '']\n    count = 0\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    sentences = [s.strip() for s in sentences]\n    \n    boredom_count = 0\n    for sentence in sentences:\n        if sentence.startswith(\"I\"):\n            boredom_count += 1\n            \n    return boredom_count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split(\".\")\n    count = 0\n    for sentence in sentences:\n        if sentence.startswith(\"I\"):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    count = 0\n    sentences = S.split('.')\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    count = 0\n    sentences = S.split(\".\")\n    for sentence in sentences:\n        if sentence.startswith(\"I\"):\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('. ')\n    boredom_count = 0\n    for sentence in sentences:\n        if sentence.startswith(\"I \"):\n            boredom_count += 1\n    return boredom_count",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('. ')\n    boredoms = 0\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            boredoms += 1\n    return boredoms",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    num_boredoms = 0\n\n    for sentence in sentences:\n        if sentence.startswith('I'):\n            num_boredoms += 1\n\n    return num_boredoms",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('. ')\n    sentences = [s for s in sentences if s.startswith('I')]\n    return len(sentences)",
+            "logp": null
+        },
+        {
+            "content": "def is_bored(S):\n    sentences = S.split('.')\n    boredoms = 0\n    \n    for sentence in sentences:\n        if sentence.startswith(\"I\"):\n            boredoms += 1\n    \n    return boredoms",
+            "logp": null
+        }
+    ],
+    "3": []
+}

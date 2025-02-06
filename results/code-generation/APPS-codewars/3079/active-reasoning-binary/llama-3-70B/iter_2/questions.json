@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert big_primefac_div(-1800) == [5, 900]",
+        "assert big_primefac_div(997) == []",
+        "assert big_primefac_div(100) == [5, 50]",
+        "assert big_primefac_div(1969) == [179, 179]",
+        "assert big_primefac_div(-1800.00) == [5, 900]"
+    ],
+    "1": [
+        "assert big_primefac_div(4) == [2, 2]",
+        "assert big_primefac_div(120.0) == [5, 12]",
+        "assert big_primefac_div(-1800.1) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(-48) == [3, 12]",
+        "assert big_primefac_div(1800.0) == [5, 900]",
+        "assert big_primefac_div(37) == []",
+        "assert big_primefac_div(24) == [3, 12]",
+        "assert big_primefac_div(100.1) == \"The number has a decimal part. No Results\""
+    ],
+    "2": [
+        "assert big_primefac_div(2000.0) == [5, 1000]",
+        "assert big_primefac_div(-1800.000) == [5, 900]",
+        "assert big_primefac_div(-18.1) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(-100.5) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(-37) == []",
+        "assert big_primefac_div(1) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(25) == [5, 25]",
+        "assert big_primefac_div(-7.0) == []"
+    ],
+    "3": [
+        "assert big_primefac_div(2.5) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(-180.000) == [5, 900]",
+        "assert big_primefac_div(0) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(-36.0) == [3, 12]",
+        "assert big_primefac_div(1) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(25) == [5, 25]",
+        "assert big_primefac_div(1000000007) == [19, 52631579]"
+    ]
+}

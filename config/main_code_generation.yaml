@@ -1,0 +1,16 @@
+total_hypothesis: 10
+max_iter: 4
+total_questions: 5
+verbose: True
+
+strategy: 'active-reasoning'
+
+task_id: 'HumanEval/1'
+
+seed: 0
+
+llm : 'gpt-3.5'
+
+dataset_path: './data/code-generation/HumanEval_for_code_generation.jsonl'
+
+save_dir: 'code-generation'

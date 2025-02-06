@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert could_be(\"Chuck Norris\", \"Chuck\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"carlos\") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"Norris Carlos\") == True"
+    ],
+    "1": [
+        "assert could_be(\"Emily Jane Johnson\", \"Jane\") == True",
+        "assert could_be(\"Robert Brown Jr\", \"Brown Robert\") == True"
+    ],
+    "2": [
+        "assert could_be(\"Alice Brown\", \"Brown Alice Smith\") == False",
+        "assert could_be(\"David Lee\", \"David Lee Thompson\") == True"
+    ],
+    "3": [
+        "assert could_be(\"\", \"Any Name\") == False",
+        "assert could_be(\"Jane Doe\", \"Doe Jane Smith\") == False"
+    ]
+}

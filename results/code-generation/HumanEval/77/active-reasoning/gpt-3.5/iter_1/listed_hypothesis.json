@@ -1,0 +1,126 @@
+{
+    "0": [
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    return int(a ** (1/3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    if a >= 0:\n        cube_root = int(a ** (1/3))\n        return cube_root ** 3 == a\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef iscube(a):\n    return math.isqrt(a)**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a ** (1/3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return int(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    cube_root = round(a**(1/3))\n    return cube_root**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    if a < 0:\n        return False\n    root = int(round(a**(1/3)))\n    return root**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return int(a ** (1/3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    if a < 0:\n        return False\n\n    if a == 0:\n        return True\n\n    for i in range(1, a + 1):\n        if i ** 3 == a:\n            return True\n\n    return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    return int(round(a**(1/3)))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    \"\"\"\n    Returns True if the input integer is a cube of some integer number.\n    \"\"\"\n    cube_root = round(a ** (1/3))\n    return cube_root ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    return round(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    root = round(a**(1/3))\n    return root**3 == a",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def iscube(a):\n    return round(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a ** (1/3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef iscube(a):\n    root = round(a**(1/3))\n    return root**3 == a\n\nprint(iscube(64))\nprint(iscube(512))\nprint(iscube(65))",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef iscube(a):\n    cube_root = int(round(a**(1/3)))\n    return cube_root**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a ** (1/3)) ** 3 == a",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def iscube(a):\n    return round(a ** (1/3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    if a < 0:\n        return False\n    root = round(a ** (1/3))\n    return root ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef iscube(a):\n    cube_root = round(a**(1/3))\n    return cube_root**3 == a",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef iscube(a):\n    root = round(a**(1/3))\n    return root**3 == a\n\nprint(iscube(64))\nprint(iscube(512))\nprint(iscube(1000))",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    cube_root = round(a**(1/3))\n    return cube_root**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    if a <= 0:\n        return False\n    \n    cube_root = round(a ** (1/3))\n    \n    return cube_root ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    cube_root = round(a**(1/3))\n    if cube_root**3 == a:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef iscube(a):\n    cube_root = round(a**(1/3))\n    return cube_root**3 == a",
+            "logp": null
+        }
+    ]
+}

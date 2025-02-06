@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert encode(\"A B C D E F G\") == \"C b c d F g\"",
+        "assert encode(\"Hello World\") == \"hEllO WOrld\"",
+        "assert encode(\"Python Programming\") == \"pyTHOn prOgrAmMIng\"",
+        "assert encode(\"Encode This Message\") == \"eNCOdE tHIs mEssAgE\"",
+        "assert encode(\"Amazing Vowels\") == \"aMAvIng vOwEls\"",
+        "assert encode(\"Python Programming\") == \"pyTH2N pr0Gr1MM1NG\"",
+        "assert encode(\"Encode This Vowel\") == \"2NC0D2 th1S V0W2L\"",
+        "assert encode(\"Hello World\") == \"h2LL0 W0RLD\""
+    ],
+    "1": [
+        "assert encode(\"Python Programming\") == \"pYsJMH pRogrRjN\"",
+        "assert encode(\"Hello World\") == \"hFnNq Yqtnf\"",
+        "assert encode(\"Amazing Python\") == \"aMZING pYTHOn\"",
+        "assert encode(\"This is a test\") == \"tHIs Is c vGrv\"",
+        "assert encode(\"OpenAI is Amazing\") == \"qRgPzK nr BmcvpK\"",
+        "assert encode(\"Hello World\") == \"hELLO WOrLD\"",
+        "assert encode(\"Vowels are important\") == \"vOwELS ArE jmpOrTANT\"",
+        "assert encode(\"Case Encoding\") == \"cAsE enCODING\""
+    ],
+    "2": [
+        "assert encode(\"Hello World\") == \"hFnNq Yqtnf\"",
+        "assert encode(\"Amazing Python\") == \"aMZING pYTHOn\"",
+        "assert encode(\"Vowels are important\") == \"vOwELS ArE jmprtnt\"",
+        "assert encode(\"Python programming\") == \"pYTHoN PQRoRAmNInG\"",
+        "assert encode(\"Encode vowels\") == \"eNCoDE vqWNlS\"",
+        "assert encode(\"Hello World\") == \"hELLO WOrLD\"",
+        "assert encode(\"OpenAI is Amazing\") == \"qRgPzK nr Bmcvp\"",
+        "assert encode(\"Case Example\") == \"cAsE ExAmPlE\""
+    ],
+    "3": [
+        "assert encode(\"This is a test\") == \"tHIs Is c vGrt\"",
+        "assert encode(\"Amazing Python\") == \"aMZING pYTHOn\"",
+        "assert encode(\"OpenAI is Amazing\") == \"qRgPzK nr Bmcvkpg\"",
+        "assert encode(\"Case Encoding\") == \"cAsE enCODIng\"",
+        "assert encode(\"Hello World\") == \"hELLO WOrLD\"",
+        "assert encode(\"Vowels are important\") == \"vOwELS ArE jmpOrTANT\"",
+        "assert encode(\"Python Programming\") == \"pyTHoN pRogrAMMIng\""
+    ]
+}

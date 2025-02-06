@@ -1,0 +1,106 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I'))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith('I '):\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split('.') + S.split('?') + S.split('!') if sentence.strip().startswith(\"I\"))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I') and sentence.endswith(('.', '?', '!')))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    count = sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n    return count\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I'))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I'))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I \"))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I'))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "logp": null
+        }
+    ]
+}

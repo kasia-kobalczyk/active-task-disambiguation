@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert numerical_letter_grade([4.0]) == ['A+']",
+        "assert numerical_letter_grade([3.8, 2.5, 1.2]) == ['A', 'B', 'D-']"
+    ],
+    "1": [
+        "assert numerical_letter_grade([3.4, 0.0, 3.1]) == ['A-', 'E', 'B+']",
+        "assert numerical_letter_grade([3.8, 2.5, 1.2]) == ['A', 'B', 'D-']"
+    ],
+    "2": [
+        "assert numerical_letter_grade([3.8, 2.5, 1.5]) == ['A', 'B', 'C-']",
+        "assert numerical_letter_grade([4.0, 3.0, 2.0, 1.0, 0.0]) == ['A+', 'B+', 'C+', 'D+', 'E']"
+    ],
+    "3": [
+        "assert numerical_letter_grade([3.8, 2.5, 1.5]) == ['A', 'C+', 'D-']",
+        "assert numerical_letter_grade([2.9, 3.5, 4.0]) == ['B+', 'A', 'A+']"
+    ]
+}

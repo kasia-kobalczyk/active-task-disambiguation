@@ -1,0 +1,52 @@
+{
+    "0": [
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    prev_type = None\n    prev_cost = 0\n    for transport in journey:\n        if isinstance(transport, str):\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 2.4\n            prev_type = 'tube'\n        else:\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 1.5\n            prev_type = 'bus'\n            prev_cost = 1.5\n    if prev_type == 'bus':\n        total_cost += 1.5\n    elif prev_type == 'tube':\n        total_cost += 2.4\n    return round(total_cost, 2)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    prev_type = None\n    prev_cost = 0\n    for transport in journey:\n        if isinstance(transport, str):\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 2.4\n            prev_type = 'tube'\n        else:\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 1.5\n            prev_type = 'bus'\n            prev_cost = 1.5\n    if prev_type == 'bus':\n        total_cost += 1.5\n    elif prev_type == 'tube':\n        total_cost += 2.4\n    return round(total_cost, 2)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    prev_type = None\n    prev_cost = 0\n    for transport in journey:\n        if isinstance(transport, str):\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 2.4\n            prev_type = 'tube'\n        else:\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 1.5\n            prev_type = 'bus'\n            prev_cost = 1.5\n    if prev_type == 'bus':\n        total_cost += 1.5\n    elif prev_type == 'tube':\n        total_cost += 2.4\n    return round(total_cost, 2)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    prev_type = None\n    prev_cost = 0\n    for transport in journey:\n        if isinstance(transport, str):\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 2.4\n            prev_type = 'tube'\n        else:\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 1.5\n            prev_type = 'bus'\n            prev_cost = 1.5\n    if prev_type == 'bus':\n        total_cost += 1.5\n    elif prev_type == 'tube':\n        total_cost += 2.4\n    return round(total_cost, 2)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    prev_type = None\n    prev_cost = 0\n    for transport in journey:\n        if isinstance(transport, str):\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 2.4\n            prev_type = 'tube'\n        else:\n            if prev_type == 'bus':\n                total_cost += 1.5\n            else:\n                total_cost += 1.5\n            prev_type = 'bus'\n            prev_cost = 1.5\n    if prev_type == 'bus':\n        total_cost += 1.5\n    elif prev_type == 'tube':\n        total_cost += 2.4\n    return round(total_cost, 2)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    cost = 0\n    bus_cost = 0\n    for element in journey:\n        if type(element) == str:\n            cost += 2.4\n        elif type(element) == int:\n            bus_cost += element\n            if bus_cost > 1:\n                cost += 3\n                bus_cost = 1\n        else:\n            pass\n    return f'\u00a3{round(cost, 2)}'",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    cost = 0\n    bus_cost = 0\n    for element in journey:\n        if type(element) == str:\n            cost += 2.4\n        elif type(element) == int:\n            bus_cost += element\n            if bus_cost > 1:\n                cost += 3\n                bus_cost = 1\n        else:\n            pass\n    return f'\u00a3{round(cost, 2)}'",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    cost = 0\n    bus_cost = 0\n    for element in journey:\n        if type(element) == str:\n            cost += 2.4\n        elif type(element) == int:\n            bus_cost += element\n            if bus_cost > 1:\n                cost += 3\n                bus_cost = 1\n        else:\n            pass\n    return f'\u00a3{round(cost, 2)}'",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    cost = 0\n    bus_cost = 0\n    for element in journey:\n        if type(element) == str:\n            cost += 2.4\n        elif type(element) == int:\n            bus_cost += element\n            if bus_cost > 1:\n                cost += 3\n                bus_cost = 1\n        else:\n            pass\n    return f'\u00a3{round(cost, 2)}'",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    cost = 0\n    bus_cost = 0\n    for element in journey:\n        if type(element) == str:\n            cost += 2.4\n        elif type(element) == int:\n            bus_cost += element\n            if bus_cost > 1:\n                cost += 3\n                bus_cost = 1\n        else:\n            pass\n    return f'\u00a3{round(cost, 2)}'",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [
+        {
+            "content": "def london_city_hacker(journey):\n    cost = 0\n    tube_cost = 0\n    bus_cost = 0\n    bus_count = 0\n    for item in journey:\n        if isinstance(item, str):\n            tube_cost += 2.40\n        else:\n            bus_cost += 1.50\n            bus_count += 1\n            if bus_count >= 2:\n                bus_cost -= 1.50\n                bus_count = 0\n    cost = tube_cost + bus_cost\n    return \"\u00a3{:.2f}\".format(cost)",
+            "logp": null
+        }
+    ],
+    "3": []
+}

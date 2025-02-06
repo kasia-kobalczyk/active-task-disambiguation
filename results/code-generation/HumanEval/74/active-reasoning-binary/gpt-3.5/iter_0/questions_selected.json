@@ -1,0 +1,6 @@
+{
+    "0": "assert total_match(['abc', 'def'], ['ghi', 'jkl']) == ['abc', 'def']",
+    "1": "assert total_match(['abc', 'def'], []) == ['abc', 'def']",
+    "2": "assert total_match([], ['abc', 'def']) == []",
+    "3": "assert total_match(['a', 'b', 'c', 'd'], ['e', 'f', 'g', 'h']) == ['e', 'f', 'g', 'h']"
+}

@@ -1,0 +1,33 @@
+{
+    "0": [
+        "assert string_expansion('3d332f2a') == 'dddfaa'",
+        "assert string_expansion('abcde') == 'abcde'",
+        "assert string_expansion('123abc') == 'abc'",
+        "assert string_expansion('3abc') == 'aaaabbbccc'"
+    ],
+    "1": [
+        "assert string_expansion('123a') == ''",
+        "assert string_expansion('') == ''",
+        "assert string_expansion('1a2b3c') == 'aabbcc'",
+        "assert string_expansion('abc') == 'abc'",
+        "assert string_expansion('123a4b') == 'aaaabbbbb'",
+        "assert string_expansion('1x2y3z') == 'xxyyzz'",
+        "assert string_expansion('3abc') == 'aaaabbbccc'",
+        "assert string_expansion('33o') == 'oo'"
+    ],
+    "2": [
+        "assert string_expansion('') == ''",
+        "assert string_expansion('123a4b') == 'aaaabbbbb'",
+        "assert string_expansion('3a4B2d') == 'aaBBdddd'",
+        "assert string_expansion('3abc') == 'aaaabbbccc'",
+        "assert string_expansion('123ABC') == 'AAABBBCCC'",
+        "assert string_expansion('33o') == 'oo'"
+    ],
+    "3": [
+        "assert string_expansion('123a4b') == 'aaaabbbbb'",
+        "assert string_expansion('3a4B2d') == 'aaBBdddd'",
+        "assert string_expansion('3abc') == 'aaaabbbccc'",
+        "assert string_expansion('123ABC') == 'aaaBBCCC'",
+        "assert string_expansion('33o') == 'oo'"
+    ]
+}

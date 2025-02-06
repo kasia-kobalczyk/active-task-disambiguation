@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert london_city_hacker([1, 2, 3, 'Central', 'Central']) == '\u00a35.40'",
+        false
+    ],
+    "1": [
+        "assert london_city_hacker([243, 244, 'Central', 'Piccadilly', 1, 2]) == '\u00a36.30'",
+        false
+    ],
+    "2": [
+        "assert london_city_hacker(['Circle', 'Hammersmith', 67, 100, 'Metropolitan', 123]) == '\u00a39.90'",
+        false
+    ],
+    "3": [
+        "assert london_city_hacker(['District', 45, 72, 88]) == '\u00a35.40'",
+        true
+    ]
+}

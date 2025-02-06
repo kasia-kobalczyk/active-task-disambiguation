@@ -1,0 +1,31 @@
+{
+    "0": [
+        "assert sort_string(\"babana\", \"abna\") == \"aanabb\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\""
+    ],
+    "1": [
+        "assert sort_string(\"babana\", \"abn\") == \"aabnn\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"abcd\", \"abc\") == \"abcc\"",
+        "assert sort_string(\"hello\", \"hleo\") == \"heoll\""
+    ],
+    "2": [
+        "assert sort_string(\"xfly\", \"fyl\") == \"fylx\"",
+        "assert sort_string(\"aabbcc\", \"abc\") == \"abccba\"",
+        "assert sort_string(\"abcd\", \"abc\") == \"abcxd\"",
+        "assert sort_string(\"hello\", \"lho\") == \"holle\"",
+        "assert sort_string(\"hello\", \"hlo\") == \"hhoell\"",
+        "assert sort_string(\"abcabc\", \"abc\") == \"abcabc\"",
+        "assert sort_string(\"abcd\", \"abcd\") == \"abcd\""
+    ],
+    "3": [
+        "assert sort_string(\"abc\", \"bca\") == \"abc\"",
+        "assert sort_string(\"xyzzz\", \"xyz\") == \"xyzz\"",
+        "assert sort_string(\"abcdefghijklmnopqrstuvwxyz\", \"abcdefghijklmnopqrstuvwxyz\") == \"abcdefghijklmnopqrstuvwxyz\"",
+        "assert sort_string(\"hello\", \"hel\") == \"helol\"",
+        "assert sort_string(\"abcd\", \"abc\") == \"abcde\""
+    ]
+}

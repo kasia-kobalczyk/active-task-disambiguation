@@ -1,0 +1,178 @@
+{
+    "0": [
+        {
+            "content": "def plane_seat(a):\n    section = a[:-1]\n    letter = a[-1]\n    if not section.isdigit() or int(section) < 1 or int(section) > 60:\n        return 'No Seat!!'\n    if letter not in 'ABCDEFGHIK':\n        return 'No Seat!!'\n    if int(section) <= 20:\n        area = 'Front'\n    elif int(section) <= 40:\n        area = 'Middle'\n    else:\n        area = 'Back'\n    if letter in 'ABC':\n        location = 'Left'\n    elif letter in 'DEF':\n        location = 'Middle'\n    else:\n        location = 'Right'\n    return area + '-' + location",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_number, seat_letter = a[:-1], a[-1]\n    if int(seat_number) > 60 or seat_letter in ['I', 'J'] or not 'A' <= seat_letter <= 'K':\n        return 'No Seat!!'\n    if 1 <= int(seat_number) <= 20:\n        location = 'Front-'\n    elif 21 <= int(seat_number) <= 40:\n        location = 'Middle-'\n    else:\n        location = 'Back-'\n    if 'A' <= seat_letter <= 'C':\n        location += 'Left'\n    elif 'D' <= seat_letter <= 'F':\n        location += 'Middle'\n    else:\n        location += 'Right'\n    return location",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_number = int(a[:-1])\n    seat_letter = a[-1]\n    if seat_number > 60 or seat_letter in ['I', 'J'] or seat_letter < 'A' or seat_letter > 'K':\n        return 'No Seat!!'\n    if seat_number <= 20:\n        section = 'Front'\n    elif seat_number <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if seat_letter in ['A', 'B', 'C']:\n        cluster = 'Left'\n    elif seat_letter in ['D', 'E', 'F']:\n        cluster = 'Middle'\n    else:\n        cluster = 'Right'\n    return section + '-' + cluster",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(''.join(filter(str.isdigit, a)))\n    letter = ''.join(filter(str.isalpha, a)).upper()\n    \n    if section < 1 or section > 60 or (letter not in 'ABCDEFGHK'):\n        return 'No Seat!!'\n    elif section <= 20:\n        plane_section = 'Front'\n    elif section <= 40:\n        plane_section = 'Middle'\n    else:\n        plane_section = 'Back'\n    \n    if letter in 'ABCD':\n        seat_location = 'Left'\n    elif letter in 'DEF':\n        seat_location = 'Middle'\n    else:\n        seat_location = 'Right'\n    \n    return f'{plane_section}-{seat_location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section, letter = a[:-1], a[-1].upper()\n    \n    if not section.isdigit() or int(section) < 1 or int(section) > 60 or letter in 'IJ':\n        return 'No Seat!!'\n        \n    section = 'Front' if int(section) <= 20 else 'Middle' if int(section) <= 40 else 'Back'\n    letter = 'Left' if letter in 'ABC' else 'Middle' if letter in 'DEF' else 'Right' if letter in 'GK' else 'No Seat!!'\n    \n    if letter == 'No Seat!!':\n        return 'No Seat!!'\n    else:\n        return f'{section}-{letter}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num, letter = a[:-1], a[-1].upper()\n    if not num.isdigit() or not 1 <= int(num) <= 60 or letter in ['I', 'J']:\n        return 'No Seat!!'\n    location = 'Front' if int(num) <= 20 else 'Middle' if int(num) <= 40 else 'Back'\n    cluster = 'Left' if letter in ['A', 'B', 'C'] else 'Middle' if letter in ['D', 'E', 'F'] else 'Right'\n    return f'{location}-{cluster}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num, let = a[:-1], a[-1]\n    if not num.isdigit() or int(num) < 1 or int(num) > 60 or let not in 'ABCDEFGHK':\n        return 'No Seat!!'\n    section = 'Front' if int(num) <= 20 else 'Middle' if int(num) <= 40 else 'Back'\n    cluster = 'Left' if let in 'ABC' else 'Middle' if let in 'DEF' else 'Right'\n    return f'{section}-{cluster}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section, seat = a[:-1], a[-1]\n    if int(section) < 1 or int(section) > 60 or seat.upper() not in 'ABCDEFGHK':\n        return 'No Seat!!'\n    if int(section) <= 20:\n        area = 'Front'\n    elif int(section) <= 40:\n        area = 'Middle'\n    else:\n        area = 'Back'\n    if seat.upper() in 'ABC':\n        location = 'Left'\n    elif seat.upper() in 'DEF':\n        location = 'Middle'\n    else:\n        location = 'Right'\n    return '{}-{}'.format(area, location)",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(a[:-1])\n    letter = a[-1].upper()\n    if section < 1 or section > 60 or letter in ['I', 'J'] or not 'A' <= letter <= 'K':\n        return 'No Seat!!'\n    elif section <= 20:\n        area = 'Front'\n    elif section <= 40:\n        area = 'Middle'\n    else:\n        area = 'Back'\n    if 'A' <= letter <= 'C':\n        side = 'Left'\n    elif 'D' <= letter <= 'F':\n        side = 'Middle'\n    else:\n        side = 'Right'\n    return area + '-' + side",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num = int(a[:-1])\n    letter = a[-1].upper()\n    if num < 1 or num > 60 or (letter < 'A' or letter > 'K') or letter in 'IJ':\n        return 'No Seat!!'\n    area = 'Front' if num <= 20 else 'Middle' if num <= 40 else 'Back'\n    location = 'Left' if 'A' <= letter <= 'C' else 'Middle' if 'D' <= letter <= 'F' else 'Right'\n    return f'{area}-{location}'",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def plane_seat(a):\n    seat_num = int(a[:-1])\n    seat_letter = a[-1].upper()\n    \n    if seat_num < 1 or seat_num > 60 or seat_letter in ['I', 'J']:\n        return 'No Seat!!'\n    \n    if seat_num <= 20:\n        section = 'Front'\n    elif seat_num <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    \n    if seat_letter in ['A', 'B', 'C']:\n        location = 'Left'\n    elif seat_letter in ['D', 'E', 'F']:\n        location = 'Middle'\n    else:\n        location = 'Right'\n    \n    return f'{section}-{location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(a[:-1])\n    letter = a[-1]\n    if section < 1 or section > 60 or letter in ['I', 'J'] or not 'A' <= letter <= 'K':\n        return 'No Seat!!'\n    if section <= 20:\n        location = 'Front-'\n    elif section <= 40:\n        location = 'Middle-'\n    else:\n        location = 'Back-'\n    if 'A' <= letter <= 'C':\n        location += 'Left'\n    elif 'D' <= letter <= 'F':\n        location += 'Middle'\n    else:\n        location += 'Right'\n    return location",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(a[:-1])\n    letter = a[-1]\n    \n    if section < 1 or section > 60 or letter in 'IJ':\n        return 'No Seat!!'\n    \n    if section <= 20:\n        location = 'Front'\n    elif section <= 40:\n        location = 'Middle'\n    else:\n        location = 'Back'\n        \n    if letter in 'ABC':\n        position = 'Left'\n    elif letter in 'DEF':\n        position = 'Middle'\n    else:\n        position = 'Right'\n        \n    return location + '-' + position",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(a[:-1])\n    letter = a[-1].upper()\n    \n    if section < 1 or section > 60:\n        return 'No Seat!!'\n    \n    if letter not in 'ABCDEFGHK':\n        return 'No Seat!!'\n    \n    if section <= 20:\n        location = 'Front'\n    elif section <= 40:\n        location = 'Middle'\n    else:\n        location = 'Back'\n        \n    if letter in 'ABC':\n        position = 'Left'\n    elif letter in 'DF':\n        position = 'Middle'\n    else:\n        position = 'Right'\n        \n    return f'{location}-{position}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_number = int(a[:-1])\n    seat_letter = a[-1]\n    if seat_number > 60 or seat_letter in ['I', 'J'] or seat_letter < 'A' or seat_letter > 'K':\n        return 'No Seat!!'\n    if seat_number <= 20:\n        section = 'Front'\n    elif seat_number <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if seat_letter in ['A', 'B', 'C']:\n        location = 'Left'\n    elif seat_letter in ['D', 'E', 'F']:\n        location = 'Middle'\n    else:\n        location = 'Right'\n    return '{}-{}'.format(section, location)",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(a[:-1])\n    letter = a[-1].upper()\n    if section < 1 or section > 60 or letter in ['I', 'J'] or not 'A' <= letter <= 'K':\n        return 'No Seat!!'\n    if section <= 20:\n        area = 'Front'\n    elif section <= 40:\n        area = 'Middle'\n    else:\n        area = 'Back'\n    if 'A' <= letter <= 'C':\n        loc = 'Left'\n    elif 'D' <= letter <= 'F':\n        loc = 'Middle'\n    else:\n        loc = 'Right'\n    return area + '-' + loc",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_num = int(a[:-1])\n    seat_letter = a[-1].upper()\n    if seat_num < 1 or seat_num > 60 or seat_letter in ['I', 'J']:\n        return 'No Seat!!'\n    section = 'Front' if seat_num <= 20 else 'Middle' if seat_num <= 40 else 'Back'\n    location = 'Left' if seat_letter in ['A', 'B', 'C'] else 'Middle' if seat_letter in ['D', 'E', 'F'] else 'Right'\n    return f'{section}-{location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_number = int(a[:-1])\n    seat_letter = a[-1].upper()\n    \n    if seat_number < 1 or seat_number > 60:\n        return 'No Seat!!'\n    \n    if seat_letter not in 'ABCDEFHK':\n        return 'No Seat!!'\n    \n    if seat_number <= 20:\n        section = 'Front'\n    elif seat_number <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n        \n    if seat_letter in 'ABC':\n        location = 'Left'\n    elif seat_letter in 'DEF':\n        location = 'Middle'\n    else:\n        location = 'Right'\n        \n    return f'{section}-{location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num = int(a[:-1])\n    letter = a[-1].upper()\n    if num < 1 or num > 60 or (letter < 'A' or letter > 'K') or letter in 'IJ':\n        return 'No Seat!!'\n    area = 'Front' if num <= 20 else 'Middle' if num <= 40 else 'Back'\n    location = 'Left' if 'A' <= letter <= 'C' else 'Middle' if 'D' <= letter <= 'F' else 'Right'\n    return f'{area}-{location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num, letter = int(a[:-1]), a[-1].upper()\n    if num > 60 or letter in ['I', 'J'] or not 'A' <= letter <= 'K':\n        return 'No Seat!!'\n    location = 'Front' if num <= 20 else 'Middle' if num <= 40 else 'Back'\n    cluster = 'Left' if 'A' <= letter <= 'C' else 'Middle' if 'D' <= letter <= 'F' else 'Right'\n    return location + '-' + cluster",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def plane_seat(a):\n    seat_number = int(a[:-1])\n    seat_letter = a[-1].upper()\n    \n    if seat_number < 1 or seat_number > 60:\n        return 'No Seat!!'\n    \n    if seat_letter not in 'ABCDEFGHK':\n        return 'No Seat!!'\n    \n    if seat_number <= 20:\n        location = 'Front-'\n    elif seat_number <= 40:\n        location = 'Middle-'\n    else:\n        location = 'Back-'\n        \n    if seat_letter in 'ABC':\n        location += 'Left'\n    elif seat_letter in 'DEF':\n        location += 'Middle'\n    else:\n        location += 'Right'\n        \n    return location",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_number = int(a[:-1])\n    seat_letter = a[-1]\n    if seat_number > 60 or seat_letter in ['I', 'J', 'L'] or (seat_letter < 'A' or seat_letter > 'K'):\n        return 'No Seat!!'\n    elif seat_number <= 20:\n        section = 'Front'\n    elif seat_number <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if seat_letter in ['A', 'B', 'C']:\n        location = 'Left'\n    elif seat_letter in ['D', 'E', 'F']:\n        location = 'Middle'\n    else:\n        location = 'Right'\n    return f'{section}-{location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(a[:-1])\n    letter = a[-1].upper()\n    \n    if section < 1 or section > 60:\n        return 'No Seat!!'\n    \n    if letter not in 'ABCDEFGHK':\n        return 'No Seat!!'\n    \n    if section <= 20:\n        location = 'Front'\n    elif section <= 40:\n        location = 'Middle'\n    else:\n        location = 'Back'\n        \n    if letter in 'ABCHandle':\n        location += '-Left'\n    elif letter in 'DE':\n        location += '-Middle'\n    else:\n        location += '-Right'\n        \n    return location",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section, letter = a[:-1], a[-1].upper()\n    if not section.isdigit() or int(section) < 1 or int(section) > 60:\n        return 'No Seat!!'\n    if letter not in 'ABCDEFGHK':\n        return 'No Seat!!'\n    if int(section) <= 20:\n        area = 'Front'\n    elif int(section) <= 40:\n        area = 'Middle'\n    else:\n        area = 'Back'\n    if letter in 'ABC':\n        loc = 'Left'\n    elif letter in 'DEF':\n        loc = 'Middle'\n    else:\n        loc = 'Right'\n    return '{}-{}'.format(area, loc)",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_number = int(a[:-1])\n    seat_letter = a[-1].upper()\n    \n    if seat_number < 1 or seat_number > 60:\n        return 'No Seat!!'\n    \n    if seat_letter not in 'ABCDEFHK':\n        return 'No Seat!!'\n    \n    if seat_number <= 20:\n        section = 'Front'\n    elif seat_number <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n        \n    if seat_letter in 'ABC':\n        location = 'Left'\n    elif seat_letter in 'DEF':\n        location = 'Middle'\n    else:\n        location = 'Right'\n        \n    return f'{section}-{location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_num = int(a[:-1])\n    seat_letter = a[-1].upper()\n    if seat_num < 1 or seat_num > 60:\n        return 'No Seat!!'\n    if seat_letter not in ' ABCDEFGHK':\n        return 'No Seat!!'\n    if seat_num <= 20:\n        section = 'Front'\n    elif seat_num <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if seat_letter in ' ABC':\n        location = 'Left'\n    elif seat_letter in ' DEF':\n        location = 'Middle'\n    else:\n        location = 'Right'\n    return '{}-{}'.format(section, location)",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num = int(a[:-1])\n    letter = a[-1].upper()\n    if num < 1 or num > 60 or (letter < 'A' or letter > 'K') or letter in 'IJ':\n        return 'No Seat!!'\n    area = 'Front' if num <= 20 else 'Middle' if num <= 40 else 'Back'\n    location = 'Left' if 'A' <= letter <= 'C' else 'Middle' if 'D' <= letter <= 'F' else 'Right'\n    return f'{area}-{location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    try:\n        section, seat_letter = int(a[:-1]), a[-1].upper()\n        if not 1 <= section <= 60:\n            return 'No Seat!!'\n        if seat_letter not in 'ABCDEFGHK':\n            return 'No Seat!!'\n        section_names = {range(1, 21): 'Front', range(21, 41): 'Middle', range(41, 61): 'Back'}\n        for section_range, section_name in section_names.items():\n            if section in section_range:\n                break\n        seat_names = {'A': 'Left', 'B': 'Left', 'C': 'Left', 'D': 'Middle', 'E': 'Middle', 'F': 'Middle', 'G': 'Right', 'H': 'Right', 'K': 'Right'}\n        return '{}-{}'.format(section_name, seat_names[seat_letter])\n    except ValueError:\n        return 'No Seat!!'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(a[:-1])\n    letter = a[-1].upper()\n    \n    if section < 1 or section > 60 or letter in ['I', 'J'] or (letter < 'A' or letter > 'K'):\n        return 'No Seat!!'\n    \n    if section <= 20:\n        area = 'Front'\n    elif section <= 40:\n        area = 'Middle'\n    else:\n        area = 'Back'\n        \n    if letter in ['A', 'B', 'C']:\n        location = 'Left'\n    elif letter in ['D', 'E', 'F']:\n        location = 'Middle'\n    else:\n        location = 'Right'\n        \n    return f'{area}-{location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num, letter = int(a[:-1]), a[-1].upper()\n    if num < 1 or num > 60 or letter in 'IJ':\n        return 'No Seat!!'\n    if num <= 20:\n        section = 'Front'\n    elif num <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if 'A' <= letter <= 'C':\n        seat = 'Left'\n    elif 'D' <= letter <= 'F':\n        seat = 'Middle'\n    elif 'G' <= letter <= 'K':\n        seat = 'Right'\n    else:\n        return 'No Seat!!'\n    return f'{section}-{seat}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num = int(a[:-1])\n    letter = a[-1].upper()\n    if not 1 <= num <= 60 or letter in 'IJ' or not 'A' <= letter <= 'K':\n        return 'No Seat!!'\n    else:\n        if num <= 20:\n            section = 'Front'\n        elif num <= 40:\n            section = 'Middle'\n        else:\n            section = 'Back'\n        if 'A' <= letter <= 'C':\n            seat = 'Left'\n        elif 'D' <= letter <= 'F':\n            seat = 'Middle'\n        else:\n            seat = 'Right'\n        return '{}-{}'.format(section, seat)",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num = int(a[:-1])\n    letter = a[-1].upper()\n    if num < 1 or num > 60 or (letter not in ' ABCDEFGHK'):\n        return 'No Seat!!'\n    if num <= 20:\n        location = 'Front'\n    elif num <= 40:\n        location = 'Middle'\n    else:\n        location = 'Back'\n    if letter in 'ABCDEFG':\n        if letter in 'ABC':\n            side = 'Left'\n        elif letter in 'DEF':\n            side = 'Middle'\n        else:\n            side = 'Right'\n    return f'{location}-{side}'",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def plane_seat(a):\n    seat_num = int(a[:-1])\n    seat_letter = a[-1].upper()\n    if seat_num < 1 or seat_num > 60 or seat_letter in ['I', 'J'] or (seat_letter < 'A' or seat_letter > 'K'):\n        return 'No Seat!!'\n    elif seat_num <= 20:\n        location = 'Front-'\n    elif seat_num <= 40:\n        location = 'Middle-'\n    else:\n        location = 'Back-'\n    if 'A' <= seat_letter <= 'C':\n        location += 'Left'\n    elif 'D' <= seat_letter <= 'F':\n        location += 'Middle'\n    else:\n        location += 'Right'\n    return location",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_number = int(a[:-1])\n    seat_letter = a[-1]\n    if seat_number < 1 or seat_number > 60 or seat_letter in ['I', 'J'] or (seat_letter < 'A' or seat_letter > 'K'):\n        return 'No Seat!!'\n    location = 'Front' if seat_number <= 20 else 'Middle' if seat_number <= 40 else 'Back'\n    seat_location = 'Left' if seat_letter in ['A', 'B', 'C'] else 'Middle' if seat_letter in ['D', 'E', 'F'] else 'Right'\n    return '{}-{}'.format(location, seat_location)",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(a[:-1])\n    letter = a[-1].upper()\n    if section < 1 or section > 60 or (letter not in 'ABCDEFGHK'):\n        return 'No Seat!!'\n    elif section <= 20:\n        area = 'Front'\n    elif section <= 40:\n        area = 'Middle'\n    else:\n        area = 'Back'\n    if letter in 'ABC':\n        position = 'Left'\n    elif letter in 'DF':\n        position = 'Middle'\n    else:\n        position = 'Right'\n    return area + '-' + position",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section, letter = a[:-1], a[-1].upper()\n    if not section.isdigit() or int(section) < 1 or int(section) > 60:\n        return 'No Seat!!'\n    if letter not in 'ABCDEFGK':\n        return 'No Seat!!'\n    location = 'Front' if int(section) <= 20 else 'Middle' if int(section) <= 40 else 'Back'\n    cluster = 'Left' if letter in 'AC' else 'Middle' if letter in 'DF' else 'Right'\n    return location + '-' + cluster",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num = int(a[:-1])\n    letter = a[-1].upper()\n    if num < 1 or num > 60 or (letter < 'A' or letter > 'K') or letter in 'IJ':\n        return 'No Seat!!'\n    area = 'Front' if num <= 20 else 'Middle' if num <= 40 else 'Back'\n    location = 'Left' if 'A' <= letter <= 'C' else 'Middle' if 'D' <= letter <= 'F' else 'Right'\n    return f'{area}-{location}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num, letter = int(a[:-1]), a[-1].upper()\n    if num > 60 or letter in ['I', 'J'] or (letter < 'A' or letter > 'K'):\n        return 'No Seat!!'\n    elif 1 <= num <= 20:\n        section = 'Front'\n    elif 21 <= num <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if 'A' <= letter <= 'C':\n        loc = 'Left'\n    elif 'D' <= letter <= 'F':\n        loc = 'Middle'\n    else:\n        loc = 'Right'\n    return f'{section}-{loc}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num, let = a[:-1], a[-1]\n    if not num.isdigit() or int(num) < 1 or int(num) > 60:\n        return 'No Seat!!'\n    if let not in 'ABCDEFGHIK':\n        return 'No Seat!!'\n    if int(num) <= 20:\n        location = 'Front'\n    elif int(num) <= 40:\n        location = 'Middle'\n    else:\n        location = 'Back'\n    if let in 'ABC':\n        seat = 'Left'\n    elif let in 'DEF':\n        seat = 'Middle'\n    else:\n        seat = 'Right'\n    return '{}-{}'.format(location, seat)",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    section = int(a[:-1])\n    letter = a[-1].upper()\n    \n    if section < 1 or section > 60 or (letter not in 'ABCDEFGHK'):\n        return 'No Seat!!'\n    \n    if section <= 20:\n        area = 'Front'\n    elif section <= 40:\n        area = 'Middle'\n    else:\n        area = 'Back'\n    \n    if letter in 'ABC':\n        location = 'Left'\n    elif letter in 'DF':\n        location = 'Middle'\n    else:\n        location = 'Right'\n    \n    return area + '-' + location",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    seat_number, seat_letter = a[:-1], a[-1].upper()\n    if int(seat_number) > 60 or seat_letter in 'IJ' or (seat_letter < 'A' or seat_letter > 'K'):\n        return 'No Seat!!'\n    if 1 <= int(seat_number) <= 20:\n        section = 'Front'\n    elif 21 <= int(seat_number) <= 40:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if 'A' <= seat_letter <= 'C':\n        location = 'Left'\n    elif 'D' <= seat_letter <= 'F':\n        location = 'Middle'\n    else:\n        location = 'Right'\n    return '{}-{}'.format(section, location)",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    num = int(a[:-1])\n    letter = a[-1].upper()\n    if num < 1 or num > 60 or (letter not in ' ABCDEFGHK'):\n        return 'No Seat!!'\n    if num <= 20:\n        location = 'Front'\n    elif num <= 40:\n        location = 'Middle'\n    else:\n        location = 'Back'\n    if letter in 'ABCDEFG':\n        if letter in 'ABC':\n            side = 'Left'\n        elif letter in 'DEF':\n            side = 'Middle'\n        else:\n            side = 'Right'\n    return f'{location}-{side}'",
+            "logp": null
+        }
+    ]
+}

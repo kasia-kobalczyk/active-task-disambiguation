@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert decode_shift('fghij') == 'abcde'",
+        true
+    ],
+    "1": [
+        "assert decode_shift('lmnop') == 'ghijk'",
+        true
+    ],
+    "2": [
+        "assert decode_shift('xyzab') == 'uvwxy'",
+        false
+    ],
+    "3": [
+        "assert decode_shift('jklmn') == 'efghi'",
+        true
+    ]
+}

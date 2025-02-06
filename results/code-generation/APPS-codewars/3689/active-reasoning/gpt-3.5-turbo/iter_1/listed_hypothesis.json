@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def how_many_pizzas(n):\n    pizzas = n // 8\n    slices = n % 8\n    return \"pizzas: {}, slices: {}\".format(pizzas, slices)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n <= 0:\n        return \"pizzas: 0, slices: 0\"\n    elif n <= 8:\n        return \"pizzas: 1, slices: 0\"\n    else:\n        pizzas = n // 8\n        slices = n % 8\n        return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    pizzas = n // 8\n    slices = n % 8\n    return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    \n    pizzas = n // 16\n    slices = (n % 16) // 8\n    \n    return \"pizzas: {}, slices: {}\".format(pizzas, slices)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n <= 0:\n        return \"pizzas: 0, slices: 0\"\n    elif n % 8 == 0:\n        return f\"pizzas: {n // 8}, slices: 0\"\n    else:\n        pizzas = n // 8\n        slices = n % 8\n        return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    # calculate the number of 8-inch pizzas that can fit in n\n    pizzas = n // 8\n    \n    # calculate the remaining slices after fitting pizzas\n    slices = n % 8\n    \n    return \"pizzas: {}, slices: {}\".format(pizzas, slices)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n < 8:\n        return \"pizzas: 0, slices: 0\"\n    elif n == 8:\n        return \"pizzas: 1, slices: 0\"\n    else:\n        pizzas = n // 8\n        slices = n % 8\n        return \"pizzas: {}, slices: {}\".format(pizzas, slices)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    # Calculate the number of pizzas\n    pizzas = n // 16\n\n    # Calculate the number of slices\n    slices = (n % 16) // 8\n\n    # Return the result as a string\n    return \"pizzas: {}, slices: {}\".format(pizzas, slices)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n <= 0:\n        return \"pizzas: 0, slices: 0\"\n    else:\n        pizzas = n // 8\n        slices = n % 8\n        return \"pizzas: \" + str(pizzas) + \", slices: \" + str(slices)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n <= 0:\n        return \"pizzas: 0, slices: 0\"\n    pizzas = n // 8\n    slices = n % 8\n    return \"pizzas: {}, slices: {}\".format(pizzas, slices)",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

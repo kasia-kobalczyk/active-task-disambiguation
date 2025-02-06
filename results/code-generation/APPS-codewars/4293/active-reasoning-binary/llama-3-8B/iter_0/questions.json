@@ -1,0 +1,34 @@
+{
+    "0": [
+        "assert calculate_1RM(80, 8) == 95, f\"Expected calculate_1RM(80, 8) to return 95, but got {calculate_1RM(80, 8)}\"",
+        "assert calculate_1RM(100, 3) == 112",
+        "assert calculate_1RM(100, 5) == 118",
+        "assert calculate_1RM(150, 3) == 170",
+        "assert calculate_1RM(50, 3) == 62",
+        "assert calculate_1RM(100, 1) == 100"
+    ],
+    "1": [
+        "assert calculate_1RM(100, 3) == 112",
+        "assert calculate_1RM(100, 5) == 118",
+        "assert calculate_1RM(150, 3) == 170"
+    ],
+    "2": [
+        "assert calculate_1RM(50, 3) == 64",
+        "assert calculate_1RM(100, 8) == 130",
+        "assert calculate_1RM(80, 0) == 0",
+        "assert calculate_1RM(100, 5) == 122",
+        "assert calculate_1RM(20, 8) == 24",
+        "assert calculate_1RM(150, 5) == 164",
+        "assert calculate_1RM(100, 1) == 100",
+        "assert calculate_1RM(200, 3) == 217"
+    ],
+    "3": [
+        "assert calculate_1RM(100, 8) == 130",
+        "assert calculate_1RM(80, 0) == 0",
+        "assert calculate_1RM(100, 5) == 122",
+        "assert calculate_1RM(20, 8) == 24",
+        "assert calculate_1RM(150, 5) == 164",
+        "assert calculate_1RM(100, 1) == 100",
+        "assert calculate_1RM(200, 3) == 217"
+    ]
+}

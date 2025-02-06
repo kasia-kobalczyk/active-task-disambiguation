@@ -1,0 +1,17 @@
+{
+    "0": [
+        "assert find_children(\"aAbaBb\") == \"AaaBbb\"",
+        "assert find_children(\"CcbBAa\") == \"AaaBbbCc\""
+    ],
+    "1": [
+        "assert find_children(\"bBcCaA\") == \"AaaBbbCc\"",
+        "assert find_children(\"zZyYxXwW\") == \"WwwXxyYzz\""
+    ],
+    "2": [
+        "assert find_children(\"zZyYxXwW\") == \"WwwXxyYzz\""
+    ],
+    "3": [
+        "assert find_children(\"bBccAaa\") == \"AaaBbbcc\"",
+        "assert find_children(\"AaBbCc\") == \"ABCabc\""
+    ]
+}

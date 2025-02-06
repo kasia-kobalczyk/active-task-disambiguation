@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert total_match([\"abc\", \"def\", \"ghi\"], [\"jkl\", \"mno\"]) == [\"abc\", \"def\", \"ghi\"]",
+        false
+    ],
+    "1": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"aa\", \"bb\", \"cc\"]) == [\"a\", \"bb\", \"ccc\"]",
+        true
+    ],
+    "2": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"a\", \"bbb\", \"cc\"]) == [\"a\", \"bb\", \"ccc\"]",
+        true
+    ],
+    "3": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"dd\", \"ee\", \"ff\"]) == [\"a\", \"bb\", \"ccc\"]",
+        true
+    ]
+}

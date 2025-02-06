@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "def car_race_collision(n: int):\n    return n*(n-1)",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n * (n - 1) // 2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * (n - 1) // 2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n * (n - 1)",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\n    # The total number of collisions is equal to the number of cars moving left to right\n    return n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n * (n - 1) // 2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\n    return n * (n-1) // 2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\n    # Since both sets of cars are moving at the same speed, it is impossible for any car to overtake another car.\n    # Therefore, the number of collisions will always be 0.\n    return 0",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\n    return n * (n - 1) // 2",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    n cars are driving left to right;  simultaneously, a different set of n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \n    Examples:\n\n    10 -> 100\n    \"\"\"\n\n    # each left to right car will collide with each right to left car\n    # so the total number of collisions is the product of the number of cars moving in each direction\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    \"\"\"\n    This function calculates the number of collisions that will occur\n    when n cars driving left to right collide with n cars driving right to left.\n\n    Args:\n    - n: the number of cars driving left to right and right to left\n\n    Returns:\n    - The number of collisions that will occur\n\n    Examples:\n\n    >>> car_race_collision(10)\n    100\n    \"\"\"\n\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    # The number of collisions is equal to the number of pairs of cars that can collide\n    # If there are n cars moving in one direction, there are n cars moving in the opposite direction\n    # So, the total number of collisions is n * n = n^2\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    # Each car moving left to right will collide with all cars moving right to left\n    # Therefore, the number of collisions is equal to the product of the number of cars moving left to right and the number of cars moving right to left\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    # Each car moving left to right will collide with every car moving right to left.\n    # So the number of collisions is n * n.\n\n    return n * n",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n*n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    \"\"\"\n    Calculate the number of collisions that will occur between n cars\n    moving left to right and n cars moving right to left on an infinitely\n    long straight road.\n\n    Parameters:\n    n (int): The number of cars moving in each direction.\n\n    Returns:\n    int: The number of collisions that will occur.\n\n    Examples:\n    car_race_collision(10) -> 100\n    car_race_collision(2) -> 4\n    \"\"\"\n\n    # Each car moving left to right will collide with every car moving right to left\n    # So the number of collisions will be n * n\n    collisions = n * n\n\n    return collisions",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    # Each car moving left to right will collide with every car moving right to left.\n    # So the total number of collisions will be equal to the product of n and n.\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    # Each car moving in one direction will collide with each car moving in the other direction.\n    # So the total number of collisions will be the product of the number of cars moving in one direction\n    # and the number of cars moving in the other direction.\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n**2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    # Each car moving left to right will collide with each car moving right to left\n    # Therefore, the number of collisions is equal to the product of the number of cars moving left to right and the number of cars moving right to left\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    # Each car moving left to right will collide with all n cars moving right to left.\n    # Therefore, the total number of collisions is n * n.\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    # Each left to right car will collide with all right to left cars\n    # So the total number of collisions will be n * n\n    return n * n",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def car_race_collision(n: int):\n    # The number of collisions is the square of n\n    return n**2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n ** 2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n**2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n**2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n ** 2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n * n",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n**2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    # The number of collisions can be calculated by the formula n^2, because each car\n    # moving left to right will collide with each car moving right to left\n    return n**2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int) -> int:\n    return n ** 2",
+            "logp": null
+        },
+        {
+            "content": "def car_race_collision(n: int):\n    return n * n",
+            "logp": null
+        }
+    ]
+}

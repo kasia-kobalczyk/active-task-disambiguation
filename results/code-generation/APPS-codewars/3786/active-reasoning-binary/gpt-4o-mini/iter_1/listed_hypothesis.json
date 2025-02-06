@@ -1,0 +1,186 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = PATTERNS[0].sub(change, txt)\n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = PATTERNS[1].sub(change, txt)\n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = PATTERNS[2].sub(change, txt)\n    \n    # Week 4\n    txt = PATTERNS[3].sub(change, txt)\n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = PATTERNS[4].sub(change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = PATTERNS[0].sub(change, txt)\n    if week < 2:\n        return txt\n\n    # Week 2\n    txt = PATTERNS[1].sub(change, txt)\n    if week < 3:\n        return txt\n\n    # Week 3\n    txt = PATTERNS[2].sub(change, txt)\n    txt = re.sub(r'([a-zA-Z])\\1+', r'\\1', txt)  # Remove double letters\n\n    if week < 4:\n        return txt\n\n    # Week 4\n    txt = PATTERNS[3].sub(change, txt)\n    if week < 5:\n        return txt\n\n    # Week 5\n    txt = PATTERNS[4].sub(change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = PATTERNS[0].sub(change, txt)\n\n    if week < 2:\n        return txt\n\n    # Week 2\n    txt = PATTERNS[1].sub(change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3\n    # Remove trailing 'e' except for 2 or 3 letter words\n    words = txt.split()\n    for i in range(len(words)):\n        if len(words[i]) > 3 and words[i].endswith('e'):\n            words[i] = words[i][:-1]\n    txt = ' '.join(words)\n\n    # Replace double letters with single letters\n    txt = PATTERNS[2].sub(change, txt)\n\n    if week < 4:\n        return txt\n\n    # Week 4\n    txt = PATTERNS[3].sub(change, txt)\n\n    if week < 5:\n        return txt\n\n    # Week 5\n    txt = PATTERNS[4].sub(change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week >= 1:\n        txt = PATTERNS[0].sub(change, txt)\n    if week >= 2:\n        txt = PATTERNS[1].sub(change, txt)\n    if week >= 3:\n        txt = PATTERNS[2].sub(change, txt)\n    if week >= 4:\n        txt = PATTERNS[3].sub(change, txt)\n    if week >= 5:\n        txt = PATTERNS[4].sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    \n    if week >= 1:\n        txt = PATTERNS[0].sub(change, txt)\n    \n    if week >= 2:\n        txt = PATTERNS[1].sub(change, txt)\n\n    if week >= 3:\n        txt = re.sub(r'(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b', '', txt)\n        txt = re.sub(r'([a-z])\\1', r'\\1', txt)\n\n    if week >= 4:\n        txt = PATTERNS[3].sub(change, txt)\n    \n    if week >= 5:\n        txt = PATTERNS[4].sub(change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    \n    txt = txt.replace(\"ci\", \"si\").replace(\"Ce\", \"Se\").replace(\"CI\", \"SI\")\n    txt = txt.replace(\"ce\", \"se\").replace(\"Ce\", \"Se\").replace(\"CE\", \"SE\")\n    txt = re.sub(r'c(?!h)', 'k', txt, flags=re.IGNORECASE)\n    \n    if week >= 2:\n        txt = txt.replace(\"ph\", \"f\").replace(\"Ph\", \"F\").replace(\"PH\", \"F\")\n\n    if week >= 3:\n        words = txt.split()\n        for i in range(len(words)):\n            word = words[i]\n            if len(word) > 3:\n                if word.endswith('e'):\n                    word = word[:-1]\n            word = re.sub(r'(.)\\1+', r'\\1', word)  # Replace double letters\n            words[i] = word\n        txt = ' '.join(words)\n\n    if week >= 4:\n        txt = txt.replace(\"th\", \"z\").replace(\"Th\", \"Z\").replace(\"TH\", \"Z\")\n        txt = txt.replace(\"wr\", \"r\").replace(\"Wr\", \"R\").replace(\"WR\", \"R\")\n        txt = txt.replace(\"wh\", \"v\").replace(\"Wh\", \"V\").replace(\"WH\", \"V\")\n        txt = txt.replace(\"w\", \"v\").replace(\"W\", \"V\")\n\n    if week >= 5:\n        words = txt.split()\n        for i in range(len(words)):\n            word = words[i]\n            if word.endswith(\"ou\"):\n                word = word[:-2] + \"u\"\n            elif word.endswith(\"an\"):\n                word = word[:-2] + \"un\"\n            elif word.endswith(\"ing\"):\n                word = word[:-3] + \"ink\"\n            if i == 0 and word.startswith(\"sm\"):\n                word = \"schm\" + word[2:]\n            words[i] = word\n        txt = ' '.join(words)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week >= 1:\n        txt = PATTERNS[0].sub(change, txt)\n    if week >= 2:\n        txt = PATTERNS[1].sub(change, txt)\n    if week >= 3:\n        txt = PATTERNS[2].sub(lambda m: '' if m.group(1) is None else m.group(1), txt)\n    if week >= 4:\n        txt = PATTERNS[3].sub(change, txt)\n    if week >= 5:\n        txt = PATTERNS[4].sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = PATTERNS[0].sub(change, txt)\n\n    if week < 2:\n        return txt\n\n    # Week 2\n    txt = PATTERNS[1].sub(change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3\n    txt = PATTERNS[2].sub(change, txt)\n\n    # Remove trailing 'e' for words longer than 3 letters\n    txt = re.sub(r'\\b(\\w{4,})e\\b', r'\\1', txt)\n\n    # Reduce double letters\n    txt = re.sub(r'(.)\\1+', r'\\1', txt)\n\n    if week < 4:\n        return txt\n\n    # Week 4\n    txt = PATTERNS[3].sub(change, txt)\n\n    if week < 5:\n        return txt\n\n    # Week 5\n    txt = PATTERNS[4].sub(change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week >= 1:\n        txt = PATTERNS[0].sub(change, txt)\n    if week >= 2:\n        txt = PATTERNS[1].sub(change, txt)\n    if week >= 3:\n        txt = PATTERNS[2].sub(lambda m: m.group(1) if m.group(1) else \"\", txt)\n    if week >= 4:\n        txt = PATTERNS[3].sub(change, txt)\n    if week >= 5:\n        txt = PATTERNS[4].sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week >= 1:\n        txt = PATTERNS[0].sub(change, txt)\n    if week >= 2:\n        txt = PATTERNS[1].sub(change, txt)\n    if week >= 3:\n        txt = PATTERNS[2].sub(change, txt)\n        words = txt.split()\n        txt = ' '.join([word[:-1] if len(word) > 3 and word.endswith('e') else word for word in words])\n        txt = re.sub(r'(.)\\1+', r'\\1', txt)\n    if week >= 4:\n        txt = PATTERNS[3].sub(change, txt)\n    if week >= 5:\n        txt = PATTERNS[4].sub(change, txt)\n\n    return txt\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    if week < 4:\n        return txt\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n    \n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    # Week 4\n    if week < 4:\n        return txt\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    # Week 5\n    if week < 5:\n        return txt\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    # Remove trailing e for non 2 or 3 letter words\n    txt = re.sub(r'\\b[a-zA-Z]{4,}e\\b', lambda m: m.group(0)[:-1], txt)\n\n    if week < 4:\n        return txt\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n    \n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    if week >= 1:\n        txt = re.sub(PATTERNS[0], change, txt)\n    if week >= 2:\n        txt = re.sub(PATTERNS[1], change, txt)\n    if week >= 3:\n        txt = re.sub(PATTERNS[2], change, txt)\n    if week >= 4:\n        txt = re.sub(PATTERNS[3], change, txt)\n    if week >= 5:\n        txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n\n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n\n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    if week < 5:\n        return txt\n\n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    if week < 4:\n        return txt\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n    \n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n\n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n\n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n\n    if week < 4:\n        return txt\n\n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    if week < 5:\n        return txt\n\n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1:\n        return txt\n    \n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    if week < 4:\n        return txt\n    \n    txt = re.sub(PATTERNS[3], change, txt)\n    \n    if week < 5:\n        return txt\n    \n    txt = re.sub(PATTERNS[4], change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1:\n        return txt\n    \n    if week >= 1:\n        txt = re.sub(PATTERNS[0], change, txt)\n        \n    if week >= 2:\n        txt = re.sub(PATTERNS[1], change, txt)\n        \n    if week >= 3:\n        txt = re.sub(PATTERNS[2], change, txt)\n        \n    if week >= 4:\n        txt = re.sub(PATTERNS[3], change, txt)\n        \n    if week >= 5:\n        txt = re.sub(PATTERNS[4], change, txt)\n        \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = re.sub(PATTERNS[0], change, txt)  # Week 1\n        elif i == 2:\n            txt = re.sub(PATTERNS[1], change, txt)  # Week 2\n        elif i == 3:\n            txt = re.sub(PATTERNS[2], change, txt)  # Week 3\n            # Remove trailing 'e' for words longer than 3 letters\n            txt = ' '.join([word[:-1] if len(word) > 3 and word.endswith('e') else word for word in txt.split()])\n        elif i == 4:\n            txt = re.sub(PATTERNS[3], change, txt)  # Week 4\n        elif i == 5:\n            txt = re.sub(PATTERNS[4], change, txt)  # Week 5\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    \n    patterns = [re.compile(r'(?i)ci|ce|c(?!h)'),\n                re.compile(r'(?i)ph'),\n                re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n                re.compile(r'(?i)th|w[rh]?'),\n                re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n    \n    for i in range(week):\n        txt = patterns[i].sub(change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n\n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n\n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    if week < 5:\n        return txt\n\n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    if week < 4:\n        return txt\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n    \n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    # Week 4\n    if week < 4:\n        return txt\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    # Week 5\n    if week < 5:\n        return txt\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n    \n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    # Week 2\n    if week > 1:\n        txt = re.sub(PATTERNS[1], change, txt)\n    # Week 3\n    if week > 2:\n        txt = re.sub(PATTERNS[2], change, txt)\n        txt = re.sub(r'(?i)([a-z])\\1', r'\\1', txt)  # reduce double letters\n    # Week 4\n    if week > 3:\n        txt = re.sub(PATTERNS[3], change, txt)\n    # Week 5\n    if week > 4:\n        txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    for i in range(1, week + 1):\n        if i == 1:\n            txt = re.sub(PATTERNS[0], change, txt)\n        elif i == 2:\n            txt = re.sub(PATTERNS[1], change, txt)\n        elif i == 3:\n            txt = re.sub(PATTERNS[2], change, txt)\n            words = txt.split()\n            txt = ' '.join(word[:-1] if len(word) > 3 and word.endswith('e') else word for word in words)\n            txt = re.sub(r'(.)\\1+', r'\\1', txt)\n        elif i == 4:\n            txt = re.sub(PATTERNS[3], change, txt)\n        elif i == 5:\n            txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week >= 3:\n        # Week 3\n        txt = re.sub(PATTERNS[2], change, txt)\n        \n    if week >= 4:\n        # Week 4\n        txt = re.sub(PATTERNS[3], change, txt)\n\n    if week == 5:\n        # Week 5\n        txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n\n    if week >= 1:\n        txt = re.sub(PATTERNS[0], change, txt)\n\n    if week >= 2:\n        txt = re.sub(PATTERNS[1], change, txt)\n\n    if week >= 3:\n        txt = re.sub(PATTERNS[2], change, txt)\n\n    if week >= 4:\n        txt = re.sub(PATTERNS[3], change, txt)\n\n    if week == 5:\n        txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n    \n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n\n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1 replacements\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2 replacements\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3 replacements\n    txt = re.sub(PATTERNS[2], change, txt)\n\n    if week < 4:\n        return txt\n    \n    # Week 4 replacements\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    if week < 5:\n        return txt\n    \n    # Week 5 replacements\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    if week < 4:\n        return txt\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n    \n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    # Week 4\n    if week < 4:\n        return txt\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    # Week 5\n    if week < 5:\n        return txt\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n    \n    for i in range(1, week + 1):\n        if i == 1:\n            txt = re.sub(PATTERNS[0], change, txt)\n        elif i == 2:\n            txt = re.sub(PATTERNS[1], change, txt)\n        elif i == 3:\n            txt = re.sub(PATTERNS[2], change, txt)\n            txt = re.sub(r'([a-z])\\1', r'\\1', txt)  # Remove double letters\n        elif i == 4:\n            txt = re.sub(PATTERNS[3], change, txt)\n        elif i == 5:\n            txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt.rstrip('e') if week == 3 else txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    if week >= 1:\n        txt = re.sub(PATTERNS[0], change, txt)\n    if week >= 2:\n        txt = re.sub(PATTERNS[1], change, txt)\n    if week >= 3:\n        txt = re.sub(PATTERNS[2], change, txt)\n        words = txt.split()\n        txt = ' '.join(word[:-1] if len(word) > 3 and word.endswith('e') else word for word in words)\n        txt = re.sub(r'(?i)([a-z])\\1', r'\\1', txt)  # remove double letters\n    if week >= 4:\n        txt = re.sub(PATTERNS[3], change, txt)\n    if week >= 5:\n        txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    # Week 2\n    if week > 1:\n        txt = re.sub(PATTERNS[1], change, txt)\n    # Week 3\n    if week > 2:\n        txt = re.sub(PATTERNS[2], change, txt)\n    # Week 4\n    if week > 3:\n        txt = re.sub(PATTERNS[3], change, txt)\n    # Week 5\n    if week > 4:\n        txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    if week >= 1:\n        txt = re.sub(PATTERNS[0], change, txt)\n\n    if week >= 2:\n        txt = re.sub(PATTERNS[1], change, txt)\n\n    if week >= 3:\n        txt = re.sub(PATTERNS[2], change, txt)\n        \n    if week >= 4:\n        txt = re.sub(PATTERNS[3], change, txt)\n\n    if week >= 5:\n        txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n\n    if week >= 1:\n        txt = re.sub(PATTERNS[0], change, txt)\n\n    if week >= 2:\n        txt = re.sub(PATTERNS[1], change, txt)\n\n    if week >= 3:\n        txt = re.sub(PATTERNS[2], change, txt)\n\n    if week >= 4:\n        txt = re.sub(PATTERNS[3], change, txt)\n\n    if week == 5:\n        txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n    \n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    if week < 4:\n        return txt\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n    \n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    if week < 1 or week > 5:\n        return txt\n    \n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n    \n    if week < 2:\n        return txt\n    \n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n    \n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n    \n    # Remove trailing e's except for 2 and 3 letter words\n    txt = re.sub(r'\\b\\w{4,}\\w*e\\b', lambda m: m.group(0)[:-1], txt)\n\n    if week < 4:\n        return txt\n    \n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    if week < 5:\n        return txt\n    \n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    if week < 1 or week > 5:\n        return txt\n\n    # Week 1\n    txt = re.sub(PATTERNS[0], change, txt)\n\n    # Week 2\n    txt = re.sub(PATTERNS[1], change, txt)\n\n    if week < 3:\n        return txt\n\n    # Week 3\n    txt = re.sub(PATTERNS[2], change, txt)\n\n    if week < 4:\n        return txt\n\n    # Week 4\n    txt = re.sub(PATTERNS[3], change, txt)\n\n    if week < 5:\n        return txt\n\n    # Week 5\n    txt = re.sub(PATTERNS[4], change, txt)\n\n    return txt\n```",
+            "logp": null
+        }
+    ]
+}

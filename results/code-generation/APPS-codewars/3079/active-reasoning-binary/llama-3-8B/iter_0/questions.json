@@ -1,0 +1,37 @@
+{
+    "0": [
+        "assert big_primefac_div(-1800.1) == \"The number has a decimal part. No Results\", f\"Expected big_primefac_div(-1800.1) to return 'The number has a decimal part. No Results', but got {big_primefac_div(-1800.1)}\"",
+        "assert big_primefac_div(-1800) == [5, 900], f\"Expected big_primefac_div(-1800) to return [5, 900], but got {big_primefac_div(-1800)}\"",
+        "assert big_primefac_div(1969) == [179, 179], f\"Expected big_primefac_div(1969) to return [179, 179], but got {big_primefac_div(1969)}\"",
+        "assert big_primefac_div(997) == [], f\"Expected big_primefac_div(997) to return [], but got {big_primefac_div(997)}\"",
+        "assert big_primefac_div(-1800.00) == [5, 900], f\"Expected big_primefac_div(-1800.00) to return [5, 900], but got {big_primefac_div(-1800.00)}\""
+    ],
+    "1": [
+        "assert big_primefac_div(-1800.1) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(9999) == [7, 1429]",
+        "assert big_primefac_div(-1800.0) == [5, 900]",
+        "assert big_primefac_div(-1800) == [5, 900]",
+        "assert big_primefac_div(2342) == [7, 334]",
+        "assert big_primefac_div(1969) == [179, 179]",
+        "assert big_primefac_div(150) == [3, 50]"
+    ],
+    "2": [
+        "assert big_primefac_div(625) == [5, 125]",
+        "assert big_primefac_div(999) == [3, 333]",
+        "assert big_primefac_div(2342) == [7, 334]",
+        "assert big_primefac_div(-150) == [3, 50]",
+        "assert big_primefac_div(-500) == [5, 250]",
+        "assert big_primefac_div(1200) == [3, 400]",
+        "assert big_primefac_div(1179.0) == \"The number has a decimal part. No Results\""
+    ],
+    "3": [
+        "assert big_primefac_div(3845) == [13, 295]",
+        "assert big_primefac_div(999) == [3, 333]",
+        "assert big_primefac_div(4321) == []",
+        "assert big_primefac_div(39191) == [7, 5587]",
+        "assert big_primefac_div(1969) == [179, 179]",
+        "assert big_primefac_div(1200) == [3, 400]",
+        "assert big_primefac_div(-8.00) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(-999) == [3, 333]"
+    ]
+}

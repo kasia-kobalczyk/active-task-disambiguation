@@ -1,0 +1,37 @@
+{
+    "0": [
+        "assert inverseMod(3, 5) == 2",
+        "assert inverseMod(5, 11) == 9",
+        "assert inverseMod(7, 15) == None\n# Explanation: 7 and 15 are not coprime, so there is no inverse mod 15 for 7.",
+        "assert inverseMod(7, 11) == 8",
+        "assert inverseMod(10, 25) == 5",
+        "assert inverseMod(12, 35) == 3",
+        "assert inverseMod(3, 7) == 5",
+        "assert inverseMod(4, 9) == 7",
+        "assert inverseMod(6, 13) == 11"
+    ],
+    "1": [
+        "assert inverseMod(2, 7) == 4",
+        "assert inverseMod(5, 9) == 2",
+        "assert inverseMod(5, 13) == 8",
+        "assert inverseMod(6, 16) == 14",
+        "assert inverseMod(4, 11) == 3",
+        "assert inverseMod(4, 9) == 7",
+        "assert inverseMod(6, 13) == 11",
+        "assert inverseMod(10, 17) == 12"
+    ],
+    "2": [
+        "assert inverseMod(9, 13) == 3",
+        "assert inverseMod(7, 11) == 8",
+        "assert inverseMod(9, 16) == 1",
+        "assert inverseMod(5, 10) == None",
+        "assert inverseMod(4, 9) == 7"
+    ],
+    "3": [
+        "assert inverseMod(5, 5) == None",
+        "assert inverseMod(7, 11) == 8",
+        "assert inverseMod(5, 15) == 8",
+        "assert inverseMod(1, 1) == None",
+        "assert inverseMod(-3, 5) == 2"
+    ]
+}

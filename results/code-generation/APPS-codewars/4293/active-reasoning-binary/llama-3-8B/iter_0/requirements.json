@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert calculate_1RM(80, 8) == 95, f\"Expected calculate_1RM(80, 8) to return 95, but got {calculate_1RM(80, 8)}\"",
+        false
+    ],
+    "1": [
+        "assert calculate_1RM(100, 3) == 112",
+        true
+    ],
+    "2": [
+        "assert calculate_1RM(50, 3) == 64",
+        false
+    ],
+    "3": [
+        "assert calculate_1RM(100, 8) == 130",
+        false
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert cycpattern_check(\"hello\", \"llohe\") == True",
+        "assert cycpattern_check(\"abcde\", \"deabc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"defabc\") == True",
+        "assert cycpattern_check(\"hello\", \"ohell\") == True",
+        "assert cycpattern_check(\"abcde\", \"xyz\") == False",
+        "assert cycpattern_check(\"rotation\", \"tationro\") == True",
+        "assert cycpattern_check(\"python\", \"onpyt\") == False",
+        "assert cycpattern_check(\"abcde\", \"cde\") == True"
+    ],
+    "1": [
+        "assert cycpattern_check(\"hello\", \"llohe\") == True",
+        "assert cycpattern_check(\"rotation\", \"tation\") == True",
+        "assert cycpattern_check(\"abcde\", \"deabc\") == True",
+        "assert cycpattern_check(\"python\", \"onpyth\") == True",
+        "assert cycpattern_check(\"abcdef\", \"cde\") == True",
+        "assert cycpattern_check(\"hello\", \"llo\") == True",
+        "assert cycpattern_check(\"python\", \"onpyth\") == False",
+        "assert cycpattern_check(\"abcde\", \"cde\") == True"
+    ],
+    "2": [
+        "assert cycpattern_check(\"abcde\", \"deabc\") == True",
+        "assert cycpattern_check(\"substring\", \"stringsub\") == False",
+        "assert cycpattern_check(\"openai\", \"aiopen\") == True",
+        "assert cycpattern_check(\"testing\", \"stingt\") == True",
+        "assert cycpattern_check(\"rotation\", \"tionrota\") == True",
+        "assert cycpattern_check(\"abcdefg\", \"efgabc\") == True",
+        "assert cycpattern_check(\"python\", \"onpyth\") == False",
+        "assert cycpattern_check(\"rotation\", \"tationro\") == True"
+    ],
+    "3": [
+        "assert cycpattern_check(\"abcdefgh\", \"cdefg\") == True",
+        "assert cycpattern_check(\"testcase\", \"caset\") == False",
+        "assert cycpattern_check(\"stringtest\", \"teststring\") == True",
+        "assert cycpattern_check(\"hello\", \"ohell\") == True",
+        "assert cycpattern_check(\"python\", \"onpyth\") == False",
+        "assert cycpattern_check(\"abcdefg\", \"fgabc\") == True",
+        "assert cycpattern_check(\"rotation\", \"ationrot\") == True",
+        "assert cycpattern_check(\"rotation\", \"tationro\") == True"
+    ]
+}

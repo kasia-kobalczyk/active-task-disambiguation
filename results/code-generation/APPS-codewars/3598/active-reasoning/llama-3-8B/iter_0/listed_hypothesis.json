@@ -1,0 +1,62 @@
+{
+    "0": [
+        {
+            "content": "def plane_seat(a):\n    if a > 60 or (a < 1 or a % 10 > 6) or (a < 21 and (ord('I') <= ord(str(a % 10)[0]) <= ord('K'))) or (a > 20 and a % 10 < 4):\n        return 'No Seat!!'\n    if a < 21:\n        return str(a) + '-' + 'Front-' + 'Left' if a % 10 < 3 else 'Front-' + 'Right'\n    if a < 41:\n        return str(a) + '-' + 'Middle-' + 'Left' if a % 10 < 4 else 'Middle-' + 'Right'\n    return str(a) + '-' + 'Back-' + 'Left' if a % 10 < 4 else 'Back-' + 'Right'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    if a > 60 or (a < 1 or a % 10 > 6) or (a < 21 and (ord('I') <= ord(str(a % 10)[0]) <= ord('K'))) or (a > 20 and a % 10 < 4):\n        return 'No Seat!!'\n    if a < 21:\n        return str(a) + '-' + 'Front-' + 'Left' if a % 10 < 3 else 'Front-' + 'Right'\n    if a < 41:\n        return str(a) + '-' + 'Middle-' + 'Left' if a % 10 < 4 else 'Middle-' + 'Right'\n    return str(a) + '-' + 'Back-' + 'Left' if a % 10 < 4 else 'Back-' + 'Right'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    if a > 60 or (a < 1 or a % 10 > 6) or (a < 21 and (ord('I') <= ord(str(a % 10)[0]) <= ord('K'))) or (a > 20 and a % 10 < 4):\n        return 'No Seat!!'\n    if a < 21:\n        return str(a) + '-' + 'Front-' + 'Left' if a % 10 < 3 else 'Front-' + 'Right'\n    if a < 41:\n        return str(a) + '-' + 'Middle-' + 'Left' if a % 10 < 4 else 'Middle-' + 'Right'\n    return str(a) + '-' + 'Back-' + 'Left' if a % 10 < 4 else 'Back-' + 'Right'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    if a > 60 or (a < 1 or a % 10 > 6) or (a < 21 and (ord('I') <= ord(str(a % 10)[0]) <= ord('K'))) or (a > 20 and a % 10 < 4):\n        return 'No Seat!!'\n    if a < 21:\n        return str(a) + '-' + 'Front-' + 'Left' if a % 10 < 3 else 'Front-' + 'Right'\n    if a < 41:\n        return str(a) + '-' + 'Middle-' + 'Left' if a % 10 < 4 else 'Middle-' + 'Right'\n    return str(a) + '-' + 'Back-' + 'Left' if a % 10 < 4 else 'Back-' + 'Right'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    if a > 60 or (a < 1 or a % 10 > 6) or (a < 21 and (ord('I') <= ord(str(a % 10)[0]) <= ord('K'))) or (a > 20 and a % 10 < 4):\n        return 'No Seat!!'\n    if a < 21:\n        return str(a) + '-' + 'Front-' + 'Left' if a % 10 < 3 else 'Front-' + 'Right'\n    if a < 41:\n        return str(a) + '-' + 'Middle-' + 'Left' if a % 10 < 4 else 'Middle-' + 'Right'\n    return str(a) + '-' + 'Back-' + 'Left' if a % 10 < 4 else 'Back-' + 'Right'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    if not isinstance(a, str) or len(a) != 3:\n        return 'No Seat!!'\n    section = int(a[0])\n    if section < 1 or section > 60:\n        return 'No Seat!!'\n    letter = a[1]\n    if letter in ['I', 'J']:\n        return 'No Seat!!'\n    if section < 21:\n        return f'Front-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    elif section < 41:\n        return f'Middle-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    else:\n        return f'Back-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    if not isinstance(a, str) or len(a) != 3:\n        return 'No Seat!!'\n    section = int(a[0])\n    if section < 1 or section > 60:\n        return 'No Seat!!'\n    letter = a[1]\n    if letter in ['I', 'J']:\n        return 'No Seat!!'\n    if section < 21:\n        return f'Front-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    elif section < 41:\n        return f'Middle-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    else:\n        return f'Back-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    if not isinstance(a, str) or len(a) != 3:\n        return 'No Seat!!'\n    section = int(a[0])\n    if section < 1 or section > 60:\n        return 'No Seat!!'\n    letter = a[1]\n    if letter in ['I', 'J']:\n        return 'No Seat!!'\n    if section < 21:\n        return f'Front-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    elif section < 41:\n        return f'Middle-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    else:\n        return f'Back-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    if not isinstance(a, str) or len(a) != 3:\n        return 'No Seat!!'\n    section = int(a[0])\n    if section < 1 or section > 60:\n        return 'No Seat!!'\n    letter = a[1]\n    if letter in ['I', 'J']:\n        return 'No Seat!!'\n    if section < 21:\n        return f'Front-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    elif section < 41:\n        return f'Middle-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    else:\n        return f'Back-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'",
+            "logp": null
+        },
+        {
+            "content": "def plane_seat(a):\n    if not isinstance(a, str) or len(a) != 3:\n        return 'No Seat!!'\n    section = int(a[0])\n    if section < 1 or section > 60:\n        return 'No Seat!!'\n    letter = a[1]\n    if letter in ['I', 'J']:\n        return 'No Seat!!'\n    if section < 21:\n        return f'Front-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    elif section < 41:\n        return f'Middle-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'\n    else:\n        return f'Back-{{\"Left\" if \"ABC\".index(letter) < 3 else \"Right\"} *}'",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def plane_seat(a):\n    seat_no, letter = int(a[:-1]), a[-1]\n    if seat_no < 1 or seat_no > 60:\n        return 'No Seat!!'\n    if letter in ['I', 'J']:\n        return 'No Seat!!'\n    if seat_no < 21:\n        section = 'Front'\n    elif seat_no < 41:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if letter in ['A', 'B', 'C']:\n        cluster = 'Left'\n    elif letter in ['D', 'E', 'F']:\n        cluster = 'Middle'\n    else:\n        cluster = 'Right'\n    return f'{section}-{cluster}'",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def plane_seat(a):\n    seat_no, letter = int(a[:-1]), a[-1]\n    if seat_no < 1 or seat_no > 60:\n        return 'No Seat!!'\n    if letter in ['I', 'J']:\n        return 'No Seat!!'\n    if seat_no < 21:\n        section = 'Front'\n    elif seat_no < 41:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if letter in ['A', 'B', 'C']:\n        cluster = 'Left'\n    elif letter in ['D', 'E', 'F']:\n        cluster = 'Middle'\n    else:\n        cluster = 'Right'\n    return f'{section}-{cluster}'",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def plane_seat(a):\n    seat_no, letter = int(a[:-1]), a[-1]\n    if seat_no < 1 or seat_no > 60:\n        return 'No Seat!!'\n    if letter in ['I', 'J']:\n        return 'No Seat!!'\n    if seat_no < 21:\n        section = 'Front'\n    elif seat_no < 41:\n        section = 'Middle'\n    else:\n        section = 'Back'\n    if letter in ['A', 'B', 'C']:\n        location = 'Left'\n    elif letter in ['D', 'E', 'F']:\n        location = 'Middle'\n    else:\n        location = 'Right'\n    return f'{section}-{location}'",
+            "logp": null
+        }
+    ]
+}

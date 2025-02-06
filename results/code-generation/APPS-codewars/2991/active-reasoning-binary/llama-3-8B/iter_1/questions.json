@@ -1,0 +1,31 @@
+{
+    "0": [
+        "assert not_so_random(5, 0) == \"Black\"",
+        "assert not_so_random(1, 1) == \"Unsure\"",
+        "assert not_so_random(3, 2) == \"Unsure\"",
+        "assert not_so_random(0, 1) == \"White\""
+    ],
+    "1": [
+        "assert not_so_random(3, 2) == \"Unsure\"",
+        "assert not_so_random(0, 1) == \"White\"",
+        "assert not_so_random(5, 5) == \"Black\"",
+        "assert not_so_random(2, 3) == \"White\"",
+        "assert not_so_random(0, 5) == \"White\"",
+        "assert not_so_random(1, 1) == \"Unsure\"",
+        "assert not_so_random(7, 0) == \"Black\""
+    ],
+    "2": [
+        "assert not_so_random(2, 3) == \"White\"",
+        "assert not_so_random(10**9, 0) == \"Black\"",
+        "assert not_so_random(0, 0) == \"Unsure\"",
+        "assert not_so_random(3, 2) == \"Black\"",
+        "assert not_so_random(1, 1) == \"Unsure\""
+    ],
+    "3": [
+        "assert not_so_random(5, 10) == \"White\"",
+        "assert not_so_random(10, 5) == \"Black\"",
+        "assert not_so_random(7, 3) == \"White\"",
+        "assert not_so_random(0, 0) == \"Unsure\"",
+        "assert not_so_random(1, 1) == \"Unsure\""
+    ]
+}

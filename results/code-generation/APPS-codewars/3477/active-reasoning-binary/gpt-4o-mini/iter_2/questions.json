@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert sort_string(\"grape\", \"gpe\") == \"gpear\"",
+        "assert sort_string(\"hello\", \"ol\") == \"llohe\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"cherry\", \"rc\") == \"rrchery\"",
+        "assert sort_string(\"apple\", \"plae\") == \"aple\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"apple\", \"ple\") == \"ppale\""
+    ],
+    "1": [
+        "assert sort_string(\"python\", \"noht\") == \"nhopty\"",
+        "assert sort_string(\"apple\", \"ple\") == \"pplea\"",
+        "assert sort_string(\"zebra\", \"aeb\") == \"aebrz\"",
+        "assert sort_string(\"hello world\", \"lhw\") == \"hlloorw d\"",
+        "assert sort_string(\"apple\", \"plea\") == \"aelpp\"",
+        "assert sort_string(\"abcdef\", \"xyz\") == \"abcdef\"",
+        "assert sort_string(\"testcase\", \"set\") == \"eesttc\"",
+        "assert sort_string(\"hello\", \"olh\") == \"lloeh\""
+    ],
+    "2": [
+        "assert sort_string(\"zebra\", \"ebrz\") == \"ebrz\"",
+        "assert sort_string(\"abcd\", \"dcba\") == \"dcba\"",
+        "assert sort_string(\"hello\", \"leho\") == \"ehlol\"",
+        "assert sort_string(\"cherry\", \"ryc\") == \"rryc\"",
+        "assert sort_string(\"hello\", \"lo\") == \"llohe\"",
+        "assert sort_string(\"xyz\", \"abc\") == \"xyz\"",
+        "assert sort_string(\"testcase\", \"tsca\") == \"ttsscaee\"",
+        "assert sort_string(\"apple\", \"xyz\") == \"apple\""
+    ],
+    "3": [
+        "assert sort_string(\"abcd\", \"dcba\") == \"dcba\"",
+        "assert sort_string(\"hello\", \"lo\") == \"llohe\"",
+        "assert sort_string(\"abcdef\", \"fbc\") == \"bcfade\"",
+        "assert sort_string(\"xyz\", \"abc\") == \"xyz\"",
+        "assert sort_string(\"testcase\", \"tsca\") == \"ttsscaee\"",
+        "assert sort_string(\"python\", \"on\") == \"onpyth\"",
+        "assert sort_string(\"racecar\", \"cra\") == \"aacrrce\""
+    ]
+}

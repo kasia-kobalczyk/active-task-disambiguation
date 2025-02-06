@@ -1,0 +1,47 @@
+{
+    "0": [
+        "assert cycpattern_check('programming', 'mingpro') == True",
+        "assert cycpattern_check(\"python\", \"python\") == True",
+        "assert cycpattern_check('programming', 'rogrammingp') == True",
+        "assert cycpattern_check('programming', 'ramg') == True",
+        "assert cycpattern_check(\"hello\", \"lohel\") == True",
+        "assert cycpattern_check('programming', 'pro') == False",
+        "assert cycpattern_check(\"coding\", \"gnidoc\") == False",
+        "assert cycpattern_check(\"hello\", \"elloh\") == True",
+        "assert cycpattern_check('programming', 'gram') == True",
+        "assert cycpattern_check(\"abcdef\", \"fabcde\") == True"
+    ],
+    "1": [
+        "assert cycpattern_check(\"abcdef\", \"xyz\") == False",
+        "assert cycpattern_check(\"abcdef\", \"defabc\") == True",
+        "assert cycpattern_check(\"programming\", \"gram\") == True",
+        "assert cycpattern_check(\"abcdef\", \"bcde\") == False",
+        "assert cycpattern_check(\"python\", \"thonpy\") == True",
+        "assert cycpattern_check(\"abcdefg\", \"gbcdefa\") == True",
+        "assert cycpattern_check(\"hello\", \"lohel\") == True",
+        "assert cycpattern_check(\"hello\", \"ohell\") == True",
+        "assert cycpattern_check(\"abcde\", \"deab\") == True",
+        "assert cycpattern_check(\"hello\", \"world\") == False"
+    ],
+    "2": [
+        "assert cycpattern_check(\"abcdef\", \"abcdefabcdef\") == False",
+        "assert cycpattern_check(\"abcdef\", \"dabcef\") == True",
+        "assert cycpattern_check(\"abcdef\", \"defabc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"abc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"efabcd\") == True",
+        "assert cycpattern_check(\"abcdef\", \"fde\") == True",
+        "assert cycpattern_check(\"abcdef\", \"def\") == True",
+        "assert cycpattern_check(\"abcdef\", \"efdcba\") == True",
+        "assert cycpattern_check(\"abcdef\", \"cba\") == True"
+    ],
+    "3": [
+        "assert cycpattern_check(\"abcdef\", \"\") == True",
+        "assert cycpattern_check(\"abcdef\", \"abc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"cdefab\") == True",
+        "assert cycpattern_check(\"abcdef\", \"efabc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"abcdef\") == True",
+        "assert cycpattern_check(\"abcdef\", \"cde\") == True",
+        "assert cycpattern_check(\"abcdef\", \"bcd\") == True\n# Explanation: \"bcd\" is a substring of \"abcdef\"",
+        "assert cycpattern_check(\"abcdef\", \"defabcdef\") == False"
+    ]
+}

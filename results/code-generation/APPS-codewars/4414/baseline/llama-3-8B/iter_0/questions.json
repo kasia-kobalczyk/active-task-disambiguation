@@ -1,0 +1,21 @@
+{
+    "0": [
+        "compare_versions(\"10.4.6\", \"10.4\")",
+        "compare_versions(\"10\", \"11\")",
+        "compare_versions(\"10.4\", \"10.10\")"
+    ],
+    "1": [
+        "compare_versions(\"11.1\", \"11.1.2.3\")",
+        "compare_versions(\"10.1\", \"10.2.3\")",
+        "compare_versions(\"10.4\", \"10.4.6\")"
+    ],
+    "2": [
+        "compare_versions(\"10.4\", \"10.4.6\")",
+        "compare_versions(\"10.99\", \"11\")",
+        "compare_versions(\"11.1\", \"11.1.2\")"
+    ],
+    "3": [
+        "compare_versions(\"10.99\", \"11\")",
+        "compare_versions(\"11.1\", \"11.1.2\")"
+    ]
+}

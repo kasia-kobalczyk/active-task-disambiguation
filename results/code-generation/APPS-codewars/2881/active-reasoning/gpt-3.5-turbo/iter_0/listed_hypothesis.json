@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    for i in range(len(digits)-2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    digits = digits[::-1]\n    for i in range(1, len(digits), 2):\n        digits[i] = digits[i] * 2\n        if digits[i] > 9:\n            digits[i] = digits[i] - 9\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = str(n)\n    n = [int(x) for x in n]\n    n = n[::-1]\n    for i in range(1, len(n), 2):\n        n[i] = n[i] * 2\n        if n[i] > 9:\n            n[i] = n[i] - 9\n    if sum(n) % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = str(n)\n    n = [int(x) for x in n]\n    n = n[::-1]\n    for i in range(1, len(n), 2):\n        n[i] = n[i] * 2\n        if n[i] > 9:\n            n[i] = n[i] - 9\n    return sum(n) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # convert the number to a list of digits\n    digits = [int(d) for d in str(n)]\n\n    # double every other digit starting from the second digit from the right\n    for i in range(len(digits)-2, -1, -2):\n        digits[i] *= 2\n\n        # if the resulting number is greater than 9, replace it with the sum of its own digits\n        if digits[i] > 9:\n            digits[i] = digits[i] - 9\n\n    # calculate the sum of all digits\n    total = sum(digits)\n\n    # check if the sum is divisible by 10\n    if total % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the number to a string\n    n = str(n)\n    \n    # Double every other digit, scanning from right to left, starting from the second digit\n    # Convert the string to a list of integers\n    digits = [int(x) for x in n]\n    # Reverse the list\n    digits = digits[::-1]\n    # Double every other digit\n    for i in range(1, len(digits), 2):\n        digits[i] *= 2\n    \n    # If a resulting number is greater than 9, replace it with the sum of its own digits\n    digits = [x - 9 if x > 9 else x for x in digits]\n    \n    # Sum all of the final digits\n    total = sum(digits)\n    \n    # Check if the sum is divisible by 10\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    doubled = []\n    \n    for i in range(len(digits)-2, -1, -2):\n        doubled.append(digits[i] * 2)\n        \n    for i in range(len(digits)-1, -1, -2):\n        doubled.append(digits[i])\n        \n    total = 0\n    \n    for digit in doubled:\n        if digit > 9:\n            total += digit - 9\n        else:\n            total += digit\n            \n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    \n    # Step 1: Double every other digit starting from the second digit from the right\n    for i in range(len(digits) - 2, -1, -2):\n        digits[i] *= 2\n        \n        # Step 2: If a resulting number is greater than 9, replace it with the sum of its own digits\n        if digits[i] > 9:\n            digits[i] = digits[i] - 9\n    \n    # Step 3: Sum all of the final digits\n    total = sum(digits)\n    \n    # Step 4: Check if the sum is divisible by 10\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the integer to a string\n    n = str(n)\n    \n    # Reverse the string\n    n = n[::-1]\n    \n    # Initialize the sum variable\n    total = 0\n    \n    # Iterate over each character in the string\n    for i in range(len(n)):\n        # Check if the index is odd\n        if i % 2 != 0:\n            # Double the digit and subtract 9 if it is greater than 9\n            digit = int(n[i]) * 2\n            if digit > 9:\n                digit -= 9\n        else:\n            # Keep the digit as is\n            digit = int(n[i])\n        \n        # Add the digit to the total\n        total += digit\n    \n    # Check if the total is divisible by 10\n    if total % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the number to a string\n    n = str(n)\n    \n    # Reverse the string\n    n = n[::-1]\n    \n    # Convert the string to a list of integers\n    digits = [int(x) for x in n]\n    \n    # Double every other digit starting from the second digit\n    doubled_digits = []\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            doubled_digits.append(digits[i] * 2)\n        else:\n            doubled_digits.append(digits[i])\n    \n    # Subtract 9 from any digits greater than 9\n    final_digits = []\n    for digit in doubled_digits:\n        if digit > 9:\n            final_digits.append(digit - 9)\n        else:\n            final_digits.append(digit)\n    \n    # Calculate the sum of the final digits\n    total = sum(final_digits)\n    \n    # Check if the total is divisible by 10\n    if total % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def validate(n):\n    # convert the number to a string and reverse it\n    n = str(n)[::-1]\n    # convert the string back to a list of integers\n    digits = [int(x) for x in n]\n    \n    # double every other digit, starting from the second digit\n    doubled_digits = [digits[i] * 2 if i % 2 == 1 else digits[i] for i in range(len(digits))]\n    \n    # if a doubled digit is greater than 9, subtract 9 from it\n    doubled_digits = [x - 9 if x > 9 else x for x in doubled_digits]\n    \n    # sum all the digits\n    total = sum(doubled_digits)\n    \n    # return True if the total is divisible by 10, False otherwise\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    \n    if len(digits) % 2 == 0:\n        for i in range(0, len(digits), 2):\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n    else:\n        for i in range(1, len(digits), 2):\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n    \n    sum_of_digits = sum(digits)\n    \n    return sum_of_digits % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the number to a string\n    n = str(n)\n    \n    # Check if the number has an even or odd number of digits\n    if len(n) % 2 == 0:\n        start = 0\n    else:\n        start = 1\n    \n    # Iterate through each digit, starting from the second rightmost digit\n    # Double every other digit and subtract 9 if the result is greater than 9\n    digits = []\n    for i in range(start, len(n), 2):\n        digit = int(n[i])\n        digit *= 2\n        if digit > 9:\n            digit -= 9\n        digits.append(digit)\n    \n    # Sum all the final digits\n    total = sum(digits)\n    \n    # Check if the total is divisible by 10\n    if total % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    for i in range(len(digits)-2, -1, -2):\n        digits[i] = sum(divmod(digits[i]*2, 10))\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    if len(digits) % 2 == 0:\n        doubled = [digits[i] * 2 if i % 2 == 0 else digits[i] for i in range(len(digits))]\n    else:\n        doubled = [digits[i] if i % 2 == 0 else digits[i] * 2 for i in range(len(digits))]\n    summed = [x if x < 10 else x - 9 for x in doubled]\n    total = sum(summed)\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = str(n)\n    digits = [int(x) for x in n]\n    digits = digits[::-1]\n\n    for i in range(1, len(digits), 2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    for i in range(len(digits)-2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)][::-1]\n    for i in range(1, len(digits), 2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    digits = [digits[i]*2 if i % 2 == 0 else digits[i] for i in range(len(digits))]\n    digits = [x-9 if x > 9 else x for x in digits]\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)] # convert integer to list of digits\n    digits = digits[::-1] # reverse the list of digits\n    for i in range(1, len(digits), 2): # double every other digit, starting from the second digit\n        digits[i] *= 2\n        if digits[i] > 9: # if the doubled digit is greater than 9, subtract 9 from it\n            digits[i] -= 9\n    sum_digits = sum(digits) # sum all the digits\n    if sum_digits % 10 == 0: # if the sum is divisible by 10, the number is valid\n        return True\n    else:\n        return False",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def validate(n):\n    # Convert the integer to a string and reverse it\n    num = str(n)[::-1]\n    # Start with a sum of 0\n    total = 0\n    # Iterate over each character in the reversed string\n    for i in range(len(num)):\n        # Get the current digit\n        digit = int(num[i])\n        # If the digit is at an even position, double it\n        if i % 2 == 1:\n            digit *= 2\n            # If the resulting number is greater than 9, subtract 9\n            if digit > 9:\n                digit -= 9\n        # Add the digit to the total\n        total += digit\n    # If the total is divisible by 10, the number is valid\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n\n    # Step 1: Convert the input number to a list of digits\n    digits = [int(x) for x in str(n)]\n\n    # Step 2: Double every other digit, starting from the second digit (from the right)\n    for i in range(len(digits)-2, -1, -2):\n        digits[i] = digits[i] * 2\n\n        # Step 3: If a resulting number is greater than 9, replace it with the sum of its own digits\n        if digits[i] > 9:\n            digits[i] = digits[i] - 9\n\n    # Step 4: Sum all of the digits\n    digit_sum = sum(digits)\n\n    # Step 5: Check if the sum is divisible by 10\n    if digit_sum % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the number to a string and reverse it\n    n = str(n)[::-1]\n\n    # Iterate over each digit and double every other digit starting from the second digit\n    doubled_digits = [int(n[i]) * 2 if i % 2 == 1 else int(n[i]) for i in range(len(n))]\n\n    # Replace the doubled digits with the sum of their own digits if they are greater than 9\n    summed_digits = [x - 9 if x > 9 else x for x in doubled_digits]\n\n    # Calculate the sum of all the final digits\n    total = sum(summed_digits)\n\n    # Check if the sum is divisible by 10\n    if total % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(d) for d in str(n)]\n    if len(digits) % 2 == 0:\n        digits = [d * 2 if i % 2 == 0 else d for i, d in enumerate(digits)]\n    else:\n        digits = [d * 2 if i % 2 != 0 else d for i, d in enumerate(digits)]\n    digits = [d - 9 if d > 9 else d for d in digits]\n    checksum = sum(digits)\n    return checksum % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    doubled = [digits[i] * (2 - (i % 2)) for i in range(len(digits))]\n    summed = [x if x <= 9 else (x % 10 + 1) for x in doubled]\n    return sum(summed) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = str(n)\n    digits = [int(d) for d in n]\n    digits = digits[::-1]\n    for i in range(1, len(digits), 2):\n        digits[i] = digits[i] * 2\n        if digits[i] > 9:\n            digits[i] = digits[i] - 9\n    total = sum(digits)\n    if total % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the number to a string and reverse it\n    num = str(n)[::-1]\n\n    # Start from the second digit (from right)\n    for i in range(1, len(num), 2):\n        # Double every other digit\n        digit = int(num[i]) * 2\n        # If the resulting number is greater than 9, subtract 9\n        if digit > 9:\n            digit -= 9\n        # Replace the digit in the original number\n        num = num[:i] + str(digit) + num[i+1:]\n\n    # Calculate the sum of all digits\n    total = sum(int(digit) for digit in num)\n\n    # Check if the sum is divisible by 10\n    if total % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    for i in range(len(digits)-2, -1, -2):\n        digits[i] = 2 * digits[i]\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the integer to a string and reverse it\n    n = str(n)[::-1]\n    \n    # Initialize the sum to 0\n    sum = 0\n    \n    # Iterate over the digits of the number\n    for i in range(len(n)):\n        # Convert the digit to an integer\n        digit = int(n[i])\n        \n        # Double every other digit, starting from the second digit (from the right)\n        if i % 2 == 1:\n            digit *= 2\n            \n            # If the resulting number is greater than 9, replace it with the sum of its own digits\n            if digit > 9:\n                digit -= 9\n                \n        # Add the digit to the sum\n        sum += digit\n    \n    # Check if the sum is divisible by 10\n    if sum % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the number to a string and reverse it\n    n = str(n)[::-1]\n\n    # Double every other digit, starting from the second digit\n    doubled_digits = [int(n[i]) * 2 if i % 2 == 1 else int(n[i]) for i in range(len(n))]\n\n    # Subtract 9 from doubled digits greater than 9\n    subtracted_digits = [d - 9 if d > 9 else d for d in doubled_digits]\n\n    # Sum all the digits\n    total = sum(subtracted_digits)\n\n    # Check if the sum is divisible by 10\n    return total % 10 == 0",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def validate(n):\n    # Convert the number to a string and reverse it\n    n = str(n)[::-1]\n\n    # Initialize the sum variable\n    sum = 0\n\n    # Iterate through each digit in the string\n    for i in range(len(n)):\n        # Convert the digit to an integer\n        digit = int(n[i])\n\n        # Double every other digit, starting with the second digit\n        if i % 2 != 0:\n            digit *= 2\n\n        # If the doubled digit is greater than 9, subtract 9 from it\n        if digit > 9:\n            digit -= 9\n\n        # Add the digit to the sum\n        sum += digit\n\n    # Check if the sum is divisible by 10\n    if sum % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    digits.reverse()\n    \n    for i in range(1, len(digits), 2):\n        digits[i] = digits[i] * 2\n        if digits[i] > 9:\n            digits[i] = digits[i] - 9\n    \n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = str(n)\n    n = [int(i) for i in n]\n    n = n[::-1]\n    for i in range(1, len(n), 2):\n        n[i] *= 2\n        if n[i] > 9:\n            n[i] -= 9\n    total = sum(n)\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the number to a string and reverse it\n    n = str(n)[::-1]\n    \n    # Initialize a variable to store the sum of the digits\n    total = 0\n    \n    # Iterate through the digits of the number\n    for i in range(len(n)):\n        # Double every other digit starting from the second digit (from the right)\n        if i % 2 == 1:\n            digit = int(n[i]) * 2\n            # If the doubled digit is greater than 9, subtract 9 from it\n            if digit > 9:\n                digit -= 9\n        else:\n            digit = int(n[i])\n        \n        # Add the digit to the total\n        total += digit\n    \n    # Check if the total is divisible by 10\n    if total % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    for i in range(len(digits) - 2, -1, -2):\n        digits[i] = 2 * digits[i]\n        if digits[i] > 9:\n            digits[i] = digits[i] - 9\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the number to a string and reverse it\n    n_str = str(n)[::-1]\n    \n    # Initialize the total sum\n    total_sum = 0\n    \n    # Loop through each digit in the string\n    for i, digit in enumerate(n_str):\n        # Convert the digit to an integer\n        digit_int = int(digit)\n        \n        # Double every other digit, starting from the second digit\n        if i % 2 == 1:\n            digit_int *= 2\n            \n            # If the resulting number is greater than 9, subtract 9 from it\n            if digit_int > 9:\n                digit_int -= 9\n        \n        # Add the digit to the total sum\n        total_sum += digit_int\n    \n    # Check if the total sum is divisible by 10\n    if total_sum % 10 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    for i in range(len(digits)-2, -1, -2):\n        digits[i] = digits[i] * 2\n        if digits[i] > 9:\n            digits[i] = digits[i] - 9\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    if len(digits) % 2 == 0:\n        digits = [x * 2 if i % 2 == 0 else x for i, x in enumerate(digits)]\n    else:\n        digits = [x * 2 if i % 2 != 0 else x for i, x in enumerate(digits)]\n    digits = [x - 9 if x > 9 else x for x in digits]\n    return sum(digits) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)][::-1]\n    doubled = []\n    for i, digit in enumerate(digits):\n        if i % 2 == 1:\n            doubled.append(digit * 2)\n        else:\n            doubled.append(digit)\n    summed = [x if x < 10 else x - 9 for x in doubled]\n    return sum(summed) % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    # Convert the number to a list of digits\n    digits = [int(x) for x in str(n)]\n    \n    # Double every other digit, starting from the second digit from the right\n    for i in range(len(digits) - 2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    \n    # Sum all the digits\n    total = sum(digits)\n    \n    # Check if the sum is divisible by 10\n    return total % 10 == 0",
+            "logp": null
+        }
+    ]
+}

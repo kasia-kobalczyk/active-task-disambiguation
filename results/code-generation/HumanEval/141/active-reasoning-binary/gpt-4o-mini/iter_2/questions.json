@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert file_name_check(\"file123.exe\") == \"Yes\"",
+        "assert file_name_check(\"example.txt\") == \"Yes\"",
+        "assert file_name_check(\"123file.dll\") == \"No\"",
+        "assert file_name_check(\"example.txt\") == 'Yes'",
+        "assert file_name_check(\"valid_name.dl\") == 'No'",
+        "assert file_name_check(\"my_document.pdf\") == \"No\"",
+        "assert file_name_check(\"file.name.exe\") == 'No'",
+        "assert file_name_check(\"test1234.txt\") == 'No'"
+    ],
+    "1": [
+        "assert file_name_check(\"report.doc\") == \"No\"",
+        "assert file_name_check(\"data1234.dll\") == \"No\"",
+        "assert file_name_check(\"document1.txt\") == \"Yes\"",
+        "assert file_name_check(\"test_123.dll\") == \"Yes\"",
+        "assert file_name_check(\"a.b.ex\") == \"No\"",
+        "assert file_name_check(\"document.txt\") == \"Yes\"",
+        "assert file_name_check(\"image2.jpg\") == \"No\"",
+        "assert file_name_check(\"report2023.pdf\") == \"No\""
+    ],
+    "2": [
+        "assert file_name_check(\"123file.exe\") == \"No\"",
+        "assert file_name_check(\"data1234.exe\") == \"No\"",
+        "assert file_name_check(\"data1234.dll\") == \"No\"",
+        "assert file_name_check(\"valid_file_name.dll\") == \"No\"",
+        "assert file_name_check(\"example.file\") == \"No\"",
+        "assert file_name_check(\"my_file.txt\") == \"Yes\"",
+        "assert file_name_check(\"myfile.txt\") == \"Yes\"",
+        "assert file_name_check(\"1file.txt\") == \"No\""
+    ],
+    "3": [
+        "assert file_name_check(\"example.txt\") == \"Yes\"",
+        "assert file_name_check(\"abc12.txt\") == \"Yes\"",
+        "assert file_name_check(\"validFile.txt\") == \"Yes\"",
+        "assert file_name_check(\"file1234.exe\") == \"No\"",
+        "assert file_name_check(\"invalidFile.\") == \"No\"",
+        "assert file_name_check(\"name.file.exe\") == \"No\"",
+        "assert file_name_check(\"data.123\") == \"No\"",
+        "assert file_name_check(\"anotherFile.dll\") == \"Yes\""
+    ]
+}

@@ -1,0 +1,198 @@
+{
+    "0": [
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i + 1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i + 1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = 1\n    for i in range(n, len(cogs) - 1):\n        rpm = rpm * cogs[i] / cogs[i + 1]\n    for i in range(n - 1, -1, -1):\n        rpm = rpm * cogs[i] / cogs[i + 1]\n    return [-rpm, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm_first_cog = 1\n    rpm_last_cog = 1\n    \n    for i in range(n, len(cogs) - 1):\n        rpm_last_cog = rpm_last_cog * cogs[i] / cogs[i + 1]\n        \n    for i in range(n):\n        rpm_first_cog = rpm_first_cog * cogs[i] / cogs[i + 1]\n        \n    return [rpm_first_cog, -rpm_last_cog]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = 1\n    for i in range(n, len(cogs)):\n        rpm = rpm * cogs[i-1] / cogs[i]\n    for i in range(n-1, -1, -1):\n        rpm = rpm * cogs[i+1] / cogs[i]\n    return [-rpm, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i + 1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i + 1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    ratio = 1\n    for i in range(n, len(cogs) - 1):\n        ratio *= -cogs[i] / cogs[i + 1]\n    for i in range(n):\n        ratio *= -cogs[i] / cogs[i + 1]\n    return [1, ratio]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(rpm[-1] * cogs[i] / cogs[i + 1])\n    if n % 2 == 1:\n        rpm[0] = -rpm[0]\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm_first = 1\n    rpm_last = 1\n    \n    for i in range(n, len(cogs) - 1):\n        rpm_last = rpm_last * cogs[i] / cogs[i + 1]\n        \n    for i in range(n):\n        rpm_first = rpm_first * cogs[i] / cogs[i + 1]\n        \n    return [rpm_first, -rpm_last]",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = 1\n    for i in range(n, len(cogs) - 1):\n        rpm = -rpm * cogs[i] / cogs[i + 1]\n    for i in range(n - 1, -1, -1):\n        rpm = -rpm * cogs[i] / cogs[i + 1]\n    return [1, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i+1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = 1\n    for i in range(n, len(cogs) - 1):\n        rpm = -rpm * cogs[i] / cogs[i + 1]\n    for i in range(n):\n        rpm = -rpm * cogs[i] / cogs[i + 1]\n    return [1, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i + 1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(len(cogs) - 1):\n        result.append(-result[-1] * cogs[i] / cogs[i + 1])\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = 1\n    for i in range(n, len(cogs) - 1):\n        rpm *= -cogs[i] / cogs[i + 1]\n    for i in range(n - 1, -1, -1):\n        rpm *= -cogs[i] / cogs[i + 1]\n    return [1, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1, -1]\n    for i in range(len(cogs) - 1):\n        rpm[0] *= cogs[i] / cogs[i + 1]\n        rpm[1] *= cogs[-i - 1] / cogs[-i - 2]\n    return rpm",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    if not cogs:\n        return [0, 0]\n    rpm = [1, -1]\n    for i in range(len(cogs) - 1):\n        rpm[1] = rpm[1] * cogs[i] / cogs[i+1]\n    return rpm",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i + 1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    ratio = 1\n    for i in range(n, len(cogs) - 1):\n        ratio *= -cogs[i] / cogs[i + 1]\n    return [1, ratio]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1, -1]\n    for i in range(len(cogs) - 1):\n        result[0] *= cogs[i + 1] / cogs[i]\n        result[1] *= cogs[i] / cogs[i + 1]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1, -1]\n    for i in range(len(cogs) - 1):\n        rpm[0] *= cogs[i] / cogs[i+1]\n        rpm[1] *= cogs[-i-1] / cogs[-i-2]\n    return rpm",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    if not cogs:\n        return [0, 0]\n    rpm = 1\n    for i in range(n, len(cogs) - 1):\n        rpm = rpm * -cogs[i] / cogs[i + 1]\n    for i in range(n):\n        rpm = rpm * -cogs[i] / cogs[i + 1]\n    return [1, rpm]",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def cog_RPM(cogs, n):\n    if n % 2 == 0:\n        return [1, -1]\n    else:\n        return [-1, 1]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i+1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    product = 1\n    for cog in cogs:\n        product *= -1 if cog != cogs[n] else 1\n    return [product, -product]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    if n % 2 == 0:\n        return [1, -1]\n    else:\n        return [-1, 1]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i + 1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    if n % 2 == 0:\n        return [1, -1]\n    else:\n        return [-1, 1]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    first_cog_rpm = 1\n    last_cog_rpm = (-1) ** (len(cogs) - 1)\n    return [first_cog_rpm, last_cog_rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(len(cogs) - 1):\n        result.append(-result[-1] * cogs[i] / cogs[i + 1])\n    return [result[0], result[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i + 1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    if len(cogs) % 2 == 0:\n        return [1, -1]\n    else:\n        return [1, 1]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = 1\n    for i in range(n, len(cogs) - 1):\n        rpm *= -cogs[i] / cogs[i + 1]\n    return [1, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    product = 1\n    for cog in cogs:\n        product *= -1\n    return [product, -product]",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def cog_RPM(cogs, n):\n    if n % 2 == 0:\n        return [1, -1]\n    else:\n        return [-1, 1]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i+1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    product = 1\n    for cog in cogs:\n        product *= -1 if cog != cogs[n] else 1\n    return [product, -product]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    if n % 2 == 0:\n        return [1, -1]\n    else:\n        return [-1, 1]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1]\n    for i in range(len(cogs) - 1):\n        rpm.append(-rpm[-1] * cogs[i] / cogs[i + 1])\n    return [rpm[0], rpm[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(len(cogs) - 1):\n        result.append(-result[-1] * cogs[i] / cogs[i + 1])\n    return [result[0], result[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    if len(cogs) % 2 == 0:\n        return [1, -1]\n    else:\n        return [1, 1]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = 1\n    for i in range(n, len(cogs) - 1):\n        rpm *= -cogs[i] / cogs[i + 1]\n    return [1, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    rpm = [1, -1]\n    for i in range(n, len(cogs) - 1):\n        rpm[1] = rpm[1] * cogs[i] / cogs[i + 1]\n    for i in range(n):\n        rpm[0] = rpm[0] * cogs[n - i - 1] / cogs[n - i]\n    return rpm",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    if n % 2 == 0:\n        return [1, -1]\n    else:\n        return [-1, 1]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    ratio = 1\n    for i in range(n, len(cogs) - 1):\n        ratio *= -cogs[i] / cogs[i + 1]\n    return [1, ratio]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1, -1]\n    if len(cogs) > 1:\n        for i in range(len(cogs) - 1):\n            result[0] = result[0] * cogs[i] / cogs[i + 1] if i % 2 == 0 else result[0] * cogs[i + 1] / cogs[i]\n            result[1] = result[1] * cogs[i + 1] / cogs[i] if i % 2 == 0 else result[1] * cogs[i] / cogs[i + 1]\n    return result",
+            "logp": null
+        }
+    ]
+}

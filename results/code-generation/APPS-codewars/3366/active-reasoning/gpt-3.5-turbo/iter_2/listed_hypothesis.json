@@ -1,0 +1,88 @@
+{
+    "0": [
+        {
+            "content": "def L(n, d):\n    nums = '0123456789'\n    perm = []\n    for i in range(d):\n        perm.append(nums[i])\n\n    result = ''\n    while n > 0:\n        fact = math.factorial(d-1)\n        index = n // fact\n        if n % fact == 0:\n            index -= 1\n        result += perm[index]\n        perm.pop(index)\n        n %= fact\n        d -= 1\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\ndef nth_perm(n, d):\n    digits = list(range(d))\n    result = ''\n    \n    for i in range(d-1, -1, -1):\n        index = math.floor(n / math.factorial(i))\n        result += str(digits[index])\n        digits.remove(digits[index])\n        n = n % math.factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\ndef nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    result = ''\n    \n    for i in range(d):\n        index = n // math.factorial(d-i-1)\n        result += digits.pop(index)\n        n -= index * math.factorial(d-i-1)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef nth_perm(n, d):\n    digits = [str(i) for i in range(d)]\n    permutation = \"\"\n    n -= 1\n\n    for i in range(d, 0, -1):\n        index = n // math.factorial(i-1)\n        permutation += digits[index]\n        digits.remove(digits[index])\n        n %= math.factorial(i-1)\n\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "import math\ndef nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutations = math.factorial(d)\n    if n > permutations:\n        return \"Invalid Input\"\n    result = \"\"\n    for i in range(d):\n        permutations = permutations // (d - i)\n        index = n // permutations\n        result += digits[index]\n        digits.remove(digits[index])\n        n = n % permutations\n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\ndef nth_perm(n,d):\n    # create a list of digits from 0 to d-1\n    digits = [str(i) for i in range(d)]\n    result = ''\n    \n    # calculate the total number of permutations for d digits\n    num_perm = math.factorial(d)\n    \n    # iterate through each digit position\n    for i in range(d, 0, -1):\n        # calculate the index of the current digit\n        index = (n-1) // (num_perm // i)\n        \n        # append the digit at the calculated index to the result\n        result += digits[index]\n        \n        # remove the digit from the list\n        digits.pop(index)\n        \n        # update n and num_perm for the next digit position\n        n = n - index * (num_perm // i)\n        num_perm = num_perm // i\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef nth_perm(n, d):\n    digits = list(range(d))\n    result = \"\"\n\n    for i in range(d-1, -1, -1):\n        index = n // math.factorial(i)\n        result += str(digits[index])\n        digits.remove(digits[index])\n        n %= math.factorial(i)\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\ndef nth_perm(n,d):\n    # create a list of digits from 0 to d-1\n    digits = [str(i) for i in range(d)]\n    \n    # initialize result as an empty string\n    result = ''\n    \n    # iterate from d-1 down to 0\n    for i in range(d-1, -1, -1):\n        # calculate the factorial of i\n        fact = math.factorial(i)\n        \n        # calculate the index of the digit in digits that should be added to result\n        index = (n // fact) % (i + 1)\n        \n        # add the digit to result and remove it from digits\n        result += digits[index]\n        digits.pop(index)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = list(range(d))\n    result = ''\n    \n    for i in range(d-1, -1, -1):\n        div = math.factorial(i)\n        idx = n // div\n        n %= div\n        result += str(digits[idx])\n        digits.pop(idx)\n        \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef nth_perm(n,d):\n    digits = list(range(d))\n    result = \"\"\n    \n    for i in range(d, 0, -1):\n        div = math.factorial(i-1)\n        index = n // div\n        n = n % div\n        result += str(digits.pop(index))\n    \n    return result",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "import math\n\ndef nth_perm(n, d):\n    # Create a list of digits from 0 to d-1\n    digits = [str(i) for i in range(d)]\n    \n    # Calculate the number of permutations\n    num_permutations = math.factorial(d)\n    \n    # Check if n is a valid input\n    if n <= 0 or n > num_permutations:\n        return \"Invalid input\"\n    \n    # Create an empty string to store the permutation\n    result = \"\"\n    \n    # Iterate through the digits\n    for i in range(d):\n        # Calculate the index of the digit to add to the result\n        index = (n - 1) // math.factorial(d - 1 - i)\n        \n        # Add the digit to the result\n        result += digits[index]\n        \n        # Remove the digit from the list of digits\n        digits.pop(index)\n        \n        # Update n for the next iteration\n        n = n - (index * math.factorial(d - 1 - i))\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\ndef nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    result = ''\n    \n    for i in range(d, 0, -1):\n        index = math.ceil(n / math.factorial(i-1)) - 1\n        result += digits[index]\n        digits.pop(index)\n        n = n % math.factorial(i-1)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    digits = list(range(d))\n    result = ''\n    for i in range(d, 0, -1):\n        # calculate the index of the current digit in the permutation\n        index = (n-1) // math.factorial(i-1)\n        # add the digit to the result\n        result += str(digits[index])\n        # remove the digit from the list of available digits\n        digits.remove(digits[index])\n        # update n for the next iteration\n        n = (n-1) % math.factorial(i-1) + 1\n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef nth_perm(n, d):\n    if n <= 0:\n        raise ValueError(\"Invalid value for n\")\n\n    digits = list(range(d))\n    result = \"\"\n\n    for i in range(d-1, -1, -1):\n        # Calculate the factorial of i\n        factorial = math.factorial(i)\n\n        # Calculate the index of the digit to be used\n        index = (n-1) // factorial\n\n        # Add the digit to the result\n        result += str(digits.pop(index))\n\n        # Update the value of n for the next iteration\n        n = n - index*factorial\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    # Convert n to index starting from 0\n    n -= 1\n\n    # Create a list of digits from 0 to d-1\n    digits = [str(i) for i in range(d)]\n\n    # Calculate the factorial of d-1\n    factorial = math.factorial(d - 1)\n\n    # Create an empty result string\n    result = \"\"\n\n    # Iterate through the digits\n    for i in range(d - 1, 0, -1):\n        # Calculate the index of the current digit in the permutation\n        index = n // factorial\n\n        # Append the current digit to the result string\n        result += digits[index]\n\n        # Remove the current digit from the list\n        digits.pop(index)\n\n        # Update n and factorial for the next iteration\n        n %= factorial\n        factorial //= i\n\n    # Append the last digit to the result string\n    result += digits[0]\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    # Convert n to 0-based index\n    n -= 1\n    \n    # Create a list of digits from 0 to d-1\n    digits = list(range(d))\n    \n    # Initialize the result string\n    result = ''\n    \n    # Iterate through the digits in reverse order\n    for i in range(d - 1, -1, -1):\n        # Compute the factorial of i\n        fact = math.factorial(i)\n        \n        # Compute the index of the digit to append to the result\n        index = n // fact\n        \n        # Append the digit to the result\n        result += str(digits[index])\n        \n        # Remove the digit from the list\n        digits.pop(index)\n        \n        # Update n for the next iteration\n        n %= fact\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = list(range(d)) # create a list of digits from 0 to d-1\n    result = '' # initialize an empty string to store the result\n    n -= 1 # subtract 1 from n to make it zero-based index\n    for i in range(d-1, -1, -1): # iterate from d-1 to 0\n        index = n // math.factorial(i) # calculate the index of the current digit\n        result += str(digits[index]) # add the current digit to the result\n        digits.pop(index) # remove the current digit from the list\n        n %= math.factorial(i) # update n to the remainder\n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\ndef nth_perm(n,d):\n    # Convert n to 0-indexed\n    n -= 1\n    \n    # Create a list of digits\n    digits = list(range(d))\n    \n    # Create a result variable\n    result = \"\"\n    \n    # Iterate over the digits\n    for i in range(d, 0, -1):\n        # Find the index of the digit to add to the result\n        index = n // math.factorial(i-1)\n        \n        # Add the digit to the result\n        result += str(digits[index])\n        \n        # Remove the digit from the list\n        digits.pop(index)\n        \n        # Update n\n        n = n % math.factorial(i-1)\n    \n    # Return the result\n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\ndef nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    result = []\n    \n    for i in range(d, 0, -1):\n        # calculate the index of the next digit to add to the result\n        index = math.ceil(n / math.factorial(i-1))\n        \n        # add the digit to the result\n        result.append(digits[index-1])\n        \n        # remove the digit from the list of available digits\n        digits.remove(digits[index-1])\n        \n        # update n to the remaining permutations\n        n = n % math.factorial(i-1)\n    \n    return \"\".join(result)",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n\n    # Get the factorial of d\n    f = math.factorial(d)\n\n    # Get the quotient and remainder of n/f\n    q, r = divmod(n, f)\n\n    # Create a list of digits from 0 to d-1\n    digits = list(range(d))\n\n    # Create an empty list to store the permutation\n    perm = []\n\n    # Iterate through the digits\n    for i in range(d):\n\n        # Get the index of the digit to add to the permutation\n        index = q % (d - i)\n\n        # Add the digit to the permutation and remove it from the list\n        perm.append(digits.pop(index))\n\n        # Update the quotient\n        q //= (d - i)\n\n    # Convert the permutation to a string\n    perm_str = ''.join(str(digit) for digit in perm)\n\n    # Return the permutation\n    return perm_str",
+            "logp": null
+        }
+    ],
+    "2": [],
+    "3": []
+}

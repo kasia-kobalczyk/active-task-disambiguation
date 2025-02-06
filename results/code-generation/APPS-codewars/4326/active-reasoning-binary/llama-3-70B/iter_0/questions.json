@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert london_city_hacker(['Metropolitan', 'Hammersmith & City', 'Circle']) == '\u00a37.20'",
+        "assert london_city_hacker(['Northern', 'Central', 'Victoria']) == '\u00a37.20'",
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria']) == '\u00a39.90'",
+        "assert london_city_hacker(['Bakerloo', 11, 11, 'Jubilee']) == '\u00a36.90'",
+        "assert london_city_hacker([1, 2, 3, 4, 5, 6]) == '\u00a39.00'",
+        "assert london_city_hacker([243, 1, 243]) == '\u00a34.50'",
+        "assert london_city_hacker([243, 1, 243, 1]) == '\u00a36.00'",
+        "assert london_city_hacker([11, 22, 33, 'District', 'Circle']) == '\u00a38.40'",
+        "assert london_city_hacker(['Northern', 243, 1, 'Victoria']) == '\u00a36.40'"
+    ],
+    "1": [
+        "assert london_city_hacker([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) == '\u00a315.00'",
+        "assert london_city_hacker([243, 1, 11, 24]) == '\u00a34.50'",
+        "assert london_city_hacker(['District', 'Circle', 'Piccadilly', 11, 24, 'Metropolitan']) == '\u00a311.40'",
+        "assert london_city_hacker([11, 22, 33, 'District', 44, 55]) == '\u00a313.50'",
+        "assert london_city_hacker([]) == '\u00a30.00'",
+        "assert london_city_hacker(['Piccadilly', 'Victoria', 'Northern', 'Central']) == '\u00a39.60'",
+        "assert london_city_hacker([1, 2, 'Bakerloo', 3, 4, 'Jubilee', 5, 6]) == '\u00a316.80'",
+        "assert london_city_hacker([243, 1, 11, 24, 243, 1, 11, 24]) == '\u00a39.00'"
+    ],
+    "2": [
+        "assert london_city_hacker([243, 1, 11, 24]) == '\u00a34.50'",
+        "assert london_city_hacker(['District', 'Circle', 'Piccadilly', 11, 24, 'Metropolitan']) == '\u00a311.40'",
+        "assert london_city_hacker([11, 22, 33, 'District', 44, 55]) == '\u00a313.50'",
+        "assert london_city_hacker([]) == '\u00a30.00'",
+        "assert london_city_hacker(['Piccadilly', 'Victoria', 'Northern', 'Central']) == '\u00a39.60'",
+        "assert london_city_hacker([1, 2, 'Bakerloo', 3, 4, 'Jubilee', 5, 6]) == '\u00a316.80'",
+        "assert london_city_hacker([243, 1, 11, 24, 243, 1, 11, 24]) == '\u00a39.00'"
+    ],
+    "3": [
+        "assert london_city_hacker(['Piccadilly', 'Bakerloo', 'Victoria', 'Jubilee']) == '\u00a39.60'",
+        "assert london_city_hacker([1, 2, 3, 4, 5, 6]) == '\u00a39.00'",
+        "assert london_city_hacker(['District', 'Circle', 'Piccadilly', 11, 24, 'Metropolitan']) == '\u00a311.40'",
+        "assert london_city_hacker([1, 243, 'Northern', 'Central', 11, 24, 'Victoria']) == '\u00a313.50'",
+        "assert london_city_hacker([11, 22, 33, 'District', 44, 55]) == '\u00a313.50'",
+        "assert london_city_hacker(['Bakerloo', 'Jubilee', 'Victoria', 'Piccadilly', 'Central', 'District']) == '\u00a314.40'",
+        "assert london_city_hacker([7, 8, 'Northern', 9, 10, 'Central']) == '\u00a312.30'"
+    ]
+}

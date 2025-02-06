@@ -1,0 +1,46 @@
+{
+    "0": [
+        "assert decode_cyclic(\"ghi\") == \"ghi\"",
+        "assert decode_cyclic(\"defghijklmnopqrs\") == \"defghijklmnopqrs\"",
+        "assert decode_cyclic(\"z\") == \"z\"",
+        "assert decode_cyclic(\"\") == \"\"",
+        "assert decode_cyclic(\"jkl\") == \"jkl\"",
+        "assert decode_cyclic(\"uvwxy\") == \"uvwxy\"",
+        "assert decode_cyclic(\"def\") == \"def\"",
+        "assert decode_cyclic(\"mno\") == \"mno\"",
+        "assert decode_cyclic(\"abc\") == \"abc\""
+    ],
+    "1": [
+        "assert decode_cyclic(\"AB\") == \"AB\"",
+        "assert decode_cyclic(\"BCA\") == \"ABC\"",
+        "assert decode_cyclic(\"bcd\") == \"bcd\"",
+        "assert decode_cyclic(\"CAB\") == \"ABC\"",
+        "assert decode_cyclic(\"\") == \"\"",
+        "assert decode_cyclic(\"def\") == \"def\"",
+        "assert decode_cyclic(\"ABC\") == \"ABC\"",
+        "assert decode_cyclic(\"A\") == \"A\"",
+        "assert decode_cyclic(\"cde\") == \"cde\"",
+        "assert decode_cyclic(\"abc\") == \"abc\""
+    ],
+    "2": [
+        "assert decode_cyclic(\"ABCD\") == \"ABCD\"",
+        "assert decode_cyclic(\"JKLMNOPQR\") == \"JKLMNOPQR\"",
+        "assert decode_cyclic(\"XYZ\") == \"XYZ\"",
+        "assert decode_cyclic(\"DEFGHI\") == \"DEFGHI\"",
+        "assert decode_cyclic(\"ABC\") == \"ABC\"",
+        "assert decode_cyclic(\"1234567890\") == \"1234567890\"",
+        "assert decode_cyclic(\"ABCDEF\") == \"ABCDEF\"",
+        "assert decode_cyclic(\"STUVWXYZ\") == \"STUVWXYZ\"",
+        "assert decode_cyclic(\"WXYZ\") == \"XYZW\""
+    ],
+    "3": [
+        "assert decode_cyclic(\"JKLMNOPQR\") == \"JKLMNOPQR\"",
+        "assert decode_cyclic(\"XYZ\") == \"XYZ\"",
+        "assert decode_cyclic(\"DEFGHI\") == \"DEFGHI\"",
+        "assert decode_cyclic(\"1234567890\") == \"1234567890\"",
+        "assert decode_cyclic(\"ABC\") == \"ABC\"",
+        "assert decode_cyclic(\"ABCDEF\") == \"ABCDEF\"",
+        "assert decode_cyclic(\"STUVWXYZ\") == \"STUVWXYZ\"",
+        "assert decode_cyclic(\"WXYZ\") == \"XYZW\""
+    ]
+}

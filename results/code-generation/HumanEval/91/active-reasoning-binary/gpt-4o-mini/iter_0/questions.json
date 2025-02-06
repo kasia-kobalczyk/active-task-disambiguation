@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert is_bored(\"Hello world! I love programming. I am learning Python!\") == 2",
+        "assert is_bored(\"This is a test. No boredom here.\") == 0",
+        "assert is_bored(\"I am feeling bored. This is interesting! I want to sleep.\") == 2",
+        "assert is_bored(\"Are you bored? I don't think so. I am fine.\") == 1",
+        "assert is_bored(\"What do you think? I love coding! I enjoy solving problems.\") == 2",
+        "assert is_bored(\"I am bored. This is fun. I want to go out!\") == 2",
+        "assert is_bored(\"This is a test. No boredom here!\") == 0",
+        "assert is_bored(\"I see what you mean. However, I disagree.\") == 2"
+    ],
+    "1": [
+        "assert is_bored(\"Hello there! How are you?\") == 0",
+        "assert is_bored(\"What a beautiful day! I want to go outside. I have an idea.\") == 2",
+        "assert is_bored(\"I love programming! It's so much fun. I could code all day.\") == 2",
+        "assert is_bored(\"Are we there yet? No, we aren't! I am getting impatient.\") == 1",
+        "assert is_bored(\"What should I do? I have no plans. Maybe I will go for a walk.\") == 1",
+        "assert is_bored(\"I am very excited! This is boring. I will take a break.\") == 2",
+        "assert is_bored(\"I love programming! Do you? I could code all day.\") == 2",
+        "assert is_bored(\"I enjoy reading. However, I am tired of this book!\") == 2"
+    ],
+    "2": [
+        "assert is_bored(\"This is a test! Are you ready? I hope you are!\") == 1",
+        "assert is_bored(\"Do you feel bored? I don't think so!\") == 1",
+        "assert is_bored(\"I am bored! Why is that? I have no idea.\") == 2",
+        "assert is_bored(\"I woke up early. I wanted to catch the sunrise! It was beautiful.\") == 2",
+        "assert is_bored(\"I enjoy the sunshine. It is a nice day! I want ice cream.\") == 2",
+        "assert is_bored(\"I am bored? I have nothing to do! Let's find something fun.\") == 2",
+        "assert is_bored(\"You know what? I think I am going to take a nap! I feel tired.\") == 2",
+        "assert is_bored(\"He said he was bored. I want to change that!\") == 1"
+    ],
+    "3": [
+        "assert is_bored(\"I enjoy going to the park! Do you want to join me? I will be there.\") == 2",
+        "assert is_bored(\"I am happy today. The weather is nice. I want to go outside!\") == 2",
+        "assert is_bored(\"I am learning Python! It is quite engaging. But I am also tired.\") == 1",
+        "assert is_bored(\"I like pizza. My favorite color is blue. I enjoy reading books!\") == 3",
+        "assert is_bored(\"I enjoy reading. However, I also like to write. It's my passion!\") == 2",
+        "assert is_bored(\"Are you bored? I was just thinking about that.\") == 1",
+        "assert is_bored(\"Hello there! I have an idea. I think it might work?\") == 2",
+        "assert is_bored(\"What's the plan? Let's make it fun. I would like to see you!\") == 1"
+    ]
+}

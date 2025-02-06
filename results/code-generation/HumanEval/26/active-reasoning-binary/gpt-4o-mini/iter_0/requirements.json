@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert remove_duplicates([1, 2, 3, 1, 2, 3]) == [1, 2, 3]",
+        false
+    ],
+    "1": [
+        "assert remove_duplicates([0, 1, 1, 2, 3, 3, 4]) == [0, 2, 4]",
+        true
+    ],
+    "2": [
+        "assert remove_duplicates([1, 1, 2, 2, 3, 3]) == []",
+        true
+    ],
+    "3": [
+        "assert remove_duplicates([10, 20, 10, 30, 40, 20]) == [30, 40]",
+        true
+    ]
+}

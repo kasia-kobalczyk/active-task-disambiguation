@@ -1,0 +1,44 @@
+{
+    "0": [
+        "total_match([], [\"grape\", \"kiwi\", \"mango\"])",
+        "total_match([], [])",
+        "total_match([\"apple\", \"banana\"], [\"grape\", \"kiwi\", \"mango\"])",
+        "total_match([\"one\", \"two\", \"three\"], [\"four\", \"five\"])",
+        "total_match([\"apple\", \"banana\", \"cherry\"], [\"grape\", \"kiwi\", \"mango\"])",
+        "total_match([\"apple\", \"banana\", \"cherry\"], [\"grape\", \"kiwi\"])",
+        "total_match([\"apple\", \"banana\", \"cherry\"], [\"pear\", \"orange\"])",
+        "total_match([\"cat\", \"dog\", \"bird\"], [\"elephant\", \"lion\", \"tiger\"])",
+        "total_match(['hello', 'world'], ['hi', 'there'])",
+        "total_match([\"hello\", \"world\"], [\"python\", \"programming\"])",
+        "total_match(['hello', 'world'], ['python', 'programming'])",
+        "total_match([\"abc\", \"def\"], [\"ghi\", \"jkl\"])",
+        "total_match([\"cat\", \"dog\", \"bird\"], [\"elephant\", \"giraffe\"])"
+    ],
+    "1": [
+        "total_match([\"red\", \"green\", \"blue\"], [\"yellow\", \"orange\"])",
+        "total_match([\"apple\", \"banana\", \"cherry\"], [\"date\", \"fig\", \"grape\"])",
+        "total_match([\"apple\", \"banana\", \"cherry\"], [\"orange\", \"pear\"])",
+        "total_match([\"sun\", \"moon\"], [\"star\", \"planet\"])",
+        "total_match([\"a\", \"aa\", \"aaa\"], [\"bb\", \"bbb\"])",
+        "total_match([\"hello\", \"world\"], [\"python\", \"programming\"])",
+        "total_match([\"cat\", \"dog\"], [\"elephant\", \"giraffe\"])",
+        "total_match([\"cat\", \"dog\", \"bird\"], [\"elephant\", \"giraffe\"])"
+    ],
+    "2": [
+        "total_match([], [\"a\", \"b\", \"c\"])",
+        "total_match([\"apple\", \"banana\", \"cherry\"], [\"orange\", \"pear\"])",
+        "total_match([\"black\", \"white\"], [\"gray\", \"silver\"])",
+        "total_match([\"cat\", \"dog\", \"elephant\"], [\"lion\", \"tiger\", \"bear\"])",
+        "total_match([\"cat\", \"dog\", \"fish\"], [])",
+        "total_match([\"python\", \"java\", \"cpp\"], [\"ruby\", \"javascript\", \"php\", \"c#\"])",
+        "total_match([\"apple\", \"banana\"], [\"orange\"])"
+    ],
+    "3": [
+        "total_match([\"abcd\", \"efgh\"], [\"ijkl\", \"mnop\"])",
+        "total_match([\"hello\", \"world\"], [\"python\"])",
+        "total_match([\"abcd\"], [\"efgh\"])",
+        "total_match([\"a\", \"b\", \"c\"], [])",
+        "total_match([\"apple\", \"banana\"], [\"orange\", \"grape\"])",
+        "total_match([\"apple\", \"banana\", \"cherry\"], [\"dog\", \"cat\"])"
+    ]
+}

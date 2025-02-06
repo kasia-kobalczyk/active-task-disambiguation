@@ -1,0 +1,56 @@
+{
+    "0": [
+        {
+            "content": "def find_children(dancing_brigade):\n    result = ''\n    i = 0\n    while i < len(dancing_brigade):\n        if dancing_brigade[i].isupper():\n            result += dancing_brigade[i]\n            i += 1\n            j = i\n            while j < len(dancing_brigade) and dancing_brigade[j].islower():\n                j += 1\n            for k in range(i, j):\n                result += dancing_brigade[k]\n            i = j\n        i += 1\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    result = ''\n    i = 0\n    while i < len(dancing_brigade):\n        if dancing_brigade[i].isupper():\n            result += dancing_brigade[i]\n            i += 1\n            j = i\n            while j < len(dancing_brigade) and dancing_brigade[j].islower():\n                j += 1\n            for k in range(i, j):\n                result += dancing_brigade[k]\n            i = j\n        i += 1\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    result = ''\n    i = 0\n    while i < len(dancing_brigade):\n        if dancing_brigade[i].isupper():\n            result += dancing_brigade[i]\n            i += 1\n            j = i\n            while j < len(dancing_brigade) and dancing_brigade[j].islower():\n                j += 1\n            for k in range(i, j):\n                result += dancing_brigade[k]\n            i = j\n        i += 1\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    result = ''\n    i = 0\n    while i < len(dancing_brigade):\n        if dancing_brigade[i].isupper():\n            result += dancing_brigade[i]\n            i += 1\n            j = i\n            while j < len(dancing_brigade) and dancing_brigade[j].islower():\n                j += 1\n            for k in range(i, j):\n                result += dancing_brigade[k]\n            i = j\n        i += 1\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    result = ''\n    i = 0\n    while i < len(dancing_brigade):\n        if dancing_brigade[i].isupper():\n            result += dancing_brigade[i]\n            i += 1\n            j = i\n            while j < len(dancing_brigade) and dancing_brigade[j].islower():\n                j += 1\n            for k in range(i, j):\n                result += dancing_brigade[k]\n            i = j\n        i += 1\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade): \n    brigade = list(dancing_brigade)\n    mothers = []\n    children = []\n    for i in range(len(bridege)):\n        if brigade[i].isupper():\n            mothers.append(bridege[i])\n        else:\n            children.append(bridege[i])\n    return \"\".join(sorted(mothers) + sorted(children))",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade): \n    brigade = list(dancing_brigade)\n    mothers = []\n    children = []\n    for i in range(len(bridege)):\n        if brigade[i].isupper():\n            mothers.append(bridege[i])\n        else:\n            children.append(bridege[i])\n    return \"\".join(sorted(mothers) + sorted(children))",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade): \n    brigade = list(dancing_brigade)\n    mothers = []\n    children = []\n    for i in range(len(bridege)):\n        if brigade[i].isupper():\n            mothers.append(bridege[i])\n        else:\n            children.append(bridege[i])\n    return \"\".join(sorted(mothers) + sorted(children))",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade): \n    brigade = list(dancing_brigade)\n    mothers = []\n    children = []\n    for i in range(len(bridege)):\n        if brigade[i].isupper():\n            mothers.append(bridege[i])\n        else:\n            children.append(bridege[i])\n    return \"\".join(sorted(mothers) + sorted(children))",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade): \n    brigade = list(dancing_brigade)\n    mothers = []\n    children = []\n    for i in range(len(bridege)):\n        if brigade[i].isupper():\n            mothers.append(bridege[i])\n        else:\n            children.append(bridege[i])\n    return \"\".join(sorted(mothers) + sorted(children))",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def find_children(dancing_brigade):\n    letters = list(dancing_brigade)\n    brigade = []\n    temp = ''\n    for letter in letters:\n        if letter.isupper():\n            if temp:\n                brigade.append(temp)\n                temp = ''\n            brigade.append(letter)\n        else:\n            temp += letter\n    if temp:\n        brigade.append(temp)\n    return ''.join(brigade)",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    result = \"\"\n    mothers = {}\n    for char in dancing_brigade:\n        if char.isupper():\n            mothers[char] = []\n        else:\n            mothers[char[0]].append(char)\n    for key in sorted(mothers.keys()):\n        result += key\n        result += ''.join(sorted(mothers[key]))\n    return result",
+            "logp": null
+        }
+    ],
+    "2": [],
+    "3": []
+}

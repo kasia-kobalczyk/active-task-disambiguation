@@ -1,0 +1,147 @@
+{
+    "0": {
+        "0": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    count = 0\n    for sentence in sentences:\n        words = sentence.strip().split()\n        if words and words[0] == 'I':\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split('.') + S.split('?') + S.split('!') if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split('.') + S.split('?') + S.split('!') if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith('I '):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I\"):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith('I '):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I \"):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I') and sentence[-1] in {'.', '?', '!'})\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    count = sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n    return count\n```"
+        ],
+        "1": [
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    \n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I \"):\n            count += 1\n            \n    return count\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```"
+        ],
+        "2": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        words = sentence.strip().split()\n        if words and words[0] == 'I':\n            count += 1\n    return count\n```"
+        ],
+        "3": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```"
+        ],
+        "4": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```"
+        ]
+    },
+    "1": {
+        "0": [
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I') and sentence[-1] in '.!?')\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith('I '):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('?', '.').replace('!', '.').split('.')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I \"):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.strip().startswith('I') and sentence.endswith(('.', '?', '!')))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    count = sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split('.') + S.split('?') + S.split('!') if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I') and sentence.endswith(('.', '?', '!')))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I') and sentence.endswith(('.', '?', '!')))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I') and sentence[-1] in '.!?')\n```",
+            "```python\ndef is_bored(S):\n    sentences = [sentence.strip() for sentence in S.split('.') + S.split('?') + S.split('!')]\n    return sum(1 for sentence in sentences if sentence.lower().startswith('i '))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```"
+        ],
+        "1": [
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```"
+        ],
+        "2": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().lower().startswith(\"i \"):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        words = sentence.strip().split()\n        if words and words[0] == 'I':\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = [s.strip() for s in S.replace('!', '.').replace('?', '.').split('.')]\n    return sum(1 for sentence in sentences if sentence.startswith('I '))\n```"
+        ],
+        "3": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = [s.strip() for s in S.replace('!', '.').replace('?', '.').split('.')]\n    return sum(1 for sentence in sentences if sentence.startswith('I '))\n```"
+        ],
+        "4": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```"
+        ]
+    },
+    "2": {
+        "0": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split('.') + S.split('?') + S.split('!') if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('?', '.').replace('!', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I') and sentence.endswith(('.', '?', '!')))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith('I') and sentence.endswith(('.', '?', '!')))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split('.') + S.split('?') + S.split('!') if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith(\"I\"))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith('I'):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I \"):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split() if sentence.startswith(\"I\") and sentence.endswith(('.', '?', '!')))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = [s.strip() for s in S.split('.') + S.split('?') + S.split('!')]\n    return sum(1 for sentence in sentences if sentence.startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().lower().startswith(\"i \"):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.split('.') + S.split('?') + S.split('!') if sentence.strip().startswith('I'))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I'))\n```"
+        ],
+        "1": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    return sum(1 for sentence in S.replace('!', '.').replace('?', '.').split('.') if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n    return count\n```"
+        ],
+        "2": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.split('.')\n    sentences += S.split('?')\n    sentences += S.split('!')\n    count = 0\n    for sentence in sentences:\n        words = sentence.strip().split()\n        if words and words[0] == 'I':\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = [s.strip() for s in S.replace('!', '.').replace('?', '.').split('.')]\n    return sum(1 for sentence in sentences if sentence.startswith('I '))\n```"
+        ],
+        "3": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = [s.strip() for s in S.replace('!', '.').replace('?', '.').split('.')]\n    return sum(1 for sentence in sentences if sentence.startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith('I '):\n            count += 1\n    return count\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    count = 0\n    for sentence in sentences:\n        if sentence.strip().startswith(\"I \"):\n            count += 1\n    return count\n```"
+        ],
+        "4": [
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = S.replace('!', '.').replace('?', '.').split('.')\n    return sum(1 for sentence in sentences if sentence.strip().startswith('I '))\n```",
+            "```python\ndef is_bored(S):\n    sentences = [s.strip() for s in S.replace('!', '.').replace('?', '.').split('.')]\n    return sum(1 for sentence in sentences if sentence.startswith('I '))\n```"
+        ]
+    }
+}

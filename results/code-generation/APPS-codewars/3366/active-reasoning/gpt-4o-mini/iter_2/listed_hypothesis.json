@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef L(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1  # Convert to 0-based index\n    available_digits = list(digits)\n    \n    for i in range(d):\n        factorial = math.factorial(d - 1 - i)\n        index = k // factorial\n        permutation.append(available_digits[index])\n        available_digits.pop(index)\n        k %= factorial\n        \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef L(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    available_digits = list(digits)\n    \n    for i in range(d, 0, -1):\n        idx = k // factorials[i - 1]\n        permutation.append(available_digits[idx])\n        available_digits.pop(idx)\n        k %= factorials[i - 1]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1\n    factorial = math.factorial\n\n    while d > 0:\n        d -= 1\n        fact = factorial(d)\n        index = k // fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        k %= fact\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef L(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert to zero-based index\n    factorial = math.factorial\n\n    while d > 0:\n        d -= 1\n        f = factorial(d)\n        index = n // f\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        n %= f\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # to convert to 0-based index\n    \n    factorial = math.factorial\n    while d > 0:\n        d -= 1\n        fact = factorial(d)\n        index = n // fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        n %= fact\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef L(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Adjust for zero-based indexing\n    factorials = [math.factorial(i) for i in range(d)]\n\n    available_digits = list(digits)\n\n    for i in range(d):\n        factorial = factorials[d - 1 - i]\n        index = n // factorial\n        n %= factorial\n        permutation.append(available_digits.pop(index))\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1\n    factorial = math.factorial\n\n    available_digits = list(digits)\n    \n    for i in range(d, 0, -1):\n        f = factorial(i - 1)\n        index = k // f\n        permutation.append(available_digits.pop(index))\n        k %= f\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef L(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1  # Convert to 0-based index\n    factorial = math.factorial\n\n    while d > 0:\n        d -= 1\n        fact = factorial(d)\n        index = k // fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index+1:]\n        k %= fact\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert to zero-indexed\n    factorials = [math.factorial(i) for i in range(d)]\n\n    while d > 0:\n        d -= 1\n        idx = n // factorials[d]\n        permutation.append(digits[idx])\n        digits = digits[:idx] + digits[idx + 1:]\n        n %= factorials[d]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef L(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert to 0-based index\n    factorials = [math.factorial(i) for i in range(d)]\n\n    for i in range(d, 0, -1):\n        idx = n // factorials[i - 1]\n        permutation.append(digits[idx])\n        digits = digits[:idx] + digits[idx + 1:]\n        n %= factorials[i - 1]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert to zero-based index\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    for i in range(d, 0, -1):\n        index = n // factorials[i - 1]\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]  # Remove used digit\n        n %= factorials[i - 1]\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert n to zero-based index\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    for i in range(d, 0, -1):\n        fact = factorials[i - 1]\n        index = n // fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        n %= fact\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # convert to 0-based index\n    factorial = math.factorial\n    \n    while d > 0:\n        d -= 1\n        fact = factorial(d)\n        index = n // fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]  # remove used digit\n        n %= fact\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert to 0-based index\n    \n    while d > 0:\n        d -= 1\n        factorial = math.factorial(d)\n        index = n // factorial\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        n %= factorial\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1\n    factorial = math.factorial\n    available_digits = list(digits)\n\n    for i in range(d):\n        fact = factorial(d - 1 - i)\n        index = k // fact\n        permutation.append(available_digits[index])\n        available_digits.pop(index)\n        k %= fact\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    n -= 1  # Convert to 0-based index\n    for i in range(d, 0, -1):\n        idx = n // factorials[i - 1]\n        permutation.append(digits[idx])\n        digits = digits[:idx] + digits[idx + 1:]\n        n %= factorials[i - 1]\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Adjust for 0-based index\n    factorial = math.factorial\n\n    for i in range(d, 0, -1):\n        fact = factorial(i - 1)\n        index = n // fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        n %= fact\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert to 0-based index\n    \n    while d > 0:\n        d -= 1\n        fact = math.factorial(d)\n        index = n // fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        n %= fact\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # convert to zero-based index\n    factorial = math.factorial\n\n    while d > 0:\n        d -= 1\n        f = factorial(d)\n        index = n // f\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]  # remove used digit\n        n %= f\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert to 0-based index\n    fact = math.factorial(d - 1)\n    \n    for i in range(d):\n        index = n // fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        n %= fact\n        if i < d - 1:\n            fact //= (d - 1 - i)\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1  # Convert to 0-based index\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    for i in range(d, 0, -1):\n        idx = k // factorials[i - 1]\n        permutation.append(digits[idx])\n        digits = digits[:idx] + digits[idx + 1:]  # Remove used digit\n        k %= factorials[i - 1]\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorial = [1] * d\n    \n    for i in range(1, d):\n        factorial[i] = factorial[i - 1] * i\n    \n    n -= 1  # Convert to zero-indexed\n    available_digits = list(digits)\n\n    for i in range(d):\n        index = n // factorial[d - 1 - i]\n        permutation.append(available_digits[index])\n        available_digits.pop(index)\n        n %= factorial[d - 1 - i]\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    available_digits = list(digits)\n    \n    for i in range(d - 1, -1, -1):\n        fact = factorials[i]\n        index = k // fact\n        permutation.append(available_digits[index])\n        available_digits.pop(index)\n        k %= fact\n        \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # to convert to 0-indexed\n    factorials = [math.factorial(i) for i in range(d)]\n\n    for i in range(d, 0, -1):\n        idx = n // factorials[i - 1]\n        permutation.append(digits[idx])\n        digits = digits[:idx] + digits[idx + 1:]\n        n %= factorials[i - 1]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    n -= 1  # convert to 0-based index\n    available_digits = list(digits)\n\n    for i in range(d-1, -1, -1):\n        idx = n // factorials[i]\n        permutation.append(available_digits[idx])\n        available_digits.pop(idx)\n        n %= factorials[i]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1  # Convert to 0-based index\n    factorials = [math.factorial(i) for i in range(d)]\n\n    for i in range(d, 0, -1):\n        idx = k // factorials[i - 1]\n        permutation.append(digits[idx])\n        digits = digits[:idx] + digits[idx + 1:]  # Remove used digit\n        k %= factorials[i - 1]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorial = [1] * d\n    \n    for i in range(1, d):\n        factorial[i] = factorial[i - 1] * i\n    \n    n -= 1  # Adjusting n to be zero-indexed\n    available_digits = list(digits)\n\n    for i in range(d):\n        idx = n // factorial[d - 1 - i]\n        permutation.append(available_digits[idx])\n        available_digits.pop(idx)\n        n %= factorial[d - 1 - i]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert n to zero-indexed\n    factorial = math.factorial\n\n    while d > 0:\n        d -= 1\n        f = factorial(d)\n        index = n // f\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        n %= f\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    n -= 1  # Convert to 0-based index\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    for i in range(d, 0, -1):\n        fact = factorials[i - 1]\n        index = n // fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]  # Remove used digit\n        n %= fact\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    result = []\n    k = n - 1\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    for i in range(d, 0, -1):\n        idx = k // factorials[i - 1]\n        result.append(digits[idx])\n        digits = digits[:idx] + digits[idx + 1:]\n        k %= factorials[i - 1]\n    \n    return ''.join(result)\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorial = math.factorial\n    k = n - 1  # convert to 0-indexed\n    available_digits = list(digits)\n    \n    for i in range(d):\n        fact = factorial(d - 1 - i)\n        index = k // fact\n        permutation.append(available_digits[index])\n        available_digits.pop(index)\n        k %= fact\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorial = math.factorial\n    n -= 1  # convert to 0-indexed\n\n    while d > 0:\n        d -= 1\n        fact = factorial(d)\n        index = n // fact\n        n %= fact\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorials = [math.factorial(i) for i in range(d)]\n    n -= 1  # Adjusting for 0-indexing\n\n    for i in range(d, 0, -1):\n        idx = n // factorials[i - 1]\n        permutation.append(digits[idx])\n        digits = digits[:idx] + digits[idx + 1:]\n        n %= factorials[i - 1]\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorial = math.factorial\n\n    k = n - 1  # convert to zero indexing\n    available_digits = list(digits)\n\n    for i in range(d):\n        fact = factorial(len(available_digits) - 1)\n        index = k // fact\n        permutation.append(available_digits[index])\n        available_digits.pop(index)\n        k %= fact\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1\n    factorials = [math.factorial(i) for i in range(d)]\n    \n    for i in range(d, 0, -1):\n        index = k // factorials[i - 1]\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        k %= factorials[i - 1]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorials = [math.factorial(i) for i in range(d)]\n\n    n -= 1  # Convert to zero-based index\n    available_digits = list(digits)\n\n    for i in range(d, 0, -1):\n        index = n // factorials[i - 1]\n        permutation.append(available_digits[index])\n        available_digits.pop(index)\n        n %= factorials[i - 1]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorial = math.factorial\n    \n    n -= 1  # Adjust for 0-based index\n    available_digits = list(digits)\n    \n    for i in range(d):\n        fact = factorial(d - 1 - i)\n        index = n // fact\n        permutation.append(available_digits[index])\n        available_digits.pop(index)\n        n %= fact\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorial = math.factorial\n    k = n - 1\n    \n    for i in range(d, 0, -1):\n        f = factorial(i - 1)\n        index = k // f\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        k %= f\n    \n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    factorial = math.factorial\n    k = n - 1  # since n is 1-indexed\n\n    while d > 0:\n        d -= 1\n        f = factorial(d)\n        index = k // f\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index+1:]\n        k %= f\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_perm(n, d):\n    digits = ''.join(str(i) for i in range(d))\n    permutation = []\n    k = n - 1  # since we start counting from 1\n    factorials = [math.factorial(i) for i in range(d)]\n\n    for i in range(d, 0, -1):\n        index = k // factorials[i - 1]\n        permutation.append(digits[index])\n        digits = digits[:index] + digits[index + 1:]\n        k %= factorials[i - 1]\n\n    return ''.join(permutation)\n```",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert pair_zeros([1, 0, 7, 0, 1]) == [1, 0, 7, 1]",
+        true
+    ],
+    "1": [
+        "assert pair_zeros([2, 0, 0, 3, 0, 0, 0]) == [2, 0, 3, 0]",
+        false
+    ],
+    "2": [
+        "assert pair_zeros([5, 3, 0, 0, 4, 0]) == [5, 3, 0, 4]  ",
+        false
+    ],
+    "3": [
+        "assert pair_zeros([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]",
+        true
+    ]
+}

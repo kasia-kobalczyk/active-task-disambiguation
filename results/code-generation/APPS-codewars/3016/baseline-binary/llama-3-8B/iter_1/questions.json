@@ -1,0 +1,16 @@
+{
+    "0": [
+        "assert minor_or_major('D F# A') == 'Major'"
+    ],
+    "1": [
+        "assert minor_or_major('F A C') == 'Not a chord'",
+        "assert minor_or_major('E G B') == 'Minor'"
+    ],
+    "2": [
+        "assert minor_or_major('E G B') == 'Minor'"
+    ],
+    "3": [
+        "assert minor_or_major('E G# B') == 'Minor'",
+        "assert minor_or_major('G B D') == 'Major'"
+    ]
+}

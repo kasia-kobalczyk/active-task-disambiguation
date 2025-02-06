@@ -1,0 +1,86 @@
+{
+    "0": [
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                d = int(((n-cube_a-cube_b)/c)**0.3333333)\n                if c**3+d**3 == n and a != c and a != d and b != c and b != d and a != b:\n                    return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                d = int(((n-cube_a-cube_b)/c)**0.3333333)\n                if c**3+d**3 == n and a != c and a != d and b != c and b != d and a != b:\n                    return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                d = int(((n-cube_a-cube_b)/c)**0.3333333)\n                if c**3+d**3 == n and a != c and a != d and b != c and b != d and a != b:\n                    return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                d = int(((n-cube_a-cube_b)/c)**0.3333333)\n                if c**3+d**3 == n and a != c and a != d and b != c and b != d and a != b:\n                    return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                d = int(((n-cube_a-cube_b)/c)**0.3333333)\n                if c**3+d**3 == n and a != c and a != d and b != c and b != d and a != b:\n                    return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    i = 1\n    while i ** 3 <= n:\n        j = i + 1\n        while j ** 3 <= n - i ** 3:\n            k = i\n            while k ** 3 <= n - (i ** 3 + j ** 3):\n                l = k + 1\n                while l ** 3 <= n - (i ** 3 + j ** 3 + k ** 3):\n                    if i ** 3 + j ** 3 + k ** 3 == l ** 3:\n                        continue\n                    if i ** 3 + j ** 3 == k ** 3 + l ** 3 == n:\n                        return True\n                    if i ** 3 + l ** 3 == k ** 3 + j ** 3 == n:\n                        return True\n                    if i ** 3 + k ** 3 == j ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + k ** 3 == i ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + l ** 3 == i ** 3 + k ** 3 == n:\n                        return True\n                    if k ** 3 + l ** 3 == i ** 3 + j ** 3 == n:\n                        return True\n            k += 1\n        j += 1\n        i += 1\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    i = 1\n    while i ** 3 <= n:\n        j = i + 1\n        while j ** 3 <= n - i ** 3:\n            k = i\n            while k ** 3 <= n - (i ** 3 + j ** 3):\n                l = k + 1\n                while l ** 3 <= n - (i ** 3 + j ** 3 + k ** 3):\n                    if i ** 3 + j ** 3 + k ** 3 == l ** 3:\n                        continue\n                    if i ** 3 + j ** 3 == k ** 3 + l ** 3 == n:\n                        return True\n                    if i ** 3 + l ** 3 == k ** 3 + j ** 3 == n:\n                        return True\n                    if i ** 3 + k ** 3 == j ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + k ** 3 == i ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + l ** 3 == i ** 3 + k ** 3 == n:\n                        return True\n                    if k ** 3 + l ** 3 == i ** 3 + j ** 3 == n:\n                        return True\n            k += 1\n        j += 1\n        i += 1\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    i = 1\n    while i ** 3 <= n:\n        j = i + 1\n        while j ** 3 <= n - i ** 3:\n            k = i\n            while k ** 3 <= n - (i ** 3 + j ** 3):\n                l = k + 1\n                while l ** 3 <= n - (i ** 3 + j ** 3 + k ** 3):\n                    if i ** 3 + j ** 3 + k ** 3 == l ** 3:\n                        continue\n                    if i ** 3 + j ** 3 == k ** 3 + l ** 3 == n:\n                        return True\n                    if i ** 3 + l ** 3 == k ** 3 + j ** 3 == n:\n                        return True\n                    if i ** 3 + k ** 3 == j ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + k ** 3 == i ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + l ** 3 == i ** 3 + k ** 3 == n:\n                        return True\n                    if k ** 3 + l ** 3 == i ** 3 + j ** 3 == n:\n                        return True\n            k += 1\n        j += 1\n        i += 1\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    i = 1\n    while i ** 3 <= n:\n        j = i + 1\n        while j ** 3 <= n - i ** 3:\n            k = i\n            while k ** 3 <= n - (i ** 3 + j ** 3):\n                l = k + 1\n                while l ** 3 <= n - (i ** 3 + j ** 3 + k ** 3):\n                    if i ** 3 + j ** 3 + k ** 3 == l ** 3:\n                        continue\n                    if i ** 3 + j ** 3 == k ** 3 + l ** 3 == n:\n                        return True\n                    if i ** 3 + l ** 3 == k ** 3 + j ** 3 == n:\n                        return True\n                    if i ** 3 + k ** 3 == j ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + k ** 3 == i ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + l ** 3 == i ** 3 + k ** 3 == n:\n                        return True\n                    if k ** 3 + l ** 3 == i ** 3 + j ** 3 == n:\n                        return True\n            k += 1\n        j += 1\n        i += 1\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    i = 1\n    while i ** 3 <= n:\n        j = i + 1\n        while j ** 3 <= n - i ** 3:\n            k = i\n            while k ** 3 <= n - (i ** 3 + j ** 3):\n                l = k + 1\n                while l ** 3 <= n - (i ** 3 + j ** 3 + k ** 3):\n                    if i ** 3 + j ** 3 + k ** 3 == l ** 3:\n                        continue\n                    if i ** 3 + j ** 3 == k ** 3 + l ** 3 == n:\n                        return True\n                    if i ** 3 + l ** 3 == k ** 3 + j ** 3 == n:\n                        return True\n                    if i ** 3 + k ** 3 == j ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + k ** 3 == i ** 3 + l ** 3 == n:\n                        return True\n                    if j ** 3 + l ** 3 == i ** 3 + k ** 3 == n:\n                        return True\n                    if k ** 3 + l ** 3 == i ** 3 + j ** 3 == n:\n                        return True\n            k += 1\n        j += 1\n        i += 1\n    return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333) + 1):\n        for b in range(a, int(n**0.3333) + 1):\n            a_cube, b_cube = a**3, b**3\n            for c in range(1, int(n**0.3333) + 1):\n                for d in range(c, int(n**0.3333) + 1):\n                    c_cube, d_cube = c**3, d**3\n                    if a_cube + b_cube == c_cube + d_cube == n and a != b and c != d and a != c and a != d and b != c and b != d:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.333333333 + 0.5) + 1):\n        for b in range(a + 1, int(n**0.333333333 + 0.5) + 1):\n            if a**3 + b**3 == n:\n                c = 1\n                while True:\n                    d = 1\n                    while True:\n                        if c**3 + d**3 == n:\n                            return True\n                        d += 1\n                    c += 1\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    result = False\n    for a in range(1, n+1):\n        for b in range(a, n+1):\n            if a**3+b**3 == n:\n                for c in range(1, n+1):\n                    for d in range(c, n+1):\n                        if c**3+d**3 == n and (a,b,c,d) != (c,d,a,b) and len(set([a,b,c,d])) == 4:\n                            result = True\n                            return result\n    return result",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def has_two_cube_sums(n):\n    i = 1\n    while i ** 3 <= n:\n        j = i + 1\n        while j ** 3 <= n - i ** 3:\n            k = i\n            while k ** 3 <= n - (i ** 3 + j ** 3):\n                l = k + 1\n                if l ** 3 == n - i ** 3 - j ** 3 - k ** 3:\n                    return True\n                k = l\n            j = k + 1\n        i = j\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333) + 1):\n        for b in range(a, int(n**0.3333) + 1):\n            a_cube, b_cube = a**3, b**3\n            for c in range(a, int((n-a_cube)**0.3333) + 1):\n                for d in range(c, int((n-a_cube)**0.3333) + 1):\n                    if a_cube + b_cube == c**3 + d**3 == n:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.333333333 + 0.5) + 1):\n        for b in range(a + 1, int(n**0.333333333 + 0.5) + 1):\n            if a**3 + b**3 == n:\n                c = 1\n                while True:\n                    d = 1\n                    while True:\n                        if c**3 + d**3 == n:\n                            return True\n                        d += 1\n                    c += 1\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    result = False\n    for a in range(1, n+1):\n        for b in range(a, n+1):\n            if a**3+b**3 == n:\n                for c in range(a+1, n+1):\n                    for d in range(c, n+1):\n                        if c**3+d**3 == n and {a, b, c, d} == set([x for x in {a, b, c, d} if x > 0]):\n                            result = True\n                            break\n                    if result:\n                        break\n                if result:\n                    break\n    return result",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.333333333 + 0.5) + 1):\n        for b in range(a + 1, int(n**0.333333333 + 0.5) + 1):\n            if a**3 + b**3 == n:\n                c = 1\n                while True:\n                    d = 1\n                    while True:\n                        if c**3 + d**3 == n:\n                            return True\n                        d += 1\n                    c += 1\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    result = False\n    for a in range(1, n+1):\n        for b in range(a, n+1):\n            if a**3+b**3 == n:\n                for c in range(1, n+1):\n                    for d in range(c, n+1):\n                        if c**3+d**3 == n and (a,b,c,d) != (c,d,a,b) and len(set([a, b, c, d])) == 4:\n                            result = True\n                            break\n                    if result: break\n                if result: break\n    return result",
+            "logp": null
+        }
+    ]
+}

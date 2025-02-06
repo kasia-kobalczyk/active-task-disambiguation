@@ -1,0 +1,15 @@
+{
+    "0": [],
+    "1": [
+        "assert pair_zeros([1, 0, 7, 0, 1, 0, 3, 0, 4]) == [1, 0, 7, 1, 0, 3, 4], f\"Expected pair_zeros([1, 0, 7, 0, 1, 0, 3, 0, 4]) to return [1, 0, 7, 1, 0, 3, 4], but got {pair_zeros([1, 0, 7, 0, 1, 0, 3, 0, 4])}\"",
+        "assert pair_zeros([0, 1, 0, 2]) == [0, 1, 2], f\"Expected pair_zeros([0, 1, 0, 2]) to return [0, 1, 2], but got {pair_zeros([0, 1, 0, 2])}\"",
+        "assert pair_zeros([0, 1, 0, 0]) == [0, 1, 0], f\"Expected pair_zeros([0, 1, 0, 0]) to return [0, 1, 0], but got {pair_zeros([0, 1, 0, 0])}\""
+    ],
+    "2": [
+        "assert pair_zeros([0, 1, 0, 0, 3]) == [0, 1, 3]",
+        "assert pair_zeros([1, 0, 7, 0, 1, 0, 3, 0, 4]) == [1, 0, 7, 1, 0, 3, 4]"
+    ],
+    "3": [
+        "assert pair_zeros([1, 0, 7, 0, 1, 0, 3, 0, 4]) == [1, 0, 7, 1, 0, 3, 4]"
+    ]
+}

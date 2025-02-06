@@ -1,0 +1,50 @@
+{
+    "0": [
+        "assert get_odd_collatz(6) == [1, 5, 13]",
+        "assert get_odd_collatz(2) == [1]",
+        "assert get_odd_collatz(8) == [1, 5, 13, 41]",
+        "assert get_odd_collatz(4) == [1, 5]",
+        "assert get_odd_collatz(9) == [1]",
+        "assert get_odd_collatz(10) == [1, 5, 13, 41, 121]",
+        "assert get_odd_collatz(3) == [1, 3]",
+        "assert get_odd_collatz(4) == [1, 3]",
+        "assert get_odd_collatz(7) == [1]",
+        "assert get_odd_collatz(3) == [1]",
+        "assert get_odd_collatz(5) == [1]",
+        "assert get_odd_collatz(10) == [1, 3, 5, 7, 9]",
+        "assert get_odd_collatz(1) == [1]"
+    ],
+    "1": [
+        "assert get_odd_collatz(1) == [1]",
+        "assert get_odd_collatz(5) == [1, 3, 5]",
+        "assert get_odd_collatz(4) == [1, 5]",
+        "assert get_odd_collatz(3) == [1, 5, 17, 13, 41]",
+        "assert get_odd_collatz(6) == [1, 3, 5, 7]",
+        "assert get_odd_collatz(7) == [1, 3, 5, 7]",
+        "assert get_odd_collatz(3) == [1]",
+        "assert get_odd_collatz(5) == [1, 3, 5, 9, 17, 13, 21, 27, 41]",
+        "assert get_odd_collatz(20) == [1, 3, 5, 9, 17, 13, 21, 27, 41, 83, 53, 85, 107, 27, 43, 69, 87, 13, 21, 17, 29, 23, 31, 5, 3, 13, 11, 5, 17, 7, 19]",
+        "assert get_odd_collatz(10) == [1, 3, 5, 9, 17, 13, 21, 27, 41, 83, 53, 85, 107, 27, 43, 69, 87, 13, 21, 17, 29, 23, 31]"
+    ],
+    "2": [
+        "assert get_odd_collatz(999) == [999, 1499, 2249, 3374, 2531, 3797, 5696, 1424, 712, 356, 178, 89, 67, 101, 152, 76, 38, 19, 29, 11, 17, 13, 5]",
+        "assert get_odd_collatz(7) == [1, 3, 5]",
+        "assert get_odd_collatz(7) == [7, 11, 17, 13, 5]",
+        "assert get_odd_collatz(6) == [3, 5]",
+        "assert get_odd_collatz(4) == [1, 3]",
+        "assert get_odd_collatz(6) == [1, 3, 5]",
+        "assert get_odd_collatz(1000) == [125, 47, 71, 107, 161, 121, 91, 137, 103, 155, 233, 175, 263, 395, 593, 445, 319, 479, 719, 1079, 1619, 2429, 3644, 2051, 3077, 4616, 2308, 577, 1732, 433, 1300, 325, 122, 23, 35, 53, 5]",
+        "assert get_odd_collatz(3) == [1]",
+        "assert get_odd_collatz(5) == [1, 3]"
+    ],
+    "3": [
+        "assert get_odd_collatz(7) == [1, 3, 5]",
+        "assert get_odd_collatz(7) == [7, 11, 17, 13, 5]",
+        "assert get_odd_collatz(6) == [3, 5]",
+        "assert get_odd_collatz(4) == [1, 3]",
+        "assert get_odd_collatz(6) == [1, 3, 5]",
+        "assert get_odd_collatz(1000) == [125, 47, 71, 107, 161, 121, 91, 137, 103, 155, 233, 175, 263, 395, 593, 445, 319, 479, 719, 1079, 1619, 2429, 3644, 2051, 3077, 4616, 2308, 577, 1732, 433, 1300, 325, 122, 23, 35, 53, 5]",
+        "assert get_odd_collatz(3) == [1]",
+        "assert get_odd_collatz(5) == [1, 3]"
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "0": [
+        {
+            "content": "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum(lst[1::2])",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum_odd = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum_odd += lst[i]\n    return sum_odd",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum([lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum([x for i,x in enumerate(lst) if x%2==1 and i%2==0])",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum([lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum([lst[i] for i in range(len(lst)) if i%2 == 0 and lst[i]%2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def solution(lst):\n    return sum([lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum([num for index, num in enumerate(lst) if index % 2 == 0 and num % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    sum_odd = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum_odd += lst[i]\n    return sum_odd",
+            "logp": null
+        },
+        {
+            "content": "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,126 @@
+{
+    "0": [
+        {
+            "content": "def solve(s):\n    count = 0\n    for i in range(len(s) // 2):\n        if s[i] != s[-i - 1]:\n            count += 1\n        if count > 1:\n            return False\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    l, r = 0, len(s) - 1\n    diff = 0\n    while l < r:\n        if s[l] != s[r]:\n            diff += 1\n        l += 1\n        r -= 1\n    return diff <= 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left = 0\n    right = len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n        if count > 1:\n            return False\n        left += 1\n        right -= 1\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left, right = 0, len(s) - 1\n    changed = False\n    while left < right:\n        if s[left] != s[right]:\n            if changed:\n                return False\n            changed = True\n        left += 1\n        right -= 1\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if len(s) <= 1:\n        return False\n    left, right = 0, len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n            if count > 1:\n                return False\n        left += 1\n        right -= 1\n    return count == 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left, right = 0, len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n        if count > 1:\n            return False\n        left += 1\n        right -= 1\n    return count <= 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left = 0\n    right = len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n        left += 1\n        right -= 1\n    return count <= 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left = 0\n    right = len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n        left += 1\n        right -= 1\n    return count <= 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    l, r = 0, len(s) - 1\n    count = 0\n    while l < r:\n        if s[l] != s[r]:\n            count += 1\n        if count > 1:\n            return False\n        l, r = l + 1, r - 1\n    return count == 1 or (count == 0 and len(s) > 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left = 0\n    right = len(s) - 1\n    count = 0\n\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n        left += 1\n        right -= 1\n\n    return count <= 1",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def solve(s):\n    count = 0\n    for i in range(len(s) // 2):\n        if s[i] != s[-i - 1]:\n            count += 1\n        if count > 1:\n            return False\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left, right = 0, len(s) - 1\n    changed = False\n    while left < right:\n        if s[left] != s[right]:\n            if changed:\n                return False\n            changed = True\n        left += 1\n        right -= 1\n    return True if len(s) % 2 != 0 or changed else False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    for i in range(len(s)):\n        t = list(s)\n        t[i] = 'x'\n        if t == t[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left, right = 0, len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n            if count > 1:\n                return False\n        left += 1\n        right -= 1\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    for i in range(len(s)):\n        t = list(s)\n        t[i] = ''\n        if t == t[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if len(s) <= 1:\n        return False\n    i, j = 0, len(s) - 1\n    diff = 0\n    while i < j:\n        if s[i] != s[j]:\n            diff += 1\n            if diff > 1:\n                return False\n        i += 1\n        j -= 1\n    return diff == 1",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def solve(s):\n    count = 0\n    for i in range(len(s) // 2):\n        if s[i] != s[-i - 1]:\n            count += 1\n        if count > 1:\n            return False\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if len(s) == 1:\n        return False\n    left, right = 0, len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n            if count > 1:\n                return False\n        left += 1\n        right -= 1\n    return count == 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left, right = 0, len(s) - 1\n    changed = False\n    while left < right:\n        if s[left] != s[right]:\n            if changed:\n                return False\n            changed = True\n        left += 1\n        right -= 1\n    return True if len(s) % 2 == 1 or changed else False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left, right = 0, len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n            if count > 1:\n                return False\n        left += 1\n        right -= 1\n    return count == 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    l, r = 0, len(s) - 1\n    count = 0\n    while l < r:\n        if s[l] != s[r]:\n            count += 1\n        if count > 1:\n            return False\n        l += 1\n        r -= 1\n    return count == 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left = 0\n    right = len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n        left += 1\n        right -= 1\n    return count == 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left, right = 0, len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n            if count > 1:\n                return False\n        left += 1\n        right -= 1\n    return count == 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    count = 0\n    for i in range(len(s) // 2):\n        if s[i] != s[-i - 1]:\n            count += 1\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left = 0\n    right = len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n            if count > 1:\n                return False\n        left += 1\n        right -= 1\n    return count == 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left, right = 0, len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n            if count > 1:\n                return False\n        left += 1\n        right -= 1\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def solve(s):\n    count = 0\n    for i in range(len(s) // 2):\n        if s[i] != s[-i - 1]:\n            count += 1\n        if count > 1:\n            return False\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    count = 0\n    for i in range(len(s) // 2):\n        if s[i] != s[-i - 1]:\n            count += 1\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left, right = 0, len(s) - 1\n    count = 0\n    while left < right:\n        if s[left] != s[right]:\n            count += 1\n            if count > 1:\n                return False\n        left += 1\n        right -= 1\n    return count == 1 or (count == 0 and len(s) % 2 == 1)",
+            "logp": null
+        }
+    ]
+}

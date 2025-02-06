@@ -1,0 +1,146 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in a[i:] + a[:i] for i in range(len(b)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in a[i:] + a[:i] for i in range(len(b)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in (b * i) for i in range(1, len(b) + 1))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in (b * i) for i in range(1, len(b) + 1))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in (b * i) for i in range(1, len(a) + 1))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in (b * i) for i in range(1, len(b) + 1))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in (b * i) for i in range(1, len(b) + 1))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in a[i:] + a[:i] for i in range(len(b)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in (b * i) for i in range(1, len(b) + 1))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in a or any(b[i:] + b[:i] in a for i in range(len(b)))\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in a[i:] + a[:i] for i in range(len(b)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in a or any(b in a for _ in range(len(b)) if (b := b[1:] + b[0]))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in (b * i) for i in range(1, len(b) + 1)) and any(b in a for b in (b[i:] + b[:i] for i in range(len(b))))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in (b * i) for i in range(1, len(b) + 1)) and b in a\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in a[i:] + a[:i] for i in range(len(b)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b in a[i:] + a[:i] for i in range(len(b)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in a or any(b[i:] + b[:i] in a for i in range(len(b)))\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in a + a\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a , b):\n    return b in a + a\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in (a * 2)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a , b):\n    return b in a + a\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in a * 2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a , b):\n    return b in (a + a)\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef cycpattern_check(a , b):\n    return b in a + a\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a , b):\n    return any(b[i:] + b[:i] in a for i in range(len(b)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a , b):\n    return b in a * 2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in (a * 2)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a , b):\n    return b in (a * 2)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in (a * 2)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in (a + a)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in a + a\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return any(b[i:] + b[:i] in a for i in range(len(b)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a, b):\n    return b in a * 2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef cycpattern_check(a , b):\n    return b in (a + a)\n```",
+            "logp": null
+        }
+    ]
+}

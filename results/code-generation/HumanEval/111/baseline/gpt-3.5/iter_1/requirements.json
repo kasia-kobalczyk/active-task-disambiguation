@@ -1,0 +1,18 @@
+{
+    "0": [
+        "histogram(\"a b c a b c d e f g g g\")",
+        "{'g': 3}"
+    ],
+    "1": [
+        "None",
+        "error"
+    ],
+    "2": [
+        "histogram(\"abc abc abc\")",
+        "{'abc': 3}"
+    ],
+    "3": [
+        "histogram(\"ab c d e f\")",
+        "{'ab': 1, 'c': 1, 'd': 1, 'e': 1, 'f': 1}"
+    ]
+}

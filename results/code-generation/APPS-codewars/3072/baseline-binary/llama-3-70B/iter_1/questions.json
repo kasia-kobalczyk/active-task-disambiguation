@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert is_narcissistic(153, 370, 371, 407) == True",
+        "assert is_narcissistic('153', 370, 371, 407) == True",
+        "assert is_narcissistic(123, 456, 789) == False"
+    ],
+    "1": [
+        "assert is_narcissistic(153, 370, 407) == True",
+        "assert is_narcissistic('153', 370, 407) == True"
+    ],
+    "2": [
+        "assert is_narcissistic('153', 370, 371, 407) == True",
+        "assert is_narcissistic(1234) == False"
+    ],
+    "3": [
+        "assert is_narcissistic('abc', 370, 371, 407) == False",
+        "assert is_narcissistic(371, 407, '8208') == True"
+    ]
+}

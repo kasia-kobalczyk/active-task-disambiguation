@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert words_string(\"apple banana,orange\") == [\"apple\", \"banana\", \"orange\"]",
+        true
+    ],
+    "1": [
+        "assert words_string(\"  one, two , three \") == [\"one\", \"two\", \"three\"]",
+        true
+    ],
+    "2": [
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        true
+    ],
+    "3": [
+        "assert words_string(\"dog, cat, mouse\") == [\"dog\", \"cat\", \"mouse\"]",
+        true
+    ]
+}

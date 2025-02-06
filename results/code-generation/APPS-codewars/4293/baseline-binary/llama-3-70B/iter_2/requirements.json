@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert calculate_1RM(50, 0) == 0",
+        true
+    ],
+    "1": [
+        "assert calculate_1RM(40, 1) == 40",
+        true
+    ],
+    "2": [
+        "assert calculate_1RM(60, 2) == 90",
+        false
+    ],
+    "3": [
+        "assert calculate_1RM(100, 5) == 136",
+        false
+    ]
+}

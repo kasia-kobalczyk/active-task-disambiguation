@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "def scf(lst):\n    smallest_common_factor = None\n    \n    if not lst:\n        return 1\n    \n    for num in lst:\n        if num <= 1:\n            return 1\n        \n        factors = set()\n        for i in range(2, num + 1):\n            if num % i == 0:\n                factors.add(i)\n        \n        if smallest_common_factor is None:\n            smallest_common_factor = factors\n        else:\n            smallest_common_factor = smallest_common_factor.intersection(factors)\n        \n        if not smallest_common_factor:\n            return 1\n    \n    return min(smallest_common_factor)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_common_factor = 1\n    for i in range(2, min(lst)+1):\n        if all(num % i == 0 for num in lst):\n            smallest_common_factor = i\n            break\n    return smallest_common_factor",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    factors = []\n    for num in lst:\n        for i in range(2, num + 1):\n            if num % i == 0:\n                factors.append(i)\n                break\n    if not factors:\n        return 1\n    common_factors = set(factors)\n    for num in lst:\n        common_factors &= set(factor for factor in factors if num % factor == 0)\n        if not common_factors:\n            return 1\n    return min(common_factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_common_factor = 1\n    if len(lst) > 0:\n        smallest_common_factor = min(lst)\n        for num in lst:\n            if num != 1:\n                smallest_common_factor = gcd(smallest_common_factor, num)\n    return smallest_common_factor",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def prime_factors(n):\n        i = 2\n        factors = []\n        while i * i <= n:\n            if n % i:\n                i += 1\n            else:\n                n //= i\n                factors.append(i)\n        if n > 1:\n            factors.append(n)\n        return factors\n    \n    common_factors = []\n    for num in lst:\n        factors = prime_factors(num)\n        for factor in factors:\n            if factor not in common_factors:\n                common_factors.append(factor)\n            else:\n                common_factors.remove(factor)\n    \n    if not common_factors:\n        return 1\n    return min(common_factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def get_factors(n):\n        factors = []\n        for i in range(2, n+1):\n            if n % i == 0:\n                factors.append(i)\n        return factors\n\n    # Find factors of first number in the list\n    factors = get_factors(lst[0])\n\n    # Check if each factor is a common factor of all numbers in the list\n    for factor in factors:\n        for num in lst[1:]:\n            if num % factor != 0:\n                break\n        else:\n            return factor\n\n    # If no common factors above 1 are found, return 1\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    # Find the smallest number in the list\n    smallest = min(lst)\n    \n    # Find the factors of the smallest number\n    factors = []\n    for i in range(2, smallest + 1):\n        if smallest % i == 0:\n            factors.append(i)\n    \n    # Check if the factors divide all numbers in the list\n    for factor in factors:\n        divisible = True\n        for num in lst:\n            if num % factor != 0:\n                divisible = False\n                break\n        if divisible:\n            return factor\n    \n    # If no common factors are found, return 1\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_common_factor = None\n    for num in lst:\n        factors = []\n        for i in range(2, num + 1):\n            if num % i == 0:\n                factors.append(i)\n        if smallest_common_factor is None:\n            smallest_common_factor = set(factors)\n        else:\n            smallest_common_factor = smallest_common_factor.intersection(set(factors))\n    if smallest_common_factor:\n        return min(smallest_common_factor)\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a,b):\n        while b != 0:\n            a,b = b, a % b\n        return a\n    \n    def find_factors(num):\n        factors = []\n        for i in range(2, int(num**0.5)+1):\n            if num % i == 0:\n                factors.append(i)\n                factors.append(num//i)\n        return factors\n    \n    factors = set(find_factors(lst[0]))\n    \n    for i in range(1, len(lst)):\n        factors = factors.intersection(set(find_factors(lst[i])))\n        \n    if not factors:\n        return 1\n    \n    result = min(factors)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    if len(lst) == 0:\n        return 1\n    \n    min_num = min(lst)\n    \n    factors = []\n    for i in range(2, min_num + 1):\n        is_factor = True\n        for num in lst:\n            if num % i != 0:\n                is_factor = False\n                break\n        if is_factor:\n            factors.append(i)\n    \n    if len(factors) == 0:\n        return 1\n    \n    return min(factors)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def scf(lst):\n    if len(lst) == 0:\n        return 1\n    \n    min_num = min(lst)\n    \n    for i in range(2, min_num + 1):\n        if all(num % i == 0 for num in lst):\n            return i\n    \n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_common_factor = 1\n    for i in range(2, min(lst)+1):\n        if all(num % i == 0 for num in lst):\n            smallest_common_factor = i\n            break\n    return smallest_common_factor\n\n# Testing the function with the provided example\nprint(scf([7, 14, 21, 28, 35])) # Output: 7",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def get_factors(num):\n        factors = []\n        for i in range(2, num+1):\n            if num % i == 0:\n                factors.append(i)\n        return factors\n    \n    # get factors of first element in the list\n    common_factors = get_factors(lst[0])\n    \n    # iterate through the rest of the list and find the common factors\n    for num in lst[1:]:\n        factors = get_factors(num)\n        # remove factors that are not common to all numbers\n        common_factors = [factor for factor in common_factors if factor in factors]\n        \n    if len(common_factors) > 0:\n        # return the smallest common factor\n        return min(common_factors)\n    else:\n        # if there are no common factors, return 1\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    if len(lst) == 0:\n        return 1\n    \n    smallest_common_factor = None\n    \n    for num in lst:\n        if smallest_common_factor is None:\n            smallest_common_factor = num\n        else:\n            smallest_common_factor = gcd(smallest_common_factor, num)\n    \n    return smallest_common_factor\n\n# Helper function to calculate greatest common divisor (GCD)\ndef gcd(a, b):\n    while b != 0:\n        a, b = b, a % b\n    return a",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    # Find the minimum number in the list\n    min_num = min(lst)\n    \n    # Iterate from 2 to the minimum number and check if each number is a factor of all numbers in the list\n    for i in range(2, min_num+1):\n        is_factor = True\n        for num in lst:\n            if num % i != 0:\n                is_factor = False\n                break\n        if is_factor:\n            return i\n    \n    # If no common factors are found, return 1\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    # Find the minimum number in the list\n    min_num = min(lst)\n    \n    # Initialize a variable to store the common factor\n    common_factor = None\n    \n    # Loop from 2 to the minimum number\n    for factor in range(2, min_num + 1):\n        # Check if the factor is a common factor of all numbers in the list\n        if all(num % factor == 0 for num in lst):\n            common_factor = factor\n            break\n    \n    # If there is no common factor above 1, return 1\n    if common_factor is None:\n        return 1\n    \n    return common_factor",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_factor = None\n    for num in lst:\n        factors = []\n        for i in range(2, num+1):\n            if num % i == 0:\n                factors.append(i)\n        if smallest_factor is None:\n            smallest_factor = factors\n        else:\n            smallest_factor = list(set(smallest_factor) & set(factors))\n    if smallest_factor:\n        return min(smallest_factor)\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_common_factor = min(lst)\n    for num in lst:\n        if num % smallest_common_factor != 0:\n            return 1\n    return smallest_common_factor\n\n# Test Cases\nprint(scf([7, 14, 21, 28, 35])) # Output: 7\nprint(scf([1, 2, 3, 4, 5])) # Output: 1\nprint(scf([2, 4, 6, 8, 10])) # Output: 2\nprint(scf([3, 6, 9, 12, 15])) # Output: 3\nprint(scf([2, 3, 5, 7, 11])) # Output: 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_common_factor = None\n    for num in lst:\n        factors = []\n        for i in range(2, num + 1):\n            if num % i == 0:\n                factors.append(i)\n        if smallest_common_factor is None:\n            smallest_common_factor = factors\n        else:\n            smallest_common_factor = [factor for factor in smallest_common_factor if factor in factors]\n            if not smallest_common_factor:\n                return 1\n    return min(smallest_common_factor)\n\nprint(scf([7, 14, 21, 28, 35]))",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    if len(lst) == 0:\n        return 1\n    min_num = min(lst)\n    for i in range(2, min_num+1):\n        if all(num % i == 0 for num in lst):\n            return i\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    # Find the minimum value in the list\n    min_val = min(lst)\n    \n    # Create a set to store the factors\n    factors = set()\n    \n    # Loop through the numbers from 2 to the minimum value\n    for i in range(2, min_val+1):\n        # Check if i is a factor of all numbers in the list\n        if all(num % i == 0 for num in lst):\n            factors.add(i)\n    \n    # If there are no common factors, return 1\n    if len(factors) == 0:\n        return 1\n    \n    # Return the smallest common factor\n    return min(factors)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def scf(lst):\n    # Find the minimum number in the list\n    min_num = min(lst)\n    \n    # Find all factors of the minimum number\n    factors = []\n    for i in range(2, min_num + 1):\n        if min_num % i == 0:\n            factors.append(i)\n    \n    # Check if each factor divides all numbers in the list\n    for factor in factors:\n        divides_all = True\n        for num in lst:\n            if num % factor != 0:\n                divides_all = False\n                break\n        if divides_all:\n            return factor\n    \n    # If no common factor is found, return 1\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    # Find the smallest number in the list\n    min_num = min(lst)\n    \n    # Iterate from 2 to the minimum number\n    for i in range(2, min_num + 1):\n        # Check if the current number is a common factor of all numbers in the list\n        if all(num % i == 0 for num in lst):\n            return i\n    \n    # If no common factors are found, return 1\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def get_factors(num):\n        factors = []\n        for i in range(2, num + 1):\n            if num % i == 0:\n                factors.append(i)\n        return factors\n\n    factors_list = []\n    for num in lst:\n        factors = get_factors(num)\n        factors_list.append(factors)\n\n    common_factors = set(factors_list[0])\n    for factors in factors_list[1:]:\n        common_factors = common_factors.intersection(set(factors))\n\n    if len(common_factors) == 0:\n        return 1\n    else:\n        return min(common_factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_factor = None\n    for num in lst:\n        factors = []\n        for i in range(2, num + 1):\n            if num % i == 0:\n                factors.append(i)\n        if smallest_factor is None:\n            smallest_factor = set(factors)\n        else:\n            smallest_factor = smallest_factor.intersection(set(factors))\n    if smallest_factor:\n        return min(smallest_factor)\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    # Find the smallest element in the list\n    smallest = min(lst)\n    \n    # Initialize a list to store all factors of the smallest element\n    factors = []\n    \n    # Iterate over all numbers from 2 to the smallest element\n    for i in range(2, smallest + 1):\n        # Check if i is a factor of all numbers in the list\n        if all(num % i == 0 for num in lst):\n            factors.append(i)\n    \n    # If there are no common factors above 1, return 1\n    if not factors:\n        return 1\n    \n    # Return the smallest common factor\n    return min(factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    if len(lst) == 0:\n        return 1\n\n    # Find the minimum value in the list\n    min_val = min(lst)\n\n    # Find the maximum value in the list\n    max_val = max(lst)\n\n    # Find the factors of the minimum value\n    factors = []\n    for i in range(2, min_val + 1):\n        if min_val % i == 0:\n            factors.append(i)\n\n    # Find the smallest common factor\n    scf = 1\n    for factor in factors:\n        divisible = True\n        for num in lst:\n            if num % factor != 0:\n                divisible = False\n                break\n        if divisible:\n            scf = factor\n            break\n\n    return scf",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    if len(lst) == 0:\n        return 1\n    \n    smallest_common_factor = None\n    for i in lst:\n        if smallest_common_factor == None:\n            smallest_common_factor = i\n        else:\n            smallest_common_factor = gcd(smallest_common_factor, i)\n    \n    return smallest_common_factor\n\ndef gcd(a, b):\n    while b != 0:\n        temp = b\n        b = a % b\n        a = temp\n    return a",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def get_factors(num):\n        factors = []\n        for i in range(2, num + 1):\n            if num % i == 0:\n                factors.append(i)\n        return factors\n    \n    common_factors = set(get_factors(lst[0]))\n    for num in lst[1:]:\n        common_factors = common_factors.intersection(set(get_factors(num)))\n    \n    if len(common_factors) == 0:\n        return 1\n    return min(common_factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def get_factors(n):\n        factors = []\n        for i in range(2, n + 1):\n            if n % i == 0:\n                factors.append(i)\n        return factors\n\n    common_factors = set(get_factors(lst[0]))\n    for num in lst[1:]:\n        common_factors &= set(get_factors(num))\n\n    if len(common_factors) == 0:\n        return 1\n    else:\n        return min(common_factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    # Find the minimum number in the list\n    min_num = min(lst)\n    \n    # Create a set of factors for the minimum number\n    factors = set()\n    for i in range(2, min_num+1):\n        if min_num % i == 0:\n            factors.add(i)\n    \n    # Check if the factors are also factors for all other numbers in the list\n    for num in lst[1:]:\n        for factor in factors.copy():\n            if num % factor != 0:\n                factors.remove(factor)\n    \n    # If there are no common factors, return 1\n    if len(factors) == 0:\n        return 1\n    \n    # Return the smallest common factor\n    return min(factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    min_num = min(lst)\n    factors = []\n    for i in range(2, min_num + 1):\n        if all(num % i == 0 for num in lst):\n            factors.append(i)\n    if factors:\n        return min(factors)\n    else:\n        return 1",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def scf(lst):\n    min_num = min(lst)\n    factors = []\n    for i in range(2, min_num + 1):\n        if all(num % i == 0 for num in lst):\n            factors.append(i)\n    if len(factors) > 0:\n        return min(factors)\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    if len(lst) < 1:\n        return 1\n    \n    min_num = min(lst)\n    smallest_common_factor = 1\n    for i in range(2, min_num+1):\n        count = 0\n        for num in lst:\n            if num % i == 0:\n                count += 1\n        if count == len(lst):\n            smallest_common_factor = i\n            break\n    return smallest_common_factor",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def factors(n):\n        factors = []\n        for i in range(2, n+1):\n            if n % i == 0:\n                factors.append(i)\n        return factors\n    \n    all_factors = []\n    for num in lst:\n        num_factors = factors(num)\n        all_factors.append(num_factors)\n    \n    common_factors = set(all_factors[0])\n    for factors in all_factors[1:]:\n        common_factors = common_factors.intersection(set(factors))\n    \n    if len(common_factors) == 0:\n        return 1\n    else:\n        return min(common_factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    common_factors = []\n    smallest_common_factor = 1\n    \n    for num in lst:\n        factors = []\n        for i in range(2, num+1):\n            if num % i == 0:\n                factors.append(i)\n        \n        if len(factors) == 0:\n            return 1\n        \n        common_factors.append(factors)\n    \n    for factor in common_factors[0]:\n        if all(factor in factors for factors in common_factors[1:]):\n            smallest_common_factor = factor\n            break\n    \n    return smallest_common_factor",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_factor = None\n    for num in lst:\n        factors = []\n        for i in range(2, num + 1):\n            if num % i == 0:\n                factors.append(i)\n        if smallest_factor is None:\n            smallest_factor = set(factors)\n        else:\n            smallest_factor = smallest_factor.intersection(set(factors))\n    if smallest_factor:\n        return min(smallest_factor)\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    if len(lst) == 0:\n        return 1\n    factors = set()\n    for i in range(2, min(lst) + 1):\n        count = 0\n        for num in lst:\n            if num % i == 0:\n                count += 1\n        if count == len(lst):\n            factors.add(i)\n    if len(factors) == 0:\n        return 1\n    else:\n        return min(factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    factors = []\n    for i in range(2, min(lst)+1):\n        if all(num % i == 0 for num in lst):\n            factors.append(i)\n    if len(factors) == 0:\n        return 1\n    else:\n        return min(factors)",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    # find the minimum number in the list\n    min_num = min(lst)\n    \n    # find the factors of the minimum number\n    factors = []\n    for i in range(2, min_num+1):\n        if min_num % i == 0:\n            factors.append(i)\n    \n    # check if each factor is a common factor of all numbers in the list\n    for factor in factors:\n        if all(num % factor == 0 for num in lst):\n            return factor\n    \n    # return 1 if no common factor is found\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    # Find the smallest number in the list\n    smallest = min(lst)\n\n    # Find all factors of the smallest number\n    factors = [i for i in range(2, smallest+1) if smallest % i == 0]\n\n    # Check if each factor is a common factor for all numbers in the list\n    for factor in factors:\n        if all(num % factor == 0 for num in lst):\n            return factor\n\n    # If no common factor is found, return 1\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    smallest_factor = min(lst)\n    for factor in range(2, smallest_factor + 1):\n        if all(num % factor == 0 for num in lst):\n            return factor\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def factorize(num):\n        factors = []\n        for i in range(2, num + 1):\n            while num % i == 0:\n                factors.append(i)\n                num //= i\n        return factors\n\n    common_factors = []\n    for num in lst:\n        factors = factorize(num)\n        if common_factors:\n            common_factors = list(set(common_factors) & set(factors))\n        else:\n            common_factors = factors\n\n    if common_factors:\n        return min(common_factors)\n    else:\n        return 1",
+            "logp": null
+        }
+    ]
+}

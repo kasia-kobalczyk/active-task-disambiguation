@@ -1,0 +1,61 @@
+{
+    "0": [
+        {
+            "content": "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while divisor * divisor <= num:\n            if num % divisor == 0:\n                return False\n            divisor += 1\n        return True\n    while n > 1:\n        n = n // gcd(n, 2)\n        while 3 <= n and n % 3 == 0:\n            n = n // 3\n        while 5 <= n and n % 5 == 0:\n            n = n // 5\n        while 7 <= n and n % 7 == 0:\n            n = n // 7\n    return is_survivor(n)\n\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while divisor * divisor <= num:\n            if num % divisor == 0:\n                return False\n            divisor += 1\n        return True\n    while n > 1:\n        n = n // gcd(n, 2)\n        while 3 <= n and n % 3 == 0:\n            n = n // 3\n        while 5 <= n and n % 5 == 0:\n            n = n // 5\n        while 7 <= n and n % 7 == 0:\n            n = n // 7\n    return is_survivor(n)\n\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while divisor * divisor <= num:\n            if num % divisor == 0:\n                return False\n            divisor += 1\n        return True\n    while n > 1:\n        n = n // gcd(n, 2)\n        while 3 <= n and n % 3 == 0:\n            n = n // 3\n        while 5 <= n and n % 5 == 0:\n            n = n // 5\n        while 7 <= n and n % 7 == 0:\n            n = n // 7\n    return is_survivor(n)\n\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while divisor * divisor <= num:\n            if num % divisor == 0:\n                return False\n            divisor += 1\n        return True\n    while n > 1:\n        n = n // gcd(n, 2)\n        while 3 <= n and n % 3 == 0:\n            n = n // 3\n        while 5 <= n and n % 5 == 0:\n            n = n // 5\n        while 7 <= n and n % 7 == 0:\n            n = n // 7\n    return is_survivor(n)\n\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while divisor * divisor <= num:\n            if num % divisor == 0:\n                return False\n            divisor += 1\n        return True\n    while n > 1:\n        n = n // gcd(n, 2)\n        while 3 <= n and n % 3 == 0:\n            n = n // 3\n        while 5 <= n and n % 5 == 0:\n            n = n // 5\n        while 7 <= n and n % 7 == 0:\n            n = n // 7\n    return is_survivor(n)\n\ndef gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "logp": null
+        },
+        {
+            "content": "def survivor(n):\n    for i in range(2, n):\n        temp = n\n        for j in range(2, i+1):\n            temp %= j\n            if temp == 0:\n                return False\n    return True",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def survivor(n):\n    n += 1\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n //= i\n    return n > 1",
+            "logp": null
+        }
+    ],
+    "3": []
+}

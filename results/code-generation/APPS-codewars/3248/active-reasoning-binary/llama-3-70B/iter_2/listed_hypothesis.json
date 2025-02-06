@@ -1,0 +1,125 @@
+{
+    "0": [
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch % freq == 0 or pitch / freq == int(pitch / freq):\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % (note_pitch * 2) == 0 or pitch * 2 == note_pitch:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch / note_pitch == int(pitch / note_pitch):\n            return note_name\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch / note_pitch == int(pitch / note_pitch) * 2 ** (1/12):\n            return note_name",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch / note_pitch ** (1 / 12) % 2 == 1 or pitch / note_pitch ** (-1 / 12) % 2 == 1:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch % freq == 0 or pitch / freq == int(pitch / freq):\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % note_pitch == 0 or pitch / note_pitch == int(pitch / note_pitch):\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % note_pitch == 0 or pitch / note_pitch == int(pitch / note_pitch):\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch % freq == 0 or pitch % (freq * 2) == 0:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % (note_pitch * 2) == 0 or pitch / (note_pitch / 2) == int(pitch / (note_pitch / 2)):\n            return note",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch % freq == 0 or pitch / freq == int(pitch / freq):\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch % (freq * 2) == 0 or pitch % (freq / 2) == 0:\n            return note\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    note = None\n    for k, v in notes.items():\n        if pitch % k == 0 or pitch / k == int(pitch / k):\n            note = v\n            break\n    return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch % freq == 0 or pitch / freq == int(pitch / freq):\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % note_pitch == 0 or pitch / note_pitch == int(pitch / note_pitch):\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % (note_pitch * 2) == 0 or pitch / (note_pitch / 2) == int(pitch / (note_pitch / 2)):\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    note_octaves = {}\n    for freq, note in notes.items():\n        note_octaves[freq] = note\n        note_octaves[freq * 2] = note\n        note_octaves[freq / 2] = note\n    return note_octaves.get(pitch)",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch % (note_pitch * 2) == 0 or pitch % (note_pitch / 2) == 0:\n            return note_name\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % note_pitch == 0 or pitch / note_pitch == round(pitch / note_pitch):\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        while note_pitch < pitch:\n            note_pitch *= 2\n        while note_pitch > pitch:\n            note_pitch /= 2\n        if abs(note_pitch - pitch) < 0.01:\n            return note",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % note_pitch == 0 or pitch * 2 % note_pitch == 0:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch / note_pitch == int(pitch / note_pitch) or pitch * 2 / note_pitch == int(pitch * 2 / note_pitch) or pitch / (note_pitch * 2) == int(pitch / (note_pitch * 2)):\n            return note_name",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % (note_pitch * 2) == 0 or pitch % (note_pitch / 2) == 0:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch % freq == 0 or pitch % (freq / 2) == 0:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % note_pitch == 0 or pitch * 2 % note_pitch == 0:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        while note_pitch * 2 < pitch:\n            note_pitch *= 2\n        while note_pitch > pitch:\n            note_pitch /= 2\n        if note_pitch == pitch:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % note_pitch == 0 or pitch * 2 % note_pitch == 0:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch % freq == 0 or freq % pitch == 0:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch % note_pitch == 0 or note_pitch % pitch == 0:\n            return note",
+            "logp": null
+        }
+    ],
+    "3": []
+}

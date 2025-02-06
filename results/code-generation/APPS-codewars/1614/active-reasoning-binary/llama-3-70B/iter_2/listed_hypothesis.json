@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "def who_is_winner(pieces_positions):\n    grid = [[' ' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for i in range(5, -1, -1):\n            if grid[i][ord(column) - 65] == ' ':\n                grid[i][ord(column) - 65] = color\n                break\n    for line in LINES:\n        for color in [\"Red\", \"Yellow\"]:\n            if all(grid[j][i] == color for i, j in line):\n                return color\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = [[' ' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(5, -1, -1):\n            if board[row][ord(column) - 65] == ' ':\n                board[row][ord(column) - 65] = color\n                break\n    for line in LINES:\n        if len(set(board[row][col] for col, row in line)) == 1 and ' ' not in line:\n            return line.pop()[1].upper()\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    game_board = [['' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        game_board[5 - next(i for i, row in enumerate(game_board) if row[ord(column) - 65] == '')][ord(column) - 65] = color\n    for line in LINES:\n        for color in ['Red', 'Yellow']:\n            if all(game_board[r][c] == color for c, r in line):\n                return color\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {COLUMNS[i]: [''] * ROWS[-1] + 1 for i in range(len(COLUMNS))}\n    for piece in pieces_positions:\n        col, color = piece[0], piece[2:]\n        for row in range(len(ROWS)):\n            if board[col][row] == '':\n                board[col][row] = color\n                break\n    for line in LINES:\n        for color in ['Red', 'Yellow']:\n            if all(board[col][row] == color for col, row in line):\n                return color\n    return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    grid = [[' ' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        column_index = ord(column) - 65\n        for i in range(5, -1, -1):\n            if grid[i][column_index] == ' ':\n                grid[i][column_index] = color\n                break\n    for line in LINES:\n        yellow_count = sum(1 for cell in line if cell[1] < 6 and grid[cell[1]][ord(cell[0]) - 65] == 'Yellow')\n        red_count = sum(1 for cell in line if cell[1] < 6 and grid[cell[1]][ord(cell[0]) - 65] == 'Red')\n        if yellow_count == 4:\n            return 'Yellow'\n        if red_count == 4:\n            return 'Red'\n    if len(pieces_positions) == 42:\n        return 'Draw'\n    return",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = [['' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for i in range(5, -1, -1):\n            if board[i][ord(column) - 65] == '':\n                board[i][ord(column) - 65] = color\n                break\n    for line in LINES:\n        colors = [board[j][i] for i, j in line]\n        if len(set(colors)) == 1 and colors[0] != '':\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = [['' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for i in range(5, -1, -1):\n            if board[i][ord(column) - 65] == '':\n                board[i][ord(column) - 65] = color\n                break\n    for line in LINES:\n        for color in ['Red', 'Yellow']:\n            if all(board[j][ord(i) - 65] == color for i, j in line):\n                return color\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n    return \"Game not finished\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    grid = [['' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column = ord(piece[0]) - 65\n        for i in range(5, -1, -1):\n            if grid[i][column] == '':\n                grid[i][column] = piece[2:]\n                break\n    for line in LINES:\n        yellow = all(grid[j][ord(i) - 65] == 'Yellow' for i, j in line)\n        red = all(grid[j][ord(i) - 65] == 'Red' for i, j in line)\n        if yellow:\n            return \"Yellow\"\n        if red:\n            return \"Red\"\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {'A': [None]*6, 'B': [None]*6, 'C': [None]*6, 'D': [None]*6, 'E': [None]*6, 'F': [None]*6, 'G': [None]*6}\n    for piece in pieces_positions:\n        col, color = piece[0], piece[2:]\n        for i in range(5, -1, -1):\n            if board[col][i] is None:\n                board[col][i] = color\n                break\n    for line in LINES:\n        red, yellow = 0, 0\n        for col, row in line:\n            if board[col][row] == 'Red':\n                red += 1\n            elif board[col][row] == 'Yellow':\n                yellow += 1\n        if red == 4:\n            return 'Red'\n        elif yellow == 4:\n            return 'Yellow'\n    return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    game_board = [['' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(6):\n            if game_board[row][ord(column) - ord('A')] == '':\n                game_board[row][ord(column) - ord('A')] = color\n                break\n    for line in LINES:\n        yellow_count, red_count = 0, 0\n        for column, row in line:\n            if game_board[row][ord(column) - ord('A')] == 'Yellow':\n                yellow_count += 1\n            elif game_board[row][ord(column) - ord('A')] == 'Red':\n                red_count += 1\n        if yellow_count == 4:\n            return \"Yellow\"\n        elif red_count == 4:\n            return \"Red\"\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n    return \"\"",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def who_is_winner(pieces_positions):\n    grid = {(i, j): None for i in COLUMNS for j in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(5, -1, -1):\n            if grid[column, row] is None:\n                grid[column, row] = color\n                break\n    for line in LINES:\n        colors = [grid.get(pos) for pos in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    game_board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(len(ROWS) - 1, -1, -1):\n            if game_board[(column, row)] is None:\n                game_board[(column, row)] = color\n                break\n        for line in LINES:\n            if len([cell for cell in line if game_board[cell] == color]) == 4:\n                return color\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    grid = {(column, row): None for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in ROWS:\n            if grid[(column, row)] is None:\n                grid[(column, row)] = color\n                break\n    for line in LINES:\n        if len(set(grid[position] for position in line)) == 1 and grid[next(iter(line))] is not None:\n            return grid[next(iter(line))]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): '' for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        col, color = piece[0], piece[2:]\n        for j in range(len(ROWS) - 1, -1, -1):\n            if board[(col, ROWS[j])] == '':\n                board[(col, ROWS[j])] = color\n                break\n    for line in LINES:\n        yellow, red = 0, 0\n        for cell in line:\n            if board[cell] == 'Yellow':\n                yellow += 1\n            elif board[cell] == 'Red':\n                red += 1\n        if yellow == 4:\n            return 'Yellow'\n        elif red == 4:\n            return 'Red'\n    return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for j in range(len(ROWS) - 1, -1, -1):\n            if board[(column, ROWS[j])] is None:\n                board[(column, ROWS[j])] = color\n                break\n    for line in LINES:\n        colors = [board[position] for position in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for move in pieces_positions:\n        column, color = move[0], move[2:]\n        for row in range(len(ROWS) - 1, -1, -1):\n            if board[(column, ROWS[row])] is None:\n                board[(column, ROWS[row])] = color\n                break\n    for line in LINES:\n        colors = [board[pos] for pos in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    game_board = [['' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(6):\n            if game_board[row][ord(column) - ord('A')] == '':\n                game_board[row][ord(column) - ord('A')] = color\n                break\n    for line in LINES:\n        yellow_count, red_count = 0, 0\n        for column, row in line:\n            if game_board[row][ord(column) - ord('A')] == 'Yellow':\n                yellow_count += 1\n            elif game_board[row][ord(column) - ord('A')] == 'Red':\n                red_count += 1\n        if yellow_count == 4:\n            return \"Yellow\"\n        elif red_count == 4:\n            return \"Red\"\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(column, row): None for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] is None:\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        yellow, red = 0, 0\n        for column, row in line:\n            if board[(column, row)] == \"Yellow\":\n                yellow += 1\n            elif board[(column, row)] == \"Red\":\n                red += 1\n        if yellow == 4:\n            return \"Yellow\"\n        elif red == 4:\n            return \"Red\"\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(column, row): None for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] is None:\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        yellow_count = sum(1 for position in line if board[position] == 'Yellow')\n        red_count = sum(1 for position in line if board[position] == 'Red')\n        if yellow_count == 4:\n            return 'Yellow'\n        if red_count == 4:\n            return 'Red'\n    return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(col, row): None for col in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] is None:\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        colors = [board.get(pos) for pos in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    game_board = [['' for _ in range(7)] for _ in range(6)]\n    for move in pieces_positions:\n        column, color = move[0], move[2:]\n        for row in range(5, -1, -1):\n            if game_board[row][ord(column) - 65] == '':\n                game_board[row][ord(column) - 65] = color\n                break\n    for line in LINES:\n        red_count, yellow_count = 0, 0\n        for column, row in line:\n            if game_board[row][ord(column) - 65] == 'Red':\n                red_count += 1\n            elif game_board[row][ord(column) - 65] == 'Yellow':\n                yellow_count += 1\n        if red_count == 4:\n            return 'Red'\n        elif yellow_count == 4:\n            return 'Yellow'\n    return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        col, color = piece[0], piece[2:]\n        for j in range(len(ROWS) - 1, -1, -1):\n            if board[(col, ROWS[j])] is None:\n                board[(col, ROWS[j])] = color\n                break\n    for line in LINES:\n        yellow, red = 0, 0\n        for pos in line:\n            if board[pos] == 'Yellow':\n                yellow += 1\n            elif board[pos] == 'Red':\n                red += 1\n        if yellow == 4:\n            return 'Yellow'\n        if red == 4:\n            return 'Red'\n    return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(column, row): '' for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] == '':\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        if len(set(board[position] for position in line)) == 1 and board[next(iter(line))] != '':\n            return board[next(iter(line))]\n    return 'Draw'",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(len(ROWS) - 1, -1, -1):\n            if board[(column, ROWS[row])] is None:\n                board[(column, ROWS[row])] = color\n                break\n    for line in LINES:\n        colors = [board[pos] for pos in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(range(len(ROWS))):\n            if board[(column, ROWS[row])] is None:\n                board[(column, ROWS[row])] = color\n                break\n    for line in LINES:\n        yellow, red = 0, 0\n        for cell in line:\n            if board[cell] == \"Yellow\":\n                yellow += 1\n            elif board[cell] == \"Red\":\n                red += 1\n        if yellow == 4:\n            return \"Yellow\"\n        elif red == 4:\n            return \"Red\"\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for j in range(len(ROWS) - 1, -1, -1):\n            if board[(column, ROWS[j])] is None:\n                board[(column, ROWS[j])] = color\n                break\n    for line in LINES:\n        colors = [board[position] for position in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for move in pieces_positions:\n        column, color = move[0], move[2:]\n        for row in range(len(ROWS) - 1, -1, -1):\n            if board[(column, ROWS[row])] is None:\n                board[(column, ROWS[row])] = color\n                break\n    for line in LINES:\n        colors = [board[pos] for pos in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    game_board = [['' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(6):\n            if game_board[row][ord(column) - ord('A')] == '':\n                game_board[row][ord(column) - ord('A')] = color\n                break\n    for line in LINES:\n        yellow_count, red_count = 0, 0\n        for column, row in line:\n            if game_board[row][ord(column) - ord('A')] == 'Yellow':\n                yellow_count += 1\n            elif game_board[row][ord(column) - ord('A')] == 'Red':\n                red_count += 1\n        if yellow_count == 4:\n            return \"Yellow\"\n        elif red_count == 4:\n            return \"Red\"\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(column, row): None for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] is None:\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        yellow_count = sum(1 for position in line if board[position] == 'Yellow')\n        red_count = sum(1 for position in line if board[position] == 'Red')\n        if yellow_count == 4:\n            return 'Yellow'\n        if red_count == 4:\n            return 'Red'\n    return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(column, row): None for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] is None:\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        yellow, red = 0, 0\n        for column, row in line:\n            if board[(column, row)] == \"Yellow\":\n                yellow += 1\n            elif board[(column, row)] == \"Red\":\n                red += 1\n        if yellow == 4:\n            return \"Yellow\"\n        elif red == 4:\n            return \"Red\"\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(col, row): None for col in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] is None:\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        colors = [board.get(pos) for pos in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        col, color = piece[0], piece[2:]\n        for j in range(len(ROWS) - 1, -1, -1):\n            if board[(col, ROWS[j])] is None:\n                board[(col, ROWS[j])] = color\n                break\n    for line in LINES:\n        yellow, red = 0, 0\n        for pos in line:\n            if board[pos] == 'Yellow':\n                yellow += 1\n            elif board[pos] == 'Red':\n                red += 1\n        if yellow == 4:\n            return \"Yellow\"\n        elif red == 4:\n            return \"Red\"\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(column, row): '' for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] == '':\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        if len(set(board[position] for position in line)) == 1 and board[next(iter(line))] != '':\n            return board[next(iter(line))]\n    return 'Draw'",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def who_is_winner(pieces_positions):\n    grid = {(i, j): None for i in COLUMNS for j in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(5, -1, -1):\n            if grid[column, row] is None:\n                grid[column, row] = color\n                break\n    for line in LINES:\n        colors = [grid.get(pos) for pos in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    game_board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(len(ROWS) - 1, -1, -1):\n            if game_board[(column, row)] is None:\n                game_board[(column, row)] = color\n                break\n        for line in LINES:\n            if len([cell for cell in line if game_board[cell] == color]) == 4:\n                return color\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    grid = {(column, row): None for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in ROWS:\n            if grid[(column, row)] is None:\n                grid[(column, row)] = color\n                break\n    for line in LINES:\n        if len(set(grid[position] for position in line)) == 1 and grid[next(iter(line))] is not None:\n            return grid[next(iter(line))]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): '' for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        col, color = piece[0], piece[2:]\n        for j in range(len(ROWS) - 1, -1, -1):\n            if board[(col, ROWS[j])] == '':\n                board[(col, ROWS[j])] = color\n                break\n    for line in LINES:\n        yellow, red = 0, 0\n        for cell in line:\n            if board[cell] == 'Yellow':\n                yellow += 1\n            elif board[cell] == 'Red':\n                red += 1\n        if yellow == 4:\n            return 'Yellow'\n        elif red == 4:\n            return 'Red'\n    return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for j in range(len(ROWS) - 1, -1, -1):\n            if board[(column, ROWS[j])] is None:\n                board[(column, ROWS[j])] = color\n                break\n    for line in LINES:\n        colors = [board[position] for position in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(COLUMNS[i], ROWS[j]): None for i in range(len(COLUMNS)) for j in range(len(ROWS))}\n    for move in pieces_positions:\n        column, color = move[0], move[2:]\n        for row in range(len(ROWS) - 1, -1, -1):\n            if board[(column, ROWS[row])] is None:\n                board[(column, ROWS[row])] = color\n                break\n    for line in LINES:\n        colors = [board[pos] for pos in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    game_board = [['' for _ in range(7)] for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in range(6):\n            if game_board[row][ord(column) - ord('A')] == '':\n                game_board[row][ord(column) - ord('A')] = color\n                break\n    for line in LINES:\n        yellow_count, red_count = 0, 0\n        for column, row in line:\n            if game_board[row][ord(column) - ord('A')] == 'Yellow':\n                yellow_count += 1\n            elif game_board[row][ord(column) - ord('A')] == 'Red':\n                red_count += 1\n        if yellow_count == 4:\n            return \"Yellow\"\n        elif red_count == 4:\n            return \"Red\"\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(column, row): None for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] is None:\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        yellow, red = 0, 0\n        for column, row in line:\n            if board[(column, row)] == \"Yellow\":\n                yellow += 1\n            elif board[(column, row)] == \"Red\":\n                red += 1\n        if yellow == 4:\n            return \"Yellow\"\n        elif red == 4:\n            return \"Red\"\n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    board = {(column, row): None for column in COLUMNS for row in ROWS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        for row in reversed(ROWS):\n            if board[(column, row)] is None:\n                board[(column, row)] = color\n                break\n    for line in LINES:\n        yellow_count = sum(1 for position in line if board[position] == 'Yellow')\n        red_count = sum(1 for position in line if board[position] == 'Red')\n        if yellow_count == 4:\n            return 'Yellow'\n        if red_count == 4:\n            return 'Red'\n    return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    game_board = [[None]*7 for _ in range(6)]\n    for piece in pieces_positions:\n        column, color = piece[0], piece[2:]\n        column_index = COLUMNS.index(column)\n        for row in range(5, -1, -1):\n            if game_board[row][column_index] is None:\n                game_board[row][column_index] = color\n                break\n    for line in LINES:\n        colors = [game_board[row][COLUMNS.index(column)] for column, row in line]\n        if len(set(colors)) == 1 and colors[0] is not None:\n            return colors[0]\n    return \"Draw\"",
+            "logp": null
+        }
+    ]
+}

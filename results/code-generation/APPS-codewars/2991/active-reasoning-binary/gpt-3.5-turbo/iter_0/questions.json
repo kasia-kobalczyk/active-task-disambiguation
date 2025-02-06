@@ -1,0 +1,44 @@
+{
+    "0": [
+        "assert not_so_random(3, 5) == \"White\"",
+        "assert not_so_random(2, 4) == \"Black\"",
+        "assert not_so_random(6, 3) == \"Unsure\"",
+        "assert not_so_random(5, 2) == \"White\"\n# Since the number of black marbles is even, the last marble will be black.",
+        "assert not_so_random(3, 3) == \"Unsure\"",
+        "assert not_so_random(4, 4) == \"Unsure\"",
+        "assert not_so_random(1, 10**9) == \"White\"",
+        "assert not_so_random(1, 1) == \"White\"",
+        "assert not_so_random(2, 1) == \"Black\"",
+        "assert not_so_random(10**9, 10**9) == \"Unsure\""
+    ],
+    "1": [
+        "assert not_so_random(2, 2) == \"White\"",
+        "assert not_so_random(5, 5) == \"Unsure\"",
+        "assert not_so_random(5, 5) == \"White\"",
+        "assert not_so_random(3, 3) == \"Black\"",
+        "assert not_so_random(4, 4) == \"Black\"",
+        "assert not_so_random(4, 2) == \"Black\"",
+        "assert not_so_random(3, 2) == \"Black\"",
+        "assert not_so_random(1, 1) == \"White\"",
+        "assert not_so_random(2, 4) == \"White\""
+    ],
+    "2": [
+        "assert not_so_random(2, 2) == \"White\"",
+        "assert not_so_random(5, 5) == \"White\"",
+        "assert not_so_random(3, 3) == \"Black\"",
+        "assert not_so_random(4, 4) == \"Black\"",
+        "assert not_so_random(4, 2) == \"Black\"",
+        "assert not_so_random(3, 2) == \"Black\"",
+        "assert not_so_random(1, 1) == \"White\"",
+        "assert not_so_random(2, 4) == \"White\""
+    ],
+    "3": [
+        "assert not_so_random(2, 2) == \"White\"",
+        "assert not_so_random(5, 5) == \"White\"",
+        "assert not_so_random(3, 3) == \"Black\"",
+        "assert not_so_random(4, 4) == \"Black\"",
+        "assert not_so_random(4, 2) == \"Black\"",
+        "assert not_so_random(3, 2) == \"Black\"",
+        "assert not_so_random(2, 4) == \"White\""
+    ]
+}

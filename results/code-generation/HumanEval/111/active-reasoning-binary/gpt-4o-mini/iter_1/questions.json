@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert histogram(\"d e f g h\") == {'d': 1, 'e': 1, 'f': 1, 'g': 1, 'h': 1}",
+        "assert histogram(\"x y z x y z\") == {'x': 2, 'y': 2, 'z': 2}",
+        "assert histogram(\"m n o p q r s t m n m\") == {'m': 3}",
+        "assert histogram(\"e e e f f f g g\") == {'e': 3, 'f': 3}",
+        "assert histogram(\"x y z x y z x\") == {'x': 3}",
+        "assert histogram(\"a b c a a b c\") == {'a': 3}",
+        "assert histogram(\"m n o m n o m n\") == {'m': 3, 'n': 3}"
+    ],
+    "1": [
+        "assert histogram(\"p q r p q r p q r\") == {'p': 3, 'q': 3, 'r': 3}",
+        "assert histogram(\"m n o p q r s t u v\") == {'m': 1, 'n': 1, 'o': 1, 'p': 1, 'q': 1, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 1}",
+        "assert histogram(\"hello world hello\") == {'h': 2, 'e': 2, 'l': 4, 'o': 2}",
+        "assert histogram(\"x y z x y z x\") == {'x': 3, 'y': 2, 'z': 2}",
+        "assert histogram(\"p q r s t p q p\") == {'p': 3}",
+        "assert histogram(\"a a b b c\") == {'a': 2, 'b': 2}",
+        "assert histogram(\"a b c d a a\") == {'a': 3}"
+    ],
+    "2": [
+        "assert histogram(\"i j k l m n o p q r s t u v w x y z\") == {'i': 1, 'j': 1, 'k': 1, 'l': 1, 'm': 1, 'n': 1, 'o': 1, 'p': 1, 'q': 1, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 1, 'w': 1, 'x': 1, 'y': 1, 'z': 1}",
+        "assert histogram(\"a b c a a b c d\") == {'a': 3}",
+        "assert histogram(\"a b c a b a\") == {'a': 3}",
+        "assert histogram(\"x y z x y z x\") == {'x': 3}",
+        "assert histogram(\"j k j k j l m n o\") == {'j': 3}",
+        "assert histogram(\"m n o p q m m n n\") == {'m': 3, 'n': 2}",
+        "assert histogram(\"m n m n n o\") == {'n': 3}",
+        "assert histogram(\"x y z x y z x y z\") == {'x': 3, 'y': 3, 'z': 3}"
+    ],
+    "3": [
+        "assert histogram(\"a a b b c c d d e\") == {'a': 2, 'b': 2, 'c': 2, 'd': 2}",
+        "assert histogram(\"x y z x x\") == {'x': 3}",
+        "assert histogram(\"x y z x y z x y\") == {'x': 3, 'y': 3, 'z': 3}",
+        "assert histogram(\"m n o p q r s t u v w\") == {'m': 1, 'n': 1, 'o': 1, 'p': 1, 'q': 1, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 1, 'w': 1}",
+        "assert histogram(\"a b a b c c c\") == {'c': 3}",
+        "assert histogram(\"a a b b c\") == {'a': 2, 'b': 2}",
+        "assert histogram(\"l k j j j k l m\") == {'j': 3}",
+        "assert histogram(\"m n o p m n\") == {'m': 2, 'n': 2}"
+    ]
+}

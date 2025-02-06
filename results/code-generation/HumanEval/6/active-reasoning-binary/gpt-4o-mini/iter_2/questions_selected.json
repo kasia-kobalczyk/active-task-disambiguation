@@ -1,0 +1,6 @@
+{
+    "0": "assert parse_nested_parens(\"() ()\") == [1, 1]",
+    "1": "assert parse_nested_parens(\"() (()) ()\") == [1, 2, 1]",
+    "2": "assert parse_nested_parens(\"((()())())\") == [3]",
+    "3": "assert parse_nested_parens(\"()()()()\") == [1, 1, 1, 1]"
+}

@@ -1,0 +1,35 @@
+{
+    "0": [
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"a\") == True",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"amazon\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"ball\") == False",
+        "assert is_alt(\"io\") == True",
+        "assert is_alt(\"hello\") == False",
+        "assert is_alt(\"abcde\") == True",
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"abcdefg\") == False",
+        "assert is_alt(\"aeiou\") == True"
+    ],
+    "2": [
+        "assert is_alt(\"io\") == True",
+        "assert is_alt(\"abacaba\") == True",
+        "assert is_alt(\"cab\") == True",
+        "assert is_alt(\"cde\") == False",
+        "assert is_alt(\"bacon\") == False",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"edible\") == False"
+    ],
+    "3": [
+        "assert is_alt(\"edam\") == True",
+        "assert is_alt(\"abacaba\") == True",
+        "assert is_alt(\"cab\") == True",
+        "assert is_alt(\"bacon\") == False",
+        "assert is_alt(\"cabin\") == False",
+        "assert is_alt(\"aeiou\") == True"
+    ]
+}

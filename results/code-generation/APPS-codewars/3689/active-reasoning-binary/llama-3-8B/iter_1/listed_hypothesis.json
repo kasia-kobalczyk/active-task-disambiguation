@@ -1,0 +1,90 @@
+{
+    "0": [
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    elif n <= 8:\n        return \"pizzas: 0, slices: \" + str(n)\n    else:\n        return \"pizzas: \" + str(n // 8) + \", slices: \" + str(n % 8)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    elif n <= 8:\n        return \"pizzas: 0, slices: \" + str(n)\n    else:\n        return \"pizzas: \" + str(n // 8) + \", slices: \" + str(n % 8)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    elif n <= 8:\n        return \"pizzas: 0, slices: \" + str(n)\n    else:\n        return \"pizzas: \" + str(n // 8) + \", slices: \" + str(n % 8)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    elif n <= 8:\n        return \"pizzas: 0, slices: \" + str(n)\n    else:\n        return \"pizzas: \" + str(n // 8) + \", slices: \" + str(n % 8)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    elif n <= 8:\n        return \"pizzas: 0, slices: \" + str(n)\n    else:\n        return \"pizzas: \" + str(n // 8) + \", slices: \" + str(n % 8)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices_in_8_pizza = 8\n    remaining_slices = n * (n + 1) // 2 % slices_in_8_pizza\n    full_pizzas = n * (n + 1) // 2 // slices_in_8_pizza\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices_in_8_pizza = 8\n    remaining_slices = n * (n + 1) // 2 % slices_in_8_pizza\n    full_pizzas = n * (n + 1) // 2 // slices_in_8_pizza\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices_in_8_pizza = 8\n    remaining_slices = n * (n + 1) // 2 % slices_in_8_pizza\n    full_pizzas = n * (n + 1) // 2 // slices_in_8_pizza\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices_in_8_pizza = 8\n    remaining_slices = n * (n + 1) // 2 % slices_in_8_pizza\n    full_pizzas = n * (n + 1) // 2 // slices_in_8_pizza\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    slices_in_8_pizza = 8\n    remaining_slices = n * (n + 1) // 2 % slices_in_8_pizza\n    full_pizzas = n * (n + 1) // 2 // slices_in_8_pizza\n    return f\"pizzas: {full_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    elif n <= 8:\n        return \"pizzas: 0, slices: \" + str(n)\n    else:\n        return \"pizzas: \" + str(n // 8) + \", slices: \" + str(n % 8)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    slices = 8 * ((n // 8) if n > 0 else 0)\n    remainder = n % 8\n    return \"pizzas: {}, slices: {}\".format(n // 8, remainder) if n > 0 else \"pizzas: 0, slices: 0\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    slices = n * 8\n    pizzas = slices // 8\n    remainder = slices % 8\n    if remainder == 0:\n        return \"pizzas: {}, slices: 0\".format(pizzas)\n    else:\n        return \"pizzas: {}, slices: {}\".format(pizzas, remainder)",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    else:\n        whole_pizzas = n // 8\n        remaining_slices = n % 8\n        if remaining_slices == 0:\n            return f\"pizzas: {whole_pizzas}, slices: 0\"\n        else:\n            return f\"pizzas: {whole_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    slices = 8 * ((n // 8) + (1 if n % 8 > 0 else 0))\n    pizzas = n // 8\n    remaining_slices = slices - 8 * pizzas\n    return f\"pizzas: {pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n < 8:\n        return f\"pizzas: 0, slices: {n}\"\n    else:\n        pizzas = n // 8\n        remainder = n % 8\n        return f\"pizzas: {pizzas}, slices: {remainder}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n < 8:\n        return f\"pizzas: 0, slices: {n}\"\n    pizzas = n // 8\n    slices = n % 8\n    return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    else:\n        whole_pizzas = n // 8\n        remaining_slices = n % 8\n        if remaining_slices == 0:\n            return f\"pizzas: {whole_pizzas}, slices: 0\"\n        else:\n            return f\"pizzas: {whole_pizzas}, slices: {remaining_slices}\"",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    slices = 8 * ((n // 8) - (n % 8 > 0))\n    pizzas = n // 8\n    slices %= 8\n    return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        },
+        {
+            "content": "def how_many_pizzas(n):\n    if n == 0:\n        return \"pizzas: 0, slices: 0\"\n    slices = 8 * ((n // 8) if n > 0 else 0)\n    remaining = n % 8\n    pizzas = n // 8\n    if remaining > 0:\n        slices += remaining\n        pizzas += 1\n    if pizzas == 1:\n        return f\"pizzas: {pizzas}, slices: {slices - 8}\"\n    else:\n        return f\"pizzas: {pizzas}, slices: {slices}\"",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "0": [
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    seq = signature\n    for i in range(len(signature), n):\n        seq.append(sum([seq[x] for x in indexes]))\n    return seq[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    sequence = signature[:]\n    for i in range(n):\n        next_num = sum([sequence[idx] for idx in indexes])\n        sequence.append(next_num)\n        sequence = sequence[1:]\n    return sequence[n-1]",
+            "logp": null
+        },
+        {
+            "content": "# Plan\n\n1. Initialize a deque `fib_seq` with the given signature.\n2. Loop from `i = len(signature)` up to `i = n-1` and append the sum of elements at the given `indexes` to `fib_seq`.\n3. Return the element at index `n` from `fib_seq`.\n\n# Solution",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    sequence = signature\n    while len(sequence) < n+1:\n        next_number = sum([sequence[i] for i in indexes])\n        sequence.append(next_number)\n    return sequence[n]",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    sequence = signature.copy()\n    for i in range(n - len(signature)):\n        next_num = sum(sequence[j] for j in indexes)\n        sequence.append(next_num)\n        sequence.popleft()\n    return sequence[-1]",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    fib_sequence = signature.copy()  # Copy the initial signature list\n    fib_sequence_len = len(signature)  # Get the length of the signature list\n    \n    for i in range(n - fib_sequence_len):  # Iterate from the end of the signature list to the desired sequence length\n        next_number = sum(fib_sequence[j] for j in indexes)  # Calculate the next number in the sequence using the specified indexes\n        fib_sequence.append(next_number)  # Add the next number to the sequence\n        \n    return fib_sequence[n]  # Return the desired element from the sequence",
+            "logp": null
+        },
+        {
+            "content": "The problem statement asks us to generate the nth number in a custom Fibonacci-like sequence. The sequence is defined by a signature (a list of starting values), a list of indexes (indicating which elements from the last n numbers should be used to generate the next number), and n (the index of the number we want to return).\n\nTo solve this problem, we can create a deque to store the last n numbers. We start with the given signature as the initial elements in the deque.\n\nThen, we iterate n times and at each iteration, we generate the next number in the sequence by summing the elements from the deque at the given indexes. We append the new number to the deque and pop the leftmost element if the deque size exceeds n.\n\nFinally, we return the number at index n-1 from the deque.\n\nHere is the implementation of the solution:\n\n```python\nfrom collections import deque\n\ndef custom_fib(signature, indexes, n):\n    # Create a deque to store the last n numbers\n    last_n_numbers = deque(signature, maxlen=n)\n    \n    # Generate the next number in the sequence n times\n    for _ in range(n - len(signature)):\n        next_number = sum(last_n_numbers[i] for i in indexes)\n        last_n_numbers.append(next_number)\n    \n    # Return the number at index n-1\n    return last_n_numbers[n-1]\n```\n\nNow, let's test the solution with the provided examples:\n\n```python\nprint(custom_fib([1,1],[0,1],2)) # Output: 2\nprint(custom_fib([1,1],[0,1],3)) # Output: 3\nprint(custom_fib([1,1],[0,1],4)) # Output: 5\nprint(custom_fib([3,5,2],[0,1,2],4)) # Output: 17\nprint(custom_fib([7,3,4,1],[1,1],6)) # Output: 2\n```",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    # create a deque from the signature list\n    seq = deque(signature)\n\n    # iterate from length of signature to n-1\n    for i in range(len(signature), n):\n        # calculate the next number by summing the elements with indexes from indexes list\n        next_num = sum(seq[j] for j in indexes)\n        # append the next number to the sequence\n        seq.append(next_num)\n        # remove the first number in the sequence\n        seq.popleft()\n\n    # return the nth element in the sequence\n    return seq[-1]",
+            "logp": null
+        },
+        {
+            "content": "from collections import deque\n\ndef custom_fib(signature, indexes, n):\n    sequence = signature.copy()\n    for _ in range(n - len(signature)):\n        summands = [sequence[i] for i in indexes]\n        sequence.append(sum(summands))\n        sequence.popleft()\n    return sequence[-1]",
+            "logp": null
+        },
+        {
+            "content": "# Plan\n- First, we will create a deque (double-ended queue) from the signature list. This will allow us to easily access the last N elements.\n- Then, we will iterate from the length of the signature to the given N and calculate the next element of the sequence by summing the elements from the indexes list.\n- Finally, we will return the last element of the deque, which will be the Nth element of the sequence.",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    fib_sequence = signature\n    while len(fib_sequence) < n+1:\n        next_number = sum(fib_sequence[i] for i in indexes)\n        fib_sequence.append(next_number)\n    return fib_sequence[n]",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    if n < len(signature):\n        return signature[n]\n    \n    sequence = deque(signature)\n    \n    for i in range(len(signature), n+1):\n        next_number = sum([sequence[j] for j in indexes])\n        sequence.append(next_number)\n        sequence.popleft()\n    \n    return sequence[-1]",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    sequence = signature\n    while len(sequence) <= n:\n        next_number = sum(sequence[i] for i in indexes)\n        sequence.append(next_number)\n    return sequence[n]\n\nprint(custom_fib([1,1],[0,1],2))",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    if n < len(signature):\n        return signature[n]\n    \n    sequence = list(signature)\n    for i in range(len(signature), n + 1):\n        next_number = sum(sequence[j] for j in indexes)\n        sequence.append(next_number)\n        sequence.pop(0)\n        \n    return sequence[-1]",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    seq = signature[:]\n    for i in range(len(signature), n+1):\n        seq.append(sum([seq[j] for j in indexes]))\n    return seq[n]",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    if n < len(signature):\n        return signature[n]\n    \n    queue = deque(signature)\n    \n    for i in range(len(signature), n+1):\n        next_num = sum(queue[index] for index in indexes)\n        queue.popleft()\n        queue.append(next_num)\n    \n    return queue[-1]\n\nassert custom_fib([1,1],[0,1],2) == 2",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef custom_fib(signature, indexes, n):\n    # create a deque to store the numbers in the signature\n    deque_signature = deque(signature)\n    \n    # iterate from len(signature) to n\n    for i in range(len(signature), n+1):\n        # create a list to store the numbers to sum\n        numbers_to_sum = []\n        \n        # iterate through the indexes and get the numbers to sum\n        for index in indexes:\n            numbers_to_sum.append(deque_signature[index])\n        \n        # calculate the next number in the sequence\n        next_number = sum(numbers_to_sum)\n        \n        # append the next number to the deque\n        deque_signature.append(next_number)\n        \n        # remove the first number in the deque to maintain the length of the signature\n        deque_signature.popleft()\n    \n    # return the last number in the deque\n    return deque_signature[-1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    # create a deque with the signature\n    sequence = deque(signature)\n    \n    # loop from the length of signature to n\n    for i in range(len(signature), n+1):\n        # calculate the next element by summing the elements at the specified indexes\n        next_element = sum(sequence[j] for j in indexes)\n        \n        # append the next element to the sequence\n        sequence.append(next_element)\n        \n        # remove the first element in the sequence to maintain the length of signature\n        sequence.popleft()\n    \n    # return the nth element of the sequence\n    return sequence[-1]\n```",
+            "logp": null
+        },
+        {
+            "content": "from collections import deque\n\ndef custom_fib(signature, indexes, n):\n    if n < len(signature):\n        return signature[n]\n    \n    q = deque(signature)\n    \n    for i in range(len(signature), n+1):\n        current = sum([q[j] for j in indexes])\n        q.append(current)\n        q.popleft()\n    \n    return q[-1]",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef custom_fib(signature, indexes, n):\n    # create a deque to store the numbers in the signature\n    deque_signature = deque(signature)\n    \n    # iterate from len(signature) to n\n    for i in range(len(signature), n+1):\n        # create a list to store the numbers to sum\n        numbers_to_sum = []\n        \n        # iterate through the indexes and get the numbers to sum\n        for index in indexes:\n            numbers_to_sum.append(deque_signature[index])\n        \n        # calculate the next number in the sequence\n        next_number = sum(numbers_to_sum)\n        \n        # append the next number to the deque\n        deque_signature.append(next_number)\n        \n        # remove the first number in the deque to maintain the length of the signature\n        deque_signature.popleft()\n    \n    # return the last number in the deque\n    return deque_signature[-1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    # create a deque with the signature\n    sequence = deque(signature)\n    \n    # loop from the length of signature to n\n    for i in range(len(signature), n+1):\n        # calculate the next element by summing the elements at the specified indexes\n        next_element = sum(sequence[j] for j in indexes)\n        \n        # append the next element to the sequence\n        sequence.append(next_element)\n        \n        # remove the first element in the sequence to maintain the length of signature\n        sequence.popleft()\n    \n    # return the nth element of the sequence\n    return sequence[-1]\n```",
+            "logp": null
+        },
+        {
+            "content": "from collections import deque\n\ndef custom_fib(signature, indexes, n):\n    if n < len(signature):\n        return signature[n]\n    \n    q = deque(signature)\n    \n    for i in range(len(signature), n+1):\n        current = sum([q[j] for j in indexes])\n        q.append(current)\n        q.popleft()\n    \n    return q[-1]",
+            "logp": null
+        }
+    ]
+}

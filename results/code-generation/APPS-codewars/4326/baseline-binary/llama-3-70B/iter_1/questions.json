@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert london_city_hacker([243, 1, 243, 1, 243]) == '\u00a37.50'",
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria']) == '\u00a39.90'",
+        "assert london_city_hacker(['Northern', 'Central', 'Victoria', 'Jubilee', 'Bakerloo']) == '\u00a39.60'"
+    ],
+    "1": [
+        "assert london_city_hacker([243, 1, 243, 1]) == '\u00a33.00'",
+        "assert london_city_hacker(['Northern', 'Central', 'Victoria', 'Piccadilly', 'Jubilee']) == '\u00a39.60'"
+    ],
+    "2": [
+        "assert london_city_hacker([243, 1, 243, 1, 243]) == '\u00a36.00'",
+        "assert london_city_hacker([243, 'Northern', 1, 'Central', 243, 'Victoria']) == '\u00a39.90'"
+    ],
+    "3": [
+        "assert london_city_hacker([243, 'Northern', 1, 'Central', 243, 'Victoria']) == '\u00a39.90'"
+    ]
+}

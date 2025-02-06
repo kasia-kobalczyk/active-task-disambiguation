@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert could_be(\"Chuck Norris\", \"superman\") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"\") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos-Ray\") == False",
+        "assert could_be(\"Carlos Ray Norris\", \"Ray\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray Norris\") == True",
+        "assert could_be(\"Chuck Norris\", \"Chuck\") == True"
+    ],
+    "1": [
+        "assert could_be(\"Emily J Smith\", \"E J Smith\") == True",
+        "assert could_be(\"Ava Lovelace\", \"A Lovelace\") == True",
+        "assert could_be(\"John Michael Doe\", \"Jane Doe\") == False",
+        "assert could_be(\"John Michael Doe\", \"John Michael\") == True",
+        "assert could_be(\"John Michael Doe\", \"Doe Michael John\") == True",
+        "assert could_be(\"John Michael Doe\", \"Michael Doe\") == True",
+        "assert could_be(\"Michael Douglas\", \"Douglas Michael\") == True",
+        "assert could_be(\"Eleanor Roosevelt\", \"Roosevelt E\") == True"
+    ],
+    "2": [
+        "assert could_be(\"John Michael Doe\", \"Michael John Doe\") == True",
+        "assert could_be(\"John Michael Doe\", \"Doe\") == True",
+        "assert could_be(\"Emily Lee\", \"E Li\") == False",
+        "assert could_be(\"John Michael Doe\", \"Doe John Michael\") == True",
+        "assert could_be(\"\", \"John Michael Doe\") == False",
+        "assert could_be(\"Jane Doe\", \"Jane\") == True",
+        "assert could_be(\"Bob Johnson\", \"B Johnson\") == True",
+        "assert could_be(\"Alice Brown\", \"Brown A\") == True"
+    ],
+    "3": [
+        "assert could_be(\"John Michael Doe\", \"\") == False",
+        "assert could_be(\"John Michael Doe\", \"Doe\") == True",
+        "assert could_be(\"\", \"John\") == False",
+        "assert could_be(\"Bob Johnson\", \"Johnson Bob\") == True",
+        "assert could_be(\"Jane Doe\", \"Jane\") == True",
+        "assert could_be(\"\", \"John Michael Doe\") == False",
+        "assert could_be(\"Alice Brown\", \"Ali\") == False",
+        "assert could_be(\"John Michael Doe\", \"MichaelDoe\") == False"
+    ]
+}

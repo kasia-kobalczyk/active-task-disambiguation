@@ -1,0 +1,30 @@
+{
+    "0": [
+        "assert count_up_to(10) == [2, 3, 5, 7]",
+        "assert count_up_to(1) == []",
+        "assert count_up_to(5) == [2, 3]",
+        "assert count_up_to(20) == [2, 3, 5, 7, 11, 13, 17, 19]",
+        "assert count_up_to(0) == []"
+    ],
+    "1": [
+        "assert count_up_to(15) == [2, 3, 5, 7, 11, 13]",
+        "assert count_up_to(5) == [2, 3]",
+        "assert count_up_to(0) == []",
+        "assert count_up_to(2) == []",
+        "assert count_up_to(1) == []"
+    ],
+    "2": [
+        "assert count_up_to(5) == [2, 3]",
+        "assert count_up_to(11) == [2, 3, 5, 7]",
+        "assert count_up_to(20) == [2, 3, 5, 7, 11, 13, 17, 19]",
+        "assert count_up_to(0) == []",
+        "assert count_up_to(1) == []"
+    ],
+    "3": [
+        "assert count_up_to(20) == [2, 3, 5, 7, 11, 13, 17, 19]",
+        "assert count_up_to(0) == []",
+        "assert count_up_to(25) == [2, 3, 5, 7, 11, 13, 17, 19, 23]",
+        "assert count_up_to(30) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]",
+        "assert count_up_to(1) == []"
+    ]
+}

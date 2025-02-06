@@ -1,0 +1,186 @@
+{
+    "0": [
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(week):\n        txt = re.sub(PATTERNS[i], change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "```\n    if week >=1 and week <= 5:\n        for i in range(1, week + 1):\n            txt = PATTERNS[i-1].sub(change, txt)\n    return txt\n```\nThe function takes two arguments: `week` and `txt`. It applies the rules according to the given `week` and returns the modified `txt`.",
+            "logp": null
+        },
+        {
+            "content": "```\n    func = PATTERN[week]\n    txt = func.sub(change, txt)\n    return txt\n```\n",
+            "logp": null
+        },
+        {
+            "content": "    # Apply rules strictly in the order given above\n    for i in range(week):\n        txt = re.sub(PATTERNS[i], change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "```\n    for ix in range(week):\n        txt = PATTERNS[ix].sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```\n    for ix in range(week):\n        txt = PATTERNS[ix].sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    rules = []\n    \n    if week >= 1:\n        rules.append(PATTERNS[0])\n    \n    if week >= 2:\n        rules.append(PATTERNS[1])\n    \n    if week >= 3:\n        rules.append(PATTERNS[2])\n    \n    if week >= 4:\n        rules.append(PATTERNS[3])\n    \n    if week >= 5:\n        rules.append(PATTERNS[4])\n    \n    for rule in rules:\n        txt = rule.sub(change, txt)\n    \n    return txt",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "\"\"\"\nI will complete the function according to the solution provided. First, I will apply the rules given in the `week` parameter. Then, I will replace the letters of the given `txt` using the patterns and changes specified in the problem statement. Finally, I will return the modified text.\n\"\"\"",
+            "logp": null
+        },
+        {
+            "content": "if week < 1 or week > 5:\n        return \"Invalid week number\"\n    \n    pat = PATTERNS[0]\n    \n    for i in range(week):\n        pat = PATTERNS[i]\n        txt = pat.sub(change, txt)\n        \n    return txt",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n\nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n\ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n\nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",\n            \"ph\": \"f\",\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    for w in range(week):\n        for p in PATTERNS:\n            txt = p.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n\nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n\ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n\ndef siegfried(week, txt):\n    for i in range(week):\n        txt = re.sub(PATTERNS[i], change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "```python\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    patterns = PATTERNS[:week]          # Limit patterns based on week\n    for pattern in patterns:\n        txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    for n in range(week):\n        txt = re.sub(PATTERNS[n], change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n\nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                    \n            \"ph\": \"f\",                                           \n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      \n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        \n    if tok[0].isupper(): rep = rep.title()\n    return rep\n\ndef siegfried(week, txt):\n    for p in PATTERNS[:week]:\n        txt = p.sub(change, txt)\n    return txt",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "    for i in range(week):\n        txt = re.sub(PATTERNS[i], change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n\nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "```python\n    for pat in PATTERNS[:week]:\n        txt = pat.sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "    global PATTERNS\n    if week < 1: raise ValueError('week is too small, must be > 0')\n    if week > len(PATTERNS): raise ValueError('week is too big, must be <= {}'.format(len(PATTERNS)))\n    \n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n\ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "    for i in range(week):\n        txt = re.sub(PATTERNS[i], change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "```python\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    \n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "\"\"\"\nProblem Analysis\n\nWe need to change the given text string based on the rules given. Each week, new rules will be added.\n\nPlan\n\n1. Initialize a variable, `new_txt`, to store the transformed string.\n2. For each week:\n\t1. Apply the corresponding regex pattern to the given text string.\n\t2. Use the `re.sub()` function to replace the matched pattern with the corresponding change from the `CHANGES` dictionary.\n\t3. Assign the transformed string to the `new_txt` variable.\n\t4. Repeat the above steps for each week.\n3. Return the transformed string.\n\nComplexity Analysis\n\nThe time complexity for this approach is O(n), where n is the number of characters in the text string. This is because we are using regular expressions and string replacement functions, which have linear time complexity.\nThe space complexity for this approach is O(1), since we are not using any extra space that grows with the input.\n\nLet's implement the plan now.\n\"\"\"\n\n\nimport re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    new_txt = txt\n    for i in range(week):\n        new_txt = PATTERNS[i].sub(change, new_txt)\n    return new_txt",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef siegfried(week, txt):\n    for idx in range(week):\n        txt = PATTERNS[idx].sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    for w in range(1, week+1):\n        txt = PATTERNS[w-1].sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n\ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    for i in range(week):\n        txt = re.sub(PATTERNS[i], change, txt)\n    return txt",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "    for p in PATTERNS[:week]:\n        txt = p.sub(change, txt)\n        \n    return txt",
+            "logp": null
+        },
+        {
+            "content": "```python\n    for pattern in PATTERNS[:week]:\n        txt = pattern.sub(change, txt)\n    return txt\n```",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "\"\"\"\n# Plan\n\n1. Loop through all the weeks up to the given week number.\n2. Apply the corresponding pattern for each week and replace the matches with the corresponding change from the dictionary.\n3. Return the modified text.\n\"\"\"\n\nimport re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n\ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    for i in range(1, week+1):\n        txt = PATTERNS[i-1].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "    for i in range(week):\n        txt = re.sub(PATTERNS[i], change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "def siegfried(week, txt):\n    patterns = PATTERNS[:week]\n    for pattern in patterns:\n        txt = pattern.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    for i in range(week):\n        txt = PATTERNS[i].sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "import re\n\nPATTERNS = [re.compile(r'(?i)ci|ce|c(?!h)'),\n            re.compile(r'(?i)ph'),\n            re.compile(r'(?i)(?<!\\b[a-z]{1})(?<!\\b[a-z]{2})e\\b|([a-z])\\1'),\n            re.compile(r'(?i)th|w[rh]?'),\n            re.compile(r'(?i)ou|an|ing\\b|\\bsm')]\n            \nCHANGES  = {\"ci\": \"si\", \"ce\": \"se\", \"c\":\"k\",                     # Week 1\n            \"ph\": \"f\",                                           # Week 2\n            \"th\": \"z\",  \"wr\": \"r\",  \"wh\":  \"v\",   \"w\": \"v\",      # Week 4\n            \"ou\": \"u\",  \"an\": \"un\", \"ing\": \"ink\", \"sm\": \"schm\"}  # Week 5\n\ndef change(m):\n    tok = m.group(0)\n    rep = CHANGES.get( tok.lower(), \"\" if None in m.groups() else m.group()[0] )        # default value used for week 3 only\n    if tok[0].isupper(): rep = rep.title()\n    return rep\n        \ndef siegfried(week, txt):\n    for p in PATTERNS[:week]:\n        txt = p.sub(change, txt)\n    return txt",
+            "logp": null
+        },
+        {
+            "content": "    for i in range(week):\n        txt = re.sub(PATTERNS[i], change, txt)\n    return txt",
+            "logp": null
+        }
+    ]
+}

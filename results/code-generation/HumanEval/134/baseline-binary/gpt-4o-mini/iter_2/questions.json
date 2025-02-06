@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert check_if_last_char_is_a_letter(\"Hello world\") == True",
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == False"
+    ],
+    "1": [
+        "assert check_if_last_char_is_a_letter(\"Hello World!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Python3\") == False"
+    ],
+    "2": [
+        "assert check_if_last_char_is_a_letter(\"Test123\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello World\") == True"
+    ],
+    "3": [
+        "assert check_if_last_char_is_a_letter(\"Python programming\") == True",
+        "assert check_if_last_char_is_a_letter(\" 1234 \") == False"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert encode(\"Today is a good day\") == \"tQFAd is b iOOE FGE\"",
+        "assert encode(\"Hello, World!\") == \"jImmo, yAslp!\"",
+        "assert encode(\"Python is awesome\") == \"rAVoJK is ewAsOMe\""
+    ],
+    "1": [
+        "assert encode(\"WORLD\") == \"world\"",
+        "assert encode(\"hello\") == \"JHNOO\"",
+        "assert encode(\"Hello World!\") == \"JHNOO wrld!\""
+    ],
+    "2": [
+        "assert encode(\"hello\") == \"JHNOO\"",
+        "assert encode(\"Hello World!\") == \"JHNOO wrld!\""
+    ],
+    "3": [
+        "assert encode(\"hello\") == \"JHSSL\""
+    ]
+}

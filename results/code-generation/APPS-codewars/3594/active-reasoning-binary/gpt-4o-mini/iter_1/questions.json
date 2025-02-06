@@ -1,0 +1,36 @@
+{
+    "0": [
+        "assert is_isogram(\"word\") == True",
+        "assert is_isogram(\"abcABC\") == True",
+        "assert is_isogram(\"aabbcc\") == True",
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"Isogram\") == True",
+        "assert is_isogram(\"a-b-c\") == True",
+        "assert is_isogram(\"Non-isogram!\") == False",
+        "assert is_isogram(\"Hello\") == False"
+    ],
+    "1": [
+        "assert is_isogram(\"1234\") == False\n    ",
+        "assert is_isogram(\"1234-5678\") == True\n    ",
+        "assert is_isogram(\"aabbcc\") == True\n    ",
+        "assert is_isogram(\"ABCabc\") == True\n    ",
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"Hannah\") == False\n    "
+    ],
+    "2": [
+        "assert is_isogram(\"aB-cC\") == True\n    ",
+        "assert is_isogram(\"aA-bB\") == True\n    ",
+        "assert is_isogram(\"\") == False\n    ",
+        "assert is_isogram(\"hello\") == False\n    ",
+        "assert is_isogram(\"aabbcc\") == True",
+        "assert is_isogram(\"CdeFgH\") == True\n    "
+    ],
+    "3": [
+        "assert is_isogram(\"aA-bB\") == True\n    ",
+        "assert is_isogram(\"hello\") == False\n    ",
+        "assert is_isogram(\"aabbcc\") == True",
+        "assert is_isogram(\"Python programming\") == False\n    ",
+        "assert is_isogram(\"A man, a plan, a canal: Panama\") == True\n    ",
+        "assert is_isogram(\"CdeFgH\") == True\n    "
+    ]
+}

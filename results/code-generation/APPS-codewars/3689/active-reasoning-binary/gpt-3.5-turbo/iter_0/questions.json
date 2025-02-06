@@ -1,0 +1,31 @@
+{
+    "0": [
+        "assert how_many_pizzas(6) == \"pizzas: 0, slices: 4\"",
+        "assert how_many_pizzas(8) == \"pizzas: 1, slices: 0\"",
+        "assert how_many_pizzas(12) == \"pizzas: 2, slices: 2\"",
+        "assert how_many_pizzas(0) == \"pizzas: 0, slices: 0\"",
+        "assert how_many_pizzas(16) == \"pizzas: 4, slices: 0\""
+    ],
+    "1": [
+        "assert how_many_pizzas(6) == \"pizzas: 0, slices: 4\"",
+        "assert how_many_pizzas(0) == \"pizzas: 0, slices: 0\"",
+        "assert how_many_pizzas(16) == \"pizzas: 4, slices: 0\"",
+        "assert how_many_pizzas(0) == \"pizzas: 0, slices: 0\"\n# we cannot fit any whole pizzas of size 8 inches into a 0-inch pizza. Additionally, there are no extra slices.",
+        "assert how_many_pizzas(12) == \"pizzas: 2, slices: 2\""
+    ],
+    "2": [
+        "assert how_many_pizzas(0) == \"pizzas: 0, slices: 0\"",
+        "assert how_many_pizzas(16) == \"pizzas: 4, slices: 0\"",
+        "assert how_many_pizzas(10) == \"pizzas: 1, slices: 4\"",
+        "assert how_many_pizzas(4) == \"pizzas: 0, slices: 2\"",
+        "assert how_many_pizzas(12) == \"pizzas: 2, slices: 2\""
+    ],
+    "3": [
+        "assert how_many_pizzas(7) == \"pizzas: 0, slices: 1\"",
+        "assert how_many_pizzas(10) == \"pizzas: 1, slices: 2\"",
+        "assert how_many_pizzas(20) == \"pizzas: 5, slices: 0\"",
+        "assert how_many_pizzas(16) == \"pizzas: 4, slices: 0\"",
+        "assert how_many_pizzas(14) == \"pizzas: 1, slices: 6\"",
+        "assert how_many_pizzas(12) == \"pizzas: 2, slices: 2\""
+    ]
+}

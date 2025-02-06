@@ -1,0 +1,162 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n        else:\n            if zero_count % 2 == 1:  # If there's an unpaired zero\n                result.append(0)\n            zero_count = 0\n            result.append(num)\n\n    if zero_count % 2 == 1:  # Check for an unpaired zero at the end\n        result.append(0)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:  # Keep the first zero of the pair\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr, *args):\n    result = []\n    count_zeros = 0\n    \n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n            if count_zeros % 2 == 1:  # keep the first 0 of the pair\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n\n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(num)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr, *args):\n    count_zeros = 0\n    result = []\n    \n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n            if count_zeros % 2 == 1:  # Keep the first zero of the pair\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    count_zeros = 0\n    result = []\n    \n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n        else:\n            if count_zeros % 2 == 1:  # Odd number of zeros so far\n                result.append(0)  # Keep one zero\n            count_zeros = 0  # Reset count after non-zero\n        \n        result.append(num)\n    \n    if count_zeros % 2 == 1:  # If there's an odd zero at the end\n        result.append(0)\n\n    return [x for x in result if x != 0 or (result.count(0) > result.index(x))]  # Filter out paired zeros\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr, *args):\n    result = []\n    zero_count = 0\n\n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    count_zeros = 0\n    result = []\n    \n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n        else:\n            result.append(num)\n\n    # Pairing 0's\n    paired_zeros = count_zeros // 2\n    result = [0] * paired_zeros + result\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr, *args):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n        else:\n            if zero_count % 2 == 1:\n                result.append(0)\n            result.append(num)\n            zero_count = 0\n\n    if zero_count % 2 == 1:\n        result.append(0)\n\n    return result\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(num)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n\n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:  # Only add the first of each pair\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n\n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:  # Only keep the first zero in the pair\n                result.append(num)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    count_zeros = 0\n    result = []\n\n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n            if count_zeros % 2 == 1:  # Keep the first 0 of the pair\n                result.append(num)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    count = 0\n    result = []\n    \n    for num in arr:\n        if num == 0:\n            count += 1\n            if count % 2 == 1:\n                result.append(num)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(num)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n\n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    paired = []\n    count_zeros = 0\n\n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n            if count_zeros % 2 == 1:\n                paired.append(num)\n        else:\n            paired.append(num)\n    \n    return paired\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    count_zero = 0\n    result = []\n\n    for num in arr:\n        if num == 0:\n            count_zero += 1\n            if count_zero % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n\n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(num)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    count = 0\n    result = []\n    \n    for num in arr:\n        if num == 0:\n            count += 1\n            if count % 2 == 1:  # keep the first 0\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:  # Only keep the first of every pair\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    count_zeros = 0\n    result = []\n\n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n            if count_zeros % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:  # If it's an odd occurrence, keep it\n                result.append(num)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    count_zeros = 0\n    \n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n            if count_zeros % 2 == 1:  # If it's an odd count, keep the zero\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:  # Keep the first 0 in the pair\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n\n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:  # Keep the first zero in each pair\n                result.append(0)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n\n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:  # only add the first of each pair\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(num)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n\n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(num)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    count_zeros = 0\n    result = []\n\n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n            if count_zeros % 2 == 1:\n                result.append(num)\n        else:\n            result.append(num)\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(num)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef pair_zeros(arr):\n    result = []\n    zero_count = 0\n    \n    for num in arr:\n        if num == 0:\n            zero_count += 1\n            if zero_count % 2 == 1:\n                result.append(0)\n        else:\n            result.append(num)\n    \n    return result\n```",
+            "logp": null
+        }
+    ]
+}

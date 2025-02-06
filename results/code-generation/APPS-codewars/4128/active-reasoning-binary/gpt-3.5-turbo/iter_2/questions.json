@@ -1,0 +1,44 @@
+{
+    "0": [
+        "assert bears(3, 'B8B8B8') == ['B8B8B8', True]",
+        "assert bears(2, 'B8B8') == ['B8B8', True]",
+        "assert bears(4, 'B8B8B8B') == ['B8B8B8B', True]",
+        "assert bears(1, 'ABCDEF') == ['', False]",
+        "assert bears(3, 'B8B8B') == ['B8B', True]",
+        "assert bears(4, 'B8B') == ['B8B', False]",
+        "assert bears(2, 'B8CB8') == ['B8B8', True]",
+        "assert bears(6, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(2, 'B8') == ['B8', True]",
+        "assert bears(5, 'B8B8B8B8B8') == ['B8B8B8B8B8', False]"
+    ],
+    "1": [
+        "assert bears(1, 'B8') == ['B8', True]",
+        "assert bears(2, 'B8B8') == ['B8B8', True]",
+        "assert bears(5, 'B8') == ['', False]",
+        "assert bears(4, 'B8B8B8B8B8B8B8') == ['B8B8B8B8B8B8B8', True]",
+        "assert bears(2, 'B8B8B8') == ['B8B', True]",
+        "assert bears(5, 'B8B8B8') == ['B8B8B8', True]",
+        "assert bears(4, 'B8B8B8') == ['B8B8B8', False]",
+        "assert bears(0, 'B8B8B8') == ['', True]",
+        "assert bears(3, 'BBB') == ['', False]"
+    ],
+    "2": [
+        "assert bears(2, 'B8B8B8') == ['B8B8', True]",
+        "assert bears(1, 'B88B') == ['B88B', True]",
+        "assert bears(2, '88') == ['', False]",
+        "assert bears(2, 'B88B') == ['B88B', False]",
+        "assert bears(4, 'BBBBB888888') == ['', False]",
+        "assert bears(2, 'BB88') == ['BB88', True]",
+        "assert bears(3, 'BBBB') == ['', False]",
+        "assert bears(4, 'B8B888B') == ['B8B8B8', True]"
+    ],
+    "3": [
+        "assert bears(1, 'B88B') == ['B88B', True]",
+        "assert bears(2, '88') == ['', False]",
+        "assert bears(2, 'B88B') == ['B88B', False]",
+        "assert bears(4, 'BBBBB888888') == ['', False]",
+        "assert bears(2, 'BB88') == ['BB88', True]",
+        "assert bears(3, 'BBBB') == ['', False]",
+        "assert bears(4, 'B8B888B') == ['B8B8B8', True]"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert validate('1234567890123456') == False",
+        true
+    ],
+    "1": [
+        "assert validate('4913547511651346') == True",
+        false
+    ],
+    "2": [
+        "assert validate('799273987') == False",
+        true
+    ],
+    "3": [
+        "assert validate('4111 1111 1111 1111') == True",
+        "error"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert validate(45320151128336) == True",
+        "assert validate(45320151128334) == False",
+        "assert validate(4012888888881881) == True"
+    ],
+    "1": [
+        "assert validate(453201511283361) == False",
+        "assert validate(453201511283) == False"
+    ],
+    "2": [
+        "assert validate(4111111111111111) == True",
+        "assert validate(1234567890123456) == False",
+        "assert validate(6011510284947291) == True"
+    ],
+    "3": [
+        "assert validate(45320151128336) == False"
+    ]
+}

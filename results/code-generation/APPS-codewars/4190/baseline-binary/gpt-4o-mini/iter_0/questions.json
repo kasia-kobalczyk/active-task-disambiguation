@@ -1,0 +1,17 @@
+{
+    "0": [
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"amazon\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"abcdefg\") == True",
+        "assert is_alt(\"aabbcc\") == False"
+    ],
+    "2": [
+        "assert is_alt(\"aabbcc\") == False"
+    ],
+    "3": [
+        "assert is_alt(\"babab\") == True",
+        "assert is_alt(\"aeiou\") == False"
+    ]
+}

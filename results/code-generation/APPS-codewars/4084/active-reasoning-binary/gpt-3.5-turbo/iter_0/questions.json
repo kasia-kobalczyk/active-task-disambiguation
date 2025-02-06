@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert alex_mistakes(10, 60) == 0",
+        "assert alex_mistakes(10, 70) == 1",
+        "assert alex_mistakes(5, 30) == 0",
+        "assert alex_mistakes(10, 75) == 1",
+        "assert alex_mistakes(10, 100) == 4",
+        "assert alex_mistakes(20, 90) == 2",
+        "assert alex_mistakes(15, 120) == 0",
+        "assert alex_mistakes(10, 90) == 3",
+        "assert alex_mistakes(10, 80) == 2"
+    ],
+    "1": [
+        "assert alex_mistakes(10, 70) == 1",
+        "assert alex_mistakes(15, 60) == 0",
+        "assert alex_mistakes(10, 170) == 5",
+        "assert alex_mistakes(10, 50) == 0",
+        "assert alex_mistakes(10, 70) == 2",
+        "assert alex_mistakes(10, 100) == 5",
+        "assert alex_mistakes(10, 90) == 3",
+        "assert alex_mistakes(10, 80) == 2"
+    ],
+    "2": [
+        "assert alex_mistakes(10, 70) == 1",
+        "assert alex_mistakes(10, 170) == 5",
+        "assert alex_mistakes(10, 50) == 0",
+        "assert alex_mistakes(10, 70) == 2",
+        "assert alex_mistakes(10, 100) == 5",
+        "assert alex_mistakes(10, 90) == 3",
+        "assert alex_mistakes(10, 80) == 2"
+    ],
+    "3": [
+        "assert alex_mistakes(10, 70) == 1",
+        "assert alex_mistakes(10, 170) == 5",
+        "assert alex_mistakes(10, 70) == 2",
+        "assert alex_mistakes(10, 100) == 5",
+        "assert alex_mistakes(10, 90) == 3",
+        "assert alex_mistakes(10, 80) == 2"
+    ]
+}

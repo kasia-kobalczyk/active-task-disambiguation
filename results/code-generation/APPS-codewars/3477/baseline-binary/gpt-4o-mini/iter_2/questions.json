@@ -1,0 +1,16 @@
+{
+    "0": [
+        "assert sort_string(\"apple\", \"ple\") == \"ppale\"",
+        "assert sort_string(\"hello\", \"ol\") == \"llohe\""
+    ],
+    "1": [
+        "assert sort_string(\"apple\", \"plea\") == \"aelpp\"",
+        "assert sort_string(\"hello world\", \"lhw\") == \"hllw oor\""
+    ],
+    "2": [
+        "assert sort_string(\"hello world\", \"lhw\") == \"hllw oor\""
+    ],
+    "3": [
+        "assert sort_string(\"hello world\", \"lhw\") == \"hlloorw d\""
+    ]
+}

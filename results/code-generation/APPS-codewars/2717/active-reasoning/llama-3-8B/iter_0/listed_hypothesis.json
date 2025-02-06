@@ -1,0 +1,57 @@
+{
+    "0": [
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    def lcm(a, b):\n        return a * b // gcd(a, b)\n    result = lst[0]\n    for i in lst[1:]:\n        result = lcm(result, i)\n    for i in range(result-1, 0, -1):\n        if all(i % j == 0 for j in lst):\n            return i\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    def lcm(a, b):\n        return a * b // gcd(a, b)\n    result = lst[0]\n    for i in lst[1:]:\n        result = lcm(result, i)\n    for i in range(result-1, 0, -1):\n        if all(i % j == 0 for j in lst):\n            return i\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    def lcm(a, b):\n        return a * b // gcd(a, b)\n    result = lst[0]\n    for i in lst[1:]:\n        result = lcm(result, i)\n    for i in range(result-1, 0, -1):\n        if all(i % j == 0 for j in lst):\n            return i\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    def lcm(a, b):\n        return a * b // gcd(a, b)\n    result = lst[0]\n    for i in lst[1:]:\n        result = lcm(result, i)\n    for i in range(result-1, 0, -1):\n        if all(i % j == 0 for j in lst):\n            return i\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    def lcm(a, b):\n        return a * b // gcd(a, b)\n    result = lst[0]\n    for i in lst[1:]:\n        result = lcm(result, i)\n    for i in range(result-1, 0, -1):\n        if all(i % j == 0 for j in lst):\n            return i\n    return 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    result = lst[0]\n    for num in lst[1:]:\n        result = gcd(result, num)\n    return result if result > 1 else 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    result = lst[0]\n    for num in lst[1:]:\n        result = gcd(result, num)\n    return result if result > 1 else 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    result = lst[0]\n    for num in lst[1:]:\n        result = gcd(result, num)\n    return result if result > 1 else 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    result = lst[0]\n    for num in lst[1:]:\n        result = gcd(result, num)\n    return result if result > 1 else 1",
+            "logp": null
+        },
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    result = lst[0]\n    for num in lst[1:]:\n        result = gcd(result, num)\n    return result if result > 1 else 1",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    def lcm(a, b):\n        return a * b // gcd(a, b)\n    result = lst[0]\n    for num in lst[1:]:\n        result = lcm(result, num)\n    for i in range(2, result + 1):\n        if result % i == 0:\n            return i\n    return 1",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    def lcm(a, b):\n        return a * b // gcd(a, b)\n    result = lst[0]\n    for num in lst[1:]:\n        result = lcm(result, num)\n    for i in range(2, result + 1):\n        if result % i == 0:\n            return i\n    return 1",
+            "logp": null
+        }
+    ],
+    "3": []
+}

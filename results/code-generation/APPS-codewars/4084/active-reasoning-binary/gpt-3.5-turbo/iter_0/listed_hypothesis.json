@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushup_time = 5 * 2 ** (log(time / 5, 2))\n    kata_time = (time - pushup_time) / 60\n    allowed_mistakes = n - kata_time * kata_per_hour\n    return max(allowed_mistakes, 0)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushups_time = 5\n    total_time_needed = n / kata_per_hour * 60 + pushups_time * (2**int(log(n, 2)) - 1)\n\n    if total_time_needed > time:\n        return -1\n\n    return int(log((time - total_time_needed) / pushups_time + 1, 2))",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    # calculate the time it takes to do n kata without any mistakes\n    total_time = n * 6\n    \n    # calculate the maximum time Alex can spend on pushups\n    max_pushup_time = time - total_time\n    \n    # calculate the maximum number of mistakes Alex can afford to make\n    max_mistakes = int(log(max_pushup_time / 5, 2))\n    \n    return max_mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    # Calculate the maximum number of kata Alex can complete without making any mistakes\n    max_kata = 10 * time\n    \n    # Calculate the time taken for redemption pushups\n    pushup_time = 5 * (2 ** (n-1))\n    \n    # Calculate the remaining time after accounting for redemption pushups\n    remaining_time = time - pushup_time\n    \n    # Calculate the maximum number of mistakes Alex can afford to make\n    max_mistakes = (max_kata - n) // 10\n    \n    return max_mistakes",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushups_time = 5\n    total_time = n / kata_per_hour * 60 + time\n    \n    if total_time <= pushups_time:\n        return n\n    else:\n        return n - int(log((total_time - pushups_time) / pushups_time, 2))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    # Calculate the total time it takes to complete the kata without any mistakes\n    total_time = n / 10 * 60\n    \n    # Calculate the time it takes for each set of pushups\n    pushup_time = 5 * 2**(log(n, 2) - 1)\n    \n    # Calculate the maximum number of mistakes Alex can afford to make\n    max_mistakes = (time - total_time) / pushup_time\n    \n    return max_mistakes",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    katas = time * 10\n    mistakes = log(katas/n, 2)\n    return int(mistakes)",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    # calculate the total time to complete the kata without mistakes\n    total_time = n * 6\n    \n    # calculate the maximum number of mistakes Alex can afford\n    max_mistakes = (time - total_time) / (5 * (2 ** (log(n, 2))))\n    \n    return max_mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushups_time = 5\n\n    # Calculate the maximum number of mistakes that can be made\n    max_mistakes = (time - (n / kata_per_hour) * 60) / pushups_time\n\n    # Return the floor value of the maximum number of mistakes\n    return int(max_mistakes)",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    # Calculate the total time needed to complete all kata without making any mistakes\n    total_time = n * 6\n    \n    # Calculate the maximum number of mistakes Alex can afford to make\n    max_mistakes = log(time / total_time, 2)\n    \n    return max_mistakes",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    if n == 0:\n        return 0\n    pushup_time = 5 * 2 ** (n-1)\n    if time < pushup_time:\n        return 0\n    mistakes = int(log(time / pushup_time, 2)) + 1\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushup_time = 5\n    mistakes_allowed = 0\n\n    if n > time // (60 / kata_per_hour):\n        mistakes_allowed = n - (time // (60 / kata_per_hour))\n        if mistakes_allowed > 0:\n            pushup_time = pushup_time * (2 ** log(mistakes_allowed, 2))\n\n    return mistakes_allowed\n\nprint(alex_mistakes(10, 60))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    # Total time it would take to complete all the kata without any mistakes\n    total_time = n * 6\n\n    # Total time for pushups\n    pushup_time = 0\n\n    # Number of mistakes Alex can afford to make\n    mistakes = 0\n\n    # If total time is greater than available time, calculate number of mistakes\n    if total_time > time:\n        pushup_time = 5 * (2 ** (log(total_time - time, 2) // 1))\n        mistakes = pushup_time // 5\n\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    total_time = n * 6 # calculate the total time in minutes\n    mistakes = 0\n    while total_time > time:\n        total_time += 5 * 2 ** mistakes # add the time for pushups\n        mistakes += 1 # increase the number of mistakes\n    return mistakes\n\n# Testing the function\nprint(alex_mistakes(10, 60)) # 0\nprint(alex_mistakes(20, 120)) # 1\nprint(alex_mistakes(30, 180)) # 2\nprint(alex_mistakes(40, 240)) # 3\nprint(alex_mistakes(50, 300)) # 4",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    # calculate the time it takes to do the pushups\n    pushups_time = 5 * 2 ** (n - 1)\n\n    # calculate the time left after doing all the kata\n    time_left = time - n * 6\n\n    # calculate the number of mistakes Alex can afford to make\n    mistakes = int(time_left / pushups_time)\n\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushup_time = 5\n    time_left = time - (n / kata_per_hour * 60)\n    if time_left <= 0:\n        return 0\n    mistakes_allowed = log(time_left / pushup_time, 2)\n    return int(mistakes_allowed)",
+            "logp": null
+        },
+        {
+            "content": "from math import log\ndef alex_mistakes(n, time):\n    max_mistakes = time / 60 * 10\n    if max_mistakes == n:\n        return 0\n    elif max_mistakes > n:\n        return max_mistakes - n\n    else:\n        return int(log(n / max_mistakes, 2)) + 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    total_time = n * 6\n    mistakes = 0\n\n    while total_time > time:\n        total_time += 5 * 2 ** mistakes\n        mistakes += 1\n\n    return mistakes\n\nprint(alex_mistakes(10, 60))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    if time >= n*6:\n        return 0\n    else:\n        return int(log(time/5, 2))",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    if time >= n * 6:\n        return 0\n    elif n * 6 - time >= 5:\n        return int(log((n * 6 - time) / 5, 2))\n    else:\n        return n - (time // 6)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    # Calculate the total time it would take to complete all kata without making any mistakes\n    total_time = n * 6\n    \n    # Calculate the maximum number of mistakes Alex can afford to make\n    max_mistakes = (total_time - time) // 5\n    \n    return max_mistakes",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    if n == 0:\n        return 0\n    pushup_time = 5 * 2 ** (n-1)\n    if time < pushup_time:\n        return 0\n    mistakes = int(log(time / pushup_time, 2)) + 1\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushup_time = 5\n    mistakes_allowed = 0\n\n    if n > time // (60 / kata_per_hour):\n        mistakes_allowed = n - (time // (60 / kata_per_hour))\n        if mistakes_allowed > 0:\n            pushup_time = pushup_time * (2 ** log(mistakes_allowed, 2))\n\n    return mistakes_allowed\n\nprint(alex_mistakes(10, 60))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    # Total time it would take to complete all the kata without any mistakes\n    total_time = n * 6\n\n    # Total time for pushups\n    pushup_time = 0\n\n    # Number of mistakes Alex can afford to make\n    mistakes = 0\n\n    # If total time is greater than available time, calculate number of mistakes\n    if total_time > time:\n        pushup_time = 5 * (2 ** (log(total_time - time, 2) // 1))\n        mistakes = pushup_time // 5\n\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    total_time = n * 6 # calculate the total time in minutes\n    mistakes = 0\n    while total_time > time:\n        total_time += 5 * 2 ** mistakes # add the time for pushups\n        mistakes += 1 # increase the number of mistakes\n    return mistakes\n\n# Testing the function\nprint(alex_mistakes(10, 60)) # 0\nprint(alex_mistakes(20, 120)) # 1\nprint(alex_mistakes(30, 180)) # 2\nprint(alex_mistakes(40, 240)) # 3\nprint(alex_mistakes(50, 300)) # 4",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    # calculate the time it takes to do the pushups\n    pushups_time = 5 * 2 ** (n - 1)\n\n    # calculate the time left after doing all the kata\n    time_left = time - n * 6\n\n    # calculate the number of mistakes Alex can afford to make\n    mistakes = int(time_left / pushups_time)\n\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushup_time = 5\n    time_left = time - (n / kata_per_hour * 60)\n    if time_left <= 0:\n        return 0\n    mistakes_allowed = log(time_left / pushup_time, 2)\n    return int(mistakes_allowed)",
+            "logp": null
+        },
+        {
+            "content": "from math import log\ndef alex_mistakes(n, time):\n    max_mistakes = time / 60 * 10\n    if max_mistakes == n:\n        return 0\n    elif max_mistakes > n:\n        return max_mistakes - n\n    else:\n        return int(log(n / max_mistakes, 2)) + 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    total_time = n * 6\n    mistakes = 0\n\n    while total_time > time:\n        total_time += 5 * 2 ** mistakes\n        mistakes += 1\n\n    return mistakes\n\nprint(alex_mistakes(10, 60))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    if time >= n*6:\n        return 0\n    else:\n        return int(log(time/5, 2))",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    if time >= n * 6:\n        return 0\n    elif n * 6 - time >= 5:\n        return int(log((n * 6 - time) / 5, 2))\n    else:\n        return n - (time // 6)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    # Calculate the total time it would take to complete all kata without making any mistakes\n    total_time = n * 6\n    \n    # Calculate the maximum number of mistakes Alex can afford to make\n    max_mistakes = (total_time - time) // 5\n    \n    return max_mistakes",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    if n == 0:\n        return 0\n    pushup_time = 5 * 2 ** (n-1)\n    if time < pushup_time:\n        return 0\n    mistakes = int(log(time / pushup_time, 2)) + 1\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushup_time = 5\n    mistakes_allowed = 0\n\n    if n > time // (60 / kata_per_hour):\n        mistakes_allowed = n - (time // (60 / kata_per_hour))\n        if mistakes_allowed > 0:\n            pushup_time = pushup_time * (2 ** log(mistakes_allowed, 2))\n\n    return mistakes_allowed\n\nprint(alex_mistakes(10, 60))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    # Total time it would take to complete all the kata without any mistakes\n    total_time = n * 6\n\n    # Total time for pushups\n    pushup_time = 0\n\n    # Number of mistakes Alex can afford to make\n    mistakes = 0\n\n    # If total time is greater than available time, calculate number of mistakes\n    if total_time > time:\n        pushup_time = 5 * (2 ** (log(total_time - time, 2) // 1))\n        mistakes = pushup_time // 5\n\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    total_time = n * 6 # calculate the total time in minutes\n    mistakes = 0\n    while total_time > time:\n        total_time += 5 * 2 ** mistakes # add the time for pushups\n        mistakes += 1 # increase the number of mistakes\n    return mistakes\n\n# Testing the function\nprint(alex_mistakes(10, 60)) # 0\nprint(alex_mistakes(20, 120)) # 1\nprint(alex_mistakes(30, 180)) # 2\nprint(alex_mistakes(40, 240)) # 3\nprint(alex_mistakes(50, 300)) # 4",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    # calculate the time it takes to do the pushups\n    pushups_time = 5 * 2 ** (n - 1)\n\n    # calculate the time left after doing all the kata\n    time_left = time - n * 6\n\n    # calculate the number of mistakes Alex can afford to make\n    mistakes = int(time_left / pushups_time)\n\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushup_time = 5\n    time_left = time - (n / kata_per_hour * 60)\n    if time_left <= 0:\n        return 0\n    mistakes_allowed = log(time_left / pushup_time, 2)\n    return int(mistakes_allowed)",
+            "logp": null
+        },
+        {
+            "content": "from math import log\ndef alex_mistakes(n, time):\n    max_mistakes = time / 60 * 10\n    if max_mistakes == n:\n        return 0\n    elif max_mistakes > n:\n        return max_mistakes - n\n    else:\n        return int(log(n / max_mistakes, 2)) + 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    total_time = n * 6\n    mistakes = 0\n\n    while total_time > time:\n        total_time += 5 * 2 ** mistakes\n        mistakes += 1\n\n    return mistakes\n\nprint(alex_mistakes(10, 60))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    if time >= n*6:\n        return 0\n    else:\n        return int(log(time/5, 2))",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    if time >= n * 6:\n        return 0\n    elif n * 6 - time >= 5:\n        return int(log((n * 6 - time) / 5, 2))\n    else:\n        return n - (time // 6)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    # Calculate the total time it would take to complete all kata without making any mistakes\n    total_time = n * 6\n    \n    # Calculate the maximum number of mistakes Alex can afford to make\n    max_mistakes = (total_time - time) // 5\n    \n    return max_mistakes",
+            "logp": null
+        }
+    ]
+}

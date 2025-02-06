@@ -1,0 +1,198 @@
+{
+    "0": [
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = \"AEIOU\"\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in even indices.\n    \"\"\"\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i].upper() in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = {'A', 'E', 'I', 'O', 'U'}\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    \n    for i in range(0, len(s), 2):\n        if s[i].upper() in ['A', 'E', 'I', 'O', 'U']:\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = {'A', 'E', 'I', 'O', 'U'}\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in 'AEIOU':\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    for i in range(0, len(s), 2):\n        if s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in even indices.\n    \"\"\"\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    for i in range(0, len(s), 2):\n        if s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    \n    for i in range(len(s)):\n        if i % 2 == 0 and s[i] in vowels:\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(1, len(s), 2):\n        if s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = \"AEIOU\"\n    \n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(1, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = {'A', 'E', 'I', 'O', 'U'}\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = [\"A\", \"E\", \"I\", \"O\", \"U\"]\n    \n    for i in range(0, len(s), 2):\n        if s[i] in vowels:\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = [\"A\", \"E\", \"I\", \"O\", \"U\"]\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count\n\nprint(count_upper(\"Hello World\"))",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(1, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    \n    for i in range(0, len(s), 2):\n        if s[i] in vowels:\n            count += 1\n            \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    \n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    for i in range(0, len(s), 2):\n        if s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = {'A', 'E', 'I', 'O', 'U'}\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(len(s)):\n        if i % 2 == 0 and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in \"AEIOU\":\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = \"AEIOU\"\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i] in \"AEIOU\":\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = {'A', 'E', 'I', 'O', 'U'}\n    count = 0\n    for i in range(0, len(s), 2):\n        if s[i].isupper() and s[i] in vowels:\n            count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    count = 0\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    \n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    \n    return count",
+            "logp": null
+        },
+        {
+            "content": "def count_upper(s):\n    vowels = ['A', 'E', 'I', 'O', 'U']\n    count = 0\n    \n    for i in range(0, len(s), 2):\n        if s[i] in vowels and s[i].isupper():\n            count += 1\n    \n    return count",
+            "logp": null
+        }
+    ]
+}

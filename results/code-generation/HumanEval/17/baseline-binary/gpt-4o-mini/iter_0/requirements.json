@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert parse_music(\"o o o o|\") == [4, 4, 4, 2]",
+        true
+    ],
+    "1": [
+        "assert parse_music(\"o o| .| o|\") == [4, 2, 1, 2]",
+        true
+    ],
+    "2": [
+        "assert parse_music(\"o o o .|\") == [4, 4, 4, 1]",
+        true
+    ],
+    "3": [
+        "assert parse_music(\"o .| .| .|\") == [4, 1, 1, 1]",
+        true
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert siegfried(\"text with ci, ce, ph, and ch\", \"This is a science project with photography and chicken\") == \"This is a sienss projekt vit fotografy and chicken\"",
+        "assert siegfried(\"text with wh, w and th\", \"What will he think about the weather\") == \"Vat vil he zink about ze vezer\"",
+        "assert siegfried(\"text with trailing e\", \"The apple is in the tree\") == \"Ze appl is in ze tree\"",
+        "assert siegfried(5, \"I would be speaking in a charming way\") == \"I vould be speakink in a charming vay\"",
+        "assert siegfried(\"text with double letters\", \"I like to see the trees and have fun\") == \"I lik to se threz and haf fun\"",
+        "assert siegfried(1, \"Cinderella went to the castle\") == \"Sinderella vent to ze kasle\"",
+        "assert siegfried(3, \"She had a little cat\") == \"She had a litl kat\"",
+        "assert siegfried(4, \"What do we do with a drunken sailor?\") == \"Vhat do ve do viz a drunken sailor?\""
+    ],
+    "1": [
+        "assert siegfried(3, \"He's going to the cinema tonight\") == \"He's going to ze sinema tonite\"",
+        "assert siegfried(3, \"The quick brown fox jumps over the lazy dog\") == \"Ze quick brown fox jumps over ze lazy dog\"",
+        "assert siegfried(3, \"She sells sea shells by the sea shore\") == \"She sells sea shells by ze sea shore\"",
+        "assert siegfried(3, \"Peter is a cat with a coat\") == \"Peter is a kat viz a kot\"",
+        "assert siegfried(3, \"I love to watch the show\") == \"I love to vatc ze sho\"",
+        "assert siegfried(3, \"She sings and dances\") == \"She sinks un dances\"",
+        "assert siegfried(3, \"They think they are winning\") == \"Zey zink zey are winnink\"",
+        "assert siegfried(3, \"What a wonderful world we live in\") == \"Vat a vunderful vorld ve live in\""
+    ],
+    "2": [
+        "assert siegfried(3, \"They think they can win\") == \"Zey zink zey kan vin\"",
+        "assert siegfried(3, \"She will win and then play\") == \"She vil vin un zen play\"",
+        "assert siegfried(3, \"The quick brown fox jumps over the lazy dog\") == \"Ze quick brown fox jumps over ze lazy dog\"",
+        "assert siegfried(3, \"This is a simple test case\") == \"Zis is a simpl test kase\"",
+        "assert siegfried(3, \"I love to watch the show\") == \"I love to vatc ze sho\"",
+        "assert siegfried(3, \"She sings and dances\") == \"She sinks un dances\"",
+        "assert siegfried(3, \"What are you doing here?\") == \"Vat are u doink here?\"",
+        "assert siegfried(3, \"The quick brown fox jumps\") == \"Ze quick brown fox jumps\""
+    ],
+    "3": [
+        "assert siegfried(3, \"She will win and then play\") == \"She vil vin un zen play\"",
+        "assert siegfried(3, \"The quick brown fox jumps over the lazy dog\") == \"Ze quick brown fox jumps over ze lazy dog\"",
+        "assert siegfried(3, \"This is a simple test case\") == \"Zis is a simpl test kase\"",
+        "assert siegfried(3, \"She sings and dances\") == \"She sinks un dances\"",
+        "assert siegfried(3, \"I love to watch the show\") == \"I love to vatc ze sho\"",
+        "assert siegfried(3, \"What are you doing here?\") == \"Vat are u doink here?\"",
+        "assert siegfried(3, \"The quick brown fox jumps\") == \"Ze quick brown fox jumps\""
+    ]
+}

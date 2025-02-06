@@ -1,0 +1,174 @@
+{
+    "0": [
+        {
+            "content": "\"\"\"\nThis solution uses the Sieve of Eratosthenes algorithm to generate all the prime numbers up to `n`. It then checks if each prime number has an index that is also a prime number. If it does, it adds it to the `DOMINANTS` list. \n\nTo solve the problem, we need to sum all the dominant primes within the range `(a, b)`. We can do this by iterating over the `DOMINANTS` list and adding the primes that are within the range to a running total. Finally, we return the total.\n\"\"\"\n\n    total = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            total += prime\n    return total",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    # Initialize sum of dominant primes\n    sum_dominant_primes = 0\n    \n    # Iterate over the range [a, b]\n    for num in range(a, b+1):\n        # Check if num is a dominant prime\n        if num in DOMINANTS:\n            # Add num to sum_dominant_primes\n            sum_dominant_primes += num\n    \n    return sum_dominant_primes",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    n = b\n    sieve, PRIMES = [0]*(n//2+1), [0,2]\n    for i in range(3, n+1, 2):\n        if not sieve[i//2]:\n            PRIMES.append(i)\n            for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n    \n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n    \n    sum_of_dominants = 0\n    for prime in DOMINANTS:\n        if prime >= a:\n            sum_of_dominants += prime\n    \n    return sum_of_dominants",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    sum_dominant = 0\n    for i in range(a, b+1):\n        if i in DOMINANTS:\n            sum_dominant += i\n    return sum_dominant",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    sum_dominant = 0\n    for p in DOMINANTS:\n        if a <= p <= b:\n            sum_dominant += p\n    return sum_dominant",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    n = b\n    sieve, PRIMES = [0] * (n // 2 + 1), [0, 2]\n    for i in range(3, n + 1, 2):\n        if not sieve[i // 2]:\n            PRIMES.append(i)\n            for j in range(i ** 2, n + 1, i * 2):\n                sieve[j // 2] = 1\n\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES):\n            break\n        DOMINANTS.append(PRIMES[p])\n\n    return sum(x for x in DOMINANTS if a <= x <= b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    n = 500000\n    sieve, PRIMES = [0]*(n//2+1), [0,2]\n    for i in range(3, n+1, 2):\n        if not sieve[i//2]:\n            PRIMES.append(i)\n            for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n        \n    sum_of_dominant_primes = sum([x for x in DOMINANTS if a <= x <= b])\n    return sum_of_dominant_primes",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    result = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            result += prime\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    # Count the sum of dominant primes within the range (a,b)\n    sum_of_dominant_primes = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum_of_dominant_primes += prime\n    return sum_of_dominant_primes",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    # initialize sum of dominant primes\n    sum_dominant_primes = 0\n    \n    # iterate over the dominant primes\n    for prime in DOMINANTS:\n        # check if the prime is within the range (a, b)\n        if prime >= a and prime <= b:\n            # add the prime to the sum\n            sum_dominant_primes += prime\n    \n    return sum_dominant_primes",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "    sum_of_dominant_primes = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum_of_dominant_primes += prime\n    return sum_of_dominant_primes",
+            "logp": null
+        },
+        {
+            "content": "    sum = 0\n    for prime in DOMINANTS:\n        if a <= prime <= b:\n            sum += prime\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "    sum_of_dominants = 0\n    for dominant in DOMINANTS:\n        if a <= dominant <= b:\n            sum_of_dominants += dominant\n    return sum_of_dominants",
+            "logp": null
+        },
+        {
+            "content": "n = 500000\nsieve, PRIMES = [0]*(n//2+1), [0,2]\nfor i in range(3, n+1, 2):\n    if not sieve[i//2]:\n        PRIMES.append(i)\n        for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n\nDOMINANTS = []\nfor p in PRIMES:\n    if p >= len(PRIMES): break\n    DOMINANTS.append(PRIMES[p])\n\ndef solve(a,b):\n    return sum(p for p in DOMINANTS if a <= p <= b)",
+            "logp": null
+        },
+        {
+            "content": "n = 500000\nsieve, PRIMES = [0]*(n//2+1), [0,2]\nfor i in range(3, n+1, 2):\n    if not sieve[i//2]:\n        PRIMES.append(i)\n        for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n\nDOMINANTS = []\nfor p in PRIMES:\n    if p >= len(PRIMES): break\n    DOMINANTS.append(PRIMES[p])\n\ndef solve(a,b):\n    sum = 0\n    for i in DOMINANTS:\n        if i >= a and i <= b:\n            sum += i\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "    sum = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum += prime\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "    sum = 0\n    for p in DOMINANTS:\n        if a <= p <= b:\n            sum += p\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    if a < 0 or b > 500000 or a > b:\n        return \"Invalid range\"\n    \n    sum_of_dominants = sum([p for p in DOMINANTS if a <= p <= b])\n    \n    return sum_of_dominants",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    dominants_sum = 0\n    for dominant in DOMINANTS:\n        if a <= dominant <= b:\n            dominants_sum += dominant\n    return dominants_sum",
+            "logp": null
+        },
+        {
+            "content": "    sum_primes = 0\n    for prime in DOMINANTS:\n        if a <= prime <= b:\n            sum_primes += prime\n    return sum_primes",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "n = 500000\nsieve, PRIMES = [0]*(n//2+1), [0,2]\nfor i in range(3, n+1, 2):\n    if not sieve[i//2]:\n        PRIMES.append(i)\n        for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n\nDOMINANTS = []\nfor p in PRIMES:\n    if p >= len(PRIMES): break\n    DOMINANTS.append(PRIMES[p])\n\ndef solve(a,b):\n    sum = 0\n    for p in DOMINANTS:\n        if p >= a and p <= b:\n            sum += p\n    return sum\n\nprint(solve(400,500))",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    sum_dominants = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum_dominants += prime\n    return sum_dominants",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    count = 0\n    for i in range(len(DOMINANTS)):\n        if a <= DOMINANTS[i] <= b:\n            count += DOMINANTS[i]\n    return count",
+            "logp": null
+        },
+        {
+            "content": "    sum_of_dominant_primes = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum_of_dominant_primes += prime\n    return sum_of_dominant_primes",
+            "logp": null
+        },
+        {
+            "content": "    sum = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum += prime\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    sum_of_dominant_primes = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum_of_dominant_primes += prime\n    return sum_of_dominant_primes",
+            "logp": null
+        },
+        {
+            "content": "    sum_of_dominants = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum_of_dominants += prime\n    return sum_of_dominants",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    sum = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum += prime\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "n = 500000\nsieve, PRIMES = [0]*(n//2+1), [0,2]\nfor i in range(3, n+1, 2):\n    if not sieve[i//2]:\n        PRIMES.append(i)\n        for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n\nDOMINANTS = []\nfor p in PRIMES:\n    if p >= len(PRIMES): break\n    DOMINANTS.append(PRIMES[p])\n\ndef solve(a,b):\n    sum = 0\n    for p in DOMINANTS:\n        if a <= p <= b:\n            sum += p\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    sum_of_dominants = 0\n    \n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum_of_dominants += prime\n    \n    return sum_of_dominants",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    sum_dominant_primes = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum_dominant_primes += prime\n    return sum_dominant_primes",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "n = 500000\nsieve, PRIMES = [0]*(n//2+1), [0,2]\nfor i in range(3, n+1, 2):\n    if not sieve[i//2]:\n        PRIMES.append(i)\n        for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n\nDOMINANTS = []\nfor p in PRIMES:\n    if p >= len(PRIMES): break\n    DOMINANTS.append(PRIMES[p])\n\ndef solve(a,b):\n    return sum(p for p in DOMINANTS if a <= p <= b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    sum_dominants = 0\n    for num in DOMINANTS:\n        if num >= a and num <= b:\n            sum_dominants += num\n    return sum_dominants",
+            "logp": null
+        },
+        {
+            "content": "    sum_of_dominant_primes = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum_of_dominant_primes += prime\n    return sum_of_dominant_primes",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    n = 500000\n    sieve, PRIMES = [0] * (n // 2 + 1), [0, 2]\n    for i in range(3, n + 1, 2):\n        if not sieve[i // 2]:\n            PRIMES.append(i)\n            for j in range(i ** 2, n + 1, i * 2):\n                sieve[j // 2] = 1\n\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES):\n            break\n        DOMINANTS.append(PRIMES[p])\n\n    result = 0\n    for i in DOMINANTS:\n        if a <= i <= b:\n            result += i\n    return result",
+            "logp": null
+        },
+        {
+            "content": "n = b\nsieve, PRIMES = [0]*(n//2+1), [0,2]\nfor i in range(3, n+1, 2):\n    if not sieve[i//2]:\n        PRIMES.append(i)\n        for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n\nDOMINANTS = []\nfor p in PRIMES:\n    if p >= len(PRIMES): break\n    DOMINANTS.append(PRIMES[p])\n\ndef solve(a,b):\n    sum_dom = sum([x for x in DOMINANTS if a <= x <= b])\n    return sum_dom",
+            "logp": null
+        },
+        {
+            "content": "n = 500000\nsieve, PRIMES = [0]*(n//2+1), [0,2]\nfor i in range(3, n+1, 2):\n    if not sieve[i//2]:\n        PRIMES.append(i)\n        for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n\nDOMINANTS = []\nfor p in PRIMES:\n    if p >= len(PRIMES): break\n    DOMINANTS.append(PRIMES[p])\n\ndef solve(a,b):\n    sum_of_dominants = 0\n    for p in DOMINANTS:\n        if a <= p <= b:\n            sum_of_dominants += p\n    return sum_of_dominants",
+            "logp": null
+        },
+        {
+            "content": "n = 500000\nsieve, PRIMES = [0]*(n//2+1), [0,2]\nfor i in range(3, n+1, 2):\n    if not sieve[i//2]:\n        PRIMES.append(i)\n        for j in range(i**2, n+1, i*2): sieve[j//2] = 1\n\nDOMINANTS = []\nfor p in PRIMES:\n    if p >= len(PRIMES): break\n    DOMINANTS.append(PRIMES[p])\n\ndef solve(a,b):\n    sum_dominants = 0\n    for dominant in DOMINANTS:\n        if a <= dominant <= b:\n            sum_dominants += dominant\n    return sum_dominants",
+            "logp": null
+        },
+        {
+            "content": "    start_index = 0\n    end_index = 0\n    \n    # Find the index of the first prime number in the range (a, b)\n    for i, p in enumerate(DOMINANTS):\n        if p >= a:\n            start_index = i\n            break\n    \n    # Find the index of the last prime number in the range (a, b)\n    for i, p in enumerate(DOMINANTS):\n        if p > b:\n            end_index = i\n            break\n    \n    # Calculate the sum of dominant primes in the range (a, b)\n    sum_of_dominants = sum(DOMINANTS[start_index:end_index])\n    \n    return sum_of_dominants",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    # Find the index of the prime number closest to a\n    start_index = 0\n    for i in range(len(DOMINANTS)):\n        if DOMINANTS[i] >= a:\n            start_index = i\n            break\n\n    # Find the index of the prime number closest to b\n    end_index = 0\n    for i in range(len(DOMINANTS)):\n        if DOMINANTS[i] > b:\n            end_index = i - 1\n            break\n        elif DOMINANTS[i] == b:\n            end_index = i\n            break\n        elif i == len(DOMINANTS) - 1:\n            end_index = i\n\n    # Calculate the sum of dominant primes within the range\n    sum_of_dominants = sum(DOMINANTS[start_index:end_index + 1])\n\n    return sum_of_dominants",
+            "logp": null
+        },
+        {
+            "content": "    sum = 0\n    for prime in DOMINANTS:\n        if prime >= a and prime <= b:\n            sum += prime\n    return sum",
+            "logp": null
+        }
+    ]
+}

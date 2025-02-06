@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert zombie_shootout(7, 60, 10) == \"You shot 7 zombies before being eaten: overwhelmed.\"",
+        false
+    ],
+    "1": [
+        "assert zombie_shootout(10, 10, 8) == \"You shot all 8 zombies.\"",
+        false
+    ],
+    "2": [
+        "assert zombie_shootout(5, 10, 5) == \"You shot all 5 zombies.\"",
+        true
+    ],
+    "3": [
+        "assert zombie_shootout(7, 15, 10) == \"You shot 7 zombies before being eaten: ran out of ammo.\"",
+        false
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "0": [
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = [5]\n    powers_of_five = [5]\n    current_power = 1\n    \n    while len(chandos_numbers) < n:\n        current_power *= 5\n        powers_of_five.append(current_power)\n        \n        for i in range(len(powers_of_five)):\n            for j in range(i + 1, len(powers_of_five)):\n                chandos_number = powers_of_five[i] + powers_of_five[j]\n                \n                if chandos_number not in chandos_numbers:\n                    chandos_numbers.append(chandos_number)\n                    if len(chandos_numbers) == n:\n                        return chandos_number",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    def convertToBase5(n):\n        result = []\n        while n > 0:\n            result.append(n % 5)\n            n = n // 5\n        return result\n\n    base5 = convertToBase5(n-1)\n    chandos_number = 0\n    for i in range(len(base5)):\n        chandos_number += 5 ** (i+1) * base5[i]\n    return chandos_number",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    # base case: when n is 1, return 5\n    if n == 1:\n        return 5\n    \n    # start with i=2 as we already know the first Chando's number is 5\n    i = 2\n    # initialize the current number with 5\n    current_number = 5\n    \n    # loop until we reach the nth Chando's number\n    while i <= n:\n        # increment the current number by 5^i\n        current_number += 5**i\n        # increment i by 1\n        i += 1\n    \n    # return the nth Chando's number\n    return current_number",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    power = 1\n    while n > (2 ** power):\n        n -= 2 ** power\n        power += 1\n    return 5 ** power + (n - 1) * 5 ** (power - 1)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    count = 0\n    number = 0\n    power = 0\n    while count < n:\n        number += 5 ** power\n        power += 1\n        count += 1\n    return number",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    \n    powers_of_5 = [5]\n    curr_number = 5\n    \n    while len(powers_of_5) < n:\n        curr_number += 1\n        temp = curr_number\n        power_of_5 = []\n        \n        while temp > 0:\n            power_of_5.append(temp % 5)\n            temp //= 5\n        \n        if power_of_5.count(0) <= 1:\n            powers_of_5.append(curr_number)\n    \n    return powers_of_5[-1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    return int(bin(n)[3:].replace('1','5'), 5)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    return int(str(bin(n))[3:], 2) * 5 + 5",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    power = 0\n    chandos_numbers = [5] # starting with the first chandos number\n\n    while len(chandos_numbers) < n:\n        chandos_number = chandos_numbers[power] + chandos_numbers[power+1] # calculate next chandos number\n        chandos_numbers.append(chandos_number) # add it to the list\n        power += 1 # increment the power to calculate the next chandos number\n\n    return chandos_numbers[n-1] # return the nth chandos number",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = [5]  # starting with the first chando's number\n    power = 1  # starting power\n    while len(chandos_numbers) < n:\n        chandos_numbers += [5 ** i + 5 ** (i+power) for i in range(power)]\n        power += 1\n    return chandos_numbers[n-1]",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    else:\n        powers = [1]  # list to store the powers of 5\n        for i in range(1, n+1):\n            power = 5**i\n            if power > n:\n                break\n            powers.append(power)\n        result = sum(powers)\n        return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = [5]  # Start with the first Chando's number\n    power = 1  # Start with the first power of 5\n    \n    while len(chandos_numbers) < n:\n        current_number = 5**power  # Calculate the next Chando's number\n        for num in chandos_numbers:  # Check if the number can be formed by summing previous Chando's numbers\n            if current_number - num in chandos_numbers:\n                chandos_numbers.append(current_number)\n                break\n        power += 1\n    \n    return chandos_numbers[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = [5]\n    power = 1\n    while len(chandos_numbers) < n:\n        new_numbers = []\n        for number in chandos_numbers:\n            for i in range(1, power + 2):\n                new_number = number + (5 ** i)\n                if new_number not in chandos_numbers:\n                    new_numbers.append(new_number)\n        chandos_numbers += new_numbers\n        power += 1\n    return chandos_numbers[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    powers = [5 ** i for i in range(1, n + 1)]\n    chandos = [5]\n    for i in range(1, n):\n        for j in range(i):\n            chandos.append(chandos[i] + powers[j])\n    return chandos[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    powers = [5 ** i for i in range(1, n + 1)]\n    return sum(powers)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = [5]\n    current_number = 5\n    while len(chandos_numbers) < n:\n        current_number += 1\n        if is_chandos_number(current_number, chandos_numbers):\n            chandos_numbers.append(current_number)\n    return chandos_numbers[n-1]\n\n\ndef is_chandos_number(number, chandos_numbers):\n    for chandos_number in chandos_numbers:\n        if number - chandos_number in chandos_numbers:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = [5] # first chandos number is 5\n    while len(chandos_numbers) < n:\n        last_chandos_number = chandos_numbers[-1]\n        powers_of_5 = []\n        for i in range(1, int(last_chandos_number ** 0.5) + 1):\n            powers_of_5.append(5 ** i)\n        for i in range(len(powers_of_5)):\n            new_number = last_chandos_number + powers_of_5[i]\n            if new_number not in chandos_numbers:\n                chandos_numbers.append(new_number)\n    return chandos_numbers[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_nums = [5]  # initialize the list with the first chandos number\n    curr_num = 25  # initialize the current number with the second chandos number\n    \n    while len(chandos_nums) < n:  # loop until we have the nth chandos number\n        if is_chandos(curr_num):  # check if the current number is a chandos number\n            chandos_nums.append(curr_num)  # if so, append it to the list of chandos numbers\n        curr_num += 5  # increment the current number by 5\n    \n    return chandos_nums[-1]  # return the nth chandos number\n\n\ndef is_chandos(num):\n    powers = []  # list to store the powers of 5 that make up the chandos number\n    curr_power = 0  # initialize the current power with 0\n    curr_sum = 0  # initialize the current sum with 0\n    \n    while curr_sum < num:  # loop until the current sum is equal to or greater than the number\n        curr_sum += 5 ** curr_power  # increment the current sum by the current power of 5\n        powers.append(curr_power)  # append the current power to the list of powers\n        curr_power += 1  # increment the current power by 1\n    \n    return curr_sum == num  # return True if the current sum is equal to the number, False otherwise",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    powers = []\n    num = 5\n    while len(powers) < n:\n        powers.append(num)\n        i = 1\n        while True:\n            power = num**i\n            if power > num and power not in powers:\n                powers.append(power)\n            i += 1\n            if i > num:\n                break\n        num += 5\n    return powers[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    # Initialize the sequence with the first Chando's number\n    sequence = [5]\n\n    # Start from the second Chando's number\n    i = 2\n\n    # Continue adding Chando's numbers until we reach the desired length\n    while len(sequence) < n:\n        # Get the last Chando's number in the sequence\n        last_number = sequence[-1]\n        \n        # Iterate through all the powers of 5 up to n and check if the sum of the current number and any of the previous Chando's numbers is a new Chando's number\n        for power in range(1, i):\n            new_number = last_number + 5 ** power\n            \n            # If the sum is a new Chando's number, add it to the sequence and break the loop\n            if new_number not in sequence:\n                sequence.append(new_number)\n                break\n        \n        # Increment the index for the next Chando's number\n        i += 1\n    \n    # Return the nth Chando's number\n    return sequence[n - 1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    power = 0\n    result = 0\n    while n > 0:\n        power += 1\n        if n % 2 != 0:\n            result += 5 ** power\n        n //= 2\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    powers = []\n    power = 0\n    while n > 0:\n        powers.append(power)\n        power += 1\n        n -= 1\n        if n == 0:\n            break\n        for i in range(len(powers)-1, -1, -1):\n            if n == 0:\n                break\n            powers.append(powers[i])\n            n -= 1\n    return sum([5**p for p in powers])",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    elif n == 2:\n        return 25\n    else:\n        i = 2\n        count = 0\n        while count < n-2:\n            num = 5**i\n            for j in range(1, i):\n                if count == n-2:\n                    break\n                num += 5**j\n                count += 1\n            i += 1\n        return num",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    else:\n        count = 1\n        i = 1\n        while count < n:\n            num = pow(5,i)\n            count += i\n            i += 1\n        diff = count - n\n        num = pow(5,i-1)\n        while diff > 0:\n            rem = diff % 2\n            if rem == 1:\n                num = pow(5,i-1) + pow(5,i-2)\n            diff = diff // 2\n            i -= 1\n        return num\n",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def nth_chandos_number(n):\n    power = 1\n    result = 0\n\n    while n > 0:\n        if n % 2 == 1:\n            result += pow(5, power)\n        power += 1\n        n = n // 2\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    \n    numbers = [5]\n    power = 2\n    while len(numbers) < n:\n        current_number = 5 ** power\n        numbers.append(current_number)\n        \n        for i in range(len(numbers) - 2, -1, -1):\n            new_number = current_number + numbers[i]\n            numbers.append(new_number)\n        \n        power += 1\n    \n    return numbers[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    powers = []\n    num = n\n    while num > 0:\n        powers.append(num % 2)\n        num = num // 2\n    result = 0\n    for i in range(len(powers)):\n        if powers[i] == 1:\n            result += 5**(i+1)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    power = 0\n    result = 0\n    \n    while n > 0:\n        power += 1\n        temp = n % 2\n        if temp != 0:\n            result += 5 ** power\n        n = n // 2\n        \n    return result",
+            "logp": null
+        }
+    ]
+}

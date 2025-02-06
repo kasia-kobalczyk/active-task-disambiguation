@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert could_be(\"John Doe\", \"John Doe\") == True",
+        true
+    ],
+    "1": [
+        "assert could_be(\"Bob Marley\", \"Marley Bob\") == True",
+        true
+    ],
+    "2": [
+        "assert could_be(\"Alice Wonderland\", \"Alice W\") == True",
+        false
+    ],
+    "3": [
+        "assert could_be(\"Alice Wonderland\", \"Wonderland\") == True",
+        true
+    ]
+}

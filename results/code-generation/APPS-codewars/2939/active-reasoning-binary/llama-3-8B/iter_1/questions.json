@@ -1,0 +1,26 @@
+{
+    "0": [
+        "assert has_two_cube_sums(2) == False",
+        "assert has_two_cube_sums(100) == False",
+        "assert has_two_cube_sums(1) == False",
+        "assert has_two_cube_sums(1729) == True"
+    ],
+    "1": [
+        "assert has_two_cube_sums(42) == False",
+        "assert has_two_cube_sums(1225) == True",
+        "assert has_two_cube_sums(150) == False",
+        "assert has_two_cube_sums(1729) == True",
+        "assert has_two_cube_sums(1000) == False"
+    ],
+    "2": [
+        "assert has_two_cube_sums(0) == False",
+        "assert has_two_cube_sums(1) == False",
+        "assert has_two_cube_sums(153) == False",
+        "assert has_two_cube_sums(3) == False"
+    ],
+    "3": [
+        "assert has_two_cube_sums(1728) == False",
+        "assert has_two_cube_sums(4) == True",
+        "assert has_two_cube_sums(1) == False"
+    ]
+}

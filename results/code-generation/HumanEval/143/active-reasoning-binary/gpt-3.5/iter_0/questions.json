@@ -1,0 +1,44 @@
+{
+    "0": [
+        "assert words_in_sentence(\"Lorem ipsum dolor sit amet consectetur adipiscing elit\") == \"ipsum elit\"",
+        "assert words_in_sentence(\"The quick brown fox jumps over the lazy dog\") == \"The quick jumps the dog\"",
+        "assert words_in_sentence(\"Python is great\") == \"Python is\"",
+        "assert words_in_sentence(\"I am\") == \"\"",
+        "assert words_in_sentence(\"I love coding\") == \"I coding\"",
+        "assert words_in_sentence(\"Hello World\") == \"Hello\"",
+        "assert words_in_sentence(\"Hello World\") == \"Hello World\"",
+        "assert words_in_sentence(\"Lorem Ipsum is simply dummy text of the printing\") == \"Lorem is text of\"\n# Explanation: The word \"Lorem\" has length 5, which is a prime number. The word \"Ipsum\" has length 5, which is a prime number. The word \"is\" has length 2, which is a prime number. The word \"simply\" has length 6, which is not a prime number. The word \"dummy\" has length 5, which is a prime number. The word \"text\" has length 4, which is not a prime number. The word \"of\" has length 2, which is a prime number. The word \"the\" has length 3, which is a prime number. The word \"printing\" has length 8, which is not a prime number. Hence, the output is \"Lorem is text of\".",
+        "assert words_in_sentence(\"Python is a great programming language\") == \"is a\""
+    ],
+    "1": [
+        "assert words_in_sentence(\"Hello\") == \"\"",
+        "assert words_in_sentence(\"This is a test sentence\") == \"is a\"",
+        "assert words_in_sentence(\"The quick brown fox jumps over the lazy dog\") == \"\"",
+        "assert words_in_sentence(\"Hello world Python is fun\") == \"Hello Python is\"",
+        "assert words_in_sentence(\"Python is a great programming language\") == \"is a\"",
+        "assert words_in_sentence(\"a b c d e f g\") == \"\"",
+        "assert words_in_sentence(\"I love coding\") == \"I coding\"",
+        "assert words_in_sentence(\"The quick brown fox\") == \"The quick\"",
+        "assert words_in_sentence(\"Hello world\") == \"Hello\"",
+        "assert words_in_sentence(\"You are a great programmer\") == \"You are a\""
+    ],
+    "2": [
+        "assert words_in_sentence(\"\") == \"\"",
+        "assert words_in_sentence(\"Hello\") == \"Hello\"",
+        "assert words_in_sentence(\"This is a test sentence\") == \"is a\"",
+        "assert words_in_sentence(\"The quick brown fox jumps over the lazy dog\") == \"\"",
+        "assert words_in_sentence(\"I love coding\") == \"I coding\"",
+        "assert words_in_sentence(\"She is very smart and funny\") == \"She is and\"",
+        "assert words_in_sentence(\"The quick brown fox\") == \"The quick\"",
+        "assert words_in_sentence(\"Python is a great programming language\") == \"is a\"",
+        "assert words_in_sentence(\"Hello world\") == \"Hello\"",
+        "assert words_in_sentence(\"You are a great programmer\") == \"You are a\""
+    ],
+    "3": [
+        "assert words_in_sentence(\"I love coding\") == \"I love coding\"",
+        "assert words_in_sentence(\"Python is a powerful language\") == \"Python is a\"",
+        "assert words_in_sentence(\"The quick brown fox jumps over the lazy dog\") == \"The quick fox the dog\"",
+        "assert words_in_sentence(\"This sentence has words of different lengths\") == \"This has words lengths\"\n# Explanation: In the given sentence, \"This\", \"sentence\", \"has\", \"words\", \"of\", \"different\", and \"lengths\" are the words present. The lengths of \"This\", \"has\", \"words\", and \"lengths\" are prime numbers, so they should be included in the output string.",
+        "assert words_in_sentence(\"Hello world\") == \"Hello\""
+    ]
+}

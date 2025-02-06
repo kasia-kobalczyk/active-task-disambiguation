@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert bouncing_ball(4, 0.5) == 2",
+        "assert bouncing_ball(10, 0.9) == 21",
+        "assert bouncing_ball(100, 0.9) == 21",
+        "assert bouncing_ball(30, 0.3) == 3",
+        "assert bouncing_ball(100, 0.99) == 100",
+        "assert bouncing_ball(10, 0.1) == 20"
+    ],
+    "1": [
+        "assert bouncing_ball(100, 0.9) == 21",
+        "assert bouncing_ball(50, 0.2) == 7\n    ",
+        "assert bouncing_ball(100, 0.99) == 100\n    ",
+        "assert bouncing_ball(2, 0.9) == 20",
+        "assert bouncing_ball(10, 0.1) == 22",
+        "assert bouncing_ball(200, 0.25) == 5",
+        "assert bouncing_ball(50, 0.8) == 2",
+        "assert bouncing_ball(10, 0.1) == 22\n    "
+    ],
+    "2": [
+        "assert bouncing_ball(100, 0.99) == 100\n    ",
+        "assert bouncing_ball(50, 0.75) == 5\n    ",
+        "assert bouncing_ball(2, 0.9) == 20",
+        "assert bouncing_ball(10, 0.1) == 22",
+        "assert bouncing_ball(50, 0.8) == 4",
+        "assert bouncing_ball(10, 0.1) == 22\n    ",
+        "assert bouncing_ball(200, 0.25) == 7"
+    ],
+    "3": [
+        "assert bouncing_ball(100, 0.99) == 99",
+        "assert bouncing_ball(10, 0.1) == 21",
+        "assert bouncing_ball(10, 0.1) == 22",
+        "assert bouncing_ball(200, 0.25) == 5",
+        "assert bouncing_ball(5, 0.8) == 3",
+        "assert bouncing_ball(50, 0.5) == 5",
+        "assert bouncing_ball(50, 0.8) == 2"
+    ]
+}

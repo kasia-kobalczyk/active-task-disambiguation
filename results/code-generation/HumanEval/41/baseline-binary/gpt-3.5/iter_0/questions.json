@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert car_race_collision(2) == 1\n# Two cars are present in each direction. They collide when they reach the same position on the road.",
+        "assert car_race_collision(0) == 0",
+        "assert car_race_collision(1) == 0"
+    ],
+    "1": [
+        "assert car_race_collision(3) == 3",
+        "assert car_race_collision(5) == 10",
+        "assert car_race_collision(10) == 45",
+        "assert car_race_collision(1) == 0",
+        "assert car_race_collision(2) == 1",
+        "assert car_race_collision(8) == 28",
+        "assert car_race_collision(6) == 15",
+        "assert car_race_collision(4) == 6",
+        "assert car_race_collision(0) == 0",
+        "assert car_race_collision(9) == 36",
+        "assert car_race_collision(7) == 21"
+    ],
+    "2": [
+        "assert car_race_collision(5) == 10",
+        "assert car_race_collision(10) == 45",
+        "assert car_race_collision(1) == 0",
+        "assert car_race_collision(2) == 1",
+        "assert car_race_collision(8) == 28",
+        "assert car_race_collision(6) == 15",
+        "assert car_race_collision(4) == 6",
+        "assert car_race_collision(0) == 0",
+        "assert car_race_collision(9) == 36",
+        "assert car_race_collision(7) == 21"
+    ],
+    "3": [
+        "assert car_race_collision(10) == 45",
+        "assert car_race_collision(1) == 0",
+        "assert car_race_collision(2) == 1",
+        "assert car_race_collision(8) == 28",
+        "assert car_race_collision(6) == 15",
+        "assert car_race_collision(4) == 6",
+        "assert car_race_collision(0) == 0",
+        "assert car_race_collision(9) == 36",
+        "assert car_race_collision(7) == 21"
+    ]
+}

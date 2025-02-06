@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert count_upper(\"abcdefg\") == 0",
+        "assert count_upper(\"aEIoU\") == 0",
+        "assert count_upper(\"AbEcIdOfUg\") == 4",
+        "assert count_upper(\"AbEcIdO\") == 3",
+        "assert count_upper(\"AecIoU\") == 3",
+        "assert count_upper(\"AEIOUaeiou\") == 5",
+        "assert count_upper(\"Hello World\") == 1",
+        "assert count_upper(\"AEIOU\") == 5"
+    ],
+    "1": [
+        "assert count_upper(\"AEIOU\") == 3",
+        "assert count_upper(\"AbEcIdOfUg\") == 4",
+        "assert count_upper(\"hello world\") == 0",
+        "assert count_upper(\"hello World\") == 1",
+        "assert count_upper(\"AaEeIiOoUu\") == 5",
+        "assert count_upper(\"A1e2I3o4U5\") == 3",
+        "assert count_upper(\"abCDEfG\") == 2"
+    ],
+    "2": [
+        "assert count_upper(\"Uranus is a planet\") == 1",
+        "assert count_upper(\"AbEcIdO\") == 2",
+        "assert count_upper(\"abcdefghijk\") == 0",
+        "assert count_upper(\"AaEeIiOoUu\") == 5",
+        "assert count_upper(\"abcdeEfghI\") == 2",
+        "assert count_upper(\"AEaeIOou\") == 3",
+        "assert count_upper(\"Hello World\") == 1"
+    ],
+    "3": [
+        "assert count_upper(\"python programming\") == 0",
+        "assert count_upper(\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\") == 13",
+        "assert count_upper(\"ABCdefGHI\") == 3",
+        "assert count_upper(\"aeiOUB\") == 1",
+        "assert count_upper(\"UpperCASE\") == 2",
+        "assert count_upper(\"abcdefAEIOU\") == 2",
+        "assert count_upper(\"A quick Brown Fox\") == 1",
+        "assert count_upper(\"Hello World\") == 1"
+    ]
+}

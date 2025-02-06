@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert plane_seat(\"2B\") == \"Front-Left\"",
+        "assert plane_seat(\"25D\") == \"Middle-Middle\"",
+        "assert plane_seat(\"61Z\") == \"No Seat!!\""
+    ],
+    "1": [
+        "assert plane_seat(\"61Z\") == \"No Seat!!\"",
+        "assert plane_seat(\"21D\") == \"Middle-Middle\""
+    ],
+    "2": [
+        "assert plane_seat(\"35E\") == \"Middle-Middle\"",
+        "assert plane_seat(\"58K\") == \"Back-Right\""
+    ],
+    "3": [
+        "assert plane_seat(\"25G\") == \"Middle-Right\"",
+        "assert plane_seat(\"45H\") == \"Back-Right\""
+    ]
+}

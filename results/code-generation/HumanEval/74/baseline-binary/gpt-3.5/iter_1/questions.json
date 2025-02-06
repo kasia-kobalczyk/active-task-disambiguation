@@ -1,0 +1,21 @@
+{
+    "0": [
+        "assert total_match(['abc', 'def'], ['ab', 'cde']) == ['abc', 'def']",
+        "assert total_match(['ab', 'cd', 'ef'], ['abc', 'def', 'ghi']) == ['ab', 'cd', 'ef']",
+        "assert total_match(['abc', 'def', 'ghi'], ['ab', 'cd', 'ef']) == ['ab', 'cd', 'ef']"
+    ],
+    "1": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"aa\", \"bb\", \"cc\"]) == [\"a\", \"bb\", \"ccc\"]",
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"aa\", \"b\", \"ccc\"]) == [\"aa\", \"b\", \"ccc\"]\n# Since 7 == 7, the first list is returned",
+        "assert total_match([\"abc\", \"def\"], [\"ab\", \"cdef\"]) == [\"ab\", \"cdef\"]"
+    ],
+    "2": [
+        "assert total_match([\"hello\", \"world\"], [\"hi\", \"there\"]) == [\"hi\", \"there\"]",
+        "assert total_match([\"cat\", \"dog\", \"elephant\"], [\"bird\", \"lion\", \"tiger\"]) == [\"bird\", \"lion\", \"tiger\"]"
+    ],
+    "3": [
+        "assert total_match([\"apple\", \"banana\"], [\"a\", \"b\", \"c\"]) == [\"a\", \"b\", \"c\"]",
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"aa\", \"bb\", \"cc\", \"ddd\"]) == [\"a\", \"bb\", \"ccc\"]",
+        "assert total_match([\"python\", \"programming\"], [\"java\", \"coding\"]) == [\"python\", \"programming\"]"
+    ]
+}

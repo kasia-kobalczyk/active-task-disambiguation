@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\""
+    ],
+    "1": [
+        "assert sort_string(\"abcde\", \"edbca\") == \"edbca\"",
+        "assert sort_string(\"hello\", \"hle\") == \"hlelo\"",
+        "assert sort_string(\"abcdefg\", \"bdf\") == \"bbdfacge\""
+    ],
+    "2": [
+        "assert sort_string(\"abcdefg\", \"bac\") == \"abcdfeg\"",
+        "assert sort_string(\"xyz\", \"abc\") == \"xyz\""
+    ],
+    "3": [
+        "assert sort_string(\"xyz\", \"abc\") == \"xyz\""
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert compare_versions(\"10.10\", \"10.9\") == \"GT\"",
+        "assert compare_versions(\"10.4\", \"11\") == \"LT\"",
+        "assert compare_versions(\"10.4\", \"10.10\") == \"LT\"",
+        "assert compare_versions(\"11\", \"11\") == \"EQ\"",
+        "assert compare_versions(\"10\", \"11\") == \"LT\"",
+        "assert compare_versions(\"10.4.6\", \"10.4\") == \"GT\"",
+        "assert compare_versions(\"10.4\", \"10.4.6\") == \"LT\""
+    ],
+    "1": [
+        "assert compare_versions(\"10.0\", \"10\") == 'EQ'",
+        "assert compare_versions(\"10.0.0.1\", \"10.0.0.2\") == False",
+        "assert compare_versions(\"10.1.1.1\", \"10.1.1\") == True",
+        "assert compare_versions(\"12\", \"11.12.13\") == True",
+        "assert compare_versions(\"11.1.2.3\", \"11.1.2\") == 'GT'",
+        "assert compare_versions(\"10.10.0\", \"10.10\") == True",
+        "assert compare_versions(\"10.2.3\", \"10.2.30\") == 'LT'",
+        "assert compare_versions(\"10.0.0.0\", \"10.0.0\") == 'EQ'"
+    ],
+    "2": [
+        "assert compare_versions(\"10.100.1\", \"10.99.100\") == 'GT'",
+        "assert compare_versions(\"10.0.0.1\", \"10.0.0.2\") == False",
+        "assert compare_versions(\"10.1.1.1\", \"10.1.1\") == True",
+        "assert compare_versions(\"12\", \"11.12.13\") == True",
+        "assert compare_versions(\"10.10.0\", \"10.10\") == True",
+        "assert compare_versions(\"10.10\", \"10.10.0\") == 'EQ'",
+        "assert compare_versions(\"10.0.0.1\", \"10\") == 'GT'",
+        "assert compare_versions(\"11.1.1\", \"10.10.10\") == 'GT'"
+    ],
+    "3": [
+        "assert compare_versions(\"10.0.0.1\", \"10.0.0.2\") == False",
+        "assert compare_versions(\"10.1.1.1\", \"10.1.1\") == True",
+        "assert compare_versions(\"12\", \"11.12.13\") == True",
+        "assert compare_versions(\"10.10.0\", \"10.10\") == True",
+        "assert compare_versions(\"10.10\", \"10.10.0\") == 'EQ'",
+        "assert compare_versions(\"10.0.0.1\", \"10\") == 'GT'",
+        "assert compare_versions(\"11.1.1\", \"10.10.10\") == 'GT'"
+    ]
+}

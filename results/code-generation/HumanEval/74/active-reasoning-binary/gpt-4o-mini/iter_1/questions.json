@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert total_match([\"hello\", \"world\"], [\"hi\", \"there\"]) == [\"hello\", \"world\"]",
+        "assert total_match(['one', 'two'], ['three']) == ['one', 'two']",
+        "assert total_match([\"abc\", \"def\"], [\"gh\", \"ij\", \"kl\"]) == [\"gh\", \"ij\", \"kl\"]",
+        "assert total_match(['same', 'length'], ['same', 'length']) == ['same', 'length']",
+        "assert total_match(['a', 'bb', 'ccc'], ['dd', 'eee']) == ['a', 'bb', 'ccc']",
+        "assert total_match(['hello', 'world'], ['python', 'is', 'fun']) == ['python', 'is', 'fun']",
+        "assert total_match([\"a\", \"b\", \"c\"], [\"one\", \"two\", \"three\"]) == [\"a\", \"b\", \"c\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"kiwi\"]) == [\"kiwi\"]"
+    ],
+    "1": [
+        "assert total_match(['hello', 'world'], ['hi', 'there', 'friend']) == ['hello', 'world']",
+        "assert total_match(['hello', 'world'], ['python', 'rocks']) == ['hello', 'world']",
+        "assert total_match(['apple', 'banana'], ['kiwi', 'pear', 'grape']) == ['apple', 'banana']",
+        "assert total_match(['cat', 'dog'], ['elephant', 'giraffe']) == ['cat', 'dog']",
+        "assert total_match(['apple', 'banana'], ['pear', 'kiwi']) == ['pear', 'kiwi']",
+        "assert total_match(['short', 'tiny'], ['longer', 'strings', 'here']) == ['short', 'tiny']",
+        "assert total_match(['a', 'bb', 'ccc'], ['x', 'yy']) == ['x', 'yy']",
+        "assert total_match(['equal', 'lengths'], ['just', 'one', 'more']) == ['equal', 'lengths']"
+    ],
+    "2": [
+        "assert total_match(['one', 'two', 'three'], ['four', 'five']) == ['one', 'two', 'three']",
+        "assert total_match(['apple', 'banana'], ['pear', 'kiwi', 'grapefruit']) == ['apple', 'banana']",
+        "assert total_match(['a', 'b', 'c'], ['x', 'y']) == ['a', 'b', 'c']",
+        "assert total_match(['cat'], ['dog', 'elephant']) == ['cat']",
+        "assert total_match(['short'], ['longer', 'longest']) == ['short']",
+        "assert total_match(['one', 'two', 'three'], ['four', 'five']) == ['four', 'five']",
+        "assert total_match(['abc', 'def', 'ghi'], ['jkl', 'mno', 'pq']) == ['abc', 'def', 'ghi']",
+        "assert total_match(['apple', 'banana'], ['kiwi', 'pear']) == ['kiwi', 'pear']"
+    ],
+    "3": [
+        "assert total_match(['apple', 'banana'], ['pear', 'kiwi', 'grapefruit']) == ['apple', 'banana']",
+        "assert total_match(['a', 'b', 'c'], ['x', 'y']) == ['a', 'b', 'c']",
+        "assert total_match(['cat'], ['dog', 'elephant']) == ['cat']",
+        "assert total_match(['short'], ['longer', 'longest']) == ['short']",
+        "assert total_match(['one', 'two', 'three'], ['four', 'five']) == ['four', 'five']",
+        "assert total_match(['abc', 'def', 'ghi'], ['jkl', 'mno', 'pq']) == ['abc', 'def', 'ghi']",
+        "assert total_match(['apple', 'banana'], ['kiwi', 'pear']) == ['kiwi', 'pear']"
+    ]
+}

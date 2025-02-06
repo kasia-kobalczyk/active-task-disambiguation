@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert solve(5, 15) == 17",
+        "assert solve(6,20) == 28",
+        "assert solve(1,50) == 28 + 17",
+        "assert solve(0,500000) == sum(DOMINANTS)",
+        "assert solve(6, 20) == 28",
+        "assert solve(0, 20) == 36",
+        "assert solve(0, 500000) == 461998036",
+        "assert solve(50,100) == 67 + 71 + 73 + 79 + 83 + 89 + 97"
+    ],
+    "1": [
+        "assert solve(499000,500000) == 461079998",
+        "assert solve(6,20) == 28",
+        "assert solve(20,50) == 197",
+        "assert solve(0,500000) == 262953937",
+        "assert solve(6, 20) == 28",
+        "assert solve(0, 20) == 36",
+        "assert solve(10, 20) == 28"
+    ],
+    "2": [
+        "assert solve(6,20) == 28",
+        "assert solve(20,50) == 197",
+        "assert solve(0,500000) == 262953937",
+        "assert solve(6, 20) == 28",
+        "assert solve(0, 20) == 36",
+        "assert solve(10, 20) == 28"
+    ],
+    "3": [
+        "assert solve(100,200) == 761",
+        "assert solve(11,20) == 28",
+        "assert solve(20,50) == 58",
+        "assert solve(0,20) == 36",
+        "assert solve(10,30) == 37",
+        "assert solve(10,30) == 28",
+        "assert solve(500,550) == 0",
+        "assert solve(40,80) == 197"
+    ]
+}

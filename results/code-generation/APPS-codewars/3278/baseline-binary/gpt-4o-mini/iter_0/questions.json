@@ -1,0 +1,17 @@
+{
+    "0": [
+        "assert string_expansion('2x3y2z') == 'xxyyyzz'",
+        "assert string_expansion('3a4B2d') == 'aaabbbbdd'"
+    ],
+    "1": [
+        "assert string_expansion('2p1q4r') == 'ppqrrrr'",
+        "assert string_expansion('4A2b3C') == 'AAAABbbCCC'"
+    ],
+    "2": [
+        "assert string_expansion('1x2y3Z') == 'xxyyyZZZ'",
+        "assert string_expansion('4A3b2C') == 'AAAABbbCC'"
+    ],
+    "3": [
+        "assert string_expansion('4A3b2C') == 'AAAABbbCC'"
+    ]
+}

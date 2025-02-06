@@ -1,0 +1,34 @@
+{
+    "0": [
+        "assert is_isogram('Dermatoglyphics') == True, f\"Expected is_isogram('Dermatoglyphics') to return True, but got {is_isogram('Dermatoglyphics')}\"",
+        "assert is_isogram('abcdefg') == True, f\"Expected is_isogram('abcdefg') to return True, but got {is_isogram('abcdefg')}\"",
+        "assert is_isogram('isogram') == False, f\"Expected is_isogram('isogram') to return False, but got {is_isogram('isogram')}\"",
+        "assert is_isogram('subdermatoglyphic') == True, f\"Expected is_isogram('subdermatoglyphic') to return True, but got {is_isogram('subdermatoglyphic')}\""
+    ],
+    "1": [
+        "assert is_isogram('hello') == False",
+        "assert is_isogram('All isograms are isograms') == False",
+        "assert is_isogram('') == False",
+        "assert is_isogram('The eyes') == True, f\"Expected is_isogram('The eyes') to return True, but got {is_isogram('The eyes')}\"",
+        "assert is_isogram('hello') == False, f\"Expected is_isogram('hello') to return False, but got {is_isogram('hello')}\"",
+        "assert is_isogram('Abba') == False, f\"Expected is_isogram('Abba') to return False, but got {is_isogram('Abba')}\"",
+        "assert is_isogram('Aisogram') == True"
+    ],
+    "2": [
+        "assert is_isogram('hello') == False",
+        "assert is_isogram('ABA') == False",
+        "assert is_isogram('') == False",
+        "assert is_isogram('The eyes') == True, f\"Expected is_isogram('The eyes') to return True, but got {is_isogram('The eyes')}\"",
+        "assert is_isogram('A' * 26) == True",
+        "assert is_isogram('hello') == False, f\"Expected is_isogram('hello') to return False, but got {is_isogram('hello')}\""
+    ],
+    "3": [
+        "assert is_isogram('Hello World') == False, f\"Expected is_isogram('Hello World') to return False, but got {is_isogram('Hello World')}\"",
+        "assert is_isogram('AbC') == True, f\"Expected is_isogram('AbC') to return True, but got {is_isogram('AbC')}\"",
+        "assert is_isogram('All isograms are isograms') == False",
+        "assert is_isogram('abc') == True, f\"Expected is_isogram('abc') to return True, but got {is_isogram('abc')}\"",
+        "assert is_isogram('') == False",
+        "assert is_isogram('abcabc') == False, f\"Expected is_isogram('abcabc') to return False, but got {is_isogram('abcabc')}\"",
+        "assert is_isogram('Aisogram') == True"
+    ]
+}

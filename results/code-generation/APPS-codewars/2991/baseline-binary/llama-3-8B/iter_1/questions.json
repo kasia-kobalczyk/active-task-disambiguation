@@ -1,0 +1,17 @@
+{
+    "0": [],
+    "1": [
+        "assert not_so_random(0, 1) == \"White\"",
+        "assert not_so_random(1, 0) == \"Black\"",
+        "assert not_so_random(1, 1) == \"Unsure\""
+    ],
+    "2": [
+        "assert not_so_random(1, 0) == \"Black\"",
+        "assert not_so_random(1, 1) == \"Unsure\""
+    ],
+    "3": [
+        "assert not_so_random(1, 1) == \"Black\"",
+        "assert not_so_random(5, 5) == \"White\"",
+        "assert not_so_random(2, 2) == \"White\""
+    ]
+}

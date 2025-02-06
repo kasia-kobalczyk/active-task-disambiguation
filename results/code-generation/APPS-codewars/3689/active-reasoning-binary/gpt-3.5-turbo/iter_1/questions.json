@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert how_many_pizzas(12) == \"pizzas: 2, slices: 2\"",
+        "assert how_many_pizzas(0) == \"pizzas: 0, slices: 0\"",
+        "assert how_many_pizzas(6) == \"pizzas: 0, slices: 4\"",
+        "assert how_many_pizzas(16) == \"pizzas: 4, slices: 0\"",
+        "assert how_many_pizzas(8) == \"pizzas: 1, slices: 0\""
+    ],
+    "1": [
+        "assert how_many_pizzas(12) == \"pizzas: 2, slices: 2\"",
+        "assert how_many_pizzas(0) == \"pizzas: 0, slices: 0\"",
+        "assert how_many_pizzas(0) == \"pizzas: 0, slices: 0\"\n# we cannot fit any whole pizzas of size 8 inches into a 0-inch pizza, and there are no extra slices.",
+        "assert how_many_pizzas(16) == \"pizzas: 4, slices: 0\"",
+        "assert how_many_pizzas(6) == \"pizzas: 0, slices: 4\""
+    ],
+    "2": [
+        "assert how_many_pizzas(10) == \"pizzas: 1, slices: 2\"",
+        "assert how_many_pizzas(15) == \"pizzas: 1, slices: 7\"",
+        "assert how_many_pizzas(4) == \"pizzas: 0, slices: 2\"",
+        "assert how_many_pizzas(10) == \"pizzas: 1, slices: 4\"",
+        "assert how_many_pizzas(16) == \"pizzas: 4, slices: 0\"",
+        "assert how_many_pizzas(7) == \"pizzas: 0, slices: 3\"",
+        "assert how_many_pizzas(4) == \"pizzas: 0, slices: 1\"",
+        "assert how_many_pizzas(20) == \"pizzas: 2, slices: 0\"",
+        "assert how_many_pizzas(20) == \"pizzas: 5, slices: 0\"",
+        "assert how_many_pizzas(24) == \"pizzas: 3, slices: 0\""
+    ],
+    "3": [
+        "assert how_many_pizzas(15) == \"pizzas: 1, slices: 7\"",
+        "assert how_many_pizzas(4) == \"pizzas: 0, slices: 2\"",
+        "assert how_many_pizzas(10) == \"pizzas: 1, slices: 4\"",
+        "assert how_many_pizzas(16) == \"pizzas: 4, slices: 0\"",
+        "assert how_many_pizzas(7) == \"pizzas: 0, slices: 3\"",
+        "assert how_many_pizzas(4) == \"pizzas: 0, slices: 1\"",
+        "assert how_many_pizzas(20) == \"pizzas: 2, slices: 0\"",
+        "assert how_many_pizzas(20) == \"pizzas: 5, slices: 0\"",
+        "assert how_many_pizzas(24) == \"pizzas: 3, slices: 0\""
+    ]
+}

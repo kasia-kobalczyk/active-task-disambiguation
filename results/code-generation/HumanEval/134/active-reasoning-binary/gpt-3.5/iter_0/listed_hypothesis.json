@@ -1,0 +1,202 @@
+{
+    "0": [
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if not last_char.isalpha():\n        return False\n    words = txt.split()\n    last_word = words[-1]\n    if last_word[-1] == last_char:\n        return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and (len(txt) == 1 or txt[-2] == ' '):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and (len(txt.split()) == 1 or txt.split()[-1] == last_char):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    # Split the string by space to get a list of words\n    words = txt.split()\n\n    # Get the last word from the list of words\n    last_word = words[-1]\n\n    # Get the last character from the last word\n    last_char = last_word[-1]\n\n    # Check if the last character is an alphabetical character and is not a part of a word\n    if last_char.isalpha() and not last_char.isalnum():\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and last_char != ' ':\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n    '''\n    if len(txt) < 1:\n        return False\n    else:\n        last_char = txt[-1]\n        if last_char.isalpha() and (txt[-2] == \" \" or len(txt) == 1):\n            return True\n        else:\n            return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if not txt or not txt[-1].isalpha():\n        return False\n    \n    words = txt.split()\n    last_word = words[-1]\n    if len(last_word) == 1:\n        return True\n    \n    return not last_word[:-1].isalpha()",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    words = txt.split()\n    last_word = words[-1]\n    last_char = last_word[-1]\n    if last_char.isalpha() and len(last_word) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha():\n        return not txt[-2].isalpha() and txt[-2] != ' '\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and (len(txt) == 1 or txt[-2] == \" \"):\n        return True\n    else:\n        return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if not last_char.isalpha():\n        return False\n    words = txt.split()\n    last_word = words[-1]\n    if last_word[-1] == last_char:\n        return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and (len(txt) == 1 or txt[-2] == ' '):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and (len(txt.split()) == 1 or txt.split()[-1] == last_char):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    # Split the string by space to get a list of words\n    words = txt.split()\n\n    # Get the last word from the list of words\n    last_word = words[-1]\n\n    # Get the last character of the last word\n    last_char = last_word[-1]\n\n    # Check if the last character is an alphabetical character and is not a part of a word\n    if last_char.isalpha() and not last_char.isalnum():\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n    '''\n    if len(txt) < 1:\n        return False\n    else:\n        last_char = txt[-1]\n        if last_char.isalpha() and (txt[-2] == \" \" or len(txt) == 1):\n            return True\n        else:\n            return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if not txt or not txt[-1].isalpha():\n        return False\n    \n    words = txt.split()\n    last_word = words[-1]\n    if len(last_word) == 1:\n        return True\n    \n    return not last_word[:-1].isalpha()",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    words = txt.split()\n    last_word = words[-1]\n    last_char = last_word[-1]\n    if last_char.isalpha() and len(last_word) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha():\n        return not txt[-2].isalpha() and txt[-2] != ' '\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and (len(txt) == 1 or txt[-2] == \" \"):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    return txt[-1].isalpha() and (not txt[-1].isalnum() or txt[-2] == ' ')",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha():\n        if len(txt) == 1:\n            return True\n        else:\n            second_last_char = txt[-2]\n            if second_last_char == ' ':\n                return True\n            else:\n                return False\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha():\n        words = txt.split()\n        if last_char not in words[-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    # Split the string into words\n    words = txt.split()\n    \n    # Get the last word\n    last_word = words[-1] if words else ''\n    \n    # Check if the last character of the last word is an alphabetical character\n    last_char = last_word[-1] if last_word else ''\n    return last_char.isalpha() and not last_char.isalnum()",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    words = txt.split()\n    last_word = words[-1]\n    last_char = last_word[-1]\n\n    if last_char.isalpha() and len(last_word) == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    return txt[-1].isalpha() and txt[-1] not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha():\n        if len(txt.split()[-1]) == 1:\n            return True\n        else:\n            return False\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and (len(txt) == 1 or txt[-2] == ' '):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    # Get the last character of the string\n    last_char = txt[-1]\n    \n    # Check if the last character is alphabetical and not a part of a word\n    if last_char.isalpha() and txt.strip().split(\" \")[-1] == last_char:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and not txt[-2:].isalpha():\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and txt[-2] == ' ':\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if not txt:\n        return False\n    last_char = txt[-1]\n    if last_char.isalpha():\n        words = txt.split()\n        if words[-1][-1] == last_char:\n            return False\n        else:\n            return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    '''\n    This function takes a string as input and returns True if the last character of the string is an alphabetical character and is not a part of a word (i.e., it is not preceded by a space), and False otherwise.\n    '''\n    last_char = txt[-1]\n    if last_char.isalpha() and (len(txt) == 1 or not txt[-2].isalpha()):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n    '''\n    last_char = txt[-1]\n    if not last_char.isalpha():\n        return False\n    \n    words = txt.split()\n    last_word = words[-1]\n    if last_char in last_word:\n        return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    words = txt.split()\n    last_word = words[-1]\n    last_char = last_word[-1]\n    return last_char.isalpha() and not last_word[:-1].isalpha()",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    last_char = txt[-1]\n    if last_char.isalpha() and (not txt[:-1].split()[-1].isalpha()):\n        return True\n    else:\n        return False",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if len(txt) == 0:  # if string is empty, return False\n        return False\n    last_char = txt[-1]  # get the last character of the string\n    if not last_char.isalpha():  # if last character is not alphabetical, return False\n        return False\n    if len(txt) == 1:  # if string has only one character, return True\n        return True\n    if txt[-2].isspace() or txt[-2] == \".\":  # if character before the last character is a space or a period, return True\n        return True\n    return False  # otherwise, return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if txt == \"\":\n        return False\n    \n    last_char = txt[-1]\n    if last_char.isalpha():\n        if len(txt) > 1:\n            if txt[-2].isalpha():\n                return False\n        return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    # Check if the given string is not empty\n    if len(txt) > 0:\n        # Get the last character of the string\n        last_char = txt[-1]\n        # Check if the last character is an alphabetical character and not a part of a word\n        if last_char.isalpha() and (len(txt) == 1 or txt[-2].isspace()):\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if txt == \"\":\n        return False\n    last_char = txt[-1]\n    if not last_char.isalpha():\n        return False\n    if len(txt) > 1 and txt[-2].isalpha():\n        return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if len(txt) == 0:\n        return False\n    last_char = txt[-1]\n    if last_char.isalpha():\n        return not txt[:-1].split()[-1].isalpha()\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if not txt:\n        return False\n    last_char = txt[-1]\n    if last_char.isalpha():\n        if len(txt) == 1 or txt[-2] == ' ':\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if len(txt) == 0:\n        return False\n    \n    last_char = txt[-1]\n    if last_char.isalpha():\n        if len(txt.split()[-1]) == 1:\n            return True\n        else:\n            return False\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if len(txt) == 0:\n        return False\n    last_char = txt[-1]\n    if not last_char.isalpha():\n        return False\n    if len(txt) > 1 and txt[-2].isalpha():\n        return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if not txt:\n        return False\n    last_char = txt[-1]\n    if last_char.isalpha():\n        if len(txt) > 1 and txt[-2].isalpha():\n            return False\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if len(txt) == 0:\n        return False\n    elif len(txt) == 1:\n        if txt.isalpha():\n            return True\n        else:\n            return False\n    else:\n        last_char = txt[-1]\n        if last_char.isalpha() and not txt[-2].isalpha() and txt[-2] != ' ':\n            return True\n        else:\n            return False",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if len(txt) == 0:\n        return False\n    last_char = txt[-1]\n    if not last_char.isalpha():\n        return False\n    if len(txt) > 1 and txt[-2].isalpha():\n        return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if len(txt) == 0:\n        return False\n    elif len(txt.split()[-1]) > 1:\n        return txt.split()[-1][-1].isalpha() and not txt.split()[-1][-2].isalpha()\n    else:\n        return txt[-1].isalpha()",
+            "logp": null
+        },
+        {
+            "content": "def check_if_last_char_is_a_letter(txt):\n    if txt == \"\":\n        return False\n\n    last_char = txt[-1]\n    if last_char.isalpha():\n        words = txt.split(\" \")\n        last_word = words[-1]\n        if last_char not in last_word:\n            return True\n\n    return False",
+            "logp": null
+        }
+    ]
+}

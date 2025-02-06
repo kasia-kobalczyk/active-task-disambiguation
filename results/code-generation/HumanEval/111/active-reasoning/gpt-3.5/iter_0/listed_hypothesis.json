@@ -1,0 +1,186 @@
+{
+    "0": [
+        {
+            "content": "def histogram(test):\n    count = {}\n    for letter in test:\n        count[letter] = count.get(letter, 0) + 1\n    max_count = max(count.values())\n    result = {letter: count[letter] for letter in count if count[letter] == max_count}\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    letter_counts = {}\n    max_count = 0\n    \n    # Count occurrences of each letter\n    for letter in test.split():\n        if letter in letter_counts:\n            letter_counts[letter] += 1\n        else:\n            letter_counts[letter] = 1\n        \n        # Update max_count if necessary\n        if letter_counts[letter] > max_count:\n            max_count = letter_counts[letter]\n    \n    # Find letters with max_count occurrences\n    max_letters = []\n    for letter, count in letter_counts.items():\n        if count == max_count:\n            max_letters.append(letter)\n    \n    # Create dictionary of max_letters and max_count\n    result = {}\n    for letter in max_letters:\n        result[letter] = max_count\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    # initialize an empty dictionary to store letter counts\n    letter_counts = {}\n    \n    # loop through each letter in the string\n    for letter in test:\n        # increment the count of the current letter in the dictionary\n        letter_counts[letter] = letter_counts.get(letter, 0) + 1\n    \n    # find the maximum count of any letter\n    max_count = max(letter_counts.values())\n    \n    # initialize an empty list to store letters with the maximum count\n    max_letters = []\n    \n    # loop through each letter and count in the dictionary\n    for letter, count in letter_counts.items():\n        # if the count is equal to the maximum count, add the letter to the list\n        if count == max_count:\n            max_letters.append(letter)\n    \n    # return a dictionary containing the letters with the maximum count and their corresponding count\n    return {letter: max_count for letter in max_letters}",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    # Create an empty dictionary\n    letter_count = {}\n    \n    # Convert the string to a list of lowercase letters\n    letters = test.lower().split()\n    \n    # Loop through each letter in the list\n    for letter in letters:\n        # Check if the letter is already in the dictionary\n        if letter in letter_count:\n            # If it is, increment the count by 1\n            letter_count[letter] += 1\n        else:\n            # If it is not, add it to the dictionary with a count of 1\n            letter_count[letter] = 1\n    \n    # Find the maximum count\n    max_count = max(letter_count.values())\n    \n    # Create an empty list to store the letters with the maximum count\n    max_letters = []\n    \n    # Loop through each letter in the dictionary\n    for letter, count in letter_count.items():\n        # Check if the count is equal to the maximum count\n        if count == max_count:\n            # If it is, append the letter to the list\n            max_letters.append(letter)\n    \n    # Create a dictionary with the maximum letters and their count\n    max_letters_count = {letter: max_count for letter in max_letters}\n    \n    # Return the dictionary\n    return max_letters_count",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    hist = {}\n    for letter in test.split():\n        if letter in hist:\n            hist[letter] += 1\n        else:\n            hist[letter] = 1\n    \n    max_count = max(hist.values())\n    max_letters = [letter for letter, count in hist.items() if count == max_count]\n    \n    return {letter: count for letter, count in hist.items() if letter in max_letters}",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \"\"\"\n    letters = test.split()\n    letter_count = {}\n    max_count = 0\n    \n    # count the occurrence of each letter\n    for letter in letters:\n        if letter in letter_count:\n            letter_count[letter] += 1\n        else:\n            letter_count[letter] = 1\n            \n        # update max_count if necessary\n        if letter_count[letter] > max_count:\n            max_count = letter_count[letter]\n    \n    # find letters with max_count\n    result = {}\n    for letter in letter_count:\n        if letter_count[letter] == max_count:\n            result[letter] = max_count\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    counts = {}\n    for letter in test:\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n    \n    max_count = max(counts.values())\n    max_letters = []\n    for letter, count in counts.items():\n        if count == max_count:\n            max_letters.append(letter)\n    \n    result = {}\n    for letter in max_letters:\n        result[letter] = max_count\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    # Create an empty dictionary to store the counts of each letter\n    count_dict = {}\n    \n    # Split the input string into individual letters\n    letters = test.split()\n    \n    # Iterate over each letter and update the count in the dictionary\n    for letter in letters:\n        count_dict[letter] = count_dict.get(letter, 0) + 1\n    \n    # Find the maximum count in the dictionary\n    max_count = max(count_dict.values())\n    \n    # Create a list to store the letters with the maximum count\n    result = []\n    \n    # Iterate over each letter in the dictionary\n    for letter, count in count_dict.items():\n        # If the count is equal to the maximum count, add the letter to the result list\n        if count == max_count:\n            result.append(letter)\n    \n    # Create a dictionary to store the result\n    result_dict = {}\n    # Add the letters with the maximum count and their corresponding count to the result dictionary\n    for letter in result:\n        result_dict[letter] = max_count\n    \n    # Return the result dictionary\n    return result_dict",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \"\"\"\n    \n    # Create a dictionary to store the count of each letter\n    count_dict = {}\n    \n    # Split the input string into a list of lowercase letters\n    letters = test.lower().split()\n    \n    # Iterate over each letter\n    for letter in letters:\n        # Check if the letter already exists in the dictionary\n        if letter in count_dict:\n            # Increment the count of the letter\n            count_dict[letter] += 1\n        else:\n            # Initialize the count of the letter to 1\n            count_dict[letter] = 1\n    \n    # Find the maximum count of any letter\n    max_count = max(count_dict.values())\n    \n    # Create a new dictionary to store the letters with the maximum count\n    result_dict = {}\n    \n    # Iterate over each letter in the count dictionary\n    for letter, count in count_dict.items():\n        # If the count of the letter is equal to the maximum count, add it to the result dictionary\n        if count == max_count:\n            result_dict[letter] = count\n    \n    # Return the result dictionary\n    return result_dict",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    letters = test.split()\n    count_dict = {}\n    max_count = 0\n    for letter in letters:\n        if letter in count_dict:\n            count_dict[letter] += 1\n        else:\n            count_dict[letter] = 1\n        if count_dict[letter] > max_count:\n            max_count = count_dict[letter]\n    result = {}\n    for letter, count in count_dict.items():\n        if count == max_count:\n            result[letter] = count\n    return result",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def histogram(test):\n    # Split the string into a list of words\n    words = test.split()\n\n    # Create an empty dictionary to store the counts\n    counts = {}\n\n    # Loop through each word in the list\n    for word in words:\n        # If the word is not already in the dictionary, add it with a count of 1\n        if word not in counts:\n            counts[word] = 1\n        # If the word is already in the dictionary, increment its count by 1\n        else:\n            counts[word] += 1\n\n    # Find the maximum count\n    max_count = max(counts.values())\n\n    # Create a new dictionary to store the letters with the maximum count\n    result = {}\n\n    # Loop through each item in the counts dictionary\n    for letter, count in counts.items():\n        # If the count is equal to the maximum count, add the letter to the result dictionary\n        if count == max_count:\n            result[letter] = count\n\n    # Return the result dictionary\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    count_dict = {}\n    for letter in test.split():\n        if letter in count_dict:\n            count_dict[letter] += 1\n        else:\n            count_dict[letter] = 1\n    \n    max_count = max(count_dict.values())\n    \n    result = {k: v for k, v in count_dict.items() if v == max_count}\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    counts = {}\n    max_count = 0\n    for word in words:\n        if word in counts:\n            counts[word] += 1\n            max_count = max(max_count, counts[word])\n        else:\n            counts[word] = 1\n    result = {}\n    for word, count in counts.items():\n        if count == max_count:\n            result[word] = count\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    counts = {}\n    for word in words:\n        if word in counts:\n            counts[word] += 1\n        else:\n            counts[word] = 1\n    \n    max_count = max(counts.values())\n    result = {}\n    for word, count in counts.items():\n        if count == max_count:\n            result[word] = count\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    letter_count = {}\n    max_count = 0\n    \n    for word in words:\n        if word in letter_count:\n            letter_count[word] += 1\n        else:\n            letter_count[word] = 1\n        \n        if letter_count[word] > max_count:\n            max_count = letter_count[word]\n    \n    max_letters = {}\n    for letter, count in letter_count.items():\n        if count == max_count:\n            max_letters[letter] = count\n    \n    return max_letters",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    letters = test.split()\n    counts = {}\n    max_count = 0\n\n    for letter in letters:\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n\n        if counts[letter] > max_count:\n            max_count = counts[letter]\n\n    result = {}\n    for letter, count in counts.items():\n        if count == max_count:\n            result[letter] = count\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    counts = {}\n    max_count = 0\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n        if counts[letter] > max_count:\n            max_count = counts[letter]\n    max_letters = {k: v for k, v in counts.items() if v == max_count}\n    return max_letters",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    # Split the string into a list of lowercase letters\n    letters = test.lower().split()\n    \n    # Create an empty dictionary to store the count of each letter\n    counts = {}\n    \n    # Iterate over each letter in the list\n    for letter in letters:\n        # If the letter is not already in the dictionary, add it with a count of 1\n        if letter not in counts:\n            counts[letter] = 1\n        # If the letter is already in the dictionary, increment its count by 1\n        else:\n            counts[letter] += 1\n    \n    # Find the maximum count of any letter\n    max_count = max(counts.values())\n    \n    # Create a new dictionary to store the letters with the maximum count\n    result = {}\n    \n    # Iterate over each letter and count in the dictionary\n    for letter, count in counts.items():\n        # If the count is equal to the maximum count, add the letter to the result dictionary\n        if count == max_count:\n            result[letter] = count\n    \n    # Return the result dictionary\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    counts = {}\n    max_count = 0\n\n    for word in words:\n        if word in counts:\n            counts[word] += 1\n        else:\n            counts[word] = 1\n\n        if counts[word] > max_count:\n            max_count = counts[word]\n\n    max_words = [word for word in counts if counts[word] == max_count]\n\n    return {word: max_count for word in max_words}",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    \"\"\"\n    Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n\n    Examples:\n\n    \"a a a a a a a b b b b c c c\" -> {'a': 7}\n    \"\"\"\n\n    # Step 1: Split the input string into a list of words\n    words = test.split()\n\n    # Step 2: Create an empty dictionary to store the letter counts\n    counts = {}\n\n    # Step 3: Iterate through each word in the list\n    for word in words:\n        # Step 4: Iterate through each letter in the word\n        for letter in word:\n            # Step 5: Increment the count of the letter in the dictionary\n            if letter in counts:\n                counts[letter] += 1\n            else:\n                counts[letter] = 1\n\n    # Step 6: Find the maximum count value\n    max_count = max(counts.values())\n\n    # Step 7: Create a new dictionary to store the letters with the maximum count\n    max_letters = {}\n\n    # Step 8: Iterate through the letter counts dictionary\n    for letter, count in counts.items():\n        # Step 9: If the count is equal to the maximum count, add the letter to the new dictionary\n        if count == max_count:\n            max_letters[letter] = count\n\n    # Step 10: Return the new dictionary\n    return max_letters",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    histogram = {}\n\n    for word in words:\n        histogram[word] = histogram.get(word, 0) + 1\n\n    max_count = max(histogram.values())\n    result = {key: value for key, value in histogram.items() if value == max_count}\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    # Split the string into a list of words\n    words = test.split()\n    \n    # Create a dictionary to store the letter counts\n    letter_counts = {}\n    \n    # Iterate over each word in the list\n    for word in words:\n        # Iterate over each letter in the word\n        for letter in word:\n            # Check if the letter is already in the dictionary\n            if letter in letter_counts:\n                # If it is, increment the count by 1\n                letter_counts[letter] += 1\n            else:\n                # If it is not, add it to the dictionary with a count of 1\n                letter_counts[letter] = 1\n    \n    # Find the maximum count\n    max_count = max(letter_counts.values())\n    \n    # Create a new dictionary to store the letters with the maximum count\n    max_letters = {}\n    \n    # Iterate over each letter and count in the letter_counts dictionary\n    for letter, count in letter_counts.items():\n        # Check if the count is equal to the maximum count\n        if count == max_count:\n            # If it is, add the letter and count to the max_letters dictionary\n            max_letters[letter] = count\n    \n    # Return the max_letters dictionary\n    return max_letters",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    hist = {}\n    words = test.split()\n    for word in words:\n        if word in hist:\n            hist[word] += 1\n        else:\n            hist[word] = 1\n    \n    max_count = max(hist.values())\n    result = {k: v for k, v in hist.items() if v == max_count}\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    letters = test.split()\n    counts = {}\n    max_count = 0\n    \n    for letter in letters:\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n        \n        if counts[letter] > max_count:\n            max_count = counts[letter]\n    \n    result = {}\n    \n    for letter, count in counts.items():\n        if count == max_count:\n            result[letter] = count\n    \n    return result",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def histogram(test):\n    # split the string into a list of letters\n    letters = test.split()\n    \n    # create an empty dictionary to store the counts of each letter\n    letter_counts = {}\n    \n    # loop through each letter in the list\n    for letter in letters:\n        # if the letter is not already in the dictionary, add it with a count of 1\n        if letter not in letter_counts:\n            letter_counts[letter] = 1\n        # if the letter is already in the dictionary, increment its count by 1\n        else:\n            letter_counts[letter] += 1\n    \n    # find the maximum count among all the letters\n    max_count = max(letter_counts.values())\n    \n    # create a new dictionary to store the letters with the maximum count\n    max_letters = {}\n    \n    # loop through each letter and count in the original dictionary\n    for letter, count in letter_counts.items():\n        # if the count is equal to the maximum count, add the letter to the new dictionary\n        if count == max_count:\n            max_letters[letter] = count\n    \n    # return the new dictionary of letters with the maximum count\n    return max_letters",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    count = {}\n    max_count = 0\n\n    for word in words:\n        if word in count:\n            count[word] += 1\n        else:\n            count[word] = 1\n\n        if count[word] > max_count:\n            max_count = count[word]\n\n    result = {}\n    for word, word_count in count.items():\n        if word_count == max_count:\n            result[word] = word_count\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    count_dict = {}\n    for word in words:\n        if word in count_dict:\n            count_dict[word] += 1\n        else:\n            count_dict[word] = 1\n    \n    max_count = max(count_dict.values())\n    result_dict = {}\n    for word, count in count_dict.items():\n        if count == max_count:\n            result_dict[word] = count\n    \n    return result_dict",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    count_dict = {}\n    max_count = 0\n    for word in words:\n        count = words.count(word)\n        if count > max_count:\n            max_count = count\n            count_dict = {word: count}\n        elif count == max_count:\n            count_dict[word] = count\n    return count_dict",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    count_dict = {}\n    max_count = 0\n    \n    for word in words:\n        count_dict[word] = count_dict.get(word, 0) + 1\n        max_count = max(max_count, count_dict[word])\n        \n    result = {}\n    for word, count in count_dict.items():\n        if count == max_count:\n            result[word] = count\n            \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    # Split the string into a list of lowercase letters\n    letters = test.lower().split()\n\n    # Create a dictionary to store the counts of each letter\n    counts = {}\n\n    # Iterate through each letter\n    for letter in letters:\n        # If the letter is already in the dictionary, increment the count\n        if letter in counts:\n            counts[letter] += 1\n        # Otherwise, add the letter to the dictionary with a count of 1\n        else:\n            counts[letter] = 1\n\n    # Find the maximum count\n    max_count = max(counts.values())\n\n    # Create a new dictionary to store the letters with the maximum count\n    max_letters = {}\n\n    # Iterate through each letter and count\n    for letter, count in counts.items():\n        # If the count is equal to the maximum count, add it to the new dictionary\n        if count == max_count:\n            max_letters[letter] = count\n\n    return max_letters",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    counts = {}\n    \n    for word in words:\n        if word in counts:\n            counts[word] += 1\n        else:\n            counts[word] = 1\n    \n    max_count = max(counts.values())\n    \n    result = {}\n    for word, count in counts.items():\n        if count == max_count:\n            result[word] = count\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    count_dict = {}\n    max_count = 0\n    for letter in test.split():\n        count_dict[letter] = count_dict.get(letter, 0) + 1\n        if count_dict[letter] > max_count:\n            max_count = count_dict[letter]\n    result = {}\n    for letter, count in count_dict.items():\n        if count == max_count:\n            result[letter] = count\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    letter_count = {}\n    test = test.split()\n    for letter in test:\n        if letter in letter_count:\n            letter_count[letter] += 1\n        else:\n            letter_count[letter] = 1\n    max_count = max(letter_count.values())\n    result = {letter: count for letter, count in letter_count.items() if count == max_count}\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    words = test.split()\n    counts = {}\n    max_count = 0\n    for word in words:\n        if word in counts:\n            counts[word] += 1\n        else:\n            counts[word] = 1\n        max_count = max(max_count, counts[word])\n    result = {}\n    for word, count in counts.items():\n        if count == max_count:\n            result[word] = count\n    return result",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def histogram(test):\n    # create a dictionary to store the count of each letter\n    count_dict = {}\n    \n    # split the input string into a list of letters\n    letters = test.split()\n    \n    # iterate over each letter in the list\n    for letter in letters:\n        # if the letter is already in the dictionary, increase its count by 1\n        if letter in count_dict:\n            count_dict[letter] += 1\n        # if the letter is not in the dictionary, add it with a count of 1\n        else:\n            count_dict[letter] = 1\n    \n    # find the maximum count among all the letters\n    max_count = max(count_dict.values())\n    \n    # create a new dictionary to store the letters with the maximum count\n    max_letters = {}\n    \n    # iterate over each letter and its count in the count dictionary\n    for letter, count in count_dict.items():\n        # if the count is equal to the maximum count, add the letter to the max_letters dictionary\n        if count == max_count:\n            max_letters[letter] = count\n    \n    # return the max_letters dictionary\n    return max_letters",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    counts = {}\n    max_count = 0\n    \n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n        \n        if counts[letter] > max_count:\n            max_count = counts[letter]\n    \n    result = {}\n    for letter, count in counts.items():\n        if count == max_count:\n            result[letter] = count\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    histogram = {}\n    max_count = 0\n    \n    # Split the input string into a list of letters\n    letters = test.split()\n    \n    # Count the occurrence of each letter\n    for letter in letters:\n        if letter in histogram:\n            histogram[letter] += 1\n        else:\n            histogram[letter] = 1\n        \n        # Update the maximum count if necessary\n        if histogram[letter] > max_count:\n            max_count = histogram[letter]\n    \n    # Create a new dictionary with the letters that have the maximum count\n    result = {}\n    for letter, count in histogram.items():\n        if count == max_count:\n            result[letter] = count\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    count_dict = {}\n    max_count = 0\n    max_letters = []\n    \n    # Split the string into a list of letters\n    letters = test.split()\n    \n    # Iterate through each letter\n    for letter in letters:\n        # If the letter is already in the count_dict, increment its count by 1\n        if letter in count_dict:\n            count_dict[letter] += 1\n        # If the letter is not in the count_dict, add it with count 1\n        else:\n            count_dict[letter] = 1\n        \n        # If the count of the current letter is greater than max_count,\n        # update max_count and clear max_letters list\n        if count_dict[letter] > max_count:\n            max_count = count_dict[letter]\n            max_letters = [letter]\n        # If the count of the current letter is equal to max_count,\n        # add it to the max_letters list\n        elif count_dict[letter] == max_count:\n            max_letters.append(letter)\n    \n    # Create a dictionary with the letters with the maximum count\n    result = {letter: max_count for letter in max_letters}\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    counts = {}\n    max_count = 0\n\n    # Split the string into individual letters\n    letters = test.split()\n\n    # Count the occurrence of each letter\n    for letter in letters:\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n\n        # Update the maximum count if necessary\n        if counts[letter] > max_count:\n            max_count = counts[letter]\n\n    # Create a dictionary of letters with the maximum count\n    result = {}\n    for letter, count in counts.items():\n        if count == max_count:\n            result[letter] = count\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    letters = test.split()\n    count_dict = {}\n    max_count = 0\n    \n    for letter in letters:\n        if letter in count_dict:\n            count_dict[letter] += 1\n        else:\n            count_dict[letter] = 1\n        \n        if count_dict[letter] > max_count:\n            max_count = count_dict[letter]\n    \n    result = {}\n    for letter, count in count_dict.items():\n        if count == max_count:\n            result[letter] = count\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    # Split the string into a list of words\n    words = test.split()\n\n    # Create an empty dictionary to store the count of each letter\n    count_dict = {}\n\n    # Iterate through each word in the list\n    for word in words:\n        # Iterate through each letter in the word\n        for letter in word:\n            # Update the count of the letter in the dictionary\n            count_dict[letter] = count_dict.get(letter, 0) + 1\n\n    # Find the maximum count\n    max_count = max(count_dict.values())\n\n    # Create an empty dictionary to store the letters with maximum count\n    result = {}\n\n    # Iterate through each key-value pair in the count dictionary\n    for letter, count in count_dict.items():\n        # If the count is equal to the maximum count, add the letter to the result dictionary\n        if count == max_count:\n            result[letter] = count\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    # Create a dictionary to store the counts of each letter\n    letter_counts = {}\n\n    # Split the input string into a list of letters\n    letters = test.split()\n\n    # Iterate through the letters and count the occurrences of each letter\n    for letter in letters:\n        # If the letter is already in the dictionary, increment its count\n        if letter in letter_counts:\n            letter_counts[letter] += 1\n        # If the letter is not in the dictionary, add it with a count of 1\n        else:\n            letter_counts[letter] = 1\n\n    # Find the maximum count of any letter\n    max_count = max(letter_counts.values())\n\n    # Create a dictionary to store the letters with the maximum count\n    result = {}\n\n    # Iterate through the letter_counts dictionary and add any letters with the maximum count to the result dictionary\n    for letter, count in letter_counts.items():\n        if count == max_count:\n            result[letter] = count\n\n    # Return the result dictionary\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    counts = {}\n    words = test.split()\n    for word in words:\n        counts[word] = counts.get(word, 0) + 1\n    \n    max_count = max(counts.values())\n    result = {}\n    for word, count in counts.items():\n        if count == max_count:\n            result[word] = count\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def histogram(test):\n    hist = {}\n    letters = test.split()\n    for letter in letters:\n        if letter in hist:\n            hist[letter] += 1\n        else:\n            hist[letter] = 1\n    max_count = max(hist.values())\n    result = {}\n    for letter, count in hist.items():\n        if count == max_count:\n            result[letter] = count\n    return result",
+            "logp": null
+        }
+    ]
+}

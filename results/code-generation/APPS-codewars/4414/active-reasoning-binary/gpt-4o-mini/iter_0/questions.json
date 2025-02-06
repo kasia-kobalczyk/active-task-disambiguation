@@ -1,0 +1,37 @@
+{
+    "0": [
+        "assert compare_versions(\"10.9\", \"10.10\") == False",
+        "assert compare_versions(\"10.4\", \"11\") == False",
+        "assert compare_versions(\"10.10\", \"10.9\") == True",
+        "assert compare_versions(\"11\", \"10\") == True",
+        "assert compare_versions(\"10.4.6\", \"10.4\") == True"
+    ],
+    "1": [
+        "assert compare_versions(\"2.1.1\", \"2.1.0\") == True",
+        "assert compare_versions(\"1.2.3\", \"1.2.3.0\") == True",
+        "assert compare_versions(\"1.0.0\", \"1.0\") == True",
+        "assert compare_versions(\"1.0\", \"1\") == True",
+        "assert compare_versions(\"3.0.0\", \"2.9.9\") == True",
+        "assert compare_versions(\"1.10\", \"1.2\") == True",
+        "assert compare_versions(\"2.1.2\", \"2.1.10\") == False",
+        "assert compare_versions(\"11.0\", \"11\") == True"
+    ],
+    "2": [
+        "assert compare_versions(\"2.1.1\", \"2.1.0\") == True",
+        "assert compare_versions(\"1.0.0\", \"1.0\") == True",
+        "assert compare_versions(\"1.0\", \"1\") == True",
+        "assert compare_versions(\"3.0.0\", \"2.9.9\") == True",
+        "assert compare_versions(\"1.10\", \"1.2\") == True",
+        "assert compare_versions(\"2.1.2\", \"2.1.10\") == False",
+        "assert compare_versions(\"11.0\", \"11\") == True"
+    ],
+    "3": [
+        "assert compare_versions(\"1.2.3\", \"1.2.4\") == False",
+        "assert compare_versions(\"3.0\", \"2.9.9\") == True",
+        "assert compare_versions(\"2.3.4\", \"2.3.3\") == True",
+        "assert compare_versions(\"10.0\", \"10.0.1\") == False",
+        "assert compare_versions(\"3.0\", \"3.0.0\") == True",
+        "assert compare_versions(\"2.0.1\", \"2.0\") == True",
+        "assert compare_versions(\"10.0\", \"10.0\") == True"
+    ]
+}

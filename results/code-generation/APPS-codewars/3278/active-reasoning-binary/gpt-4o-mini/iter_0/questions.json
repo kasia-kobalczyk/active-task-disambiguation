@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert string_expansion('2') == ''",
+        "assert string_expansion('2x3Y5z') == 'xxyyyzzzzz'",
+        "assert string_expansion('3a4B2d') == 'aaabbbbdd'",
+        "assert string_expansion('2x3y1z') == 'xxyyyz'",
+        "assert string_expansion('1A2b3c') == 'Abbbccc'",
+        "assert string_expansion('4c5D3f') == 'ccccDDDfffff'",
+        "assert string_expansion('5A2b3C') == 'AAAAAbbbCCC'"
+    ],
+    "1": [
+        "assert string_expansion('5a3B2c1D') == 'aaaaaBBbcD'",
+        "assert string_expansion('1a1b1c') == 'abc'",
+        "assert string_expansion('4x5y6Z3p') == 'xxxxxyyyyyZZZZZZppp'",
+        "assert string_expansion('2a3B4d') == 'aBBdddd'",
+        "assert string_expansion('5x2y3Z') == 'xxxxxyyZZZ'",
+        "assert string_expansion('2A3b4C') == 'AAbbbCCCC'",
+        "assert string_expansion('4a2B1c') == 'aaaabbc'",
+        "assert string_expansion('12A') == 'AAAAAAAAAAAA'"
+    ],
+    "2": [
+        "assert string_expansion('5Z2y3X') == 'ZZZZZyyXXX'",
+        "assert string_expansion('12X') == 'XXXXXXXXXXXX'",
+        "assert string_expansion('1a1b1c') == 'abc'",
+        "assert string_expansion('2a3B4d') == 'aBBdddd'",
+        "assert string_expansion('5a3B2c1D') == 'aaaaaBBbc'",
+        "assert string_expansion('2A3b4C') == 'AAbbbCCCC'",
+        "assert string_expansion('4a2B1c') == 'aaaabbc'",
+        "assert string_expansion('4x5y6Z3p') == 'xxxxyyyyyZZZZZppp'"
+    ],
+    "3": [
+        "assert string_expansion('5x1y3Z2a') == 'xxxxxxyZZZaa'",
+        "assert string_expansion('4X2y1Z') == 'XXXXyyZ'",
+        "assert string_expansion('2a3B4c') == 'aaBBcccc'",
+        "assert string_expansion('1d3e2F') == 'deeeFF'",
+        "assert string_expansion('4a3B2c') == 'aaaabbbcc'",
+        "assert string_expansion('1A2b3C') == 'AbbbCCC'",
+        "assert string_expansion('5a5') == 'aaaaa'",
+        "assert string_expansion('2a3b4c2D') == 'aabbbccccDD'"
+    ]
+}

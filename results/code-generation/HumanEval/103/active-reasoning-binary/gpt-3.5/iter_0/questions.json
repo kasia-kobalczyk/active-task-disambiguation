@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert rounded_avg(1, 5) == \"11\"",
+        "assert rounded_avg(1, 10) == '110'",
+        "assert rounded_avg(0, 100) == '110011'",
+        "assert rounded_avg(2, 2) == '10'",
+        "assert rounded_avg(5, 5) == '101'",
+        "assert rounded_avg(10, 1) == -1"
+    ],
+    "1": [
+        "assert rounded_avg(1, 10) == '1010'",
+        "assert rounded_avg(100, 110) == '1110011'",
+        "assert rounded_avg(5, 12) == '10101'",
+        "assert rounded_avg(7, 4) == -1",
+        "assert rounded_avg(10, 20) == '1111'",
+        "assert rounded_avg(2, 5) == '100'",
+        "assert rounded_avg(5, 10) == '1000'",
+        "assert rounded_avg(3, 3) == '11'",
+        "assert rounded_avg(10, 10) == '1010'",
+        "assert rounded_avg(50, 60) == '101101'"
+    ],
+    "2": [
+        "assert rounded_avg(100, 110) == '1110011'",
+        "assert rounded_avg(5, 12) == '10101'",
+        "assert rounded_avg(7, 4) == -1",
+        "assert rounded_avg(10, 20) == '1111'",
+        "assert rounded_avg(2, 5) == '100'",
+        "assert rounded_avg(5, 10) == '1000'",
+        "assert rounded_avg(3, 3) == '11'",
+        "assert rounded_avg(10, 10) == '1010'",
+        "assert rounded_avg(50, 60) == '101101'"
+    ],
+    "3": [
+        "assert rounded_avg(5, 12) == '10101'",
+        "assert rounded_avg(7, 4) == -1",
+        "assert rounded_avg(10, 20) == '1111'",
+        "assert rounded_avg(2, 5) == '100'",
+        "assert rounded_avg(5, 10) == '1000'",
+        "assert rounded_avg(3, 3) == '11'",
+        "assert rounded_avg(10, 10) == '1010'",
+        "assert rounded_avg(50, 60) == '101101'"
+    ]
+}

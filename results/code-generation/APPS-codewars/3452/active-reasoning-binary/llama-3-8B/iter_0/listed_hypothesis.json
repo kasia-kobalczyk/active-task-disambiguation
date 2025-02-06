@@ -1,0 +1,70 @@
+{
+    "0": [
+        {
+            "content": "def snail(column, day, night):\n    days = 0\n    current_position = 0\n    while current_position < column:\n        current_position += day\n        days += 1\n        if current_position > column:\n            current_position -= night\n    return days",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    days = 0\n    current_position = 0\n    while current_position < column:\n        current_position += day\n        days += 1\n        if current_position > column:\n            current_position -= night\n    return days",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    days = 0\n    current_position = 0\n    while current_position < column:\n        current_position += day\n        days += 1\n        if current_position > column:\n            current_position -= night\n    return days",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    days = 0\n    current_position = 0\n    while current_position < column:\n        current_position += day\n        days += 1\n        if current_position > column:\n            current_position -= night\n    return days",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    days = 0\n    current_position = 0\n    while current_position < column:\n        current_position += day\n        days += 1\n        if current_position > column:\n            current_position -= night\n    return days",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night): \n    up = day - night\n    cycle = 0\n    while column > 0:\n        column += up\n        if column > 0:\n            column -= night\n        cycle += 1\n    return cycle",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night): \n    up = day - night\n    cycle = 0\n    while column > 0:\n        column += up\n        if column > 0:\n            column -= night\n        cycle += 1\n    return cycle",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night): \n    up = day - night\n    cycle = 0\n    while column > 0:\n        column += up\n        if column > 0:\n            column -= night\n        cycle += 1\n    return cycle",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night): \n    up = day - night\n    cycle = 0\n    while column > 0:\n        column += up\n        if column > 0:\n            column -= night\n        cycle += 1\n    return cycle",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night): \n    up = day - night\n    cycle = 0\n    while column > 0:\n        column += up\n        if column > 0:\n            column -= night\n        cycle += 1\n    return cycle",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def snail(column, day, night): \n    up = day - night\n    cycle = 0\n    while column > 0:\n        column += up\n        if column > 0:\n            column -= night\n        cycle += 1\n    return cycle",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    day_v = day\n    night_v = night\n    day_v_total = day\n    night_v_total = night\n    total_days = 0\n    while column > 0:\n        column = column - day_v + night_v\n        if day_v > night_v:\n            day_v = day_v_total\n            night_v = night_v_total\n            day_v_total -= night_v\n            night_v_total -= night_v\n            total_days += 1\n        else:\n            day_v -= night_v\n            night_v = night_v_total\n    return total_days",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def snail(column, day, night):\n    day_progress = day\n    night_progress = -night\n    day_night = 0\n    while column > 0:\n        day_progress += day\n        night_progress += night\n        if day_progress >= night_progress:\n            column -= day_progress\n            day_progress = 0\n            night_progress = 0\n            day_night += 1\n        else:\n            night_progress = night_progress - day_progress\n            day_progress = 0\n    return day_night",
+            "logp": null
+        },
+        {
+            "content": "def snail(column, day, night):\n    day_step = day\n    night_step = -night\n    day_or_night = day\n    days = 0\n    while True:\n        if day_or_night > column:\n            days += 1\n            column -= day_or_night\n            day_or_night = day_step\n        else:\n            days += 1\n            column = 0\n            break\n    return days",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def snail(column, day, night):\n    day_v = day\n    night_v = night\n    day_v_total = day\n    night_v_total = night\n    total_days = 0\n    while column > 0:\n        column = column - day_v + night_v\n        if day_v > night_v:\n            day_v = day_v_total\n            night_v = night_v_total\n            day_v_total -= night_v\n            night_v_total -= night_v\n            total_days += 1\n        else:\n            day_v -= night_v\n            night_v = night_v_total\n    return total_days",
+            "logp": null
+        }
+    ]
+}

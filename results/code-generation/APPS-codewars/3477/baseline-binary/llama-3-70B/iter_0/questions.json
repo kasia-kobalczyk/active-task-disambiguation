@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\""
+    ],
+    "1": [
+        "assert sort_string(\"abcdef\", \"defabc\") == \"defabc\"",
+        "assert sort_string(\"xyz\", \"abcd\") == \"xyz\""
+    ],
+    "2": [
+        "assert sort_string(\"abcde\", \"edbca\") == \"edbca\"",
+        "assert sort_string(\"xyz\", \"abc\") == \"xyz\""
+    ],
+    "3": [
+        "assert sort_string(\"xyzuvw\", \"vuwzxy\") == \"vuwxyz\"",
+        "assert sort_string(\"abcdef\", \"bac\") == \"acbdef\""
+    ]
+}

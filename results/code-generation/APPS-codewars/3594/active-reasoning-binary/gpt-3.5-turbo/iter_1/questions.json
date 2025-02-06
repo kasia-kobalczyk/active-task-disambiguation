@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert is_isogram(1234) == False",
+        "assert is_isogram('world') == False",
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram('') == False",
+        "assert is_isogram(None) == False",
+        "assert is_isogram(\"Python\") == True",
+        "assert is_isogram(\"racecar\") == True",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram('hello') == False"
+    ],
+    "1": [
+        "assert is_isogram(\"aaa\") == True",
+        "assert is_isogram(\"abcdefg\") == True",
+        "assert is_isogram(\"aabbc\") == True",
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"Python\") == True",
+        "assert is_isogram(\"1234\") == False",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(\"abAB\") == True"
+    ],
+    "2": [
+        "assert is_isogram(\"isogram\") == False",
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"Isogram\") == False",
+        "assert is_isogram(\"abcDEF\") == False",
+        "assert is_isogram(\"python\") == False"
+    ],
+    "3": [
+        "assert is_isogram(\"world\") == True",
+        "assert is_isogram(\"he-llo\") == False",
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"Isogram\") == False",
+        "assert is_isogram(\"abcDEF\") == False",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(\"he  llo\") == False",
+        "assert is_isogram(\"HeLLo\") == False",
+        "assert is_isogram(\"python\") == False",
+        "assert is_isogram(\"python\") == True",
+        "assert is_isogram(\"paper\") == True"
+    ]
+}

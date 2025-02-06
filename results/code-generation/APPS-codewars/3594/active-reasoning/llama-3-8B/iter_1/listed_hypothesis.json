@@ -1,0 +1,86 @@
+{
+    "0": [
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    word = word.lower()\n    word = re.sub('[^a-z]', '', word)\n    return len(Counter(word)) == 1 or len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    word = word.lower()\n    word = re.sub('[^a-z]', '', word)\n    return len(Counter(word)) == 1 or len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    word = word.lower()\n    word = re.sub('[^a-z]', '', word)\n    return len(Counter(word)) == 1 or len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    word = word.lower()\n    word = re.sub('[^a-z]', '', word)\n    return len(Counter(word)) == 1 or len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if not isinstance(word, str):\n        return False\n    word = word.lower()\n    word = re.sub('[^a-z]', '', word)\n    return len(Counter(word)) == 1 or len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if type(word) != str:\n        return False\n    word = word.lower()\n    word = re.sub(r'\\W+', '', word)\n    if len(word) == 0:\n        return False\n    if len(set(word)) == len(word):\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if type(word) != str:\n        return False\n    word = word.lower()\n    word = re.sub(r'\\W+', '', word)\n    if len(word) == 0:\n        return False\n    if len(set(word)) == len(word):\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if type(word) != str:\n        return False\n    word = word.lower()\n    word = re.sub(r'\\W+', '', word)\n    if len(word) == 0:\n        return False\n    if len(set(word)) == len(word):\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if type(word) != str:\n        return False\n    word = word.lower()\n    word = re.sub(r'\\W+', '', word)\n    if len(word) == 0:\n        return False\n    if len(set(word)) == len(word):\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word):\n    if type(word) != str:\n        return False\n    word = word.lower()\n    word = re.sub(r'\\W+', '', word)\n    if len(word) == 0:\n        return False\n    if len(set(word)) == len(word):\n        return True\n    return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def is_isogram(word): \n    if not isinstance(word, str) or not word: \n        return False \n    word = re.sub('[\\W_]+', '', word).lower() \n    return len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word): \n    if not isinstance(word, str) or len(word) == 0:\n        return False \n    word = re.sub(r'\\W+', '', word).lower()\n    return len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word): \n    if not isinstance(word, str) or len(word.strip()) == 0:\n        return False\n    word = re.sub('[\\W_]+', '', word).lower()\n    return len(set(word)) == len(word)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def is_isogram(word): \n    if not isinstance(word, str) or not word: \n        return False \n    word = re.sub('[\\W_]+', '', word.lower()) \n    return len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word): \n    if not isinstance(word, str) or len(word) == 0:\n        return False \n    word = re.sub(r'\\W+', '', word).lower() \n    return len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word): \n    if not isinstance(word, str) or not word.isalpha(): \n        return False \n    word = word.lower() \n    letter_count = Counter(re.sub('[^a-z]', '', word)) \n    return len(set(letter_count.values())) == 1",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def is_isogram(word): \n    if not isinstance(word, str) or not word: \n        return False \n    word = re.sub('[\\W_]+', '', word.lower()) \n    return len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word): \n    if not isinstance(word, str) or len(word) == 0:\n        return False \n    word = re.sub(r'\\W+', '', word).lower() \n    return len(set(word)) == len(word)",
+            "logp": null
+        },
+        {
+            "content": "def is_isogram(word): \n    if not isinstance(word, str) or not word.isalpha(): \n        return False \n    word = word.lower() \n    letter_count = Counter(re.sub('[^a-z]', '', word)) \n    return len(set(letter_count.values())) == 1",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert total_match([\"hello\", \"world\"], [\"hi\", \"there\"]) == [\"hi\", \"there\"]",
+        true
+    ],
+    "1": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"one\", \"two\", \"three\"]) == [\"a\", \"bb\", \"ccc\"]",
+        true
+    ],
+    "2": [
+        "assert total_match([\"dog\", \"cat\"], [\"lion\", \"tiger\", \"bear\"]) == [\"dog\", \"cat\"]",
+        true
+    ],
+    "3": [
+        "assert total_match([\"short\", \"words\"], [\"longer\", \"strings\"]) == [\"short\", \"words\"]",
+        true
+    ]
+}

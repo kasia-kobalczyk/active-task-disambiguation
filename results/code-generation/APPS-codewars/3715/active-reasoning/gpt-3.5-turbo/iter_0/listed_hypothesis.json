@@ -1,0 +1,62 @@
+{
+    "0": [
+        {
+            "content": "def nth_chandos_number(n):\n    return int(str(bin(n))[2:])",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    power = 1\n    while n > 0:\n        power *= 5\n        n -= power\n    return n + power",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    return int(str(n), 5)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    num = 5\n    count = 1\n\n    while count < n:\n        num += 5\n        for i in range(1, n):\n            if num % (5 ** i) == 0:\n                break\n            if i == n-1:\n                count += 1\n\n    return num",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    result = 0\n    power = 0\n    while n > 0:\n        if n % 2 == 1:\n            result += 5 ** power\n        power += 1\n        n //= 2\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = [5]\n    powers_of_five = [5]\n    current_power = 1\n    \n    while len(chandos_numbers) < n:\n        current_power *= 5\n        powers_of_five.append(current_power)\n        \n        for i in range(len(powers_of_five)):\n            for j in range(i + 1, len(powers_of_five)):\n                chandos_number = powers_of_five[i] + powers_of_five[j]\n                \n                if chandos_number not in chandos_numbers:\n                    chandos_numbers.append(chandos_number)\n                    if len(chandos_numbers) == n:\n                        return chandos_number",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    def convertToBase5(n):\n        result = []\n        while n > 0:\n            result.append(n % 5)\n            n = n // 5\n        return result\n\n    base5 = convertToBase5(n-1)\n    chandos_number = 0\n    for i in range(len(base5)):\n        chandos_number += 5 ** (i+1) * base5[i]\n    return chandos_number",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    # base case: when n is 1, return 5\n    if n == 1:\n        return 5\n    \n    # start with i=2 as we already know the first Chando's number\n    i = 2\n    \n    # loop until we find the nth Chando's number\n    while True:\n        # generate the i-th Chando's number\n        num = generate_chandos_number(i)\n        \n        # if the i-th Chando's number is the nth Chando's number, return it\n        if i == n:\n            return num\n        \n        # increment i\n        i += 1\n\ndef generate_chandos_number(n):\n    # convert n to binary\n    binary = bin(n)[2:]\n    \n    # initialize the result to 0\n    result = 0\n    \n    # iterate over the binary string\n    for i in range(len(binary)):\n        # if the current bit is 1, add the corresponding power of 5 to the result\n        if binary[i] == '1':\n            result += 5 ** (len(binary) - i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    power = 1\n    while n > (2 ** power):\n        n -= 2 ** power\n        power += 1\n    return 5 ** power + (n - 1) * 5 ** (power - 1)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    count = 0\n    number = 0\n    power = 0\n    while count < n:\n        number += 5 ** power\n        power += 1\n        count += 1\n    return number",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def nth_chandos_number(n):\n    power = 1\n    sum = 0\n    while n > 0:\n        if n % 2 == 1:\n            sum += 5 ** power\n        n //= 2\n        power += 1\n    return sum",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = [5]\n    i = 2\n    while len(chandos_numbers) < n:\n        binary_representation = bin(i)[2:]\n        chandos_number = 0\n        for j, digit in enumerate(reversed(binary_representation)):\n            if digit == '1':\n                chandos_number += 5 ** (j + 1)\n        if chandos_number not in chandos_numbers:\n            chandos_numbers.append(chandos_number)\n        i += 1\n    return chandos_numbers[n - 1]",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def nth_chandos_number(n):\n    if n == 1:\n        return 5\n    chandos_nums = [5]\n    i = 2\n    while len(chandos_nums) < n:\n        i_bin = bin(i)[2:]\n        new_num = 0\n        for j, digit in enumerate(i_bin[::-1]):\n            if digit == '1':\n                new_num += 5**(j+1)\n        chandos_nums.append(new_num)\n        i += 1\n    return chandos_nums[-1]",
+            "logp": null
+        }
+    ]
+}

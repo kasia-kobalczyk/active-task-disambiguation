@@ -1,0 +1,36 @@
+{
+    "0": [
+        "assert not_so_random(1, 0) == \"Black\", f\"Expected not_so_random(1, 0) == 'Black' but obtained {not_so_random(1, 0)}\"",
+        "assert not_so_random(2, 2) == \"White\", f\"Expected not_so_random(2, 2) == 'White' but obtained {not_so_random(2, 2)}\"",
+        "assert not_so_random(0, 1) == \"White\", f\"Expected not_so_random(0, 1) == 'White' but obtained {not_so_random(0, 1)}\"",
+        "assert not_so_random(1, 1) == \"Unsure\", f\"Expected not_so_random(1, 1) == 'Unsure' but obtained {not_so_random(1, 1)}\"",
+        "assert not_so_random(0, 0) == \"Unsure\""
+    ],
+    "1": [
+        "assert not_so_random(10**9, 0) == \"Black\"",
+        "assert not_so_random(0, 0) == \"Unsure\", f\"Expected not_so_random(0, 0) == 'Unsure' but obtained {not_so_random(0, 0)}\"",
+        "assert not_so_random(0, 1) == \"White\"",
+        "assert not_so_random(3, 2) == \"Unsure\", f\"Expected not_so_random(3, 2) == 'Unsure' but obtained {not_so_random(3, 2)}\"",
+        "assert not_so_random(1, 1) == \"Unsure\", f\"Expected not_so_random(1, 1) == 'Unsure' but obtained {not_so_random(1, 1)}\"",
+        "assert not_so_random(1, 0) == \"Black\", f\"Expected not_so_random(1, 0) == 'Black' but obtained {not_so_random(1, 0)}\"",
+        "assert not_so_random(3, 3) == \"White\"",
+        "assert not_so_random(1, 1) == \"Black\""
+    ],
+    "2": [
+        "assert not_so_random(0, 0) == \"Unsure\", f\"Expected not_so_random(0, 0) == 'Unsure' but obtained {not_so_random(0, 0)}\"",
+        "assert not_so_random(3, 2) == \"Unsure\", f\"Expected not_so_random(3, 2) == 'Unsure' but obtained {not_so_random(3, 2)}\"",
+        "assert not_so_random(0, 1) == \"White\"",
+        "assert not_so_random(1, 1) == \"Unsure\", f\"Expected not_so_random(1, 1) == 'Unsure' but obtained {not_so_random(1, 1)}\"",
+        "assert not_so_random(1, 0) == \"Black\", f\"Expected not_so_random(1, 0) == 'Black' but obtained {not_so_random(1, 0)}\"",
+        "assert not_so_random(3, 2) == \"White\"",
+        "assert not_so_random(1, 1) == \"Black\""
+    ],
+    "3": [
+        "assert not_so_random(3, 2) == \"Unsure\", f\"Expected not_so_random(3, 2) == 'Unsure' but obtained {not_so_random(3, 2)}\"",
+        "assert not_so_random(0, 1) == \"White\"",
+        "assert not_so_random(1, 1) == \"Unsure\", f\"Expected not_so_random(1, 1) == 'Unsure' but obtained {not_so_random(1, 1)}\"",
+        "assert not_so_random(1, 0) == \"Black\", f\"Expected not_so_random(1, 0) == 'Black' but obtained {not_so_random(1, 0)}\"",
+        "assert not_so_random(3, 3) == \"White\"",
+        "assert not_so_random(1, 1) == \"Black\""
+    ]
+}

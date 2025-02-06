@@ -1,0 +1,174 @@
+{
+    "0": [
+        {
+            "content": "def num_obj(s):\n    objects = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        objects.append(obj)\n    return objects",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    obj_list = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        obj_list.append(obj)\n    return obj_list",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {}\n        obj[str(num)] = chr(num)\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    obj_list = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        obj_list.append(obj)\n    return obj_list",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        result.append({str(num): chr(num)})\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        char = chr(num)\n        obj = {str(num): char}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        result.append({str(num): chr(num)})\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result\n\nprint(num_obj([97, 98, 99]))",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        result.append({str(num): chr(num)})\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    objects = []\n    for num in s:\n        char = chr(num)\n        obj = {str(num): char}\n        objects.append(obj)\n    return objects",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        char = chr(num)\n        obj = {str(num): char}\n        result.append(obj)\n    return result",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{'{}'.format(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        result.append({str(num): chr(num)})\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def num_obj(s):\n    return [{str(n): chr(n)} for n in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        result.append({str(num): chr(num)})\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result\n\n# ====== Test Cases ======\n\nassert num_obj([97, 98, 99]) == [{'97': 'a'}, {'98': 'b'}, {'99': 'c'}]\nassert num_obj([100, 105, 110, 111, 115, 121]) == [{'100': 'd'}, {'105': 'i'}, {'110': 'n'}, {'111': 'o'}, {'115': 's'}, {'121': 'y'}]\nassert num_obj([120, 121, 122]) == [{'120': 'x'}, {'121': 'y'}, {'122': 'z'}]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    return [{str(num): chr(num)} for num in s]",
+            "logp": null
+        },
+        {
+            "content": "def num_obj(s):\n    result = []\n    for num in s:\n        obj = {str(num): chr(num)}\n        result.append(obj)\n    return result",
+            "logp": null
+        }
+    ]
+}

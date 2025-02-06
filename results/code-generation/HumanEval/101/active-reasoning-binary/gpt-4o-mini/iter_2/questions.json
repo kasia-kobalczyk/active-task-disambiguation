@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert words_string(\"   leading spaces,with,spaces   \") == [\"leading\", \"spaces\", \"with\", \"spaces\"]",
+        "assert words_string(\"hello, world, python\") == [\"hello\", \"world\", \"python\"]",
+        "assert words_string(\"hello,world,python\") == [\"hello\", \"world\", \"python\"]",
+        "assert words_string(\"apple orange,banana\") == [\"apple\", \"orange\", \"banana\"]",
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"a,b,c,d,e\") == [\"a\", \"b\", \"c\", \"d\", \"e\"]",
+        "assert words_string(\"  hello   world   \") == [\"hello\", \"world\"]",
+        "assert words_string(\"hello world python\") == [\"hello\", \"world\", \"python\"]"
+    ],
+    "1": [
+        "assert words_string(\"   a b c   , d e f   \") == [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]",
+        "assert words_string(\"hello world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"   multiple   spaces   ,and, commas   \") == [\"multiple\", \"spaces\", \"and\", \"commas\"]",
+        "assert words_string(\"  ,  ,  \") == []",
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"singleword\") == [\"singleword\"]",
+        "assert words_string(\"one,two,three\") == [\"one\", \"two\", \"three\"]",
+        "assert words_string(\"   trailing spaces , no spaces before\") == [\"trailing\", \"spaces\", \"no\", \"spaces\", \"before\"]"
+    ],
+    "2": [
+        "assert words_string(\"one   two,three,four five\") == [\"one\", \"two\", \"three\", \"four\", \"five\"]",
+        "assert words_string(\"a,b , c,d e\") == [\"a\", \"b\", \"c\", \"d\", \"e\"]",
+        "assert words_string(\"words separated by both, commas and spaces\") == [\"words\", \"separated\", \"by\", \"both\", \"commas\", \"and\", \"spaces\"]",
+        "assert words_string(\"   hello   ,world   \") == [\"hello\", \"world\"]",
+        "assert words_string(\" , , \") == []",
+        "assert words_string(\"hello, world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"    test,   example,   string    \") == [\"test\", \"example\", \"string\"]",
+        "assert words_string(\"one,two,three\") == [\"one\", \"two\", \"three\"]"
+    ],
+    "3": [
+        "assert words_string(\"   hello   ,world  , python  \") == [\"hello\", \"world\", \"python\"]",
+        "assert words_string(\"   quick,brown fox,jumps over lazy dog   \") == [\"quick\", \"brown\", \"fox\", \"jumps\", \"over\", \"lazy\", \"dog\"]",
+        "assert words_string(\"  singleword \") == [\"singleword\"]",
+        "assert words_string(\"apple, banana ,cherry \") == [\"apple\", \"banana\", \"cherry\"]",
+        "assert words_string(\"singleword\") == [\"singleword\"]",
+        "assert words_string(\"     test   ,   example    ,  sample  \") == [\"test\", \"example\", \"sample\"]",
+        "assert words_string(\"word1,word2 word3\") == [\"word1\", \"word2\", \"word3\"]",
+        "assert words_string(\"   ,   leading,spaces,   \") == [\"leading\", \"spaces\"]"
+    ]
+}

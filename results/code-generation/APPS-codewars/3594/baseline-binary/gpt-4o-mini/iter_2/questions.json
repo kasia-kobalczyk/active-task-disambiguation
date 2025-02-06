@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert is_isogram(\"abc\") == True",
+        "assert is_isogram(\"aabbcc\") == True"
+    ],
+    "1": [
+        "assert is_isogram(\"abcd1234!\") == True",
+        "assert is_isogram(\"aabbcc\") == True"
+    ],
+    "2": [
+        "assert is_isogram(\"aabb\") == True",
+        "assert is_isogram(\"hello\") == False\n    "
+    ],
+    "3": [
+        "assert is_isogram(\"hello\") == False\n    ",
+        "assert is_isogram(\"A man, a plan, a canal: Panama\") == True"
+    ]
+}

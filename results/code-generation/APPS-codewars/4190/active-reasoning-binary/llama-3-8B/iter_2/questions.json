@@ -1,0 +1,26 @@
+{
+    "0": [
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"alternating\") == False",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"amazon\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"codec\") == True",
+        "assert is_alt(\"alternant\") == False",
+        "assert is_alt(\"amazon\") == True",
+        "assert is_alt(\"hello\") == False"
+    ],
+    "2": [
+        "assert is_alt(\"bcdfghjklmnpqirtsxz\") == False",
+        "assert is_alt(\"alternant\") == False",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"bcdfghjklmnpqrstvxz\") == False"
+    ],
+    "3": [
+        "assert is_alt(\"bcdfghjklmnpqirtsxz\") == False",
+        "assert is_alt(\"alternant\") == False",
+        "assert is_alt(\"bcdfghjklmnpqrstvxz\") == False"
+    ]
+}

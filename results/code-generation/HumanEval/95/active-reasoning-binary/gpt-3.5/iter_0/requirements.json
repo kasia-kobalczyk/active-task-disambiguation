@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert check_dict_case({'key1': 'value1', 'Key2': 'value2'}) == False",
+        true
+    ],
+    "1": [
+        "assert check_dict_case({}) == False",
+        true
+    ],
+    "2": [
+        "assert check_dict_case({'1': 'one', '2': 'two', '3': 'three'}) == False",
+        true
+    ],
+    "3": [
+        "assert check_dict_case({'A': 'Ant', 'B': 'Ball', 'C': 'Cat'}) == True",
+        true
+    ]
+}

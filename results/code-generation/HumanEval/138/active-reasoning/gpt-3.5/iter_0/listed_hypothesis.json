@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n < 8:\n        return False\n    elif n % 4 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # If n is less than 8, it is not possible to write it as the sum of 4 positive even numbers\n    if n < 8:\n        return False\n    \n    # Check all possible values of the first even number\n    for a in range(2, n - 6, 2):\n        # Check all possible values of the second even number\n        for b in range(a, n - a - 4, 2):\n            # Check all possible values of the third even number\n            for c in range(b, n - a - b - 2, 2):\n                # Calculate the value of the fourth even number\n                d = n - a - b - c\n                # If the fourth even number is positive and even, return True\n                if d % 2 == 0 and d > 0:\n                    return True\n    \n    # If no combination of 4 positive even numbers adds up to n, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    \"\"\"\n    if n % 2 != 0:\n        return False\n\n    for i in range(1, n // 2 + 1):\n        for j in range(i, n // 2 + 1):\n            for k in range(j, n // 2 + 1):\n                for l in range(k, n // 2 + 1):\n                    if i % 2 == 0 and j % 2 == 0 and k % 2 == 0 and l % 2 == 0:\n                        if i + j + k + l == n:\n                            return True\n\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # If n is less than or equal to 0, it cannot be written as the sum of positive even numbers\n    if n <= 0:\n        return False\n    \n    # Initialize a count variable to keep track of the number of even numbers found\n    count = 0\n    \n    # Iterate through all even numbers from 2 to n/2\n    for i in range(2, n//2 + 1, 2):\n        # If i is even and n - i is also even, then it can be written as the sum of 4 positive even numbers\n        if i % 2 == 0 and (n - i) % 2 == 0:\n            count += 1\n    \n    # If count is equal to 4, then n can be written as the sum of 4 positive even numbers\n    if count == 4:\n        return True\n    \n    # If count is not equal to 4, then n cannot be written as the sum of 4 positive even numbers\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # Check if n is even\n    if n % 2 != 0:\n        return False\n    \n    # Check if n is greater than or equal to 8\n    if n < 8:\n        return False\n    \n    # Check if n can be written as the sum of 4 positive even numbers\n    for i in range(2, n, 2):\n        for j in range(2, n-i, 2):\n            for k in range(2, n-i-j, 2):\n                if i + j + k + (n - i - j - k) == n:\n                    return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    \n    Parameters:\n    n (int): The number to evaluate\n    \n    Returns:\n    bool: True if n can be written as the sum of exactly 4 positive even numbers, False otherwise\n    \"\"\"\n    # First, check if n is even\n    if n % 2 != 0:\n        return False\n    \n    # Then, divide n by 2 and check if it is greater than or equal to 4\n    if n // 2 >= 4:\n        return True\n    \n    # If n // 2 is less than 4, check if it is divisible by 4\n    if n // 2 % 4 == 0:\n        return True\n    \n    # If none of the conditions above are met, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    \n    Parameters:\n    n (int): The number to be evaluated\n    \n    Returns:\n    bool: True if the number can be written as the sum of exactly 4 positive even numbers, False otherwise\n    \"\"\"\n    \n    if n % 2 != 0:\n        return False\n    \n    for i in range(1, n//2):\n        for j in range(i+1, n//2):\n            for k in range(j+1, n//2):\n                for l in range(k+1, n//2):\n                    if i*2 + j*2 + k*2 + l*2 == n:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # Initialize a counter for the number of even numbers found\n    count = 0\n    \n    # Iterate through all possible even numbers less than or equal to n\n    for i in range(2, n+1, 2):\n        # If the number i is even and less than or equal to n, increment the count\n        if i <= n:\n            count += 1\n        \n        # If we have found exactly 4 even numbers, break out of the loop\n        if count == 4:\n            break\n    \n    # If we have found exactly 4 even numbers and their sum equals n, return True\n    if count == 4 and sum(range(2, n+1, 2)) == n:\n        return True\n    \n    # Otherwise, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    \"\"\"\n    Given a number n, this function evaluates whether it can be written as the sum of exactly 4 positive even numbers.\n\n    Parameters:\n    n (int): The input number.\n\n    Returns:\n    bool: True if n can be written as the sum of 4 positive even numbers, False otherwise.\n    \"\"\"\n\n    # Check if n is even\n    if n % 2 != 0:\n        return False\n\n    # Try all possible values of the first even number\n    for i in range(1, n//2 + 1):\n        # Try all possible values of the second even number\n        for j in range(i, n//2 + 1):\n            # Try all possible values of the third even number\n            for k in range(j, n//2 + 1):\n                # Calculate the fourth even number\n                m = n - i - j - k\n                # Check if all numbers are even and their sum is equal to n\n                if m % 2 == 0 and m >= k:\n                    return True\n\n    # If no combination is found, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    \n    Args:\n    n: an integer\n    \n    Returns:\n    True if n can be written as the sum of exactly 4 positive even numbers, False otherwise\n    \"\"\"\n    count = 0\n    for i in range(1, n+1, 2):\n        for j in range(1, n+1, 2):\n            for k in range(1, n+1, 2):\n                for l in range(1, n+1, 2):\n                    if i + j + k + l == n:\n                        count += 1\n    if count >= 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0: # if n is odd, it cannot be written as the sum of even numbers\n        return False\n    \n    count = 0\n    for i in range(2, n//2 + 1, 2): # loop through even numbers from 2 to n//2\n        for j in range(2, n//2 + 1, 2): # loop through even numbers from 2 to n//2\n            for k in range(2, n//2 + 1, 2): # loop through even numbers from 2 to n//2\n                for l in range(2, n//2 + 1, 2): # loop through even numbers from 2 to n//2\n                    if i + j + k + l == n: # if the sum of the four even numbers is equal to n\n                        count += 1\n    \n    return count > 0",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 4 == 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n    elif n < 8:\n        return False\n    else:\n        return True",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0 or n <= 0:\n        return False\n    \n    count = 0\n    while n >= 2 and count < 4:\n        n -= 2\n        count += 1\n    \n    return count == 4 and n == 0",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    \n    Examples:\n\n    8 -> True\n    \"\"\"\n    # Generate all possible combinations of 4 positive even numbers\n    for i in range(2, n // 2 + 1, 2):\n        for j in range(i, n // 2 + 1, 2):\n            for k in range(j, n // 2 + 1, 2):\n                for l in range(k, n // 2 + 1, 2):\n                    # Check if the sum of the numbers is equal to n\n                    if i + j + k + l == n:\n                        return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n    \n    count = 0\n    for i in range(2, n//2 + 1, 2):\n        for j in range(2, n//2 + 1, 2):\n            for k in range(2, n//2 + 1, 2):\n                for l in range(2, n//2 + 1, 2):\n                    if i + j + k + l == n:\n                        count += 1\n    \n    if count >= 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n    elif n < 8:\n        return False\n    elif n == 8:\n        return True\n    else:\n        return is_equal_to_sum_even(n-2)",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n    if n < 8:\n        return False\n    for i in range(2, n//2):\n        for j in range(2, n//2):\n            for k in range(2, n//2):\n                for l in range(2, n//2):\n                    if i+j+k+l == n and i % 2 == 0 and j % 2 == 0 and k % 2 == 0 and l % 2 == 0:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    count = 0\n    for i in range(2, n + 1, 2):\n        for j in range(2, n + 1, 2):\n            for k in range(2, n + 1, 2):\n                for l in range(2, n + 1, 2):\n                    if i + j + k + l == n:\n                        count += 1\n    return count > 0",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n    else:\n        count = 0\n        for i in range(1, n//2 + 1):\n            if i % 2 == 0:\n                for j in range(i, n//2 + 1):\n                    if j % 2 == 0:\n                        for k in range(j, n//2 + 1):\n                            if k % 2 == 0:\n                                for l in range(k, n//2 + 1):\n                                    if l % 2 == 0:\n                                        if i + j + k + l == n:\n                                            count += 1\n        if count >= 1:\n            return True\n        else:\n            return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # check if n is even\n    if n % 2 != 0:\n        return False\n    \n    # check if n can be written as the sum of 4 positive even numbers\n    for i in range(1, n // 2 + 1):\n        for j in range(i, n // 2 + 1):\n            for k in range(j, n // 2 + 1):\n                for l in range(k, n // 2 + 1):\n                    if i % 2 == 0 and j % 2 == 0 and k % 2 == 0 and l % 2 == 0 and i + j + k + l == n:\n                        return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # Find all possible combinations of 4 positive even numbers\n    # and check if their sum is equal to n\n    for i in range(2, n//2 + 1, 2):\n        for j in range(2, n//2 + 1, 2):\n            for k in range(2, n//2 + 1, 2):\n                for l in range(2, n//2 + 1, 2):\n                    if i + j + k + l == n:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n < 8:\n        return False\n    for i in range(2, n // 2 + 1, 2):\n        for j in range(2, n // 2 + 1, 2):\n            for k in range(2, n // 2 + 1, 2):\n                for l in range(2, n // 2 + 1, 2):\n                    if i + j + k + l == n:\n                        return True\n    return False",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # initialize count of even numbers\n    count = 0\n    \n    # iterate through numbers from 1 to n\n    for i in range(1, n+1):\n        # check if number is even\n        if i % 2 == 0:\n            # increment count\n            count += 1\n            \n            # check if count is equal to 4\n            if count == 4:\n                return True\n            \n    # if count is not equal to 4, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    return n % 8 == 0 or n % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n < 8:\n        return False\n    \n    for i in range(2, n//2 + 1, 2):\n        for j in range(2, n//2 + 1, 2):\n            for k in range(2, n//2 + 1, 2):\n                for l in range(2, n//2 + 1, 2):\n                    if i + j + k + l == n:\n                        return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # check if n is even\n    if n % 2 != 0:\n        return False\n\n    # check if n can be written as the sum of exactly 4 positive even numbers\n    for i in range(1, n//2 + 1):\n        for j in range(1, n//2 + 1):\n            for k in range(1, n//2 + 1):\n                for l in range(1, n//2 + 1):\n                    if 2*i + 2*j + 2*k + 2*l == n:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0 or n < 8:\n        return False\n    else:\n        return True",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n    if n < 8:\n        return False\n    for i in range(2, n//2 + 1, 2):\n        if (n - i) % 2 == 0:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    for i in range(1, n // 2 + 1):\n        for j in range(i, n // 2 + 1):\n            for k in range(j, n // 2 + 1):\n                for l in range(k, n // 2 + 1):\n                    if i % 2 == 0 and j % 2 == 0 and k % 2 == 0 and l % 2 == 0:\n                        if i + j + k + l == n:\n                            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    count = 0\n    for i in range(2, n, 2):\n        for j in range(2, n, 2):\n            for k in range(2, n, 2):\n                for l in range(2, n, 2):\n                    if i + j + k + l == n:\n                        count += 1\n    if count > 0:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n    \n    for i in range(2, n // 2 + 1, 2):\n        if n - i * 4 >= 0:\n            return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # check if n is less than 8, since it is not possible to express a number less than 8 as the sum of exactly 4 positive even numbers\n    if n < 8:\n        return False\n\n    # loop through all possible values of the first even number\n    for i in range(2, n - 5, 2):\n        # loop through all possible values of the second even number\n        for j in range(i, n - 3, 2):\n            # loop through all possible values of the third even number\n            for k in range(j, n - 1, 2):\n                # calculate the value of the fourth even number by subtracting the sum of the first three even numbers from n\n                l = n - i - j - k\n                # check if l is even and positive\n                if l % 2 == 0 and l > 0:\n                    return True\n    \n    return False",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n    \n    count = 0\n    for i in range(2, n, 2):\n        for j in range(2, n, 2):\n            for k in range(2, n, 2):\n                for l in range(2, n, 2):\n                    if i + j + k + l == n:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    count = 0\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            count += 1\n            if count == 4:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0 or n <= 0:\n        return False\n    for i in range(1, n // 2 + 1):\n        for j in range(i, n // 2 + 1):\n            for k in range(j, n // 2 + 1):\n                for l in range(k, n // 2 + 1):\n                    if i + j + k + l == n and i % 2 == 0 and j % 2 == 0 and k % 2 == 0 and l % 2 == 0:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n < 8 or n % 2 != 0:\n        return False\n    \n    count = 0\n    for i in range(2, n//2 + 1, 2):\n        for j in range(2, n//2 + 1, 2):\n            for k in range(2, n//2 + 1, 2):\n                for l in range(2, n//2 + 1, 2):\n                    if i + j + k + l == n:\n                        count += 1\n    \n    return count > 0",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n    else:\n        num_even = 0\n        for i in range(1, n+1):\n            if i % 2 == 0:\n                num_even += 1\n                if num_even == 4:\n                    return True\n            if num_even > 4:\n                return False\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    count = 0\n    for i in range(2, n + 1, 2):\n        for j in range(2, n + 1, 2):\n            for k in range(2, n + 1, 2):\n                for l in range(2, n + 1, 2):\n                    if i + j + k + l == n:\n                        count += 1\n    return count > 0",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    if n % 2 != 0:\n        return False\n\n    count = 0\n    for i in range(2, n // 2 + 1, 2):\n        for j in range(2, n // 2 + 1, 2):\n            for k in range(2, n // 2 + 1, 2):\n                for l in range(2, n // 2 + 1, 2):\n                    if i + j + k + l == n:\n                        count += 1\n\n    return count > 0",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    count = 0\n    for i in range(2, n, 2):\n        for j in range(2, n, 2):\n            for k in range(2, n, 2):\n                for l in range(2, n, 2):\n                    if i + j + k + l == n:\n                        count += 1\n    return count > 0",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    count = 0\n    for i in range(2, n+1, 2):\n        for j in range(2, n+1, 2):\n            for k in range(2, n+1, 2):\n                for l in range(2, n+1, 2):\n                    if i + j + k + l == n:\n                        count += 1\n    if count >= 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_equal_to_sum_even(n):\n    # Initialize a variable to keep track of the count of even numbers\n    count = 0\n    \n    # Loop from 2 to n, checking if each number is even and adding it to the count if it is\n    for i in range(2, n+1, 2):\n        count += 1\n        \n        # If the count reaches 4, return True\n        if count == 4:\n            return True\n        \n        # If the sum of the current number and the previous even numbers is equal to n,\n        # return True\n        if count > 1 and i + (count-1)*2 == n:\n            return True\n        \n    # If the loop completes and the count is still not equal to 4, return False\n    return False",
+            "logp": null
+        }
+    ]
+}

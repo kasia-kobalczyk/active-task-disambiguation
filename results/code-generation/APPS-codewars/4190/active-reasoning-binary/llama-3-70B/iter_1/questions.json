@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"bcd\") == True",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"aaaab\") == False",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"aeib\") == True",
+        "assert is_alt(\"xyz\") == True",
+        "assert is_alt(\"bcd\") == True",
+        "assert is_alt(\"aebb\") == False",
+        "assert is_alt(\"abcde\") == False",
+        "assert is_alt(\"abcdefghijklmnopqrstuvwxyz\") == False",
+        "assert is_alt(\"hello\") == False",
+        "assert is_alt(\"xeybzkuo\") == True"
+    ],
+    "2": [
+        "assert is_alt(\"xoxo\") == True",
+        "assert is_alt(\"bcd\") == True",
+        "assert is_alt(\"aebb\") == False",
+        "assert is_alt(\"enek\") == True",
+        "assert is_alt(\"abcde\") == False",
+        "assert is_alt(\"abcdefghijklmnopqrstuvwxyz\") == False",
+        "assert is_alt(\"hello\") == False"
+    ],
+    "3": [
+        "assert is_alt(\"bcd\") == True",
+        "assert is_alt(\"bcdfghjklmnpqrstvwxyz\") == True",
+        "assert is_alt(\"aebb\") == False",
+        "assert is_alt(\"abcde\") == False",
+        "assert is_alt(\"hello\") == False",
+        "assert is_alt(\"abcdabcd\") == False",
+        "assert is_alt(\"abababab\") == True"
+    ]
+}

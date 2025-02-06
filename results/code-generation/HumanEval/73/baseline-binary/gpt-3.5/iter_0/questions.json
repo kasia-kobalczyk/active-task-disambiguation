@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert smallest_change([1, 2, 3, 4, 5]) == 2",
+        "assert smallest_change([1, 2, 3, 1, 5, 1]) == 2\n\n# We can change the elements at indices 1 and 2 from [2, 3] to [1, 1] to make the array palindromic.",
+        "assert smallest_change([1, 2, 3, 4, 3, 2, 1]) == 0"
+    ],
+    "1": [
+        "assert smallest_change([1, 2, 3, 2, 1]) == 0",
+        "assert smallest_change([1, 1, 2, 3, 4, 5]) == 2",
+        "assert smallest_change([1, 2, 3, 4, 5, 5, 4, 3, 2, 1]) == 0\n# Explanation: The array is already palindromic, so no changes are needed."
+    ],
+    "2": [
+        "assert smallest_change([2, 3, 2, 2, 1]) == 1\n# The possible palindromic array is [1, 2, 2, 2, 1], which requires changing one element."
+    ],
+    "3": [
+        "assert smallest_change([1, 2, 3, 4]) == 2\n# The possible palindromic arrays are [1, 2, 2, 1] or [4, 3, 3, 4].",
+        "assert smallest_change([2, 3, 2, 1]) == 1"
+    ]
+}

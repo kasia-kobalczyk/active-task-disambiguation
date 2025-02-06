@@ -1,0 +1,61 @@
+{
+    "0": [
+        {
+            "content": "def who_is_winner(pieces_positions):\n    winner = {\"Red\": False, \"Yellow\": False}\n    for piece in pieces_positions:\n        column, color = piece[0], piece.split(\"_\")[1]\n        for line in LINES:\n            if (column, str(int(ROWS[LINES.index(line)]) - 1)) in line:\n                line.remove((column, str(int(ROWS[LINES.index(line)]) - 1)))\n                if len(line) < 4:\n                    line.clear()\n        if any(len([i for i in line if i[1] == str(int(ROWS[LINES.index(line)]) - 1) and i[1].split(\"_\")[1] == color]) >= 4 for line in LINES):\n            winner[color] = True\n    if winner[\"Red\"]:\n        return \"Red\"\n    elif winner[\"Yellow\"]:\n        return \"Yellow\"\n    else:\n        return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    winner = {\"Red\": False, \"Yellow\": False}\n    for piece in pieces_positions:\n        column, color = piece[0], piece.split(\"_\")[1]\n        for line in LINES:\n            if (column, str(int(ROWS[LINES.index(line)]) - 1)) in line:\n                line.remove((column, str(int(ROWS[LINES.index(line)]) - 1)))\n                if len(line) < 4:\n                    line.clear()\n        if any(len([i for i in line if i[1] == str(int(ROWS[LINES.index(line)]) - 1) and i[1].split(\"_\")[1] == color]) >= 4 for line in LINES):\n            winner[color] = True\n    if winner[\"Red\"]:\n        return \"Red\"\n    elif winner[\"Yellow\"]:\n        return \"Yellow\"\n    else:\n        return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    winner = {\"Red\": False, \"Yellow\": False}\n    for piece in pieces_positions:\n        column, color = piece[0], piece.split(\"_\")[1]\n        for line in LINES:\n            if (column, str(int(ROWS[LINES.index(line)]) - 1)) in line:\n                line.remove((column, str(int(ROWS[LINES.index(line)]) - 1)))\n                if len(line) < 4:\n                    line.clear()\n        if any(len([i for i in line if i[1] == str(int(ROWS[LINES.index(line)]) - 1) and i[1].split(\"_\")[1] == color]) >= 4 for line in LINES):\n            winner[color] = True\n    if winner[\"Red\"]:\n        return \"Red\"\n    elif winner[\"Yellow\"]:\n        return \"Yellow\"\n    else:\n        return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    winner = {\"Red\": False, \"Yellow\": False}\n    for piece in pieces_positions:\n        column, color = piece[0], piece.split(\"_\")[1]\n        for line in LINES:\n            if (column, str(int(ROWS[LINES.index(line)]) - 1)) in line:\n                line.remove((column, str(int(ROWS[LINES.index(line)]) - 1)))\n                if len(line) < 4:\n                    line.clear()\n        if any(len([i for i in line if i[1] == str(int(ROWS[LINES.index(line)]) - 1) and i[1].split(\"_\")[1] == color]) >= 4 for line in LINES):\n            winner[color] = True\n    if winner[\"Red\"]:\n        return \"Red\"\n    elif winner[\"Yellow\"]:\n        return \"Yellow\"\n    else:\n        return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    winner = {\"Red\": False, \"Yellow\": False}\n    for piece in pieces_positions:\n        column, color = piece[0], piece.split(\"_\")[1]\n        for line in LINES:\n            if (column, str(int(ROWS[LINES.index(line)]) - 1)) in line:\n                line.remove((column, str(int(ROWS[LINES.index(line)]) - 1)))\n                if len(line) < 4:\n                    line.clear()\n        if any(len([i for i in line if i[1] == str(int(ROWS[LINES.index(line)]) - 1) and i[1].split(\"_\")[1] == color]) >= 4 for line in LINES):\n            winner[color] = True\n    if winner[\"Red\"]:\n        return \"Red\"\n    elif winner[\"Yellow\"]:\n        return \"Yellow\"\n    else:\n        return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {column: [] for column in COLUMNS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[3:]\n        pieces_position_dict[column].append(color)\n\n    for color in set([piece[3:] for piece in pieces_positions]):\n        winning_combinations = [line for line in LINES if all(cell in pieces_position_dict[COLUMNS[i]] for cell, i in line) and all(pieces_position_dict[COLUMNS[i]].count(color) == 1 for cell, i in line)]\n        if any(len(line) == 4 for line in winning_combinations):\n            return color + \"_player\"\n\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n\n    return \"Game not finished\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {column: [] for column in COLUMNS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[3:]\n        pieces_position_dict[column].append(color)\n\n    for color in set([piece[3:] for piece in pieces_positions]):\n        winning_combinations = [line for line in LINES if all(cell in pieces_position_dict[COLUMNS[i]] for cell, i in line) and all(pieces_position_dict[COLUMNS[i]].count(color) == 1 for cell, i in line)]\n        if any(len(line) == 4 for line in winning_combinations):\n            return color + \"_player\"\n\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n\n    return \"Game not finished\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {column: [] for column in COLUMNS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[3:]\n        pieces_position_dict[column].append(color)\n\n    for color in set([piece[3:] for piece in pieces_positions]):\n        winning_combinations = [line for line in LINES if all(cell in pieces_position_dict[COLUMNS[i]] for cell, i in line) and all(pieces_position_dict[COLUMNS[i]].count(color) == 1 for cell, i in line)]\n        if any(len(line) == 4 for line in winning_combinations):\n            return color + \"_player\"\n\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n\n    return \"Game not finished\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {column: [] for column in COLUMNS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[3:]\n        pieces_position_dict[column].append(color)\n\n    for color in set([piece[3:] for piece in pieces_positions]):\n        winning_combinations = [line for line in LINES if all(cell in pieces_position_dict[COLUMNS[i]] for cell, i in line) and all(pieces_position_dict[COLUMNS[i]].count(color) == 1 for cell, i in line)]\n        if any(len(line) == 4 for line in winning_combinations):\n            return color + \"_player\"\n\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n\n    return \"Game not finished\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {column: [] for column in COLUMNS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[3:]\n        pieces_position_dict[column].append(color)\n\n    for color in set([piece[3:] for piece in pieces_positions]):\n        winning_combinations = [line for line in LINES if all(cell in pieces_position_dict[COLUMNS[i]] for cell, i in line) and all(pieces_position_dict[COLUMNS[i]].count(color) == 1 for cell, i in line)]\n        if any(len(line) == 4 for line in winning_combinations):\n            return color + \"_player\"\n\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n\n    return \"Game not finished\"",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {column: [] for column in COLUMNS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[3:]\n        pieces_position_dict[column].append(color)\n\n    for color in set([piece[3:] for piece in pieces_positions]):\n        winning_combinations = [line for line in LINES if all(cell in pieces_position_dict[COLUMNS[i]] for cell, i in line) and all(pieces_position_dict[COLUMNS[i]].count(color) == 1 for cell, i in line)]\n        if any(len(line) == 4 for line in winning_combinations):\n            return color + \"_player\"\n\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n\n    return \"Game not finished\"",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    for column in zip(*[(i, piece[0], piece[1]) for i, piece in enumerate(pieces_positions) if piece[0] != piece[0][0]]):\n        for line in LINES:\n            elements = sorted((e for c, r, piece in line if c == column[1] and piece == column[2]), key=lambda e: e[1])\n            if elements[0][1] - elements[3][1] == 3:\n                return \"Yellow\" if elements[3][2] == 'Yellow' else \"Red\"",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {column: [] for column in COLUMNS}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[3:]\n        pieces_position_dict[column].append(color)\n\n    for color in set([piece[3:] for piece in pieces_positions]):\n        winning_combinations = [line for line in LINES if all(cell in pieces_position_dict[COLUMNS[i]] for cell, i in line) and all(pieces_position_dict[COLUMNS[i]].count(color) == 1 for cell, i in line)]\n        if any(len(line) == 4 for line in winning_combinations):\n            return color + \"_player\"\n\n    if len(pieces_positions) == 42:\n        return \"Draw\"\n\n    return \"Game not finished\"",
+            "logp": null
+        }
+    ],
+    "3": []
+}

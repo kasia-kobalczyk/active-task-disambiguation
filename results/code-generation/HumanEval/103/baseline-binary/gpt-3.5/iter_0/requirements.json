@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert rounded_avg(10, 1) == -1",
+        true
+    ],
+    "1": [
+        "assert rounded_avg(2, 3) == bin(3)[2:]",
+        false
+    ],
+    "2": [
+        "assert rounded_avg(5, 1) == -1",
+        true
+    ],
+    "3": [
+        "assert rounded_avg(5, 10) == '1'",
+        false
+    ]
+}

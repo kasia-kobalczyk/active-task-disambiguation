@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert find_children(\"aAaBbCc\") == \"AaaBbbCc\"",
+        "assert find_children(\"aAbaBb\") == \"AaaBbb\"",
+        "assert find_children(\"ZaAzAcC\") == \"AaaCcZz\"",
+        "assert find_children(\"AbAbAb\") == \"AaAaAa\"",
+        "assert find_children(\"aaaBbbCCCddd\") == \"AaaBbbCCCddd\"",
+        "assert find_children(\"CbBaAa\") == \"AaaBbbCc\"",
+        "assert find_children(\"WXYZabcd\") == \"abcdWXYZ\"",
+        "assert find_children(\"mNoOpqR\") == \"NoOpqRm\"",
+        "assert find_children(\"ZzYyXx\") == \"XxYyZz\""
+    ],
+    "1": [
+        "assert find_children(\"TtSsRrQq\") == \"QRSTqrst\"",
+        "assert find_children(\"MmLlKkJj\") == \"JKLMjklm\"",
+        "assert find_children(\"abcABC\") == \"AaBbCc\"",
+        "assert find_children(\"FfEeDdCcBbAa\") == \"AaBbCcDdEeFf\"",
+        "assert find_children(\"XYZxyz\") == \"XYZxyz\"",
+        "assert find_children(\"DdCcBbAa\") == \"ABCDabcd\"",
+        "assert find_children(\"KkJjIiHh\") == \"HIJKhijk\"",
+        "assert find_children(\"ZzYyXxWw\") == \"WXYZwxyz\"",
+        "assert find_children(\"abBcCdDeEfF\") == \"AaBbCcDdEeFf\""
+    ],
+    "2": [
+        "assert find_children(\"MmLlKkJj\") == \"JKLMjklm\"",
+        "assert find_children(\"abcABC\") == \"AaBbCc\"",
+        "assert find_children(\"FfEeDdCcBbAa\") == \"AaBbCcDdEeFf\"",
+        "assert find_children(\"XYZxyz\") == \"XYZxyz\"",
+        "assert find_children(\"DdCcBbAa\") == \"ABCDabcd\"",
+        "assert find_children(\"KkJjIiHh\") == \"HIJKhijk\"",
+        "assert find_children(\"ZzYyXxWw\") == \"WXYZwxyz\"",
+        "assert find_children(\"abBcCdDeEfF\") == \"AaBbCcDdEeFf\""
+    ],
+    "3": [
+        "assert find_children(\"abcABC\") == \"AaBbCc\"",
+        "assert find_children(\"FfEeDdCcBbAa\") == \"AaBbCcDdEeFf\"",
+        "assert find_children(\"XYZxyz\") == \"XYZxyz\"",
+        "assert find_children(\"DdCcBbAa\") == \"ABCDabcd\"",
+        "assert find_children(\"KkJjIiHh\") == \"HIJKhijk\"",
+        "assert find_children(\"ZzYyXxWw\") == \"WXYZwxyz\"",
+        "assert find_children(\"abBcCdDeEfF\") == \"AaBbCcDdEeFf\""
+    ]
+}

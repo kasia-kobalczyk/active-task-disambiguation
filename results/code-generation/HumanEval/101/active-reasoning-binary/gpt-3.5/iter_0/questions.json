@@ -1,0 +1,48 @@
+{
+    "0": [
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"hello,world\") == ['hello', 'world']",
+        "assert words_string(\"one,two,three,four\") == ['one', 'two', 'three', 'four']",
+        "assert words_string(\"foo bar baz\") == ['foo', 'bar', 'baz']",
+        "assert words_string(\"apple orange,banana\") == ['apple', 'orange', 'banana']",
+        "assert words_string(\"one, two, three\") == [\"one\", \"two\", \"three\"]",
+        "assert words_string(\"apple banana, cherry\") == [\"apple\", \"banana\", \"cherry\"]",
+        "assert words_string(\"\") == []",
+        "assert words_string(\"Python is awesome\") == ['Python', 'is', 'awesome']",
+        "assert words_string(\"hello world\") == [\"hello\", \"world\"]"
+    ],
+    "1": [
+        "assert words_string(\"one,two,three,four\") == [\"one\", \"two\", \"three\", \"four\"]",
+        "assert words_string(\"apple,banana,cherry,grape\") == [\"apple\", \"banana\", \"cherry\", \"grape\"]",
+        "assert words_string(\"hello world\") == [\"hello\", \"world\"]  ",
+        "assert words_string(\"python,programming,language\") == [\"python\", \"programming\", \"language\"]",
+        "assert words_string(\"Hello,World\") == [\"Hello\", \"World\"]  ",
+        "assert words_string(\"one,two,three\") == [\"one\", \"two\", \"three\"]  ",
+        "assert words_string(\"\") == []",
+        "assert words_string(\"Hello,,World\") == [\"Hello\", \"\", \"World\"]  # Multiple consecutive commas should be treated as empty words",
+        "assert words_string(\"alpha beta gamma\") == [\"alpha\", \"beta\", \"gamma\"]",
+        "assert words_string(\"hello world\") == [\"hello\", \"world\"]"
+    ],
+    "2": [
+        "assert words_string(\"apple,banana\") == [\"apple\", \"banana\"]",
+        "assert words_string(\"hello world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"car bike scooter\") == [\"car\", \"bike\", \"scooter\"]",
+        "assert words_string(\"red,green,blue\") == [\"red\", \"green\", \"blue\"]",
+        "assert words_string(\"Hello   world\") == [\"Hello\", \"world\"]\n# Explanation: The input string \"Hello   world\" is split into individual words \"Hello\", \"world\" using the space as the separator. Additional spaces are removed.",
+        "assert words_string(\"1,2,3,4\") == [\"1\", \"2\", \"3\", \"4\"]",
+        "assert words_string(\"dog cat mouse\") == [\"dog\", \"cat\", \"mouse\"]",
+        "assert words_string(\"apple,banana,orange\") == [\"apple\", \"banana\", \"orange\"]",
+        "assert words_string(\"cat, dog,  rabbit ,mouse\") == [\"cat\", \"dog\", \"rabbit\", \"mouse\"]",
+        "assert words_string(\"1,2,3,4,5\") == [\"1\", \"2\", \"3\", \"4\", \"5\"]"
+    ],
+    "3": [
+        "assert words_string(\"This      is   a   test\") == [\"This\", \"is\", \"a\", \"test\"]",
+        "assert words_string(\"code challenges\") == [\"code\", \"challenges\"]",
+        "assert words_string(\"   \") == []\n# Explanation: The input string consists only of spaces, so the result is an empty list.",
+        "assert words_string(\"hello\") == [\"hello\"]",
+        "assert words_string(\"    hello,    world    \") == [\"hello\", \"world\"]",
+        "assert words_string(\"hello,world,how are you\") == [\"hello\", \"world\", \"how\", \"are\", \"you\"]",
+        "assert words_string(\"\") == []",
+        "assert words_string(\"hello,     world, how\\tare\\tyou\") == [\"hello\", \"world\", \"how\", \"are\", \"you\"]"
+    ]
+}

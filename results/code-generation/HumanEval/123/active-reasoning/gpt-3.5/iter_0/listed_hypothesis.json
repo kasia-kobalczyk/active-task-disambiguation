@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "def get_odd_collatz(n):\n    sequence = []\n    while n != 1:\n        if n % 2 == 1:\n            sequence.append(n)\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n    sequence.append(1)\n    return sorted(sequence)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    sequence = []\n    while n != 1:\n        sequence.append(n)\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n    sequence.append(n)\n    return sorted([x for x in sequence if x % 2 == 1])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        if n % 2 != 0:\n            collatz_seq.append(n)\n    return sorted(collatz_seq)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]  # initialize the sequence with the given number\n\n    while n != 1:\n        if n % 2 == 0:  # if n is even, divide it by 2\n            n = n // 2\n        else:  # if n is odd, multiply it by 3 and add 1\n            n = 3 * n + 1\n\n        if n % 2 != 0:  # if the new number is odd, add it to the sequence\n            collatz_seq.append(n)\n\n    return sorted(collatz_seq)  # return the sorted list of odd numbers in the sequence",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz = [n]  # start the collatz sequence with n\n    while n != 1:  # stop when n reaches 1\n        if n % 2 == 0:  # if n is even\n            n = n // 2  # divide n by 2\n        else:  # if n is odd\n            n = 3 * n + 1  # multiply n by 3 and add 1\n        if n % 2 != 0:  # if n is odd\n            collatz.append(n)  # add n to the collatz sequence\n    collatz.sort()  # sort the collatz sequence in increasing order\n    return collatz",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_sequence.append(n)\n    \n    odd_numbers = [x for x in collatz_sequence if x % 2 != 0]\n    return sorted(odd_numbers)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n    odd_collatz_seq = [num for num in collatz_seq if num % 2 == 1]\n    return sorted(odd_collatz_seq)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_sequence.append(n)\n    \n    odd_numbers = [x for x in collatz_sequence if x % 2 != 0]\n    return sorted(odd_numbers)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz.append(n)\n    return sorted([num for num in collatz if num % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz = [n]\n    while n > 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        if n % 2 == 1:\n            collatz.append(n)\n    return sorted(collatz)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n    return sorted(set(filter(lambda x: x % 2 == 1, collatz_seq)))",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n] # initialize the collatz sequence with the given number\n    while n != 1: # continue the sequence until n becomes 1\n        if n % 2 == 0: # if n is even\n            n = n // 2 # divide n by 2\n        else: # if n is odd\n            n = 3 * n + 1 # multiply n by 3 and add 1\n        collatz_seq.append(n) # add the next term to the sequence\n    odd_nums = [num for num in collatz_seq if num % 2 == 1] # filter out the even numbers from the sequence\n    return sorted(odd_nums) # return the sorted list of odd numbers in the collatz sequence",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_sequence.append(n)\n    \n    return sorted([num for num in collatz_sequence if num % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    sequence = [n]\n    while n > 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        sequence.append(n)\n    return sorted([x for x in sequence if x % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_list = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_list.append(n)\n\n    odd_collatz_list = sorted([x for x in collatz_list if x % 2 == 1])\n    return odd_collatz_list",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n    odd_seq = [num for num in collatz_seq if num % 2 != 0]\n    return sorted(odd_seq)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    sequence = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        sequence.append(n)\n\n    return sorted(list(filter(lambda x: x % 2 == 1, sequence)))",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n    return sorted([num for num in collatz_seq if num % 2 == 1])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = (3 * n) + 1\n        collatz_seq.append(n)\n    return sorted([num for num in collatz_seq if num % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = []\n    while n != 1:\n        collatz_sequence.append(n)\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n    collatz_sequence.append(1)\n    \n    odd_numbers = [num for num in collatz_sequence if num % 2 != 0]\n    \n    return sorted(odd_numbers)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_sequence.append(n)\n    return sorted(set(filter(lambda x: x % 2 == 1, collatz_sequence)))",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    \n    while n > 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n    \n    odd_seq = [x for x in collatz_seq if x % 2 != 0]\n    return sorted(odd_seq)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = [n]\n    \n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n            \n        collatz_sequence.append(n)\n        \n    return sorted(list(filter(lambda x: x % 2 != 0, collatz_sequence)))",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def get_odd_collatz(n):\n    collatz = [n]\n    \n    while collatz[-1] != 1:\n        if collatz[-1] % 2 == 0:\n            collatz.append(collatz[-1] // 2)\n        else:\n            collatz.append(3 * collatz[-1] + 1)\n    \n    return sorted([x for x in collatz if x % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n    odd_numbers = [num for num in collatz_seq if num % 2 != 0]\n    return sorted(odd_numbers)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    sequence = [n] # start with the given number as the first term\n    while n != 1: # loop until n reaches 1\n        if n % 2 == 0: # if n is even\n            n = n // 2 # divide n by 2\n        else: # if n is odd\n            n = 3 * n + 1 # multiply n by 3 and add 1\n        sequence.append(n) # add the next term to the sequence\n    # filter out the even numbers and sort the remaining odd numbers\n    odd_sequence = sorted([num for num in sequence if num % 2 != 0])\n    return odd_sequence",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_sequence.append(n)\n    odd_numbers = [num for num in collatz_sequence if num % 2 == 1]\n    return sorted(odd_numbers)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = []\n    while n != 1:\n        collatz_sequence.append(n)\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n\n    collatz_sequence.append(1)\n\n    return sorted([num for num in collatz_sequence if num % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = []\n    while n != 1:\n        collatz_seq.append(n)\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n    \n    collatz_seq.append(1)\n    odd_collatz_seq = sorted([num for num in collatz_seq if num % 2 != 0])\n    return odd_collatz_seq",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = []\n    while n != 1:\n        collatz_seq.append(n)\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n    collatz_seq.append(1)\n    odd_nums = [num for num in collatz_seq if num % 2 == 1]\n    return sorted(odd_nums)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_list = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_list.append(n)\n    odd_collatz_list = sorted([num for num in collatz_list if num % 2 != 0])\n    return odd_collatz_list",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = (3 * n) + 1\n        collatz.append(n)\n    \n    odd_collatz = [num for num in collatz if num % 2 != 0]\n    \n    return sorted(odd_collatz)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n    odd_numbers = [x for x in collatz_seq if x % 2 == 1]\n    return sorted(odd_numbers)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = [n]\n    while n > 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_sequence.append(n)\n\n    odd_numbers = [num for num in collatz_sequence if num % 2 == 1]\n    return sorted(odd_numbers) if len(odd_numbers) > 0 else [1]",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n\n    odd_collatz_seq = [num for num in collatz_seq if num % 2 == 1]\n    return sorted(odd_collatz_seq)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz.append(n)\n    return sorted([num for num in collatz if num % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz.append(n)\n    return sorted([x for x in collatz if x % 2 != 0])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n    return sorted([x for x in collatz_seq if x % 2 == 1])",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_list = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_list.append(n)\n    odd_list = [x for x in collatz_list if x % 2 != 0]\n    return sorted(odd_list)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    def collatz_sequence(num):\n        sequence = [num]\n        while num > 1:\n            if num % 2 == 0:\n                num = num // 2\n            else:\n                num = 3 * num + 1\n            sequence.append(num)\n        return sequence\n\n    collatz_seq = collatz_sequence(n)\n    odd_seq = [num for num in collatz_seq if num % 2 == 1]\n    return sorted(odd_seq)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_seq = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        collatz_seq.append(n)\n    odd_seq = [num for num in collatz_seq if num % 2 != 0]\n    return sorted(odd_seq)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    seq = [n]\n    while n > 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        seq.append(n)\n    odd_seq = [num for num in seq if num % 2 != 0]\n    return sorted(odd_seq)",
+            "logp": null
+        },
+        {
+            "content": "def get_odd_collatz(n):\n    collatz_sequence = [n]\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = (3 * n) + 1\n        collatz_sequence.append(n)\n    odd_collatz_sequence = [num for num in collatz_sequence if num % 2 != 0]\n    return sorted(odd_collatz_sequence)",
+            "logp": null
+        }
+    ]
+}

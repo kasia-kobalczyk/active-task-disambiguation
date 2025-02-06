@@ -1,0 +1,47 @@
+{
+    "0": [
+        "file_name_check(\"invalid..name\")",
+        "file_name_check(\"test.file.dll\")",
+        "file_name_check(\"file123.exe\")",
+        "file_name_check(\"example.txt\")",
+        "file_name_check(\"1file.txt\")",
+        "file_name_check(\"1invalid.txt\")",
+        "file_name_check(\"valid_name.with_too_many_digits123.txt\")",
+        "file_name_check(\"valid_file.dll\")"
+    ],
+    "1": [
+        "file_name_check(\"file123.exe\")",
+        "file_name_check(\"example.txt\")",
+        "file_name_check(\"test123.exe\")",
+        "file_name_check(\"my_file.dll\")",
+        "file_name_check(\"2wrongname.txt\")",
+        "file_name_check(\"1invalid.txt\")",
+        "file_name_check(\"validName.unknown\")",
+        "file_name_check(\"too.many.2.dots.txt\")",
+        "file_name_check(\"valid_file_name.txt\")",
+        "file_name_check(\"myfile.dll\")"
+    ],
+    "2": [
+        "file_name_check(\"report.2023.doc\")",
+        "file_name_check(\"file_with_many_digits1234.exe\")",
+        "file_name_check(\"summary.doc\")",
+        "file_name_check(\"data1.txt\")",
+        "file_name_check(\"my.document.excel\")",
+        "file_name_check(\"file.name123.exe\")",
+        "file_name_check(\"config.yaml\")",
+        "file_name_check(\"document.pdf\")",
+        "file_name_check(\"data_file2021.dll\")",
+        "file_name_check(\"report_2022.txt\")"
+    ],
+    "3": [
+        "file_name_check(\"data1234.exe\")",
+        "file_name_check(\"notes.docx\")",
+        "file_name_check(\"3invalid.ext\")",
+        "file_name_check(\"validFileName.exe\")",
+        "file_name_check(\"file.name\")",
+        "file_name_check(\"example123.dll\")",
+        "file_name_check(\"data_file.txt\")",
+        "file_name_check(\"report.2023.dll\")",
+        "file_name_check(\"document.txt\")"
+    ]
+}

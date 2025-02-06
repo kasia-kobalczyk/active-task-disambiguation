@@ -1,0 +1,18 @@
+{
+    "0": [
+        "check_dict_case({'A': 1, 'B': 2, 'C': 3})",
+        "True"
+    ],
+    "1": [
+        "check_dict_case({'a': 1, 'B': 2, 'C': 3})",
+        "False"
+    ],
+    "2": [
+        "check_dict_case({'hello': 1, 'world': 2})",
+        "True"
+    ],
+    "3": [
+        "check_dict_case({})",
+        "False"
+    ]
+}

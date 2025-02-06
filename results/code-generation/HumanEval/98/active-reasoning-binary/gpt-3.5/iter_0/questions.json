@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert count_upper(\"AI\") == 0",
+        "assert count_upper(\"Python is Fun\") == 2",
+        "assert count_upper(\"aEiOu\") == 0",
+        "assert count_upper(\"Hello World\") == 1",
+        "assert count_upper(\"BANANA\") == 2",
+        "assert count_upper(\"Hello\") == 0",
+        "assert count_upper(\"PyThOn\") == 2",
+        "assert count_upper(\"AEIOU\") == 3",
+        "assert count_upper(\"cOdE\") == 1"
+    ],
+    "1": [
+        "assert count_upper(\"a\") == 0",
+        "assert count_upper(\"A\") == 0",
+        "assert count_upper(\"aeiou\") == 0",
+        "assert count_upper(\"AeI\") == 1",
+        "assert count_upper(\"\") == 0",
+        "assert count_upper(\"AEIOU\") == 3",
+        "assert count_upper(\"abcdEfghIjklmnOpqrstUvwxyz\") == 2"
+    ],
+    "2": [
+        "assert count_upper(\"AEIOUY\") == 4",
+        "assert count_upper(\"\") == 0",
+        "assert count_upper(\"H\") == 0",
+        "assert count_upper(\"Hello\") == 0",
+        "assert count_upper(\"AEIOU\") == 3",
+        "assert count_upper(\"AEIOU\") == 5",
+        "assert count_upper(\"aEiOuY\") == 1"
+    ],
+    "3": [
+        "assert count_upper(\"\") == 0",
+        "assert count_upper(\"H\") == 0",
+        "assert count_upper(\"Hello\") == 0",
+        "assert count_upper(\"AEIOU\") == 3",
+        "assert count_upper(\"AEIOU\") == 5",
+        "assert count_upper(\"aEiOuY\") == 1"
+    ]
+}

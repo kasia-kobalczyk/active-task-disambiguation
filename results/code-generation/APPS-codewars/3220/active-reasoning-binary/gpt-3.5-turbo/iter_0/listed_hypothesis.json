@@ -1,0 +1,122 @@
+{
+    "0": [
+        {
+            "content": "def solve(a, b):\n    # Generate the list of numbers in the given range\n    numbers = list(range(a, b+1))\n    \n    # Initialize the sum of the lowest members of each pair\n    sum_of_lowest_members = 0\n    \n    # Iterate over all numbers in the range\n    for num in numbers:\n        # Check if the number is a lowest member of a pair\n        if num in HARMO_RATIOS:\n            # Get the ratio for the current number\n            ratio = HARMO_RATIOS[num]\n            \n            # Get the list of numbers with the same ratio\n            numbers_with_same_ratio = HARMO_GROUPS[ratio]\n            \n            # Get the index of the current number in the list\n            index = bisect(numbers_with_same_ratio, num)\n            \n            # If the index is even, add the number to the sum\n            if index % 2 == 0:\n                sum_of_lowest_members += num\n    \n    # Return the sum of the lowest members of each pair\n    return sum_of_lowest_members",
+            "logp": null
+        },
+        {
+            "content": "    \"\"\"\n    Given a range [a, b], the task is to group the numbers into pairs with the same ratios. \n    Then, return the sum of the lowest member of each pair in the range.\n    \"\"\"\n    ratios = []\n    for i in range(a, b+1):\n        divisors_sum = sum([j for j in range(1, i+1) if i % j == 0])\n        ratio = divisors_sum / i\n        ratios.append((i, ratio))\n    \n    pairs = []\n    for i in range(len(ratios)):\n        for j in range(i+1, len(ratios)):\n            if ratios[i][1] == ratios[j][1]:\n                pairs.append((ratios[i][0], ratios[j][0]))\n    \n    if len(pairs) == 0:\n        return 0\n    \n    lowest_members = [min(pair) for pair in pairs]\n    return sum(lowest_members)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    pairs = []\n    for i in range(a,b+1):\n        for j in range(i+1,b+1):\n            ratio = i/j\n            if ratio == sum(divisors(i))/i == sum(divisors(j))/j:\n                pairs.append((i,j))\n    if pairs:\n        return sum(min(pair) for pair in pairs)\n    else:\n        return 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    result = 0\n\n    for i in range(a, b):\n        divisors_sum = sum([d for d in range(1, i+1) if i % d == 0])\n\n        for j in range(i+1, b):\n            divisors_sum2 = sum([d for d in range(1, j+1) if j % d == 0])\n\n            if divisors_sum != 0 and divisors_sum2 != 0 and divisors_sum/divisors_sum2 == 2:\n                result += i\n                break\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    if a >= b:\n        return 0\n\n    pairs = []\n    for i in range(a, b):\n        for j in range(i+1, b+1):\n            if i == j:\n                continue\n            ratio = i / j\n            if ratio in pairs:\n                continue\n            if ratio >= 1:\n                pairs.append(ratio)\n    \n    return sum(pairs)",
+            "logp": null
+        },
+        {
+            "content": "from collections import defaultdict\nfrom fractions import Fraction\nfrom bisect import bisect_left as bisect\n\ndef solve(a,b):\n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1,7001)]\n\n    harmonicity = defaultdict(set)\n    for n,h in enumerate(harmonic): harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h,s in harmonicity.items() if len(s) > 1}\n    HARMO_RATIOS = {n: h for h,lst in HARMO_GROUPS.items() for n in lst}\n    HARMO_NUM    = sorted(HARMO_RATIOS.keys())\n    \n    return sum(min(a,b) for a,b in zip(HARMO_NUM[bisect(HARMO_NUM, a):],HARMO_NUM[bisect(HARMO_NUM, b):]))",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    pairs = []\n    for x in range(a,b):\n        for y in range(x+1,b+1):\n            ratio = Fraction(x,y)\n            if ratio in HARMO_GROUPS:\n                pairs.append((x,y))\n    if pairs:\n        return sum([min(pair) for pair in pairs])\n    else:\n        return 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    # Get the subset of harmonicity groups that fall within the range(a, b)\n    relevant_groups = [group for group in HARMO_GROUPS.values() if group[0] <= b and group[-1] >= a]\n    \n    # If there are no relevant groups, return 0\n    if len(relevant_groups) == 0:\n        return 0\n    \n    # Get the pairs with the same ratios\n    pairs = []\n    for group in relevant_groups:\n        ratios = [HARMO_RATIOS[n] for n in group]\n        for i in range(len(group)):\n            for j in range(i+1, len(group)):\n                if ratios[i] == ratios[j]:\n                    pairs.append((group[i], group[j]))\n    \n    # Calculate the sum of the lowest member of each pair\n    result = sum(min(pair) for pair in pairs)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    sum_of_lowest = 0\n    for i in range(a, b):\n        for j in range(i + 1, b + 1):\n            if i in HARMO_GROUPS[HARMO_RATIOS[j]]:\n                sum_of_lowest += i\n                break\n    return sum_of_lowest",
+            "logp": null
+        },
+        {
+            "content": "from itertools import combinations\n\ndef solve(a, b):\n    pair_sum = 0\n    for x, y in combinations(range(a, b+1), 2):\n        ratio = y / x\n        if ratio.is_integer():\n            pair_sum += min(x, y)\n    return pair_sum",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def solve(a, b):\n    # Generate the list of numbers in the given range\n    numbers = list(range(a, b+1))\n    \n    # Initialize the sum of the lowest members of each pair\n    sum_of_lowest_members = 0\n    \n    # Iterate over all numbers in the range\n    for num in numbers:\n        # Check if the number is a lowest member of a pair\n        if num in HARMO_RATIOS:\n            # Get the ratio for the current number\n            ratio = HARMO_RATIOS[num]\n            \n            # Get the list of numbers with the same ratio\n            numbers_with_same_ratio = HARMO_GROUPS[ratio]\n            \n            # Get the index of the current number in the list\n            index = bisect(numbers_with_same_ratio, num)\n            \n            # If the index is even, add the number to the sum\n            if index % 2 == 0:\n                sum_of_lowest_members += num\n    \n    # Return the sum of the lowest members of each pair\n    return sum_of_lowest_members",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    if a >= b:\n        return 0\n\n    pairs = []\n    for i in range(a, b):\n        for j in range(i+1, b+1):\n            if i == j:\n                continue\n            ratio = i / j\n            if ratio in pairs:\n                continue\n            if ratio >= 1:\n                pairs.append(ratio)\n    \n    return sum(pairs)",
+            "logp": null
+        },
+        {
+            "content": "from collections import defaultdict\nfrom fractions import Fraction\nfrom bisect import bisect_left as bisect\n\ndef solve(a,b):\n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1,7001)]\n\n    harmonicity = defaultdict(set)\n    for n,h in enumerate(harmonic): harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h,s in harmonicity.items() if len(s) > 1}\n    HARMO_RATIOS = {n: h for h,lst in HARMO_GROUPS.items() for n in lst}\n    HARMO_NUM    = sorted(HARMO_RATIOS.keys())\n    \n    return sum(min(a,b) for a,b in zip(HARMO_NUM[bisect(HARMO_NUM, a):],HARMO_NUM[bisect(HARMO_NUM, b):]))",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    pairs = []\n    for x in range(a,b):\n        for y in range(x+1,b+1):\n            ratio = Fraction(x,y)\n            if ratio in HARMO_GROUPS:\n                pairs.append((x,y))\n    if pairs:\n        return sum([min(pair) for pair in pairs])\n    else:\n        return 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    # Get the subset of harmonicity groups that fall within the range(a, b)\n    relevant_groups = [group for group in HARMO_GROUPS.values() if group[0] <= b and group[-1] >= a]\n    \n    # If there are no relevant groups, return 0\n    if len(relevant_groups) == 0:\n        return 0\n    \n    # Get the pairs with the same ratios\n    pairs = []\n    for group in relevant_groups:\n        ratios = [HARMO_RATIOS[n] for n in group]\n        for i in range(len(group)):\n            for j in range(i+1, len(group)):\n                if ratios[i] == ratios[j]:\n                    pairs.append((group[i], group[j]))\n    \n    # Calculate the sum of the lowest member of each pair\n    result = sum(min(pair) for pair in pairs)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    result = 0\n    for n in HARMO_NUM[bisect(HARMO_NUM, a):]:\n        if n >= b:\n            break\n        result += HARMO_GROUPS[HARMO_RATIOS[n]][0]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n\n    def divisors(n):\n        divs = [1]\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                divs.append(i)\n                if i != n // i:\n                    divs.append(n // i)\n        return divs\n\n    pairs = []\n    for i in range(a,b+1):\n        divs = divisors(i)\n        for j in range(i+1,b+1):\n            if len(divs) == len(divisors(j)) and all(div in divisors(j) for div in divs):\n                pairs.append((i, j))\n    if not pairs:\n        return 0\n    else:\n        return sum(min(pair) for pair in pairs)",
+            "logp": null
+        },
+        {
+            "content": "from collections import defaultdict\nfrom fractions import Fraction\nfrom bisect import bisect_left as bisect\n\ndef solve(a,b):\n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1,7001)]\n    \n    harmonicity = defaultdict(set)\n    for n,h in enumerate(harmonic): \n        harmonicity[h].add(n)\n    \n    HARMO_GROUPS = {h: sorted(s) for h,s in harmonicity.items() if len(s) > 1}\n    HARMO_RATIOS = {n: h for h,lst in HARMO_GROUPS.items() for n in lst}\n    HARMO_NUM    = sorted(HARMO_RATIOS.keys())\n    \n    result = 0\n    for num in range(a, b+1):\n        ratio = harmonic[num]\n        if ratio in HARMO_GROUPS:\n            group = HARMO_GROUPS[ratio]\n            idx = bisect(group, num)\n            result += group[idx-1]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n\n    def get_ratio(n):\n        if n in HARMO_RATIOS:\n            return HARMO_RATIOS[n]\n        idx = bisect(HARMO_NUM, n)\n        if idx >= len(HARMO_NUM):\n            return None\n        return HARMO_RATIOS[HARMO_NUM[idx]]\n\n    pairs = set()\n    for n in range(a,b+1):\n        ratio = get_ratio(n)\n        if ratio is None:\n            continue\n        pairs.add((n, ratio.denominator * ratio.numerator))\n\n    if len(pairs) == 0:\n        return 0\n\n    return sum(min(p) for p in pairs)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    # Initialize the sum of lowest members\n    lowest_sum = 0\n    \n    # Iterate through the range of numbers from a to b\n    for i in range(a, b+1):\n        # Check if the number is in HARMO_NUM\n        if i in HARMO_NUM:\n            # Get the harmonic ratio for the number\n            ratio = HARMO_RATIOS[i]\n            \n            # Get the list of numbers with the same harmonic ratio\n            harmonics = HARMO_GROUPS[ratio]\n            \n            # Find the index of the number in the list\n            index = bisect(harmonics, i)\n            \n            # Add the lowest member of the pair to the sum\n            lowest_sum += harmonics[index-1]\n    \n    # Return the sum of lowest members\n    return lowest_sum",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def solve(a,b):\n    if a >= b:\n        return 0\n    \n    pair_sum = 0\n    for i in range(a, b):\n        for j in range(i + 1, b):\n            ratio = i / j\n            if ratio == int(ratio):\n                pair_sum += i\n                break\n    \n    return pair_sum",
+            "logp": null
+        },
+        {
+            "content": "    result = 0\n    for i in range(a, b+1):\n        for j in range(i+1, b+1):\n            ratio = Fraction(i, j)\n            if ratio in HARMO_RATIOS:\n                result += i\n                break\n    return result",
+            "logp": null
+        },
+        {
+            "content": "    def find_pairs(ratio):\n        pairs = []\n        for n in HARMO_NUM:\n            if n >= a:\n                if n > b:\n                    break\n                ratio_idx = bisect(HARMO_NUM, ratio * n)\n                if HARMO_RATIOS.get(n) == HARMO_RATIOS.get(HARMO_NUM[ratio_idx]):\n                    pairs.append((n, HARMO_NUM[ratio_idx]))\n        return pairs\n\n    lowest_members = []\n    for ratio in set(HARMO_RATIOS.values()):\n        pairs = find_pairs(ratio)\n        if pairs:\n            lowest_members.append(min(pairs)[0])\n\n    if lowest_members:\n        return sum(lowest_members)\n    else:\n        return 0",
+            "logp": null
+        },
+        {
+            "content": "    result = 0\n    \n    for i in range(a, b):\n        for j in range(i+1, b+1):\n            if i in HARMO_RATIOS and j in HARMO_RATIOS and HARMO_RATIOS[i] == HARMO_RATIOS[j]:\n                result += i\n                break\n        \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return 0",
+            "logp": null
+        },
+        {
+            "content": "    low_sum = 0\n    for i in range(a, b+1):\n        if i in HARMO_RATIOS:\n            ratio = HARMO_RATIOS[i]\n            index = bisect(HARMO_NUM, i)\n            if HARMO_NUM[index-1] == i:\n                low_sum += i\n    return low_sum",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "    def find_pairs(ratio):\n        pairs = []\n        for n in HARMO_NUM:\n            if n >= a:\n                if n > b:\n                    break\n                ratio_idx = bisect(HARMO_NUM, ratio * n)\n                if HARMO_RATIOS.get(n) == HARMO_RATIOS.get(HARMO_NUM[ratio_idx]):\n                    pairs.append((n, HARMO_NUM[ratio_idx]))\n        return pairs\n\n    lowest_members = []\n    for ratio in set(HARMO_RATIOS.values()):\n        pairs = find_pairs(ratio)\n        if pairs:\n            lowest_members.append(min(pairs)[0])\n\n    if not lowest_members:\n        return 0\n    \n    return sum(lowest_members)",
+            "logp": null
+        },
+        {
+            "content": "    result = 0\n    \n    for i in range(a, b):\n        for j in range(i+1, b+1):\n            if i in HARMO_RATIOS and j in HARMO_RATIOS and HARMO_RATIOS[i] == HARMO_RATIOS[j]:\n                result += i\n                break\n        \n    return result",
+            "logp": null
+        }
+    ]
+}

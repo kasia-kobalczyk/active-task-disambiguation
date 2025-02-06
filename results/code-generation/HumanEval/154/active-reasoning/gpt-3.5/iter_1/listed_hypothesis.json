@@ -1,0 +1,166 @@
+{
+    "0": [
+        {
+            "content": "def cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word\n    \"\"\"\n    # concatenate the first word with itself to handle rotation\n    a = a + a\n    \n    # check if the second word or any of its rotations is a substring in the first word\n    if b in a:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word\n    \"\"\"\n    if b in a:\n        return True\n    for i in range(len(b)):\n        b = b[1:] + b[0]\n        if b in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word\n    \"\"\"\n    # Concatenate the first word to itself to account for all possible rotations\n    a = a + a\n    \n    # Check if the second word or any of its rotations is a substring in the first word\n    return b in a",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word\n    \"\"\"\n    n = len(a)\n    m = len(b)\n    \n    # check if b is a substring of a\n    if b in a:\n        return True\n    \n    # check if any rotation of b is a substring of a\n    for i in range(1, m):\n        if b[i:] + b[:i] in a:\n            return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word\n    \"\"\"\n    # Check if the second word is a substring of the first word\n    if b in a:\n        return True\n    \n    # Check if any rotation of the second word is a substring of the first word\n    for i in range(1, len(b)):\n        rotation = b[i:] + b[:i]\n        if rotation in a:\n            return True\n    \n    # If no rotation of the second word is a substring, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word.\n    \n    Args:\n    a (str): The first word.\n    b (str): The second word.\n    \n    Returns:\n    bool: True if the second word or any of its rotations is a substring in the first word, False otherwise.\n    \"\"\"\n    \n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        rotation = b[i:] + b[:i]\n        if rotation in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is a substring in the first word\n    \"\"\"\n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        if b in a:\n            return True\n        b = b[1:] + b[0]\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        rotated = b[i:] + b[:i]\n        if rotated in a:\n            return True\n    return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def cycpattern_check(a , b):\n    for i in range(len(b)):\n        rotated = b[i:] + b[:i]\n        if rotated in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    if len(a) != len(b):\n        return False\n\n    for i in range(len(a)):\n        if a[i:] + a[:i] == b:\n            return True\n\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    b = b * 2\n    if b in a:\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    if len(a) != len(b):\n        return False\n    for i in range(len(b)):\n        if a.startswith(b[i:]) and a.endswith(b[:i]):\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    if len(a) != len(b):\n        return False\n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    # Check if the lengths of the words are different\n    if len(a) != len(b):\n        return False\n    \n    # Concatenate the first word with itself to cover all possible rotations\n    a += a\n    \n    # Check if the second word or any of its rotations is a substring in the first word\n    if b in a:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        if b in a:\n            return True\n        b = b[1:] + b[0]\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    if len(a) != len(b):\n        return False\n    \n    b = b + b\n    \n    if b in a:\n        return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    if len(a) != len(b):\n        return False\n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        rotated_b = b[i:] + b[:i]\n        if rotated_b in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        if a.find(b[i:] + b[:i]) != -1:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    if b in a:\n        return True\n    for i in range(1, len(b)):\n        b = b[1:] + b[0]\n        if b in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    if b in a:\n        return True\n    for i in range(1, len(b)):\n        rotated_b = b[i:] + b[:i]\n        if rotated_b in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    if b in a:\n        return True\n    \n    for i in range(1, len(b)):\n        rotated_word = b[i:] + b[:i]\n        if rotated_word in a:\n            return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        if b in a:\n            return True\n        b = b[1:] + b[0]\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    for i in range(len(b)):\n        if b[i:] + b[:i] in a:\n            return True\n    return False",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def cycpattern_check(a , b):\n    b_rotations = [b]\n    for i in range(1, len(b)):\n        rotation = b[i:] + b[:i]\n        b_rotations.append(rotation)\n    \n    for rotation in b_rotations:\n        if rotation in a:\n            return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    for i in range(len(b)):\n        if a.find(b[i:] + b[:i]) != -1:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    b_rotations = [b]\n    for i in range(1, len(b)):\n        b_rotations.append(b[i:] + b[:i])\n    \n    for rotation in b_rotations:\n        if rotation in a:\n            return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    # Check if b is a substring of a\n    if b in a:\n        return True\n    \n    # Check if any rotation of b is a substring of a\n    for i in range(1, len(b)):\n        rotated_b = b[i:] + b[:i]\n        if rotated_b in a:\n            return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    for i in range(len(b)):\n        if a.find(b[i:] + b[:i]) != -1:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    for i in range(len(b)):\n        if b in a:\n            return True\n        b = b[1:] + b[0]\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a , b):\n    for i in range(len(b)):\n        if a.find(b[i:] + b[:i]) != -1:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def cycpattern_check(a, b):\n    # Check if the length of b is greater than a\n    if len(b) > len(a):\n        return False\n    \n    # Iterate through all possible rotations of b\n    for i in range(len(b)):\n        # Check if the rotated string is a substring of a\n        if b[i:] + b[:i] in a:\n            return True\n    \n    return False",
+            "logp": null
+        }
+    ]
+}

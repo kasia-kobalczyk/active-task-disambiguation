@@ -1,0 +1,122 @@
+{
+    "0": [
+        {
+            "content": "def add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from the first k elements of arr.\n\n    Constraints:\n        1. 1 <= len(arr) <= 100\n        2. 1 <= k <= len(arr)\n    \"\"\"\n    sum_elements = 0\n    for i in range(k):\n        if len(str(arr[i])) <= 2:\n            sum_elements += arr[i]\n    return sum_elements",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum_of_elements = 0\n    for num in arr[:k]:\n        if -99 <= num <= 99:\n            sum_of_elements += num\n    return sum_of_elements",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    for i in range(k):\n        if -99 < arr[i] < 100:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    return sum([x for x in arr[:k] if -100 <= x <= 99])",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from the first k elements of arr.\n\n    Constraints:\n        1. 1 <= len(arr) <= 100\n        2. 1 <= k <= len(arr)\n    \"\"\"\n    sum = 0\n    for i in range(k):\n        if arr[i] >= -99 and arr[i] <= 99:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum_of_elements = 0\n    for i in range(k):\n        if len(str(arr[i])) <= 2:\n            sum_of_elements += arr[i]\n    return sum_of_elements",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    total_sum = 0\n    for i in range(k):\n        if arr[i] >= 10 and arr[i] <= 99:\n            total_sum += arr[i]\n    return total_sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    count = 0\n    \n    for i in range(k):\n        if abs(arr[i]) < 100:\n            sum += arr[i]\n            count += 1\n    \n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from the first k elements of arr.\n\n    Constraints:\n        1. 1 <= len(arr) <= 100\n        2. 1 <= k <= len(arr)\n    \"\"\"\n    sum = 0\n    for i in range(k):\n        if abs(arr[i]) < 100:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    for i in range(k):\n        if abs(arr[i]) < 100:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def add_elements(arr, k):\n    return sum(x for x in arr[:k] if abs(x) < 100)",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    return sum([x for x in arr[:k] if len(str(x)) <= 2])",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    count = 0\n    for i in range(k):\n        if abs(arr[i]) < 100:\n            sum += arr[i]\n            count += 1\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    return sum([num for num in arr[:k] if -100 <= num <= 99])",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    for i in range(k):\n        if abs(arr[i]) < 100:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    return sum([x for x in arr[:k] if abs(x) < 100])",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    return sum(x for x in arr[:k] if 0 <= x < 100)",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    return sum(x for x in arr[:k] if x < 100)",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    return sum([x for x in arr[:k] if x < 100])",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    for i in range(k):\n        if len(str(arr[i])) <= 2:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    for i in range(k):\n        if abs(arr[i]) < 100:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def add_elements(arr, k):\n    return sum([x for x in arr[:k] if len(str(x)) <= 2])",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    return sum(x for x in arr[:k] if 0 <= x < 100)",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    for i in range(k):\n        if len(str(arr[i])) <= 2:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    for num in arr[:k]:\n        if len(str(num)) <= 2:\n            sum += num\n    return sum",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def add_elements(arr, k):\n    return sum(x for x in arr[:k] if 0 <= x < 100)",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    for i in range(k):\n        if len(str(arr[i])) <= 2:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        },
+        {
+            "content": "def add_elements(arr, k):\n    sum = 0\n    for i in range(k):\n        if len(str(arr[i])) <= 2:\n            sum += arr[i]\n    return sum",
+            "logp": null
+        }
+    ]
+}

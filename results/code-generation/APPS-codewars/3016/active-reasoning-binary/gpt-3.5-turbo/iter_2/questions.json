@@ -1,0 +1,32 @@
+{
+    "0": [
+        "assert minor_or_major('A C E') == 'Minor'",
+        "assert minor_or_major('C E G') == 'Major'",
+        "assert minor_or_major('G B D') == 'Major'",
+        "assert minor_or_major('F A C#') == 'Not a chord'",
+        "assert minor_or_major('C Eb G') == 'Minor'",
+        "assert minor_or_major('A B C') == 'Not a chord'"
+    ],
+    "1": [
+        "assert minor_or_major('A C E') == 'Minor'",
+        "assert minor_or_major('A') == 'Not a chord'",
+        "assert minor_or_major('D F A') == 'Minor'",
+        "assert minor_or_major('F A C') == 'Major'",
+        "assert minor_or_major('B D# F') == 'Minor'"
+    ],
+    "2": [
+        "assert minor_or_major('D# F# A') == 'Minor'",
+        "assert minor_or_major('A B C') == 'Not a chord'",
+        "assert minor_or_major('C E Ab') == 'Not a chord'",
+        "assert minor_or_major('E G# B') == 'Major'",
+        "assert minor_or_major('A C D') == 'Not a chord'",
+        "assert minor_or_major('B D F#') == 'Minor'"
+    ],
+    "3": [
+        "assert minor_or_major('A B C') == 'Not a chord'",
+        "assert minor_or_major('C E Ab') == 'Not a chord'",
+        "assert minor_or_major('E G# B') == 'Major'",
+        "assert minor_or_major('A C D') == 'Not a chord'",
+        "assert minor_or_major('B D F#') == 'Minor'"
+    ]
+}

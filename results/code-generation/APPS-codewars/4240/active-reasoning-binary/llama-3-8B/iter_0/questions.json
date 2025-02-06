@@ -1,0 +1,37 @@
+{
+    "0": [
+        "assert tongues(\"Pnfhg na fubjg jung va abe virpyr.\") == \"The man who was walking to work.\"",
+        "assert tongues(\"Fb pxl pbzrf jvgu gur naq u\") == \"He is a computer and\"",
+        "assert tongues(\"Rkvg gunaxrneq guna gur oa\") == \"Spring has come to the house\"",
+        "assert tongues('test') == 'vslv'",
+        "assert tongues('Hello World') == 'Itapwo Lvaxz'",
+        "assert tongues('single consonant') == 'tjlykclj'",
+        "assert tongues('To rule them all, one ring to rule them all.') == 'Ita dotf ni dyca nsaw ecc, Ita dotf ni dyca nsaw ecc.'",
+        "assert tongues(\"Gur pennfyl pbagnpg jvgu nyy ntrq.\") == \"The leader of a group of artists.\""
+    ],
+    "1": [
+        "assert tongues('abcdef') == 'cdegfi'",
+        "assert tongues(\"Fuvyr juvpu zrfrfvgf jvgu gur zvahz.\") == \"Winter which brings with the flowers.\"",
+        "assert tongues('test') == 'vslv'",
+        "assert tongues('To rule them all, one ring to rule them all.') == 'Ita dotf ni dyca nsaw ecc, Ita dotf ni dyca nsaw ecc.'",
+        "assert tongues('Hello World') == 'Itapwo Lvaxz'"
+    ],
+    "2": [
+        "assert tongues(\"Gur pennfyl pbagnpg jvgu nyy ntrq.\") == \"The leader of the group with all troops.\"",
+        "assert tongues('test') == 'vslv'",
+        "assert tongues(\"Fvzvyne fnj nyfb gur naq naq nyy.\") == \"Secretly also do the same and all.\"",
+        "assert tongues('To rule them all, one ring to rule them all.') == 'Ita dotf ni dyca nsaw ecc, Ita dotf ni dyca nsaw ecc.'",
+        "assert tongues(\"Ntragr gur oa bb gur jbbq.\") == \"The master of the dark arts.\"",
+        "assert tongues('Hello World') == 'Itapwo Lvaxz'"
+    ],
+    "3": [
+        "assert tongues(\"Peregrin Took, hobbit of notable renown,\") == \"Pencerin Took, hobbit of otableen name,\"",
+        "assert tongues(\"Asgard, realm of the gods,\") == \"Sword, brave of the makes,\"",
+        "assert tongues(\"Thou art the Sword of the West,\") == \"You arthe Sworth of the Wes,\"",
+        "assert tongues(\"Fuvyr juvpu zrfrfvgf jvgu gur zvahz.\") == \"Winter which brings with the snow.\"",
+        "assert tongues('test') == 'vslv'",
+        "assert tongues('To rule them all, one ring to rule them all.') == 'Ita dotf ni dyca nsaw ecc, Ita dotf ni dyca nsaw ecc.'",
+        "assert tongues(\"In the land of Mordor where the shadows lie\") == \"In the land of Dorom where the hthos lie\"",
+        "assert tongues('Hello World') == 'Itapwo Lvaxz'"
+    ]
+}

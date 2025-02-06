@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert car_race_collision(5) == 10",
+        "assert car_race_collision(3) == 3",
+        "assert car_race_collision(1) == 0",
+        "assert car_race_collision(0) == 0",
+        "assert car_race_collision(2) == 1"
+    ],
+    "1": [
+        "assert car_race_collision(100) == 100",
+        "assert car_race_collision(3) == 3",
+        "assert car_race_collision(1) == 0",
+        "assert car_race_collision(0) == 0",
+        "assert car_race_collision(2) == 1",
+        "assert car_race_collision(10) == 10",
+        "assert car_race_collision(5) == 0",
+        "assert car_race_collision(5) == 5",
+        "assert car_race_collision(4) == 0"
+    ],
+    "2": [
+        "assert car_race_collision(100) == 100",
+        "assert car_race_collision(3) == 3",
+        "assert car_race_collision(0) == 0",
+        "assert car_race_collision(10) == 10",
+        "assert car_race_collision(5) == 0",
+        "assert car_race_collision(5) == 5",
+        "assert car_race_collision(4) == 0"
+    ],
+    "3": [
+        "assert car_race_collision(3) == 3",
+        "assert car_race_collision(0) == 0",
+        "assert car_race_collision(10) == 10",
+        "assert car_race_collision(2) == 1",
+        "assert car_race_collision(5) == 0",
+        "assert car_race_collision(5) == 5",
+        "assert car_race_collision(4) == 0"
+    ]
+}

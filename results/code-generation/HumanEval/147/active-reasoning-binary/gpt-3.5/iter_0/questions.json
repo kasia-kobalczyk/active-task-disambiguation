@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert get_max_triples(1) == 0",
+        "assert get_max_triples(6) == 3",
+        "assert get_max_triples(10) == 5",
+        "assert get_max_triples(4) == 1",
+        "assert get_max_triples(5) == 2",
+        "assert get_max_triples(10) == 10",
+        "assert get_max_triples(15) == 7",
+        "assert get_max_triples(3) == 1"
+    ],
+    "1": [
+        "assert get_max_triples(4) == 1",
+        "assert get_max_triples(7) == 6",
+        "assert get_max_triples(5) == 2",
+        "assert get_max_triples(15) == 24",
+        "assert get_max_triples(10) == 9",
+        "assert get_max_triples(6) == 4",
+        "assert get_max_triples(5) == 3",
+        "assert get_max_triples(3) == 1"
+    ],
+    "2": [
+        "assert get_max_triples(1) == 0",
+        "assert get_max_triples(5) == 1",
+        "assert get_max_triples(3) == 0",
+        "assert get_max_triples(5) == 2",
+        "assert get_max_triples(2) == 0",
+        "assert get_max_triples(3) == 1"
+    ],
+    "3": [
+        "assert get_max_triples(6) == 5",
+        "assert get_max_triples(5) == 1",
+        "assert get_max_triples(8) == 9",
+        "assert get_max_triples(3) == 0",
+        "assert get_max_triples(2) == 0",
+        "assert get_max_triples(5) == 3",
+        "assert get_max_triples(3) == 1"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "0": [
+        "assert alex_mistakes(10, 60) == 0",
+        "assert alex_mistakes(10, 61) == 2, f\"Expected alex_mistakes(10, 61) to return 2, but got {alex_mistakes(10, 61)}\"",
+        "assert alex_mistakes(10, 60) == 1",
+        "assert alex_mistakes(10, 30) == 0, f\"Expected alex_mistakes(10, 30) to return 0, but got {alex_mistakes(10, 30)}\"",
+        "assert alex_mistakes(10, 60) == 1, f\"Expected alex_mistakes(10, 60) to return 1, but got {alex_mistakes(10, 60)}\""
+    ],
+    "1": [
+        "assert alex_mistakes(0, 60) == 0",
+        "assert alex_mistakes(30, 180) == 1",
+        "assert alex_mistakes(20, 120) == 1",
+        "assert alex_mistakes(25, 90) == 1",
+        "assert alex_mistakes(15, 60) == 1"
+    ],
+    "2": [
+        "assert alex_mistakes(15, 10) == 1",
+        "assert alex_mistakes(20, 120) == 1",
+        "assert alex_mistakes(30, 180) == 1",
+        "assert alex_mistakes(1, 2) == 0",
+        "assert alex_mistakes(25, 90) == 1",
+        "assert alex_mistakes(15, 60) == 1",
+        "assert alex_mistakes(10, 10) == 0"
+    ],
+    "3": [
+        "assert alex_mistakes(20, 120) == 1",
+        "assert alex_mistakes(30, 180) == 1",
+        "assert alex_mistakes(1, 2) == 0",
+        "assert alex_mistakes(25, 90) == 1",
+        "assert alex_mistakes(15, 60) == 1",
+        "assert alex_mistakes(10, 10) == 0"
+    ]
+}

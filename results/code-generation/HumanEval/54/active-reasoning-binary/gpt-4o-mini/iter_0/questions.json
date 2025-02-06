@@ -1,0 +1,37 @@
+{
+    "0": [
+        "assert same_chars(\"apple\", \"pale\") == False",
+        "assert same_chars(\"triangle\", \"integral\") == True",
+        "assert same_chars(\"listen\", \"silent\") == True",
+        "assert same_chars(\"abcd\", \"dcba\") == True",
+        "assert same_chars(\"abc\", \"cab\") == True"
+    ],
+    "1": [
+        "assert same_chars(\"aabbcc\", \"abcabc\") == True",
+        "assert same_chars(\"triangle\", \"integral\") == True",
+        "assert same_chars(\"listen\", \"silent\") == True",
+        "assert same_chars(\"abc\", \"ab\") == False",
+        "assert same_chars(\"hello\", \"holle\") == True",
+        "assert same_chars(\"abc\", \"cba\") == True",
+        "assert same_chars(\"apple\", \"pabble\") == False"
+    ],
+    "2": [
+        "assert same_chars(\"aaabbb\", \"ababab\") == True",
+        "assert same_chars(\"triangle\", \"integral\") == True",
+        "assert same_chars(\"listen\", \"silent\") == True",
+        "assert same_chars(\"abc\", \"abcd\") == False",
+        "assert same_chars(\"hello\", \"world\") == False",
+        "assert same_chars(\"hello\", \"olleh\") == True",
+        "assert same_chars(\"test\", \"tte\") == False"
+    ],
+    "3": [
+        "assert same_chars(\"triangle\", \"integral\") == True",
+        "assert same_chars(\"listen\", \"silent\") == True",
+        "assert same_chars(\"test\", \"sett\") == True",
+        "assert same_chars(\"python\", \"nothpy\") == True",
+        "assert same_chars(\"abcd\", \"abce\") == False",
+        "assert same_chars(\"test\", \"ttees\") == False",
+        "assert same_chars(\"hello\", \"ollhe\") == True",
+        "assert same_chars(\"hello\", \"world\") == False"
+    ]
+}

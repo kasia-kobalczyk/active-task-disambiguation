@@ -1,0 +1,27 @@
+{
+    "0": [
+        "assert big_primefac_div(997) == []",
+        "assert big_primefac_div(100) == [5, 50]",
+        "assert big_primefac_div(-1800) == [5, 900]",
+        "assert big_primefac_div(-1800.1) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(-1800.00) == [5, 900]",
+        "assert big_primefac_div(1969) == [179, 179]"
+    ],
+    "1": [
+        "assert big_primefac_div(100) == [5, 50]",
+        "assert big_primefac_div(-1800.1) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(-1800) == [5, 900]",
+        "assert big_primefac_div(-1800.00) == [5, 900]",
+        "assert big_primefac_div(1969) == [179, 179]"
+    ],
+    "2": [
+        "assert big_primefac_div(1969) == [179, 179]",
+        "assert big_primefac_div(-1800) == [5, 900]"
+    ],
+    "3": [
+        "assert big_primefac_div(1800.1) == \"The number has a decimal part. No Results\"",
+        "assert big_primefac_div(-179) == [179, 179]",
+        "assert big_primefac_div(1800.0) == [5, 900]",
+        "assert big_primefac_div(-1800) == [5, 900]"
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "0": "assert histogram(\"x y z z x y y\") == {'y': 3}",
+    "1": "assert histogram(\"a b c a a b c\") == {'a': 3}",
+    "2": "assert histogram(\"a b a b a\") == {'a': 3}",
+    "3": "assert histogram(\"d e f g h d e d\") == {'d': 3}"
+}

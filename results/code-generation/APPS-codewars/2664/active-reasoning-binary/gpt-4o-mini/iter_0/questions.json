@@ -1,0 +1,34 @@
+{
+    "0": [
+        "assert solve(\"aa\") == False",
+        "assert solve(\"abbx\") == True",
+        "assert solve(\"abcba\") == True",
+        "assert solve(\"abba\") == False"
+    ],
+    "1": [
+        "assert solve(\"racecar\") == True",
+        "assert solve(\"abcd\") == True",
+        "assert solve(\"abccba\") == True",
+        "assert solve(\"aaabaaaa\") == True",
+        "assert solve(\"xyzzyx\") == True",
+        "assert solve(\"a\") == False"
+    ],
+    "2": [
+        "assert solve(\"abca\") == True",
+        "assert solve(\"abcde\") == True",
+        "assert solve(\"abcd\") == True",
+        "assert solve(\"abccba\") == True",
+        "assert solve(\"aabb\") == True",
+        "assert solve(\"a\") == False"
+    ],
+    "3": [
+        "assert solve(\"madam\") == False",
+        "assert solve(\"aaa\") == False",
+        "assert solve(\"abccba\") == True",
+        "assert solve(\"abcdefg\") == True",
+        "assert solve(\"a\") == False",
+        "assert solve(\"aabb\") == True",
+        "assert solve(\"abcd\") == True",
+        "assert solve(\"abc\") == True"
+    ]
+}

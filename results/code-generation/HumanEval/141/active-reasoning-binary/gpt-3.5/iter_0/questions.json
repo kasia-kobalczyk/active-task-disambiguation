@@ -1,0 +1,47 @@
+{
+    "0": [
+        "assert file_name_check(\"file.exe\") == \"No\"",
+        "assert file_name_check(\"file..txt\") == \"No\"",
+        "assert file_name_check(\"myprogram.exe\") == \"Yes\"",
+        "assert file_name_check(\"file.txt\") == \"Yes\"",
+        "assert file_name_check(\"test123.txt\") == \"No\"",
+        "assert file_name_check(\"123.txt\") == \"No\"",
+        "assert file_name_check(\"file1.exe\") == \"Yes\"",
+        "assert file_name_check(\"test.txt\") == \"Yes\"",
+        "assert file_name_check(\"image.jpeg\") == \"No\"",
+        "assert file_name_check(\"hello.txt\") == \"Yes\""
+    ],
+    "1": [
+        "assert file_name_check(\"file.dll\") == \"Yes\"",
+        "assert file_name_check(\"abc.exe\") == \"Yes\"",
+        "assert file_name_check(\"abc.dll\") == \"Yes\"",
+        "assert file_name_check(\"abc_123.txt\") == \"No\"",
+        "assert file_name_check(\"file.txt\") == \"Yes\"",
+        "assert file_name_check(\"file.jpg\") == \"No\"",
+        "assert file_name_check(\"file\") == \"No\"",
+        "assert file_name_check(\"file.exe\") == \"Yes\"",
+        "assert file_name_check(\"abc.txt\") == \"Yes\"",
+        "assert file_name_check(\"abc.txt.exe\") == \"No\"\n# The substring after the dot is 'txt.exe', which is not one of the valid extensions."
+    ],
+    "2": [
+        "assert file_name_check(\"file.dll\") == \"Yes\"",
+        "assert file_name_check(\"abc.exe\") == \"Yes\"",
+        "assert file_name_check(\"abc.dll\") == \"Yes\"",
+        "assert file_name_check(\"file.txt\") == \"Yes\"",
+        "assert file_name_check(\"file\") == \"No\"",
+        "assert file_name_check(\"abc.txt.exe\") == \"No\"\n# The substring after the dot is 'txt.exe', which is not one of the valid extensions.",
+        "assert file_name_check(\"file.exe\") == \"Yes\"",
+        "assert file_name_check(\"abc.txt\") == \"Yes\"",
+        "assert file_name_check(\"file.jpg\") == \"No\""
+    ],
+    "3": [
+        "assert file_name_check(\"file.doc\") == \"No\"",
+        "assert file_name_check(\"file.tx\") == \"No\"",
+        "assert file_name_check(\"file.txt\") == \"Yes\"",
+        "assert file_name_check(\"file\") == \"No\"",
+        "assert file_name_check(\"file.123\") == \"No\"",
+        "assert file_name_check(\"file.exe\") == \"Yes\"",
+        "assert file_name_check(\"abc.txt\") == \"Yes\"",
+        "assert file_name_check(\"file.dl\") == \"No\""
+    ]
+}

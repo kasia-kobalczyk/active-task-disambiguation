@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert check_if_last_char_is_a_letter(\"12345\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world\") == True",
+        "assert check_if_last_char_is_a_letter(\"Test123\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == True",
+        "assert check_if_last_char_is_a_letter(\"Python is great\") == True",
+        "assert check_if_last_char_is_a_letter(\"Hello\") == True"
+    ],
+    "1": [
+        "assert check_if_last_char_is_a_letter(\"Hello World\") == True",
+        "assert check_if_last_char_is_a_letter(\"Python 3\") == False",
+        "assert check_if_last_char_is_a_letter(\"Test string!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Python 3.9\") == False",
+        "assert check_if_last_char_is_a_letter(\"Test example.\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello, World.\") == False"
+    ],
+    "2": [
+        "assert check_if_last_char_is_a_letter(\"Python 3\") == False",
+        "assert check_if_last_char_is_a_letter(\"Test string!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Python 3.9\") == False",
+        "assert check_if_last_char_is_a_letter(\"Test example.\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello, World.\") == False"
+    ],
+    "3": [
+        "assert check_if_last_char_is_a_letter(\"End of line \") == False",
+        "assert check_if_last_char_is_a_letter(\"Test 123\") == False",
+        "assert check_if_last_char_is_a_letter(\"Sample text.\") == False",
+        "assert check_if_last_char_is_a_letter(\"Just a test.\") == False",
+        "assert check_if_last_char_is_a_letter(\"Goodbye\") == True",
+        "assert check_if_last_char_is_a_letter(\"Hello!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Just a test\") == True"
+    ]
+}

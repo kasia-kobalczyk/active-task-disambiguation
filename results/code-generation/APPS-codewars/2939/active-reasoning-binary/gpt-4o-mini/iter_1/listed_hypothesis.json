@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_cubes = a**3 + b**3\n            if sum_cubes > n:\n                break\n            if sum_cubes == n:\n                if sum_cubes in cube_sums:\n                    cube_sums[sum_cubes].append((a, b))\n                else:\n                    cube_sums[sum_cubes] = [(a, b)]\n    if n in cube_sums:\n        return len(cube_sums[n]) > 1\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    \n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes == n:\n                if (a, b) in cube_sums:\n                    return True\n                cube_sums[(a, b)] = sum_of_cubes\n                \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 2):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if sum_of_cubes not in cubes:\n                    cubes[sum_of_cubes] = []\n                cubes[sum_of_cubes].append((a, b))\n    \n    if n in cubes and len(cubes[n]) > 1:\n        pairs = cubes[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                a, b = pairs[i]\n                c, d = pairs[j]\n                if len(set([a, b, c, d])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if sum_of_cubes in cubes:\n                    for c, d in cubes[sum_of_cubes]:\n                        if c != a and c != b and d != a and d != b:\n                            return True\n                else:\n                    cubes[sum_of_cubes] = []\n                cubes[sum_of_cubes].append((a, b))\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_cubes = a**3 + b**3\n            if sum_cubes == n:\n                if (a, b) not in cube_sums:\n                    cube_sums[(a, b)] = True\n                elif len(cube_sums) > 0:\n                    for (c, d) in cube_sums.keys():\n                        if len(set([a, b, c, d])) == 4:\n                            return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    limit = int(n ** (1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            sum_cubes = a**3 + b**3\n            if sum_cubes > n:\n                break\n            if sum_cubes == n:\n                if (a, b) in cube_sums:\n                    return True\n                cube_sums[sum_cubes] = (a, b)\n    \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes not in cube_sums:\n                cube_sums[sum_of_cubes] = [(a, b)]\n            else:\n                cube_sums[sum_of_cubes].append((a, b))\n                if len(cube_sums[sum_of_cubes]) > 1:\n                    # Check if we have different pairs\n                    pairs = cube_sums[sum_of_cubes]\n                    for (c, d) in pairs:\n                        if c != a and c != b and d != a and d != b:\n                            return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    \n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 2):\n            sum_cubes = a**3 + b**3\n            if sum_cubes == n:\n                if (a, b) not in cube_sums:\n                    cube_sums[sum_cubes] = set()\n                cube_sums[sum_cubes].add((a, b))\n    \n    return len(cube_sums.get(n, [])) >= 2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 2):\n            sum_cubes = a**3 + b**3\n            if sum_cubes > n:\n                break\n            if sum_cubes == n:\n                if (a, b) in cubes or (b, a) in cubes:\n                    return True\n                cubes[(a, b)] = True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    limit = int(n ** (1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum == n:\n                if cube_sum in cubes:\n                    cubes[cube_sum].append((a, b))\n                else:\n                    cubes[cube_sum] = [(a, b)]\n    \n    if n in cubes and len(cubes[n]) > 1:\n        pairs = cubes[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                a1, b1 = pairs[i]\n                a2, b2 = pairs[j]\n                if len(set([a1, b1, a2, b2])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes not in cube_sums:\n                cube_sums[sum_of_cubes] = [(a, b)]\n            else:\n                cube_sums[sum_of_cubes].append((a, b))\n    \n    for pairs in cube_sums.values():\n        if len(pairs) > 1:\n            for i in range(len(pairs)):\n                for j in range(i + 1, len(pairs)):\n                    if len(set(pairs[i] + pairs[j])) == 4:\n                        return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    max_limit = int(n**(1/3)) + 1\n    \n    for a in range(1, max_limit):\n        for b in range(a + 1, max_limit):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if (a, b) not in cube_sums:\n                    cube_sums[(a, b)] = True\n    \n    return len(cube_sums) > 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    limit = int(n**(1/3)) + 1\n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if sum_of_cubes in cubes:\n                    cubes[sum_of_cubes].append((a, b))\n                else:\n                    cubes[sum_of_cubes] = [(a, b)]\n    \n    if n in cubes and len(cubes[n]) > 1:\n        pairs = cubes[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                if len(set(pairs[i] + pairs[j])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for i in range(1, int(n**(1/3)) + 1):\n        for j in range(i + 1, int(n**(1/3)) + 1):\n            sum_of_cubes = i**3 + j**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if (i, j) not in cubes:\n                    cubes[(i, j)] = sum_of_cubes\n    \n    count = 0\n    for (a, b), value in cubes.items():\n        for (c, d), other_value in cubes.items():\n            if value == other_value and len(set([a, b, c, d])) == 4:\n                count += 1\n                if count >= 2:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    limit = int(n ** (1/3)) + 1\n\n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum == n:\n                if cube_sum not in cube_sums:\n                    cube_sums[cube_sum] = set()\n                cube_sums[cube_sum].add((a, b))\n\n    return len(cube_sums.get(n, [])) > 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    limit = int(n**(1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if sum_of_cubes in cubes:\n                    cubes[sum_of_cubes].append((a, b))\n                else:\n                    cubes[sum_of_cubes] = [(a, b)]\n    \n    if n in cubes and len(cubes[n]) > 1:\n        for i in range(len(cubes[n])):\n            for j in range(i + 1, len(cubes[n])):\n                a, b = cubes[n][i]\n                c, d = cubes[n][j]\n                if len({a, b, c, d}) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {i: i**3 for i in range(1, int(n**(1/3)) + 1)}\n    sums = {}\n    \n    for a in cubes:\n        for b in cubes:\n            if a < b:\n                sum_cubes = cubes[a] + cubes[b]\n                if sum_cubes > n:\n                    continue\n                if sum_cubes == n:\n                    if sum_cubes in sums:\n                        sums[sum_cubes].append((a, b))\n                    else:\n                        sums[sum_cubes] = [(a, b)]\n    \n    if n in sums and len(sums[n]) > 1:\n        pairs = sums[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                if len(set(pairs[i]) | set(pairs[j])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            cube_sum = a ** 3 + b ** 3\n            if cube_sum > n:\n                break\n            if cube_sum == n:\n                if cube_sum in cube_sums:\n                    cube_sums[cube_sum].add((a, b))\n                else:\n                    cube_sums[cube_sum] = {(a, b)}\n    \n    return any(len(pairs) > 1 for pairs in cube_sums.values())\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    limit = int(n ** (1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum == n:\n                if cube_sum in cube_sums:\n                    cube_sums[cube_sum].add((a, b))\n                else:\n                    cube_sums[cube_sum] = {(a, b)}\n    \n    for key in cube_sums:\n        if len(cube_sums[key]) > 1:\n            return True\n    \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    limit = int(n**(1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum == n:\n                if cube_sum in cubes:\n                    cubes[cube_sum].append((a, b))\n                else:\n                    cubes[cube_sum] = [(a, b)]\n                    \n    if n in cubes and len(cubes[n]) > 1:\n        return True\n    \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 2):\n            sum_cubes = a**3 + b**3\n            if sum_cubes > n:\n                break\n            if sum_cubes == n:\n                if sum_cubes in cubes:\n                    cubes[sum_cubes].append((a, b))\n                else:\n                    cubes[sum_cubes] = [(a, b)]\n    if n in cubes and len(cubes[n]) > 1:\n        pairs = cubes[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                if len(set(pairs[i]).union(pairs[j])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum not in cubes:\n                cubes[cube_sum] = [(a, b)]\n            else:\n                cubes[cube_sum].append((a, b))\n    \n    for pairs in cubes.values():\n        if len(pairs) > 1:\n            for i in range(len(pairs)):\n                for j in range(i + 1, len(pairs)):\n                    a, b = pairs[i]\n                    c, d = pairs[j]\n                    if len({a, b, c, d}) == 4:\n                        return True\n    return False\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes not in cube_sums:\n                cube_sums[sum_of_cubes] = [(a, b)]\n            else:\n                cube_sums[sum_of_cubes].append((a, b))\n    \n    for pairs in cube_sums.values():\n        if len(pairs) > 1:\n            for i in range(len(pairs)):\n                for j in range(i + 1, len(pairs)):\n                    if len(set(pairs[i] + pairs[j])) == 4:\n                        return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    max_limit = int(n**(1/3)) + 1\n    \n    for a in range(1, max_limit):\n        for b in range(a + 1, max_limit):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if (a, b) not in cube_sums:\n                    cube_sums[(a, b)] = True\n    \n    return len(cube_sums) > 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    limit = int(n**(1/3)) + 1\n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if sum_of_cubes in cubes:\n                    cubes[sum_of_cubes].append((a, b))\n                else:\n                    cubes[sum_of_cubes] = [(a, b)]\n    \n    if n in cubes and len(cubes[n]) > 1:\n        pairs = cubes[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                if len(set(pairs[i] + pairs[j])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes == n:\n                if (a, b) not in cubes:\n                    cubes[(a, b)] = sum_of_cubes\n            elif sum_of_cubes > n:\n                break\n\n    return len(cubes) > 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for i in range(1, int(n**(1/3)) + 1):\n        for j in range(i + 1, int(n**(1/3)) + 1):\n            sum_of_cubes = i**3 + j**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if (i, j) not in cubes:\n                    cubes[(i, j)] = sum_of_cubes\n    \n    count = 0\n    for (a, b), value in cubes.items():\n        for (c, d), other_value in cubes.items():\n            if value == other_value and len(set([a, b, c, d])) == 4:\n                count += 1\n                if count >= 2:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    limit = int(n ** (1/3)) + 1\n\n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum == n:\n                if cube_sum not in cube_sums:\n                    cube_sums[cube_sum] = set()\n                cube_sums[cube_sum].add((a, b))\n\n    return len(cube_sums.get(n, [])) > 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    limit = int(n**(1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if sum_of_cubes in cubes:\n                    cubes[sum_of_cubes].append((a, b))\n                else:\n                    cubes[sum_of_cubes] = [(a, b)]\n    \n    if n in cubes and len(cubes[n]) > 1:\n        for i in range(len(cubes[n])):\n            for j in range(i + 1, len(cubes[n])):\n                a, b = cubes[n][i]\n                c, d = cubes[n][j]\n                if len({a, b, c, d}) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {i: i**3 for i in range(1, int(n**(1/3)) + 1)}\n    sums = {}\n    \n    for a in cubes:\n        for b in cubes:\n            if a < b:\n                sum_cubes = cubes[a] + cubes[b]\n                if sum_cubes > n:\n                    continue\n                if sum_cubes == n:\n                    if sum_cubes in sums:\n                        sums[sum_cubes].append((a, b))\n                    else:\n                        sums[sum_cubes] = [(a, b)]\n    \n    if n in sums and len(sums[n]) > 1:\n        pairs = sums[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                if len(set(pairs[i]) | set(pairs[j])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            cube_sum = a ** 3 + b ** 3\n            if cube_sum > n:\n                break\n            if cube_sum == n:\n                if cube_sum in cube_sums:\n                    cube_sums[cube_sum].add((a, b))\n                else:\n                    cube_sums[cube_sum] = {(a, b)}\n    \n    return any(len(pairs) > 1 for pairs in cube_sums.values())\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    limit = int(n ** (1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum == n:\n                if cube_sum in cube_sums:\n                    cube_sums[cube_sum].add((a, b))\n                else:\n                    cube_sums[cube_sum] = {(a, b)}\n    \n    for key in cube_sums:\n        if len(cube_sums[key]) > 1:\n            return True\n            \n    return False\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    limit = int(n**(1/3)) + 1\n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            sum_cubes = a**3 + b**3\n            if sum_cubes > n:\n                break\n            if sum_cubes == n:\n                if sum_cubes not in cubes:\n                    cubes[sum_cubes] = []\n                cubes[sum_cubes].append((a, b))\n\n    if n in cubes and len(cubes[n]) > 1:\n        return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum not in cubes:\n                cubes[cube_sum] = []\n            cubes[cube_sum].append((a, b))\n    \n    for pairs in cubes.values():\n        if len(pairs) >= 2:\n            for i in range(len(pairs)):\n                for j in range(i + 1, len(pairs)):\n                    a, b = pairs[i]\n                    c, d = pairs[j]\n                    if len(set([a, b, c, d])) == 4:\n                        return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    limit = int(n**(1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum not in cube_sums:\n                cube_sums[cube_sum] = []\n            cube_sums[cube_sum].append((a, b))\n    \n    for pairs in cube_sums.values():\n        if len(pairs) > 1:\n            for i in range(len(pairs)):\n                for j in range(i + 1, len(pairs)):\n                    if len(set(pairs[i] + pairs[j])) == 4:\n                        return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_cubes = a**3 + b**3\n            if sum_cubes == n:\n                if sum_cubes in cube_sums:\n                    cube_sums[sum_cubes].append((a, b))\n                else:\n                    cube_sums[sum_cubes] = [(a, b)]\n    for sums in cube_sums.values():\n        if len(sums) > 1:\n            pairs = sums\n            for i in range(len(pairs)):\n                for j in range(i + 1, len(pairs)):\n                    a, b = pairs[i]\n                    c, d = pairs[j]\n                    if len({a, b, c, d}) == 4:\n                        return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            sum_cubes = a**3 + b**3\n            if sum_cubes > n:\n                break\n            if sum_cubes not in cubes:\n                cubes[sum_cubes] = []\n            cubes[sum_cubes].append((a, b))\n    \n    for pairs in cubes.values():\n        if len(pairs) >= 2:\n            for i in range(len(pairs)):\n                for j in range(i + 1, len(pairs)):\n                    if len(set(pairs[i] + pairs[j])) == 4:\n                        return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    limit = int(n**(1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            sum_of_cubes = a**3 + b**3\n            if sum_of_cubes > n:\n                break\n            if sum_of_cubes == n:\n                if sum_of_cubes in cubes:\n                    cubes[sum_of_cubes].append((a, b))\n                else:\n                    cubes[sum_of_cubes] = [(a, b)]\n\n    if n in cubes and len(cubes[n]) >= 2:\n        pairs = cubes[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                a, b = pairs[i]\n                c, d = pairs[j]\n                if len({a, b, c, d}) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {}\n    limit = int(n**(1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            sum_cubes = a**3 + b**3\n            if sum_cubes > n:\n                break\n            if sum_cubes == n:\n                if sum_cubes not in cubes:\n                    cubes[sum_cubes] = []\n                cubes[sum_cubes].append((a, b))\n\n    if n in cubes and len(cubes[n]) > 1:\n        pairs = cubes[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                if len(set(pairs[i]) | set(pairs[j])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    limit = int(n ** (1/3)) + 1\n    \n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            cube_sum = a**3 + b**3\n            if cube_sum > n:\n                break\n            if cube_sum == n:\n                if cube_sum in cube_sums:\n                    cube_sums[cube_sum].append((a, b))\n                else:\n                    cube_sums[cube_sum] = [(a, b)]\n\n    if n in cube_sums and len(cube_sums[n]) > 1:\n        pairs = cube_sums[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                if len(set(pairs[i] + pairs[j])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {i**3: i for i in range(1, int(n**(1/3)) + 1)}\n    pairs = {}\n\n    for a in cubes:\n        for b in cubes:\n            if a < b:\n                sum_cubes = a + b\n                if sum_cubes > n:\n                    break\n                if sum_cubes not in pairs:\n                    pairs[sum_cubes] = []\n                pairs[sum_cubes].append((cubes[a], cubes[b]))\n\n    count = 0\n    for key in pairs:\n        if key == n:\n            count += len(pairs[key])\n\n    return count >= 2\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = {i**3: i for i in range(1, int(n**(1/3)) + 1)}\n    sums = {}\n    \n    for a in cubes:\n        for b in cubes:\n            if a < b:\n                sum_cubes = a + b\n                if sum_cubes <= n:\n                    if sum_cubes in sums:\n                        sums[sum_cubes].append((cubes[a], cubes[b]))\n                    else:\n                        sums[sum_cubes] = [(cubes[a], cubes[b])]\n    \n    for key in sums:\n        if key == n and len(sums[key]) > 1:\n            pairs = sums[key]\n            unique_pairs = set()\n            for pair in pairs:\n                unique_pairs.add(tuple(sorted(pair)))\n            if len(unique_pairs) >= 2:\n                return True\n                \n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cube_sums = {}\n    \n    limit = int(n**(1/3)) + 1\n    for a in range(1, limit):\n        for b in range(a + 1, limit):\n            sum_cubes = a**3 + b**3\n            if sum_cubes > n:\n                break\n            if sum_cubes == n:\n                if sum_cubes in cube_sums:\n                    cube_sums[sum_cubes].append((a, b))\n                else:\n                    cube_sums[sum_cubes] = [(a, b)]\n    \n    if n in cube_sums and len(cube_sums[n]) > 1:\n        pairs = cube_sums[n]\n        for i in range(len(pairs)):\n            for j in range(i + 1, len(pairs)):\n                a, b = pairs[i]\n                c, d = pairs[j]\n                if len(set([a, b, c, d])) == 4:\n                    return True\n    return False\n```",
+            "logp": null
+        }
+    ]
+}

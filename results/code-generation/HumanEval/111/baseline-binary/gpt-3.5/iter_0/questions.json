@@ -1,0 +1,20 @@
+{
+    "0": [
+        "assert histogram(\"a b b b c c c\") == {'b': 3, 'c': 3}",
+        "assert histogram(\"\") == {}",
+        "assert histogram(\"a a a a a\") == {'a': 5}"
+    ],
+    "1": [
+        "assert histogram(\"a a a a a b b b b b c c c c\") == {'a': 5, 'b': 5, 'c': 4}",
+        "assert histogram(\"a b c d e f g h i\") == {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'f': 1, 'g': 1, 'h': 1, 'i': 1}"
+    ],
+    "2": [
+        "assert histogram(\"a b c d e f g h i\") == {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'f': 1, 'g': 1, 'h': 1, 'i': 1}",
+        "assert histogram(\"a a a a a b b b b c c c c c\") == {'a': 5, 'b': 4, 'c': 5}"
+    ],
+    "3": [
+        "assert histogram(\"a\") == {'a': 1}  ",
+        "assert histogram(\"\") == {}",
+        "assert histogram(\"a a a b b c\") == {'a': 3, 'b': 2}  # Input with multiple characters, some with equal occurrences"
+    ]
+}

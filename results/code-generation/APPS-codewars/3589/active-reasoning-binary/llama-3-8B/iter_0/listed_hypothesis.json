@@ -1,0 +1,68 @@
+{
+    "0": [
+        {
+            "content": "def next_numb(val):\n    def generate_number():\n        i = val + 1\n        while True:\n            if i % 3 == 0 and unique_digits(i):\n                yield i\n            i += 1\n\n    for num in generate_number():\n        if num > val:\n            return num\n    return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    def generate_number():\n        i = val + 1\n        while True:\n            if i % 3 == 0 and unique_digits(i):\n                yield i\n            i += 1\n\n    for num in generate_number():\n        if num > val:\n            return num\n    return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    def generate_number():\n        i = val + 1\n        while True:\n            if i % 3 == 0 and unique_digits(i):\n                yield i\n            i += 1\n\n    for num in generate_number():\n        if num > val:\n            return num\n    return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    def generate_number():\n        i = val + 1\n        while True:\n            if i % 3 == 0 and unique_digits(i):\n                yield i\n            i += 1\n\n    for num in generate_number():\n        if num > val:\n            return num\n    return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    def generate_number():\n        i = val + 1\n        while True:\n            if i % 3 == 0 and unique_digits(i):\n                yield i\n            i += 1\n\n    for num in generate_number():\n        if num > val:\n            return num\n    return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    while True:\n        val += 1\n        if unique_digits(val) and val % 3 == 0 and val % 2 != 0:\n            return val\n        elif val > 10000000000:\n            return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    while True:\n        val += 1\n        if unique_digits(val) and val % 3 == 0 and val % 2 != 0:\n            return val\n        elif val > 10000000000:\n            return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    while True:\n        val += 1\n        if unique_digits(val) and val % 3 == 0 and val % 2 != 0:\n            return val\n        elif val > 10000000000:\n            return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    while True:\n        val += 1\n        if unique_digits(val) and val % 3 == 0 and val % 2 != 0:\n            return val\n        elif val > 10000000000:\n            return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    while True:\n        val += 1\n        if unique_digits(val) and val % 3 == 0 and val % 2 != 0:\n            return val\n        elif val > 10000000000:\n            return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def next_numb(val):\n    def generate_number():\n        i = val + 1\n        while True:\n            if i % 3 == 0 and unique_digits(i) and i % 2 != 0:\n                return i\n            i += 1\n    num = generate_number()\n    if num < val + 4:\n        return \"There is no possible number that fulfills those requirements\"\n    return num",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    while True:\n        val += 1\n        if val % 3 == 0 and val % 2 != 0 and unique_digits(val):\n            return val\n        if val > 10000000000:\n            return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    n = val + 1\n    while not (unique_digits(n) and n % 3 == 0 and n % 2 != 0):\n        n += 1\n    if n % 2 != 0:\n        return n\n    else:\n        return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    while True:\n        val += 1\n        if val % 3 == 0 and val % 2 != 0 and unique_digits(val):\n            return val\n    return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        },
+        {
+            "content": "def next_numb(val):\n    i = val + 1\n    while True:\n        if unique_digits(i) and i % 2 != 0 and i % 3 == 0:\n            return i\n        i += 1\n    return \"There is no possible number that fulfills those requirements\"",
+            "logp": null
+        }
+    ],
+    "2": [],
+    "3": []
+}

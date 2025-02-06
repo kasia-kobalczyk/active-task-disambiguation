@@ -1,0 +1,18 @@
+{
+    "0": [
+        "histogram(\"a b c a a b c d e e e\")",
+        "{'a': 3, 'e': 3}"
+    ],
+    "1": [
+        "histogram(\"m n o p m n o m p q r\")",
+        "{'m': 3}"
+    ],
+    "2": [
+        "histogram(\"x y z x x y z w w w\")",
+        "{'x': 3, 'w': 3}"
+    ],
+    "3": [
+        "histogram(\"g g g g h h i j j j j\")",
+        "{'g': 4, 'j': 4}"
+    ]
+}

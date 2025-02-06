@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert total_match([\"hello\", \"world\"], [\"hi\", \"there\"]) == [\"hi\", \"there\"]",
+        "assert total_match([\"abc\", \"def\"], [\"gh\", \"ijk\", \"lmnop\"]) == [\"abc\", \"def\"]"
+    ],
+    "1": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"one\", \"two\", \"three\"]) == [\"a\", \"bb\", \"ccc\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"kiwi\", \"peach\", \"pear\"]) == [\"kiwi\", \"peach\", \"pear\"]"
+    ],
+    "2": [
+        "assert total_match([\"dog\", \"cat\"], [\"lion\", \"tiger\", \"bear\"]) == [\"dog\", \"cat\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"pear\", \"peach\", \"plum\"]) == [\"pear\", \"peach\", \"plum\"]"
+    ],
+    "3": [
+        "assert total_match([\"short\", \"words\"], [\"longer\", \"strings\"]) == [\"short\", \"words\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"kiwi\", \"peach\"]) == [\"kiwi\", \"peach\"]"
+    ]
+}

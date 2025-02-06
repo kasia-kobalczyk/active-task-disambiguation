@@ -1,0 +1,52 @@
+{
+    "0": [
+        {
+            "content": "def find_children(dancing_brigade):\n    mothers = []\n    children = []\n\n    # Separate mothers and children\n    for char in dancing_brigade:\n        if char.islower():\n            children.append(char)\n        else:\n            mothers.append(char)\n\n    # Sort mothers and children in alphabetical order\n    mothers.sort()\n    children.sort()\n\n    # Combine mothers and children\n    combined = mothers + children\n\n    # Return the result as a string\n    return ''.join(combined)",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    mothers = [char for char in dancing_brigade if char.isupper()]\n    children = [char for char in dancing_brigade if char.islower()]\n    mothers.sort()\n    children.sort()\n    return ''.join(mothers + children)",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    mothers = []\n    children = []\n    \n    # Separate the mothers and children\n    for char in dancing_brigade:\n        if char.isupper():\n            mothers.append(char)\n        else:\n            children.append(char)\n    \n    # Sort the mothers and children in alphabetical order\n    mothers.sort()\n    children.sort()\n    \n    # Combine the sorted mothers and children\n    result = ''.join(mothers + children)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    mothers = []\n    children = []\n    for char in dancing_brigade:\n        if char.isupper():\n            mothers.append(char)\n        else:\n            children.append(char)\n    mothers.sort()\n    children.sort()\n    return ''.join(mothers + children)",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    mothers = \"\"\n    children = \"\"\n    \n    for letter in sorted(dancing_brigade):\n        if letter.islower():\n            children += letter\n        else:\n            mothers += letter\n    \n    return mothers + children",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    mothers = sorted([c for c in dancing_brigade if c.isupper()])\n    children = sorted([c for c in dancing_brigade if c.islower()])\n\n    return ''.join(mothers + children)",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    mothers = []\n    children = []\n    for char in dancing_brigade:\n        if char.isupper():\n            mothers.append(char)\n        else:\n            children.append(char)\n    mothers.sort()\n    children.sort()\n    return ''.join(mothers + children)",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    mothers = sorted([letter for letter in dancing_brigade if letter.isupper()])\n    children = sorted([letter for letter in dancing_brigade if letter.islower()])\n    \n    return ''.join(mothers + children)",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    mothers = sorted([m for m in dancing_brigade if m.isupper()])\n    children = sorted([c for c in dancing_brigade if c.islower()])\n    return ''.join(mothers + children)",
+            "logp": null
+        },
+        {
+            "content": "def find_children(dancing_brigade):\n    # Create a dictionary to store the count of each character\n    char_count = {}\n    for char in dancing_brigade:\n        char_count[char.lower()] = char_count.get(char.lower(), 0) + 1\n    \n    # Create a list to store the sorted characters\n    sorted_chars = []\n    \n    # Iterate through the uppercase characters (mothers)\n    for char in sorted(set(dancing_brigade)):\n        # Append the uppercase character\n        sorted_chars.append(char)\n        \n        # Append the lowercase characters (children) in alphabetical order\n        for i in range(char_count[char.lower()]):\n            sorted_chars.append(char.lower())\n    \n    # Join the sorted characters into a string and return it\n    return ''.join(sorted_chars)",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": [
+        {
+            "content": "def find_children(dancing_brigade):\n    # Sort the dancing brigade in alphabetical order\n    sorted_brigade = sorted(dancing_brigade, key=lambda x: x.lower())\n    \n    # Join the sorted brigade to form the final result\n    result = ''.join(sorted_brigade)\n    \n    return result",
+            "logp": null
+        }
+    ]
+}

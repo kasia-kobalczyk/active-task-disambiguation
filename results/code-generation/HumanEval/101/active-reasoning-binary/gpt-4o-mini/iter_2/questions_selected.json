@@ -1,0 +1,6 @@
+{
+    "0": "assert words_string(\"   leading spaces,with,spaces   \") == [\"leading\", \"spaces\", \"with\", \"spaces\"]",
+    "1": "assert words_string(\"   a b c   , d e f   \") == [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]",
+    "2": "assert words_string(\"one   two,three,four five\") == [\"one\", \"two\", \"three\", \"four\", \"five\"]",
+    "3": "assert words_string(\"   hello   ,world  , python  \") == [\"hello\", \"world\", \"python\"]"
+}

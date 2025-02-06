@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = 'aeiouAEIOU'\n    closest_vowel = ''\n    consonants_count = 0\n    \n    for char in reversed(word[1:-1]):\n        if char not in vowels:\n            consonants_count += 1\n        else:\n            if consonants_count >= 2:\n                closest_vowel = char\n                break\n    return closest_vowel",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    word = word.strip()\n    for i in range(len(word)-2, 0, -1):\n        if word[i] not in vowels and word[i-1] in vowels and word[i+1] in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    right_consonant = False\n    closest_vowel = ''\n    for i in range(len(word)-1, 0, -1):\n        if word[i] in vowels and right_consonant:\n            closest_vowel = word[i]\n            break\n        elif word[i] not in vowels:\n            right_consonant = True\n    return closest_vowel",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']\n    word = word.strip().lower()\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels:\n            if word[i-1] in consonants and word[i+1] in consonants:\n                return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']\n    \n    for i in range(len(word)-3, 0, -1):\n        if word[i] in vowels and word[i+1] in consonants and word[i-1] in consonants:\n            return word[i]\n        \n    return ''",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    \n    # Remove vowels in the beginning and ending\n    word = word.strip(vowels)\n    \n    # Find consonants from the right side of the word\n    consonants = []\n    for i in range(len(word)-1, -1, -1):\n        if word[i] not in vowels:\n            consonants.append(word[i])\n        else:\n            break\n    \n    # Find the closest vowel between the consonants\n    for i in range(len(consonants)-1, -1, -1):\n        if consonants[i] in vowels:\n            return consonants[i]\n    \n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    right_side = word[::-1]\n    for i in range(1, len(right_side) - 1):\n        if right_side[i] in vowels and right_side[i-1] not in vowels and right_side[i+1] not in vowels:\n            return right_side[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = []\n    for i in range(len(word) - 2, 0, -1):\n        if word[i] not in vowels and word[i + 1] not in vowels:\n            consonants.append(word[i])\n        elif word[i] in vowels and word[i + 1] not in vowels and len(consonants) > 0:\n            return word[i]\n    return ''",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = \"aeiouAEIOU\"\n    consonants = \"bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ\"\n    closest_vowel = \"\"\n    found_consonant = False\n    \n    for i in range(len(word)-1, 0, -1):\n        if word[i] in vowels:\n            if found_consonant:\n                closest_vowel = word[i]\n                break\n        elif word[i] in consonants:\n            found_consonant = True\n    \n    return closest_vowel",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    word = word.lower()\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    \n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    \n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = []\n\n    for i in range(len(word)-1, 0, -1):\n        if word[i] not in vowels:\n            consonants.append(word[i])\n        else:\n            if consonants:\n                return word[i]\n\n    return ''",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    word = word.lower()\n    consonant_index = None\n    vowel_found = False\n    \n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels:\n            vowel_found = True\n            break\n        if word[i] not in vowels and word[i+1] not in vowels:\n            consonant_index = i\n    \n    if vowel_found:\n        return word[i]\n    else:\n        return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    consonants = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'}\n    word = word.lower()\n    for i in range(len(word) - 2, 0, -1):\n        if word[i] in vowels and word[i-1] in consonants and word[i+1] in consonants:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = \"aeiouAEIOU\"\n    consonants = \"bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ\"\n    reversed_word = word[::-1]\n    \n    for i in range(1, len(reversed_word)-1):\n        if reversed_word[i] in vowels and reversed_word[i-1] in consonants and reversed_word[i+1] in consonants:\n            return reversed_word[i]\n    \n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(word) - 2, 0, -1):\n        if word[i] in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    word = word.lower()\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return ''",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return ''",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = set(\"aeiou\")\n    consonants = set(\"bcdfghjklmnpqrstvwxyz\")\n    found = False\n    \n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] in consonants and word[i+1] in consonants:\n            return word[i]\n    \n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = 'aeiouAEIOU'\n    consonants = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ'\n    word = word[::-1]\n    for i in range(1, len(word)-1):\n        if word[i] in vowels and word[i-1] in consonants and word[i+1] in consonants:\n            return word[i]\n    return ''",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']\n    closest_vowel = ''\n    for i in range(len(word) - 2, 0, -1):\n        if word[i] in vowels:\n            if word[i-1] in consonants and word[i+1] in consonants:\n                closest_vowel = word[i]\n                break\n    return closest_vowel",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    closest_vowel = ''\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            closest_vowel = word[i]\n            break\n    return closest_vowel",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    word = word.strip()\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    consonants = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'}\n\n    for i in range(len(word) - 2, 0, -1):\n        if word[i] in vowels and word[i-1] in consonants and word[i+1] in consonants:\n            return word[i]\n    \n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    n = len(word)\n    for i in range(n-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return ''",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    \n    # Initialize the closest vowel as an empty string\n    closest_vowel = \"\"\n    \n    # Iterate through the word from right to left\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels:\n            # Check if the character before and after the vowel are consonants\n            if word[i-1] in consonants and word[i+1] in consonants:\n                closest_vowel = word[i]\n                break\n                \n    return closest_vowel",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    \n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    \n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    vowels_in_word = set()\n    for i in range(1, len(word)-1):\n        if word[i] in vowels:\n            vowels_in_word.add(word[i])\n    if len(vowels_in_word) == 0:\n        return \"\"\n    for vowel in vowels_in_word:\n        for i in range(len(word)-1, 1, -1):\n            if word[i] == vowel and word[i-1] not in vowels and word[i-2] not in vowels:\n                return vowel\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    word = word.lower()\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']\n    word = word.lower()\n    for i in range(len(word)-1, 1, -1):\n        if word[i] in vowels and word[i-1] in consonants and word[i-2] in consonants:\n            return word[i]\n    return ''",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']\n    closest_vowel = ''\n    for i in range(len(word) - 2, 0, -1):\n        if word[i] in vowels:\n            if word[i-1] in consonants and word[i+1] in consonants:\n                closest_vowel = word[i]\n                break\n    return closest_vowel",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    closest_vowel = ''\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            closest_vowel = word[i]\n            break\n    return closest_vowel",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    word = word.strip()\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    consonants = {'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'}\n\n    for i in range(len(word) - 2, 0, -1):\n        if word[i] in vowels and word[i-1] in consonants and word[i+1] in consonants:\n            return word[i]\n    \n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    n = len(word)\n    for i in range(n-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return ''",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    \n    # Initialize the closest vowel as an empty string\n    closest_vowel = \"\"\n    \n    # Iterate through the word from right to left\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels:\n            # Check if the character before and after the vowel are consonants\n            if word[i-1] in consonants and word[i+1] in consonants:\n                closest_vowel = word[i]\n                break\n                \n    return closest_vowel",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = {'a', 'e', 'i', 'o', 'u'}\n    \n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    \n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    word = word.lower()\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    word = word.lower()\n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    return \"\"",
+            "logp": null
+        },
+        {
+            "content": "def get_closest_vowel(word):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    word = word.lower()\n    \n    for i in range(len(word)-2, 0, -1):\n        if word[i] in vowels and word[i-1] not in vowels and word[i+1] not in vowels:\n            return word[i]\n    \n    return \"\"",
+            "logp": null
+        }
+    ]
+}

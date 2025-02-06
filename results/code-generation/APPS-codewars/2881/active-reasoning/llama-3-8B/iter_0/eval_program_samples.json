@@ -1,0 +1,109 @@
+{
+    "0": {
+        "0": [
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n    return check_sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0"
+        ],
+        "1": [],
+        "2": [
+            "def validate(n):\n    n = n.replace(' ', '')\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ],
+        "3": [
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ],
+        "4": [
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ]
+    },
+    "1": {
+        "0": [
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ],
+        "1": [
+            "def validate(n):\n    n = n.replace(' ', '')\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ],
+        "2": [
+            "def validate(n):\n    n = n.replace(' ', '')\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ],
+        "3": [
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ],
+        "4": [
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ]
+    },
+    "2": {
+        "0": [
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "def validate(n):\n    digits = [int(d) for d in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0"
+        ],
+        "1": [
+            "def validate(n):\n    n = n.replace(' ', '')\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ],
+        "2": [
+            "def validate(n):\n    n = n.replace(' ', '')\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "def validate(n):\n    n = str(n)\n    n = n.replace(' ', '')\n    if len(n) <= 1:\n        return False\n    s = 0\n    for i, digit in enumerate(reversed(n)):\n        digit = int(digit)\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit = (digit // 10) + (digit % 10)\n        s += digit\n    return s % 10 == 0"
+        ],
+        "3": [
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ],
+        "4": [
+            "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0"
+        ]
+    }
+}

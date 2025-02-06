@@ -1,0 +1,24 @@
+{
+    "0": [
+        "assert solve(\"ab\") == True"
+    ],
+    "1": [
+        "assert solve(\"aa\") == False",
+        "assert solve(\"abbx\") == True",
+        "assert solve(\"abcba\") == True",
+        "assert solve(\"abba\") == False"
+    ],
+    "2": [
+        "assert solve(\"abcde\") == True",
+        "assert solve(\"abbx\") == True",
+        "assert solve(\"abcba\") == True",
+        "assert solve(\"abba\") == False"
+    ],
+    "3": [
+        "assert solve(\"abbx\") == True",
+        "assert solve(\"abcba\") == True",
+        "assert solve(\"abba\") == False",
+        "assert solve(\"abcd\") == False",
+        "assert solve(\"a\") == True"
+    ]
+}

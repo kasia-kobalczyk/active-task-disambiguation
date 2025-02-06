@@ -1,0 +1,150 @@
+{
+    "0": [
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    root = round(a**(1/3))\n    return root**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    cube_root = a ** (1/3)\n    return cube_root.is_integer()",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return a == int(a ** (1/3)) ** 3",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    cube_root = math.pow(a, 1/3)\n    return cube_root == int(cube_root)",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    if int(a**(1/3))**3 == a:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    return int(a ** (1/3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    if a >= 0:\n        cube_root = int(a ** (1/3))\n        return cube_root ** 3 == a\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef iscube(a):\n    return math.isqrt(a)**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a ** (1/3)) ** 3 == a",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def iscube(a):\n    return int(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return int(a ** (1/3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return int(a ** (1 / 3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    if a < 0:\n        return False\n    cube_root = int(a ** (1/3))\n    if cube_root ** 3 == a:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return int(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return int(a ** (1 / 3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    return a**(1/3) % 1 == 0\n\nassert iscube(10000) == False",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    return int(a ** (1/3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return int(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    if a < 0:\n        return False\n    root = round(a**(1/3))\n    return root**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    cube_root = a**(1/3)\n    return cube_root.is_integer()",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    cube_root = int(a**(1/3))\n    return cube_root**3 == a",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def iscube(a):\n    # find the cube root of a\n    cube_root = round(a ** (1/3))\n\n    # check if the cube of the cube root is equal to a\n    if cube_root ** 3 == a:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    if a <= 0:\n        return False\n    for i in range(1, a+1):\n        if i ** 3 == a:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a ** (1/3)) ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    if a < 0:\n        return False\n    root = a ** (1 / 3)\n    return round(root) ** 3 == a",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def iscube(a):\n    if a >= 0:\n        return round(a ** (1/3)) ** 3 == a\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    '''\n    # Find the cube root of the given integer\n    root = round(a ** (1/3))\n\n    # Check if the cube of the root is equal to the given integer\n    if root ** 3 == a:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    # find the cube root of a\n    root = a ** (1/3)\n    \n    # round the root to the nearest integer\n    root = round(root)\n    \n    # calculate the cube of the rounded root\n    cube = root ** 3\n    \n    # return True if the calculated cube is equal to a, False otherwise\n    return cube == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    cube_root = round(a**(1/3))\n    return cube_root**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a**(1/3))**3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    cube_root = round(a ** (1/3))\n    return cube_root ** 3 == a",
+            "logp": null
+        },
+        {
+            "content": "def iscube(a):\n    return round(a**(1/3))**3 == a\n\nassert iscube(10000) == False\nassert iscube(64) == True\nassert iscube(216) == True",
+            "logp": null
+        }
+    ]
+}

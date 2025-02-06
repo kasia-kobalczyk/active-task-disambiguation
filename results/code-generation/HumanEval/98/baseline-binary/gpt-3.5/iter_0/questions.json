@@ -1,0 +1,25 @@
+{
+    "0": [
+        "assert count_upper(\"This is a test\") == 2",
+        "assert count_upper(\"Hello, World!\") == 1",
+        "assert count_upper(\"PYTHON\") == 1"
+    ],
+    "1": [
+        "assert count_upper(\"Hello Python\") == 0",
+        "assert count_upper(\"HeLlO wOrLd\") == 1",
+        "assert count_upper(\"Hello World\") == 0"
+    ],
+    "2": [
+        "assert count_upper(\"\") == 0",
+        "assert count_upper(\"hello\") == 0",
+        "assert count_upper(\"AEIOU\") == 2",
+        "assert count_upper(\"A\") == 0",
+        "assert count_upper(\"PyThOn\") == 1",
+        "assert count_upper(\"eAeI\") == 0"
+    ],
+    "3": [
+        "assert count_upper(\"Hello World\") == 1",
+        "assert count_upper(\"AaEeIiOoUu\") == 2",
+        "assert count_upper(\"PyThOn\") == 1"
+    ]
+}

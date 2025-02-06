@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "def remove_duplicates(numbers):\n    # create an empty dictionary to store the count of each number\n    count = {}\n    \n    # iterate over the numbers list\n    for num in numbers:\n        # if the number is already in the dictionary, increment its count\n        if num in count:\n            count[num] += 1\n        # if the number is not in the dictionary, add it with count 1\n        else:\n            count[num] = 1\n    \n    # create an empty list to store the result\n    result = []\n    \n    # iterate over the numbers list again\n    for num in numbers:\n        # if the count of the number is 1, add it to the result list\n        if count[num] == 1:\n            result.append(num)\n    \n    # return the result list\n    return result",
+            "logp": null
+        },
+        {
+            "content": "from typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    \"\"\"\n    # Create an empty set to keep track of unique elements\n    unique_numbers = set()\n    \n    # Create a new list to store the final result\n    result = []\n    \n    # Iterate over each number in the input list\n    for number in numbers:\n        # If the number is not in the unique_numbers set, add it to the set and result list\n        if number not in unique_numbers:\n            unique_numbers.add(number)\n            result.append(number)\n    \n    # Return the final result\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\"\n    From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    \"\"\"\n    # Create a new list to store the unique elements\n    unique_numbers = []\n\n    # Iterate through the input list\n    for number in numbers:\n        # Check if the number is not already in the unique_numbers list\n        if number not in unique_numbers:\n            # Append the number to the unique_numbers list\n            unique_numbers.append(number)\n\n    # Return the unique_numbers list\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    \"\"\"\n    # create an empty set to store unique elements\n    unique_numbers = set()\n    # create an empty list to store the result\n    result = []\n    # iterate over the input list\n    for number in numbers:\n        # if the number is not in the set, add it to the set and the result list\n        if number not in unique_numbers:\n            unique_numbers.add(number)\n            result.append(number)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    return [x for x in numbers if numbers.count(x) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    # create an empty set to store unique elements\n    unique_numbers = set()\n    \n    # create a new list to store the result\n    result = []\n    \n    # iterate over the input list\n    for number in numbers:\n        # if the number is not already in the set, add it to the set and the result list\n        if number not in unique_numbers:\n            unique_numbers.add(number)\n            result.append(number)\n    \n    # return the result list\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers):\n    result = []\n    for num in numbers:\n        if num not in result:\n            result.append(num)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "from typing import List\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    return list(dict.fromkeys(numbers))",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    # Initialize an empty list to store the unique elements\n    unique_numbers = []\n    \n    # Iterate over each element in the input list\n    for num in numbers:\n        # Check if the element is not already in the unique_numbers list\n        if num not in unique_numbers:\n            # If it's not, append it to the list\n            unique_numbers.append(num)\n    \n    # Return the list of unique elements\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers):\n    # initialize an empty list to store unique elements\n    unique_numbers = []\n    \n    # iterate through the input list\n    for number in numbers:\n        # check if the number is already in the unique_numbers list\n        if number not in unique_numbers:\n            # if not, add it to the list\n            unique_numbers.append(number)\n    \n    # return the list of unique numbers\n    return unique_numbers",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    count_dict = {}\n    for num in numbers:\n        if num in count_dict:\n            count_dict[num] += 1\n        else:\n            count_dict[num] = 1\n    return [num for num in numbers if count_dict[num] == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    # Initialize an empty dictionary\n    num_dict = {}\n    \n    # Loop through the list of numbers\n    for num in numbers:\n        # If the number is already in the dictionary, increase its count by 1\n        if num in num_dict:\n            num_dict[num] += 1\n        # If the number is not in the dictionary, add it with a count of 1\n        else:\n            num_dict[num] = 1\n    \n    # Initialize an empty list to store the unique numbers\n    unique_numbers = []\n    \n    # Loop through the list of numbers\n    for num in numbers:\n        # If the count of the number in the dictionary is 1, add it to the list of unique numbers\n        if num_dict[num] == 1:\n            unique_numbers.append(num)\n    \n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    no_duplicates = []\n    for number in numbers:\n        if numbers.count(number) == 1:\n            no_duplicates.append(number)\n    return no_duplicates",
+            "logp": null
+        },
+        {
+            "content": "from typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    counts = {}\n    result = []\n    \n    for num in numbers:\n        if num not in counts:\n            counts[num] = 1\n        else:\n            counts[num] += 1\n    \n    for num in numbers:\n        if counts[num] == 1:\n            result.append(num)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    unique_numbers = []\n    for num in numbers:\n        if numbers.count(num) == 1:\n            unique_numbers.append(num)\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    unique_numbers = []\n    for number in numbers:\n        if numbers.count(number) == 1:\n            unique_numbers.append(number)\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    unique_numbers = []\n    for number in numbers:\n        if numbers.count(number) == 1:\n            unique_numbers.append(number)\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    result = []\n    for num in numbers:\n        if numbers.count(num) == 1:\n            result.append(num)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    return [x for x in numbers if numbers.count(x) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    \n    Examples:\n\n    [1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9] -> [1, 2, 3, 4, 7, 8, 9]\n    \"\"\"\n    return [number for number in numbers if numbers.count(number) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    result = []\n    for num in numbers:\n        if numbers.count(num) == 1:\n            result.append(num)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    count = {}\n    for number in numbers:\n        if number in count:\n            count[number] += 1\n        else:\n            count[number] = 1\n    \n    unique_numbers = []\n    for number in numbers:\n        if count[number] == 1:\n            unique_numbers.append(number)\n    \n    return unique_numbers",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    return [x for x in numbers if numbers.count(x) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    return [num for num in numbers if numbers.count(num) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    # create a dictionary to count the occurrences of each number\n    counts = {}\n    for num in numbers:\n        if num in counts:\n            counts[num] += 1\n        else:\n            counts[num] = 1\n\n    # create a new list with only the numbers that occur once\n    result = []\n    for num in numbers:\n        if counts[num] == 1:\n            result.append(num)\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    unique_numbers = []\n    for number in numbers:\n        if numbers.count(number) == 1:\n            unique_numbers.append(number)\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    count = {}\n    for num in numbers:\n        count[num] = count.get(num, 0) + 1\n    return [num for num in numbers if count[num] == 1]",
+            "logp": null
+        },
+        {
+            "content": "from typing import List\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    duplicates = []\n    output = []\n    for num in numbers:\n        if num not in duplicates:\n            duplicates.append(num)\n        else:\n            output.append(num)\n    return [num for num in numbers if num not in output]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    # create a dictionary to count the occurrences of each number\n    count = {}\n    \n    # iterate over the list and update the counts\n    for num in numbers:\n        count[num] = count.get(num, 0) + 1\n    \n    # create a new list to store the unique numbers\n    unique_numbers = []\n    \n    # iterate over the list and add the numbers that occur only once\n    for num in numbers:\n        if count[num] == 1:\n            unique_numbers.append(num)\n    \n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    unique_numbers = []\n    for number in numbers:\n        if numbers.count(number) == 1:\n            unique_numbers.append(number)\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    \n    Examples:\n\n    [1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9] -> [1, 2, 3, 4, 7, 8, 9]\n    [1, 2, 3, 4, 5, 6, 6, 6, 5, 4, 3, 2, 1] -> []\n    \"\"\"\n\n    # Create an empty dictionary to keep track of the count of each element\n    count_dict = {}\n\n    # Loop through the numbers list\n    for number in numbers:\n        # If the number is already in the dictionary, increase its count by 1\n        if number in count_dict:\n            count_dict[number] += 1\n        # If the number is not in the dictionary, add it with a count of 1\n        else:\n            count_dict[number] = 1\n\n    # Create a new list to store the elements that occur only once\n    unique_numbers = []\n\n    # Loop through the numbers list again\n    for number in numbers:\n        # If the count of the number in the dictionary is 1, add it to the unique_numbers list\n        if count_dict[number] == 1:\n            unique_numbers.append(number)\n\n    # Return the unique_numbers list\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    return [num for num in numbers if numbers.count(num) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    \n    Examples:\n\n    [1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9] -> [1, 2, 3, 4, 7, 8, 9]\n    [1, 2, 3, 4, 5, 6, 6, 6, 5, 4, 3, 2, 1] -> []\n    \"\"\"\n    unique_numbers = []\n    for number in numbers:\n        if numbers.count(number) == 1:\n            unique_numbers.append(number)\n    return unique_numbers",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    result = []\n    for num in numbers:\n        if numbers.count(num) == 1:\n            result.append(num)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    \n    Examples:\n\n    [1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9] -> [1, 2, 3, 4, 7, 8, 9]\n    [1, 2, 3, 4, 5, 6, 6, 6, 5, 4, 3, 2, 1] -> []\n    [1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8] -> [1, 2, 3, 5, 7]\n    \"\"\"\n    unique_numbers = []\n    for num in numbers:\n        if numbers.count(num) == 1:\n            unique_numbers.append(num)\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    return [x for x in numbers if numbers.count(x) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    return [num for num in numbers if numbers.count(num) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    unique_numbers = []\n    for num in numbers:\n        if numbers.count(num) == 1:\n            unique_numbers.append(num)\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    \n    Examples:\n\n    [1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9] -> [1, 2, 3, 4, 7, 8, 9]\n    [1, 2, 3, 4, 5, 6, 6, 6, 5, 4, 3, 2, 1] -> []\n    [1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8] -> [1, 2, 3, 5, 7]\n    \"\"\"\n    result = []\n    for number in numbers:\n        if numbers.count(number) == 1:\n            result.append(number)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    counts = {}\n    result = []\n    \n    for num in numbers:\n        if num not in counts:\n            counts[num] = 1\n        else:\n            counts[num] += 1\n    \n    for num in numbers:\n        if counts[num] == 1:\n            result.append(num)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    \n    Examples:\n\n    [1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9] -> [1, 2, 3, 4, 7, 8, 9]\n    [1, 2, 3, 4, 5, 6, 6, 6, 5, 4, 3, 2, 1] -> []\n    [1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8] -> [1, 2, 3, 5, 7]\n    \"\"\"\n    return [num for num in numbers if numbers.count(num) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    counts = {}\n    for num in numbers:\n        if num in counts:\n            counts[num] += 1\n        else:\n            counts[num] = 1\n\n    unique_nums = []\n    for num in numbers:\n        if counts[num] == 1:\n            unique_nums.append(num)\n\n    return unique_nums",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    return [number for number in numbers if numbers.count(number) == 1]",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    # create an empty dictionary to store the count of each element\n    count_dict = {}\n\n    # iterate over the list of numbers\n    for num in numbers:\n        # if the element is not already in the dictionary, add it with a count of 1\n        if num not in count_dict:\n            count_dict[num] = 1\n        # if the element is already in the dictionary, increment its count by 1\n        else:\n            count_dict[num] += 1\n\n    # create an empty list to store the elements that occur only once\n    unique_numbers = []\n\n    # iterate over the list of numbers again\n    for num in numbers:\n        # if the count of the element in the dictionary is 1, add it to the unique_numbers list\n        if count_dict[num] == 1:\n            unique_numbers.append(num)\n\n    # return the list of unique numbers\n    return unique_numbers",
+            "logp": null
+        },
+        {
+            "content": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    count = {}\n    result = []\n    for num in numbers:\n        if num in count:\n            count[num] += 1\n        else:\n            count[num] = 1\n    for num in numbers:\n        if count[num] == 1:\n            result.append(num)\n    return result",
+            "logp": null
+        }
+    ]
+}

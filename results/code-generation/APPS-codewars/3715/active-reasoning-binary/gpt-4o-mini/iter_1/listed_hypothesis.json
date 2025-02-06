@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 15):  # 5^1 to 5^14\n        for j in range(i + 1, 15):  # create combinations of different powers\n            for k in range(j + 1, 15):\n                chando_numbers.add(5**i)\n                chando_numbers.add(5**j)\n                chando_numbers.add(5**k)\n                chando_numbers.add(5**i + 5**j)\n                chando_numbers.add(5**i + 5**k)\n                chando_numbers.add(5**j + 5**k)\n                chando_numbers.add(5**i + 5**j + 5**k)\n    \n    # Convert set to sorted list and return the nth number\n    sorted_chando_numbers = sorted(chando_numbers)\n    return sorted_chando_numbers[n-1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 15):  # 5^1 to 5^14\n        for j in range(i + 1, 15):  # ensures different powers\n            chando_numbers.add(5**i)\n            chando_numbers.add(5**i + 5**j)\n    chando_numbers = sorted(chando_numbers)\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power_of_5 = [5 ** i for i in range(1, 15)]\n    \n    for i in range(1 << len(power_of_5)):\n        sum_chando = 0\n        for j in range(len(power_of_5)):\n            if i & (1 << j):\n                sum_chando += power_of_5[j]\n        chando_numbers.add(sum_chando)\n    \n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chandos_numbers = set()\n    for i in range(1, 14):  # 5^13 is 1220703125, more than enough\n        for j in range(i + 1):\n            chandos_numbers.add(5**i + sum(5**k for k in range(1, i) if j & (1 << (k-1))))\n    return sorted(chandos_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    limit = 1 << 13  # Using 13 because 5^13 is larger than 7000\n    for i in range(limit):\n        sum_power = 0\n        for j in range(13):  # 5^0 to 5^12\n            if i & (1 << j):\n                sum_power += 5 ** (j + 1)\n        chando_numbers.add(sum_power)\n    \n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 15):  # 5^1 to 5^14\n        for j in range(i + 1, 15):\n            power_sum = (5 ** i) + (5 ** j)\n            chando_numbers.add(power_sum)\n    chando_numbers = sorted(chando_numbers)\n    return chando_numbers[n - 1] if n - 1 < len(chando_numbers) else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power = 1\n    while power <= 7000:\n        current_power = 5 ** power\n        for existing in list(chando_numbers):\n            new_number = existing + current_power\n            chando_numbers.add(new_number)\n        chando_numbers.add(current_power)\n        power += 1\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    max_power = 14  # 5^14 is enough since 5^15 exceeds 7000\n    \n    # Generate all combinations of different powers of 5\n    for i in range(1 << max_power):\n        sum_power = 0\n        for j in range(max_power):\n            if i & (1 << j):\n                sum_power += 5 ** (j + 1)\n        chando_numbers.append(sum_power)\n\n    # Sort and remove duplicates, then return the nth number\n    chando_numbers = sorted(set(chando_numbers))\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 14):  # 5^1 to 5^13 gives us enough powers\n        for j in range(1 << i):\n            sum_powers = sum(5 ** k for k in range(i) if (j & (1 << k)) > 0)\n            chando_numbers.add(sum_powers)\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power = 1\n    while True:\n        current_power = 5 ** power\n        for num in range(1 << power):\n            total = 0\n            for i in range(power):\n                if num & (1 << i):\n                    total += 5 ** (i + 1)\n            chando_numbers.add(total)\n        if len(chando_numbers) >= n:\n            break\n        power += 1\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 1 << 13):  # 2^13 > 7000\n        sum_powers = 0\n        for j in range(13):\n            if i & (1 << j):\n                sum_powers += 5 ** (j + 1)\n        chando_numbers.add(sum_powers)\n    \n    sorted_chando_numbers = sorted(chando_numbers)\n    return sorted_chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    power_of_5 = []\n    for i in range(1, 15):  # 5^1 to 5^14 to cover a sufficient range\n        power_of_5.append(5 ** i)\n\n    def generate_chando_numbers(current_sum, index):\n        if current_sum > 0:\n            chando_numbers.append(current_sum)\n        for i in range(index, len(power_of_5)):\n            generate_chando_numbers(current_sum + power_of_5[i], i + 1)\n\n    generate_chando_numbers(0, 0)\n    chando_numbers = sorted(set(chando_numbers))\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 15):  # 5^1 to 5^14\n        for j in range(i + 1, 15):\n            for k in range(j + 1, 15):\n                chando_numbers.add(5**i)\n                chando_numbers.add(5**i + 5**j)\n                chando_numbers.add(5**i + 5**k)\n                chando_numbers.add(5**j + 5**k)\n                chando_numbers.add(5**i + 5**j + 5**k)\n\n    chando_numbers = sorted(chando_numbers)\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    for i in range(1 << 13):  # 2^13 because 5^13 is larger than 7000\n        chando_number = 0\n        for j in range(13):\n            if i & (1 << j):\n                chando_number += 5 ** (j + 1)\n        if chando_number > 0:\n            chando_numbers.append(chando_number)\n\n    chando_numbers = sorted(set(chando_numbers))\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 1 << 13):  # 5^0 to 5^12 (13 terms)\n        total = 0\n        for j in range(13):\n            if (i & (1 << j)) > 0:\n                total += 5 ** (j + 1)\n        chando_numbers.add(total)\n    \n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power_of_5 = [5 ** i for i in range(1, 15)]  # Calculate powers of 5 up to 5^14\n    limit = 1 << len(power_of_5)  # 2^number_of_powers\n\n    for i in range(1, limit):\n        sum_chando = 0\n        for j in range(len(power_of_5)):\n            if i & (1 << j):\n                sum_chando += power_of_5[j]\n        chando_numbers.add(sum_chando)\n\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    powers_of_five = [5 ** i for i in range(1, 14)]  # 5^1 to 5^13 (since 5^14 is larger than needed)\n    \n    for i in range(1, 1 << len(powers_of_five)):  # loop through 1 to 2^len(powers_of_five) - 1\n        total = 0\n        for j in range(len(powers_of_five)):\n            if i & (1 << j):  # check if j-th bit is set\n                total += powers_of_five[j]\n        chando_numbers.add(total)\n\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 1 << 13):  # since 5^13 is larger than 7000\n        sum_chando = 0\n        for j in range(13):\n            if i & (1 << j):\n                sum_chando += 5 ** (j + 1)\n        chando_numbers.add(sum_chando)\n    \n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 15):  # 5^1 to 5^14\n        for j in range(i + 1, 15):\n            power_sum = (5 ** i) + (5 ** j)\n            chando_numbers.add(power_sum)\n            for k in range(j + 1, 15):\n                chando_numbers.add((5 ** i) + (5 ** j) + (5 ** k))\n    \n    for i in range(1, 15):\n        chando_numbers.add(5 ** i)\n\n    chando_numbers = sorted(chando_numbers)\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    power_of_5 = [5**i for i in range(1, 15)]  # Generate powers of 5 up to 5^14\n    total_powers = len(power_of_5)\n    \n    for i in range(1 << total_powers):  # Iterate over all combinations of powers\n        sum_value = 0\n        for j in range(total_powers):\n            if i & (1 << j):  # If the j-th bit is set, include 5^(j+1)\n                sum_value += power_of_5[j]\n        if sum_value > 0:\n            chando_numbers.append(sum_value)\n    \n    chando_numbers = sorted(set(chando_numbers))  # Sort and remove duplicates\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    power_of_5 = [5 ** i for i in range(1, 15)]  # Generate powers of 5 up to a reasonable limit\n    limit = 1 << len(power_of_5)  # 2^number of powers to get combinations\n\n    for i in range(1, limit):\n        sum_chando = 0\n        for j in range(len(power_of_5)):\n            if i & (1 << j):  # Check if the j-th power is included in the sum\n                sum_chando += power_of_5[j]\n        chando_numbers.append(sum_chando)\n\n    chando_numbers = sorted(set(chando_numbers))  # Sort and remove duplicates\n    return chando_numbers[n - 1]  # Return the nth Chando's number\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    power_of_5 = [5 ** i for i in range(1, 15)]  # Calculate powers of 5 up to 5^14\n    total_combinations = 1 << len(power_of_5)  # 2^number of powers\n\n    for i in range(1, total_combinations):\n        sum_of_powers = sum(power_of_5[j] for j in range(len(power_of_5)) if (i & (1 << j)) > 0)\n        chando_numbers.append(sum_of_powers)\n\n    chando_numbers = sorted(set(chando_numbers))  # Remove duplicates and sort\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    power_of_five = []\n    \n    for i in range(1, 15):  # 5^1 to 5^14\n        power_of_five.append(5 ** i)\n        \n    def generate_chando_numbers(current_sum, start_index):\n        if current_sum > 0:\n            chando_numbers.append(current_sum)\n        for i in range(start_index, len(power_of_five)):\n            generate_chando_numbers(current_sum + power_of_five[i], i + 1)\n    \n    generate_chando_numbers(0, 0)\n    chando_numbers = sorted(set(chando_numbers))\n    \n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power_of_5 = [5 ** i for i in range(1, 15)]  # Generate powers of 5 from 5^1 to 5^14\n    total_powers = len(power_of_5)\n\n    for i in range(1, 1 << total_powers):  # Iterate through all combinations of the powers\n        sum_of_powers = 0\n        for j in range(total_powers):\n            if i & (1 << j):  # Check if jth power is included\n                sum_of_powers += power_of_5[j]\n        chando_numbers.add(sum_of_powers)\n\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    power_of_five = [5 ** i for i in range(1, 15)]  # Precompute powers of 5 up to 5^14\n    max_combinations = 1 << len(power_of_five)  # 2^len(power_of_five)\n    \n    for i in range(1, max_combinations):\n        sum_value = 0\n        for j in range(len(power_of_five)):\n            if i & (1 << j):\n                sum_value += power_of_five[j]\n        chando_numbers.append(sum_value)\n\n    chando_numbers = sorted(set(chando_numbers))  # Remove duplicates and sort\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    power = 1\n    while len(chando_numbers) < n:\n        current_set = set()\n        for num in chando_numbers:\n            current_set.add(num + (5 ** power))\n        current_set.add(5 ** power)\n        chando_numbers.extend(current_set)\n        power += 1\n    return sorted(chando_numbers)[:n][-1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power_of_five = 1\n    max_powers = 14  # 5^14 is greater than the maximum possible sum for n <= 7000\n    \n    for i in range(1, max_powers + 1):\n        power_of_five *= 5\n        current_powers = list(chando_numbers)\n        chando_numbers.add(power_of_five)\n        for num in current_powers:\n            chando_numbers.add(num + power_of_five)\n    \n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    powers_of_5 = [5**i for i in range(1, 15)]  # Generate powers of 5 up to 5^14\n    chando_numbers.add(0)  # Start with 0 to help in summing combinations\n    \n    for power in powers_of_5:\n        new_numbers = set()\n        for number in chando_numbers:\n            new_numbers.add(number + power)\n        chando_numbers.update(new_numbers)\n    \n    sorted_chando_numbers = sorted(chando_numbers)\n    return sorted_chando_numbers[n]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    power = 1\n    while len(chando_numbers) < n:\n        current = 5 ** power\n        new_numbers = []\n        for num in chando_numbers:\n            new_sum = num + current\n            if new_sum not in chando_numbers and new_sum not in new_numbers:\n                new_numbers.append(new_sum)\n        chando_numbers.extend(new_numbers)\n        chando_numbers.append(current)\n        power += 1\n    chando_numbers.sort()\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power_of_5 = []\n    for i in range(1, 14):  # 5^1 to 5^13\n        power_of_5.append(5 ** i)\n\n    # Generating all combinations of powers of 5\n    from itertools import combinations\n    \n    for r in range(1, len(power_of_5) + 1):\n        for combo in combinations(power_of_5, r):\n            chando_numbers.add(sum(combo))\n    \n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 1 << 10):  # up to 10 bits for powers of 5\n        number = 0\n        for j in range(10):\n            if i & (1 << j):\n                number += 5 ** (j + 1)\n        chando_numbers.add(number)\n    \n    sorted_chando_numbers = sorted(chando_numbers)\n    return sorted_chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power_of_5 = 5\n    powers = []\n\n    # Generating powers of 5 until we have enough Chando numbers\n    while len(chando_numbers) < n:\n        powers.append(power_of_5)\n        chando_numbers.add(power_of_5)\n        power_of_5 *= 5\n\n    # Use bitwise combinations of powers of 5 to generate sums\n    from itertools import combinations\n\n    for r in range(1, len(powers) + 1):\n        for combo in combinations(powers, r):\n            chando_numbers.add(sum(combo))\n\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    limit = 1 << 14  # we consider up to 2^14 combinations\n    for i in range(1, 14):  # from 5^1 to 5^13\n        power_of_5 = 5 ** i\n        for j in range(limit):\n            if (j & (1 << (i - 1))) != 0:\n                chando_numbers.add(sum(5 ** k for k in range(1, 14) if (j & (1 << (k - 1))) != 0))\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = []\n    max_power = 13  # 5^13 is much larger than the max n we need (7000)\n    \n    for i in range(1, 1 << max_power):\n        number = 0\n        for j in range(max_power):\n            if i & (1 << j):\n                number += 5 ** (j + 1)\n        chando_numbers.append(number)\n\n    chando_numbers.sort()\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 1 << 14):  # 2^14 > 7000\n        sum_power = 0\n        for j in range(14):\n            if i & (1 << j):\n                sum_power += 5 ** (j + 1)\n        chando_numbers.add(sum_power)\n    \n    sorted_chando_numbers = sorted(chando_numbers)\n    return sorted_chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    max_power = 12  # 5^12 is more than enough to generate up to the 7000th Chando's number\n    powers_of_5 = [5 ** i for i in range(1, max_power)]\n    \n    for i in range(1, 1 << len(powers_of_5)):\n        sum_of_powers = sum(powers_of_5[j] for j in range(len(powers_of_5)) if (i & (1 << j)))\n        chando_numbers.add(sum_of_powers)\n    \n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power_of_5 = [5**i for i in range(1, 15)]  # Generate powers of 5 up to 5^14\n    \n    # Generate sums of different powers of 5\n    def generate_chando(current_sum, start_index):\n        if current_sum > 0:\n            chando_numbers.add(current_sum)\n        for i in range(start_index, len(power_of_5)):\n            generate_chando(current_sum + power_of_5[i], i + 1)\n\n    generate_chando(0, 0)\n    \n    sorted_chando_numbers = sorted(chando_numbers)\n    \n    return sorted_chando_numbers[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    \n    for i in range(1, 15):  # 5^1 to 5^14 gives a sufficient range\n        power = 5 ** i\n        for j in range(i):\n            # Sum of different powers of 5\n            for k in range(1 << j):\n                current_sum = power + sum(5 ** x for x in range(1, j+1) if (k & (1 << (x - 1))))\n                chando_numbers.add(current_sum)\n\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    power = 1\n    while len(chando_numbers) < n:\n        current_power = 5 ** power\n        for num in list(chando_numbers):\n            chando_numbers.add(num + current_power)\n        chando_numbers.add(current_power)\n        power += 1\n    return sorted(chando_numbers)[n - 1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef nth_chandos_number(n):\n    chando_numbers = set()\n    for i in range(1, 14):  # 5^1 to 5^13 covers enough range for n <= 7000\n        for j in range(i + 1):\n            for k in range(2 ** i):  # from 0 to 2^i - 1 to get all combinations\n                if (k & (1 << j)) != 0:\n                    chando_numbers.add(5 ** (j + 1))\n                for m in range(j + 1, i):\n                    if (k & (1 << m)) != 0:\n                        chando_numbers.add(5 ** (j + 1) + 5 ** (m + 1))\n    chando_numbers = sorted(chando_numbers)\n    return chando_numbers[n - 1]\n```",
+            "logp": null
+        }
+    ]
+}

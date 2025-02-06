@@ -1,0 +1,174 @@
+{
+    "0": [
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from the ordering string\n    ordering = \"\".join(dict.fromkeys(ordering))\n    \n    # Sort the string s by the ordering string\n    sorted_string = sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering))\n    \n    return \"\".join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters in the ordering string\n    ordering = \"\".join(dict.fromkeys(ordering))\n\n    # Sort the string s based on the ordering string\n    sorted_s = sorted(s, key=lambda c: ordering.index(c) if c in ordering else float('inf'))\n\n    # Join the sorted characters to form the sorted string\n    return \"\".join(sorted_s)\n\n# Test cases\nprint(sort_string(\"foos\", \"of\"))       # Expected: \"oofs\"\nprint(sort_string(\"string\", \"gnirts\")) # Expected: \"gnirts\"\nprint(sort_string(\"banana\", \"abn\"))    # Expected: \"aaabnn\"",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove duplicate characters from the ordering string\n    unique_ordering = ''.join(dict.fromkeys(ordering))\n\n    # Sort the first string using the unique ordering string\n    sorted_string = sorted(s, key=lambda c: unique_ordering.index(c) if c in unique_ordering else len(unique_ordering))\n\n    # Return the sorted string\n    return ''.join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Create a set of unique characters in the ordering string\n    unique_ordering = set(ordering)\n    # Create a dictionary to store the count of each character in the ordering string\n    ordering_count = {}\n    for char in ordering:\n        ordering_count[char] = ordering_count.get(char, 0) + 1\n    \n    # Create a list to store the characters in the first string that are not in the ordering string\n    other_chars = []\n    \n    # Create a list to store the characters in the first string that are in the ordering string\n    ordered_chars = []\n    for char in s:\n        if char in unique_ordering:\n            ordered_chars.append(char)\n        else:\n            other_chars.append(char)\n    \n    # Sort the characters in the first string that are in the ordering string according to the ordering\n    ordered_chars.sort(key=lambda char: ordering.index(char))\n    \n    # Add the characters in the first string that are not in the ordering string to the end of the result\n    result = ordered_chars + other_chars\n    \n    # Return the result as a string\n    return ''.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove duplicate characters from ordering\n    ordering = \"\".join(dict.fromkeys(ordering))\n    \n    # Create a dictionary to store the indices of each character in ordering\n    indices = {}\n    for i, char in enumerate(ordering):\n        indices[char] = i\n    \n    # Sort the string based on the indices in ordering\n    sorted_string = sorted(s, key=lambda x: indices.get(x, float('inf')))\n    \n    # Return the sorted string\n    return \"\".join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n    \n    # Sort the characters in s based on ordering\n    sorted_s = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n    \n    # Return the sorted string\n    return ''.join(sorted_s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # remove repeating characters from the ordering string\n    ordering = ''.join(dict.fromkeys(ordering))\n\n    # create a dictionary to store the positions of characters in the ordering string\n    positions = {char: i for i, char in enumerate(ordering)}\n\n    # sort the characters in the first string based on their positions in the ordering string\n    sorted_string = sorted(s, key=lambda x: positions.get(x, float('inf')))\n\n    return ''.join(sorted_string)\n\nprint(sort_string(\"foos\", \"of\"))  # \"oofs\"\nprint(sort_string(\"string\", \"gnirts\"))  # \"gnirts\"\nprint(sort_string(\"banana\", \"abn\"))  # \"aaabnn\"",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n\n    # Create a dictionary to store the index of each character in the ordering\n    index_dict = {}\n    for i, char in enumerate(ordering):\n        index_dict[char] = i\n\n    # Sort the characters in s based on their index in the ordering\n    sorted_string = sorted(s, key=lambda x: index_dict.get(x, len(ordering)))\n\n    return ''.join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(sorted(set(ordering), key=ordering.index))\n\n    # Sort characters in s based on ordering\n    sorted_s = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n    \n    # Return the sorted string\n    return ''.join(sorted_s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = []\n    for char in ordering:\n        if char not in unique_ordering:\n            unique_ordering.append(char)\n    \n    result = []\n    remaining_chars = []\n    for char in s:\n        if char in unique_ordering:\n            result.append(char)\n        else:\n            remaining_chars.append(char)\n    \n    result.sort(key=lambda x: unique_ordering.index(x))\n    result.extend(remaining_chars)\n    \n    return ''.join(result)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from the ordering string\n    ordering = \"\".join(dict.fromkeys(ordering))\n    \n    # Sort the string s by the ordering string\n    sorted_string = sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering))\n    \n    return \"\".join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters in the ordering string\n    ordering = \"\".join(dict.fromkeys(ordering))\n\n    # Sort the string s based on the ordering string\n    sorted_s = sorted(s, key=lambda c: ordering.index(c) if c in ordering else float('inf'))\n\n    # Join the sorted characters to form the sorted string\n    return \"\".join(sorted_s)\n\n# Test cases\nprint(sort_string(\"foos\", \"of\"))       # Expected: \"oofs\"\nprint(sort_string(\"string\", \"gnirts\")) # Expected: \"gnirts\"\nprint(sort_string(\"banana\", \"abn\"))    # Expected: \"aaabnn\"",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove duplicate characters from the ordering string\n    unique_ordering = ''.join(dict.fromkeys(ordering))\n\n    # Sort the first string using the unique ordering string\n    sorted_string = sorted(s, key=lambda c: unique_ordering.index(c) if c in unique_ordering else len(unique_ordering))\n\n    # Return the sorted string\n    return ''.join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Create a set of unique characters in the ordering string\n    unique_ordering = set(ordering)\n    # Create a dictionary to store the count of each character in the ordering string\n    ordering_count = {}\n    for char in ordering:\n        ordering_count[char] = ordering_count.get(char, 0) + 1\n    \n    # Create a list to store the characters in the first string that are not in the ordering string\n    other_chars = []\n    \n    # Create a list to store the characters in the first string that are in the ordering string\n    ordered_chars = []\n    for char in s:\n        if char in unique_ordering:\n            ordered_chars.append(char)\n        else:\n            other_chars.append(char)\n    \n    # Sort the characters in the first string that are in the ordering string according to the ordering\n    ordered_chars.sort(key=lambda char: ordering.index(char))\n    \n    # Add the characters in the first string that are not in the ordering string to the end of the result\n    result = ordered_chars + other_chars\n    \n    # Return the result as a string\n    return ''.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove duplicate characters from ordering\n    ordering = \"\".join(dict.fromkeys(ordering))\n    \n    # Create a dictionary to store the indices of each character in ordering\n    indices = {}\n    for i, char in enumerate(ordering):\n        indices[char] = i\n    \n    # Sort the string based on the indices in ordering\n    sorted_string = sorted(s, key=lambda x: indices.get(x, float('inf')))\n    \n    # Return the sorted string\n    return \"\".join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n    \n    # Sort the characters in s based on ordering\n    sorted_s = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n    \n    # Return the sorted string\n    return ''.join(sorted_s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # remove repeating characters from the ordering string\n    ordering = ''.join(dict.fromkeys(ordering))\n\n    # create a dictionary to store the positions of characters in the ordering string\n    positions = {char: i for i, char in enumerate(ordering)}\n\n    # sort the characters in the first string based on their positions in the ordering string\n    sorted_string = sorted(s, key=lambda x: positions.get(x, float('inf')))\n\n    return ''.join(sorted_string)\n\nprint(sort_string(\"foos\", \"of\"))  # \"oofs\"\nprint(sort_string(\"string\", \"gnirts\"))  # \"gnirts\"\nprint(sort_string(\"banana\", \"abn\"))  # \"aaabnn\"",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n\n    # Create a dictionary to store the index of each character in the ordering\n    index_dict = {}\n    for i, char in enumerate(ordering):\n        index_dict[char] = i\n\n    # Sort the characters in s based on their index in the ordering\n    sorted_string = sorted(s, key=lambda x: index_dict.get(x, len(ordering)))\n\n    return ''.join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(sorted(set(ordering), key=ordering.index))\n\n    # Sort characters in s based on ordering\n    sorted_s = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n    \n    # Return the sorted string\n    return ''.join(sorted_s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = []\n    for char in ordering:\n        if char not in unique_ordering:\n            unique_ordering.append(char)\n    \n    result = []\n    remaining_chars = []\n    for char in s:\n        if char in unique_ordering:\n            result.append(char)\n        else:\n            remaining_chars.append(char)\n    \n    result.sort(key=lambda x: unique_ordering.index(x))\n    result.extend(remaining_chars)\n    \n    return ''.join(result)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove duplicates from the ordering string\n    ordering = \"\".join(dict.fromkeys(ordering))\n    \n    # Sort the characters of the first string according to the ordering\n    sorted_string = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n    \n    # Return the sorted string\n    return \"\".join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_order = ''.join(dict.fromkeys(ordering))\n    sorted_s = ''.join(sorted(s, key=lambda x: unique_order.index(x) if x in unique_order else len(unique_order)))\n    return sorted_s",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # remove duplicate characters from ordering string\n    ordering = ''.join(dict.fromkeys(ordering))\n\n    # sort the characters in s based on their order in ordering\n    sorted_s = sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering))\n\n    # return the sorted string\n    return ''.join(sorted_s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n    \n    # sort the characters in s based on the order of ordering\n    sorted_string = sorted(s, key=lambda x: ordering.index(x) if x in ordering else float('inf'))\n    \n    return ''.join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove duplicate characters in ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n\n    # Create a dictionary to store the indices of characters in ordering\n    indices = {c: i for i, c in enumerate(ordering)}\n\n    # Sort the characters in s based on the indices in ordering\n    sorted_s = sorted(s, key=lambda c: indices.get(c, float('inf')))\n\n    # Return the sorted string\n    return ''.join(sorted_s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove duplicate characters from the ordering string\n    ordering = \"\".join(dict.fromkeys(ordering))\n\n    # Sort the string s using the ordering string\n    s = sorted(s, key=lambda x: ordering.index(x) if x in ordering else float('inf'))\n\n    # Return the sorted string\n    return \"\".join(s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from the ordering string\n    ordering = ''.join(set(ordering))\n    \n    # Sort the string s based on the ordering\n    sorted_string = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n    \n    # Return the sorted string\n    return ''.join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = \"\".join(dict.fromkeys(ordering))\n    sorted_string = sorted(s, key=lambda c: unique_ordering.index(c) if c in unique_ordering else len(unique_ordering))\n    return \"\".join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n\n    # Create a list of characters from s that are also in ordering\n    sorted_chars = [char for char in s if char in ordering]\n\n    # Sort the list of characters using the ordering\n    sorted_chars.sort(key=lambda char: ordering.index(char))\n\n    # Create a list of characters from s that are not in ordering\n    non_sorted_chars = [char for char in s if char not in ordering]\n\n    # Join the sorted characters and non-sorted characters together\n    sorted_string = ''.join(sorted_chars) + ''.join(non_sorted_chars)\n\n    return sorted_string",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    return ''.join(sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering)))\n\nprint(sort_string(\"foos\", \"of\"))  # oofs\nprint(sort_string(\"string\", \"gnirts\"))  # gnirts\nprint(sort_string(\"banana\", \"abn\"))  # aaabnn",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n    \n    # Sort the first string based on the ordering\n    sorted_string = sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering))\n    \n    # Return the sorted string\n    return ''.join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n    \n    # Sort s by ordering\n    sorted_s = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n    \n    return ''.join(sorted_s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeated characters from the ordering string\n    ordering = ''.join(sorted(set(ordering), key=ordering.index))\n    \n    # Sort the characters in the string s based on the ordering string\n    sorted_s = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n    \n    # Join the sorted characters to form the final result\n    result = ''.join(sorted_s)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n    \n    # Create a dictionary with characters from ordering as keys and their corresponding indices as values\n    order_dict = {char: index for index, char in enumerate(ordering)}\n    \n    # Sort the string s using the order_dict as the key function\n    sorted_s = sorted(s, key=lambda x: order_dict.get(x, float('inf')))\n    \n    return ''.join(sorted_s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # remove duplicate characters from the ordering string\n    ordering = \"\".join(dict.fromkeys(ordering))\n    \n    # sort the characters in the first string based on the ordering string\n    sorted_string = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n    \n    # join the sorted characters into a string and return it\n    return \"\".join(sorted_string)\n\nassert sort_string(\"foos\", \"of\") == \"oofs\"\nassert sort_string(\"string\", \"gnirts\") == \"gnirts\"\nassert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = \"\"\n    for char in ordering:\n        if char not in unique_ordering:\n            unique_ordering += char\n    \n    remaining_chars = \"\"\n    for char in s:\n        if char not in unique_ordering:\n            remaining_chars += char\n    \n    sorted_string = \"\"\n    for char in unique_ordering:\n        sorted_string += char * s.count(char)\n    \n    sorted_string += remaining_chars\n    \n    return sorted_string",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # remove duplicate characters from the ordering string\n    ordering = \"\".join(dict.fromkeys(ordering))\n    \n    # create a dictionary to store the indices of the characters in the ordering string\n    indices = {char: i for i, char in enumerate(ordering)}\n    \n    # sort the characters in the string s using the indices in the ordering string\n    sorted_string = sorted(s, key=lambda char: indices.get(char, len(ordering)))\n    \n    # return the sorted string\n    return \"\".join(sorted_string)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = ''.join(dict.fromkeys(ordering))\n    sorted_s = sorted(s, key=lambda c: unique_ordering.index(c) if c in unique_ordering else len(unique_ordering))\n    return ''.join(sorted_s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n    \n    # Sort s using the ordering\n    s = sorted(s, key=lambda c: ordering.index(c) if c in ordering else len(ordering))\n    \n    # Join the sorted characters and return the result\n    return ''.join(s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    # Remove repeating characters from ordering\n    ordering = ''.join(dict.fromkeys(ordering))\n    \n    # Sort the characters of s based on the ordering\n    s = sorted(s, key=lambda c: ordering.index(c) if c in ordering else float('inf'))\n    \n    # Return the sorted string\n    return ''.join(s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n\n    # Remove repeating characters from ordering\n    ordering = \"\".join(dict.fromkeys(ordering))\n\n    # Sort s by ordering\n    result = sorted(s, key=lambda x: ordering.index(x) if x in ordering else len(ordering))\n\n    # Return the sorted string\n    return \"\".join(result)\n",
+            "logp": null
+        }
+    ]
+}

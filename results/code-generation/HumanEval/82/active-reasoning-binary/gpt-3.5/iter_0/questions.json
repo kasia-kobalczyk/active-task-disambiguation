@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert prime_length('abc') == True",
+        "assert prime_length(\"\") == False",
+        "assert prime_length('abcd') == False",
+        "assert prime_length('') == False",
+        "assert prime_length(\"a\") == False",
+        "assert prime_length(\"abcde\") == False",
+        "assert prime_length(\"ab\") == True",
+        "assert prime_length(\"abcdefgh\") == True",
+        "assert prime_length('a') == False",
+        "assert prime_length('ab') == True"
+    ],
+    "1": [
+        "assert prime_length(\"abcd\") == False",
+        "assert prime_length(\"python\") == False",
+        "assert prime_length(\"\") == False",
+        "assert prime_length(\"abc\") == False\n# The length of the string \"abc\" is 3, which is a prime number.",
+        "assert prime_length(\"a\") == False",
+        "assert prime_length(\"abcde\") == True",
+        "assert prime_length(\"abcdefghi\") == False"
+    ],
+    "2": [
+        "assert prime_length(\"abc\") == True",
+        "assert prime_length(\"Hello World!\") == False",
+        "assert prime_length(\"\") == False",
+        "assert prime_length(\"a\") == False",
+        "assert prime_length(\"Goodbye!\") == True",
+        "assert prime_length(\"abcdefgh\") == True",
+        "assert prime_length(\"abcde\") == True",
+        "assert prime_length(\"abcdefg\") == False"
+    ],
+    "3": [
+        "assert prime_length(\"abcdefghijklmnopqrstuvwxyz\") == True",
+        "assert prime_length(\"abcdefghijk\") == True",
+        "assert prime_length(\"\") == False",
+        "assert prime_length(\"a\") == False",
+        "assert prime_length(\"abcdefg\") == False"
+    ]
+}

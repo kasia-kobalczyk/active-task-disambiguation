@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert plane_seat(30) == 'Middle-Left', f\"Expected plane_seat(30) to return 'Middle-Left' but got {plane_seat(30)}\"",
+        "error"
+    ],
+    "1": [
+        "None",
+        true
+    ],
+    "2": [
+        "assert plane_seat(51) == \"Back-Right\"",
+        "error"
+    ],
+    "3": [
+        "assert plane_seat(17) == \"Front-Left\"",
+        "error"
+    ]
+}

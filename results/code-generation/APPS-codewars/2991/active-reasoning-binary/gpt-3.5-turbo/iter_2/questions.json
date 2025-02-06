@@ -1,0 +1,48 @@
+{
+    "0": [
+        "assert not_so_random(5, 5) == \"Unsure\"",
+        "assert not_so_random(1, 1) == \"Black\"",
+        "assert not_so_random(4, 2) == \"White\"",
+        "assert not_so_random(3, 2) == \"Black\"",
+        "assert not_so_random(10**9, 10**9) == \"Unsure\"",
+        "assert not_so_random(5, 3) == \"Unsure\"",
+        "assert not_so_random(2, 2) == \"White\"",
+        "assert not_so_random(10, 10) == \"White\"",
+        "assert not_so_random(1, 1) == \"Unsure\"",
+        "assert not_so_random(2, 1) == \"Black\""
+    ],
+    "1": [
+        "assert not_so_random(7, 3) == \"Unsure\"",
+        "assert not_so_random(6, 2) == \"Unsure\"",
+        "assert not_so_random(5, 0) == \"Black\"",
+        "assert not_so_random(4, 8) == \"Black\"",
+        "assert not_so_random(3, 5) == \"Black\"",
+        "assert not_so_random(0, 0) == \"Unsure\""
+    ],
+    "2": [
+        "assert not_so_random(2, 2) == \"Unsure\"",
+        "assert not_so_random(0, 0) == \"Unsure\"\n# Therefore, it is unsure which color the last marble is.",
+        "assert not_so_random(6, 2) == \"Unsure\"",
+        "assert not_so_random(10**9, 10**9) == \"Unsure\"",
+        "assert not_so_random(5, 3) == \"Unsure\"",
+        "assert not_so_random(4, 1) == \"White\"",
+        "assert not_so_random(7, 3) == \"Black\"",
+        "assert not_so_random(5, 0) == \"Black\"",
+        "assert not_so_random(4, 8) == \"Black\"",
+        "assert not_so_random(3, 5) == \"Black\"",
+        "assert not_so_random(7, 8) == \"Black\"",
+        "assert not_so_random(2, 2) == \"Black\"",
+        "assert not_so_random(0, 1) == \"White\""
+    ],
+    "3": [
+        "assert not_so_random(3, 0) == \"Black\"",
+        "assert not_so_random(2, 4) == \"Black\"",
+        "assert not_so_random(2, 2) == \"White\"",
+        "assert not_so_random(4, 2) == \"Unsure\"\n# In this case, it is not possible to predict the color of the last marble, as it depends on the order of the removals.",
+        "assert not_so_random(4, 2) == \"Black\"",
+        "assert not_so_random(1, 1) == \"Unsure\"",
+        "assert not_so_random(0, 5) == \"White\"",
+        "assert not_so_random(3, 3) == \"Black\"",
+        "assert not_so_random(6, 3) == \"White\""
+    ]
+}

@@ -1,0 +1,194 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    total = 0\n    length = len(digits)\n    \n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:  # double every second digit from the right\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    \n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in n if d.isdigit()]\n    odd_length = len(digits) % 2 == 1\n    total_sum = 0\n\n    for i, digit in enumerate(digits):\n        if (i % 2 == 1) if odd_length else (i % 2 == 0):\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total_sum += digit\n\n    return total_sum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    total = 0\n    length = len(digits)\n\n    for i in range(length):\n        if (length % 2 == 0 and i % 2 == 0) or (length % 2 == 1 and i % 2 == 1):\n            doubled = digits[length - 1 - i] * 2\n            total += doubled - 9 if doubled > 9 else doubled\n        else:\n            total += digits[length - 1 - i]\n\n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n).replace(' ', '')]\n    checksum = 0\n    length = len(digits)\n\n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:  # every second digit from the right\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n\n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    n = n.replace(\" \", \"\")\n    digits = [int(d) for d in n]\n    even_length = len(digits) % 2 == 0\n    \n    for i in range(len(digits)):\n        if (even_length and i % 2 == 1) or (not even_length and i % 2 == 0):\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n                \n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    checksum = 0\n    \n    for i, d in enumerate(reversed(digits)):\n        if i % 2 == 1:\n            d *= 2\n            if d > 9:\n                d -= 9\n        checksum += d\n    \n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    checksum = 0\n    length = len(digits)\n    \n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:  # every second digit from the right\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n\n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    even_length = len(digits) % 2 == 0\n\n    for i in range(len(digits)):\n        if (i % 2 == 1) if even_length else (i % 2 == 0):\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n\n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    n = n.replace(\" \", \"\")\n    digits = [int(d) for d in n]\n    length = len(digits)\n    \n    for i in range(length - 2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n            \n    total = sum(digits)\n    \n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    check_sum = 0\n    length = len(digits)\n    \n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        check_sum += digit\n        \n    return check_sum % 10 == 0\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    total = 0\n    length = len(digits)\n    \n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:  # double every second digit from the right\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    \n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    checksum = 0\n    length = len(digits)\n    \n    for i in range(length):\n        digit = digits[length - i - 1]\n        if i % 2 == 1:  # double every second digit from the right\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n    \n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    total = 0\n    length = len(digits)\n\n    for i in range(length):\n        if (length % 2 == 0 and i % 2 == 0) or (length % 2 == 1 and i % 2 == 1):\n            doubled = digits[length - 1 - i] * 2\n            total += doubled - 9 if doubled > 9 else doubled\n        else:\n            total += digits[length - 1 - i]\n\n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n).replace(' ', '')]\n    checksum = 0\n    length = len(digits)\n\n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:  # every second digit from the right\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n\n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in n if d.isdigit()]\n    checksum = 0\n    double = False\n    \n    for digit in reversed(digits):\n        if double:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n        double = not double\n    \n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    checksum = 0\n    \n    for i, d in enumerate(reversed(digits)):\n        if i % 2 == 1:\n            d *= 2\n            if d > 9:\n                d -= 9\n        checksum += d\n    \n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    checksum = 0\n    length = len(digits)\n    \n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:  # every second digit from the right\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n\n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    for i in range(len(digits) - 2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    n = n.replace(\" \", \"\")\n    digits = [int(d) for d in n]\n    length = len(digits)\n    \n    for i in range(length - 2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n            \n    total = sum(digits)\n    \n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in n if d.isdigit()]\n    total = 0\n    length = len(digits)\n    \n    for i in range(length):\n        if (length - i) % 2 == 0:\n            double_digit = digits[i] * 2\n            total += double_digit if double_digit < 10 else double_digit - 9\n        else:\n            total += digits[i]\n    \n    return total % 10 == 0\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    check_sum = 0\n    length = len(digits)\n    \n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:  # Double every second digit from right\n            digit *= 2\n            if digit > 9:  # If doubled digit is greater than 9, subtract 9\n                digit -= 9\n        check_sum += digit\n    \n    return check_sum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)[::-1]]\n    for i in range(1, len(digits), 2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    length = len(digits)\n    for i in range(length - 2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    for i in range(len(digits) - 2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    length = len(digits)\n    \n    for i in range(length - 2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n            \n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    checksum = 0\n    length = len(digits)\n    \n    for i in range(length):\n        if (length - i) % 2 == 0:\n            doubled = digits[i] * 2\n            checksum += doubled - 9 if doubled > 9 else doubled\n        else:\n            checksum += digits[i]\n    \n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    for i in range(len(digits) - 2, -1, -2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    odd = len(digits) % 2 == 1\n    total = 0\n    \n    for i, d in enumerate(digits):\n        if (i % 2 == 1) == odd:\n            d *= 2\n            if d > 9:\n                d -= 9\n        total += d\n        \n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    total = 0\n    length = len(digits)\n    \n    for i in range(length):\n        if (length - i) % 2 == 0:\n            doubled = digits[i] * 2\n            total += doubled if doubled < 10 else doubled - 9\n        else:\n            total += digits[i]\n    \n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    checksum = 0\n    double = False\n    \n    for digit in reversed(digits):\n        if double:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n        double = not double\n        \n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)[::-1]]\n    for i in range(1, len(digits), 2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)][::-1]\n    total = 0\n    \n    for i in range(len(digits)):\n        if i % 2 == 1:\n            double = digits[i] * 2\n            total += double if double < 10 else double - 9\n        else:\n            total += digits[i]\n    \n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    checksum = 0\n    length = len(digits)\n\n    for i in range(length):\n        if (length % 2 == 0 and i % 2 == 0) or (length % 2 != 0 and i % 2 != 0):\n            double = digits[i] * 2\n            checksum += double if double < 10 else double - 9\n        else:\n            checksum += digits[i]\n\n    return checksum % 10 == 0\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    checksum = 0\n    double = False\n    \n    for d in reversed(digits):\n        if double:\n            d *= 2\n            if d > 9:\n                d -= 9\n        checksum += d\n        double = not double\n    \n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    odd_sum = sum(digits[-1::-2])\n    even_sum = sum((d * 2 - 9) if d * 2 > 9 else d * 2 for d in digits[-2::-2])\n    total_sum = odd_sum + even_sum\n    return total_sum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    odd = len(digits) % 2 == 1\n    total = 0\n\n    for i, digit in enumerate(digits):\n        if (i % 2 == 1) if odd else (i % 2 == 0):\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n\n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    checksum = 0\n    double = False\n\n    for digit in reversed(digits):\n        if double:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n        double = not double\n\n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    checksum = 0\n    length = len(digits)\n\n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n\n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    odd_index = len(digits) % 2 == 0\n    \n    for i in range(len(digits)):\n        if (i % 2 == 0) == odd_index:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n\n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    length = len(digits)\n    checksum = 0\n\n    for i in range(length):\n        if (length - i) % 2 == 0:  # Double every second digit from right to left\n            double = digits[i] * 2\n            checksum += double - 9 if double > 9 else double\n        else:\n            checksum += digits[i]\n\n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    length = len(digits)\n    total = 0\n    \n    for i in range(length):\n        digit = digits[length - 1 - i]\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    \n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n) if d.isdigit()]\n    checksum = 0\n    double = False\n    \n    for digit in reversed(digits):\n        if double:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n        double = not double\n    \n    return checksum % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)[::-1]]\n    for i in range(1, len(digits), 2):\n        digits[i] *= 2\n        if digits[i] > 9:\n            digits[i] -= 9\n    return sum(digits) % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    odd_even = len(digits) % 2\n    total = 0\n    \n    for i in range(len(digits)):\n        if (i % 2) == odd_even:\n            doubled = digits[i] * 2\n            if doubled > 9:\n                doubled -= 9\n            total += doubled\n        else:\n            total += digits[i]\n    \n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)[::-1]]\n    total = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            doubled = digits[i] * 2\n            total += doubled - 9 if doubled > 9 else doubled\n        else:\n            total += digits[i]\n    return total % 10 == 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef validate(n):\n    digits = [int(d) for d in str(n)]\n    checksum = 0\n    double = False\n\n    for digit in reversed(digits):\n        if double:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        checksum += digit\n        double = not double\n\n    return checksum % 10 == 0\n```",
+            "logp": null
+        }
+    ]
+}

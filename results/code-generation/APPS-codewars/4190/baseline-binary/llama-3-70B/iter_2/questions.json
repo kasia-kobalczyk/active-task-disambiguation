@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"bcdaeiou\") == True",
+        "assert is_alt(\"amazon\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"hello\") == False",
+        "assert is_alt(\"bcdfghjklmnpqrstvwxyz\") == True"
+    ],
+    "2": [
+        "assert is_alt(\"abcdefghijkmnopqrstuvwxyz\") == False",
+        "assert is_alt(\"bcdfghjklmnpqrstvwxyz\") == True"
+    ],
+    "3": [
+        "assert is_alt(\"abcdefghijkmnopqrstuvwxyzu\") == False",
+        "assert is_alt(\"bcdfghjklmnpqrstvwxyz\") == True"
+    ]
+}

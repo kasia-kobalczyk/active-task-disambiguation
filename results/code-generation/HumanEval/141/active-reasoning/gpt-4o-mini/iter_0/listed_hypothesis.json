@@ -1,0 +1,206 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return \"No\"\n    \n    name_part, ext_part = file_name.split('.')\n    \n    if not name_part or not name_part[0].isalpha():\n        return \"No\"\n    \n    if ext_part not in ['txt', 'exe', 'dll']:\n        return \"No\"\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return \"No\"\n    \n    return \"Yes\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in name)\n    if digit_count > 3:\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name_part, extension = file_name.split('.')\n    \n    if not name_part or not name_part[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return \"No\"\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or not name[0].isalpha():\n        return \"No\"\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return \"No\"\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return \"No\"\n    \n    return \"Yes\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name_part, ext_part = file_name.split('.')\n    \n    if len(name_part) == 0 or not name_part[0].isalpha():\n        return 'No'\n    \n    if ext_part not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not (name[0].isalpha()):\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in name)\n    if digit_count > 3:\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not (name[0].isalpha()):\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in name)\n    if digit_count > 3:\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name_part, ext_part = file_name.split('.')\n    \n    if not name_part or not ext_part.isalpha() or ext_part not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    if not name_part[0].isalpha():\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    if extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    \n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    \n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'\n```",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert file_name_check(\"file123.exe\") == 'Yes'",
+        "assert file_name_check(\"file.txt\") == 'Yes'",
+        "assert file_name_check(\"example.txt\") == \"Yes\"",
+        "assert file_name_check(\"file..txt\") == 'No'",
+        "assert file_name_check(\"123file.txt\") == 'No'",
+        "assert file_name_check(\"1file.dll\") == \"No\"",
+        "assert file_name_check(\"test.file\") == \"No\"",
+        "assert file_name_check(\"file123.exe\") == \"Yes\""
+    ],
+    "1": [
+        "assert file_name_check(\"123file.dll\") == 'No'",
+        "assert file_name_check(\"document.txt\") == 'Yes'",
+        "assert file_name_check(\"data1234.dll\") == 'No'",
+        "assert file_name_check(\".hiddenfile.exe\") == 'No'",
+        "assert file_name_check(\"report.pdf\") == 'No'",
+        "assert file_name_check(\"data-file.exe\") == 'No'",
+        "assert file_name_check(\"file_name.with.dot.exe\") == 'No'"
+    ],
+    "2": [
+        "assert file_name_check(\".file.txt\") == 'No'",
+        "assert file_name_check(\"file.name.doc\") == 'No'",
+        "assert file_name_check(\"file..exe\") == 'No'",
+        "assert file_name_check(\"file1234.exe\") == 'No'",
+        "assert file_name_check(\"validFile.exe\") == 'Yes'",
+        "assert file_name_check(\"report1234.txt\") == 'No'",
+        "assert file_name_check(\"document.txt\") == 'Yes'"
+    ],
+    "3": [
+        "assert file_name_check(\"file.name.txt\") == 'No'",
+        "assert file_name_check(\"file.exe.\") == 'No'",
+        "assert file_name_check(\"document.doc\") == 'No'",
+        "assert file_name_check(\"report2.3.exe\") == 'No'",
+        "assert file_name_check(\"file.123.txt\") == 'No'",
+        "assert file_name_check(\"my_file.exe\") == 'No'",
+        "assert file_name_check(\"document.txt\") == 'Yes'",
+        "assert file_name_check(\"my_file_1.exe\") == 'No'"
+    ]
+}

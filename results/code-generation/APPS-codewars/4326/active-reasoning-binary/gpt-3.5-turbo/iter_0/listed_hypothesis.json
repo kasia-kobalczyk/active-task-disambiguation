@@ -1,0 +1,150 @@
+{
+    "0": [
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    bus_count = 0\n    for item in journey:\n        if isinstance(item, str):\n            total_cost += 2.40\n            bus_count = 0\n        else:\n            bus_count += 1\n            if bus_count >= 2:\n                total_cost += 1.50\n                bus_count = 0\n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.0\n    bus_count = 0\n    \n    for i in journey:\n        if isinstance(i, int):\n            bus_count += 1\n        else:\n            total_cost += bus_count // 2 * bus_cost\n            total_cost += bus_count % 2 * bus_cost\n            bus_count = 0\n            total_cost += tube_cost\n    \n    total_cost += bus_count // 2 * bus_cost\n    total_cost += bus_count % 2 * bus_cost\n    \n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    tube_count = 0\n    \n    for i in range(len(journey)):\n        if isinstance(journey[i], str):\n            tube_count += 1\n            total_cost += 2.40\n        else:\n            bus_count += 1\n            total_cost += 1.50\n            \n            if bus_count >= 2:\n                total_cost -= 1.50\n                bus_count = 0\n        \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.00\n    is_previous_bus = False\n\n    for element in journey:\n        if isinstance(element, int):  # check if element is an integer (bus number)\n            if is_previous_bus:\n                total_cost += bus_fare  # add bus fare for the second bus in a set\n                is_previous_bus = False\n            else:\n                is_previous_bus = True\n        else:  # element is a string (tube name)\n            total_cost += tube_fare\n\n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    bus_cost = 1.50\n    tube_cost = 2.40\n    total_cost = 0\n    \n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], int):\n            if i < len(journey) - 1 and isinstance(journey[i+1], int):\n                total_cost += bus_cost * 2\n                i += 2\n            else:\n                total_cost += bus_cost\n                i += 1\n        else:\n            total_cost += tube_cost\n            i += 1\n    \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0\n\n    i = 0\n    while i < len(journey):\n        # if the current element is a tube name\n        if isinstance(journey[i], str):\n            total_cost += tube_fare\n        # if the current element is a bus number\n        elif isinstance(journey[i], int):\n            # if there are at least two adjacent bus numbers\n            if i < len(journey) - 1 and isinstance(journey[i + 1], int):\n                total_cost += 2 * bus_fare\n                i += 1\n            # if there is only one bus number\n            else:\n                total_cost += bus_fare\n        \n        i += 1\n\n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    bus_count = 0\n    bus_fare = 1.50\n    tube_fare = 2.40\n\n    for i in range(len(journey)):\n        if isinstance(journey[i], int):\n            bus_count += 1\n        else:\n            if bus_count >= 2:\n                total_cost += bus_count // 2 * bus_fare\n            bus_count = 0\n            total_cost += tube_fare\n\n    if bus_count >= 2:\n        total_cost += bus_count // 2 * bus_fare\n\n    return '\u00a3' + '{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    is_previous_bus = False\n\n    for journey_element in journey:\n        if isinstance(journey_element, str):\n            # Tube journey\n            total_cost += 2.40\n            is_previous_bus = False\n        else:\n            # Bus journey\n            total_cost += 1.50\n\n            if is_previous_bus:\n                # Set of two adjacent bus journeys\n                total_cost -= 1.50\n                is_previous_bus = False\n            else:\n                is_previous_bus = True\n\n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    \n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], int):  # bus journey\n            total_cost += 1.5\n            \n            if i+1 < len(journey) and isinstance(journey[i+1], int):  # check if next journey is also a bus journey\n                total_cost += 1.5\n                i += 1  # skip the next journey as it has already been accounted for\n                \n        else:  # tube journey\n            total_cost += 2.4\n            \n        i += 1  # move to next journey\n    \n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    \n    for item in journey:\n        if type(item) == int:\n            bus_count += 1\n        else:\n            total_cost += bus_count * 1.50\n            bus_count = 0\n            total_cost += 2.40\n    \n    total_cost += bus_count * 1.50\n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    bus_count = 0\n    for item in journey:\n        if isinstance(item, str):\n            total_cost += 2.40\n            bus_count = 0\n        else:\n            bus_count += 1\n            if bus_count >= 2:\n                total_cost += 1.50\n                bus_count = 0\n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.0\n    bus_count = 0\n    \n    for i in journey:\n        if isinstance(i, int):\n            bus_count += 1\n        else:\n            total_cost += bus_count // 2 * bus_cost\n            total_cost += bus_count % 2 * bus_cost\n            bus_count = 0\n            total_cost += tube_cost\n    \n    total_cost += bus_count // 2 * bus_cost\n    total_cost += bus_count % 2 * bus_cost\n    \n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    tube_count = 0\n    \n    for i in range(len(journey)):\n        if isinstance(journey[i], str):\n            tube_count += 1\n            total_cost += 2.40\n        else:\n            bus_count += 1\n            total_cost += 1.50\n            \n            if bus_count >= 2:\n                total_cost -= 1.50\n                bus_count = 0\n        \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.00\n    is_previous_bus = False\n\n    for element in journey:\n        if isinstance(element, int):  # check if element is an integer (bus number)\n            if is_previous_bus:\n                total_cost += bus_fare  # add bus fare for the second bus in a set\n                is_previous_bus = False\n            else:\n                is_previous_bus = True\n        else:  # element is a string (tube name)\n            total_cost += tube_fare\n\n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    bus_count = 0\n    bus_fare = 1.50\n    tube_fare = 2.40\n\n    for i in range(len(journey)):\n        if isinstance(journey[i], int):\n            bus_count += 1\n        else:\n            if bus_count >= 2:\n                total_cost += bus_count // 2 * bus_fare\n            bus_count = 0\n            total_cost += tube_fare\n\n    if bus_count >= 2:\n        total_cost += bus_count // 2 * bus_fare\n\n    return '\u00a3' + '{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    is_previous_bus = False\n\n    for journey_element in journey:\n        if isinstance(journey_element, str):\n            # Tube journey\n            total_cost += 2.40\n            is_previous_bus = False\n        else:\n            # Bus journey\n            total_cost += 1.50\n\n            if is_previous_bus:\n                # Set of two adjacent bus journeys\n                total_cost -= 1.50\n                is_previous_bus = False\n            else:\n                is_previous_bus = True\n\n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0\n    consecutive_buses = 0\n    \n    for item in journey:\n        if isinstance(item, int):\n            consecutive_buses += 1\n            if consecutive_buses == 2:\n                total_cost += bus_cost\n                consecutive_buses = 0\n        else:\n            if consecutive_buses > 0:\n                total_cost += bus_cost\n                consecutive_buses = 0\n            total_cost += tube_cost\n    \n    if consecutive_buses > 0:\n        total_cost += bus_cost\n    \n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0\n    is_previous_bus = False\n    \n    for travel in journey:\n        if isinstance(travel, int):\n            if is_previous_bus:\n                total_cost += bus_fare\n                is_previous_bus = False\n            else:\n                is_previous_bus = True\n        else:\n            total_cost += tube_fare\n    \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n\n    total_cost = 0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, int):\n            bus_count += 1\n            if bus_count == 2:\n                total_cost += bus_fare\n                bus_count = 0\n        else:\n            total_cost += tube_fare\n\n    if bus_count == 1:\n        total_cost += bus_fare\n\n    return '\u00a3{:0.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0\n    consecutive_buses = 0\n    \n    for i in range(len(journey)):\n        if type(journey[i]) == int:\n            consecutive_buses += 1\n        else:\n            if consecutive_buses >= 2:\n                total_cost += bus_fare\n            elif consecutive_buses == 1:\n                total_cost += bus_fare\n            consecutive_buses = 0\n            total_cost += tube_fare\n    \n    if consecutive_buses >= 2:\n        total_cost += bus_fare\n    elif consecutive_buses == 1:\n        total_cost += bus_fare\n    \n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def london_city_hacker(journey): \n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.0\n    bus_count = 0\n    \n    for i in journey:\n        if isinstance(i, int):\n            bus_count += 1\n        else:\n            total_cost += bus_count // 2 * bus_cost\n            total_cost += bus_count % 2 * bus_cost\n            bus_count = 0\n            total_cost += tube_cost\n    \n    total_cost += bus_count // 2 * bus_cost\n    total_cost += bus_count % 2 * bus_cost\n    \n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    tube_count = 0\n    \n    for i in range(len(journey)):\n        if isinstance(journey[i], str):\n            tube_count += 1\n            total_cost += 2.40\n        else:\n            bus_count += 1\n            total_cost += 1.50\n            \n            if bus_count >= 2:\n                total_cost -= 1.50\n                bus_count = 0\n        \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    total_cost = 0\n    is_previous_bus = False\n\n    for journey_element in journey:\n        if isinstance(journey_element, str):\n            # Tube journey\n            total_cost += 2.40\n            is_previous_bus = False\n        else:\n            # Bus journey\n            total_cost += 1.50\n\n            if is_previous_bus:\n                # Set of two adjacent bus journeys\n                total_cost -= 1.50\n                is_previous_bus = False\n            else:\n                is_previous_bus = True\n\n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0\n    consecutive_buses = 0\n    \n    for item in journey:\n        if isinstance(item, int):\n            consecutive_buses += 1\n            if consecutive_buses == 2:\n                total_cost += bus_cost\n                consecutive_buses = 0\n        else:\n            if consecutive_buses > 0:\n                total_cost += bus_cost\n                consecutive_buses = 0\n            total_cost += tube_cost\n    \n    if consecutive_buses > 0:\n        total_cost += bus_cost\n    \n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n\n    total_cost = 0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, int):\n            bus_count += 1\n            if bus_count == 2:\n                total_cost += bus_fare\n                bus_count = 0\n        else:\n            total_cost += tube_fare\n\n    if bus_count == 1:\n        total_cost += bus_fare\n\n    return '\u00a3{:0.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0\n    consecutive_buses = 0\n    \n    for i in range(len(journey)):\n        if type(journey[i]) == int:\n            consecutive_buses += 1\n        else:\n            if consecutive_buses >= 2:\n                total_cost += bus_fare\n            elif consecutive_buses == 1:\n                total_cost += bus_fare\n            consecutive_buses = 0\n            total_cost += tube_fare\n    \n    if consecutive_buses >= 2:\n        total_cost += bus_fare\n    elif consecutive_buses == 1:\n        total_cost += bus_fare\n    \n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.00\n    bus_count = 0\n    \n    for i in range(len(journey)):\n        if type(journey[i]) == str: # Tube journey\n            total_cost += tube_cost\n            bus_count = 0\n        elif type(journey[i]) == int: # Bus journey\n            bus_count += 1\n            if bus_count == 2: # Cap bus fare for sets of two adjacent buses\n                bus_count = 0\n            else:\n                total_cost += bus_cost\n    \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def london_city_hacker(journey):\n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0.00\n    \n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], int) and i < len(journey) - 1 and isinstance(journey[i+1], int):\n            total_cost += bus_fare\n            i += 2\n        else:\n            total_cost += tube_fare\n            i += 1\n    \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    \n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], str):\n            total_cost += tube_fare\n            i += 1\n        else:\n            count = 0\n            while i < len(journey) and not isinstance(journey[i], str):\n                count += 1\n                i += 1\n            sets_of_two = count // 2\n            remaining = count % 2\n            total_cost += (sets_of_two * bus_fare) + (remaining * bus_fare)\n    \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0\n    \n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], int):\n            total_cost += bus_fare\n            \n            # Check if there are more adjacent bus journeys\n            while i < len(journey) - 1 and isinstance(journey[i+1], int):\n                i += 1\n            \n        else:\n            total_cost += tube_fare\n        \n        i += 1\n    \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    tube_fare = 2.4\n    bus_fare = 1.5\n    total_cost = 0\n    bus_count = 0\n    \n    for i in range(len(journey)):\n        if isinstance(journey[i], int):\n            if i == 0 or not isinstance(journey[i-1], int):\n                bus_count += 1\n            else:\n                bus_count += 1\n                bus_count = bus_count % 2\n                total_cost += bus_count * bus_fare\n                bus_count = 0\n        else:\n            if bus_count > 0:\n                total_cost += bus_count * bus_fare\n                bus_count = 0\n            total_cost += tube_fare\n            \n    if bus_count > 0:\n        total_cost += bus_count * bus_fare\n    \n    return f'\u00a3{total_cost:.2f}'",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    bus_fare = 1.50\n    tube_fare = 2.40\n    \n    total_cost = 0\n    bus_count = 0\n    \n    for i in range(len(journey)):\n        if isinstance(journey[i], int):\n            if isinstance(journey[i-1], int):\n                bus_count += 1\n            else:\n                total_cost += bus_fare\n            \n        else:\n            total_cost += tube_fare\n            \n    total_cost += (bus_count//2) * bus_fare + (bus_count%2) * bus_fare\n            \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0\n    \n    bus_count = 0\n    for i in range(len(journey)):\n        if isinstance(journey[i], int):\n            bus_count += 1\n        else:\n            if bus_count > 0:\n                total_cost += bus_fare * (bus_count // 2 + bus_count % 2)\n                bus_count = 0\n            total_cost += tube_fare\n    \n    if bus_count > 0:\n        total_cost += bus_fare * (bus_count // 2 + bus_count % 2)\n    \n    return '\u00a3{:.2f}'.format(total_cost)",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    tube_count = 0\n\n    for i in range(len(journey)):\n        if isinstance(journey[i], int):\n            bus_count += 1\n            if i + 1 < len(journey) and isinstance(journey[i + 1], int):\n                continue\n            else:\n                total_cost += 1.50 * (bus_count // 2 + bus_count % 2)\n                bus_count = 0\n        else:\n            tube_count += 1\n            total_cost += 2.40\n\n    return f'\u00a3{total_cost:.2f}'",
+            "logp": null
+        },
+        {
+            "content": "def london_city_hacker(journey):\n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0\n    count = 0\n    \n    for i in range(len(journey)):\n        if isinstance(journey[i], int):\n            if i == 0 or not isinstance(journey[i-1], int):\n                total_cost += bus_fare\n                count = 1\n            else:\n                count += 1\n                if count >= 2:\n                    count = 0\n        else:\n            total_cost += tube_fare\n            \n    return \"\u00a3{:.2f}\".format(total_cost)",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert words_in_sentence(\"a quick brown fox jumps over\") == \"a fox\"",
+        "assert words_in_sentence(\"prime number length\") == \"prime number\"",
+        "assert words_in_sentence(\"I love programming in Python\") == \"I love in\"",
+        "assert words_in_sentence(\"the quick brown fox jumps\") == \"the fox\"",
+        "assert words_in_sentence(\"this is a test\") == \"this is a\"",
+        "assert words_in_sentence(\"hello world this is a test\") == \"hello is a\"",
+        "assert words_in_sentence(\"hello world\") == \"hello\"",
+        "assert words_in_sentence(\"a b c d e f g h\") == \"a\""
+    ],
+    "1": [
+        "assert words_in_sentence(\"Python is awesome\") == \"Python is\"",
+        "assert words_in_sentence(\"I love programming\") == \"I love\"",
+        "assert words_in_sentence(\"hello world\") == \"world\"",
+        "assert words_in_sentence(\"the quick brown fox jumps over the lazy dog\") == \"the fox the\"",
+        "assert words_in_sentence(\"this is a test\") == \"is a\"",
+        "assert words_in_sentence(\"python programming language\") == \"python language\"",
+        "assert words_in_sentence(\"hello world\") == \"hello\"",
+        "assert words_in_sentence(\"a b c d e f g h\") == \"a\""
+    ],
+    "2": [
+        "assert words_in_sentence(\"I love programming\") == \"I love\"",
+        "assert words_in_sentence(\"hello world\") == \"world\"",
+        "assert words_in_sentence(\"the quick brown fox jumps over the lazy dog\") == \"the fox the\"",
+        "assert words_in_sentence(\"this is a test\") == \"is a\"",
+        "assert words_in_sentence(\"python programming language\") == \"python language\"",
+        "assert words_in_sentence(\"hello world\") == \"hello\"",
+        "assert words_in_sentence(\"a b c d e f g h\") == \"a\""
+    ],
+    "3": [
+        "assert words_in_sentence(\"hello world\") == \"world\"",
+        "assert words_in_sentence(\"the quick brown fox jumps over the lazy dog\") == \"the fox the\"",
+        "assert words_in_sentence(\"a b c d e\") == \"\"",
+        "assert words_in_sentence(\"the quick brown fox\") == \"the fox\"",
+        "assert words_in_sentence(\"prime number test case\") == \"prime case\"",
+        "assert words_in_sentence(\"hello world\") == \"hello\""
+    ]
+}

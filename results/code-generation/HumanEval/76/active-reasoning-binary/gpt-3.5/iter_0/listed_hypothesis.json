@@ -1,0 +1,93 @@
+{
+    "0": [
+        {
+            "content": "def is_simple_power(x, n):\n    return x == n**int(x**0.5)",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    if x == n ** int(x ** (1/n)):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return x == n ** int(x ** (1/n))",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return x == n**int(x**0.5) if x >= 1 else False",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    if x <= 0:\n        return False\n    if n == 1:\n        return x == 1\n    power = 0\n    while n ** power < x:\n        power += 1\n    return n ** power == x",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return n**int(x**0.5) == x",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x % n != 0:\n        return False\n    else:\n        return is_simple_power(x//n, n)",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    elif n == 0:\n        return x == 0\n    else:\n        i = 1\n        while n ** i <= x:\n            if n ** i == x:\n                return True\n            i += 1\n        return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def is_simple_power(x, n):\n    if x == n**int(x**(1/n)):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return n**int(x**(1/n)) == x",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    if x < 1 or n < 1:\n        return False\n\n    if x == 1 and n == 1:\n        return True\n\n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return x == n ** int(x ** (1/n))",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    \"\"\"Returns True if x is a simple power of n, False otherwise.\"\"\"\n    return n ** int(x ** (1 / n)) == x",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return x == n ** int(x ** (1/n))",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    if n ** int(x ** (1/n)) == x:\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    if x < 1 or n < 1:\n        return False\n\n    power = 0\n    while n**power <= x:\n        if n**power == x:\n            return True\n        power += 1\n\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "logp": null
+        },
+        {
+            "content": "def is_simple_power(x, n):\n    return x == n ** int(x ** (1/n))",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x % n == 0:\n        return is_simple_power(x//n, n)\n    else:\n        return False",
+            "logp": null
+        }
+    ],
+    "3": []
+}

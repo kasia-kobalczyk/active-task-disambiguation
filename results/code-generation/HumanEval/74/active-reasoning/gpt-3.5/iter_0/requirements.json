@@ -1,0 +1,18 @@
+{
+    "0": [
+        "total_match(['abc', 'def', 'ghi'], ['jkl', 'mno', 'pqr'])",
+        "['abc', 'def', 'ghi']"
+    ],
+    "1": [
+        "total_match(['abcd'], ['efgh'])",
+        "['abcd']"
+    ],
+    "2": [
+        "total_match(['hello', 'world'], ['hi', 'there'])",
+        "['hi', 'there']"
+    ],
+    "3": [
+        "total_match(['abcd', 'efgh'], ['ijkl'])",
+        "['ijkl']"
+    ]
+}

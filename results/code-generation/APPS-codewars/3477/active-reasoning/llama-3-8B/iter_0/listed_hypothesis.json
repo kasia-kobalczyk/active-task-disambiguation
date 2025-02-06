@@ -1,0 +1,70 @@
+{
+    "0": [
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering)))\n    output = [''] * len(s)\n    for char in ordering:\n        for i in range(len(s)):\n            if s[i] == char:\n                output[i] = char\n    return ''.join(output)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    s = sorted(s, key=lambda c: (c in ordering, c))\n    return ''.join(s)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def sort_string(s, ordering):\n    chars = {char: None for char in ordering}\n    remaining_chars = set(s) - set(ordering)\n    ordered_chars = sorted([char for char in s if char in chars], key=ordering.index)\n    ordered_chars += sorted(list(remaining_chars), key=s.index)\n    return ''.join(ordered_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    result = [i for i in s if i in ordering]\n    result.sort(key=ordering.index)\n    for i in s:\n        if i not in ordering:\n            result.append(i)\n    return ''.join(result)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def sort_string(s, ordering):\n    chars = {char: None for char in ordering}\n    remaining_chars = set(s) - set(ordering)\n    ordered_chars = sorted([char for char in s if char in chars], key=ordering.index)\n    ordered_chars += sorted(list(remaining_chars), key=s.index)\n    return ''.join(ordered_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    o = \"\".join(dict.fromkeys(ordering))\n    res = [i for i in o for j in range(s.count(i))]\n    for i in set(s):\n        if i not in o:\n            res.append(i)\n    return \"\".join(sorted(s, key=lambda i: ordering.index(i) if i in o else len(ordering)))",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    result = [c for c in s if c in ordering]\n    result.sort(key=ordering.index)\n    for c in s:\n        if c not in ordering:\n            result.append(c)\n    return ''.join(result)",
+            "logp": null
+        }
+    ]
+}

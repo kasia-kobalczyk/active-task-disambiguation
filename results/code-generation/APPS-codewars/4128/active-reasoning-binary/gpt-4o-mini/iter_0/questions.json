@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert bears(1, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(3, 'BB88BB') == ['88', False]",
+        "assert bears(1, 'BB88') == ['', False]",
+        "assert bears(2, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(3, 'B8B8B8B8') == ['B8B8B8B8', True]",
+        "assert bears(1, 'B8B8B8B8') == ['B8B8', True]",
+        "assert bears(0, 'B88B') == ['B88B', True]",
+        "assert bears(2, 'B8B8B8') == ['B8B8', True]"
+    ],
+    "1": [
+        "assert bears(1, 'B8B8B') == ['B8B8', True]\n    ",
+        "assert bears(4, 'B8B8B8B8B8') == ['B8B8B8B8', False]\n    ",
+        "assert bears(2, 'B8B8B8') == ['B8B8B8', True]",
+        "assert bears(3, 'B8B8B8') == ['B8B8B8', True]\n    ",
+        "assert bears(2, 'B8B8B') == ['B8B8', True]\n    ",
+        "assert bears(4, 'B8B8B8B8') == ['B8B8B8B8', True]\n    ",
+        "assert bears(1, 'B8') == ['B8', True]",
+        "assert bears(0, 'B8') == ['B8', True]\n    "
+    ],
+    "2": [
+        "assert bears(2, 'B88B8B8B') == ['B88B', True]",
+        "assert bears(0, 'BBBB8888') == ['B8', True]\n    ",
+        "assert bears(3, 'B8B8B8B8B8B8B8') == ['B8B8B8B8', False]\n    ",
+        "assert bears(4, 'B8B8B8B8B8B8') == ['B8B8B8B8', True]\n    ",
+        "assert bears(2, 'B8B8B8') == ['B8B8B8', True]",
+        "assert bears(5, 'B8B8B8B8B8') == ['B8B8B8B8B8', True]\n    ",
+        "assert bears(4, 'B88B8B8B8') == ['B88B', False]\n    ",
+        "assert bears(0, 'B8') == ['B8', True]\n    "
+    ],
+    "3": [
+        "assert bears(0, 'BBBB8888') == ['B888', True]\n    ",
+        "assert bears(2, 'B88B8B8B') == ['B88B', False]",
+        "assert bears(1, '888B8B8B') == ['B8B', True]\n    ",
+        "assert bears(2, 'B8B8B8') == ['B8B8B8', True]",
+        "assert bears(5, 'B8B8B8B8B8') == ['B8B8B8B8B8', True]\n    ",
+        "assert bears(0, 'B8') == ['B8', True]\n    ",
+        "assert bears(4, 'B8B8B8B8B8') == ['B8B8B8B8', True]\n    ",
+        "assert bears(4, 'B88B8B8B8') == ['B88B', False]\n    "
+    ]
+}

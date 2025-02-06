@@ -1,0 +1,174 @@
+{
+    "0": [
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    fib_numbers = [0, 1]\n    while len(fib_numbers) < n:\n        next_num = fib_numbers[-1] + fib_numbers[-2]\n        if is_prime(next_num):\n            fib_numbers.append(next_num)\n    \n    return fib_numbers[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_seq = [0, 1]\n    count = 2\n    while True:\n        fib = fib_seq[count - 1] + fib_seq[count - 2]\n        if is_prime(fib):\n            n -= 1\n            if n == 0:\n                return fib\n        count += 1",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef is_prime(num):\n    if num <= 1:\n        return False\n    for i in range(2, int(math.sqrt(num)) + 1):\n        if num % i == 0:\n            return False\n    return True\n\ndef prime_fib(n: int):\n    if n <= 0:\n        return None\n    \n    fib_numbers = [0, 1]\n    count = 2\n    \n    while count < n:\n        next_num = fib_numbers[-1] + fib_numbers[-2]\n        if is_prime(next_num):\n            fib_numbers.append(next_num)\n            count += 1\n        else:\n            fib_numbers.append(next_num)\n            \n    return fib_numbers[-1] if is_prime(fib_numbers[-1]) else None",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def fibonacci(n):\n        if n == 0:\n            return 0\n        elif n == 1:\n            return 1\n        else:\n            a, b = 0, 1\n            for _ in range(n - 1):\n                a, b = b, a + b\n            return b\n    \n    count = 0\n    num = 0\n    while count < n:\n        num += 1\n        fib = fibonacci(num)\n        if is_prime(fib):\n            count += 1\n    return fib",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    def fibonacci(n):\n        if n == 0:\n            return 0\n        elif n == 1:\n            return 1\n        else:\n            fib_seq = [0, 1]\n            for i in range(2, n + 1):\n                fib_seq.append(fib_seq[i-1] + fib_seq[i-2])\n            return fib_seq[-1]\n\n    count = 0\n    num = 2\n    while count < n:\n        if is_prime(fibonacci(num)):\n            count += 1\n        num += 1\n\n    return fibonacci(num - 1)",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    def fibonacci(n):\n        if n <= 0:\n            return []\n        elif n == 1:\n            return [0]\n        elif n == 2:\n            return [0, 1]\n        else:\n            fib_list = [0, 1]\n            for i in range(2, n):\n                fib_list.append(fib_list[-1] + fib_list[-2])\n            return fib_list\n\n    fib_list = fibonacci(n)\n    prime_fib_list = [num for num in fib_list if is_prime(num)]\n    return prime_fib_list[-1] if prime_fib_list else None",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    \"\"\"\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def fibonacci(n):\n        fib = [0, 1]\n        for i in range(2, n+1):\n            fib.append(fib[i-1] + fib[i-2])\n        return fib[n]\n    \n    count = 0\n    num = 2\n    while count < n:\n        if is_prime(num) and num in fibonacci(num):\n            count += 1\n        num += 1\n    \n    return num - 1",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    \"\"\"\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    def fibonacci(n):\n        if n <= 0:\n            return []\n        fib = [0, 1]\n        while len(fib) < n:\n            fib.append(fib[-1] + fib[-2])\n        return fib\n\n    fib_nums = fibonacci(n)\n    for num in fib_nums:\n        if is_prime(num):\n            return num",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(math.sqrt(num)) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_nums = [0, 1]\n    count = 2\n\n    while count < n:\n        fib_nums.append(fib_nums[-1] + fib_nums[-2])\n        if is_prime(fib_nums[-1]):\n            count += 1\n\n    return fib_nums[-1] if n > 0 else None",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    def fibonacci(n):\n        if n <= 0:\n            return []\n        elif n == 1:\n            return [0]\n        elif n == 2:\n            return [0, 1]\n        else:\n            fib_seq = [0, 1]\n            for i in range(2, n):\n                fib_seq.append(fib_seq[i-1] + fib_seq[i-2])\n            return fib_seq\n\n    fib_seq = fibonacci(n)\n\n    prime_fib_numbers = []\n    for num in fib_seq:\n        if is_prime(num):\n            prime_fib_numbers.append(num)\n\n    return prime_fib_numbers[-1]",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_nums = [0, 1]\n    count = 2\n\n    while True:\n        next_fib = fib_nums[count - 1] + fib_nums[count - 2]\n        if is_prime(next_fib):\n            n -= 1\n            if n == 0:\n                return next_fib\n        fib_nums.append(next_fib)\n        count += 1",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    if n < 1:\n        return None\n\n    count = 0\n    num1 = 1\n    num2 = 1\n    while True:\n        if is_prime(num1) and num1 > 1:\n            count += 1\n            if count == n:\n                return num1\n        num1, num2 = num2, num1 + num2",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    def fibonacci(n):\n        fib = [0, 1]\n        if n <= 1:\n            return fib[n]\n        for i in range(2, n + 1):\n            fib.append(fib[i - 1] + fib[i - 2])\n        return fib[-1]\n\n    count = 0\n    i = 0\n    while count < n:\n        num = fibonacci(i)\n        if is_prime(num):\n            count += 1\n        i += 1\n\n    return num",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def fibonacci(n):\n        if n <= 0:\n            return []\n        elif n == 1:\n            return [0]\n        elif n == 2:\n            return [0, 1]\n        else:\n            fib_seq = [0, 1]\n            while len(fib_seq) < n:\n                fib_seq.append(fib_seq[-1] + fib_seq[-2])\n            return fib_seq\n    \n    fib_numbers = fibonacci(30)\n    prime_fib_numbers = [num for num in fib_numbers if is_prime(num)]\n    \n    return prime_fib_numbers[n - 1]",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5)+1):\n            if num % i == 0:\n                return False\n        return True\n\n    def fibonacci(n):\n        fib_list = [0, 1]\n        if n <= 1:\n            return fib_list[n]\n        else:\n            for i in range(2, n+1):\n                fib_list.append(fib_list[i-1] + fib_list[i-2])\n            return fib_list[-1]\n\n    count = 0\n    num = 0\n    while count < n:\n        num += 1\n        if is_prime(fibonacci(num)):\n            count += 1\n\n    return fibonacci(num)",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def is_fibonacci(num):\n        a, b = 0, 1\n        while a < num:\n            a, b = b, a + b\n        return a == num\n    \n    count = 0\n    num = 2\n    while count < n:\n        if is_fibonacci(num) and is_prime(num):\n            count += 1\n        num += 1\n    \n    return num - 1",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def fibonacci(n):\n        if n == 0:\n            return 0\n        elif n == 1:\n            return 1\n        else:\n            fib_prev = 0\n            fib_curr = 1\n            for _ in range(2, n+1):\n                fib_next = fib_prev + fib_curr\n                fib_prev = fib_curr\n                fib_curr = fib_next\n            return fib_curr\n    \n    count = 0\n    i = 2\n    while count < n:\n        if is_prime(fibonacci(i)):\n            count += 1\n        i += 1\n    return fibonacci(i-1)",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num: int) -> bool:\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_sequence = [0, 1]\n    while True:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n        if is_prime(fib_sequence[-1]):\n            n -= 1\n            if n == 0:\n                return fib_sequence[-1]",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    \n    Examples:\n\n    assert prime_fib(1) == 2\n    \"\"\"\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def fibonacci(n):\n        fib = [0, 1]\n        for i in range(2, n+1):\n            fib.append(fib[i-1] + fib[i-2])\n        return fib[n]\n    \n    count = 0\n    i = 0\n    while count < n:\n        num = fibonacci(i)\n        if is_prime(num):\n            count += 1\n        i += 1\n    \n    return num",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num: int) -> bool:\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_numbers = [0, 1]\n    i = 2\n    while True:\n        fib_numbers.append(fib_numbers[i - 1] + fib_numbers[i - 2])\n        if is_prime(fib_numbers[i]):\n            n -= 1\n            if n == 0:\n                return fib_numbers[i]\n        i += 1\n\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def is_fib(num):\n        if num == 0:\n            return False\n        a, b = 0, 1\n        while b < num:\n            a, b = b, a + b\n        return b == num\n    \n    count = 0\n    num = 2\n    while count < n:\n        if is_fib(num) and is_prime(num):\n            count += 1\n        num += 1\n    return num - 1",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def fibonacci(n):\n        fib_nums = [0, 1]\n        while len(fib_nums) <= n:\n            fib_nums.append(fib_nums[-1] + fib_nums[-2])\n        return fib_nums[n]\n    \n    count = 0\n    i = 0\n    while count < n:\n        if is_prime(fibonacci(i)):\n            count += 1\n        i += 1\n    return fibonacci(i-1)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_nums = [0, 1]\n    count = 2\n\n    while True:\n        next_fib = fib_nums[count - 1] + fib_nums[count - 2]\n        if is_prime(next_fib):\n            n -= 1\n            if n == 0:\n                return next_fib\n        fib_nums.append(next_fib)\n        count += 1",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    if n < 1:\n        return None\n\n    count = 0\n    num1 = 1\n    num2 = 1\n    while True:\n        if is_prime(num1) and num1 > 1:\n            count += 1\n            if count == n:\n                return num1\n        num1, num2 = num2, num1 + num2",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    def fibonacci(n):\n        fib = [0, 1]\n        if n <= 1:\n            return fib[n]\n        for i in range(2, n + 1):\n            fib.append(fib[i - 1] + fib[i - 2])\n        return fib[-1]\n\n    count = 0\n    i = 0\n    while count < n:\n        num = fibonacci(i)\n        if is_prime(num):\n            count += 1\n        i += 1\n\n    return num",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5)+1):\n            if num % i == 0:\n                return False\n        return True\n\n    def fibonacci(n):\n        fib_list = [0, 1]\n        if n <= 1:\n            return fib_list[n]\n        else:\n            for i in range(2, n+1):\n                fib_list.append(fib_list[i-1] + fib_list[i-2])\n            return fib_list[-1]\n\n    count = 0\n    num = 0\n    while count < n:\n        num += 1\n        if is_prime(fibonacci(num)):\n            count += 1\n\n    return fibonacci(num)",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def fibonacci(n):\n        if n == 0:\n            return 0\n        elif n == 1:\n            return 1\n        else:\n            fib_prev = 0\n            fib_curr = 1\n            for _ in range(2, n+1):\n                fib_next = fib_prev + fib_curr\n                fib_prev = fib_curr\n                fib_curr = fib_next\n            return fib_curr\n    \n    count = 0\n    i = 2\n    while count < n:\n        if is_prime(fibonacci(i)):\n            count += 1\n        i += 1\n    return fibonacci(i-1)",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num: int) -> bool:\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_sequence = [0, 1]\n    while True:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n        if is_prime(fib_sequence[-1]):\n            n -= 1\n            if n == 0:\n                return fib_sequence[-1]",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    \n    Examples:\n\n    assert prime_fib(1) == 2\n    \"\"\"\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def fibonacci(n):\n        fib = [0, 1]\n        for i in range(2, n+1):\n            fib.append(fib[i-1] + fib[i-2])\n        return fib[n]\n    \n    count = 0\n    num = 0\n    while count < n:\n        num += 1\n        if is_prime(fibonacci(num)):\n            count += 1\n    return fibonacci(num)",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num: int) -> bool:\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_numbers = [0, 1]\n    i = 2\n    while True:\n        fib_numbers.append(fib_numbers[i - 1] + fib_numbers[i - 2])\n        if is_prime(fib_numbers[i]):\n            n -= 1\n            if n == 0:\n                return fib_numbers[i]\n        i += 1\n\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    def fibonacci(n):\n        fib_nums = [0, 1]\n        while len(fib_nums) <= n:\n            fib_nums.append(fib_nums[-1] + fib_nums[-2])\n        return fib_nums[n]\n    \n    count = 0\n    i = 0\n    while count < n:\n        if is_prime(fibonacci(i)):\n            count += 1\n        i += 1\n    return fibonacci(i-1)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_nums = [0, 1]\n    while True:\n        fib_nums.append(fib_nums[-1] + fib_nums[-2])\n        if is_prime(fib_nums[-1]):\n            n -= 1\n        if n == 0:\n            return fib_nums[-1]",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num: int) -> bool:\n        if num <= 1:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_nums = [0, 1]\n    prime_fib_nums = []\n    while len(prime_fib_nums) < n:\n        fib_nums.append(fib_nums[-1] + fib_nums[-2])\n        if is_prime(fib_nums[-1]):\n            prime_fib_nums.append(fib_nums[-1])\n    \n    return prime_fib_nums[-1]",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num <= 1:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    def fibonacci(n):\n        fib = [0, 1]\n        for i in range(2, n + 1):\n            fib.append(fib[i-1] + fib[i-2])\n        return fib[n]\n\n    count = 0\n    num = 2\n    while count < n:\n        if is_prime(fibonacci(num)):\n            count += 1\n        num += 1\n    return fibonacci(num - 1)",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_sequence = [0, 1]\n    index = 2\n\n    while True:\n        fib_num = fib_sequence[index - 1] + fib_sequence[index - 2]\n        if is_prime(fib_num):\n            n -= 1\n            if n == 0:\n                return fib_num\n        fib_sequence.append(fib_num)\n        index += 1",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num: int) -> bool:\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    fib_nums = [0, 1]\n    i = 2\n    while True:\n        fib_nums.append(fib_nums[i-1] + fib_nums[i-2])\n        if is_prime(fib_nums[i]):\n            n -= 1\n        if n == 0:\n            return fib_nums[i]\n        i += 1",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    \"\"\"\n\n    def is_prime(num: int) -> bool:\n        \"\"\"\n        is_prime checks whether a number is prime or not.\n        \"\"\"\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib = [0, 1]\n    count = 2\n\n    while True:\n        fib.append(fib[count - 1] + fib[count - 2])\n        if is_prime(fib[count]):\n            if n == 1:\n                return fib[count]\n            n -= 1\n        count += 1",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n    \n    fibs = [0, 1]\n    i = 2\n    while True:\n        fibs.append(fibs[i-1] + fibs[i-2])\n        if is_prime(fibs[i]):\n            n -= 1\n            if n == 0:\n                return fibs[i]\n        i += 1",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    \n    Examples:\n\n    assert prime_fib(1) == 2\n    assert prime_fib(4) == 13\n    \"\"\"\n    def is_prime(num):\n        if num <= 1:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_nums = [0, 1]\n    prime_fib_nums = []\n\n    while len(prime_fib_nums) < n:\n        fib_nums.append(fib_nums[-1] + fib_nums[-2])\n        if is_prime(fib_nums[-1]):\n            prime_fib_nums.append(fib_nums[-1])\n    \n    return prime_fib_nums[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int) -> int:\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_seq = [0, 1]\n    fib_prime = []\n\n    while len(fib_prime) < n:\n        next_num = fib_seq[-1] + fib_seq[-2]\n        fib_seq.append(next_num)\n        if is_prime(next_num):\n            fib_prime.append(next_num)\n\n    return fib_prime[-1]",
+            "logp": null
+        },
+        {
+            "content": "def prime_fib(n: int):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    fib_sequence = [0, 1]\n    while True:\n        fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])\n        if is_prime(fib_sequence[-1]):\n            if n == 1:\n                return fib_sequence[-1]\n            n -= 1",
+            "logp": null
+        }
+    ]
+}

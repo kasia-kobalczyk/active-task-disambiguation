@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert zombie_shootout(20, 10, 15) == \"You shot 15 zombies before being eaten: ran out of ammo.\"",
+        "assert zombie_shootout(10, 5, 5) == \"You shot 5 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(20, 2, 15) == \"You shot 15 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(10, 20, 5) == \"You shot 5 zombies before being eaten: ran out of ammo.\"",
+        "assert zombie_shootout(10, 5, 10) == \"You shot 10 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(1, 1, 1) == \"You shot all 1 zombies.\"",
+        "assert zombie_shootout(5, 100, 10) == \"You shot all 5 zombies.\"",
+        "assert zombie_shootout(5, 10, 3) == \"You shot 3 zombies before being eaten: overwhelmed.\""
+    ],
+    "1": [
+        "assert zombie_shootout(10, 5, 3) == \"You shot 3 zombies before being eaten: ran out of ammo.\"",
+        "assert zombie_shootout(40, 10, 40) == \"You shot all 40 zombies.\"",
+        "assert zombie_shootout(20, 2, 15) == \"You shot 15 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(5, 1, 5) == \"You shot all 5 zombies.\"",
+        "assert zombie_shootout(30, 10, 15) == \"You shot 15 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(20, 15, 5) == \"You shot 5 zombies before being eaten: ran out of ammo.\"",
+        "assert zombie_shootout(50, 5, 30) == \"You shot 30 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(30, 20, 25) == \"You shot 25 zombies before being eaten: overwhelmed.\""
+    ],
+    "2": [
+        "assert zombie_shootout(30, 25, 20) == \"You shot 20 zombies before being eaten: ran out of ammo.\"",
+        "assert zombie_shootout(50, 2, 20) == \"You shot 20 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(15, 10, 10) == \"You shot all 15 zombies.\"",
+        "assert zombie_shootout(30, 5, 15) == \"You shot 15 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(10, 100, 10) == \"You shot all 10 zombies.\"",
+        "assert zombie_shootout(5, 1, 3) == \"You shot 3 zombies before being eaten: ran out of ammo.\"",
+        "assert zombie_shootout(20, 15, 20) == \"You shot all 20 zombies.\"",
+        "assert zombie_shootout(10, 3, 5) == \"You shot 5 zombies before being eaten: overwhelmed.\""
+    ],
+    "3": [
+        "assert zombie_shootout(25, 0, 25) == \"You shot all 25 zombies.\"",
+        "assert zombie_shootout(30, 1, 10) == \"You shot 10 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(20, 5, 10) == \"You shot 10 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(30, 5, 15) == \"You shot 15 zombies before being eaten: overwhelmed.\"",
+        "assert zombie_shootout(5, 100, 3) == \"You shot 3 zombies before being eaten: ran out of ammo.\"",
+        "assert zombie_shootout(5, 1, 3) == \"You shot 3 zombies before being eaten: ran out of ammo.\"",
+        "assert zombie_shootout(15, 100, 20) == \"You shot all 15 zombies.\"",
+        "assert zombie_shootout(15, 10, 15) == \"You shot all 15 zombies.\"",
+        "assert zombie_shootout(50, 2, 10) == \"You shot 10 zombies before being eaten: overwhelmed.\""
+    ]
+}

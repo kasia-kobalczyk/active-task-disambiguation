@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert is_alt(\"ace\") == False",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"amazon\") == True",
+        "assert is_alt(\"abacaba\") == True",
+        "assert is_alt(\"a\") == True",
+        "assert is_alt(\"banana\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"abcde\") == False",
+        "assert is_alt(\"hello\") == False",
+        "assert is_alt(\"education\") == True",
+        "assert is_alt(\"bacon\") == False",
+        "assert is_alt(\"dodo\") == False",
+        "assert is_alt(\"unique\") == True",
+        "assert is_alt(\"cabbage\") == False"
+    ],
+    "2": [
+        "assert is_alt(\"cocoa\") == False",
+        "assert is_alt(\"hello\") == False",
+        "assert is_alt(\"bacon\") == False",
+        "assert is_alt(\"dodo\") == False",
+        "assert is_alt(\"uc\") == True",
+        "assert is_alt(\"cabbage\") == False"
+    ],
+    "3": [
+        "assert is_alt(\"abcd\") == True",
+        "assert is_alt(\"grape\") == False",
+        "assert is_alt(\"applepie\") == False",
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"aeiou\") == False",
+        "assert is_alt(\"education\") == True",
+        "assert is_alt(\"eager\") == False",
+        "assert is_alt(\"horizon\") == True"
+    ]
+}

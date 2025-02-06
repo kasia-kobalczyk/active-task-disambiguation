@@ -1,0 +1,37 @@
+{
+    "0": [
+        "assert get_odd_collatz(2) == []",
+        "assert get_odd_collatz(5) == [1, 5, 13]",
+        "assert get_odd_collatz(5) == [1, 5, 3]",
+        "assert get_odd_collatz(4) == [1, 5]",
+        "assert get_odd_collatz(1) == [1]",
+        "assert get_odd_collatz(3) == [1]"
+    ],
+    "1": [
+        "assert get_odd_collatz(7) == [1, 5, 7]",
+        "assert get_odd_collatz(20) == [1, 5, 7, 9, 11, 13, 15, 17, 19]",
+        "assert get_odd_collatz(3) == [3, 5, 1]",
+        "assert get_odd_collatz(1) == [1]",
+        "assert get_odd_collatz(10) == [3, 5, 1]",
+        "assert get_odd_collatz(12) == [1]",
+        "assert get_odd_collatz(10) == [1, 5, 7]",
+        "assert get_odd_collatz(15) == [1, 5, 7, 9, 11, 13, 15]"
+    ],
+    "2": [
+        "assert get_odd_collatz(10) == [1, 5, 7]",
+        "assert get_odd_collatz(3) == [3, 5, 1]",
+        "assert get_odd_collatz(1) == [1]",
+        "assert get_odd_collatz(10) == [3, 5, 1]",
+        "assert get_odd_collatz(20) == [1, 5, 7, 9, 11, 13, 15, 17, 19]",
+        "assert get_odd_collatz(12) == [1]",
+        "assert get_odd_collatz(15) == [1, 5, 7, 9, 11, 13, 15]"
+    ],
+    "3": [
+        "assert get_odd_collatz(3) == [3, 5, 1]",
+        "assert get_odd_collatz(1) == [1]",
+        "assert get_odd_collatz(10) == [3, 5, 1]",
+        "assert get_odd_collatz(20) == [1, 5, 7, 9, 11, 13, 15, 17, 19]",
+        "assert get_odd_collatz(12) == [1]",
+        "assert get_odd_collatz(15) == [1, 5, 7, 9, 11, 13, 15]"
+    ]
+}

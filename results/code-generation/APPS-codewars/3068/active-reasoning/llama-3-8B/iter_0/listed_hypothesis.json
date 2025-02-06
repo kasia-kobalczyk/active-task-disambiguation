@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def vowel_back(st):\n    res = \"\"\n    for char in st:\n        if char == 'a':\n            res += 'y' if (len(res) + 1) % 3 == 0 else 'z'\n        elif char in ['e', 'o']:\n            res += 'd' if res else 'b'\n        elif char in ['d', 'i', 'n', 'r', 's', 't', 'u']:\n            res += 'z' if res else 'b'\n        elif char in ['c', 'y']:\n            res += 'k' if res else 'a'\n        else:\n            res += chr((ord(char) - 97 + 9) % 26 + 97)\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    res = \"\"\n    for char in st:\n        if char == 'a':\n            res += 'y' if (len(res) + 1) % 3 == 0 else 'z'\n        elif char in ['e', 'o']:\n            res += 'd' if res else 'b'\n        elif char in ['d', 'i', 'n', 'r', 's', 't', 'u']:\n            res += 'z' if res else 'b'\n        elif char in ['c', 'y']:\n            res += 'k' if res else 'a'\n        else:\n            res += chr((ord(char) - 97 + 9) % 26 + 97)\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    res = \"\"\n    for char in st:\n        if char == 'a':\n            res += 'y' if (len(res) + 1) % 3 == 0 else 'z'\n        elif char in ['e', 'o']:\n            res += 'd' if res else 'b'\n        elif char in ['d', 'i', 'n', 'r', 's', 't', 'u']:\n            res += 'z' if res else 'b'\n        elif char in ['c', 'y']:\n            res += 'k' if res else 'a'\n        else:\n            res += chr((ord(char) - 97 + 9) % 26 + 97)\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    res = \"\"\n    for char in st:\n        if char == 'a':\n            res += 'y' if (len(res) + 1) % 3 == 0 else 'z'\n        elif char in ['e', 'o']:\n            res += 'd' if res else 'b'\n        elif char in ['d', 'i', 'n', 'r', 's', 't', 'u']:\n            res += 'z' if res else 'b'\n        elif char in ['c', 'y']:\n            res += 'k' if res else 'a'\n        else:\n            res += chr((ord(char) - 97 + 9) % 26 + 97)\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    res = \"\"\n    for char in st:\n        if char == 'a':\n            res += 'y' if (len(res) + 1) % 3 == 0 else 'z'\n        elif char in ['e', 'o']:\n            res += 'd' if res else 'b'\n        elif char in ['d', 'i', 'n', 'r', 's', 't', 'u']:\n            res += 'z' if res else 'b'\n        elif char in ['c', 'y']:\n            res += 'k' if res else 'a'\n        else:\n            res += chr((ord(char) - 97 + 9) % 26 + 97)\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiou':\n            if char == 'a':\n                result += 'z'\n            else:\n                result += chr(ord(char) - 1)\n        elif char in 'bcdfghjklmnpqrst':\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'x'\n            elif char == 'e':\n                result += 'a'\n            else:\n                result += chr(ord(char) + 9)\n        else:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiou':\n            if char == 'a':\n                result += 'z'\n            else:\n                result += chr(ord(char) - 1)\n        elif char in 'bcdfghjklmnpqrst':\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'x'\n            elif char == 'e':\n                result += 'a'\n            else:\n                result += chr(ord(char) + 9)\n        else:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiou':\n            if char == 'a':\n                result += 'z'\n            else:\n                result += chr(ord(char) - 1)\n        elif char in 'bcdfghjklmnpqrst':\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'x'\n            elif char == 'e':\n                result += 'a'\n            else:\n                result += chr(ord(char) + 9)\n        else:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiou':\n            if char == 'a':\n                result += 'z'\n            else:\n                result += chr(ord(char) - 1)\n        elif char in 'bcdfghjklmnpqrst':\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'x'\n            elif char == 'e':\n                result += 'a'\n            else:\n                result += chr(ord(char) + 9)\n        else:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiou':\n            if char == 'a':\n                result += 'z'\n            else:\n                result += chr(ord(char) - 1)\n        elif char in 'bcdfghjklmnpqrst':\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'x'\n            elif char == 'e':\n                result += 'a'\n            else:\n                result += chr(ord(char) + 9)\n        else:\n            result += char\n    return result",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

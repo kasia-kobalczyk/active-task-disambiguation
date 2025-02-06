@@ -1,0 +1,102 @@
+{
+    "0": [
+        {
+            "content": "def get_note(pitch):\n    for key, value in notes.items():\n        if key == pitch:\n            return value\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if abs(pitch - freq) < 0.01:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq:\n            return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note in notes:\n        if note == pitch:\n            return notes[note]\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch == note_pitch:\n            return note_name",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch == note_pitch:\n            return note\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note in notes:\n        if pitch == note:\n            return notes[note]\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for p in notes:\n        if pitch == p:\n            return notes[p]\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def get_note(pitch):\n    for key in notes:\n        if abs(pitch - key) < 0.01:\n            return notes[key]",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    for note in notes:\n        if round(pitch, 2) == round(note, 2):\n            return notes[note]\n```",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for key in notes:\n        if key <= pitch:\n            note = notes[key]\n    return note",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for key, value in notes.items():\n        if key == pitch:\n            return value\n    return None",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_note(pitch):\n    for note in notes:\n        if abs(pitch - note) < 1:\n            return notes[note]\n```",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note_pitch in notes:\n        if abs(pitch - note_pitch) <= 0.01:\n            return notes[note_pitch]",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note, value in notes.items():\n        if pitch == note:\n            return value\n    return \"Note not found\"",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for p, note in notes.items():\n        if pitch == p:\n            return note\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note, value in notes.items():\n        if pitch == note:\n            return value\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for note, value in notes.items():\n        if pitch == note:\n            return value",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def get_note(pitch):\n    for key in notes:\n        if pitch >= key:\n            return notes[key]",
+            "logp": null
+        },
+        {
+            "content": "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq or pitch % freq == 0:\n            return note",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def get_note(pitch):\n    for key in notes:\n        if pitch == key or pitch % key == 0:\n            return notes[key]",
+            "logp": null
+        }
+    ]
+}

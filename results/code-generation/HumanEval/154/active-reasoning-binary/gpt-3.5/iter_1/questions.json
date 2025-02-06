@@ -1,0 +1,46 @@
+{
+    "0": [
+        "assert cycpattern_check(\"hello\", \"lo\") == True",
+        "assert cycpattern_check('programming', 'mingpro') == True",
+        "assert cycpattern_check(\"\", \"hello\") == False",
+        "assert cycpattern_check(\"hello\", \"\") == False",
+        "assert cycpattern_check('hello', 'ohell') == True",
+        "assert cycpattern_check('apple', 'pepla') == False",
+        "assert cycpattern_check(\"hello\", \"world\") == False",
+        "assert cycpattern_check(\"hello\", \"llohe\") == True",
+        "assert cycpattern_check('abcd', 'cdab') == True",
+        "assert cycpattern_check('python', 'thonpy') == False"
+    ],
+    "1": [
+        "assert cycpattern_check(\"abcdef\", \"defabc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"cdefab\") == True",
+        "assert cycpattern_check(\"coding\", \"ingcod\") == True",
+        "assert cycpattern_check(\"abcdef\", \"\") == True",
+        "assert cycpattern_check(\"programming\", \"mingpro\") == True",
+        "assert cycpattern_check(\"python\", \"honpyt\") == False",
+        "assert cycpattern_check(\"apple\", \"leapp\") == True",
+        "assert cycpattern_check(\"hello\", \"loleh\") == False",
+        "assert cycpattern_check(\"abcdef\", \"xyz\") == False",
+        "assert cycpattern_check(\"abcdef\", \"def\") == True"
+    ],
+    "2": [
+        "assert cycpattern_check(\"abcdef\", \"cde\") == True",
+        "assert cycpattern_check(\"abcdef\", \"\") == False",
+        "assert cycpattern_check(\"abcdef\", \"abcdefg\") == False",
+        "assert cycpattern_check(\"coding\", \"ingcod\") == True",
+        "assert cycpattern_check(\"python\", \"honpyt\") == False",
+        "assert cycpattern_check(\"apple\", \"leapp\") == True",
+        "assert cycpattern_check(\"hello\", \"loleh\") == False",
+        "assert cycpattern_check(\"abcdef\", \"xyz\") == False",
+        "assert cycpattern_check(\"abcdef\", \"defabc\") == True"
+    ],
+    "3": [
+        "assert cycpattern_check(\"abcdefg\", \"abcd\") == False",
+        "assert cycpattern_check(\"python\", \"thony\") == True",
+        "assert cycpattern_check(\"hello\", \"hello\") == True",
+        "assert cycpattern_check(\"apple\", \"banana\") == False",
+        "assert cycpattern_check(\"python\", \"thonpy\") == True",
+        "assert cycpattern_check(\"abcdefg\", \"cdefga\") == True",
+        "assert cycpattern_check(\"hello\", \"lohel\") == True"
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert total_match(['abc', 'def'], ['abc', 'def']) == ['abc', 'def']",
+        "assert total_match(['abc', 'def'], []) == []",
+        "assert total_match(['abc', 'def', 'xyz'], ['gh', 'ij']) == ['gh', 'ij']",
+        "assert total_match(['abc', 'def'], ['gh', 'ij', 'kl']) == ['abc', 'def']",
+        "assert total_match(['abc', 'def', 'xyz'], ['gh', 'ij', 'kl']) == ['gh', 'ij', 'kl']",
+        "assert total_match(['abc', 'def'], ['a', 'b', 'c']) == ['abc', 'def']",
+        "assert total_match(['abc', 'def'], ['gh', 'ij']) == ['abc', 'def']",
+        "assert total_match(['a', 'b', 'c'], ['abc', 'def']) == ['a', 'b', 'c']",
+        "assert total_match([], ['abc', 'def']) == []"
+    ],
+    "1": [
+        "assert total_match([], []) == []",
+        "assert total_match(['abc', 'def'], ['g', 'hi', 'jk']) == ['abc', 'def']",
+        "assert total_match([''], ['']) == ['']",
+        "assert total_match(['abc', 'def', 'xyz'], ['gh', 'ij', 'kl']) == ['gh', 'ij', 'kl']",
+        "assert total_match(['abc', 'def'], ['gh', 'ijklmnop']) == ['gh', 'ijklmnop']",
+        "assert total_match(['abc', 'def', 'ghi'], ['gh', 'ij']) == ['gh', 'ij']",
+        "assert total_match(['abc', 'def'], ['gh', 'ij', 'kl', 'mno']) == ['abc', 'def']"
+    ],
+    "2": [
+        "assert total_match(['123', '456', '789'], ['10', '20']) == ['10', '20']",
+        "assert total_match(['abc', 'def', 'ghi'], ['a', 'b', 'c', 'd']) == ['a', 'b', 'c', 'd']",
+        "assert total_match(['abc', 'def', 'ghi'], ['gh', 'ij', 'kl']) == ['gh', 'ij', 'kl']",
+        "assert total_match(['abc', 'def'], ['gh', 'ij']) == ['abc', 'def']",
+        "assert total_match(['aa', 'bb', 'cc'], ['d', 'e', 'f']) == ['aa', 'bb', 'cc']",
+        "assert total_match([], ['gh', 'ij', 'kl']) == []",
+        "assert total_match(['abc', 'def'], ['gh', 'ij', 'kl', 'mno']) == ['abc', 'def']"
+    ],
+    "3": [
+        "assert total_match(['python', 'java', 'ruby'], ['javascript', 'php', 'perl']) == ['python', 'java', 'ruby']",
+        "assert total_match(['ab', 'cd', 'ef'], ['ghij', 'kl']) == ['ghij', 'kl']",
+        "assert total_match(['', '', ''], ['', '']) == ['', '']",
+        "assert total_match(['a', 'b', 'c'], ['d', 'e', 'f']) == ['a', 'b', 'c']",
+        "assert total_match(['apple', 'banana'], ['car', 'truck']) == ['car', 'truck']",
+        "assert total_match(['abcde', 'fgh', 'ijk'], ['lmno', 'pqr', 'stu']) == ['lmno', 'pqr', 'stu']"
+    ]
+}

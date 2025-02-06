@@ -1,0 +1,166 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, str):  # tube\n            total_cost += 2.40\n            bus_count = 0  # reset bus count\n        elif isinstance(item, int):  # bus\n            bus_count += 1\n            if bus_count % 2 == 0:  # every two buses\n                total_cost += 1.50  # charge once for the set\n            else:\n                if bus_count == 1:  # charge for the first bus\n                    total_cost += 1.50\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, str):  # Tube journey\n            total_cost += 2.40\n            bus_count = 0  # Reset bus count on tube journey\n        elif isinstance(item, int):  # Bus journey\n            bus_count += 1\n            if bus_count == 2:  # Every two adjacent buses count as one fare\n                total_cost += 1.50\n                bus_count = 0  # Reset after counting two buses\n        else:\n            raise ValueError(\"Invalid item in journey\")\n\n    if bus_count == 1:  # If there's one bus left unpaired\n        total_cost += 1.50\n\n    return f'\u00a3{total_cost:.2f}'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    \n    for stop in journey:\n        if isinstance(stop, str):  # Tube journey\n            total_cost += 2.40\n            bus_count = 0  # Reset bus count\n        elif isinstance(stop, int):  # Bus journey\n            bus_count += 1\n    \n    # Count the number of bus fares for adjacent buses\n    total_cost += (bus_count // 2) * 1.50  # Count pairs\n    total_cost += (bus_count % 2) * 1.50  # Count the remaining bus if odd\n    \n    return f'\u00a3{total_cost:.2f}'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, str):  # Tube journey\n            total_cost += 2.40\n            bus_count = 0  # Reset bus count since it's a tube journey\n        elif isinstance(item, int):  # Bus journey\n            bus_count += 1\n            if bus_count == 2:  # If there are 2 adjacent buses\n                total_cost += 1.50  # Add cost for the first bus in the pair\n                bus_count = 0  # Reset count after capping\n            elif bus_count == 1:  # First bus in a potential pair\n                pass  # Wait for the second bus to cap\n\n    # If there was an odd bus out at the end of the journey\n    if bus_count == 1:\n        total_cost += 1.50\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, str):  # It's a tube\n            total_cost += 2.40\n            bus_count = 0  # Reset bus count\n        elif isinstance(item, int):  # It's a bus\n            bus_count += 1\n            if bus_count == 2:  # We found two adjacent buses\n                total_cost += 1.50  # Add the cost for the set of two buses\n                bus_count = 0  # Reset bus count for next possible pair\n            elif bus_count == 1:  # Only one bus, no cost added yet\n                continue\n    \n    # If there was an odd bus at the end\n    if bus_count == 1:\n        total_cost += 1.50  # Add the cost for the last remaining bus if it exists\n        \n    return f'\u00a3{total_cost:.2f}'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, str):  # it's a tube\n            total_cost += 2.40\n            bus_count = 0  # reset bus counter\n        elif isinstance(item, int):  # it's a bus\n            bus_count += 1\n            if bus_count == 2:  # cap for 2 adjacent buses\n                total_cost += 1.50\n                bus_count = 0  # reset bus counter for the next set\n        else:\n            raise ValueError(\"Invalid journey item\")\n    \n    if bus_count == 1:  # if there's an unpaired bus at the end\n        total_cost += 1.50\n    \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    \n    for i in range(len(journey)):\n        if isinstance(journey[i], str):  # Tube journey\n            total_cost += 2.40\n            bus_count = 0  # Reset bus count\n        elif isinstance(journey[i], int):  # Bus journey\n            bus_count += 1\n            if bus_count == 2:  # Cap the fare for 2 adjacent buses\n                total_cost += 1.50\n                bus_count = 0  # Reset bus count after capping\n            elif bus_count == 1:  # For the first bus\n                total_cost += 1.50\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, str):  # It's a tube journey\n            total_cost += 2.40\n            bus_count = 0  # Reset bus count for tube journey\n        elif isinstance(item, int):  # It's a bus journey\n            bus_count += 1\n            if bus_count == 2:  # Cap the fare for two adjacent buses\n                total_cost += 1.50\n                bus_count = 0  # Reset count after capping\n        else:\n            continue  # In case of unexpected type (defensive coding)\n    \n    # Add remaining buses if there's an odd one out\n    if bus_count == 1:\n        total_cost += 1.50\n    \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, str):  # Tube journey\n            total_cost += 2.40\n            bus_count = 0\n        elif isinstance(item, int):  # Bus journey\n            bus_count += 1\n            if bus_count == 2:  # Capping for 2 adjacent buses\n                total_cost += 1.50\n                bus_count = 0\n        else:\n            raise ValueError(\"Journey can only contain bus numbers and TFL tube names.\")\n    \n    # If there's an odd bus at the end, add its cost\n    if bus_count == 1:\n        total_cost += 1.50\n    \n    return f'\u00a3{total_cost:.2f}'\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], str):  # it's a tube\n            total_cost += 2.40\n            i += 1\n        elif isinstance(journey[i], int):  # it's a bus\n            total_cost += 1.50\n            i += 1\n            # Check for adjacent buses\n            while i < len(journey) and isinstance(journey[i], int):\n                i += 1\n            # Cap the bus fares\n            total_cost -= 1.50  # refund for the last bus, because we capped\n            total_cost += 1.50 * ((i - (i - (1 + len([j for j in journey[i-1::-1] if isinstance(j, int)])))) // 2) + 1)\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], int):  # Bus journey\n            total_cost += bus_fare\n            if i + 1 < len(journey) and isinstance(journey[i + 1], int):  # Check for adjacent bus\n                total_cost -= bus_fare  # Remove the last bus fare added\n                total_cost += bus_fare  # Add back one bus fare for the set\n                i += 1  # Skip the next bus\n        else:  # Tube journey\n            total_cost += tube_fare\n        i += 1\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n\n    for transport in journey:\n        if isinstance(transport, int):  # Check if it's a bus number\n            bus_count += 1\n        else:  # It's a tube\n            if bus_count > 1:\n                total_cost += (bus_count // 2) * bus_fare  # Count pairs of buses\n                if bus_count % 2 == 1:  # If there's an odd bus out\n                    total_cost += bus_fare\n            elif bus_count == 1:\n                total_cost += bus_fare\n            \n            bus_count = 0  # Reset bus count\n            total_cost += tube_fare  # Add tube fare\n\n    # Handle any remaining buses at the end of the journey\n    if bus_count > 1:\n        total_cost += (bus_count // 2) * bus_fare\n        if bus_count % 2 == 1:\n            total_cost += bus_fare\n    elif bus_count == 1:\n        total_cost += bus_fare\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, int):  # Bus journey\n            bus_count += 1\n        else:  # Tube journey\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_cost  # Cost for pairs of buses\n                total_cost += (bus_count % 2) * bus_cost  # Cost for any remaining single bus\n                bus_count = 0\n            total_cost += tube_cost  # Add tube fare\n    \n    # If there are buses at the end of the journey\n    if bus_count > 0:\n        total_cost += (bus_count // 2) * bus_cost\n        total_cost += (bus_count % 2) * bus_cost\n    \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0.0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, int):  # Bus journey\n            bus_count += 1\n        else:  # Tube journey\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_fare  # Count pairs of buses\n                if bus_count % 2 == 1:  # If there's an odd bus left\n                    total_cost += bus_fare\n                bus_count = 0\n            total_cost += tube_fare\n\n    # Finalize bus cost if there are any buses left at the end\n    if bus_count > 0:\n        total_cost += (bus_count // 2) * bus_fare\n        if bus_count % 2 == 1:\n            total_cost += bus_fare\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, int):  # It's a bus number\n            bus_count += 1\n        else:  # It's a tube\n            # Add cost for the buses counted so far\n            total_cost += (bus_count // 2) * bus_fare\n            total_cost += (bus_count % 2) * bus_fare\n            bus_count = 0\n            total_cost += tube_fare  # Add tube fare\n\n    # Add cost for any buses remaining at the end\n    total_cost += (bus_count // 2) * bus_fare\n    total_cost += (bus_count % 2) * bus_fare\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    total_cost = 0\n    bus_count = 0\n    \n    for i in range(len(journey)):\n        if isinstance(journey[i], int):  # Check if it's a bus number\n            bus_count += 1\n            if i == len(journey) - 1 or not isinstance(journey[i + 1], int):  # End of bus sequence\n                total_cost += (bus_count // 2) * 1.50  # Charge for pairs of buses\n                if bus_count % 2 == 1:  # If there's an odd bus\n                    total_cost += 1.50\n                bus_count = 0  # Reset bus count\n        else:  # It's a tube journey\n            total_cost += 2.40\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, int):  # Bus journey\n            bus_count += 1\n        else:  # Tube journey\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_cost\n                if bus_count % 2 != 0:\n                    total_cost += bus_cost\n                bus_count = 0\n            total_cost += tube_cost\n            \n    if bus_count > 0:\n        total_cost += (bus_count // 2) * bus_cost\n        if bus_count % 2 != 0:\n            total_cost += bus_cost\n    \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n    \n    for stop in journey:\n        if isinstance(stop, int):  # It's a bus number\n            bus_count += 1\n        else:  # It's a tube name\n            # Process any accumulated bus counts\n            total_cost += (bus_count // 2) * bus_fare  # charge for pairs of buses\n            total_cost += (bus_count % 2) * bus_fare  # charge for any single remaining bus\n            bus_count = 0\n            total_cost += tube_fare  # charge for tube fare\n            \n    # Process any remaining bus counts after the loop\n    total_cost += (bus_count // 2) * bus_fare\n    total_cost += (bus_count % 2) * bus_fare\n    \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, str):  # If it's a tube\n            total_cost += tube_cost\n            bus_count = 0  # Reset bus count\n        elif isinstance(item, int):  # If it's a bus\n            bus_count += 1\n            \n            if bus_count % 2 == 0:  # Every two buses\n                total_cost += 0  # Do not add cost for the second bus in pair\n            else:\n                total_cost += bus_cost\n                \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.0\n    bus_count = 0\n\n    for stop in journey:\n        if isinstance(stop, int):  # If it's a bus number\n            bus_count += 1\n        else:  # If it's a tube name\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_cost  # Charge for adjacent bus pairs\n                if bus_count % 2 == 1:  # If there's an odd one out\n                    total_cost += bus_cost\n                bus_count = 0\n            total_cost += tube_cost  # Charge for the tube journey\n\n    if bus_count > 0:  # Account for any remaining buses after the loop\n        total_cost += (bus_count // 2) * bus_cost\n        if bus_count % 2 == 1:\n            total_cost += bus_cost\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, str):  # it's a tube\n            if bus_count > 0:\n                total_cost += bus_cost * ((bus_count + 1) // 2)  # charge for pairs of buses\n                bus_count = 0\n            total_cost += tube_cost\n        elif isinstance(item, int):  # it's a bus\n            bus_count += 1\n\n    if bus_count > 0:\n        total_cost += bus_cost * ((bus_count + 1) // 2)\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_cost = 1.50\n    tube_cost = 2.40\n    total_cost = 0.0\n    bus_count = 0\n\n    for i in range(len(journey)):\n        if isinstance(journey[i], int):  # If it's a bus number\n            bus_count += 1\n        else:  # If it's a tube name\n            # Count any buses before this tube\n            total_cost += (bus_count // 2) * bus_cost  # Charge for sets of 2 buses\n            total_cost += (bus_count % 2) * bus_cost  # Charge for any remaining bus\n            total_cost += tube_cost  # Charge for the tube\n            bus_count = 0  # Reset bus count after tube\n\n    # After loop, if there are still buses left to charge\n    total_cost += (bus_count // 2) * bus_cost\n    total_cost += (bus_count % 2) * bus_cost\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, int):  # Bus number\n            bus_count += 1\n        else:  # Tube name\n            # Calculate fare for any buses counted so far\n            total_cost += (bus_count // 2) * bus_fare  # Count pairs of buses\n            total_cost += (bus_count % 2) * bus_fare  # Count any leftover bus\n            bus_count = 0  # Reset bus count\n            total_cost += tube_fare  # Add tube fare\n\n    # Calculate fare for any remaining buses at the end\n    total_cost += (bus_count // 2) * bus_fare\n    total_cost += (bus_count % 2) * bus_fare\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, int):  # Bus journey\n            bus_count += 1\n        else:  # Tube journey\n            if bus_count > 0:\n                total_cost += bus_fare * ((bus_count + 1) // 2)  # Cap the bus fare\n                bus_count = 0\n            total_cost += tube_fare\n\n    if bus_count > 0:\n        total_cost += bus_fare * ((bus_count + 1) // 2)  # Final bus fare calculation if any\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0.0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, str):  # Tube journey\n            total_cost += tube_fare\n            bus_count = 0  # Reset bus count\n        elif isinstance(item, int):  # Bus journey\n            bus_count += 1\n            \n            # If two or more adjacent buses are found\n            if bus_count % 2 == 0:  \n                total_cost += 0  # No extra charge for the second in the pair\n            else:\n                total_cost += bus_fare  # Charge for the first in the pair\n    \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    tube_cost = 2.40\n    bus_cost = 1.50\n    total_cost = 0.0\n    bus_count = 0\n\n    for transport in journey:\n        if isinstance(transport, int):  # Bus\n            bus_count += 1\n        else:  # Tube\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_cost  # Count pairs of buses\n                total_cost += (bus_count % 2) * bus_cost  # Count any remaining single bus\n                bus_count = 0\n            total_cost += tube_cost\n\n    if bus_count > 0:\n        total_cost += (bus_count // 2) * bus_cost\n        total_cost += (bus_count % 2) * bus_cost\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], str):  # It's a tube journey\n            total_cost += tube_fare\n            i += 1\n        else:  # It's a bus number\n            count = 0\n            while i < len(journey) and isinstance(journey[i], int):  # Count adjacent buses\n                count += 1\n                i += 1\n            total_cost += (count // 2) * bus_fare  # Count pairs of buses\n            if count % 2 == 1:  # If there's an odd bus, add one more fare\n                total_cost += bus_fare\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, int):  # If it is a bus number\n            bus_count += 1\n        else:  # It is a tube name\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_fare  # Count pairs of buses\n                total_cost += (bus_count % 2) * bus_fare  # Count any remaining bus\n                bus_count = 0  # Reset bus count\n            total_cost += tube_fare  # Add tube fare\n\n    # If there are buses left at the end of the journey\n    if bus_count > 0:\n        total_cost += (bus_count // 2) * bus_fare\n        total_cost += (bus_count % 2) * bus_fare\n        \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_cost = 1.50\n    tube_cost = 2.40\n    total_cost = 0\n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], str):  # Tube journey\n            total_cost += tube_cost\n            i += 1\n        else:  # Bus journey\n            bus_count = 0\n            while i < len(journey) and isinstance(journey[i], int):\n                bus_count += 1\n                i += 1\n            total_cost += (bus_count // 2) * bus_cost  # Count pairs of buses\n            total_cost += (bus_count % 2) * bus_cost  # Add cost for any leftover bus\n            \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, int):\n            bus_count += 1\n        else:\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_fare  # Charge for pairs of buses\n                if bus_count % 2 == 1:  # If there's an unpaired bus\n                    total_cost += bus_fare\n                bus_count = 0\n            total_cost += tube_fare\n\n    if bus_count > 0:\n        total_cost += (bus_count // 2) * bus_fare\n        if bus_count % 2 == 1:\n            total_cost += bus_fare\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0\n    i = 0\n    \n    while i < len(journey):\n        if isinstance(journey[i], str):\n            total_cost += tube_fare\n            i += 1\n        elif isinstance(journey[i], int):\n            if i + 1 < len(journey) and isinstance(journey[i + 1], int):\n                total_cost += bus_fare\n                i += 2  # Skip the next bus as it's adjacent\n            else:\n                total_cost += bus_fare\n                i += 1\n                \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n    \n    for stop in journey:\n        if isinstance(stop, int):  # it's a bus number\n            bus_count += 1\n        else:  # it's a tube name\n            # Handle the bus count before switching to tube\n            total_cost += (bus_count // 2) * bus_fare  # charge capped for sets of two buses\n            if bus_count % 2 == 1:  # if there's an unpaired bus, charge for it\n                total_cost += bus_fare\n            bus_count = 0  # reset bus count for tube\n\n            total_cost += tube_fare  # add tube fare\n            \n    # Handle any remaining buses at the end of the journey\n    total_cost += (bus_count // 2) * bus_fare\n    if bus_count % 2 == 1:\n        total_cost += bus_fare\n        \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0\n    i = 0\n    while i < len(journey):\n        if isinstance(journey[i], str):  # If it's a tube\n            total_cost += tube_fare\n            i += 1\n        elif isinstance(journey[i], int):  # If it's a bus\n            # Count adjacent buses\n            bus_count = 0\n            while i < len(journey) and isinstance(journey[i], int):\n                bus_count += 1\n                i += 1\n            total_cost += (bus_count // 2 + bus_count % 2) * bus_fare  # cap cost for adjacent buses\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    tube_fare = 2.40\n    bus_fare = 1.50\n    total_cost = 0\n    i = 0\n    \n    while i < len(journey):\n        if isinstance(journey[i], str):\n            total_cost += tube_fare\n            i += 1\n        elif isinstance(journey[i], int):\n            # Count adjacent buses\n            bus_count = 0\n            while i < len(journey) and isinstance(journey[i], int):\n                bus_count += 1\n                i += 1\n            total_cost += (bus_count // 2) * bus_fare  # Count pairs of adjacent buses\n            if bus_count % 2 != 0:\n                total_cost += bus_fare  # Add fare for the remaining single bus\n            \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, int):  # Bus journey\n            bus_count += 1\n        else:  # Tube journey\n            if bus_count > 1:\n                total_cost += (bus_count // 2) * bus_fare  # Count pairs of buses\n                total_cost += (bus_count % 2) * bus_fare  # Add any single bus\n            else:\n                total_cost += bus_count * bus_fare  # Add single bus cost\n            total_cost += tube_fare  # Add tube fare\n            bus_count = 0  # Reset bus count after processing tube\n\n    # Handle any remaining buses after the last tube\n    if bus_count > 0:\n        if bus_count > 1:\n            total_cost += (bus_count // 2) * bus_fare\n            total_cost += (bus_count % 2) * bus_fare\n        else:\n            total_cost += bus_count * bus_fare\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, int):  # Bus journey\n            bus_count += 1\n        else:  # Tube journey\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_fare  # Add cost for pairs of buses\n                total_cost += (bus_count % 2) * bus_fare  # Add cost for any remaining bus\n                bus_count = 0\n            total_cost += tube_fare  # Add tube fare\n            \n    if bus_count > 0:\n        total_cost += (bus_count // 2) * bus_fare\n        total_cost += (bus_count % 2) * bus_fare\n    \n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n\n    for stop in journey:\n        if isinstance(stop, int):  # If it's a bus number\n            bus_count += 1\n        else:  # If it's a tube name\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_fare  # Charge for pairs of buses\n                if bus_count % 2 == 1:\n                    total_cost += bus_fare  # Charge for the single bus if there is an odd one\n                bus_count = 0\n            total_cost += tube_fare  # Charge for tube journey\n\n    if bus_count > 0:  # Charge for any remaining buses after loop\n        total_cost += (bus_count // 2) * bus_fare\n        if bus_count % 2 == 1:\n            total_cost += bus_fare\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0.0\n    bus_count = 0\n\n    for item in journey:\n        if isinstance(item, int):  # Bus journey\n            bus_count += 1\n        else:  # Tube journey\n            if bus_count > 0:\n                total_cost += bus_fare * (bus_count // 2)  # Count pairs of buses\n                if bus_count % 2 == 1:  # If there's an odd bus, add one more fare\n                    total_cost += bus_fare\n                bus_count = 0\n            total_cost += tube_fare\n\n    if bus_count > 0:\n        total_cost += bus_fare * (bus_count // 2)\n        if bus_count % 2 == 1:\n            total_cost += bus_fare\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef london_city_hacker(journey): \n    bus_fare = 1.50\n    tube_fare = 2.40\n    total_cost = 0\n    bus_count = 0\n    \n    for item in journey:\n        if isinstance(item, int):  # Bus journey\n            bus_count += 1\n        else:  # Tube journey\n            if bus_count > 0:\n                total_cost += (bus_count // 2) * bus_fare  # Charge for pairs of buses\n                total_cost += (bus_count % 2) * bus_fare  # Charge for the remaining bus if odd\n                bus_count = 0\n            total_cost += tube_fare  # Charge for the tube journey\n\n    # Final count of buses after the last tube\n    if bus_count > 0:\n        total_cost += (bus_count // 2) * bus_fare\n        total_cost += (bus_count % 2) * bus_fare\n\n    return f\"\u00a3{total_cost:.2f}\"\n```",
+            "logp": null
+        }
+    ]
+}

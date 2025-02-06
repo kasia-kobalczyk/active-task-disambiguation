@@ -1,0 +1,36 @@
+{
+    "0": [
+        "assert is_narcissistic(1, 2) == False",
+        "assert is_narcissistic(150) == False",
+        "assert is_narcissistic('1', '2', '3') == False",
+        "assert is_narcissistic(115, 133, 153, 171, 218) == False",
+        "assert is_narcissistic(153) == True",
+        "assert is_narcissistic(1, 153, 370, 371, 407, 8187, 8208) == True"
+    ],
+    "1": [
+        "assert is_narcissistic(115, 133, 153) == False",
+        "assert is_narcissistic(153) == True",
+        "assert is_narcissistic() == False",
+        "assert is_narcissistic('1', '2', '3') == False",
+        "assert is_narcissistic(1, 153, 370, 371, 407, 8187, 8208) == True"
+    ],
+    "2": [
+        "assert is_narcissistic(7) == True",
+        "assert is_narcissistic(370371) == True",
+        "assert is_narcissistic(454, 55, 1000) == True",
+        "assert is_narcissistic(153, 370, 152) == True",
+        "assert is_narcissistic(1234) == False",
+        "assert is_narcissistic(123, 234, 345) == False",
+        "assert is_narcissistic(1, 2, 4) == False",
+        "assert is_narcissistic(123) == False"
+    ],
+    "3": [
+        "assert is_narcissistic(\"Invalid\") == False",
+        "assert is_narcissistic(371) == True",
+        "assert is_narcissistic(215, 133, 153) == False",
+        "assert is_narcissistic(152) == True",
+        "assert is_narcissistic() == False",
+        "assert is_narcissistic(8208) == True",
+        "assert is_narcissistic(123) == False"
+    ]
+}

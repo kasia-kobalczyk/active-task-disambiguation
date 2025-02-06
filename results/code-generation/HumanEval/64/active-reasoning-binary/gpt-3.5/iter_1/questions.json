@@ -1,0 +1,46 @@
+{
+    "0": [
+        "assert vowels_count(\"hello\") == 2",
+        "assert vowels_count(\"pythonic\") == 3",
+        "assert vowels_count(\"python\") == 1",
+        "assert vowels_count(\"explanation\") == 5",
+        "assert vowels_count(\"why\") == 0",
+        "assert vowels_count(\"happy\") == 1",
+        "assert vowels_count(\"aeiou\") == 5",
+        "assert vowels_count(\"vowels\") == 2"
+    ],
+    "1": [
+        "assert vowels_count(\"hello\") == 2",
+        "assert vowels_count(\"python\") == 1",
+        "assert vowels_count(\"bye\") == 1",
+        "assert vowels_count(\"AEIOU\") == 5",
+        "assert vowels_count(\"world\") == 1",
+        "assert vowels_count(\"aEiOu\") == 5",
+        "assert vowels_count(\"bcdfg\") == 0",
+        "assert vowels_count(\"aeiou\") == 5",
+        "assert vowels_count(\"apple\") == 2",
+        "assert vowels_count(\"Python\") == 1"
+    ],
+    "2": [
+        "assert vowels_count(\"hello\") == 2",
+        "assert vowels_count(\"python\") == 1",
+        "assert vowels_count(\"xyz\") == 0",
+        "assert vowels_count(\"aEiOu\") == 5",
+        "assert vowels_count(\"programming\") == 3",
+        "assert vowels_count(\"aeiou\") == 5",
+        "assert vowels_count(\"banana\") == 3",
+        "assert vowels_count(\"sky\") == 1",
+        "assert vowels_count(\"test\") == 1"
+    ],
+    "3": [
+        "assert vowels_count(\"AEIOUY\") == 6",
+        "assert vowels_count(\"xyz\") == 0",
+        "assert vowels_count(\"Pyth0n!\") == 1",
+        "assert vowels_count(\"XYZ\") == 0",
+        "assert vowels_count(\"party\") == 2",
+        "assert vowels_count(\"fly\") == 0",
+        "assert vowels_count(\"computer\") == 3",
+        "assert vowels_count(\"banana\") == 3",
+        "assert vowels_count(\"apple\") == 3"
+    ]
+}

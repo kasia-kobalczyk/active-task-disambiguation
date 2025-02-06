@@ -1,0 +1,36 @@
+{
+    "0": [
+        "assert alex_mistakes(30, 180) == 2",
+        "assert alex_mistakes(20, 120) == 3",
+        "assert alex_mistakes(10, 60) == 0",
+        "assert alex_mistakes(15, 75) == 0",
+        "assert alex_mistakes(15, 90) == 1",
+        "assert alex_mistakes(20, 120) == 1",
+        "assert alex_mistakes(5, 30) == 0"
+    ],
+    "1": [
+        "assert alex_mistakes(15, 90) == 2",
+        "assert alex_mistakes(15, 75) == 2",
+        "assert alex_mistakes(5, 30) == 0",
+        "assert alex_mistakes(10, 60) == 0",
+        "assert alex_mistakes(0, 30) == 0",
+        "assert alex_mistakes(20, 120) == 1",
+        "assert alex_mistakes(5, 25) == 1"
+    ],
+    "2": [
+        "assert alex_mistakes(15, 90) == 3",
+        "assert alex_mistakes(15, 75) == 2",
+        "assert alex_mistakes(5, 30) == 0",
+        "assert alex_mistakes(10, 60) == 0",
+        "assert alex_mistakes(20, 120) == 1",
+        "assert alex_mistakes(5, 25) == 1"
+    ],
+    "3": [
+        "assert alex_mistakes(15, 90) == 2",
+        "assert alex_mistakes(5, 30) == 1",
+        "assert alex_mistakes(8, 50) == 2",
+        "assert alex_mistakes(15, 90) == 1",
+        "assert alex_mistakes(25, 150) == 2",
+        "assert alex_mistakes(20, 120) == 0"
+    ]
+}

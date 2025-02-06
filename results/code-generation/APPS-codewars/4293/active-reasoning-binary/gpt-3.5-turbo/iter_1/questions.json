@@ -1,0 +1,31 @@
+{
+    "0": [
+        "assert calculate_1RM(50, 1) == 50",
+        "assert calculate_1RM(0, 0) == 0",
+        "assert calculate_1RM(75, 10) == 92",
+        "assert calculate_1RM(80, 4) == 95\n# Explanation: The Epley formula gives a maximum of 90, McGlothin formula gives a maximum of 95, and Lombardi formula gives a maximum of 94. The largest value is 95, rounded to the nearest integer.",
+        "assert calculate_1RM(100, 5) == 116"
+    ],
+    "1": [
+        "assert calculate_1RM(50, 10) == 82",
+        "assert calculate_1RM(50, 5) == 65",
+        "assert calculate_1RM(150, 8) == 214",
+        "assert calculate_1RM(80, 3) == 91",
+        "assert calculate_1RM(50, 0) == 0",
+        "assert calculate_1RM(75, 3) == 91"
+    ],
+    "2": [
+        "assert calculate_1RM(30, 3) == 37",
+        "assert calculate_1RM(50, 5) == 65",
+        "assert calculate_1RM(150, 8) == 214",
+        "assert calculate_1RM(50, 0) == 0",
+        "assert calculate_1RM(75, 3) == 91"
+    ],
+    "3": [
+        "assert calculate_1RM(50, 5) == 65",
+        "assert calculate_1RM(150, 8) == 214",
+        "assert calculate_1RM(80, 3) == 91",
+        "assert calculate_1RM(50, 0) == 0",
+        "assert calculate_1RM(75, 3) == 91"
+    ]
+}

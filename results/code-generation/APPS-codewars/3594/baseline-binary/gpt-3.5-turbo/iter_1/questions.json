@@ -1,0 +1,21 @@
+{
+    "0": [
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(\"Python\") == True"
+    ],
+    "1": [
+        "assert is_isogram(\"Hello\") == False, \"Error: Test Case 3\"",
+        "assert is_isogram(\"aabbbccc\") == True, \"Error: Test Case 2\"",
+        "assert is_isogram(\"hello-world\") == True, \"Error: Test Case 1\""
+    ],
+    "2": [
+        "assert is_isogram(12345) == False",
+        "assert is_isogram(\"aabbbccc\") == True"
+    ],
+    "3": [
+        "assert is_isogram(\"WORD\") == True, \"Error: Test Case 1\"",
+        "assert is_isogram(\"hello\") == False, \"Error: Test Case 2\"",
+        "assert is_isogram(\"HeLLo\") == False, \"Error: Test Case 3\""
+    ]
+}

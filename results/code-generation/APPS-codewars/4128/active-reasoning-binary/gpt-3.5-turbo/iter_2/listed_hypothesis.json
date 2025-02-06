@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "import re\n\ndef bears(n, s):\n    # finding all the mating pairs\n    pairs = re.findall(r'(B8|8B)', s)\n    \n    # checking if the number of pairs is greater than or equal to n\n    if len(pairs) >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\".join(pairs), False]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    num_pairs = len(pairs)\n    mating_pairs = ''.join(pairs)\n    return [mating_pairs, num_pairs >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall(r'(B8|8B)', s)\n    mating_pairs_str = ''.join(mating_pairs)\n    \n    if len(mating_pairs) >= n:\n        return [mating_pairs_str, True]\n    else:\n        return [mating_pairs_str, False]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    # Find all mating pairs in the string\n    pairs = re.findall(r\"(B8|8B)\", s)\n    # Concatenate the pairs into a single string\n    pairs_str = ''.join(pairs)\n    # Check if the number of pairs is greater than or equal to n\n    if len(pairs) >= n:\n        return [pairs_str, True]\n    else:\n        return [pairs_str, False]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    pairs_str = ''.join(pairs)\n    count = len(pairs_str) // 4\n    return [pairs_str, count >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    mating_pairs = re.findall(r'(B8|8B)', s)\n    mating_pairs_string = ''.join(mating_pairs)\n    \n    return [mating_pairs_string, len(mating_pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    result = ''.join(pairs)\n    return [result, len(pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pattern = r'B8|8B'\n    matches = re.findall(pattern, s)\n    mating_pairs = ''.join(matches)\n    return [mating_pairs, len(matches) >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    # Find all mating pairs of bears\n    pairs = re.findall('B8|8B', s)\n    \n    # Check if the number of pairs is equal to or greater than n\n    if len(pairs) >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\", False]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    pairs_str = ''.join(pairs)\n    if len(pairs) >= n:\n        return [pairs_str, True]\n    else:\n        return [pairs_str, False]",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall('B8|8B', s)\n    return [\"\".join(pairs), len(pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    # Find all mating pairs of bears in the string\n    pairs = re.findall(r\"(B8|8B)\", s)\n    \n    # If the number of pairs is greater than or equal to n, return the pairs and True\n    if len(pairs) >= n:\n        return [\"\".join(pairs), True]\n    # Otherwise, return an empty string and False\n    else:\n        return [\"\", False]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    count = len(pairs)\n    if count >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\".join(pairs), False]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    if len(pairs) >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\", False]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'(?:B8|8B)', s)\n    return [\"\".join(pairs), len(pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    # Find all pairs of bears in the string\n    pairs = re.findall(r'(B8|8B)', s)\n    # If the number of pairs is greater than or equal to n, return true, else return false\n    return [\"\".join(pairs), len(pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r\"(B8|8B)\", s)\n    pairs_str = \"\".join(pairs)\n    return [pairs_str, len(pairs_str) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    pairs_string = ''.join(pairs)\n    return [pairs_string, len(pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    # Find all occurrences of mating pairs using regular expression\n    pairs = re.findall(r'(B8|8B)', s)\n    \n    # If number of pairs is greater than or equal to n\n    if len(pairs) >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\", False]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    # Find all mating pairs using regex\n    mating_pairs = re.findall(r'(B8|8B)', s)\n    \n    # Check if the number of mating pairs is greater than or equal to n\n    if len(mating_pairs) >= n:\n        return [\"\".join(mating_pairs), True]\n    else:\n        return [\"\", False]",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pattern = r'(B8|8B)'\n    pairs = re.findall(pattern, s)\n    num_pairs = len(pairs)\n    result = ''.join(pairs)\n    return [result, num_pairs >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    # Find all mating pairs in the string\n    pairs = re.findall(r\"(B8|8B)\", s)\n    \n    # Check if the number of mating pairs is greater than or equal to n\n    if len(pairs) >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\".join(pairs), False]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    num_pairs = len(pairs)\n    return [\"\".join(pairs), num_pairs >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    return [\"\".join(pairs), len(pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    count = len(pairs)\n    result = [\"\".join(pairs), count >= n]\n    return result\n\nprint(bears(3, 'B8B8B8')) # ['B8B8B8', True]\nprint(bears(4, 'B8B8B8')) # ['B8B8B8', False]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall('B8|8B', s)\n    count = len(pairs)\n    return [\"\".join(pairs), count >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'B8|8B', s)\n    num_pairs = len(pairs)\n    \n    if num_pairs >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\".join(pairs), False]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    mating_pairs = ''.join(pairs)\n    return [mating_pairs, len(pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    return [\"\".join(mating_pairs), len(mating_pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    # Find all pairs of bears in the string\n    pairs = re.findall('B8|8B', s)\n    \n    # Check if the number of pairs is greater than or equal to n\n    if len(pairs) >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\".join(pairs), False]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    pair_str = ''.join(pairs)\n    count = len(pairs)\n    if count >= n:\n        return [pair_str, True]\n    else:\n        return [pair_str, False]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'((B8)|(8B))', s)\n    num_pairs = len(pairs)\n    result = ''.join(p[0] for p in pairs)\n    return [result, num_pairs >= n]",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pattern = r'(B8|8B)'\n    pairs = re.findall(pattern, s)\n    num_pairs = len(pairs)\n    result = ''.join(pairs)\n    return [result, num_pairs >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    # Find all mating pairs in the string\n    pairs = re.findall(r\"(B8|8B)\", s)\n    \n    # Check if the number of mating pairs is greater than or equal to n\n    if len(pairs) >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\".join(pairs), False]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    num_pairs = len(pairs)\n    return [\"\".join(pairs), num_pairs >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    return [\"\".join(pairs), len(pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    count = len(pairs)\n    result = [\"\".join(pairs), count >= n]\n    return result\n\nprint(bears(3, 'B8B8B8')) # ['B8B8B8', True]\nprint(bears(4, 'B8B8B8')) # ['B8B8B8', False]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall('B8|8B', s)\n    count = len(pairs)\n    return [\"\".join(pairs), count >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'B8|8B', s)\n    num_pairs = len(pairs)\n    \n    if num_pairs >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\".join(pairs), False]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    mating_pairs = ''.join(pairs)\n    return [mating_pairs, len(pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    return [\"\".join(mating_pairs), len(mating_pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "import re\n\ndef bears(n, s):\n    # Find all pairs of bears in the string\n    pairs = re.findall('B8|8B', s)\n    \n    # Check if the number of pairs is greater than or equal to n\n    if len(pairs) >= n:\n        return [\"\".join(pairs), True]\n    else:\n        return [\"\".join(pairs), False]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    pairs = re.findall(r'(B8|8B)', s)\n    pair_str = ''.join(pairs)\n    count = len(pairs)\n    if count >= n:\n        return [pair_str, True]\n    else:\n        return [pair_str, False]",
+            "logp": null
+        }
+    ]
+}

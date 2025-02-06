@@ -1,0 +1,122 @@
+{
+    "0": [
+        {
+            "content": "\"\"\"\nWe will start by creating a list of harmonics, which are the fractions obtained by dividing the sum of divisors of a number by the number itself.\n\nThen we will group the numbers into pairs with the same ratios by using a dictionary where the keys are the harmonics and the values are sets of numbers that have that harmonic. We will sort the numbers in each set in ascending order.\n\nFinally, we will iterate over the numbers in the given range and check if their harmonic is in the dictionary. If it is, we will add the lowest number in the set of numbers with that harmonic to the result.\n\nThe solution is implemented in the function below.\n\"\"\"\n\n    result = 0\n\n    for n in range(a, b+1):\n        if n in HARMO_RATIOS:\n            idx = bisect(HARMO_NUM, n)\n            if idx > 0 and n - HARMO_NUM[idx-1] < HARMO_NUM[idx] - n:\n                result += HARMO_NUM[idx-1]\n            else:\n                result += HARMO_NUM[idx]\n                \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    result = 0\n    for n in HARMO_NUM:\n        low = bisect(HARMO_GROUPS[n], a-1)\n        high = bisect(HARMO_GROUPS[n], b)\n        if high > low:\n            result += HARMO_GROUPS[n][low]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    result = 0\n    for n in HARMO_NUM[bisect(HARMO_NUM, a):]:\n        if n >= b:\n            break\n        result += HARMO_GROUPS[HARMO_RATIOS[n]][0]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "# Plan\n1. First, we need to generate a list of harmonic numbers within the given range (a, b). We can use the \"harmonic\" list provided in the code to generate these numbers. We need to find the harmonic numbers for all the numbers in the range (a, b) using the bisect_left function to find the index of the number in the harmonic list.\n2. Next, we need to find the pairs with the same ratios. We can create a dictionary \"harmonicity\" with the harmonic number as the key and the set of numbers as the value. We can iterate over this dictionary and select the pairs with the same ratio by checking if the set size is greater than 1.\n3. Finally, we can sum the lowest member of each pair and return the result.",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n\n    def divisors(n):\n        divs = [1]\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                divs.append(i)\n                if i != n // i:\n                    divs.append(n // i)\n        return divs\n\n    pairs = []\n    for i in range(a,b+1):\n        divs = divisors(i)\n        for j in range(i+1,b+1):\n            if len(divs) == len(divisors(j)) and all(div in divisors(j) for div in divs):\n                pairs.append((i, j))\n    if not pairs:\n        return 0\n    else:\n        return sum(min(pair) for pair in pairs)",
+            "logp": null
+        },
+        {
+            "content": "from collections import defaultdict\nfrom fractions import Fraction\nfrom bisect import bisect_left as bisect\n\ndef solve(a,b):\n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1,7001)]\n    \n    harmonicity = defaultdict(set)\n    for n,h in enumerate(harmonic): \n        harmonicity[h].add(n)\n    \n    HARMO_GROUPS = {h: sorted(s) for h,s in harmonicity.items() if len(s) > 1}\n    HARMO_RATIOS = {n: h for h,lst in HARMO_GROUPS.items() for n in lst}\n    HARMO_NUM    = sorted(HARMO_RATIOS.keys())\n    \n    result = 0\n    for num in range(a, b+1):\n        ratio = harmonic[num]\n        if ratio in HARMO_GROUPS:\n            group = HARMO_GROUPS[ratio]\n            idx = bisect(group, num)\n            result += group[idx-1]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "```\n    low = bisect(HARMO_NUM,a)   # first h >= a\n    high = bisect(HARMO_NUM,b)  # first h > b\n    \n    total = 0\n    for i in range(low, high):\n        total += min(HARMO_GROUPS[HARMO_RATIOS[HARMO_NUM[i]]])\n    \n    return total\n```\nComplexity is O(N) where N = b-a.",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    pairs = []\n    for n in range(a, b+1):\n        for m in range(n+1, b+1):\n            if sum_divisors(n) / n == sum_divisors(m) / m:\n                pairs.append((n, m))\n    if len(pairs) == 0:\n        return 0\n    else:\n        return sum(pair[0] for pair in pairs)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n\n    def get_ratio(n):\n        if n in HARMO_RATIOS:\n            return HARMO_RATIOS[n]\n        idx = bisect(HARMO_NUM, n)\n        if idx >= len(HARMO_NUM):\n            return None\n        return HARMO_RATIOS[HARMO_NUM[idx]]\n\n    pairs = set()\n    for n in range(a,b+1):\n        ratio = get_ratio(n)\n        if ratio is None:\n            continue\n        pairs.add((n, ratio.denominator * ratio.numerator))\n\n    if len(pairs) == 0:\n        return 0\n\n    return sum(min(p) for p in pairs)",
+            "logp": null
+        },
+        {
+            "content": "    def get_ratio(n):\n        return HARMO_RATIOS[bisect(HARMO_NUM, n)]\n\n    ratios = defaultdict(list)\n    for n in range(a, b+1):\n        ratios[get_ratio(n)].append(n)\n\n    return sum(min(lst) for lst in ratios.values() if len(lst) > 1) if len(ratios) > 1 else 0",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def solve(a,b):\n    result = 0\n    for n in HARMO_NUM[bisect(HARMO_NUM, a):]:\n        if n >= b:\n            break\n        result += HARMO_GROUPS[HARMO_RATIOS[n]][0]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n\n    def divisors(n):\n        divs = [1]\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                divs.append(i)\n                if i != n // i:\n                    divs.append(n // i)\n        return divs\n\n    pairs = []\n    for i in range(a,b+1):\n        divs = divisors(i)\n        for j in range(i+1,b+1):\n            if len(divs) == len(divisors(j)) and all(div in divisors(j) for div in divs):\n                pairs.append((i, j))\n    if not pairs:\n        return 0\n    else:\n        return sum(min(pair) for pair in pairs)",
+            "logp": null
+        },
+        {
+            "content": "from collections import defaultdict\nfrom fractions import Fraction\nfrom bisect import bisect_left as bisect\n\ndef solve(a,b):\n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1,7001)]\n    \n    harmonicity = defaultdict(set)\n    for n,h in enumerate(harmonic): \n        harmonicity[h].add(n)\n    \n    HARMO_GROUPS = {h: sorted(s) for h,s in harmonicity.items() if len(s) > 1}\n    HARMO_RATIOS = {n: h for h,lst in HARMO_GROUPS.items() for n in lst}\n    HARMO_NUM    = sorted(HARMO_RATIOS.keys())\n    \n    result = 0\n    for num in range(a, b+1):\n        ratio = harmonic[num]\n        if ratio in HARMO_GROUPS:\n            group = HARMO_GROUPS[ratio]\n            idx = bisect(group, num)\n            result += group[idx-1]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n\n    def get_ratio(n):\n        if n in HARMO_RATIOS:\n            return HARMO_RATIOS[n]\n        idx = bisect(HARMO_NUM, n)\n        if idx >= len(HARMO_NUM):\n            return None\n        return HARMO_RATIOS[HARMO_NUM[idx]]\n\n    pairs = set()\n    for n in range(a,b+1):\n        ratio = get_ratio(n)\n        if ratio is None:\n            continue\n        pairs.add((n, int(n/ratio)))\n\n    return sum(min(pair) for pair in pairs) if pairs else 0\n\n#testing the function\nprint(solve(0, 200))\nprint(solve(0, 1000))\nprint(solve(1000, 2000))\nprint(solve(0, 0))\nprint(solve(500, 501))\nprint(solve(100, 200))",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    pairs = []\n    for i in range(a, b):\n        for j in range(i+1, b+1):\n            ratio = sum_of_divisors(i) / sum_of_divisors(j)\n            if ratio.is_integer():\n                pairs.append((i, j))\n    if pairs:\n        return sum(min(pair) for pair in pairs)\n    else:\n        return 0\n\ndef sum_of_divisors(n):\n    divisors = []\n    for i in range(1, n+1):\n        if n % i == 0:\n            divisors.append(i)\n    return sum(divisors)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    # Initialize the sum of lowest members\n    lowest_sum = 0\n    \n    # Iterate through the range of numbers from a to b\n    for i in range(a, b+1):\n        # Check if the number is in HARMO_NUM\n        if i in HARMO_NUM:\n            # Get the harmonic ratio for the number\n            ratio = HARMO_RATIOS[i]\n            \n            # Get the list of numbers with the same harmonic ratio\n            harmonics = HARMO_GROUPS[ratio]\n            \n            # Find the index of the number in the list\n            index = bisect(harmonics, i)\n            \n            # Add the lowest member of the pair to the sum\n            lowest_sum += harmonics[index-1]\n    \n    # Return the sum of lowest members\n    return lowest_sum",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    from bisect import bisect_left as bisect\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1,7001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic):\n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    HARMO_RATIOS = {n: h for h, lst in HARMO_GROUPS.items() for n in lst}\n    HARMO_NUM = sorted(HARMO_RATIOS.keys())\n\n    pairs = set()\n    for ratio in HARMO_GROUPS.keys():\n        indices = [i for i in range(len(HARMO_NUM)) if HARMO_NUM[i] >= a and HARMO_NUM[i] <= b]\n        for i in indices:\n            if HARMO_NUM[i] * ratio in HARMO_RATIOS.keys():\n                pairs.add((HARMO_NUM[i], int(HARMO_NUM[i] * ratio)))\n                \n    return sum([min(p) for p in pairs]) if pairs else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    if a >= b:\n        return 0\n\n    low_num = bisect(HARMO_NUM, a)\n    high_num = bisect(HARMO_NUM, b)\n\n    low_sum = sum(HARMO_GROUPS[HARMO_RATIOS[HARMO_NUM[i]]][0] for i in range(low_num, high_num))\n    return low_sum",
+            "logp": null
+        },
+        {
+            "content": "    if b > 2000:\n        b = 2000\n    if a < 0:\n        a = 0\n    if a > b:\n        return 0\n    lo = bisect(HARMO_NUM, a, 0, len(HARMO_NUM))\n    hi = bisect(HARMO_NUM, b, 0, len(HARMO_NUM))\n    pairs = [HARMO_GROUPS[HARMO_RATIOS[n]][0] for n in HARMO_NUM[lo:hi]]\n    return sum(pairs)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def solve(a,b):\n    result = 0\n    for n in HARMO_NUM[bisect(HARMO_NUM, a):]:\n        if n >= b:\n            break\n        result += HARMO_GROUPS[HARMO_RATIOS[n]][0]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "from collections import defaultdict\nfrom fractions import Fraction\nfrom bisect import bisect_left as bisect\n\ndef solve(a,b):\n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1,7001)]\n    \n    harmonicity = defaultdict(set)\n    for n,h in enumerate(harmonic): \n        harmonicity[h].add(n)\n    \n    HARMO_GROUPS = {h: sorted(s) for h,s in harmonicity.items() if len(s) > 1}\n    HARMO_RATIOS = {n: h for h,lst in HARMO_GROUPS.items() for n in lst}\n    HARMO_NUM    = sorted(HARMO_RATIOS.keys())\n    \n    result = 0\n    for num in range(a, b+1):\n        ratio = harmonic[num]\n        if ratio in HARMO_GROUPS:\n            group = HARMO_GROUPS[ratio]\n            idx = bisect(group, num)\n            result += group[idx-1]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n\n    def get_ratio(n):\n        if n in HARMO_RATIOS:\n            return HARMO_RATIOS[n]\n        idx = bisect(HARMO_NUM, n)\n        if idx >= len(HARMO_NUM):\n            return None\n        return HARMO_RATIOS[HARMO_NUM[idx]]\n\n    pairs = set()\n    for n in range(a,b+1):\n        ratio = get_ratio(n)\n        if ratio is None:\n            continue\n        pairs.add((n, ratio.denominator * ratio.numerator))\n\n    if len(pairs) == 0:\n        return 0\n\n    return sum(min(p) for p in pairs)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    # Initialize the sum of lowest members\n    lowest_sum = 0\n    \n    # Iterate through the range of numbers from a to b\n    for i in range(a, b+1):\n        # Check if the number is in HARMO_NUM\n        if i in HARMO_NUM:\n            # Get the harmonic ratio for the number\n            ratio = HARMO_RATIOS[i]\n            \n            # Get the list of numbers with the same harmonic ratio\n            harmonics = HARMO_GROUPS[ratio]\n            \n            # Find the index of the number in the list\n            index = bisect(harmonics, i)\n            \n            # Add the lowest member of the pair to the sum\n            lowest_sum += harmonics[index-1]\n    \n    # Return the sum of lowest members\n    return lowest_sum",
+            "logp": null
+        },
+        {
+            "content": "\"\"\"\nThe goal of this problem is to group numbers in the range `a` to `b` into pairs with the same ratios.\n\nTo solve this problem, we will use precomputed values of harmonic sums. The `harmonic` list contains the sum of divisors divided by the number itself for each number in the range 1 to 7000.\n\nFirst, we create a defaultdict `harmonicity` to store the numbers that have the same harmonic ratio. We iterate over the `harmonic` list and add each number to the corresponding set in `harmonicity`.\n\nNext, we filter out the pairs with only one number and store the remaining pairs in the `HARMO_GROUPS` dictionary. This dictionary maps each harmonic ratio to a list of numbers that have that ratio. We also create a dictionary `HARMO_RATIOS` that maps each number to its harmonic ratio.\n\nFinally, we sort the numbers in `HARMO_NUM` in ascending order.\n\nNow, we can use the `HARMO_NUM` list to find the pairs in the given range `a` to `b`. We iterate over each number `n` in `HARMO_NUM` and check if `n` is in the range `a` to `b`. If it is, we calculate the other number in the pair using the harmonic ratio and check if it is also in the range. If both numbers are in the range, we add the minimum of the pair to the sum.\n\nAfter iterating over all the numbers in `HARMO_NUM`, we return the sum as the result.\n\nLet's implement this in the `solve` function.\n\"\"\"\n\nfrom collections import defaultdict\nfrom fractions import Fraction\nfrom bisect import bisect_left as bisect\n\nharmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1,7001)]\n\nharmonicity = defaultdict(set)\nfor n,h in enumerate(harmonic): harmonicity[h].add(n)\n\nHARMO_GROUPS = {h: sorted(s) for h,s in harmonicity.items() if len(s) > 1}\nHARMO_RATIOS = {n: h for h,lst in HARMO_GROUPS.items() for n in lst}\nHARMO_NUM    = sorted(HARMO_RATIOS.keys())\n\ndef solve(a,b):\n    res = 0\n    \n    for n in HARMO_NUM:\n        if a <= n <= b:\n            ratio = HARMO_RATIOS[n]\n            other = n / ratio\n            \n            if a <= other <= b:\n                res += min(n, other)\n    \n    return res",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    from bisect import bisect_left as bisect\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1,7001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic):\n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    HARMO_RATIOS = {n: h for h, lst in HARMO_GROUPS.items() for n in lst}\n    HARMO_NUM = sorted(HARMO_RATIOS.keys())\n\n    pairs = set()\n    for ratio in HARMO_GROUPS.keys():\n        indices = [i for i in range(len(HARMO_NUM)) if HARMO_NUM[i] >= a and HARMO_NUM[i] <= b]\n        for i in indices:\n            if HARMO_NUM[i] * ratio in HARMO_RATIOS.keys():\n                pairs.add((HARMO_NUM[i], int(HARMO_NUM[i] * ratio)))\n                \n    return sum([min(p) for p in pairs]) if pairs else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    if a >= b:\n        return 0\n\n    low_num = bisect(HARMO_NUM, a)\n    high_num = bisect(HARMO_NUM, b)\n\n    low_sum = sum(HARMO_GROUPS[HARMO_RATIOS[HARMO_NUM[i]]][0] for i in range(low_num, high_num))\n    return low_sum",
+            "logp": null
+        },
+        {
+            "content": "    if b > 2000:\n        b = 2000\n    if a < 0:\n        a = 0\n    if a > b:\n        return 0\n    lo = bisect(HARMO_NUM, a, 0, len(HARMO_NUM))\n    hi = bisect(HARMO_NUM, b, 0, len(HARMO_NUM))\n    pairs = [HARMO_GROUPS[HARMO_RATIOS[n]][0] for n in HARMO_NUM[lo:hi]]\n    return sum(pairs)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "    if b < 6:\n        return 0\n    \n    result = 0\n    for i in range(b+1):\n        if i not in HARMO_RATIOS:\n            continue\n        if HARMO_RATIOS[i] < a:\n            continue\n        if HARMO_RATIOS[i] > b:\n            break\n        result += i\n    \n    return result",
+            "logp": null
+        }
+    ]
+}

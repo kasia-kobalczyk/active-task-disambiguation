@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert is_isogram(\"aa\") == False",
+        "assert is_isogram(\"abcde\") == True",
+        "assert is_isogram(\"aab\") == False",
+        "assert is_isogram(\"123\") == False",
+        "assert is_isogram(\" aba\") == False",
+        "assert is_isogram(\"Hello-World\") == False",
+        "assert is_isogram(12345) == False"
+    ],
+    "1": [
+        "assert is_isogram(\"abc!def\") == True",
+        "assert is_isogram(\"aab\") == False",
+        "assert is_isogram(\"abc ABC\") == True",
+        "assert is_isogram(\"abc-abc\") == True",
+        "assert is_isogram(\"!$%\") == False",
+        "assert is_isogram(\"abcA\") == True",
+        "assert is_isogram(\"abcabcd\") == False",
+        "assert is_isogram(\"Hello-World\") == False"
+    ],
+    "2": [
+        "assert is_isogram(123) == False",
+        "assert is_isogram(\"hello-world\") == False",
+        "assert is_isogram(\"Hello-World\") == True",
+        "assert is_isogram(None) == False",
+        "assert is_isogram(\"aA\") == True",
+        "assert is_isogram(\"abcde!fghij\") == True",
+        "assert is_isogram(\"Subdermatoglyphic\") == True"
+    ],
+    "3": [
+        "assert is_isogram(\"abc def\") == False",
+        "assert is_isogram(\"hello-world\") == False",
+        "assert is_isogram(\"Hello-World\") == True",
+        "assert is_isogram(None) == False",
+        "assert is_isogram(\"aA\") == True",
+        "assert is_isogram(\"abcde!fghij\") == True",
+        "assert is_isogram(\"Subdermatoglyphic\") == True"
+    ]
+}

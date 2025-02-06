@@ -1,0 +1,198 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n    \n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n    \n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    count = {}\n    for letter in test.split():\n        count[letter] = count.get(letter, 0) + 1\n    \n    max_count = max(count.values())\n    most_repeated = {letter: cnt for letter, cnt in count.items() if cnt == max_count}\n    \n    return most_repeated\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for char in test.split():\n        for letter in char:\n            if letter in counts:\n                counts[letter] += 1\n            else:\n                counts[letter] = 1\n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n\n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for char in test.split():\n        for letter in char:\n            if letter in counts:\n                counts[letter] += 1\n            else:\n                counts[letter] = 1\n    max_count = max(counts.values())\n    most_frequent = {k: v for k, v in counts.items() if v == max_count}\n    return most_frequent\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    most_common = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return most_common\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n            \n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n\n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n        \n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n\n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    count_dict = {}\n    for char in test.split():\n        count_dict[char] = count_dict.get(char, 0) + 1\n    \n    max_count = max(count_dict.values())\n    return {char: cnt for char, cnt in count_dict.items() if cnt == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n            \n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    count = {}\n    for letter in test.split():\n        count[letter] = count.get(letter, 0) + 1\n        \n    max_count = max(count.values())\n    return {k: v for k, v in count.items() if v == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for char in test.split():\n        counts[char] = counts.get(char, 0) + 1\n    \n    max_count = max(counts.values())\n    result = {char: count for char, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n        \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n    max_count = max(counts.values())\n    return {k: v for k, v in counts.items() if v == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    letters = test.split()\n    count = {}\n    \n    for letter in letters:\n        if letter in count:\n            count[letter] += 1\n        else:\n            count[letter] = 1\n            \n    max_count = max(count.values())\n    result = {k: v for k, v in count.items() if v == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    letters = test.split()\n    \n    for letter in letters:\n        counts[letter] = counts.get(letter, 0) + 1\n        \n    max_count = max(counts.values())\n    most_repeated = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return most_repeated\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    letters = test.split()\n    count = {}\n    \n    for letter in letters:\n        count[letter] = count.get(letter, 0) + 1\n    \n    max_count = max(count.values())\n    result = {letter: cnt for letter, cnt in count.items() if cnt == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n\n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n\n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n\n    max_count = max(counts.values())\n    return {k: v for k, v in counts.items() if v == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    letters = test.split()\n    frequency = {}\n    \n    for letter in letters:\n        frequency[letter] = frequency.get(letter, 0) + 1\n    \n    max_count = max(frequency.values())\n    result = {letter: count for letter, count in frequency.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef histogram(test):\n    letters = test.split()\n    count_dict = {}\n    \n    for letter in letters:\n        if letter in count_dict:\n            count_dict[letter] += 1\n        else:\n            count_dict[letter] = 1\n    \n    max_count = max(count_dict.values())\n    result = {letter: count for letter, count in count_dict.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    letters = test.split()\n    count = {}\n    \n    for letter in letters:\n        if letter in count:\n            count[letter] += 1\n        else:\n            count[letter] = 1\n            \n    max_count = max(count.values())\n    result = {letter: cnt for letter, cnt in count.items() if cnt == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n\n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    letters = test.split()\n    count = {}\n    \n    for letter in letters:\n        count[letter] = count.get(letter, 0) + 1\n    \n    max_count = max(count.values())\n    return {k: v for k, v in count.items() if v == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    letters = test.split()\n    \n    for letter in letters:\n        if letter in counts:\n            counts[letter] += 1\n        else:\n            counts[letter] = 1\n            \n    max_count = max(counts.values())\n    result = {letter: count for letter, count in counts.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    words = test.split()\n    count_dict = {}\n    \n    for word in words:\n        if word in count_dict:\n            count_dict[word] += 1\n        else:\n            count_dict[word] = 1\n    \n    max_count = max(count_dict.values())\n    result = {k: v for k, v in count_dict.items() if v == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    letters = test.split()\n    count_dict = {}\n    \n    for letter in letters:\n        if letter in count_dict:\n            count_dict[letter] += 1\n        else:\n            count_dict[letter] = 1\n    \n    max_count = max(count_dict.values())\n    result = {letter: count for letter, count in count_dict.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    counts = {}\n    for letter in test.split():\n        counts[letter] = counts.get(letter, 0) + 1\n    \n    max_count = max(counts.values())\n    return {letter: count for letter, count in counts.items() if count == max_count}\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef histogram(test):\n    letters = test.split()\n    count_dict = {}\n    \n    for letter in letters:\n        count_dict[letter] = count_dict.get(letter, 0) + 1\n    \n    max_count = max(count_dict.values())\n    result = {letter: count for letter, count in count_dict.items() if count == max_count}\n    \n    return result\n```",
+            "logp": null
+        }
+    ]
+}

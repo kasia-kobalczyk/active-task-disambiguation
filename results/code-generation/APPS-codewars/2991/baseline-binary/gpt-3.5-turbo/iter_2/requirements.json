@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert not_so_random(1, 1) == \"Unsure\"",
+        false
+    ],
+    "1": [
+        "assert not_so_random(0, 2) == \"Unsure\"",
+        false
+    ],
+    "2": [
+        "assert not_so_random(4, 4) == \"Unsure\"\n# It is not possible to predict the color of the last marble as we can keep removing pairs of marbles with different colors and adding a black marble to the hat, which will leave us with an equal number of black and white marbles.",
+        false
+    ],
+    "3": [
+        "assert not_so_random(2, 3) == \"Black\"",
+        false
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "0": [
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    total = 0\n    for i in range(len(n)):\n        digit = int(n[-1 - i])  # start from right to left\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    total = 0\n    for i in range(len(n)):\n        digit = int(n[-1 - i])  # start from right to left\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    total = 0\n    for i in range(len(n)):\n        digit = int(n[-1 - i])  # start from right to left\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    total = 0\n    for i in range(len(n)):\n        digit = int(n[-1 - i])  # start from right to left\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    total = 0\n    for i in range(len(n)):\n        digit = int(n[-1 - i])  # start from right to left\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    digits = [int(x) for x in str(n)]\n    sum = 0\n    for i in range(len(digits)):\n        if i % 2 == 1:\n            digits[i] *= 2\n            if digits[i] > 9:\n                digits[i] -= 9\n        sum += digits[i]\n    return sum % 10 == 0",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    total = 0\n    for i in range(len(n)):\n        digit = int(n[-1 - i])  # start from right to left\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = str(n)\n    odd_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        if i % 2 != 0:\n            digit = str(int(digit) * 2)\n            if int(digit) > 9:\n                digit = str(sum(int(x) for x in digit))\n        odd_sum += int(digit)\n    return odd_sum % 10 == 0",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 1 or len(n) > 16:\n        return False\n    check_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        if i % 2 == 1:  # double every other digit\n            digit = str((int(digit) * 2) % 10 + int((int(digit) * 2) / 10))  # replace values greater than 9 with the sum of their own digits\n        check_sum += int(digit)\n    return check_sum % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = str(n)\n    odd_sum = 0\n    for i, digit in enumerate(reversed(n)):\n        if i % 2 != 0:\n            digit = str(int(digit) * 2)\n            if int(digit) > 9:\n                digit = str(sum(int(x) for x in digit))\n        odd_sum += int(digit)\n    return odd_sum % 10 == 0",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")  # remove spaces\n    if len(n) < 2 or len(n) > 16:\n        return False\n    total = 0\n    for i in range(len(n)):\n        digit = int(n[-i-1])  # start from right\n        if i % 2 == 1:\n            digit *= 2\n            if digit > 9:\n                digit -= 9\n        total += digit\n    return total % 10 == 0",
+            "logp": null
+        },
+        {
+            "content": "def validate(n):\n    n = n.replace(\" \", \"\")\n    sum = 0\n    for i in range(len(n)):\n        x = int(n[-1-i])\n        if i % 2 == 1:\n            x *= 2\n            if x > 9:\n                x -= 9\n        sum += x\n    return sum % 10 == 0",
+            "logp": null
+        }
+    ]
+}

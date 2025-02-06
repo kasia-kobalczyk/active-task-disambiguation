@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert total_match([\"apple\", \"banana\"], [\"cherry\", \"date\"]) == [\"apple\", \"banana\"]",
+        "assert total_match([\"one\", \"two\", \"three\"], [\"four\"]) == [\"four\"]",
+        "assert total_match([\"hello\", \"world\"], [\"python\", \"rocks\"]) == [\"hello\", \"world\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"kiwi\", \"peach\", \"grapefruit\"]) == [\"apple\", \"banana\"]",
+        "assert total_match([\"hello\", \"world\"], [\"hi\", \"there\"]) == [\"hello\", \"world\"]",
+        "assert total_match([\"cat\"], [\"dog\", \"elephant\"]) == [\"cat\"]",
+        "assert total_match([\"abc\", \"def\"], [\"gh\", \"ij\", \"klm\"]) == [\"abc\", \"def\"]",
+        "assert total_match([\"a\", \"b\", \"c\"], [\"x\", \"y\"]) == [\"x\", \"y\"]"
+    ],
+    "1": [
+        "assert total_match(['apple', 'banana'], ['pear', 'grape', 'kiwi']) == ['apple', 'banana']",
+        "assert total_match([\"one\", \"two\", \"three\"], [\"four\", \"five\"]) == [\"one\", \"two\", \"three\"]",
+        "assert total_match([\"hello\"], [\"hi\", \"bye\"]) == [\"hello\"]",
+        "assert total_match(['one', 'two', 'three'], ['four', 'five']) == ['four', 'five']",
+        "assert total_match([\"apple\", \"banana\"], [\"grape\", \"orange\"]) == [\"apple\", \"banana\"]",
+        "assert total_match([\"cat\", \"dog\"], [\"elephant\"]) == [\"cat\", \"dog\"]",
+        "assert total_match(['cat'], ['dogs', 'are', 'better']) == ['cat']",
+        "assert total_match(['hello', 'world'], ['hi', 'there']) == ['hello', 'world']"
+    ],
+    "2": [
+        "assert total_match([\"cat\", \"dog\"], [\"elephant\", \"giraffe\"]) == [\"cat\", \"dog\"]",
+        "assert total_match([\"apple\", \"orange\"], [\"kiwi\"]) == [\"kiwi\"]",
+        "assert total_match([\"one\", \"two\", \"three\"], [\"four\", \"five\"]) == [\"one\", \"two\", \"three\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"kiwi\"]) == [\"kiwi\"]",
+        "assert total_match([\"a\", \"b\", \"c\"], [\"one\", \"two\", \"three\"]) == [\"a\", \"b\", \"c\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"cat\", \"dog\", \"elephant\"]) == [\"apple\", \"banana\"]",
+        "assert total_match([], [\"hi\", \"bye\"]) == []",
+        "assert total_match([], [\"a\", \"b\"]) == []"
+    ],
+    "3": [
+        "assert total_match([\"short\", \"tiny\"], [\"longer\", \"lengthy\"]) == [\"short\", \"tiny\"]",
+        "assert total_match([\"short\", \"tiny\"], [\"longer\", \"lengthier\"]) == [\"short\", \"tiny\"]",
+        "assert total_match([], [\"nope\"]) == []",
+        "assert total_match([\"one\", \"two\", \"three\"], [\"four\", \"five\", \"six\"]) == [\"four\", \"five\", \"six\"]",
+        "assert total_match([\"one\", \"two\", \"three\"], [\"four\", \"five\"]) == [\"four\", \"five\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"grape\", \"kiwi\"]) == [\"grape\", \"kiwi\"]",
+        "assert total_match([\"apple\", \"banana\"], [\"pear\"]) == [\"pear\"]",
+        "assert total_match([], [\"any\", \"strings\"]) == []"
+    ]
+}

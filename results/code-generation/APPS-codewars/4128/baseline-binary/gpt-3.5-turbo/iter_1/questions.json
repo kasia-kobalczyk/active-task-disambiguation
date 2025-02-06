@@ -1,0 +1,20 @@
+{
+    "0": [
+        "assert bears(6, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(3, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B8B', True]",
+        "assert bears(0, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['', False]"
+    ],
+    "1": [
+        "assert bears(2, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]",
+        "assert bears(1, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B8', True]",
+        "assert bears(1, 'EvHBNKnikByxfeyKBmiCMj') == ['', False]"
+    ],
+    "2": [
+        "assert bears(5, 'B8B8B') == ['B8B8B', False]",
+        "assert bears(3, 'B8B8B') == ['B8B', True]",
+        "assert bears(4, 'B8B8') == ['B8B8', True]"
+    ],
+    "3": [
+        "assert bears(3, 'BB8B88B88B8') == ['BB', True]"
+    ]
+}

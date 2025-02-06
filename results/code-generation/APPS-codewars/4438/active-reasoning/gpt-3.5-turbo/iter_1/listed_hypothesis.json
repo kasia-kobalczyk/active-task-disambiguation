@@ -1,0 +1,154 @@
+{
+    "0": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    # check if the first point lies between the other two\n    if (x1 < x2 and x1 > x3) or (x1 > x2 and x1 < x3) or (y1 < y2 and y1 > y3) or (y1 > y2 and y1 < y3) or (z1 < z2 and z1 > z3) or (z1 > z2 and z1 < z3):\n        return 1\n    \n    # check if the second point lies between the other two\n    if (x2 < x1 and x2 > x3) or (x2 > x1 and x2 < x3) or (y2 < y1 and y2 > y3) or (y2 > y1 and y2 < y3) or (z2 < z1 and z2 > z3) or (z2 > z1 and z2 < z3):\n        return 2\n    \n    # otherwise, the third point lies between the other two\n    return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x2 - x1) / (x3 - x1) == (y2 - y1) / (y3 - y1) == (z2 - z1) / (z3 - z1):\n        return 2\n    elif (x1 - x2) / (x3 - x2) == (y1 - y2) / (y3 - y2) == (z1 - z2) / (z3 - z2):\n        return 1\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    # Calculate the distances between the points\n    d1 = (x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2\n    d2 = (x2 - x3)**2 + (y2 - y3)**2 + (z2 - z3)**2\n    d3 = (x3 - x1)**2 + (y3 - y1)**2 + (z3 - z1)**2\n    \n    # Compare the distances to determine the middle point\n    if (d1 > d2 and d1 < d3) or (d1 < d2 and d1 > d3):\n        return 1\n    elif (d2 > d1 and d2 < d3) or (d2 < d1 and d2 > d3):\n        return 2\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x2 - x1) / (x3 - x1) == (y2 - y1) / (y3 - y1) == (z2 - z1) / (z3 - z1):\n        return 2\n    elif (x3 - x1) / (x2 - x1) == (y3 - y1) / (y2 - y1) == (z3 - z1) / (z2 - z1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    # calculate the distance between each point and the others\n    dist1 = (x1 - x2)**2 + (y1 - y2)**2 + (z1 - z2)**2\n    dist2 = (x2 - x3)**2 + (y2 - y3)**2 + (z2 - z3)**2\n    dist3 = (x3 - x1)**2 + (y3 - y1)**2 + (z3 - z1)**2\n    \n    # check which distance is the middle one\n    if (dist1 < dist2 and dist2 < dist3) or (dist1 > dist2 and dist2 > dist3):\n        return 2\n    elif (dist2 < dist1 and dist1 < dist3) or (dist2 > dist1 and dist1 > dist3):\n        return 1\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    # Calculate the distance between each pair of points\n    d12 = abs(x2 - x1) + abs(y2 - y1) + abs(z2 - z1)\n    d23 = abs(x3 - x2) + abs(y3 - y2) + abs(z3 - z2)\n    d13 = abs(x3 - x1) + abs(y3 - y1) + abs(z3 - z1)\n    \n    # Determine which point lies in between the other two\n    if (d12 < d23 and d23 < d13) or (d13 < d23 and d23 < d12):\n        return 2\n    elif (d12 < d13 and d13 < d23) or (d23 < d13 and d13 < d12):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3) or (x3 <= x2 <= x1):\n        return 2\n    elif (x1 <= x3 <= x2) or (x2 <= x3 <= x1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if x1 == x2 == x3:\n        return 2\n    elif y1 == y2 == y3:\n        return 2\n    elif z1 == z2 == z3:\n        return 2\n    else:\n        if (x2 - x1)/(x3 - x1) == (y2 - y1)/(y3 - y1) == (z2 - z1)/(z3 - z1):\n            return 3\n        else:\n            return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    \"\"\"\n    Given three points (x1, y1, z1), (x2, y2, z2), and (x3, y3, z3) that lie on a straight line in 3-dimensional space,\n    determine which point lies in between the other two.\n\n    Args:\n    x1, y1, z1, x2, y2, z2, x3, y3, z3: The coordinates of the three points.\n\n    Returns:\n    1, 2, or 3 to indicate which point is the in-between one.\n    \"\"\"\n    if (x2 - x1) * (x3 - x2) + (y2 - y1) * (y3 - y2) + (z2 - z1) * (z3 - z2) > 0:\n        return 2\n    elif (x3 - x1) * (x2 - x3) + (y3 - y1) * (y2 - y3) + (z3 - z1) * (z2 - z3) > 0:\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 - x2) / (x3 - x2) == (y1 - y2) / (y3 - y2) == (z1 - z2) / (z3 - z2):\n        return 2\n    elif (x1 - x3) / (x2 - x3) == (y1 - y3) / (y2 - y3) == (z1 - z3) / (z2 - z3):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3) or (x1 >= x2 >= x3):\n        return 2\n    elif (x2 <= x1 <= x3) or (x2 >= x1 >= x3):\n        return 1\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    # Calculate the distances between each pair of points\n    dist_1 = (x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2\n    dist_2 = (x3 - x1)**2 + (y3 - y1)**2 + (z3 - z1)**2\n    dist_3 = (x3 - x2)**2 + (y3 - y2)**2 + (z3 - z2)**2\n\n    # Determine which distance is the smallest\n    if dist_1 < dist_2 and dist_1 < dist_3:\n        return 2\n    elif dist_2 < dist_1 and dist_2 < dist_3:\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x2-x1)*(x3-x1)+(y2-y1)*(y3-y1)+(z2-z1)*(z3-z1) < 0:\n        return 1\n    if (x1-x2)*(x3-x2)+(y1-y2)*(y3-y2)+(z1-z2)*(z3-z2) < 0:\n        return 2\n    return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n\n    if (x1 <= x3 <= x2) or (x2 <= x3 <= x1):\n        return 3\n    elif (x1 <= x2 <= x3) or (x3 <= x2 <= x1):\n        return 2\n    else:\n        return 1\n\nprint(middle_point(2, 2, 2, 3, 3, 3, 1, 1, 1))",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 and x2 <= x3) or (x3 <= x2 and x2 <= x1):\n        return 2\n    elif (x2 <= x1 and x1 <= x3) or (x3 <= x1 and x1 <= x2):\n        return 1\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x3 <= x2) or (x2 <= x3 <= x1):\n        return 3\n    elif (x2 <= x1 <= x3) or (x3 <= x1 <= x2):\n        return 1\n    else:\n        return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x2 - x1) * (x3 - x1) <= 0:\n        return 1\n    elif (y2 - y1) * (y3 - y1) <= 0:\n        return 2\n    elif (z2 - z1) * (z3 - z1) <= 0:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x2-x1)*(x3-x1)+(y2-y1)*(y3-y1)+(z2-z1)*(z3-z1) < 0:\n        return 1\n    elif (x1-x2)*(x3-x2)+(y1-y2)*(y3-y2)+(z1-z2)*(z3-z2) < 0:\n        return 2\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x3 <= x2) or (x2 <= x3 <= x1):\n        return 3\n    elif (x1 <= x2 <= x3) or (x3 <= x2 <= x1):\n        return 2\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 - x2) * (x1 - x3) < 0 or (y1 - y2) * (y1 - y3) < 0 or (z1 - z2) * (z1 - z3) < 0:\n        return 1\n    elif (x2 - x1) * (x2 - x3) < 0 or (y2 - y1) * (y2 - y3) < 0 or (z2 - z1) * (z2 - z3) < 0:\n        return 2\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    # Calculate the distances between each pair of points\n    dist12 = (x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2\n    dist23 = (x3 - x2)**2 + (y3 - y2)**2 + (z3 - z2)**2\n    dist13 = (x3 - x1)**2 + (y3 - y1)**2 + (z3 - z1)**2\n    \n    # Check which distance is the largest\n    if dist12 > dist23 and dist12 > dist13:\n        return 3\n    elif dist23 > dist12 and dist23 > dist13:\n        return 1\n    else:\n        return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n\n    if (x2-x1) * (y3-y1) == (x3-x1) * (y2-y1):\n        if (x2-x1) * (z3-z1) == (x3-x1) * (z2-z1):\n            return 1\n        return 2\n    return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    # Calculate the distances from point 1 to point 2 and point 1 to point 3\n    dist_1_2 = (x2 - x1)**2 + (y2 - y1)**2 + (z2 - z1)**2\n    dist_1_3 = (x3 - x1)**2 + (y3 - y1)**2 + (z3 - z1)**2\n    \n    # If the distance from point 1 to point 2 is greater than the distance from point 1 to point 3, then point 2 is in between\n    if dist_1_2 > dist_1_3:\n        return 3\n    # If the distance from point 1 to point 3 is greater than the distance from point 1 to point 2, then point 3 is in between\n    elif dist_1_3 > dist_1_2:\n        return 2\n    # If neither of the above conditions are met, then point 1 is in between\n    else:\n        return 1",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if x1 == x2 and x1 == x3:\n        return 2\n    elif y1 == y2 and y1 == y3:\n        return 2\n    elif z1 == z2 and z1 == z3:\n        return 2\n    elif x1 < x2 and x2 < x3:\n        return 2\n    elif x1 > x2 and x2 > x3:\n        return 2\n    elif y1 < y2 and y2 < y3:\n        return 2\n    elif y1 > y2 and y2 > y3:\n        return 2\n    elif z1 < z2 and z2 < z3:\n        return 2\n    elif z1 > z2 and z2 > z3:\n        return 2\n    elif x1 < x3 and x3 < x2:\n        return 3\n    elif x1 > x3 and x3 > x2:\n        return 3\n    elif y1 < y3 and y3 < y2:\n        return 3\n    elif y1 > y3 and y3 > y2:\n        return 3\n    elif z1 < z3 and z3 < z2:\n        return 3\n    elif z1 > z3 and z3 > z2:\n        return 3\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x2 - x1) * (x3 - x1) + (y2 - y1) * (y3 - y1) + (z2 - z1) * (z3 - z1) < 0:\n        return 1\n    elif (x1 - x2) * (x3 - x2) + (y1 - y2) * (y3 - y2) + (z1 - z2) * (z3 - z2) < 0:\n        return 2\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3) or (x3 <= x2 <= x1):\n        return 2\n    elif (x2 <= x1 <= x3) or (x3 <= x1 <= x2):\n        return 1\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1-x2)*(x1-x3) < 0 or (y1-y2)*(y1-y3) < 0 or (z1-z2)*(z1-z3) < 0:\n        return 1\n    elif (x2-x1)*(x2-x3) < 0 or (y2-y1)*(y2-y3) < 0 or (z2-z1)*(z2-z3) < 0:\n        return 2\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    \"\"\"\n    Given three points (x1,y1,z1), (x2,y2,z2), and (x3,y3,z3) that lie on a straight line in 3-dimensional space,\n    this function returns the point that lies in between the other two.\n    It returns 1, 2, or 3 to indicate which point is the in-between one.\n    \"\"\"\n    if (x1 == x2 == x3) or (y1 == y2 == y3) or (z1 == z2 == z3):\n        return None\n\n    # Calculate the distance between each pair of points\n    dist12 = (x1 - x2) ** 2 + (y1 - y2) ** 2 + (z1 - z2) ** 2\n    dist23 = (x2 - x3) ** 2 + (y2 - y3) ** 2 + (z2 - z3) ** 2\n    dist31 = (x3 - x1) ** 2 + (y3 - y1) ** 2 + (z3 - z1) ** 2\n\n    if (dist12 >= dist23) and (dist12 >= dist31):\n        return 3\n    elif (dist23 >= dist12) and (dist23 >= dist31):\n        return 1\n    else:\n        return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x3 <= x2 or x2 <= x3 <= x1) and (y1 <= y3 <= y2 or y2 <= y3 <= y1) and (z1 <= z3 <= z2 or z2 <= z3 <= z1):\n        return 3\n    elif (x1 <= x2 <= x3 or x3 <= x2 <= x1) and (y1 <= y2 <= y3 or y3 <= y2 <= y1) and (z1 <= z2 <= z3 or z3 <= z2 <= z1):\n        return 2\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x2 - x1) * (x3 - x1) + (y2 - y1) * (y3 - y1) + (z2 - z1) * (z3 - z1) < 0:\n        return 1\n    elif (x1 - x2) * (x3 - x2) + (y1 - y2) * (y3 - y2) + (z1 - z2) * (z3 - z2) < 0:\n        return 2\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if x2 > x1 and x2 < x3:\n        return 2\n    elif x2 > x3 and x2 < x1:\n        return 2\n    elif x1 > x2 and x1 < x3:\n        return 1\n    elif x1 > x3 and x1 < x2:\n        return 1\n    elif x3 > x1 and x3 < x2:\n        return 3\n    elif x3 > x2 and x3 < x1:\n        return 3\n    elif x1 == x2 and x1 != x3:\n        return 1\n    elif x1 == x3 and x1 != x2:\n        return 1\n    elif x2 == x3 and x2 != x1:\n        return 2\n    else:\n        return \"Invalid input\"",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    # calculate the distances between each point and the origin\n    dist1 = x1**2 + y1**2 + z1**2\n    dist2 = x2**2 + y2**2 + z2**2\n    dist3 = x3**2 + y3**2 + z3**2\n    \n    # compare the distances to find the point that is in-between the other two\n    if (dist1 < dist2 and dist1 > dist3) or (dist1 > dist2 and dist1 < dist3):\n        return 1\n    elif (dist2 < dist1 and dist2 > dist3) or (dist2 > dist1 and dist2 < dist3):\n        return 2\n    else:\n        return 3",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    # Find the distances between each point\n    d1 = abs(x1 - x2) + abs(y1 - y2) + abs(z1 - z2)\n    d2 = abs(x2 - x3) + abs(y2 - y3) + abs(z2 - z3)\n    d3 = abs(x1 - x3) + abs(y1 - y3) + abs(z1 - z3)\n\n    # Find the maximum distance\n    max_distance = max(d1, d2, d3)\n\n    # Return the index of the point with the maximum distance\n    if max_distance == d1:\n        return 3\n    elif max_distance == d2:\n        return 1\n    else:\n        return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x2 <= x3) or (x3 <= x2 <= x1):\n        return 2\n    elif (x1 <= x3 <= x2) or (x2 <= x3 <= x1):\n        return 3\n    else:\n        return 1",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x3 <= x2) or (x2 <= x3 <= x1):\n        return 3\n    elif (x1 <= x2 <= x3) or (x3 <= x2 <= x1):\n        return 2\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    if (x1 <= x3 <= x2) or (x2 <= x3 <= x1):\n        return 3\n    elif (x1 <= x2 <= x3) or (x3 <= x2 <= x1):\n        return 2\n    else:\n        return 1",
+            "logp": null
+        }
+    ]
+}

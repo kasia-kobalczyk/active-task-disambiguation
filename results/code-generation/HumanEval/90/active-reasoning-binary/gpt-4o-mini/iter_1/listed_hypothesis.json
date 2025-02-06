@@ -1,0 +1,178 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    if len(unique_lst) < 2:\n        return None\n    unique_lst.sort()\n    return unique_lst[1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_numbers = list(set(lst))\n    unique_numbers.sort()\n    return unique_numbers[1] if len(unique_numbers) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    if len(lst) < 2:\n        return None\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_numbers = sorted(set(lst))\n    return unique_numbers[1] if len(unique_numbers) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = list(set(lst))\n    unique_elements.sort()\n    return unique_elements[1] if len(unique_elements) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = sorted(set(lst))\n    return unique_elements[1] if len(unique_elements) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = list(set(lst))\n    unique_elements.sort()\n    return unique_elements[1] if len(unique_elements) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    if len(unique_lst) < 2:\n        return None\n    unique_lst.sort()\n    return unique_lst[1]\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_nums = sorted(set(lst))\n    return unique_nums[1] if len(unique_nums) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    if len(unique_lst) < 2:\n        return None\n    unique_lst.sort()\n    return unique_lst[1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = list(set(lst))\n    unique_elements.sort()\n    return unique_elements[1] if len(unique_elements) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    if len(lst) < 2:\n        return None\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_numbers = list(set(lst))\n    if len(unique_numbers) < 2:\n        return None\n    unique_numbers.sort()\n    return unique_numbers[1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = sorted(set(lst))\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    if len(unique_lst) < 2:\n        return None\n    unique_lst.sort()\n    return unique_lst[1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = sorted(set(lst))\n    return unique_elements[1] if len(unique_elements) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = sorted(set(lst))\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = list(set(lst))\n    if len(unique_elements) < 2:\n        return None\n    unique_elements.sort()\n    return unique_elements[1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = list(set(lst))\n    unique_elements.sort()\n    return unique_elements[1] if len(unique_elements) > 1 else None\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = sorted(set(lst))\n    return unique_elements[1] if len(unique_elements) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = sorted(set(lst))\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_sorted = sorted(set(lst))\n    return unique_sorted[1] if len(unique_sorted) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = list(set(lst))\n    if len(unique_elements) < 2:\n        return None\n    unique_elements.sort()\n    return unique_elements[1]\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[1] if len(unique_lst) > 1 else None\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_smallest(lst):\n    unique_elements = list(set(lst))\n    unique_elements.sort()\n    return unique_elements[1] if len(unique_elements) > 1 else None\n```",
+            "logp": null
+        }
+    ]
+}

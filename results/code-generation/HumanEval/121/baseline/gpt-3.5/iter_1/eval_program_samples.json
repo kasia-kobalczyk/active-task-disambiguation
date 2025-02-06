@@ -1,0 +1,189 @@
+{
+    "0": {
+        "0": [
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 == 1)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if lst[i] % 2 != 0 and i % 2 == 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])",
+            "def solution(lst):\n    return sum([lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0])",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1,len(lst),2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    sum_of_odds = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum_of_odds += lst[i]\n    return sum_of_odds",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum_odd_elements = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 == 1:\n            sum_odd_elements += lst[i]\n    return sum_odd_elements",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 == 1)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[1::2])",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum_odd = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 == 1:\n            sum_odd += lst[i]\n    return sum_odd"
+        ],
+        "1": [
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+        ],
+        "2": [
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if lst[i] % 2 != 0 and i % 2 == 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    # initialize a variable to keep track of the sum\n    sum_of_odd_elements = 0\n    \n    # iterate over the list using a for loop\n    for i in range(len(lst)):\n        # check if the element is odd and the index is even\n        if lst[i] % 2 != 0 and i % 2 == 0:\n            # add the element to the sum\n            sum_of_odd_elements += lst[i]\n    \n    # return the sum\n    return sum_of_odd_elements",
+            "def solution(lst):\n    return sum([num for idx, num in enumerate(lst) if idx % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+        ],
+        "3": [
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([num for i, num in enumerate(lst) if i % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum([num for index, num in enumerate(lst) if index % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    sum_odd = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum_odd += lst[i]\n    return sum_odd",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([num for index, num in enumerate(lst) if index % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if lst[i] % 2 == 1 and i % 2 == 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+        ],
+        "4": [
+            "def solution(lst):\n    return sum([num for i, num in enumerate(lst) if i % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    # Initialize a variable to store the sum\n    total = 0\n    \n    # Iterate over the list using a for loop\n    for i in range(len(lst)):\n        # Check if the element is odd and its index is even\n        if lst[i] % 2 != 0 and i % 2 == 0:\n            # Add the element to the total\n            total += lst[i]\n    \n    # Return the total\n    return total",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    # Initialize the sum variable\n    odd_sum = 0\n    \n    # Loop through the list\n    for i in range(len(lst)):\n        # Check if the element is odd and if the index is even\n        if lst[i] % 2 != 0 and i % 2 == 0:\n            # Add the element to the sum\n            odd_sum += lst[i]\n    \n    # Return the sum of odd elements in even positions\n    return odd_sum",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([num for i, num in enumerate(lst) if i % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])"
+        ]
+    },
+    "1": {
+        "0": [
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1,len(lst),2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    sum_of_odds = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum_of_odds += lst[i]\n    return sum_of_odds",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum_odd_elements = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 == 1:\n            sum_odd_elements += lst[i]\n    return sum_odd_elements",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 == 1)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[1::2])",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum_odd = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 == 1:\n            sum_odd += lst[i]\n    return sum_odd",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    return sum(lst[1::2])",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum_odd = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum_odd += lst[i]\n    return sum_odd",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 == 1])"
+        ],
+        "1": [
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0])",
+            "def solution(lst):\n    return sum([lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0])"
+        ],
+        "2": [
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n\n    Args:\n    - lst: a non-empty list of integers\n\n    Returns:\n    - the sum of all odd elements that are in even positions in the list\n\n    Examples:\n\n    [1, 2, 3, 4, 5] -> 9\n    [2, 4, 6, 8, 10] -> 0\n    \"\"\"\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([num for idx, num in enumerate(lst) if idx % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+        ],
+        "3": [
+            "def solution(lst):\n    sum_odd = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum_odd += lst[i]\n    return sum_odd",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([num for index, num in enumerate(lst) if index % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if lst[i] % 2 == 1 and i % 2 == 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+        ],
+        "4": [
+            "def solution(lst):\n    # Initialize a variable to store the sum\n    total = 0\n    \n    # Iterate over the list using a for loop\n    for i in range(len(lst)):\n        # Check if the element is odd and its index is even\n        if lst[i] % 2 != 0 and i % 2 == 0:\n            # Add the element to the total\n            total += lst[i]\n    \n    # Return the total\n    return total",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    # Initialize the sum variable\n    odd_sum = 0\n    \n    # Loop through the list\n    for i in range(len(lst)):\n        # Check if the element is odd and if the index is even\n        if lst[i] % 2 != 0 and i % 2 == 0:\n            # Add the element to the sum\n            odd_sum += lst[i]\n    \n    # Return the sum of odd elements in even positions\n    return odd_sum",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([num for i, num in enumerate(lst) if i % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])",
+            "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+        ]
+    },
+    "2": {
+        "0": [
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    return sum(lst[1::2])",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    sum_odd = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum_odd += lst[i]\n    return sum_odd",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 == 1])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    return sum([lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0])",
+            "def solution(lst):\n    return sum([x for i,x in enumerate(lst) if x%2==1 and i%2==0])",
+            "def solution(lst):\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \"\"\"\n    # Initialize the sum variable\n    total_sum = 0\n    \n    # Iterate over the list with step 2 to only get the elements in even positions\n    for i in range(1, len(lst), 2):\n        # Check if the element is odd\n        if lst[i] % 2 == 1:\n            # Add the element to the sum\n            total_sum += lst[i]\n    \n    # Return the total sum\n    return total_sum",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)",
+            "def solution(lst):\n    sum = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 != 0:\n            sum += lst[i]\n    return sum",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(1, len(lst), 2) if lst[i] % 2 != 0)"
+        ],
+        "1": [
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0])",
+            "def solution(lst):\n    return sum([lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+        ],
+        "2": [
+            "def solution(lst):\n    return sum([num for idx, num in enumerate(lst) if idx % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+        ],
+        "3": [
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)"
+        ],
+        "4": [
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([num for i, num in enumerate(lst) if i % 2 == 0 and num % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])",
+            "def solution(lst):\n    return sum([x for i, x in enumerate(lst) if i % 2 == 0 and x % 2 != 0])",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum(lst[i] for i in range(len(lst)) if i % 2 == 0 and lst[i] % 2 != 0)",
+            "def solution(lst):\n    return sum([x for i,x in enumerate(lst) if i%2 == 0 and x%2 != 0])"
+        ]
+    }
+}

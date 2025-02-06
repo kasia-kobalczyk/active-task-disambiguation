@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert count_upper(\"aEIoUe\") == 1  ",
+        "assert count_upper(\"abcde\") == 0   ",
+        "assert count_upper(\"Hello World\") == 1",
+        "assert count_upper(\"AeIoU\") == 2   ",
+        "assert count_upper(\"AEIOUaeiou\") == 3",
+        "assert count_upper(\"AEIOU\") == 3",
+        "assert count_upper(\"UoEIoA\") == 4",
+        "assert count_upper(\"Python Programming\") == 1"
+    ],
+    "1": [
+        "assert count_upper(\"Python\") == 0  ",
+        "assert count_upper(\"dAbeNchI\") == 2",
+        "assert count_upper(\"abEcIdOfU\") == 2  ",
+        "assert count_upper(\"HELLOworld\") == 1",
+        "assert count_upper(\"AEIOU\") == 3",
+        "assert count_upper(\"A1E2I3O4U\") == 3  ",
+        "assert count_upper(\"AbEcIdO\") == 3",
+        "assert count_upper(\"aEIoU\") == 0"
+    ],
+    "2": [
+        "assert count_upper(\"abcdefGHIJ\") == 1  ",
+        "assert count_upper(\"Example String\") == 1  ",
+        "assert count_upper(\"Universally\") == 2  ",
+        "assert count_upper(\"aAeiou\") == 1  ",
+        "assert count_upper(\"AEIOU\") == 3",
+        "assert count_upper(\"HELLO world\") == 2  ",
+        "assert count_upper(\"Aardvark\") == 1",
+        "assert count_upper(\"AbcdeF\") == 1  "
+    ],
+    "3": [
+        "assert count_upper(\"hello World\") == 1  ",
+        "assert count_upper(\"AbEcIdOfU\") == 4  ",
+        "assert count_upper(\"1234AEIO\") == 2  ",
+        "assert count_upper(\"helloWorld\") == 1  ",
+        "assert count_upper(\"ABCDEabcde\") == 3  ",
+        "assert count_upper(\"AEIOU\") == 3",
+        "assert count_upper(\"Uppercase Vowels\") == 1  "
+    ]
+}

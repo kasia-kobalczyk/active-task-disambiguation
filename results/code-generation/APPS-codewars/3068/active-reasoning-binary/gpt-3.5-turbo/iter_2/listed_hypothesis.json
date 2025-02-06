@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "def vowel_back(st):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']\n    \n    new_st = ''\n    \n    for ch in st:\n        if ch in vowels:\n            if ch == 'a':\n                new_st += 'v'\n            elif ch == 'e':\n                new_st += 'a'\n            else:\n                idx = vowels.index(ch)\n                new_st += vowels[idx-1]\n        elif ch in consonants:\n            if ch == 'c':\n                new_st += 'b'\n            elif ch == 'o':\n                new_st += 'n'\n            elif ch == 'd':\n                new_st += 'a'\n            else:\n                idx = consonants.index(ch)\n                new_st += consonants[(idx+9) % 21]\n        else:\n            new_st += ch\n    \n    return new_st",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    \n    for char in st:\n        if char in ['a', 'i', 'u']:\n            new_char = chr(ord(char) - 5)\n            if new_char < 'a':\n                new_char = chr(ord(new_char) + 26)\n        elif char in ['c', 'o']:\n            new_char = chr(ord(char) - 1)\n        elif char == 'd':\n            new_char = chr(ord(char) - 3)\n        elif char == 'e':\n            new_char = chr(ord(char) - 4)\n        else:\n            new_char = chr(ord(char) + 9)\n            if new_char > 'z':\n                new_char = chr(ord(new_char) - 26)\n                \n        result += new_char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    result = ''\n    \n    for char in st:\n        if char in vowels:\n            index = vowels.index(char)\n            new_index = (index - 5) % len(vowels)\n            new_char = vowels[new_index]\n            \n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char in consonants:\n            index = consonants.index(char)\n            new_index = (index + 9) % len(consonants)\n            new_char = consonants[new_index]\n            \n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        else:\n            result += char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    result = ''\n    \n    for char in st:\n        if char in vowels:\n            index = (ord(char) - ord('a') - 5) % 26\n            new_char = chr(index + ord('a'))\n            if new_char in ['c', 'o', 'd', 'e']:\n                result += char\n            else:\n                result += new_char\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += 'a'\n        else:\n            index = (ord(char) - ord('a') + 9) % 26\n            new_char = chr(index + ord('a'))\n            if new_char in ['c', 'o', 'd', 'e']:\n                result += char\n            else:\n                result += new_char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 5 - ord('a')) % 26 + ord('a'))\n            if new_char in 'code':\n                new_char = char\n        elif char in consonants:\n            new_char = chr((ord(char) + 9 - ord('a')) % 26 + ord('a'))\n            if new_char in 'code':\n                new_char = char\n        else:\n            new_char = char\n        result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    result = \"\"\n\n    for char in st:\n        if char in vowels:\n            index = vowels.index(char)\n            new_index = (index - 5) % len(vowels)\n            new_char = vowels[new_index]\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        elif char in consonants:\n            index = consonants.index(char)\n            new_index = (index + 9) % len(consonants)\n            new_char = consonants[new_index]\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        else:\n            result += char\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for letter in st:\n        if letter in \"aeiou\":\n            if letter == \"a\":\n                result += \"v\"\n            elif letter == \"e\":\n                result += \"d\"\n            elif letter == \"i\":\n                result += \"c\"\n            elif letter == \"o\":\n                result += \"b\"\n            elif letter == \"u\":\n                result += \"a\"\n        else:\n            if letter == \"c\":\n                result += \"c\"\n            elif letter == \"d\":\n                result += \"e\"\n            elif letter == \"o\":\n                result += \"o\"\n            else:\n                ascii_value = ord(letter) + 9\n                if ascii_value > ord(\"z\"):\n                    ascii_value = ord(\"a\") + (ascii_value - ord(\"z\")) - 1\n                result += chr(ascii_value)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char == 'c' or char == 'o':\n            result += chr(ord(char) - 1)\n        elif char == 'd':\n            result += chr(ord(char) - 3)\n        elif char == 'e':\n            result += chr(ord(char) - 4)\n        elif char in ['a', 'i', 'u']:\n            result += chr((ord(char) - 5 - ord('a')) % 26 + ord('a'))\n        elif char in ['b', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']:\n            result += chr((ord(char) + 9 - ord('a')) % 26 + ord('a'))\n        else:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = \"aeiou\"\n    new_string = \"\"\n    \n    for char in st:\n        if char in vowels:\n            if char == \"a\":\n                new_string += \"v\"\n            elif char == \"e\":\n                new_string += \"d\"\n            elif char == \"i\":\n                new_string += \"u\"\n            elif char == \"o\":\n                new_string += \"c\"\n            elif char == \"u\":\n                new_string += \"t\"\n        else:\n            new_string += char\n    \n    return new_string",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    result = ''\n    for char in st:\n        if char in vowels:\n            index = ord(char) - 5\n            if index < 97:\n                index += 26\n            new_char = chr(index)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        else:\n            index = ord(char) + 9\n            if index > 122:\n                index -= 26\n            new_char = chr(index)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def vowel_back(st):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']\n    \n    new_st = ''\n    \n    for ch in st:\n        if ch in vowels:\n            if ch == 'a':\n                new_st += 'v'\n            elif ch == 'e':\n                new_st += 'a'\n            else:\n                idx = vowels.index(ch)\n                new_st += vowels[idx-1]\n        elif ch in consonants:\n            if ch == 'c':\n                new_st += 'b'\n            elif ch == 'o':\n                new_st += 'n'\n            elif ch == 'd':\n                new_st += 'a'\n            else:\n                idx = consonants.index(ch)\n                new_st += consonants[(idx+9) % 21]\n        else:\n            new_st += ch\n    \n    return new_st",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    \n    for char in st:\n        if char in ['a', 'i', 'u']:\n            new_char = chr(ord(char) - 5)\n            if new_char < 'a':\n                new_char = chr(ord(new_char) + 26)\n        elif char in ['c', 'o']:\n            new_char = chr(ord(char) - 1)\n        elif char == 'd':\n            new_char = chr(ord(char) - 3)\n        elif char == 'e':\n            new_char = chr(ord(char) - 4)\n        else:\n            new_char = chr(ord(char) + 9)\n            if new_char > 'z':\n                new_char = chr(ord(new_char) - 26)\n                \n        result += new_char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    result = ''\n    \n    for char in st:\n        if char in vowels:\n            index = vowels.index(char)\n            new_index = (index - 5) % len(vowels)\n            new_char = vowels[new_index]\n            \n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char in consonants:\n            index = consonants.index(char)\n            new_index = (index + 9) % len(consonants)\n            new_char = consonants[new_index]\n            \n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        else:\n            result += char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    result = ''\n    \n    for char in st:\n        if char in vowels:\n            index = (ord(char) - ord('a') - 5) % 26\n            new_char = chr(index + ord('a'))\n            if new_char in ['c', 'o', 'd', 'e']:\n                result += char\n            else:\n                result += new_char\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += 'a'\n        else:\n            index = (ord(char) - ord('a') + 9) % 26\n            new_char = chr(index + ord('a'))\n            if new_char in ['c', 'o', 'd', 'e']:\n                result += char\n            else:\n                result += new_char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 5 - ord('a')) % 26 + ord('a'))\n            if new_char in 'code':\n                new_char = char\n        elif char in consonants:\n            new_char = chr((ord(char) + 9 - ord('a')) % 26 + ord('a'))\n            if new_char in 'code':\n                new_char = char\n        else:\n            new_char = char\n        result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    result = \"\"\n\n    for char in st:\n        if char in vowels:\n            index = vowels.index(char)\n            new_index = (index - 5) % len(vowels)\n            new_char = vowels[new_index]\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        elif char in consonants:\n            index = consonants.index(char)\n            new_index = (index + 9) % len(consonants)\n            new_char = consonants[new_index]\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        else:\n            result += char\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for letter in st:\n        if letter in \"aeiou\":\n            if letter == \"a\":\n                result += \"v\"\n            elif letter == \"e\":\n                result += \"d\"\n            elif letter == \"i\":\n                result += \"c\"\n            elif letter == \"o\":\n                result += \"b\"\n            elif letter == \"u\":\n                result += \"a\"\n        else:\n            if letter == \"c\":\n                result += \"c\"\n            elif letter == \"d\":\n                result += \"e\"\n            elif letter == \"o\":\n                result += \"o\"\n            else:\n                ascii_value = ord(letter) + 9\n                if ascii_value > ord(\"z\"):\n                    ascii_value = ord(\"a\") + (ascii_value - ord(\"z\")) - 1\n                result += chr(ascii_value)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char == 'c' or char == 'o':\n            result += chr(ord(char) - 1)\n        elif char == 'd':\n            result += chr(ord(char) - 3)\n        elif char == 'e':\n            result += chr(ord(char) - 4)\n        elif char in ['a', 'i', 'u']:\n            result += chr((ord(char) - 5 - ord('a')) % 26 + ord('a'))\n        elif char in ['b', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']:\n            result += chr((ord(char) + 9 - ord('a')) % 26 + ord('a'))\n        else:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = \"aeiou\"\n    new_string = \"\"\n    \n    for char in st:\n        if char in vowels:\n            if char == \"a\":\n                new_string += \"v\"\n            elif char == \"e\":\n                new_string += \"d\"\n            elif char == \"i\":\n                new_string += \"u\"\n            elif char == \"o\":\n                new_string += \"c\"\n            elif char == \"u\":\n                new_string += \"t\"\n        else:\n            new_string += char\n    \n    return new_string",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    result = ''\n    for char in st:\n        if char in vowels:\n            index = ord(char) - 5\n            if index < 97:\n                index += 26\n            new_char = chr(index)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        else:\n            index = ord(char) + 9\n            if index > 122:\n                index -= 26\n            new_char = chr(index)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def vowel_back(st):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']\n    \n    new_st = ''\n    \n    for ch in st:\n        if ch in vowels:\n            if ch == 'a':\n                new_st += 'v'\n            elif ch == 'e':\n                new_st += 'a'\n            else:\n                idx = vowels.index(ch)\n                new_st += vowels[idx-1]\n        elif ch in consonants:\n            if ch == 'c':\n                new_st += 'b'\n            elif ch == 'o':\n                new_st += 'n'\n            elif ch == 'd':\n                new_st += 'a'\n            else:\n                idx = consonants.index(ch)\n                new_st += consonants[(idx+9) % 21]\n        else:\n            new_st += ch\n    \n    return new_st",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    \n    for char in st:\n        if char in ['a', 'i', 'u']:\n            new_char = chr(ord(char) - 5)\n            if new_char < 'a':\n                new_char = chr(ord(new_char) + 26)\n        elif char in ['c', 'o']:\n            new_char = chr(ord(char) - 1)\n        elif char == 'd':\n            new_char = chr(ord(char) - 3)\n        elif char == 'e':\n            new_char = chr(ord(char) - 4)\n        else:\n            new_char = chr(ord(char) + 9)\n            if new_char > 'z':\n                new_char = chr(ord(new_char) - 26)\n                \n        result += new_char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    result = ''\n    \n    for char in st:\n        if char in vowels:\n            index = vowels.index(char)\n            new_index = (index - 5) % len(vowels)\n            new_char = vowels[new_index]\n            \n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char in consonants:\n            index = consonants.index(char)\n            new_index = (index + 9) % len(consonants)\n            new_char = consonants[new_index]\n            \n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        else:\n            result += char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    result = ''\n    \n    for char in st:\n        if char in vowels:\n            index = (ord(char) - ord('a') - 5) % 26\n            new_char = chr(index + ord('a'))\n            if new_char in ['c', 'o', 'd', 'e']:\n                result += char\n            else:\n                result += new_char\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += 'a'\n        else:\n            index = (ord(char) - ord('a') + 9) % 26\n            new_char = chr(index + ord('a'))\n            if new_char in ['c', 'o', 'd', 'e']:\n                result += char\n            else:\n                result += new_char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 5 - ord('a')) % 26 + ord('a'))\n            if new_char in 'code':\n                new_char = char\n        elif char in consonants:\n            new_char = chr((ord(char) + 9 - ord('a')) % 26 + ord('a'))\n            if new_char in 'code':\n                new_char = char\n        else:\n            new_char = char\n        result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    result = \"\"\n\n    for char in st:\n        if char in vowels:\n            index = vowels.index(char)\n            new_index = (index - 5) % len(vowels)\n            new_char = vowels[new_index]\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        elif char in consonants:\n            index = consonants.index(char)\n            new_index = (index + 9) % len(consonants)\n            new_char = consonants[new_index]\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        else:\n            result += char\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for letter in st:\n        if letter in \"aeiou\":\n            if letter == \"a\":\n                result += \"v\"\n            elif letter == \"e\":\n                result += \"d\"\n            elif letter == \"i\":\n                result += \"c\"\n            elif letter == \"o\":\n                result += \"b\"\n            elif letter == \"u\":\n                result += \"a\"\n        else:\n            if letter == \"c\":\n                result += \"c\"\n            elif letter == \"d\":\n                result += \"e\"\n            elif letter == \"o\":\n                result += \"o\"\n            else:\n                ascii_value = ord(letter) + 9\n                if ascii_value > ord(\"z\"):\n                    ascii_value = ord(\"a\") + (ascii_value - ord(\"z\")) - 1\n                result += chr(ascii_value)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char == 'c' or char == 'o':\n            result += chr(ord(char) - 1)\n        elif char == 'd':\n            result += chr(ord(char) - 3)\n        elif char == 'e':\n            result += chr(ord(char) - 4)\n        elif char in ['a', 'i', 'u']:\n            result += chr((ord(char) - 5 - ord('a')) % 26 + ord('a'))\n        elif char in ['b', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']:\n            result += chr((ord(char) + 9 - ord('a')) % 26 + ord('a'))\n        else:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = \"aeiou\"\n    new_string = \"\"\n    \n    for char in st:\n        if char in vowels:\n            if char == \"a\":\n                new_string += \"v\"\n            elif char == \"e\":\n                new_string += \"d\"\n            elif char == \"i\":\n                new_string += \"u\"\n            elif char == \"o\":\n                new_string += \"c\"\n            elif char == \"u\":\n                new_string += \"t\"\n        else:\n            new_char = ord(char) + 9\n            if new_char > ord(\"z\"):\n                new_char = new_char - ord(\"z\") + ord(\"a\") - 1\n            new_string += chr(new_char)\n    \n    return new_string",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    result = ''\n    for char in st:\n        if char in vowels:\n            index = ord(char) - 5\n            if index < 97:\n                index += 26\n            new_char = chr(index)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        else:\n            index = ord(char) + 9\n            if index > 122:\n                index -= 26\n            new_char = chr(index)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def vowel_back(st):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']\n    \n    new_st = ''\n    \n    for ch in st:\n        if ch in vowels:\n            if ch == 'a':\n                new_st += 'v'\n            elif ch == 'e':\n                new_st += 'a'\n            else:\n                idx = vowels.index(ch)\n                new_st += vowels[idx-1]\n        elif ch in consonants:\n            if ch == 'c':\n                new_st += 'b'\n            elif ch == 'o':\n                new_st += 'n'\n            elif ch == 'd':\n                new_st += 'a'\n            else:\n                idx = consonants.index(ch)\n                new_st += consonants[(idx+9) % 21]\n        else:\n            new_st += ch\n    \n    return new_st",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    \n    for char in st:\n        if char in ['a', 'i', 'u']:\n            new_char = chr(ord(char) - 5)\n            if new_char < 'a':\n                new_char = chr(ord(new_char) + 26)\n        elif char in ['c', 'o']:\n            new_char = chr(ord(char) - 1)\n        elif char == 'd':\n            new_char = chr(ord(char) - 3)\n        elif char == 'e':\n            new_char = chr(ord(char) - 4)\n        else:\n            new_char = chr(ord(char) + 9)\n            if new_char > 'z':\n                new_char = chr(ord(new_char) - 26)\n                \n        result += new_char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    result = ''\n    \n    for char in st:\n        if char in vowels:\n            index = vowels.index(char)\n            new_index = (index - 5) % len(vowels)\n            new_char = vowels[new_index]\n            \n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char in consonants:\n            index = consonants.index(char)\n            new_index = (index + 9) % len(consonants)\n            new_char = consonants[new_index]\n            \n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        else:\n            result += char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    result = ''\n    \n    for char in st:\n        if char in vowels:\n            index = (ord(char) - ord('a') - 5) % 26\n            new_char = chr(index + ord('a'))\n            if new_char in ['c', 'o', 'd', 'e']:\n                result += char\n            else:\n                result += new_char\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += 'a'\n        else:\n            index = (ord(char) - ord('a') + 9) % 26\n            new_char = chr(index + ord('a'))\n            if new_char in ['c', 'o', 'd', 'e']:\n                result += char\n            else:\n                result += new_char\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 5 - ord('a')) % 26 + ord('a'))\n            if new_char in 'code':\n                new_char = char\n        elif char in consonants:\n            new_char = chr((ord(char) + 9 - ord('a')) % 26 + ord('a'))\n            if new_char in 'code':\n                new_char = char\n        else:\n            new_char = char\n        result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    result = \"\"\n\n    for char in st:\n        if char in vowels:\n            index = vowels.index(char)\n            new_index = (index - 5) % len(vowels)\n            new_char = vowels[new_index]\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        elif char in consonants:\n            index = consonants.index(char)\n            new_index = (index + 9) % len(consonants)\n            new_char = consonants[new_index]\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        else:\n            result += char\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for letter in st:\n        if letter in \"aeiou\":\n            if letter == \"a\":\n                result += \"v\"\n            elif letter == \"e\":\n                result += \"d\"\n            elif letter == \"i\":\n                result += \"c\"\n            elif letter == \"o\":\n                result += \"b\"\n            elif letter == \"u\":\n                result += \"a\"\n        else:\n            if letter == \"c\":\n                result += \"c\"\n            elif letter == \"d\":\n                result += \"e\"\n            elif letter == \"o\":\n                result += \"o\"\n            else:\n                ascii_value = ord(letter) + 9\n                if ascii_value > ord(\"z\"):\n                    ascii_value = ord(\"a\") + (ascii_value - ord(\"z\")) - 1\n                result += chr(ascii_value)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char == 'c' or char == 'o':\n            result += chr(ord(char) - 1)\n        elif char == 'd':\n            result += chr(ord(char) - 3)\n        elif char == 'e':\n            result += chr(ord(char) - 4)\n        elif char in ['a', 'i', 'u']:\n            result += chr((ord(char) - 5 - ord('a')) % 26 + ord('a'))\n        elif char in ['b', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']:\n            result += chr((ord(char) + 9 - ord('a')) % 26 + ord('a'))\n        else:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = \"aeiou\"\n    new_string = \"\"\n    \n    for char in st:\n        if char in vowels:\n            if char == \"a\":\n                new_string += \"v\"\n            elif char == \"e\":\n                new_string += \"d\"\n            elif char == \"i\":\n                new_string += \"u\"\n            elif char == \"o\":\n                new_string += \"c\"\n            elif char == \"u\":\n                new_string += \"t\"\n        else:\n            new_char = ord(char) + 9\n            if new_char > ord(\"z\"):\n                new_char = new_char - ord(\"z\") + ord(\"a\") - 1\n            new_string += chr(new_char)\n    \n    return new_string",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiou'\n    result = ''\n    for char in st:\n        if char in vowels:\n            index = ord(char) - 5\n            if index < 97:\n                index += 26\n            new_char = chr(index)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        else:\n            index = ord(char) + 9\n            if index > 122:\n                index -= 26\n            new_char = chr(index)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "0": "assert check_dict_case({'KEY1': 'value1', 'KEY2': 'value2'}) == True",
+    "1": "assert check_dict_case({'key1': 'value1', 'key2': 'value2'}) == True",
+    "2": "assert check_dict_case({'KEY1': 'value1', 'key2': 'value2'}) == False",
+    "3": "assert check_dict_case({'KEY1': 'value1'}) == True"
+}

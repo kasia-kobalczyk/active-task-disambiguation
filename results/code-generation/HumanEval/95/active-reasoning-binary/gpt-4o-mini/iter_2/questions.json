@@ -1,0 +1,35 @@
+{
+    "0": [
+        "assert check_dict_case({'a': 1, 'b': 2, 'c': 3}) == True",
+        "assert check_dict_case({}) == False",
+        "assert check_dict_case({'a': 1, 'B': 2, 'c': 3}) == False",
+        "assert check_dict_case({'A': 1, 'B': 2, 'C': 3}) == True",
+        "assert check_dict_case({'a': 1, 'b': 2, 'c': 3, 'D': 4}) == False"
+    ],
+    "1": [
+        "assert check_dict_case({'hello': 1, 'world': 2}) == True",
+        "assert check_dict_case({}) == False",
+        "assert check_dict_case({'a': 1, 'B': 2, 'c': 3}) == False",
+        "assert check_dict_case({'A': 1, 'B': 2, 'C': 3}) == True",
+        "assert check_dict_case({'Hello': 1, 'world': 2}) == False"
+    ],
+    "2": [
+        "assert check_dict_case({'One': 1, 'two': 2}) == False",
+        "assert check_dict_case({'': 0, ' ': 1}) == True",
+        "assert check_dict_case({'Alpha': 1, 'beta': 2}) == False",
+        "assert check_dict_case({'A': 1, 'B': 2, 'C': 3}) == True",
+        "assert check_dict_case({'123': 1, '456': 2}) == True",
+        "assert check_dict_case({'x': 5, 'y': 10, 'Z': 15}) == False",
+        "assert check_dict_case({'': 1, 'key': 2}) == False"
+    ],
+    "3": [
+        "assert check_dict_case({'X': 5, 'Y': 10, 'Z': 15}) == True",
+        "assert check_dict_case({'A': 1, 'b': 2, 'C': 3}) == False",
+        "assert check_dict_case({'apple': 1, 'banana': 2}) == True",
+        "assert check_dict_case({'mixedCase': 1, 'anotherKey': 2}) == False",
+        "assert check_dict_case({'lowercase': 1, 'keys': 2, 'only': 3}) == True",
+        "assert check_dict_case({'foo': 1, 'bar': 2}) == True",
+        "assert check_dict_case({'A': 1, 'B': 2, 'C': 3}) == True",
+        "assert check_dict_case({'a': 1, 'B': 2}) == False"
+    ]
+}

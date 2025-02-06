@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert who_is_winner([\"A_Yellow\", \"B_Yellow\", \"A_Yellow\", \"B_Yellow\", \"A_Yellow\", \"B_Yellow\", \"G_Yellow\", \"B_Yellow\"]) == \"Yellow\"",
+        true
+    ],
+    "1": [
+        "assert who_is_winner([\"A_Red\", \"B_Yellow\", \"A_Red\", \"B_Yellow\", \"A_Red\", \"B_Yellow\", \"G_Yellow\", \"G_Red\", \"G_Yellow\", \"G_Red\", \"G_Yellow\", \"G_Red\"]) == \"Red\"",
+        false
+    ],
+    "2": [
+        "assert who_is_winner([\"A_Yellow\", \"B_Yellow\", \"A_Yellow\", \"B_Yellow\", \"A_Yellow\", \"B_Yellow\", \"G_Red\", \"B_Yellow\"]) == \"Draw\"",
+        false
+    ],
+    "3": [
+        "assert who_is_winner([\"A_Yellow\", \"B_Yellow\", \"A_Yellow\", \"B_Yellow\", \"A_Yellow\", \"B_Yellow\", \"A_Yellow\", \"B_Yellow\"]) == \"Draw\"",
+        false
+    ]
+}

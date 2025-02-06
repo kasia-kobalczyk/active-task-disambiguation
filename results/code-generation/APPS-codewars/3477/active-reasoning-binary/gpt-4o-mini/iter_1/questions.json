@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"apple\", \"elap\") == \"eapp\"",
+        "assert sort_string(\"banana\", \"abn\")    == \"aaabnn\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"foos\", \"of\")       == \"oofs\"",
+        "assert sort_string(\"apple\", \"ple\")      == \"ppleaa\""
+    ],
+    "1": [
+        "assert sort_string(\"apple\", \"plea\") == \"aelpp\"",
+        "assert sort_string(\"abcd\", \"zxy\") == \"abcd\" ",
+        "assert sort_string(\"character\", \"rach\") == \"cchraater\" ",
+        "assert sort_string(\"banana\", \"nab\") == \"aaabnn\"",
+        "assert sort_string(\"example\", \"mx\") == \"emaxpl\" ",
+        "assert sort_string(\"apple\", \"plea\") == \"aelp\"",
+        "assert sort_string(\"cherry\", \"ry\") == \"rhyce\"",
+        "assert sort_string(\"hello world\", \"olhd\") == \"llohe wr\""
+    ],
+    "2": [
+        "assert sort_string(\"abcdef\", \"xyz\") == \"abcdef\"",
+        "assert sort_string(\"banana\", \"nab\") == \"aaabnn\"",
+        "assert sort_string(\"apple\", \"ple\") == \"pale\"",
+        "assert sort_string(\"data\", \"adt\") == \"aadt\"",
+        "assert sort_string(\"cherry\", \"ry\") == \"rhyce\"",
+        "assert sort_string(\"hello\", \"ole\") == \"eollh\"",
+        "assert sort_string(\"hello world\", \"olh\") == \"llohe wrd\""
+    ],
+    "3": [
+        "assert sort_string(\"carrot\", \"arct\") == \"aacrrot\"",
+        "assert sort_string(\"hello\", \"ol\") == \"llohe\"",
+        "assert sort_string(\"chocolate\", \"cat\") == \"ccthaole\"",
+        "assert sort_string(\"zebra\", \"be\") == \"bezar\"",
+        "assert sort_string(\"data\", \"dt\") == \"adt\"",
+        "assert sort_string(\"hello\", \"ole\") == \"eollh\""
+    ]
+}

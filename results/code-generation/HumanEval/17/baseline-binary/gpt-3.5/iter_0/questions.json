@@ -1,0 +1,22 @@
+{
+    "0": [
+        "assert parse_music(\"o|o\") == [2, 4]",
+        "assert parse_music(\".|.\") == [1, 1]",
+        "assert parse_music(\"o\") == [4]"
+    ],
+    "1": [
+        "assert parse_music(\"o|o|.\") == [4, 2, 1]",
+        "assert parse_music(\"o\") == [4]",
+        "assert parse_music(\"o|o|.||o\") == [4, 2, 1, 4]\n# The expected output is a list containing integers [4, 2, 1, 4]."
+    ],
+    "2": [
+        "assert parse_music(\".|.|||.|||.||\") == [1, 1, 1, 1, 1, 1, 1, 1, 1]\n# The expected output is a list containing nine 1s.",
+        "assert parse_music(\"o\") == [4]",
+        "assert parse_music(\"o|o|.||\") == [4, 2, 1, 1]"
+    ],
+    "3": [
+        "assert parse_music(\"o|o|.||\") == [4, 2, 1, 1]",
+        "assert parse_music(\"o\") == [4]",
+        "assert parse_music(\".|.|||.|||.||\") == [1, 1, 1, 1, 1, 1, 1, 1, 1]\n# The expected output is a list containing nine integers each equal to 1."
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert compare_versions(\"10.9\", \"10.10\") == False",
+        true
+    ],
+    "1": [
+        "assert compare_versions(\"1.2.3\", \"1.2.3.0\") == True",
+        false
+    ],
+    "2": [
+        "assert compare_versions(\"1.0.0\", \"1.0\") == True",
+        true
+    ],
+    "3": [
+        "assert compare_versions(\"10.0\", \"10.0\") == True",
+        true
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "0": [
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for teeth in cogs:\n        total_teeth *= teeth\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    input_check = isinstance(cogs, list) and len(cogs) > 1\n    output_check = isinstance(n, int) and n >= 0\n    if not (input_check and output_check):\n        return None\n    RPM = 1\n    i = 0\n    while i < n:\n        RPM = RPM * -1\n        i += 1\n    RPM2 = 1\n    i = 0\n    while i < len(cogs) - 1 - n:\n        RPM2 = RPM2 * -1\n        i += 1\n    return [RPM, RPM2]",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for teeth in cogs:\n        total_teeth *= teeth\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    input_check = isinstance(cogs, list) and len(cogs) > 1\n    output_check = isinstance(n, int) and n >= 0\n    if not (input_check and output_check):\n        return None\n    RPM = 1\n    i = 0\n    while i < n:\n        RPM = RPM * -1\n        i += 1\n    RPM2 = 1\n    i = 0\n    while i < len(cogs) - 1 - n:\n        RPM2 = RPM2 * -1\n        i += 1\n    return [RPM, RPM2]",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for teeth in cogs:\n        total_teeth *= teeth\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    input_check = isinstance(cogs, list) and len(cogs) > 1\n    output_check = isinstance(n, int) and n >= 0\n    if not (input_check and output_check):\n        return None\n    RPM = 1\n    i = 0\n    while i < n:\n        RPM = RPM * -1\n        i += 1\n    RPM2 = 1\n    i = 0\n    while i < len(cogs) - 1 - n:\n        RPM2 = RPM2 * -1\n        i += 1\n    return [RPM, RPM2]",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "0": [],
+    "1": [
+        "assert is_isogram(\"subdermatoglyphic\") == True",
+        "assert is_isogram(\"abc-123\") == True"
+    ],
+    "2": [
+        "assert is_isogram(\"Supercalifragilisticexpialidocious\") == False",
+        "assert is_isogram(\"abcabc\") == False"
+    ],
+    "3": [
+        "assert is_isogram(\"isogram\") == False",
+        "assert is_isogram(\"Somethingwithoutrepeatingcharacters\") == True"
+    ]
+}

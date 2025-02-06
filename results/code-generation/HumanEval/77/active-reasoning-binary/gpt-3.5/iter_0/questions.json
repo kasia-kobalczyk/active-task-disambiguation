@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert iscube(10000) == False",
+        "assert iscube(0) == True",
+        "assert iscube(-100000) == False",
+        "assert iscube(-5) == False",
+        "assert iscube(10) == False",
+        "assert iscube(-27) == True",
+        "assert iscube(8) == True",
+        "assert iscube(-27) == False"
+    ],
+    "1": [
+        "assert iscube(1) == True",
+        "assert iscube(64) == True",
+        "assert iscube(27) == True",
+        "assert iscube(100) == False",
+        "assert iscube(8) == True",
+        "assert iscube(125) == True",
+        "assert iscube(64) == False"
+    ],
+    "2": [
+        "assert iscube(216) == True",
+        "assert iscube(1) == True",
+        "assert iscube(27) == True",
+        "assert iscube(49) == False",
+        "assert iscube(8) == False",
+        "assert iscube(8) == True",
+        "assert iscube(125) == True"
+    ],
+    "3": [
+        "assert iscube(1) == True",
+        "assert iscube(0) == True",
+        "assert iscube(8) == True",
+        "assert iscube(10001) == False",
+        "assert iscube(27) == True",
+        "assert iscube(729) == True",
+        "assert iscube(1000000) == False",
+        "assert iscube(8) == False",
+        "assert iscube(125) == True"
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "0": [
+        "assert cat_mouse(\"...............\", 5) == 'boring without all three'",
+        "assert cat_mouse(\".....C............m......\", 5) == 'Escaped!'",
+        "assert cat_mouse(\"...m.....CD...\", 10) == 'Caught!'",
+        "assert cat_mouse(\"..C.....m.\", 5) == 'Caught!'",
+        "assert cat_mouse(\".....CD....m......\", 3) == 'Escaped!'",
+        "assert cat_mouse(\"...m....D....C.......\", 10) == 'Protected!'",
+        "assert cat_mouse(\".....CD......m....\", 3) == 'Caught!'",
+        "assert cat_mouse(\"..C.......D..m.....\", 7) == 'boring without all three'",
+        "assert cat_mouse(\"...m.........C...D\", 10) == 'Caught!'"
+    ],
+    "1": [
+        "assert cat_mouse(\".....C....m....\", 3) == 'Caught!'",
+        "assert cat_mouse(\"...m........C............\", 5) == 'Escaped!' ",
+        "assert cat_mouse(\"CDm\", 1) == 'Caught!'",
+        "assert cat_mouse(\"..m.D.C.\", 5) == 'Caught!'",
+        "assert cat_mouse(\"C.............m...........\", 5) == 'Caught!' ",
+        "assert cat_mouse(\"....C...mD...\", 10) == 'Caught!' ",
+        "assert cat_mouse(\"...m........C............D\", 5) == 'Caught!'",
+        "assert cat_mouse(\"...C.....m\", 6) == 'Caught!'",
+        "assert cat_mouse(\"C...............m.........\", 10) == 'Caught!' #Cat can jump far enough and jump is not over dog",
+        "assert cat_mouse(\"...m........C............D\", 10) == 'Protected!' ",
+        "assert cat_mouse(\"...m....D....C.....\", 4) == 'Protected!'"
+    ],
+    "2": [
+        "assert cat_mouse(\".....C....m....\", 3) == 'Caught!'",
+        "assert cat_mouse(\"...m........C............\", 5) == 'Escaped!' ",
+        "assert cat_mouse(\"...m....D....C.....\", 4) == 'Protected!'",
+        "assert cat_mouse(\"CDm\", 1) == 'Caught!'",
+        "assert cat_mouse(\"....C...mD...\", 10) == 'Caught!' ",
+        "assert cat_mouse(\"...m........C............D\", 5) == 'Caught!'",
+        "assert cat_mouse(\"...C.....m\", 6) == 'Caught!'",
+        "assert cat_mouse(\"C...............m.........\", 10) == 'Caught!' #Cat can jump far enough and jump is not over dog",
+        "assert cat_mouse(\"...m........C............D\", 10) == 'Protected!' ",
+        "assert cat_mouse(\"C.............m...........\", 5) == 'Caught!' "
+    ],
+    "3": [
+        "assert cat_mouse(\".....C....m....\", 3) == 'Caught!'",
+        "assert cat_mouse(\"...m....D....C.....\", 4) == 'Protected!'",
+        "assert cat_mouse(\"CDm\", 1) == 'Caught!'",
+        "assert cat_mouse(\"....C...mD...\", 10) == 'Caught!' ",
+        "assert cat_mouse(\"...m........C............D\", 5) == 'Caught!'",
+        "assert cat_mouse(\"...C.....m\", 6) == 'Caught!'",
+        "assert cat_mouse(\"C...............m.........\", 10) == 'Caught!' #Cat can jump far enough and jump is not over dog",
+        "assert cat_mouse(\"...m........C............D\", 10) == 'Protected!' ",
+        "assert cat_mouse(\"C.............m...........\", 5) == 'Caught!' "
+    ]
+}

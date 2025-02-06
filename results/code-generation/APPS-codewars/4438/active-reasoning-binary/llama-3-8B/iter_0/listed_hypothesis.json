@@ -1,0 +1,57 @@
+{
+    "0": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    a = (x1 - x2, y1 - y2, z1 - z2)\n    b = (x3 - x2, y3 - y2, z3 - z2)\n    if a[0] * b[0] + a[1] * b[1] + a[2] * b[2] == 0:\n        return 1\n    elif a[0] * b[0] + a[1] * b[1] + a[2] * b[2] > 0:\n        return 3\n    else:\n        return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    a = (x1 - x2, y1 - y2, z1 - z2)\n    b = (x3 - x2, y3 - y2, z3 - z2)\n    if a[0] * b[0] + a[1] * b[1] + a[2] * b[2] == 0:\n        return 1\n    elif a[0] * b[0] + a[1] * b[1] + a[2] * b[2] > 0:\n        return 3\n    else:\n        return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    a = (x1 - x2, y1 - y2, z1 - z2)\n    b = (x3 - x2, y3 - y2, z3 - z2)\n    if a[0] * b[0] + a[1] * b[1] + a[2] * b[2] == 0:\n        return 1\n    elif a[0] * b[0] + a[1] * b[1] + a[2] * b[2] > 0:\n        return 3\n    else:\n        return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    a = (x1 - x2, y1 - y2, z1 - z2)\n    b = (x3 - x2, y3 - y2, z3 - z2)\n    if a[0] * b[0] + a[1] * b[1] + a[2] * b[2] == 0:\n        return 1\n    elif a[0] * b[0] + a[1] * b[1] + a[2] * b[2] > 0:\n        return 3\n    else:\n        return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    a = (x1 - x2, y1 - y2, z1 - z2)\n    b = (x3 - x2, y3 - y2, z3 - z2)\n    if a[0] * b[0] + a[1] * b[1] + a[2] * b[2] == 0:\n        return 1\n    elif a[0] * b[0] + a[1] * b[1] + a[2] * b[2] > 0:\n        return 3\n    else:\n        return 2",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    x1, y1, z1, x2, y2, z2, x3, y3, z3 = sorted([x1, x2, x3]), sorted([y1, y2, y3]), sorted([z1, z2, z3])\n    if [x1, y1, z1] == [x2, y2, z2]:\n        return 3\n    elif [x1, y1, z1] == [x3, y3, z3]:\n        return 2\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    x1, y1, z1, x2, y2, z2, x3, y3, z3 = sorted([x1, x2, x3]), sorted([y1, y2, y3]), sorted([z1, z2, z3])\n    if [x1, y1, z1] == [x2, y2, z2]:\n        return 3\n    elif [x1, y1, z1] == [x3, y3, z3]:\n        return 2\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    x1, y1, z1, x2, y2, z2, x3, y3, z3 = sorted([x1, x2, x3]), sorted([y1, y2, y3]), sorted([z1, z2, z3])\n    if [x1, y1, z1] == [x2, y2, z2]:\n        return 3\n    elif [x1, y1, z1] == [x3, y3, z3]:\n        return 2\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    x1, y1, z1, x2, y2, z2, x3, y3, z3 = sorted([x1, x2, x3]), sorted([y1, y2, y3]), sorted([z1, z2, z3])\n    if [x1, y1, z1] == [x2, y2, z2]:\n        return 3\n    elif [x1, y1, z1] == [x3, y3, z3]:\n        return 2\n    else:\n        return 1",
+            "logp": null
+        },
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    x1, y1, z1, x2, y2, z2, x3, y3, z3 = sorted([x1, x2, x3]), sorted([y1, y2, y3]), sorted([z1, z2, z3])\n    if [x1, y1, z1] == [x2, y2, z2]:\n        return 3\n    elif [x1, y1, z1] == [x3, y3, z3]:\n        return 2\n    else:\n        return 1",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    point1 = [x1, y1, z1]\n    point2 = [x2, y2, z2]\n    point3 = [x3, y3, z3]\n    middle = sorted([point1, point2, point3], key=lambda x: (x[0], x[1], x[2]))\n    if middle[1] == point2:\n        return 2\n    elif middle[0] == point2:\n        return 1\n    else:\n        return 3",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def middle_point(x1, y1, z1, x2, y2, z2, x3, y3, z3):\n    point1 = [x1, y1, z1]\n    point2 = [x2, y2, z2]\n    point3 = [x3, y3, z3]\n    middle = sorted([point1, point2, point3], key=lambda x: (x[0], x[1], x[2]))\n    if middle[0] == point1:\n        return 2\n    elif middle[0] == point2:\n        return 1\n    else:\n        return 3",
+            "logp": null
+        }
+    ],
+    "3": []
+}

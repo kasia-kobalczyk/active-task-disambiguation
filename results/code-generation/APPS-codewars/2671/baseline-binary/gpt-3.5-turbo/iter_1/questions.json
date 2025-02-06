@@ -1,0 +1,24 @@
+{
+    "0": [
+        "assert cat_mouse(\".....C.....m.\", 5) == 'Caught!', \"Test case 1 failed\"",
+        "assert cat_mouse(\"...m.........C...D\", 10) == 'Caught!', \"Test case 3 failed\"",
+        "assert cat_mouse(\".....C............m......\", 5) == 'Escaped!', \"Test case 2 failed\""
+    ],
+    "1": [
+        "assert cat_mouse('.....C............m......', 5) == 'Escaped!'",
+        "assert cat_mouse('...m.........C...D', 10) == 'Caught!'",
+        "assert cat_mouse('...m....D....C.......', 10) == 'Protected!'",
+        "assert cat_mouse('..............', 5) == 'boring without all three'",
+        "assert cat_mouse('..C.....m.', 5) == 'Caught!'"
+    ],
+    "2": [
+        "assert cat_mouse('...m.........C...D', 10) == 'Caught!'",
+        "assert cat_mouse('..............', 5) == 'boring without all three'",
+        "assert cat_mouse('...m....D....C.......', 10) == 'Protected!'",
+        "assert cat_mouse('..C.....m.', 5) == 'Caught!'"
+    ],
+    "3": [
+        "assert cat_mouse('...m.........C...', 10) == 'Escaped!'",
+        "assert cat_mouse('...m....D....C.......', 10) == 'Protected!'"
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert validate(\"79927398712\") == False",
+        "assert validate(\"7992739871\") == False",
+        "assert validate(\"1234567890123457\") == False",
+        "assert validate(\"4913651887353\") == False",
+        "assert validate(\"8765432198765432\") == True",
+        "assert validate(\"4913651887363\") == True",
+        "assert validate(\"4355695443214997\") == True",
+        "assert validate(\"1234567890123456\") == False"
+    ],
+    "1": [
+        "assert validate(\"79927398712\") == False",
+        "assert validate(\"7992739871\") == False",
+        "assert validate(\"1234567890123457\") == False",
+        "assert validate(\"4913651887353\") == False",
+        "assert validate(\"4913651887363\") == True",
+        "assert validate(\"4355695443214997\") == True",
+        "assert validate(\"1234567890123456\") == False"
+    ],
+    "2": [
+        "assert validate(\"4532015112830366\") == True",
+        "assert validate(\"491610379580399\") == True",
+        "assert validate(\"7992739871\") == False",
+        "assert validate(\"79927398710\") == False",
+        "assert validate(\"5391123229706996\") == True",
+        "assert validate(\"6889991030053443\") == False",
+        "assert validate(\"79927398711\") == True"
+    ],
+    "3": [
+        "assert validate(\"6889991030059753\") == False",
+        "assert validate(\"491610379580399\") == True",
+        "assert validate(\"457637520\") == False",
+        "assert validate(\"6208\") == True",
+        "assert validate(\"5391123229706996\") == False",
+        "assert validate(\"1234567890123456\") == False"
+    ]
+}

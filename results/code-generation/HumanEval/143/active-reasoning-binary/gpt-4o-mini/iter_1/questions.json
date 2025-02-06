@@ -1,0 +1,35 @@
+{
+    "0": [
+        "assert words_in_sentence(\"Python is awesome\") == \"is awesome\"",
+        "assert words_in_sentence(\"prime length words\") == \"length\"",
+        "assert words_in_sentence(\"the quick brown fox jumps over the lazy dog\") == \"the fox the\"",
+        "assert words_in_sentence(\"this is a test\") == \"is a\"",
+        "assert words_in_sentence(\"a b c d e\") == \"a b c\"",
+        "assert words_in_sentence(\"a quick brown fox\") == \"a fox\"",
+        "assert words_in_sentence(\"hello world\") == \"hello\""
+    ],
+    "1": [
+        "assert words_in_sentence(\"Hello world\") == \"Hello\"",
+        "assert words_in_sentence(\"Hello world\") == \"world\"",
+        "assert words_in_sentence(\"Coding is fun\") == \"is fun\"",
+        "assert words_in_sentence(\"This is a test\") == \"is a\"",
+        "assert words_in_sentence(\"This function filters words\") == \"This words\"",
+        "assert words_in_sentence(\"a b c def ghij klmno pqrst uvwxyz\") == \"a b c\"",
+        "assert words_in_sentence(\"I love programming in Python\") == \"I love in\""
+    ],
+    "2": [
+        "assert words_in_sentence(\"Hello world\") == \"world\"",
+        "assert words_in_sentence(\"Coding is fun\") == \"is fun\"",
+        "assert words_in_sentence(\"This is a test\") == \"is a\"",
+        "assert words_in_sentence(\"This function filters words\") == \"This words\"",
+        "assert words_in_sentence(\"a b c def ghij klmno pqrst uvwxyz\") == \"a b c\"",
+        "assert words_in_sentence(\"I love programming in Python\") == \"I love in\""
+    ],
+    "3": [
+        "assert words_in_sentence(\"Coding is fun\") == \"is fun\"",
+        "assert words_in_sentence(\"This is a test\") == \"is a\"",
+        "assert words_in_sentence(\"This function filters words\") == \"This words\"",
+        "assert words_in_sentence(\"a b c def ghij klmno pqrst uvwxyz\") == \"a b c\"",
+        "assert words_in_sentence(\"I love programming in Python\") == \"I love in\""
+    ]
+}

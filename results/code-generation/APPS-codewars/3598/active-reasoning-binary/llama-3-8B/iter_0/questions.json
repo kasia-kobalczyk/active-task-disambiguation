@@ -1,0 +1,36 @@
+{
+    "0": [
+        "assert plane_seat(\"20J\") == \"No Seat!!\"",
+        "assert plane_seat(\"100X\") == \"No Seat!!\"",
+        "assert plane_seat(\"40F\") == \"Back-Middle\"",
+        "assert plane_seat(\"61B\") == \"No Seat!!\"",
+        "assert plane_seat(\"3C\") == \"Front-Left\""
+    ],
+    "1": [
+        "assert plane_seat(\"5I\") == \"No Seat!!\"",
+        "assert plane_seat(\"65C\") == \"No Seat!!\"",
+        "assert plane_seat(\"31E\") == \"Middle-Right\"",
+        "assert plane_seat(\"61C\") == \"No Seat!!\"",
+        "assert plane_seat(\"23F\") == \"Middle-Right\"",
+        "assert plane_seat(\"45K\") == \"Back-Right\"",
+        "assert plane_seat(\"1J\") == \"No Seat!!\"",
+        "assert plane_seat(\"42K\") == \"Back-Right\""
+    ],
+    "2": [
+        "assert plane_seat(\"25G\") == \"Middle-Right\"",
+        "assert plane_seat(\"15\") == \"No Seat!!\"",
+        "assert plane_seat(\"23F\") == \"Middle-Right\"",
+        "assert plane_seat(\"45K\") == \"Back-Right\"",
+        "assert plane_seat(\"60K\") == \"Back-Right\"",
+        "assert plane_seat(\"61A\") == \"No Seat!!\"",
+        "assert plane_seat(\"20F\") == \"Middle-Right\"",
+        "assert plane_seat(\"19C\") == \"Front-Left\""
+    ],
+    "3": [
+        "assert plane_seat(\"20D\") == \"Middle-Left\"",
+        "assert plane_seat(\"45K\") == \"Back-Right\"",
+        "assert plane_seat(\"40E\") == \"Back-Middle\"",
+        "assert plane_seat(\"5J\") == \"No Seat!!\"",
+        "assert plane_seat(\"60E\") == \"No Seat!!\""
+    ]
+}

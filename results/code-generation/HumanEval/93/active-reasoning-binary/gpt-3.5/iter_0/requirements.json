@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert encode(\"Python is awesome!\") == \"pG8thNIs 1vQs1mE!\"",
+        false
+    ],
+    "1": [
+        "assert encode(\"ABCDE\") == \"BCDEFG\"",
+        false
+    ],
+    "2": [
+        "assert encode(\"abcdefghijklmnopqrstuvwxyz\") == \"BCDEFGHIJKLMNOPQRSTUVWXYZAbCDEFGHIJKLMNOPQRSTUVWXYZA\"",
+        false
+    ],
+    "3": [
+        "assert encode(\"Lorem Ipsum\") == \"lOrEM IpsUm\"\n# be 'lOrEM IpsUm'.",
+        false
+    ]
+}

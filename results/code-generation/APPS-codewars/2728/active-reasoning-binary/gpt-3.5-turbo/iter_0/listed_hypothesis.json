@@ -1,0 +1,166 @@
+{
+    "0": [
+        {
+            "content": "def inverseMod(a, m):\n    def egcd(a, b):\n        if a == 0:\n            return (b, 0, 1)\n        else:\n            g, y, x = egcd(b % a, a)\n            return (g, x - (b // a) * y, y)\n\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, n):\n    def egcd(a, b):\n        if a == 0:\n            return (b, 0, 1)\n        else:\n            g, y, x = egcd(b % a, a)\n            return (g, x - (b // a) * y, y)\n\n    g, x, y = egcd(a, n)\n    if g != 1:\n        return None\n    else:\n        return x % n",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    def egcd(a, b):\n        if a == 0:\n            return (b, 0, 1)\n        else:\n            g, y, x = egcd(b % a, a)\n            return (g, x - (b // a) * y, y)\n\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    def egcd(a, b):\n        if a == 0:\n            return (b, 0, 1)\n        else:\n            g, y, x = egcd(b % a, a)\n            return (g, x - (b // a) * y, y)\n\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m\n\nprint(inverseMod(3, 7)) # 5\nprint(inverseMod(2, 5)) # 3\nprint(inverseMod(4, 8)) # None",
+            "logp": null
+        },
+        {
+            "content": "# Plan\n\n1. Check if a and n are coprime by calculating their greatest common divisor (gcd). If gcd(a, n) is not equal to 1, return None.\n2. Use the extended Euclidean algorithm to find the inverse of a modulo n.\n3. Return the inverse of a modulo n.",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    def egcd(a, b):\n        if a == 0:\n            return (b, 0, 1)\n        else:\n            g, y, x = egcd(b % a, a)\n            return (g, x - (b // a) * y, y)\n    \n    gcd, x, y = egcd(a, m)\n    \n    if gcd != 1:\n        return None\n    \n    return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, n):\n    def egcd(a, b):\n        if a == 0:\n            return (b, 0, 1)\n        else:\n            g, y, x = egcd(b % a, a)\n            return (g, x - (b // a) * y, y)\n\n    g, x, y = egcd(a, n)\n    if g != 1:\n        return None\n    else:\n        return x % n",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    def egcd(a, b):\n        if a == 0:\n            return (b, 0, 1)\n        else:\n            g, y, x = egcd(b % a, a)\n            return (g, x - (b // a) * y, y)\n    \n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, n):\n    def egcd(a, b):\n        if a == 0:\n            return (b, 0, 1)\n        else:\n            g, y, x = egcd(b % a, a)\n            return (g, x - (b // a) * y, y)\n\n    g, x, y = egcd(a, n)\n    if g != 1:\n        return None\n    else:\n        return x % n",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    # check if a and m are coprime\n    if egcd(a, m)[0] != 1:\n        return None\n    \n    # calculate the inverse using the extended Euclidean algorithm\n    _, x, _ = egcd(a, m)\n    \n    # return the positive value of the inverse modulo m\n    return (x % m + m) % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    gcd, x, y = egcd(a, m)\n    if gcd != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m\n",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m\n\ndef egcd(a, b):\n    if a == 0:\n        return (b, 0, 1)\n    else:\n        g, x, y = egcd(b % a, a)\n        return (g, y - (b // a) * x, x)",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    if gcd(a, m) != 1:\n        return None\n    _, x, _ = extended_gcd(a, m)\n    return x % m\n\n\ndef gcd(a, b):\n    while b != 0:\n        a, b = b, a % b\n    return a\n\n\ndef extended_gcd(a, b):\n    if a == 0:\n        return b, 0, 1\n    else:\n        g, x, y = extended_gcd(b % a, a)\n        return g, y - (b // a) * x, x",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "# Find the greatest common divisor (gcd) of a and m using the extended Euclidean algorithm.\n# If the gcd is not 1, then a and m are not coprime and there is no modular inverse.\n# Otherwise, the modular inverse of a modulo m is the second element of the result of the extended Euclidean algorithm.\n# Return None if a and m are not coprime, otherwise return the modular inverse.\n\ndef inverseMod(a, m):\n    gcd, x, y = egcd(a, m)\n    if gcd != 1:\n        return None\n    return x % m",
+            "logp": null
+        },
+        {
+            "content": "    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m\n\n# Implementing the helper function egcd()\ndef egcd(a, b):\n    if a == 0:\n        return (b, 0, 1)\n    else:\n        g, x, y = egcd(b % a, a)\n        return (g, y - (b // a) * x, x)",
+            "logp": null
+        },
+        {
+            "content": "def inverseMod(a, m):\n    g, x, y = egcd(a, m)\n    if g != 1:\n        return None\n    else:\n        return x % m\n\ndef egcd(a, b):\n    if a == 0:\n        return (b, 0, 1)\n    else:\n        g, x, y = egcd(b % a, a)\n        return (g, y - (b // a) * x, x)\n\nprint(inverseMod(7, 13))  # 2\nprint(inverseMod(3, 5))   # 2\nprint(inverseMod(2, 5))   # 3",
+            "logp": null
+        }
+    ]
+}

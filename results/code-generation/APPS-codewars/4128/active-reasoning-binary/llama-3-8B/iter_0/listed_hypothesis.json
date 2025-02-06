@@ -1,0 +1,66 @@
+{
+    "0": [
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    return mating_pairs, len(mating_pairs) >= n",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    return mating_pairs, len(mating_pairs) >= n",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    return mating_pairs, len(mating_pairs) >= n",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    return mating_pairs, len(mating_pairs) >= n",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    return mating_pairs, len(mating_pairs) >= n",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    result = ''\n    for pair in mating_pairs:\n        if pair not in result:\n            result += pair\n    return [result, len(mating_pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    result = ''\n    for pair in mating_pairs:\n        if pair not in result:\n            result += pair\n    return [result, len(mating_pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    result = ''\n    for pair in mating_pairs:\n        if pair not in result:\n            result += pair\n    return [result, len(mating_pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    result = ''\n    for pair in mating_pairs:\n        if pair not in result:\n            result += pair\n    return [result, len(mating_pairs) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    result = ''\n    for pair in mating_pairs:\n        if pair not in result:\n            result += pair\n    return [result, len(mating_pairs) >= n]",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    result = mating_pairs[:n]\n    return result + [len(result) >= n]",
+            "logp": null
+        },
+        {
+            "content": "def bears(n, s):\n    result = re.finditer('B8|8B', s)\n    mating_pairs = ''.join(m.group() for m in result)\n    return [mating_pairs, len(s) >= n]",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    result = mating_pairs[:n]\n    if len(result) == n:\n        return result + [True]\n    else:\n        return result + [False]",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def bears(n, s):\n    mating_pairs = re.findall('B8|8B', s)\n    result = mating_pairs[:n]\n    if len(result) >= n:\n        return result + [True]\n    else:\n        return result + [False]",
+            "logp": null
+        }
+    ]
+}

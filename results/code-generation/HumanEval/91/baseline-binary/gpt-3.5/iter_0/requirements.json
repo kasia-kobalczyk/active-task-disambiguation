@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert is_bored(\"I am bored. Are you bored? Why are you bored!\") == 2",
+        false
+    ],
+    "1": [
+        "assert is_bored(\"This is a random string.\") == 0",
+        true
+    ],
+    "2": [
+        "assert is_bored(\"I am bored. I don't want to do anything. I need a break!\") == 3",
+        true
+    ],
+    "3": [
+        "assert is_bored(\"I am bored.\") == 1",
+        true
+    ]
+}

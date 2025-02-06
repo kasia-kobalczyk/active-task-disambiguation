@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert bears(0, 'BBBB8888') == ['B8', True]",
+        "assert bears(2, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(3, 'B8B8B8B8') == ['B8B8B8', True]",
+        "assert bears(5, 'B8K8B3B8B8B8') == ['B8B8B8B8', False]",
+        "assert bears(3, 'B8B8B8BB8') == ['B8B8B8', True]",
+        "assert bears(1, 'B8B8') == ['B8B8', True]",
+        "assert bears(1, 'B8B8B8') == ['B8B8', True]",
+        "assert bears(2, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', True]"
+    ],
+    "1": [
+        "assert bears(3, 'B8B8B8B') == ['B8B8B8', True]\n    ",
+        "assert bears(2, 'BB8') == ['B8', False]\n    ",
+        "assert bears(2, 'B8B8B') == ['B8B8', True]",
+        "assert bears(2, 'B8B8B8') == ['B8B8B8', True]",
+        "assert bears(1, 'B8') == ['B8', True]\n    ",
+        "assert bears(3, 'B8B8') == ['B8B8', False]\n    ",
+        "assert bears(0, 'BBBB8B8') == ['B8B8', True]\n    "
+    ],
+    "2": [
+        "assert bears(1, 'B88B8B') == ['B88B', True]",
+        "assert bears(4, 'B8B8B8B8B') == ['B8B8B8B8', True]\n    ",
+        "assert bears(1, 'B88B') == ['B8', True]\n    ",
+        "assert bears(4, 'B8B8B8') == ['B8B8B8', False]\n    ",
+        "assert bears(2, 'B8B8B') == ['B8B8', True]",
+        "assert bears(0, 'BBBB8888') == ['B88B', True]\n    ",
+        "assert bears(0, 'BBBB') == ['', True]\n    ",
+        "assert bears(2, 'B8B8B8B8') == ['B8B8B8B8', True]\n    "
+    ],
+    "3": [
+        "assert bears(2, '88B8B8') == ['B8B8', True]\n    ",
+        "assert bears(1, 'B8BB8B') == ['B8B', True]\n    ",
+        "assert bears(4, 'B8B8B8') == ['B8B8B8', False]\n    ",
+        "assert bears(0, 'BBBB8888') == ['B88B', True]\n    ",
+        "assert bears(0, 'BBBB8') == ['B8', True]\n    ",
+        "assert bears(2, 'B8B8B8') == ['B8B8B8', True]",
+        "assert bears(2, 'B8B8B8B8') == ['B8B8B8B8', True]\n    "
+    ]
+}

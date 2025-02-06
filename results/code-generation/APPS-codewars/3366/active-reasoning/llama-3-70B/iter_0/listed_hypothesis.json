@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = ''\n    for i in range(d, 0, -1):\n        idx, n = divmod(n, math.factorial(i-1))\n        result += digits[idx]\n        digits.pop(idx)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    perm = ''\n    n -= 1\n    while d > 0:\n        d -= 1\n        factorial = math.factorial(d)\n        index, n = divmod(n, factorial)\n        perm += digits[index]\n        digits.pop(index)\n    return perm",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = ''\n    for i in range(d,0,-1):\n        index, n = divmod(n, math.factorial(i-1))\n        result += digits[index]\n        digits.pop(index)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    while digits:\n        fact = math.factorial(len(digits) - 1)\n        idx, n = divmod(n, fact)\n        permutation += digits.pop(idx)\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        i_fac = math.factorial(i-1)\n        index, n = divmod(n, i_fac)\n        permutation += digits.pop(index)\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = \"\"\n    for i in range(d, 0, -1):\n        index, n = divmod(n, math.factorial(i-1))\n        result += digits[index]\n        digits.pop(index)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        idx, n = divmod(n, math.factorial(i-1))\n        permutation += digits[idx]\n        digits.pop(idx)\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        i_fact = math.factorial(i - 1)\n        idx = n // i_fact\n        permutation += digits[idx]\n        digits.pop(idx)\n        n %= i_fact\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1  # make n 0-indexed\n    while d > 0:\n        d -= 1\n        # get the index of current digit\n        idx, n = divmod(n, math.factorial(d))\n        permutation += digits[idx]\n        # remove handled digit\n        digits.pop(idx)\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digs = [str(i) for i in range(d)]\n    n -= 1\n    res = ''\n    for i in range(d,0,-1):\n        fact = math.factorial(i-1)\n        idx = n // fact\n        res += digs[idx]\n        digs.pop(idx)\n        n %= fact\n    return res",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    while d > 0:\n        d -= 1\n        # get the index of current digit\n        index, n = divmod(n, math.factorial(d))\n        permutation += digits[index]\n        # remove handled digit\n        digits.remove(digits[index])\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = []\n    for i in range(d, 0, -1):\n        idx, n = divmod(n, math.factorial(i - 1))\n        result.append(digits.pop(idx))\n    return ''.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    perm = \"\"\n    n -= 1\n    while d > 0:\n        d -= 1\n        factorial = math.factorial(d)\n        index, n = divmod(n, factorial)\n        perm += digits[index]\n        digits.remove(digits[index])\n    return perm",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = ''\n    for i in range(d,0,-1):\n        index, n = divmod(n, math.factorial(i-1))\n        result += digits[index]\n        digits.pop(index)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    perm = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        i_fac = math.factorial(i-1)\n        index, n = divmod(n, i_fac)\n        perm += digits.pop(index)\n    return perm",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = \"\"\n    for i in range(d, 0, -1):\n        index, n = divmod(n, math.factorial(i-1))\n        result += digits[index]\n        digits.pop(index)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        idx, n = divmod(n, math.factorial(i-1))\n        permutation += digits[idx]\n        digits.pop(idx)\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1  # make n 0-indexed\n    while d > 0:\n        d -= 1\n        factorial = math.factorial(d)\n        index, n = divmod(n, factorial)\n        permutation += digits[index]\n        digits.remove(digits[index])\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        i_fact = math.factorial(i - 1)\n        idx = n // i_fact\n        permutation += digits[idx]\n        digits.pop(idx)\n        n %= i_fact\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digs = [str(i) for i in range(d)]\n    n -= 1\n    res = ''\n    for i in range(d,0,-1):\n        fact = math.factorial(i-1)\n        idx = n // fact\n        res += digs[idx]\n        digs.pop(idx)\n        n %= fact\n    return res",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    result = ''\n    n -= 1\n    while d > 0:\n        d -= 1\n        # get the index of current digit\n        idx, n = divmod(n, math.factorial(d))\n        result += digits[idx]\n        # remove handled digit\n        digits.remove(digits[idx])\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = ''\n    for i in range(d, 0, -1):\n        idx, n = divmod(n, math.factorial(i-1))\n        result += digits[idx]\n        digits.pop(idx)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = []\n    for i in range(d, 0, -1):\n        idx, n = divmod(n, math.factorial(i - 1))\n        result.append(digits.pop(idx))\n    return ''.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    perm = \"\"\n    n -= 1\n    while d > 0:\n        d -= 1\n        factorial = math.factorial(d)\n        index, n = divmod(n, factorial)\n        perm += digits[index]\n        digits.remove(digits[index])\n    return perm",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    perm = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        i_fac = math.factorial(i-1)\n        index, n = divmod(n, i_fac)\n        perm += digits.pop(index)\n    return perm",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = \"\"\n    for i in range(d, 0, -1):\n        index, n = divmod(n, math.factorial(i-1))\n        result += digits[index]\n        digits.pop(index)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1  # make n 0-indexed\n    while d > 0:\n        d -= 1\n        factorial = math.factorial(d)\n        index, n = divmod(n, factorial)\n        permutation += digits[index]\n        digits.remove(digits[index])\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        idx, n = divmod(n, math.factorial(i-1))\n        permutation += digits[idx]\n        digits.pop(idx)\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        i_fact = math.factorial(i - 1)\n        idx = n // i_fact\n        permutation += digits[idx]\n        digits.pop(idx)\n        n %= i_fact\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digs = [str(i) for i in range(d)]\n    n -= 1\n    res = ''\n    for i in range(d,0,-1):\n        fact = math.factorial(i-1)\n        idx = n // fact\n        res += digs[idx]\n        digs.pop(idx)\n        n %= fact\n    return res",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    while d > 0:\n        d -= 1\n        # get the index of current digit\n        index, n = divmod(n, math.factorial(d))\n        permutation += digits[index]\n        # remove handled digit\n        digits.remove(digits[index])\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = []\n    for i in range(d, 0, -1):\n        idx, n = divmod(n, math.factorial(i - 1))\n        result.append(digits.pop(idx))\n    return ''.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    perm = \"\"\n    n -= 1\n    while d > 0:\n        d -= 1\n        factorial = math.factorial(d)\n        index, n = divmod(n, factorial)\n        perm += digits[index]\n        digits.remove(digits[index])\n    return perm",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    factorial = [math.factorial(i) for i in range(d + 1)]\n    digits = [str(i) for i in range(d)]\n    result = ''\n    \n    n -= 1\n    \n    for i in range(d, 0, -1):\n        index = n // factorial[i - 1]\n        n %= factorial[i - 1]\n        result += digits[index]\n        digits.pop(index)\n        \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    perm = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        i_fac = math.factorial(i-1)\n        index, n = divmod(n, i_fac)\n        perm += digits.pop(index)\n    return perm",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    n -= 1\n    result = \"\"\n    for i in range(d, 0, -1):\n        index, n = divmod(n, math.factorial(i-1))\n        result += digits[index]\n        digits.pop(index)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        i -= 1\n        index, n = divmod(n, math.factorial(i))\n        permutation += digits[index]\n        digits.pop(index)\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n, d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1\n    for i in range(d, 0, -1):\n        idx, n = divmod(n, math.factorial(i-1))\n        permutation += digits[idx]\n        digits.pop(idx)\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digits = [str(i) for i in range(d)]\n    permutation = ''\n    n -= 1  # make n 0-indexed\n    while d > 0:\n        d -= 1\n        factorial = math.factorial(d)\n        index, n = divmod(n, factorial)\n        permutation += digits[index]\n        digits.remove(digits[index])\n    return permutation",
+            "logp": null
+        },
+        {
+            "content": "def nth_perm(n,d):\n    digs = [str(i) for i in range(d)]\n    n -= 1\n    res = ''\n    for i in range(d,0,-1):\n        fact = math.factorial(i-1)\n        idx = n // fact\n        res += digs[idx]\n        digs.pop(idx)\n        n %= fact\n    return res",
+            "logp": null
+        }
+    ]
+}

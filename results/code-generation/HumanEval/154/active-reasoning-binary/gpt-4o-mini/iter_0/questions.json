@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert cycpattern_check(\"hello\", \"lo\") == True",
+        "assert cycpattern_check(\"hello\", \"world\") == False",
+        "assert cycpattern_check(\"hello\", \"hello\") == True",
+        "assert cycpattern_check(\"abcde\", \"cde\") == True",
+        "assert cycpattern_check(\"hello\", \"lohel\") == True",
+        "assert cycpattern_check(\"abcdef\", \"xyz\") == False",
+        "assert cycpattern_check(\"hello\", \"ell\") == True",
+        "assert cycpattern_check(\"abcde\", \"deabc\") == True"
+    ],
+    "1": [
+        "assert cycpattern_check(\"python\", \"onpyth\") == False",
+        "assert cycpattern_check(\"xyz\", \"zyx\") == False",
+        "assert cycpattern_check(\"hello\", \"lohel\") == True",
+        "assert cycpattern_check(\"testcase\", \"case\") == True",
+        "assert cycpattern_check(\"abababab\", \"baba\") == True",
+        "assert cycpattern_check(\"abcdef\", \"fabc\") == True",
+        "assert cycpattern_check(\"abcde\", \"deabc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"de\") == True"
+    ],
+    "2": [
+        "assert cycpattern_check(\"python\", \"onpyth\") == False",
+        "assert cycpattern_check(\"xyz\", \"zyx\") == False",
+        "assert cycpattern_check(\"hello\", \"lohel\") == True",
+        "assert cycpattern_check(\"testcase\", \"case\") == True",
+        "assert cycpattern_check(\"abababab\", \"baba\") == True",
+        "assert cycpattern_check(\"abcde\", \"deabc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"de\") == True"
+    ],
+    "3": [
+        "assert cycpattern_check(\"xyz\", \"zyx\") == False",
+        "assert cycpattern_check(\"hello\", \"lohel\") == True",
+        "assert cycpattern_check(\"testcase\", \"case\") == True",
+        "assert cycpattern_check(\"abababab\", \"baba\") == True",
+        "assert cycpattern_check(\"abcde\", \"deabc\") == True",
+        "assert cycpattern_check(\"abcdef\", \"de\") == True"
+    ]
+}

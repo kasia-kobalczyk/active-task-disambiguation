@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert words_string(\"hello world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"hello,world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"one,two three,four\") == [\"one\", \"two\", \"three\", \"four\"]",
+        "assert words_string(\"hello, world\") == [\"hello\", \"world\"]",
+        "assert words_string(\"dog cat mouse\") == [\"dog\", \"cat\", \"mouse\"]",
+        "assert words_string(\"apple,banana,cherry\") == [\"apple\", \"banana\", \"cherry\"]",
+        "assert words_string(\"hello, world, how are you\") == [\"hello\", \"world\", \"how\", \"are\", \"you\"]"
+    ],
+    "1": [
+        "assert words_string(\"apple, banana, cherry\") == [\"apple\", \"banana\", \"cherry\"]",
+        "assert words_string(\"dog cat   mouse\") == [\"dog\", \"cat\", \"mouse\"]",
+        "assert words_string(\"  space   before,comma after  \") == [\"space\", \"before\", \"comma\", \"after\"]",
+        "assert words_string(\"singleWord\") == [\"singleWord\"]",
+        "assert words_string(\"one,two three,four\") == [\"one\", \"two\", \"three\", \"four\"]",
+        "assert words_string(\"  leading space, trailing space  \") == [\"leading\", \"space\", \"trailing\", \"space\"]",
+        "assert words_string(\"one two,three four\") == [\"one\", \"two\", \"three\", \"four\"]",
+        "assert words_string(\"apple,banana,cherry\") == [\"apple\", \"banana\", \"cherry\"]"
+    ],
+    "2": [
+        "assert words_string(\" , , , \") == []",
+        "assert words_string(\"one;two;three\") == [\"one;two;three\"]",
+        "assert words_string(\"   python , coding ,  ai  \") == [\"python\", \"coding\", \"ai\"]",
+        "assert words_string(\"cat, dog, fish, turtle\") == [\"cat\", \"dog\", \"fish\", \"turtle\"]",
+        "assert words_string(\"singleword\") == [\"singleword\"]",
+        "assert words_string(\"    leading, spaces   \") == [\"leading\", \"spaces\"]",
+        "assert words_string(\"foo bar baz\") == [\"foo\", \"bar\", \"baz\"]",
+        "assert words_string(\"word1,word2 word3,word4\") == [\"word1\", \"word2\", \"word3\", \"word4\"]"
+    ],
+    "3": [
+        "assert words_string(\"   singleWord   \") == [\"singleWord\"]",
+        "assert words_string(\"  first second ,third , fourth  \") == [\"first\", \"second\", \"third\", \"fourth\"]",
+        "assert words_string(\"   ,,,  ,a ,b ,  c  ,\") == [\"a\", \"b\", \"c\"]",
+        "assert words_string(\"first,second,third,\") == [\"first\", \"second\", \"third\"]",
+        "assert words_string(\"singleword\") == [\"singleword\"]",
+        "assert words_string(\"apple  orange  , banana ,  kiwi \") == [\"apple\", \"orange\", \"banana\", \"kiwi\"]",
+        "assert words_string(\"foo bar, baz qux\") == [\"foo\", \"bar\", \"baz\", \"qux\"]",
+        "assert words_string(\"one,two,three\") == [\"one\", \"two\", \"three\"]"
+    ]
+}

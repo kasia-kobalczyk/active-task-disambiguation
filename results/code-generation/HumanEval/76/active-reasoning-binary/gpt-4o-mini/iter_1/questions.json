@@ -1,0 +1,35 @@
+{
+    "0": [
+        "assert is_simple_power(81, 3) == True",
+        "assert is_simple_power(9, 3) == True",
+        "assert is_simple_power(10, 2) == False  ",
+        "assert is_simple_power(16, 2) == True",
+        "assert is_simple_power(5, 2) == False",
+        "assert is_simple_power(16, 2) == True  ",
+        "assert is_simple_power(27, 3) == True  ",
+        "assert is_simple_power(27, 3) == True"
+    ],
+    "1": [
+        "assert is_simple_power(100, 10) == False",
+        "assert is_simple_power(50, 5) == False",
+        "assert is_simple_power(25, 5) == True",
+        "assert is_simple_power(16, 2) == True",
+        "assert is_simple_power(10, 2) == False",
+        "assert is_simple_power(27, 3) == True"
+    ],
+    "2": [
+        "assert is_simple_power(50, 5) == False",
+        "assert is_simple_power(25, 5) == True",
+        "assert is_simple_power(16, 2) == True",
+        "assert is_simple_power(10, 2) == False",
+        "assert is_simple_power(27, 3) == True"
+    ],
+    "3": [
+        "assert is_simple_power(64, 2) == True",
+        "assert is_simple_power(64, 4) == True",
+        "assert is_simple_power(100, 10) == True",
+        "assert is_simple_power(10, 2) == False",
+        "assert is_simple_power(16, 4) == True",
+        "assert is_simple_power(27, 3) == True"
+    ]
+}

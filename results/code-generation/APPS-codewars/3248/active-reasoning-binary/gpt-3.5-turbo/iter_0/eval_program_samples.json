@@ -1,0 +1,120 @@
+{
+    "0": {
+        "0": [
+            "def get_note(pitch):\n    for p, n in notes.items():\n        if abs(p - pitch) < 0.01:\n            return n\n    return None",
+            "# ====== Solution ======\n\nnotes = {\n    440: \"A\",\n    466.16: \"A#\",\n    493.88: \"B\",\n    523.25: \"C\",\n    554.37: \"C#\",\n    587.33: \"D\",\n    622.25: \"D#\",\n    659.25: \"E\",\n    698.46: \"F\",\n    739.99: \"F#\",\n    783.99: \"G\",\n    830.61: \"G#\"\n}\n\ndef get_note(pitch):\n    for key in notes:\n        if key == pitch:\n            return notes[key]\n    return None",
+            "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch == note_pitch:\n            return note",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq:\n            return note",
+            "def get_note(pitch):\n    for key in notes:\n        if pitch == key:\n            return notes[key]",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq:\n            return note",
+            "def get_note(pitch):\n    for p, note in notes.items():\n        if abs(p - pitch) < 0.01:\n            return note\n    return None",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch == note:\n            return notes[note]\n    return \"Invalid pitch\"",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq:\n            return note",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if key == pitch:\n            return value\n    return None",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if abs(pitch - freq) < 0.01:\n            return note",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq:\n            return note",
+            "def get_note(pitch):\n    for note in notes:\n        if note == pitch:\n            return notes[note]\n    return None",
+            "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch == note_pitch:\n            return note_name",
+            "def get_note(pitch):\n    for note_pitch in notes:\n        if pitch == note_pitch:\n            return notes[note_pitch]\n    return None",
+            "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch == note_pitch:\n            return note_name",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value\n    return None",
+            "def get_note(pitch):\n    for p, n in notes.items():\n        if pitch == p:\n            return n\n    return None",
+            "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch == note_pitch:\n            return note"
+        ],
+        "1": [
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq or pitch % freq == 0:\n            return note",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch == note or pitch % note == 0:\n            return notes[note]",
+            "def get_note(pitch):\n    for p, note in notes.items():\n        if pitch == p:\n            return note\n    return \"A\"",
+            "def get_note(pitch):\n    for note, freq in notes.items():\n        if pitch == note:\n            return freq\n        elif pitch > note:\n            next_note = note * 2\n            while pitch >= next_note:\n                if pitch == next_note:\n                    return freq\n                next_note *= 2\n        elif pitch < note:\n            next_note = note / 2\n            while pitch <= next_note:\n                if pitch == next_note:\n                    return freq\n                next_note /= 2",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch >= note:\n            return notes[note]",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq or pitch % freq == 0:\n            return note",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch % note == 0:\n            return notes[note]"
+        ],
+        "2": [
+            "def get_note(pitch):\n    for note in notes:\n        if pitch % note == 0:\n            return notes[note]",
+            "def get_note(pitch):\n    for key in notes.keys():\n        if pitch % key == 0:\n            return notes[key]"
+        ],
+        "3": [],
+        "4": [
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq:\n            return note\n    return \"A\""
+        ]
+    },
+    "1": {
+        "0": [
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if key == pitch:\n            return value\n    return None",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if abs(pitch - freq) < 0.01:\n            return note",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq:\n            return note",
+            "def get_note(pitch):\n    for note in notes:\n        if note == pitch:\n            return notes[note]\n    return None",
+            "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch == note_pitch:\n            return note_name",
+            "def get_note(pitch):\n    for note_pitch in notes:\n        if pitch == note_pitch:\n            return notes[note_pitch]\n    return None",
+            "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch == note_pitch:\n            return note_name",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value\n    return None",
+            "def get_note(pitch):\n    for p, n in notes.items():\n        if pitch == p:\n            return n\n    return None",
+            "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch == note_pitch:\n            return note",
+            "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch == note_pitch:\n            return note\n    return \"Note not found\"",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch == note:\n            return notes[note]\n    return None",
+            "def get_note(pitch):\n    for p in notes:\n        if pitch == p:\n            return notes[p]\n    return None",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value",
+            "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch == note_pitch:\n            return note_name\n    return None",
+            "def get_note(pitch):\n    for note in notes:\n        if abs(note - pitch) < 0.01:\n            return notes[note]\n    return None",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if key == pitch:\n            return value",
+            "# Plan\n\nTo find the corresponding note for a given pitch, we need to iterate over the notes dictionary and find the note that has the closest pitch to the given pitch. We can do this by calculating the absolute difference between the given pitch and each note's pitch, and keeping track of the note with the smallest difference.\n\n# Steps\n\n1. Initialize a variable `closest_note` to None and a variable `min_difference` to infinity.\n2. Iterate over the notes dictionary using a for loop.\n3. Calculate the absolute difference between the given pitch and the current note's pitch.\n4. If the difference is smaller than the `min_difference`, update `min_difference` to the current difference and `closest_note` to the current note.\n5. After the loop, return the value of `closest_note`.",
+            "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch == note_pitch:\n            return note\n    return None"
+        ],
+        "1": [
+            "def get_note(pitch):\n    for p, note in notes.items():\n        if pitch == p:\n            return note\n    return \"A\"",
+            "def get_note(pitch):\n    for note, freq in notes.items():\n        if pitch == note:\n            return freq\n        elif pitch > note:\n            next_note = note * 2\n            while pitch >= next_note:\n                if pitch == next_note:\n                    return freq\n                next_note *= 2\n        elif pitch < note:\n            next_note = note / 2\n            while pitch <= next_note:\n                if pitch == next_note:\n                    return freq\n                next_note /= 2",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch >= note:\n            return notes[note]",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq or pitch % freq == 0:\n            return note",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch % note == 0:\n            return notes[note]",
+            "def get_note(pitch):\n    for key in notes:\n        if key <= pitch:\n            return notes[key]"
+        ],
+        "2": [
+            "def get_note(pitch):\n    for key in notes.keys():\n        if pitch % key == 0:\n            return notes[key]",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch == note or pitch % note == 0:\n            return notes[note]"
+        ],
+        "3": [],
+        "4": []
+    },
+    "2": {
+        "0": [
+            "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch == note_pitch:\n            return note\n    return \"Note not found\"",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch == note:\n            return notes[note]\n    return None",
+            "def get_note(pitch):\n    for p in notes:\n        if pitch == p:\n            return notes[p]\n    return None",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value",
+            "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch == note_pitch:\n            return note_name\n    return None",
+            "def get_note(pitch):\n    for note in notes:\n        if abs(note - pitch) < 0.01:\n            return notes[note]\n    return None",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if key == pitch:\n            return value",
+            "# Plan\n\nTo find the corresponding note for a given pitch, we need to iterate over the notes dictionary and find the note that has the closest pitch to the given pitch. We can do this by calculating the absolute difference between the given pitch and each note's pitch, and keeping track of the note with the smallest difference.\n\n# Steps\n\n1. Initialize a variable `closest_note` to None and a variable `min_difference` to infinity.\n2. Iterate over the notes dictionary using a for loop.\n3. Calculate the absolute difference between the given pitch and the current note's pitch.\n4. If the difference is smaller than the `min_difference`, update `min_difference` to the current difference and `closest_note` to the current note.\n5. After the loop, return the value of `closest_note`.",
+            "def get_note(pitch):\n    for note_pitch, note in notes.items():\n        if pitch == note_pitch:\n            return note\n    return None",
+            "def get_note(pitch):\n    for note, freq in notes.items():\n        if pitch == note:\n            return freq",
+            "def get_note(pitch):\n    for key in notes:\n        if abs(pitch - key) < 0.01:\n            return notes[key]",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch == note:\n            return notes[note]",
+            "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch == note_pitch:\n            return note_name\n\n    return None",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if pitch == key:\n            return value\n\n    return None",
+            "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if note_pitch == pitch:\n            return note_name\n    return None",
+            "def get_note(pitch):\n    for key, value in notes.items():\n        if key == pitch:\n            return value\n    return None",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq:\n            return note",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if freq == pitch:\n            return note",
+            "def get_note(pitch):\n    for key in notes.keys():\n        if pitch == key:\n            return notes[key]\n    return None"
+        ],
+        "1": [
+            "def get_note(pitch):\n    for note in notes:\n        if pitch >= note:\n            return notes[note]",
+            "def get_note(pitch):\n    for freq, note in notes.items():\n        if pitch == freq or pitch % freq == 0:\n            return note",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch % note == 0:\n            return notes[note]",
+            "def get_note(pitch):\n    for key in notes:\n        if key <= pitch:\n            return notes[key]"
+        ],
+        "2": [
+            "def get_note(pitch):\n    for key in notes.keys():\n        if pitch % key == 0:\n            return notes[key]",
+            "def get_note(pitch):\n    for note in notes:\n        if pitch == note or pitch % note == 0:\n            return notes[note]",
+            "def get_note(pitch):\n    for key in notes:\n        if pitch == key or pitch % key == 0:\n            return notes[key]"
+        ],
+        "3": [],
+        "4": [
+            "def get_note(pitch):\n    for note_pitch, note_name in notes.items():\n        if pitch == note_pitch:\n            return note_name\n    return \"A\""
+        ]
+    }
+}

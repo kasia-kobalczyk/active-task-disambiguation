@@ -1,0 +1,178 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    \n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            changes += 1\n            \n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    \n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n            \n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    \n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n            \n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    count = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    \n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            changes += 1\n            \n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    count = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    changes = 0\n    n = len(arr)\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef smallest_change(arr):\n    n = len(arr)\n    changes = 0\n    \n    for i in range(n // 2):\n        if arr[i] != arr[n - i - 1]:\n            changes += 1\n            \n    return changes\n```",
+            "logp": null
+        }
+    ]
+}

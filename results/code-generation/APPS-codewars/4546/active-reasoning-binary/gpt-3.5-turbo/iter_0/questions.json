@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert find_children(\"aAbaBb\") == \"AaaBbb\"",
+        "assert find_children(\"CcBbAa\") == \"AaBbCc\"",
+        "assert find_children(\"CcBbAbA\") == \"AaaAbBbCc\"",
+        "assert find_children(\"BbAa\") == \"AaBb\"",
+        "assert find_children(\"XYZxyz\") == \"XYZxyz\"",
+        "assert find_children(\"CcdDeEfgGfFEeD\") == \"CccddDeeeEEffFGgg\"",
+        "assert find_children(\"DDddEeFf\") == \"DddDEFff\"",
+        "assert find_children(\"ZyXwvUtsrQpoNmlKjIhGfEdCBa\") == \"AaaBbCcccDddddEeeeeFfffffffGgggggggHhhhhhhhhIiiiiiiiiiJjjjjjjjjjjKkkkkkkkkkkkLllllllllllllMmmmmmmmmmmmmmNnnnnnnnnnnnnnOooooooooooooPppppppppppppppQqqqqqqqqqqqqqqqRrrrrrrrrrrrrrrrrSsssssssssssssssssTtttttttttttttttttUuuuuuuuuuuuuuuuuuuVvvvvvvvvvvvvvvvvvvvWwwwwwwwwwwwwwwwwwwwXxxxxxxxxxxxxxxxxxxxxYyyyyyyyyyyyyyyyyyyyyyZzzzzzzzzzzzzzzzzzzzz\"",
+        "assert find_children(\"ZzYyX\") == \"XYZxyz\""
+    ],
+    "1": [
+        "assert find_children(\"aAbaBb\") == \"AaaBbb\"",
+        "assert find_children(\"\") == \"\"",
+        "assert find_children(\"zZyY\") == \"YyZz\"",
+        "assert find_children(\"xXyYzZ\") == \"XxYyZz\"",
+        "assert find_children(\"AaaBbbCcD\") == \"AaaBbbCcD\"",
+        "assert find_children(\"cDbAdCbB\") == \"AaaBbbCcD\"",
+        "assert find_children(\"cCbB\") == \"BbCc\"",
+        "assert find_children(\"fFgGhHiIjJ\") == \"FfGgHhIiJj\"",
+        "assert find_children(\"XYZxyZ\") == \"XYZxyz\""
+    ],
+    "2": [
+        "assert find_children(\"CBA\") == \"ABC\"",
+        "assert find_children(\"cCbBaAdD\") == \"AaaBbbCcDd\"",
+        "assert find_children(\"AbccBbddD\") == \"ABBccddD\"",
+        "assert find_children(\"cbaCBAAacb\") == \"AABbCc\"",
+        "assert find_children(\"cba\") == \"abc\"\n# Since there are no mothers, the output should be the same as the input.",
+        "assert find_children(\"Ab\") == \"Ab\"",
+        "assert find_children(\"hHeEfFbB\") == \"BbEeFfHh\"",
+        "assert find_children(\"gGjJiIdD\") == \"DdGgIiJj\"",
+        "assert find_children(\"lLoOqQpP\") == \"LlOoPpQq\""
+    ],
+    "3": [
+        "assert find_children(\"BbaaaAaaB\") == \"AaaBbb\"",
+        "assert find_children(\"FkDceJHgbOiNMpL\") == \"BCDEFgHILJMNOp\"",
+        "assert find_children(\"zYxCvBaNmLkJiHgFeDcBa\") == \"ABCDEFGHJIJKLMN\"",
+        "assert find_children(\"ZYXWVUTSRQPONMLKJIHGFEDCBA\") == \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"",
+        "assert find_children(\"aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ\") == \"AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz\"",
+        "assert find_children(\"YxYxYxYxY\") == \"YYYYYY\""
+    ]
+}

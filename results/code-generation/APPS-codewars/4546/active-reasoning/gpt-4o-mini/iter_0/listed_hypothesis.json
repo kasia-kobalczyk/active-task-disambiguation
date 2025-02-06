@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = []\n    children = {}\n    \n    for char in dancing_brigade:\n        if char.isupper():\n            mothers.append(char)\n            children[char] = ''\n        else:\n            children[char.upper()] += char\n    \n    mothers.sort()\n    result = []\n    \n    for mother in mothers:\n        result.append(mother + children[mother])\n    \n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = {}\n    result = []\n    \n    for char in dancing_brigade:\n        if char.isupper():\n            mothers[char] = []\n        elif char.islower():\n            mother = char.upper()\n            if mother in mothers:\n                mothers[mother].append(char)\n    \n    for mother in sorted(mothers.keys()):\n        result.append(mother)\n        result.extend(sorted(mothers[mother]))\n    \n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = {}\n    result = []\n    \n    for person in dancing_brigade:\n        if person.isupper():\n            mothers[person] = []\n        else:\n            mothers[person.upper()].append(person)\n    \n    for mother in sorted(mothers.keys()):\n        result.append(mother)\n        result.extend(sorted(mothers[mother]))\n    \n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = []\n    children = []\n    \n    for char in dancing_brigade:\n        if char.isupper():\n            mothers.append(char)\n        else:\n            children.append(char)\n    \n    children_sorted = {mother: [] for mother in mothers}\n    \n    for child in children:\n        for mother in mothers:\n            if child.lower() == mother.lower():\n                children_sorted[mother].append(child)\n    \n    result = ''.join(sorted(mothers)) + ''.join(''.join(sorted(children_sorted[mother])) for mother in sorted(mothers))\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = sorted([c for c in dancing_brigade if c.isupper()])\n    children = {mother: '' for mother in mothers}\n    \n    for char in dancing_brigade:\n        if char.islower():\n            for mother in mothers:\n                if char.lower() == mother.lower():\n                    children[mother] += char\n\n    result = ''.join([mother + children[mother] for mother in mothers])\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = []\n    children = {}\n    \n    for char in dancing_brigade:\n        if char.isupper():\n            mothers.append(char)\n            children[char] = ''\n        else:\n            children[char.upper()] += char\n    \n    result = []\n    for mother in sorted(mothers):\n        result.append(mother + children[mother])\n    \n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = {}\n    result = []\n    \n    for char in dancing_brigade:\n        if char.isupper():\n            mothers[char] = []\n        elif char.islower():\n            result.append(char)\n    \n    for char in sorted(mothers.keys()):\n        result.append(char)\n        result.extend(sorted([c for c in dancing_brigade if c == char.lower()]))\n    \n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = sorted([char for char in dancing_brigade if char.isupper()])\n    children = sorted([char for char in dancing_brigade if char.islower()])\n    \n    result = []\n    for mother in mothers:\n        result.append(mother + ''.join(c for c in children if c.lower() == mother.lower()))\n    \n    return ''.join(result)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = sorted([char for char in dancing_brigade if char.isupper()])\n    children = sorted([char for char in dancing_brigade if char.islower()])\n    result = ''\n    \n    for mother in mothers:\n        result += mother + ''.join([child for child in children if child.lower() == mother.lower()])\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef find_children(dancing_brigade):\n    mothers = []\n    children = {}\n    \n    for char in dancing_brigade:\n        if char.isupper():\n            mothers.append(char)\n            children[char] = ''\n        else:\n            children[char.upper()] += char\n            \n    sorted_mothers = sorted(mothers)\n    result = ''.join(m + children[m] for m in sorted_mothers)\n    \n    return result\n```",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

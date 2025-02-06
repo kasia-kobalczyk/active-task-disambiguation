@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert plane_seat(20) == 'Front-Right'",
+        "error"
+    ],
+    "1": [
+        "assert plane_seat('21A') == 'Middle-Left'",
+        true
+    ],
+    "2": [
+        "assert plane_seat('35I') == 'No Seat!!'",
+        true
+    ],
+    "3": [
+        "assert plane_seat('8G') == 'Front-Right'",
+        true
+    ]
+}

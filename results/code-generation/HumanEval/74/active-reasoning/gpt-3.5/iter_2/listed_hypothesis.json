@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars1 = sum(len(s) for s in lst1)\n    total_chars2 = sum(len(s) for s in lst2)\n    \n    if total_chars1 < total_chars2:\n        return lst1\n    elif total_chars2 < total_chars1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_1 = sum(len(s) for s in lst1)\n    total_chars_2 = sum(len(s) for s in lst2)\n    \n    if total_chars_1 < total_chars_2:\n        return lst1\n    else:\n        return lst2",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    '''\n    Write a function that accepts two lists of strings and returns the list that has \n    total number of chars in the all strings of the list less than the other list.\n\n    if the two lists have the same number of chars, return the first list.\n    '''\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    else:\n        return lst2",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    else:\n        return lst2",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(string) for string in lst1)\n    total_chars_lst2 = sum(len(string) for string in lst2)\n    \n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    else:\n        return lst2",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    if sum(len(s) for s in lst1) < sum(len(s) for s in lst2):\n        return lst1\n    return lst2",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars1 = sum([len(s) for s in lst1])\n    total_chars2 = sum([len(s) for s in lst2])\n\n    if total_chars1 < total_chars2:\n        return lst1\n    else:\n        return lst2\n\n# Test cases\nprint(total_match(['abc', 'def'], ['ghi', 'jkl']))  # Output: ['abc', 'def']\nprint(total_match(['a', 'b'], ['c', 'd']))  # Output: ['a', 'b']\nprint(total_match(['abcd', 'efgh'], ['ijkl', 'mnop']))  # Output: ['abcd', 'efgh']",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    sum1 = sum([len(s) for s in lst1])\n    sum2 = sum([len(s) for s in lst2])\n\n    if sum1 < sum2:\n        return lst1\n    else:\n        return lst2",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(word) for word in lst1)\n    total_chars_lst2 = sum(len(word) for word in lst2)\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst1 > total_chars_lst2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n    \n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst1 > total_chars_lst2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def total_match(lst1, lst2):\n    sum1 = sum(len(string) for string in lst1)\n    sum2 = sum(len(string) for string in lst2)\n    \n    if sum1 < sum2:\n        return lst1\n    elif sum1 > sum2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum([len(s) for s in lst1])\n    total_chars_lst2 = sum([len(s) for s in lst2])\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst2 < total_chars_lst1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum([len(s) for s in lst1])\n    total2 = sum([len(s) for s in lst2])\n    \n    if total1 < total2:\n        return lst1\n    elif total1 == total2:\n        return lst1\n    else:\n        return lst2",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars1 = sum(len(s) for s in lst1)\n    total_chars2 = sum(len(s) for s in lst2)\n    \n    if total_chars1 < total_chars2:\n        return lst1\n    elif total_chars1 > total_chars2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    sum1 = sum(len(s) for s in lst1)\n    sum2 = sum(len(s) for s in lst2)\n    \n    if sum1 < sum2:\n        return lst1\n    elif sum1 > sum2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars1 = 0\n    for string in lst1:\n        total_chars1 += len(string)\n    \n    total_chars2 = 0\n    for string in lst2:\n        total_chars2 += len(string)\n    \n    if total_chars1 < total_chars2:\n        return lst1\n    elif total_chars1 > total_chars2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_1 = sum(len(string) for string in lst1)\n    total_chars_2 = sum(len(string) for string in lst2)\n    \n    if total_chars_1 < total_chars_2:\n        return lst1\n    elif total_chars_1 > total_chars_2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    elif total1 > total2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    sum1 = sum(len(s) for s in lst1)\n    sum2 = sum(len(s) for s in lst2)\n    \n    if sum1 < sum2:\n        return lst1\n    elif sum1 > sum2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_1 = sum(len(s) for s in lst1)\n    total_chars_2 = sum(len(s) for s in lst2)\n\n    if total_chars_1 < total_chars_2:\n        return lst1\n    elif total_chars_2 < total_chars_1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum(len(string) for string in lst1)\n    total2 = sum(len(string) for string in lst2)\n\n    if total1 < total2:\n        return lst1\n    elif total2 < total1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(word) for word in lst1)\n    total_chars_lst2 = sum(len(word) for word in lst2)\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst1 > total_chars_lst2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    elif total1 > total2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum([len(word) for word in lst1])\n    total2 = sum([len(word) for word in lst2])\n    \n    if total1 < total2:\n        return lst1\n    elif total2 < total1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum(len(string) for string in lst1)\n    total2 = sum(len(string) for string in lst2)\n    \n    if total1 < total2:\n        return lst1\n    elif total1 == total2:\n        return lst1\n    else:\n        return lst2",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(word) for word in lst1)\n    total_chars_lst2 = sum(len(word) for word in lst2)\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst1 > total_chars_lst2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst1 > total_chars_lst2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars1 = sum(len(s) for s in lst1)\n    total_chars2 = sum(len(s) for s in lst2)\n\n    if total_chars1 < total_chars2:\n        return lst1\n    elif total_chars1 > total_chars2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n    \n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst2 < total_chars_lst1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst1 > total_chars_lst2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars1 = sum(len(s) for s in lst1)\n    total_chars2 = sum(len(s) for s in lst2)\n\n    if total_chars1 < total_chars2:\n        return lst1\n    elif total_chars2 < total_chars1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    if total1 < total2:\n        return lst1\n    elif total2 < total1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum(len(s) for s in lst1)\n    total2 = sum(len(s) for s in lst2)\n    \n    if total1 < total2:\n        return lst1\n    elif total1 > total2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(string) for string in lst1)\n    total_chars_lst2 = sum(len(string) for string in lst2)\n    \n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst2 < total_chars_lst1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    '''\n    Write a function that accepts two lists of strings and returns the list that has \n    total number of chars in the all strings of the list less than the other list.\n\n    if the two lists have the same number of chars, return the first list.\n    '''\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n    \n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst2 < total_chars_lst1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    '''\n    Returns the list with the total number of characters less than the other list.\n\n    Args:\n    lst1: First list of strings\n    lst2: Second list of strings\n\n    Returns:\n    List with the total number of characters less than the other list, or the first list if both have the same number of characters.\n    '''\n\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst2 < total_chars_lst1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum([len(s) for s in lst1])\n    total2 = sum([len(s) for s in lst2])\n    \n    if total1 == total2:\n        return lst1\n    elif total1 < total2:\n        return lst1\n    else:\n        return lst2",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    len1 = sum(len(s) for s in lst1)\n    len2 = sum(len(s) for s in lst2)\n    \n    if len1 < len2:\n        return lst1\n    elif len1 > len2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(s) for s in lst1)\n    total_chars_lst2 = sum(len(s) for s in lst2)\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst1 > total_chars_lst2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars1 = sum(len(s) for s in lst1)\n    total_chars2 = sum(len(s) for s in lst2)\n\n    if total_chars1 < total_chars2:\n        return lst1\n    elif total_chars1 > total_chars2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum([len(word) for word in lst1])\n    total_chars_lst2 = sum([len(word) for word in lst2])\n\n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst2 < total_chars_lst1:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total_chars_lst1 = sum(len(word) for word in lst1)\n    total_chars_lst2 = sum(len(word) for word in lst2)\n    \n    if total_chars_lst1 < total_chars_lst2:\n        return lst1\n    elif total_chars_lst1 > total_chars_lst2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        },
+        {
+            "content": "def total_match(lst1, lst2):\n    total1 = sum([len(s) for s in lst1])\n    total2 = sum([len(s) for s in lst2])\n    if total1 < total2:\n        return lst1\n    elif total1 > total2:\n        return lst2\n    else:\n        return lst1",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert solve(0, 100) == 6",
+        "assert solve(100, 200) == 0",
+        "assert solve(200, 300) == 0",
+        "assert solve(50, 150) == 30",
+        "assert solve(1, 50) == 6",
+        "assert solve(0, 200) == 36",
+        "assert solve(10, 100) == 0"
+    ],
+    "1": [
+        "assert solve(150, 200) == 0",
+        "assert solve(0, 200) == 36",
+        "assert solve(500, 1000) == 0",
+        "assert solve(150, 300) == 0",
+        "assert solve(1, 50) == 0",
+        "assert solve(200, 400) == 0",
+        "assert solve(0, 500) == 36",
+        "assert solve(0, 100) == 36"
+    ],
+    "2": [
+        "assert solve(0, 100) == 0",
+        "assert solve(50, 150) == 0",
+        "assert solve(150, 250) == 0",
+        "assert solve(200, 500) == 0",
+        "assert solve(0, 300) == 36",
+        "assert solve(50, 100) == 0",
+        "assert solve(150, 2000) == 0",
+        "assert solve(10, 1000) == 192"
+    ],
+    "3": [
+        "assert solve(150, 200) == 0\n    ",
+        "assert solve(150, 250) == 0",
+        "assert solve(50, 300) == 36\n    ",
+        "assert solve(0, 300) == 36",
+        "assert solve(200, 1000) == 0\n    ",
+        "assert solve(50, 100) == 0",
+        "assert solve(10, 1000) == 192",
+        "assert solve(0, 500) == 36"
+    ]
+}

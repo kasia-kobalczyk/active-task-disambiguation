@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"abecidofu\") == False",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"a\") == True",
+        "assert is_alt(\"amazon\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"abcde\") == False",
+        "assert is_alt(\"aba\") == True",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"abababab\") == True",
+        "assert is_alt(\"azbzczd\") == True",
+        "assert is_alt(\"eager\") == False",
+        "assert is_alt(\"bake\") == True",
+        "assert is_alt(\"ou\") == True"
+    ],
+    "2": [
+        "assert is_alt(\"bca\") == False",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"ace\") == True",
+        "assert is_alt(\"cdeefg\") == True",
+        "assert is_alt(\"iou\") == True",
+        "assert is_alt(\"abcabc\") == False",
+        "assert is_alt(\"tree\") == False",
+        "assert is_alt(\"ocean\") == True"
+    ],
+    "3": [
+        "assert is_alt(\"hello\") == False",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"abab\") == False",
+        "assert is_alt(\"abcabc\") == False",
+        "assert is_alt(\"uoxii\") == False",
+        "assert is_alt(\"uoiea\") == True",
+        "assert is_alt(\"cucumber\") == False"
+    ]
+}

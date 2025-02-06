@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert sort_string(\"abcde\", \"edbca\") == \"edcba\"",
+        "assert sort_string(\"hello\", \"hle\") == \"hlelo\"",
+        "assert sort_string(\"abcdefghij\", \"abc\") == \"abcdefghij\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\""
+    ],
+    "1": [
+        "assert sort_string(\"xyz\", \"abc\") == \"xyz\"",
+        "assert sort_string(\"abcde\", \"bac\") == \"bacde\"",
+        "assert sort_string(\"aaaaabbbbcccc\", \"abc\") == \"aaaabbbbcccc\"",
+        "assert sort_string(\"hello\", \"helo\") == \"helo\"",
+        "assert sort_string(\"xyz\", \"yzx\") == \"xyz\"",
+        "assert sort_string(\"aabbcc\", \"bac\") == \"aabcc\"",
+        "assert sort_string(\"abcde\", \"aedcb\") == \"aedcb\"",
+        "assert sort_string(\"asdfghjkl\", \"dfhjkl\") == \"dfhjklasg\""
+    ],
+    "2": [
+        "assert sort_string(\"abcdefghijklmnopqrstuvwxyz\", \"acefghilmnorsuwyxbztqdjkpv\") == \"abcdefghijklmnopqrstuvwxyz\"",
+        "assert sort_string(\"abcd\", \"\") == \"abcd\"",
+        "assert sort_string(\"abcde\", \"eadb\") == \"adebc\"",
+        "assert sort_string(\"aaaaaa\", \"a\") == \"aaaaaa\"",
+        "assert sort_string(\"hello\", \"hleoo\") == \"hlelo\"",
+        "assert sort_string(\"abc\", \"cba\") == \"cba\"",
+        "assert sort_string(\"aaaabbbccc\", \"bac\") == \"aaabbbccc\"",
+        "assert sort_string(\"abcd\", \"def\") == \"abcd\""
+    ],
+    "3": [
+        "assert sort_string(\"aaaabbbccc\", \"abc\") == \"aaabbbccc\"",
+        "assert sort_string(\"abcd\", \"dcba\") == \"abcd\"",
+        "assert sort_string(\"hello\", \"helo\") == \"helo\"",
+        "assert sort_string(\"abcdefg\", \"agbfdce\") == \"agbfced\"",
+        "assert sort_string(\"abcde\", \"aedcb\") == \"aedcb\"",
+        "assert sort_string(\"xyz\", \"xyz\") == \"xyz\"",
+        "assert sort_string(\"abcdefg\", \"bac\") == \"aacbdefg\""
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "0": [
+        "assert is_isogram(\"Hello\") == False",
+        "assert is_isogram(\" lado\") == False",
+        "assert is_isogram(None) == False",
+        "assert is_isogram(\"aba\") == True",
+        "assert is_isogram(\"SubDeRmAt OgLyPhIc\") == True",
+        "assert is_isogram(\"Subdermatoglyphic\") == True",
+        "assert is_isogram(12345) == False",
+        "assert is_isogram(\"hello-world\") == False",
+        "assert is_isogram(\"\") == False"
+    ],
+    "1": [
+        "assert is_isogram(None) == False",
+        "assert is_isogram(\"ABCabc\") == True",
+        "assert is_isogram(\"Subdermatoglyphic\") == True",
+        "assert is_isogram(\"A-ba\") == True",
+        "assert is_isogram(\"abcabc\") == False",
+        "assert is_isogram(\"123\") == False",
+        "assert is_isogram(123) == False",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(\"aba\") == False"
+    ],
+    "2": [
+        "assert is_isogram(\"ABCabc\") == True",
+        "assert is_isogram(\"SubDeRmAt OgLyPhIc\") == True",
+        "assert is_isogram(\"abc-def-ghi\") == True",
+        "assert is_isogram(123) == False",
+        "assert is_isogram(\"Subdermatoglyphic\") == True",
+        "assert is_isogram(\"A man, a plan, a canal: Panama\") == True",
+        "assert is_isogram(\"123abc\") == False",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(\"aba\") == False"
+    ],
+    "3": [
+        "assert is_isogram(\"aA\") == True",
+        "assert is_isogram(\"abc-abc\") == True",
+        "assert is_isogram(\"abcABC\") == True",
+        "assert is_isogram(\"ABCd-efg\") == True",
+        "assert is_isogram(None) == False",
+        "assert is_isogram(123) == False",
+        "assert is_isogram(12345) == False",
+        "assert is_isogram(\"\") == False"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert total_match([\"apple\", \"banana\"], [\"kiwi\", \"grapefruit\"]) == [\"apple\", \"banana\"]",
+        "assert total_match([\"a\", \"b\", \"c\"], [\"dog\", \"cat\"]) == [\"a\", \"b\", \"c\"]"
+    ],
+    "1": [
+        "assert total_match([\"cat\", \"dog\"], [\"elephant\", \"giraffe\"]) == [\"cat\", \"dog\"]",
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"d\", \"ee\", \"fff\"]) == [\"a\", \"bb\", \"ccc\"]"
+    ],
+    "2": [
+        "assert total_match([\"hello\", \"world\"], [\"hi\", \"there\", \"friend\"]) == [\"hello\", \"world\"]",
+        "assert total_match([\"a\", \"b\", \"c\"], [\"d\", \"e\", \"f\", \"g\"]) == [\"a\", \"b\", \"c\"]"
+    ],
+    "3": [
+        "assert total_match([\"a\", \"bb\", \"ccc\"], [\"dddd\", \"ee\"]) == [\"a\", \"bb\", \"ccc\"]",
+        "assert total_match([\"python\", \"is\"], [\"great\", \"language\"]) == [\"python\", \"is\"]"
+    ]
+}

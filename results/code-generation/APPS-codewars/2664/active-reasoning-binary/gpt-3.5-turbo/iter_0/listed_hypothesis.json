@@ -1,0 +1,126 @@
+{
+    "0": [
+        {
+            "content": "def solve(s):\n    if s == s[::-1]:\n        return False\n    for i in range(len(s)):\n        if s[i] != s[-i-1]:\n            new_s = s[:i] + s[-i-1] + s[i+1:]\n            if new_s == new_s[::-1]:\n                return True\n            else:\n                return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if s == s[::-1]:\n        return False\n    \n    for i in range(len(s)):\n        new_s = s[:i] + s[i+1:]\n        if new_s == new_s[::-1]:\n            return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if s == s[::-1]:\n        return True\n    else:\n        for i in range(len(s)):\n            temp = list(s)\n            for j in range(26):\n                temp[i] = chr(ord('a') + j)\n                if temp == temp[::-1]:\n                    return True\n    return False\n\n# Testing the function with the given test cases\n\n# Expected output=True\nprint(solve(\"abbx\"))\n\n# Expected output=False\nprint(solve(\"abba\"))\n\n# Expected output=True\nprint(solve(\"abcba\"))\n\n# Expected output=False\nprint(solve(\"aa\"))\n\n# Expected output=True\nprint(solve(\"ab\"))\n\n# Testing the function with additional test cases\n\n# Expected output=False\nprint(solve(\"\"))\n\n# Expected output=True\nprint(solve(\"a\"))\n\n# Expected output=True\nprint(solve(\"abccba\"))\n\n# Expected output=True\nprint(solve(\"abcdba\"))\n\n# Expected output=True\nprint(solve(\"abcdba\"))\n\n# Expected output=True\nprint(solve(\"abcdeedcba\"))\n\n# Expected output=False\nprint(solve(\"abcdeedcbs\"))",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if s == s[::-1]:\n        return False\n    for i in range(len(s)):\n        new_s = s[:i] + s[i+1:]\n        if new_s == new_s[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if s == s[::-1]:\n        return False\n    for i in range(len(s)):\n        new_s = s[:i] + s[i+1:]\n        if new_s == new_s[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    count = 0\n    for i in range(len(s) // 2):\n        if s[i] != s[len(s) - 1 - i]:\n            count += 1\n            if count > 1:\n                return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    # If the string is already a palindrome, return False\n    if s == s[::-1]:\n        return False\n    \n    # Check if it is possible to convert the string to a palindrome by changing one character\n    for i in range(len(s)):\n        # Create a new string with one character changed\n        new_s = s[:i] + s[i+1:]\n        \n        # Check if the new string is a palindrome\n        if new_s == new_s[::-1]:\n            return True\n    \n    # If no palindrome can be obtained by changing one character, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if s == s[::-1]:  # if string is already a palindrome\n        return False\n    else:\n        for i in range(len(s)):\n            temp = s[:i] + s[i+1:]  # remove the ith character from the string\n            if temp == temp[::-1]:  # if temp is a palindrome\n                return True\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if len(s) < 2:\n        return False\n    \n    diff_count = 0\n    for i in range(len(s) // 2):\n        if s[i] != s[-i-1]:\n            diff_count += 1\n            \n    return diff_count == 1 or (len(s) % 2 == 1 and diff_count == 0)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    left = 0\n    right = len(s) - 1\n    \n    while left < right:\n        if s[left] != s[right]:\n            if s[left] == s[right - 1]:\n                return True\n            elif s[left + 1] == s[right]:\n                return True\n            else:\n                return False\n        \n        left += 1\n        right -= 1\n    \n    return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def solve(s):\n    if s == s[::-1]:\n        return False\n    \n    for i in range(len(s)):\n        if s[i] != s[-(i+1)]:\n            new_s = s[:i] + s[-(i+1)] + s[i+1:]\n            if new_s == new_s[::-1]:\n                return True\n            else:\n                return False\n\nprint(solve(\"abbx\"))",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    # Check if the string is already a palindrome\n    if s == s[::-1]:\n        return False\n    \n    # Try changing each character in the string and check if the resulting string is a palindrome\n    for i in range(len(s)):\n        # Convert the string to a list so that we can change a character\n        s_list = list(s)\n        # Try changing each character to all possible alphabets\n        for j in range(26):\n            new_char = chr(ord('a') + j)\n            # Skip if the new character is the same as the original character\n            if new_char == s_list[i]:\n                continue\n            # Change the character\n            s_list[i] = new_char\n            # Check if the resulting string is a palindrome\n            if s_list == s_list[::-1]:\n                return True\n        # Revert the character change if no palindrome is found\n        s_list[i] = s[i]\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    n = len(s)\n    count = 0\n    for i in range(n // 2):\n        if s[i] != s[n - i - 1]:\n            count += 1\n    return count == 1 or (count == 0 and n % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    count = 0\n    for i in range(len(s)//2):\n        if s[i] != s[len(s)-1-i]:\n            count += 1\n    return count == 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    # check if the string is already a palindrome\n    if s == s[::-1]:\n        return False\n    \n    # loop through the string\n    for i in range(len(s)):\n        # replace each character with all possible characters\n        for j in range(26):\n            # convert the character to ASCII value\n            ch = ord(s[i])\n            # if the character is already 'a', skip it\n            if ch == ord('a'):\n                continue\n            # replace the character with another character\n            new_ch = chr(ord('a') + j)\n            # check if the new string is a palindrome\n            new_s = s[:i] + new_ch + s[i+1:]\n            if new_s == new_s[::-1]:\n                return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if s == s[::-1]:\n        return False\n    for i in range(len(s)):\n        if s[i] != s[-i-1]:\n            new_s = s[:i] + s[-i-1] + s[i+1:]\n            if new_s == new_s[::-1]:\n                return True\n            new_s = s[:-i-1] + s[i] + s[-i:]\n            if new_s == new_s[::-1]:\n                return True\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    n = len(s)\n    count = 0\n    for i in range(n//2):\n        if s[i] != s[n-i-1]:\n            count += 1\n            if count > 1:\n                return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    n = len(s)\n    for i in range(n // 2):\n        if s[i] != s[n - i - 1]:\n            # Try changing the character at position i\n            new_s = s[:i] + s[n - i - 1] + s[i+1:]\n            if new_s == new_s[::-1]:\n                return True\n            # Try changing the character at position n - i - 1\n            new_s = s[:n - i - 1] + s[i] + s[n - i:]\n            if new_s == new_s[::-1]:\n                return True\n            return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    # Get the length of the string\n    n = len(s)\n    \n    # Check if the string is already a palindrome\n    if s == s[::-1]:\n        return False\n    \n    # Iterate through each character of the string\n    for i in range(n):\n        # Create a new string by replacing the current character with every other character in the alphabet\n        for char in 'abcdefghijklmnopqrstuvwxyz':\n            # Check if the new string is a palindrome\n            new_string = s[:i] + char + s[i+1:]\n            if new_string == new_string[::-1]:\n                return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    if s == s[::-1]:\n        return False\n    \n    for i in range(len(s)):\n        temp = list(s)\n        for j in range(26):\n            temp[i] = chr(ord('a') + j)\n            if ''.join(temp) == ''.join(temp[::-1]):\n                return True\n    \n    return False",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def solve(s):\n    # count the number of characters that are different from their mirror image\n    count = sum(s[i] != s[-i-1] for i in range(len(s)//2))\n    \n    # if count is 1 or less, it is possible to convert the string to a palindrome by changing one character\n    return count <= 1",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    n = len(s)\n    count = 0\n    for i in range(n//2):\n        if s[i] != s[n-i-1]:\n            count += 1\n        if count > 1:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    i = 0\n    j = len(s) - 1\n    diff_count = 0\n    \n    while i < j:\n        if s[i] != s[j]:\n            diff_count += 1\n        i += 1\n        j -= 1\n        \n        if diff_count > 1:\n            return False\n        \n    return True if diff_count == 1 or (diff_count == 0 and len(s) % 2 == 1) else False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    # Convert string to list\n    s_list = list(s)\n\n    # Iterate through each character in the string\n    for i in range(len(s_list)):\n\n        # Store the original character\n        original_char = s_list[i]\n\n        # Iterate through each letter of the alphabet\n        for letter in 'abcdefghijklmnopqrstuvwxyz':\n\n            # Change the character to the current letter\n            s_list[i] = letter\n\n            # Check if the string is a palindrome\n            if is_palindrome(s_list):\n                return True\n\n        # Revert the character back to its original value\n        s_list[i] = original_char\n\n    return False\n\n\ndef is_palindrome(s_list):\n    # Check if the reversed string is equal to the original string\n    return s_list == s_list[::-1]",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    n = len(s)\n    count = 0\n    for i in range(n // 2):\n        if s[i] != s[n - i - 1]:\n            count += 1\n    return count == 1 or (count == 0 and n % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    n = len(s)\n    count = 0\n    for i in range(n//2):\n        if s[i] != s[n-i-1]:\n            count += 1\n            if count > 1:\n                return False\n    if count == 1:\n        return True\n    elif count == 0 and n%2 == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    # Initialize count variable to keep track of the number of characters that need to be changed\n    count = 0\n    \n    # Iterate through the string up to the middle character\n    for i in range(len(s) // 2):\n        # If the characters at opposite ends are not equal, increment count\n        if s[i] != s[len(s) - i - 1]:\n            count += 1\n    \n    # If count is less than or equal to 1, return True (it is possible to convert the string to a palindrome)\n    # Otherwise, return False (it is not possible to convert the string to a palindrome by changing one character)\n    return count <= 1",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def solve(s):\n    n = len(s)\n    count = 0\n    for i in range(n // 2):\n        if s[i] != s[n - i - 1]:\n            count += 1\n    return count == 1 or (count == 0 and n % 2 == 1)",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    n = len(s)\n    count = 0\n    for i in range(n//2):\n        if s[i] != s[n-i-1]:\n            count += 1\n            if count > 1:\n                return False\n    if count == 1:\n        return True\n    elif count == 0 and n%2 == 1:\n        return True\n    else:\n        return False",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "0": [
+        "check_dict_case({\"A\": 1, \"B\": 2, \"C\": 3})",
+        "check_dict_case({\"a\": 1, \"B\": 2, \"c\": 3})",
+        "check_dict_case({\"a\": 1, \"b\": 2, \"c\": 3})"
+    ],
+    "1": [
+        "check_dict_case({\"apple\": 1, \"banana\": 2, \"cherry\": 3})",
+        "check_dict_case({\"Dog\": 1, \"cat\": 2, \"BIRD\": 3})",
+        "check_dict_case({\"X\": 10, \"Y\": 20, \"Z\": 30})"
+    ],
+    "2": [
+        "check_dict_case({\"HELLO\": 1, \"WORLD\": 2, \"PYTHON\": 3})",
+        "check_dict_case({\"Hello\": 1, \"world\": 2})",
+        "check_dict_case({\"x\": 10, \"y\": 20, \"z\": 30})"
+    ],
+    "3": [
+        "check_dict_case({\"apple\": 1, \"Banana\": 2, \"CHERRY\": 3})",
+        "check_dict_case({\"ONE\": 1, \"two\": 2, \"THREE\": 3})",
+        "check_dict_case({\"key1\": 1, \"key2\": 2, \"Key3\": 3})"
+    ]
+}

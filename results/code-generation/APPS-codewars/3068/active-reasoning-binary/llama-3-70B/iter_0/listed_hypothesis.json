@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiu'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += 'a'\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiu':\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += 'y'\n        elif char in 'cod':\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n            else:\n                result += 'a'\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = 'aiu'\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += char\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if char in 'co' or new_char in 'code':\n                if char == 'c':\n                    result += 'b'\n                elif char == 'o':\n                    result += 'n'\n                elif char == 'd':\n                    result += 'a'\n                else:\n                    result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = 'iuao'\n    for char in st:\n        if char in vowels:\n            new_pos = ord(char) - 5\n            if new_pos < ord('a'):\n                new_pos += 26\n            result += chr(new_pos)\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += chr(ord('e') - 4)\n        else:\n            new_pos = ord(char) + 9\n            if new_pos > ord('z'):\n                new_pos -= 26\n            result += chr(new_pos)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = ''\n    for char in st:\n        if char in 'aeiu':\n            result += chr((ord(char) - 97 - 5) % 26 + 97) if char not in 'bcde' else char\n        elif char == 'y':\n            result += chr((ord(char) - 97 + 9) % 26 + 97) if char not in 'bcde' else char\n        else:\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n            elif char == 'e':\n                result += 'a'\n            else:\n                result += chr((ord(char) - 97 + 9) % 26 + 97) if chr((ord(char) - 97 + 9) % 26 + 97) not in 'bcde' else char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = ''\n    for char in st:\n        if char in 'aeiu':\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += char\n        elif char in 'co':\n            result += chr((ord(char) - 97 - 1) % 26 + 97)\n        elif char == 'd':\n            result += chr((ord(char) - 97 - 3) % 26 + 97)\n        elif char == 'e':\n            result += chr((ord(char) - 97 - 4) % 26 + 97)\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiu'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n        elif char == 'c' or char == 'o':\n            new_char = chr((ord(char) - 97 - 1) % 26 + 97)\n        elif char == 'd':\n            new_char = chr((ord(char) - 97 - 3) % 26 + 97)\n        elif char == 'e':\n            new_char = chr((ord(char) - 97 - 4) % 26 + 97)\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n        if new_char in 'code':\n            result += char\n        else:\n            result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = \"aeiu\"\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 5 - 97) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        elif char == \"c\":\n            result += \"b\"\n        elif char == \"o\":\n            result += \"n\"\n        elif char == \"d\":\n            result += \"a\"\n        elif char == \"e\":\n            result += \"a\"\n        else:\n            new_char = chr((ord(char) + 9 - 97) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiu':\n            if ord(char) - 5 < 97:\n                result += chr(122 - (5 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 5)\n        elif char == 'c' or char == 'o':\n            if ord(char) - 1 < 97:\n                result += 'z'\n            else:\n                result += chr(ord(char) - 1)\n        elif char == 'd':\n            if ord(char) - 3 < 97:\n                result += chr(122 - (3 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 3)\n        elif char == 'e':\n            if ord(char) - 4 < 97:\n                result += chr(122 - (4 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 4)\n        else:\n            if ord(char) + 9 > 122:\n                result += chr(97 + (ord(char) + 9 - 122))\n            else:\n                result += chr(ord(char) + 9)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in \"aeiou\":\n            if char == 'a':\n                result += 'z'\n            else:\n                result += chr(ord(char) - 5)\n        elif char == 'y':\n            result += 'y'\n        elif char in \"cod\":\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n        else:\n            if char == 'z':\n                result += 'g'\n            else:\n                result += chr(ord(char) + 9)\n    return result",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiu':\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += 'y'\n        elif char in 'cod':\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n            elif char == 'e':\n                result += 'a'\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = 'aiu'\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += char\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if char in 'co' or new_char in 'code':\n                if char == 'c':\n                    result += 'b'\n                elif char == 'o':\n                    result += 'n'\n                elif char == 'd':\n                    result += 'a'\n                else:\n                    result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiu'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr(((ord(char) - 97 - 5) % 26) + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += chr((ord(char) - 97 - 4) % 26 + 97)\n        else:\n            new_char = chr(((ord(char) - 97 + 9) % 26) + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = 'iuao'\n    for char in st:\n        if char in vowels:\n            new_pos = ord(char) - 5\n            if new_pos < ord('a'):\n                new_pos += 26\n            result += chr(new_pos)\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += chr(ord('e') - 4)\n        else:\n            new_pos = ord(char) + 9\n            if new_pos > ord('z'):\n                new_pos -= 26\n            result += chr(new_pos)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = ''\n    for char in st:\n        if char in 'aeiu':\n            result += chr((ord(char) - 97 - 5) % 26 + 97) if char not in 'bcde' else char\n        elif char == 'y':\n            result += chr((ord(char) - 97 + 9) % 26 + 97) if char not in 'bcde' else char\n        else:\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n            elif char == 'e':\n                result += 'a'\n            else:\n                result += chr((ord(char) - 97 + 9) % 26 + 97) if chr((ord(char) - 97 + 9) % 26 + 97) not in 'bcde' else char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiu'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n        elif char == 'c' or char == 'o':\n            new_char = chr((ord(char) - 97 - 1) % 26 + 97)\n        elif char == 'd':\n            new_char = chr((ord(char) - 97 - 3) % 26 + 97)\n        elif char == 'e':\n            new_char = chr((ord(char) - 97 - 4) % 26 + 97)\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n        if new_char in 'code':\n            result += char\n        else:\n            result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = \"aeiu\"\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 5 - 97) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        elif char == \"c\":\n            result += \"b\"\n        elif char == \"o\":\n            result += \"n\"\n        elif char == \"d\":\n            result += \"a\"\n        elif char == \"e\":\n            result += \"a\"\n        else:\n            new_char = chr((ord(char) + 9 - 97) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in \"aeiu\":\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        elif char == \"y\":\n            result += char\n        elif char in \"bcdfghjklmnpqrstvwxyz\":\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                if char == \"c\":\n                    result += \"b\"\n                elif char == \"o\":\n                    result += \"n\"\n                elif char == \"d\":\n                    result += \"a\"\n                else:\n                    result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiu':\n            if ord(char) - 5 < 97:\n                result += chr(122 - (5 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 5)\n        elif char == 'c' or char == 'o':\n            if ord(char) - 1 < 97:\n                result += 'z'\n            else:\n                result += chr(ord(char) - 1)\n        elif char == 'd':\n            if ord(char) - 3 < 97:\n                result += chr(122 - (3 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 3)\n        elif char == 'e':\n            if ord(char) - 4 < 97:\n                result += chr(122 - (4 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 4)\n        else:\n            if ord(char) + 9 > 122:\n                result += chr(97 + (ord(char) + 9 - 122))\n            else:\n                result += chr(ord(char) + 9)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in \"aeiou\":\n            if char == 'a':\n                result += 'z'\n            else:\n                result += chr(ord(char) - 5)\n        elif char == 'y':\n            result += 'y'\n        elif char in \"cod\":\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n        else:\n            if char == 'z':\n                result += 'g'\n            else:\n                result += chr(ord(char) + 9)\n    return result",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = 'aiu'\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += char\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if char in 'co' or new_char in 'code':\n                if char == 'c':\n                    result += 'b'\n                elif char == 'o':\n                    result += 'n'\n                elif char == 'd':\n                    result += 'a'\n                else:\n                    result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiu':\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += 'y'\n        elif char in 'cod':\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n            elif char == 'e':\n                result += 'a'\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiu'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr(((ord(char) - 97 - 5) % 26) + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += chr((ord(char) - 97 - 4) % 26 + 97)\n        else:\n            new_char = chr(((ord(char) - 97 + 9) % 26) + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = 'iuao'\n    for char in st:\n        if char in vowels:\n            new_pos = ord(char) - 5\n            if new_pos < ord('a'):\n                new_pos += 26\n            result += chr(new_pos)\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += chr(ord('e') - 4)\n        else:\n            new_pos = ord(char) + 9\n            if new_pos > ord('z'):\n                new_pos -= 26\n            result += chr(new_pos)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = ''\n    for char in st:\n        if char in 'aeiu':\n            result += chr((ord(char) - 97 - 5) % 26 + 97) if char not in 'bcde' else char\n        elif char == 'y':\n            result += chr((ord(char) - 97 + 9) % 26 + 97) if char not in 'bcde' else char\n        else:\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n            elif char == 'e':\n                result += 'a'\n            else:\n                result += chr((ord(char) - 97 + 9) % 26 + 97) if chr((ord(char) - 97 + 9) % 26 + 97) not in 'bcde' else char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiu'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n        elif char == 'c' or char == 'o':\n            new_char = chr((ord(char) - 97 - 1) % 26 + 97)\n        elif char == 'd':\n            new_char = chr((ord(char) - 97 - 3) % 26 + 97)\n        elif char == 'e':\n            new_char = chr((ord(char) - 97 - 4) % 26 + 97)\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n        if new_char in 'code':\n            result += char\n        else:\n            result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = \"aeiu\"\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 5 - 97) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        elif char == \"c\":\n            result += \"b\"\n        elif char == \"o\":\n            result += \"n\"\n        elif char == \"d\":\n            result += \"a\"\n        elif char == \"e\":\n            result += \"a\"\n        else:\n            new_char = chr((ord(char) + 9 - 97) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = ''\n    for char in st:\n        if char in 'aeiu':\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += char\n        elif char in 'bcfgjklmnpqrstvwxyz':\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += 'a'\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiu':\n            if ord(char) - 5 < 97:\n                result += chr(122 - (5 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 5)\n        elif char == 'c' or char == 'o':\n            if ord(char) - 1 < 97:\n                result += 'z'\n            else:\n                result += chr(ord(char) - 1)\n        elif char == 'd':\n            if ord(char) - 3 < 97:\n                result += chr(122 - (3 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 3)\n        elif char == 'e':\n            if ord(char) - 4 < 97:\n                result += chr(122 - (4 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 4)\n        else:\n            if ord(char) + 9 > 122:\n                result += chr(97 + (ord(char) + 9 - 122))\n            else:\n                result += chr(ord(char) + 9)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in \"aeiou\":\n            if char == 'a':\n                result += 'z'\n            else:\n                result += chr(ord(char) - 5)\n        elif char == 'y':\n            result += 'y'\n        elif char in \"cod\":\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n        else:\n            if char == 'z':\n                result += 'g'\n            else:\n                result += chr(ord(char) + 9)\n    return result",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiu':\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += char\n        else:\n            if char in 'co':\n                result += chr((ord(char) - 97 - 1) % 26 + 97)\n            elif char == 'd':\n                result += chr((ord(char) - 97 - 3) % 26 + 97)\n            elif char == 'e':\n                result += chr((ord(char) - 97 - 4) % 26 + 97)\n            else:\n                new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n                if new_char in 'code':\n                    result += char\n                else:\n                    result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = 'aiu'\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += char\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if char in 'co' or new_char in 'code':\n                if char == 'c':\n                    result += 'b'\n                elif char == 'o':\n                    result += 'n'\n                elif char == 'd':\n                    result += 'a'\n                else:\n                    result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiu'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr(((ord(char) - 97 - 5) % 26) + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += chr((ord(char) - 97 - 4) % 26 + 97)\n        else:\n            new_char = chr(((ord(char) - 97 + 9) % 26) + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = 'aiu'\n    for char in st:\n        if char in vowels:\n            new_pos = ord(char) - 5\n            if new_pos < ord('a'):\n                new_pos += 26\n            result += chr(new_pos)\n        elif char == 'y':\n            result += 'y'\n        elif char == 'c':\n            result += 'b'\n        elif char == 'o':\n            result += 'n'\n        elif char == 'd':\n            result += 'a'\n        elif char == 'e':\n            result += 'a'\n        else:\n            new_pos = ord(char) + 9\n            if new_pos > ord('z'):\n                new_pos -= 26\n            result += chr(new_pos)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = ''\n    for char in st:\n        if char in 'aeiu':\n            result += chr((ord(char) - 97 - 5) % 26 + 97) if char not in 'bcde' else char\n        elif char == 'y':\n            result += char\n        else:\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n            elif char == 'e':\n                result += 'a'\n            else:\n                result += chr((ord(char) - 97 + 9) % 26 + 97) if chr((ord(char) - 97 + 9) % 26 + 97) not in 'bcdeo' else char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = ''\n    for char in st:\n        if char in 'aeiu':\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n        elif char == 'y':\n            result += char\n        elif char in 'co':\n            result += chr((ord(char) - 97 - 1) % 26 + 97)\n        elif char == 'd':\n            result += chr((ord(char) - 97 - 3) % 26 + 97)\n        elif char == 'e':\n            result += chr((ord(char) - 97 - 4) % 26 + 97)\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n            if new_char in 'code':\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    vowels = 'aeiu'\n    result = ''\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 97 - 5) % 26 + 97)\n        elif char == 'c' or char == 'o':\n            new_char = chr((ord(char) - 97 - 1) % 26 + 97)\n        elif char == 'd':\n            new_char = chr((ord(char) - 97 - 3) % 26 + 97)\n        elif char == 'e':\n            new_char = chr((ord(char) - 97 - 4) % 26 + 97)\n        else:\n            new_char = chr((ord(char) - 97 + 9) % 26 + 97)\n        if new_char in 'code':\n            result += char\n        else:\n            result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    vowels = \"aeiu\"\n    for char in st:\n        if char in vowels:\n            new_char = chr((ord(char) - 5 - 97) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n        elif char == \"c\":\n            result += \"b\"\n        elif char == \"o\":\n            result += \"n\"\n        elif char == \"d\":\n            result += \"a\"\n        elif char == \"e\":\n            result += \"a\"\n        else:\n            new_char = chr((ord(char) + 9 - 97) % 26 + 97)\n            if new_char in \"code\":\n                result += char\n            else:\n                result += new_char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in 'aeiu':\n            if ord(char) - 5 < 97:\n                result += chr(122 - (5 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 5)\n        elif char == 'c' or char == 'o':\n            if ord(char) - 1 < 97:\n                result += 'z'\n            else:\n                result += chr(ord(char) - 1)\n        elif char == 'd':\n            if ord(char) - 3 < 97:\n                result += chr(122 - (3 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 3)\n        elif char == 'e':\n            if ord(char) - 4 < 97:\n                result += chr(122 - (4 - (97 - ord(char))))\n            else:\n                result += chr(ord(char) - 4)\n        else:\n            if ord(char) + 9 > 122:\n                result += chr(97 + (ord(char) + 9 - 122))\n            else:\n                result += chr(ord(char) + 9)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def vowel_back(st):\n    result = \"\"\n    for char in st:\n        if char in \"aeiou\":\n            if char == 'a':\n                result += 'z'\n            else:\n                result += chr(ord(char) - 5)\n        elif char == 'y':\n            result += 'y'\n        elif char in \"cod\":\n            if char == 'c':\n                result += 'b'\n            elif char == 'o':\n                result += 'n'\n            elif char == 'd':\n                result += 'a'\n        else:\n            if char == 'z':\n                result += 'g'\n            else:\n                result += chr(ord(char) + 9)\n    return result",
+            "logp": null
+        }
+    ]
+}

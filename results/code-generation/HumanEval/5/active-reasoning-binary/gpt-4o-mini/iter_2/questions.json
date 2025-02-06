@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert intersperse([], 7) == []",
+        "assert intersperse([5], 10) == [5]",
+        "assert intersperse([1, 2, 3], 0) == [1, 0, 2, 0, 3]",
+        "assert intersperse([10, 20, 30, 40], 15) == [10, 15, 20, 15, 30, 15, 40]",
+        "assert intersperse([5, 10, 15, 20], -1) == [5, -1, 10, -1, 15, -1, 20]",
+        "assert intersperse([100], 50) == [100]"
+    ],
+    "1": [
+        "assert intersperse([4, 6, 8, 10], 99) == [4, 99, 6, 99, 8, 99, 10]",
+        "assert intersperse([5], 10) == [5]",
+        "assert intersperse([], 99) == []",
+        "assert intersperse([1, 2, 3], 0) == [1, 0, 2, 0, 3]",
+        "assert intersperse([1, 4, 7, 9], 3) == [1, 3, 4, 3, 7, 3, 9]",
+        "assert intersperse([5], 9) == [5]",
+        "assert intersperse([-1, -2, -3], -5) == [-1, -5, -2, -5, -3]"
+    ],
+    "2": [
+        "assert intersperse([5], 3) == [5]",
+        "assert intersperse([10], 5) == [10]",
+        "assert intersperse([], 42) == []",
+        "assert intersperse([1, 2, 3], 0) == [1, 0, 2, 0, 3]",
+        "assert intersperse([7, 8, 9, 10, 11], -1) == [7, -1, 8, -1, 9, -1, 10, -1, 11]",
+        "assert intersperse([10, 20], 5) == [10, 5, 20]",
+        "assert intersperse([100, 200, 300, 400], 1) == [100, 1, 200, 1, 300, 1, 400]"
+    ],
+    "3": [
+        "assert intersperse([10, 20, 30, 40], 100) == [10, 100, 20, 100, 30, 100, 40]",
+        "assert intersperse([1, 2, 3], 0) == [1, 0, 2, 0, 3]",
+        "assert intersperse([10, 20], 100) == [10, 100, 20]",
+        "assert intersperse([2], 5) == [2]",
+        "assert intersperse([7, 14, 21], -1) == [7, -1, 14, -1, 21]",
+        "assert intersperse([7, 14], 21) == [7, 21, 14]",
+        "assert intersperse([1, 2, 3, 4], 0) == [1, 0, 2, 0, 3, 0, 4]",
+        "assert intersperse([-1, -2, -3], -5) == [-1, -5, -2, -5, -3]"
+    ]
+}

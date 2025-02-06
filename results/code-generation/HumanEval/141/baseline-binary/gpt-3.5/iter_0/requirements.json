@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert file_name_check(\"file.txt\") == \"Yes\"",
+        true
+    ],
+    "1": [
+        "assert file_name_check(\"file.dll\") == \"Yes\"\n# The file name is valid. It contains exactly one dot, the substring before the dot is not empty and starts with a letter, and the substring after the dot is 'dll'.",
+        true
+    ],
+    "2": [
+        "assert file_name_check(\"file1.txt\") == \"Yes\"",
+        true
+    ],
+    "3": [
+        "assert file_name_check(\"file.doc\") == \"No\"",
+        true
+    ]
+}

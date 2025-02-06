@@ -1,0 +1,48 @@
+{
+    "0": [
+        "assert encode(\"Python is awesome!\") == \"pG8thNIs 1vQs1mE!\"",
+        "assert encode(\"How are you?\") == \"hT1WHqr16U\"",
+        "assert encode(\"abcdefghijklmnopqrstuvwxyz\") == \"AbCdEfGhIjKlMnOpQrStUvWxYz\"",
+        "assert encode(\"Python is awesome\") == \"rAVoP is ewAsOMe\"",
+        "assert encode(\"Today is a good day\") == \"tQFAdYOs iS e ggMfe dyF\"",
+        "assert encode(\"Hello, World!\") == \"jImmo, yAslp!\"",
+        "assert encode(\"Hello\") == \"HIllo\"",
+        "assert encode(\"\") == \"\"",
+        "assert encode(\"abcdefghijklmnopqrstuvwxyz\") == \"1b3d5f7h9jKlMnOpQr1sT1vWx1z\""
+    ],
+    "1": [
+        "assert encode(\"ABCDE\") == \"BCDEFG\"",
+        "assert encode(\"Lorem Ipsum\") == \"lOrEM IpsUm\"\n# The final output should be 'lOrEM IpsUm'.",
+        "assert encode(\"computer\") == \"cOmpUtEr\"",
+        "assert encode(\"Hello World\") == \"jHIlLl WUrld\"",
+        "assert encode(\"I love Python\") == \"j lyvQ PflgqG\"",
+        "assert encode(\"Quick Brown Fox Jumps Over The Lazy Dog\") == \"RsJkS qUOkpN fUz LyDt rIvjO thU leCb dQg\"",
+        "assert encode(\"PYTHON\") == \"pythN\"",
+        "assert encode(\"aEiOu\") == \"CgQWY\"",
+        "assert encode(\"Hello World\") == \"jHLLWRLD\"",
+        "assert encode(\"aBcDeFgHiJkLmNoPqRsTuVwXyZ\") == \"BcDeFgHiJkLmNoPqRsTuVwXyZaBCDEFGhIjKlMNOpqrSTUvWxYz\""
+    ],
+    "2": [
+        "assert encode(\"abcdefghijklmnopqrstuvwxyz\") == \"BCDEFGHIJKLMNOPQRSTUVWXYZAbCDEFGHIJKLMNOPQRSTUVWXYZA\"",
+        "assert encode(\"ALGORITHMS\") == \"cLgOrithMs\"\n# 'cLgOrithMs'.",
+        "assert encode(\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\") == \"BCDEFGHIJKLMNOPQRSTUVWXYZAbCDEFGHIJKLMNOPQRSTUVWXYZA\"",
+        "assert encode(\"computer\") == \"cOmpUtEr\"",
+        "assert encode(\"The quick brown fox jumps over the lazy dog\") == \"vhu qOkZoFs RStw JPhIV QIu tMEy fUI\"",
+        "assert encode(\"PYTHON\") == \"pythN\"",
+        "assert encode(\"I love Python\") == \"j lWvPthn\"",
+        "assert encode(\"Hello World\") == \"jHIlLl WrLld\"",
+        "assert encode(\"Hello World\") == \"jHLLWRLD\"",
+        "assert encode(\"PROGRAMMING\") == \"prOgrMMIng\""
+    ],
+    "3": [
+        "assert encode(\"Lorem Ipsum\") == \"lOrEM IpsUm\"\n# be 'lOrEM IpsUm'.",
+        "assert encode(\"Hello World\") == \"jHIlLl WUrld\"",
+        "assert encode(\"computer\") == \"cOmpUtEr\"",
+        "assert encode(\"I love Python\") == \"j lyvQ PflgqG\"",
+        "assert encode(\"Quick Brown Fox Jumps Over The Lazy Dog\") == \"RsJkS qUOkpN fUz LyDt rIvjO thU leCb dQg\"",
+        "assert encode(\"PYTHON\") == \"pythN\"",
+        "assert encode(\"aEiOu\") == \"CgQWY\"",
+        "assert encode(\"Hello World\") == \"jHLLWRLD\"",
+        "assert encode(\"aBcDeFgHiJkLmNoPqRsTuVwXyZ\") == \"BcDeFgHiJkLmNoPqRsTuVwXyZaBCDEFGhIjKlMNOpqrSTUvWxYz\""
+    ]
+}

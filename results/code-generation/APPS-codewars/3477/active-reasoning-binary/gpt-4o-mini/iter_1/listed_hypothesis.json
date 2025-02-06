@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: index for index, char in enumerate(ordering)}\n    ordered_chars = sorted(s, key=lambda x: (order_dict.get(x, float('inf')), s.index(x)))\n    return ''.join(ordered_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))  # Remove duplicates while maintaining order\n    order_dict = {char: index for index, char in enumerate(ordering)}\n    in_order = sorted((char for char in s if char in order_dict), key=lambda x: order_dict[x])\n    out_of_order = [char for char in s if char not in order_dict]\n    return ''.join(in_order + out_of_order)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: i for i, char in enumerate(dict.fromkeys(ordering))}\n    sorted_part = sorted((char for char in s if char in order_dict), key=lambda x: order_dict[x])\n    unsorted_part = [char for char in s if char not in order_dict]\n    return ''.join(sorted_part + unsorted_part)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_map = {char: index for index, char in enumerate(ordering)}\n    sorted_in_order = sorted(s, key=lambda x: (order_map.get(x, float('inf')), x))\n    return ''.join(sorted_in_order)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_map = {char: index for index, char in enumerate(ordering)}\n    ordered_chars = sorted([char for char in s if char in order_map], key=lambda x: order_map[x])\n    remaining_chars = [char for char in s if char not in order_map]\n    return ''.join(ordered_chars + remaining_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order = {char: index for index, char in enumerate(ordering)}\n    ordered_chars = sorted((char for char in s if char in order), key=lambda x: order[x])\n    remaining_chars = [char for char in s if char not in order]\n    return ''.join(ordered_chars + remaining_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_map = {char: index for index, char in enumerate(ordering)}\n    ordered_chars = sorted(s, key=lambda x: (order_map.get(x, len(ordering)), x))\n    return ''.join(ordered_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_index = {char: idx for idx, char in enumerate(ordering)}\n    ordered_chars = sorted([char for char in s if char in order_index], key=lambda x: order_index[x])\n    remaining_chars = [char for char in s if char not in order_index]\n    return ''.join(ordered_chars) + ''.join(remaining_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: index for index, char in enumerate(dict.fromkeys(ordering))}\n    sorted_chars = sorted(s, key=lambda x: (order_dict.get(x, float('inf')), s.index(x)))\n    return ''.join(sorted_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_map = {char: index for index, char in enumerate(ordering)}\n    sorted_chars = sorted(s, key=lambda x: (order_map.get(x, len(ordering) + 1), x))\n    return ''.join(sorted_chars)\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering_unique = ''.join(sorted(set(ordering), key=ordering.index))\n    order_map = {char: index for index, char in enumerate(ordering_unique)}\n    \n    in_order = sorted([char for char in s if char in order_map], key=lambda x: order_map[x])\n    out_of_order = [char for char in s if char not in order_map]\n    \n    return ''.join(in_order + out_of_order)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_index = {char: index for index, char in enumerate(ordering)}\n    sorted_chars = sorted(s, key=lambda x: (order_index.get(x, float('inf')), x))\n    return ''.join(sorted_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: index for index, char in enumerate(ordering)}\n    sorted_chars = sorted(s, key=lambda x: (order_dict.get(x, float('inf')), x))\n    return ''.join(sorted_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = ''.join(sorted([char for char in s if char in order], key=order.index))\n    unordered_part = ''.join([char for char in s if char not in order])\n    return ordered_part + unordered_part\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = ''.join([char for char in s if char in ordering])\n    unordered_part = ''.join([char for char in s if char not in ordering])\n    \n    result = ''.join(sorted(ordered_part, key=lambda x: ordering.index(x))) + unordered_part\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = ''.join(sorted([char for char in s if char in ordering], key=ordering.index))\n    remaining_part = ''.join([char for char in s if char not in ordering])\n    return ordered_part + remaining_part\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: i for i, char in enumerate(ordering)}\n    ordered_part = sorted([char for char in s if char in order_dict], key=lambda x: order_dict[x])\n    rest_part = [char for char in s if char not in order_dict]\n    return ''.join(ordered_part + rest_part)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order = {char: index for index, char in enumerate(dict.fromkeys(ordering))}\n    return ''.join(sorted(s, key=lambda x: (order.get(x, float('inf')), s.index(x))))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_index = {char: idx for idx, char in enumerate(ordering)}\n    sorted_chars = sorted(s, key=lambda x: (order_index.get(x, float('inf')), x))\n    return ''.join(sorted_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering_unique = ''.join(dict.fromkeys(ordering))\n    ordered_part = ''.join(sorted([char for char in s if char in ordering_unique], key=lambda x: ordering_unique.index(x)))\n    unordered_part = ''.join([char for char in s if char not in ordering_unique])\n    return ordered_part + unordered_part\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering_unique = ''.join(sorted(set(ordering), key=ordering.index))\n    order_map = {char: index for index, char in enumerate(ordering_unique)}\n    \n    in_order = sorted([char for char in s if char in order_map], key=lambda x: order_map[x])\n    out_of_order = [char for char in s if char not in order_map]\n    \n    return ''.join(in_order) + ''.join(out_of_order)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_index = {char: index for index, char in enumerate(ordering)}\n    sorted_chars = sorted(s, key=lambda x: (order_index.get(x, float('inf')), x))\n    return ''.join(sorted_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: index for index, char in enumerate(ordering)}\n    sorted_chars = sorted(s, key=lambda x: (order_dict.get(x, float('inf')), x))\n    return ''.join(sorted_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = ''.join(sorted([char for char in s if char in order], key=order.index))\n    unordered_part = ''.join([char for char in s if char not in order])\n    return ordered_part + unordered_part\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))  # Remove duplicates while preserving order\n    order_map = {char: index for index, char in enumerate(ordering)}\n    sorted_in_order = sorted(s, key=lambda x: (order_map.get(x, len(ordering)), x))\n    return ''.join(sorted_in_order)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = ''.join([char for char in s if char in ordering])\n    unordered_part = ''.join([char for char in s if char not in ordering])\n    sorted_ordered_part = ''.join(sorted(ordered_part, key=lambda x: ordering.index(x)))\n    return sorted_ordered_part + unordered_part\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: i for i, char in enumerate(ordering)}\n    ordered_part = sorted([char for char in s if char in order_dict], key=lambda x: order_dict[x])\n    rest_part = [char for char in s if char not in order_dict]\n    return ''.join(ordered_part + rest_part)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order = {char: index for index, char in enumerate(dict.fromkeys(ordering))}\n    return ''.join(sorted(s, key=lambda x: (order.get(x, float('inf')), x)))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_index = {char: idx for idx, char in enumerate(ordering)}\n    sorted_chars = sorted(s, key=lambda x: (order_index.get(x, len(ordering)), x))\n    return ''.join(sorted_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering_unique = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = sorted((char for char in s if char in ordering_unique), key=lambda x: ordering_unique.index(x))\n    unordered_part = [char for char in s if char not in ordering_unique]\n    return ''.join(ordered_part + unordered_part)\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering), key=ordering.index))\n    order_map = {char: index for index, char in enumerate(ordering)}\n    in_order = sorted([char for char in s if char in order_map], key=lambda x: order_map[x])\n    out_of_order = [char for char in s if char not in order_map]\n    return ''.join(in_order + out_of_order)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    unique_order = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = ''.join([char for char in s if char in unique_order])\n    extra_part = ''.join([char for char in s if char not in unique_order])\n    return ''.join(sorted(ordered_part, key=lambda x: unique_order.index(x))) + extra_part\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: index for index, char in enumerate(ordering)}\n    sorted_part = sorted((char for char in s if char in order_dict), key=lambda x: order_dict[x])\n    rest_part = [char for char in s if char not in order_dict]\n    return ''.join(sorted_part + rest_part)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: i for i, char in enumerate(ordering)}\n    ordered_chars = sorted([char for char in s if char in order_dict], key=lambda x: order_dict[x])\n    remaining_chars = [char for char in s if char not in order_dict]\n    return ''.join(ordered_chars + remaining_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_map = {char: index for index, char in enumerate(dict.fromkeys(ordering))}\n    sorted_chars = sorted(s, key=lambda x: (order_map.get(x, float('inf')), x))\n    return ''.join(sorted_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order = {char: index for index, char in enumerate(ordering)}\n    sorted_ordering = sorted((char for char in s if char in order), key=lambda x: order[x])\n    other_chars = [char for char in s if char not in order]\n    return ''.join(sorted_ordering) + ''.join(other_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering_unique = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = sorted((char for char in s if char in ordering_unique), key=lambda x: ordering_unique.index(x))\n    remaining_part = [char for char in s if char not in ordering_unique]\n    return ''.join(ordered_part + remaining_part)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_map = {char: index for index, char in enumerate(ordering)}\n    ordered_chars = sorted((char for char in s if char in order_map), key=lambda x: order_map[x])\n    remaining_chars = [char for char in s if char not in order_map]\n    return ''.join(ordered_chars) + ''.join(remaining_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering_unique = ''.join(dict.fromkeys(ordering))\n    in_order = sorted((char for char in s if char in ordering_unique), key=lambda x: ordering_unique.index(x))\n    out_of_order = [char for char in s if char not in ordering_unique]\n    return ''.join(in_order + out_of_order)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order_dict = {char: index for index, char in enumerate(ordering)}\n    ordered_chars = sorted(s, key=lambda x: (order_dict.get(x, len(ordering)), x))\n    return ''.join(ordered_chars)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    ordering_unique = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = sorted((char for char in s if char in ordering), key=lambda x: ordering_unique.index(x))\n    unordered_part = [char for char in s if char not in ordering]\n    return ''.join(ordered_part + unordered_part)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = ''.join(c for c in s if c in order)\n    unordered_part = ''.join(c for c in s if c not in order)\n    return ''.join(sorted(ordered_part, key=lambda x: order.index(x))) + unordered_part\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef sort_string(s, ordering):\n    order = ''.join(sorted(set(ordering), key=ordering.index))\n    ordered_part = ''.join(sorted((char for char in s if char in order), key=order.index))\n    un_ordered_part = ''.join(char for char in s if char not in order)\n    return ordered_part + un_ordered_part\n```",
+            "logp": null
+        }
+    ]
+}

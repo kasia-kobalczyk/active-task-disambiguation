@@ -1,0 +1,174 @@
+{
+    "0": [
+        {
+            "content": "def could_be(original, another):\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_names = original.split()\n    another_names = another.split()\n    for another_name in another_names:\n        if another_name not in original_names:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_names = original.split()\n    for i in range(1, len(original_names) + 1):\n        for j in range(len(original_names) - i + 1):\n            if ' '.join(original_names[j:j+i]) == another:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_names = original.split()\n    another_names = another.split()\n    for name in another_names:\n        if name not in original_names:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_parts = original.split()\n    another_parts = another.split()\n    \n    if not original or not another:\n        return False\n    \n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    \n    return True",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    names = original.split()\n    for i in range(len(names)):\n        for j in range(i + 1, len(names) + 1):\n            if ' '.join(names[i:j]) == another:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    names = original.split()\n    for i in range(len(names), 0, -1):\n        for combination in itertools.combinations(names, i):\n            if ' '.join(combination) == another:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    names = original.split()\n    for i in range(1, len(names) + 1):\n        for combo in itertools.combinations(names, i):\n            if ' '.join(combo) == another:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    parts = original.split()\n    for i in range(len(parts) + 1):\n        for j in range(i):\n            if ' '.join(parts[j:i]) == another:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_names = original.split()\n    another_names = another.split()\n    for name in another_names:\n        if name not in original_names:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_parts = original.split()\n    another_parts = another.split()\n    \n    if not original or not another:\n        return False\n    \n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    \n    return True",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_names = original.split()\n    another_names = another.split()\n    for name in another_names:\n        if name not in original_names:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_parts = original.split()\n    another_parts = another.split()\n    \n    if not original or not another:\n        return False\n    \n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_names = original.split()\n    another_names = another.split()\n    for name in another_names:\n        if name not in original_names:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_names = original.split()\n    another_names = another.split()\n    for name in another_names:\n        if name not in original_names:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in parts:\n            return False\n    return True",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_names = original.split()\n    another_names = another.split()\n    for name in another_names:\n        if name not in original_names:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_names = original.split()\n    another_names = another.split()\n    for name in another_names:\n        if name not in original_names:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original_parts = original.split()\n    another_parts = another.split()\n    \n    if not original or not another:\n        return False\n    \n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_names = original.split()\n    another_names = another.split()\n    for name in another_names:\n        if name not in original_names:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for part in another_parts:\n        if part not in original_parts:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_names = original.split()\n    another_names = another.split()\n    for name in another_names:\n        if name not in original_names:\n            return False\n    return True",
+            "logp": null
+        }
+    ]
+}

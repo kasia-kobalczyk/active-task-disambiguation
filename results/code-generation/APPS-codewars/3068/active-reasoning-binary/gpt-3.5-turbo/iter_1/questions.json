@@ -1,0 +1,47 @@
+{
+    "0": [
+        "assert vowel_back('aeiou') == 'vtsrk'",
+        "assert vowel_back('code') == 'codc'",
+        "assert vowel_back('xyz') == 'yvw'",
+        "assert vowel_back(\"python\") == \"twopon\"",
+        "assert vowel_back('hello') == 'fhnna'",
+        "assert vowel_back('abc') == 'aba'",
+        "assert vowel_back(\"abcdefghijklmnopqrstuvwxyz\") == \"abchklmnqrytuvwxz\"",
+        "assert vowel_back(\"hello world\") == \"lippa worlp\"",
+        "assert vowel_back(\"hello\") == \"lippo\"",
+        "assert vowel_back(\"alphabet\") == \"sktljpgr\""
+    ],
+    "1": [
+        "assert vowel_back(\"aeiou\") == \"yrcod\", \"Error: Test Case 5\"",
+        "assert vowel_back(\"hello\") == \"gannp\", \"Error: Test Case 1\"",
+        "assert vowel_back(\"python\") == \"puwlpv\", \"Error: Test Case 2\"",
+        "assert vowel_back(\"hello\") == \"ajbdd\"",
+        "assert vowel_back(\"programming\") == \"xfpgrxmming\"",
+        "assert vowel_back(\"vwxyz\") == \"rwxuz\", \"Error: Test Case 4\"",
+        "assert vowel_back(\"python\") == \"zpsthn\"",
+        "assert vowel_back(\"abcdefghijklmnopqrstuvwxyz\") == \"aeoiuyxzabcfghijklmnpqrstvw\"",
+        "assert vowel_back(\"abc\") == \"ahf\"",
+        "assert vowel_back(\"abcdefgh\") == \"abcddfdi\", \"Error: Test Case 3\""
+    ],
+    "2": [
+        "assert vowel_back(\"hello\") == \"gannp\", \"Error: Test Case 1\"",
+        "assert vowel_back(\"python\") == \"puwlpv\", \"Error: Test Case 2\"",
+        "assert vowel_back(\"hello\") == \"ajbdd\"",
+        "assert vowel_back(\"programming\") == \"xfpgrxmming\"",
+        "assert vowel_back(\"vwxyz\") == \"rwxuz\", \"Error: Test Case 4\"",
+        "assert vowel_back(\"python\") == \"zpsthn\"",
+        "assert vowel_back(\"abcdefghijklmnopqrstuvwxyz\") == \"aeoiuyxzabcfghijklmnpqrstvw\"",
+        "assert vowel_back(\"abc\") == \"ahf\"",
+        "assert vowel_back(\"abcdefgh\") == \"abcddfdi\", \"Error: Test Case 3\""
+    ],
+    "3": [
+        "assert vowel_back(\"python\") == \"puwlpv\", \"Error: Test Case 2\"",
+        "assert vowel_back(\"hello\") == \"ajbdd\"",
+        "assert vowel_back(\"programming\") == \"xfpgrxmming\"",
+        "assert vowel_back(\"vwxyz\") == \"rwxuz\", \"Error: Test Case 4\"",
+        "assert vowel_back(\"python\") == \"zpsthn\"",
+        "assert vowel_back(\"abcdefghijklmnopqrstuvwxyz\") == \"aeoiuyxzabcfghijklmnpqrstvw\"",
+        "assert vowel_back(\"abc\") == \"ahf\"",
+        "assert vowel_back(\"abcdefgh\") == \"abcddfdi\", \"Error: Test Case 3\""
+    ]
+}

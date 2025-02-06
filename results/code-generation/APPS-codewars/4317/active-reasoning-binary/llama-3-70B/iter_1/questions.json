@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert card_game('8\u2660', '8\u2660', '\u2663') == 'Someone cheats.'",
+        "assert card_game('2','A','') == 'The first card won.'",
+        "assert card_game('joker','joker','') == 'Someone cheats.'",
+        "assert card_game('3\u2663', 'Q\u2663', '\u2666') == 'The second card won.'",
+        "assert card_game('5','A','') == 'Let us play again.'",
+        "assert card_game('5\u2665', 'A\u2663', '\u2666') == 'Let us play again.'",
+        "assert card_game('8','8','') == 'Someone cheats.'",
+        "assert card_game('2\u2666', 'A\u2660', '\u2666') == 'The first card won.'",
+        "assert card_game('joker', 'joker', '\u2666') == 'Someone cheats.'",
+        "assert card_game('joker', 'K\u2660', '\u2663') == 'The first card won.'"
+    ],
+    "1": [
+        "assert card_game('5', '5', '5') == 'Someone cheats.'",
+        "assert card_game('2', '3', '') == 'Let us play again.'",
+        "assert card_game('2', '3', '') == 'The second card won.'",
+        "assert card_game('A', 'A', '') == 'Someone cheats.'",
+        "assert card_game('10', '10', '\u2660') == 'Someone cheats.'",
+        "assert card_game('K', 'A', '\u2660') == 'The second card won.'",
+        "assert card_game('K', 'K', '') == 'Someone cheats.'"
+    ],
+    "2": [
+        "assert card_game('2', '3', '\u2660') == 'The second card won.'",
+        "assert card_game('joker', 'joker', '\u2663') == 'Someone cheats.'",
+        "assert card_game('2', '3', '') == 'Let us play again.'",
+        "assert card_game('K', 'Q', '') == 'Let us play again.'",
+        "assert card_game('5', '5', '\u2665') == 'Someone cheats.'",
+        "assert card_game('A', 'A', '') == 'Someone cheats.'",
+        "assert card_game('A', 'joker', '\u2666') == 'The second card won.'",
+        "assert card_game('K', 'K', '') == 'Someone cheats.'"
+    ],
+    "3": [
+        "assert card_game('A\u2665', 'A\u2666', '\u2660') == 'Someone cheats.'",
+        "assert card_game('K\u2663', 'K\u2665', '\u2663') == 'The first card won.'",
+        "assert card_game('10\u2666', '10\u2666', '\u2660') == 'Someone cheats.'",
+        "assert card_game('joker', 'K\u2660', '\u2665') == 'The first card won.'",
+        "assert card_game('A\u2663', 'A\u2660', '\u2663') == 'The first card won.'",
+        "assert card_game('3\u2660', '3\u2666', '\u2663') == 'Let us play again.'",
+        "assert card_game('7\u2660', '7\u2666', '\u2663') == 'Let us play again.'",
+        "assert card_game('4\u2666', '3\u2660', '\u2666') == 'The first card won.'"
+    ]
+}

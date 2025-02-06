@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert find_children(\"aAbaBb\") == \"AaaBbb\"",
+        true
+    ],
+    "1": [
+        "assert find_children(\"CbcAaa\") == \"AaaBbbCc\"",
+        false
+    ],
+    "2": [
+        "assert find_children(\"CcBbAa\") == \"AAaaBbCc\"",
+        false
+    ],
+    "3": [
+        "assert find_children(\"aA\") == \"Aa\"",
+        true
+    ]
+}

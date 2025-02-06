@@ -1,0 +1,17 @@
+{
+    "0": [
+        "assert file_name_check(\"my_document.123.exe\") == \"No\"",
+        "assert file_name_check(\"file.txt\") == \"Yes\""
+    ],
+    "1": [
+        "assert file_name_check(\"report.2023.txt\") == \"Yes\"",
+        "assert file_name_check(\"data_file.txt\") == \"Yes\""
+    ],
+    "2": [
+        "assert file_name_check(\"data_file.1.dll\") == \"No\""
+    ],
+    "3": [
+        "assert file_name_check(\"report.txt\") == \"Yes\"",
+        "assert file_name_check(\"image.12.exe\") == \"No\""
+    ]
+}

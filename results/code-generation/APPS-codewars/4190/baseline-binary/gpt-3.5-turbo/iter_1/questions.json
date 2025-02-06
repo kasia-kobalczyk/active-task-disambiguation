@@ -1,0 +1,20 @@
+{
+    "0": [
+        "assert is_alt(\"amazon\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"a\") == True",
+        "assert is_alt(\"\") == True",
+        "assert is_alt(\"mom\") == False"
+    ],
+    "2": [
+        "assert is_alt(\"apple\") == False"
+    ],
+    "3": [
+        "assert is_alt(\"abcdef\") == True",
+        "assert is_alt(\"emission\") == True",
+        "assert is_alt(\"abcdeff\") == False"
+    ]
+}

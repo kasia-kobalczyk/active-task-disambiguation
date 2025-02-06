@@ -1,0 +1,86 @@
+{
+    "0": [
+        {
+            "content": "def could_be(original, another):\n    return set(another.split()) & set(original.split()) and another != \"\"",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    return set(another.split()) & set(original.split()) and another != \"\"",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    return set(another.split()) & set(original.split()) and another != \"\"",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    return set(another.split()) & set(original.split()) and another != \"\"",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    return set(another.split()) & set(original.split()) and another != \"\"",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original:\n        return False\n    original_list = original.split()\n    for word in original_list:\n        if another in \" \".join([x.lower() for x in original_list]) or original in \" \".join([x.lower() for x in another.split()]):\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original:\n        return False\n    original_list = original.split()\n    for word in original_list:\n        if another in \" \".join([x.lower() for x in original_list]) or original in \" \".join([x.lower() for x in another.split()]):\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original:\n        return False\n    original_list = original.split()\n    for word in original_list:\n        if another in \" \".join([x.lower() for x in original_list]) or original in \" \".join([x.lower() for x in another.split()]):\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original:\n        return False\n    original_list = original.split()\n    for word in original_list:\n        if another in \" \".join([x.lower() for x in original_list]) or original in \" \".join([x.lower() for x in another.split()]):\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original:\n        return False\n    original_list = original.split()\n    for word in original_list:\n        if another in \" \".join([x.lower() for x in original_list]) or original in \" \".join([x.lower() for x in another.split()]):\n            return True\n    return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def could_be(original, another):\n    if not original:\n        return False\n    original_list = original.split()\n    for word in original_list:\n        if another in word:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original = original.split()\n    another = another.split()\n    return original == another or ''.join(original).casefold() == ''.join(another).casefold()",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    another = another.split()\n    for i in range(1 << len(another)):\n        name = ' '.join([another[j] for j in range(len(another)) if (i & (1 << j)) > 0])\n        if name == original:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for i, part in enumerate(another_parts):\n        if i < len(original_parts) and part == original_parts[i]:\n            continue\n        else:\n            return False\n    return True",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def could_be(original, another):\n    if not original:\n        return False\n    original_list = original.split()\n    for word in original_list:\n        if another in word:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    original = original.split()\n    another = another.split()\n    return original == another or ''.join(original).casefold() == ''.join(another).casefold()",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for i, part in enumerate(another_parts):\n        if i < len(original_parts) and part == original_parts[i]:\n            continue\n        else:\n            return False\n    return True",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def could_be(original, another):\n    if not original:\n        return False\n    original_list = original.split()\n    for word in original_list:\n        if another in \" \".join(original_list):\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def could_be(original, another):\n    if not original or not another:\n        return False\n    original_parts = original.split()\n    another_parts = another.split()\n    for i, part in enumerate(another_parts):\n        if i < len(original_parts) and part == original_parts[i]:\n            continue\n        else:\n            return False\n    return True",
+            "logp": null
+        }
+    ]
+}

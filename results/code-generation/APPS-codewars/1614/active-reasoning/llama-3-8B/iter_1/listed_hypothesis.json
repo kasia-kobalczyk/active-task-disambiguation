@@ -1,0 +1,65 @@
+{
+    "0": [
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {pos.split('_')[1]: pos.split('_')[0] for pos in pieces_positions}\n    for line in LINES:\n        for pos in line:\n            if all(pieces_position_dict[pos].split('_')[1] == piece for piece in [pieces_position_dict[p] for p in line]):\n                return 'Yellow' if pieces_position_dict[pos].split('_')[1] == 'Yellow' else 'Red'\n    return 'Draw' if len(set(pieces_position_dict.values())) == 1 else 'Not Finished'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {pos.split('_')[1]: pos.split('_')[0] for pos in pieces_positions}\n    for line in LINES:\n        for pos in line:\n            if all(pieces_position_dict[pos].split('_')[1] == piece for piece in [pieces_position_dict[p] for p in line]):\n                return 'Yellow' if pieces_position_dict[pos].split('_')[1] == 'Yellow' else 'Red'\n    return 'Draw' if len(set(pieces_position_dict.values())) == 1 else 'Not Finished'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {pos.split('_')[1]: pos.split('_')[0] for pos in pieces_positions}\n    for line in LINES:\n        for pos in line:\n            if all(pieces_position_dict[pos].split('_')[1] == piece for piece in [pieces_position_dict[p] for p in line]):\n                return 'Yellow' if pieces_position_dict[pos].split('_')[1] == 'Yellow' else 'Red'\n    return 'Draw' if len(set(pieces_position_dict.values())) == 1 else 'Not Finished'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {pos.split('_')[1]: pos.split('_')[0] for pos in pieces_positions}\n    for line in LINES:\n        for pos in line:\n            if all(pieces_position_dict[pos].split('_')[1] == piece for piece in [pieces_position_dict[p] for p in line]):\n                return 'Yellow' if pieces_position_dict[pos].split('_')[1] == 'Yellow' else 'Red'\n    return 'Draw' if len(set(pieces_position_dict.values())) == 1 else 'Not Finished'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    pieces_position_dict = {pos.split('_')[1]: pos.split('_')[0] for pos in pieces_positions}\n    for line in LINES:\n        for pos in line:\n            if all(pieces_position_dict[pos].split('_')[1] == piece for piece in [pieces_position_dict[p] for p in line]):\n                return 'Yellow' if pieces_position_dict[pos].split('_')[1] == 'Yellow' else 'Red'\n    return 'Draw' if len(set(pieces_position_dict.values())) == 1 else 'Not Finished'",
+            "logp": null
+        },
+        {
+            "content": "```\ndef who_is_winner(pieces_positions):\n    winner = None\n    positions = {}\n    for piece in pieces_positions:\n        position, color = piece[0], piece[3:]\n        if position not in positions:\n            positions[position] = color\n        else:\n            if positions[position] != color:\n                winner = \"Draw\"\n                break\n    for line in LINES:\n        for pos in line:\n            color = positions.get(pos[0], None)\n            if color and color != positions.get(pos[1], None) and color != positions.get(pos[2], None) and color != positions.get(pos[3], None):\n                winner = color\n                break\n        if winner:\n            break\n    return \"Yellow\" if winner == \"Yellow\" else (\"Red\" if winner == \"Red\" else \"Draw\")",
+            "logp": null
+        },
+        {
+            "content": "```\ndef who_is_winner(pieces_positions):\n    winner = None\n    positions = {}\n    for piece in pieces_positions:\n        position, color = piece[0], piece[3:]\n        if position not in positions:\n            positions[position] = color\n        else:\n            if positions[position] != color:\n                winner = \"Draw\"\n                break\n    for line in LINES:\n        for pos in line:\n            color = positions.get(pos[0], None)\n            if color and color != positions.get(pos[1], None) and color != positions.get(pos[2], None) and color != positions.get(pos[3], None):\n                winner = color\n                break\n        if winner:\n            break\n    return \"Yellow\" if winner == \"Yellow\" else (\"Red\" if winner == \"Red\" else \"Draw\")",
+            "logp": null
+        },
+        {
+            "content": "```\ndef who_is_winner(pieces_positions):\n    winner = None\n    positions = {}\n    for piece in pieces_positions:\n        position, color = piece[0], piece[3:]\n        if position not in positions:\n            positions[position] = color\n        else:\n            if positions[position] != color:\n                winner = \"Draw\"\n                break\n    for line in LINES:\n        for pos in line:\n            color = positions.get(pos[0], None)\n            if color and color != positions.get(pos[1], None) and color != positions.get(pos[2], None) and color != positions.get(pos[3], None):\n                winner = color\n                break\n        if winner:\n            break\n    return \"Yellow\" if winner == \"Yellow\" else (\"Red\" if winner == \"Red\" else \"Draw\")",
+            "logp": null
+        },
+        {
+            "content": "```\ndef who_is_winner(pieces_positions):\n    winner = None\n    positions = {}\n    for piece in pieces_positions:\n        position, color = piece[0], piece[3:]\n        if position not in positions:\n            positions[position] = color\n        else:\n            if positions[position] != color:\n                winner = \"Draw\"\n                break\n    for line in LINES:\n        for pos in line:\n            color = positions.get(pos[0], None)\n            if color and color != positions.get(pos[1], None) and color != positions.get(pos[2], None) and color != positions.get(pos[3], None):\n                winner = color\n                break\n        if winner:\n            break\n    return \"Yellow\" if winner == \"Yellow\" else (\"Red\" if winner == \"Red\" else \"Draw\")",
+            "logp": null
+        },
+        {
+            "content": "```\ndef who_is_winner(pieces_positions):\n    winner = None\n    positions = {}\n    for piece in pieces_positions:\n        position, color = piece[0], piece[3:]\n        if position not in positions:\n            positions[position] = color\n        else:\n            if positions[position] != color:\n                winner = \"Draw\"\n                break\n    for line in LINES:\n        for pos in line:\n            color = positions.get(pos[0], None)\n            if color and color != positions.get(pos[1], None) and color != positions.get(pos[2], None) and color != positions.get(pos[3], None):\n                winner = color\n                break\n        if winner:\n            break\n    return \"Yellow\" if winner == \"Yellow\" else (\"Red\" if winner == \"Red\" else \"Draw\")",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```\ndef who_is_winner(pieces_positions):\n    winner = \"Draw\"\n    red_pieces = {}\n    yellow_pieces = {}\n    for piece in pieces_positions:\n        column, color = piece[0], piece[3:]\n        if color == \"Red\":\n            red_pieces[column] = red_pieces.get(column, []) + [color]\n        else:\n            yellow_pieces[column] = yellow_pieces.get(column, []) + [color]\n    for column, colors in red_pieces.items():\n        for i in range(len(colors)):\n            line = [(column, j) for j in range(6)]\n            for j in range(i, i+4):\n                if (j >= len(colors)) or colors[j] != colors[i]:\n                    break\n                line[j][1] -= i-j\n            if len(set(line)) == 1:\n                winner = \"Red\"\n                break\n        if winner != \"Red\":\n            for column, colors in yellow_pieces.items():\n                for i in range(len(colors)):\n                    line = [(column, j) for j in range(6)]\n                    for j in range(i, i+4):\n                        if (j >= len(colors)) or colors[j] != colors[i]:\n                            break\n                        line[j][1] -= i-j\n                    if len(set(line)) == 1:\n                        winner = \"Yellow\"\n                        break\n                    if len(set(line)) == 4:\n                        winner = \"Draw\"\n                        break\n    return winner",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```\ndef who_is_winner(pieces_positions):\n    player_one = 0\n    player_two = 0\n    column_dict = {}\n    for piece in pieces_positions:\n        column = piece[0]\n        color = piece[3:]\n        if column in column_dict:\n            column_dict[column].append(color)\n        else:\n            column_dict[column] = [color]\n    for column in column_dict:\n        for i in range(len(column_dict[column]) - 3):\n            if set(column_dict[column][i:i+4]) == {color}:\n                if color == 'Red':\n                    return 'Red'\n                else:\n                    return 'Yellow'\n    if player_one > player_two:\n        return 'Red'\n    elif player_two > player_one:\n        return 'Yellow'\n    else:\n        return 'Draw'",
+            "logp": null
+        },
+        {
+            "content": "def who_is_winner(pieces_positions):\n    column_dict = {col: [] for col in COLUMNS}\n    for piece in pieces_positions:\n        column_dict[piece[0]].append((piece[0], piece[2]))\n    \n    for column in column_dict.values():\n        for line in LINES:\n            pieces = [piece for piece in column if piece[1] in line]\n            if len(set([piece[2] for piece in pieces])) == 1:\n                return piece[2]\n    \n    return \"Draw\"",
+            "logp": null
+        },
+        {
+            "content": "```\ndef who_is_winner(pieces_positions):\n    column_dict = {col: [] for col in COLUMNS}\n    for piece in pieces_positions:\n        col, color = piece[0], piece[3:]\n        column_dict[col].append(color)\n\n    for col, color_list in column_dict.items():\n        for i in range(len(LINES)):\n            line = LINES[i]\n            for pos in line:\n                piece1, piece2, piece3, piece4 = f\"{pos[0]}{pos[1]}\", f\"{pos[0]}{str(ROWS[int(pos[1])]+1) if int(pos[1]) < 5 else int(pos[1])}\", f\"{pos[0]}{str(ROWS[int(pos[1])]+2) if int(pos[1]) < 4 else int(pos[1])}\", f\"{pos[0]}{str(ROWS[int(pos[1])]+3) if int(pos[1]) < 3 else int(pos[1])}\"\n                if piece1 in color_list and piece2 in color_list and piece3 in color_list and piece4 in color_list:\n                    return \"Yellow\" if color_list[-1] == \"Yellow\" else \"Red\"\n\n    return \"Draw\"",
+            "logp": null
+        }
+    ],
+    "3": []
+}

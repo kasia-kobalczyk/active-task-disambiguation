@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert decode_shift('fghij') == 'abcde'",
+        "assert decode_shift('klmno') == 'fghij'",
+        "assert decode_shift('vwxyz') == 'qrstuv'"
+    ],
+    "1": [
+        "assert decode_shift('lmnop') == 'ghijk'",
+        "assert decode_shift('vwxyz') == 'qrstuv'"
+    ],
+    "2": [
+        "assert decode_shift('xyzab') == 'uvwxy'"
+    ],
+    "3": [
+        "assert decode_shift('jklmn') == 'efghi'",
+        "assert decode_shift('bcdef') == 'wxyz'",
+        "assert decode_shift('vwxyz') == 'qstuv'"
+    ]
+}

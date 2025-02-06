@@ -1,0 +1,18 @@
+{
+    "0": [
+        "histogram(\"a b c d e f g h i j\")",
+        "{'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'f': 1, 'g': 1, 'h': 1, 'i': 1, 'j': 1}"
+    ],
+    "1": [
+        "histogram(\"a a a b b c c c d d d d e e e e e f f f g g g g h h h h i i i i i j j j j j j k k k k k\")",
+        "{'j': 6}"
+    ],
+    "2": [
+        "histogram(\"a a a a a b b b b c c c c c d d d d d d e e e e e e e f f f f f g g g g g g h h h h h h i i i i i i j j j j j j j k k k k k k k l l l l l l\")",
+        "{'e': 7, 'j': 7, 'k': 7}"
+    ],
+    "3": [
+        "histogram(\"a a a b b c c c d d d d e e e e e f f f g g g g h h h h i i i i i j j j j j j k k k k k k l l l l l l\")",
+        "{'j': 6, 'k': 6, 'l': 6}"
+    ]
+}

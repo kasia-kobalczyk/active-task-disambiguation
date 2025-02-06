@@ -1,0 +1,44 @@
+{
+    "0": [
+        "check_dict_case({\"a\": 1, \"b\": 2, \"c\": 3})",
+        "check_dict_case({'a': 1, 'b': 2, 'c': 3})",
+        "check_dict_case({\"a\": 1, \"B\": 2, \"c\": 3})",
+        "check_dict_case({\"hello\": 5, \"world\": 6})",
+        "check_dict_case({\"A\": 1, \"B\": 2, \"C\": 3})",
+        "check_dict_case({'a': 1, 'B': 2, 'c': 3})",
+        "check_dict_case({'hello': 1, 'world': 2})",
+        "check_dict_case({})",
+        "check_dict_case({'A': 1, 'B': 2, 'C': 3})"
+    ],
+    "1": [
+        "check_dict_case({\"X\": 1, \"Y\": 2, \"Z\": 3})",
+        "check_dict_case({\"hello\": 1, \"world\": 2})",
+        "check_dict_case({\"A\": 1, \"b\": 2, \"C\": 3})",
+        "check_dict_case({\"apple\": 1, \"banana\": 2, \"cherry\": 3})",
+        "check_dict_case({\"key1\": 1, \"KEY2\": 2})",
+        "check_dict_case({\"HELLO\": 1, \"WORLD\": 2})",
+        "check_dict_case({\"Key1\": 1, \"key2\": 2})",
+        "check_dict_case({\"a\": 1, \"B\": 2})",
+        "check_dict_case({})"
+    ],
+    "2": [
+        "check_dict_case({\"mixed\": 1, \"Case\": 2})",
+        "check_dict_case({\"Hello\": 1, \"WORLD\": 2})",
+        "check_dict_case({\"hello\": 1, \"world\": 2})",
+        "check_dict_case({\"UPPER\": 1, \"CASE\": 2, \"ONLY\": 3})",
+        "check_dict_case({\"one\": 1, \"two\": 2, \"THREE\": 3})",
+        "check_dict_case({\"key1\": 100, \"key2\": 200, \"KEY3\": 300})",
+        "check_dict_case({\"TEST\": 5, \"CASE\": 6})",
+        "check_dict_case({})"
+    ],
+    "3": [
+        "check_dict_case({\"onlylower\": 10})",
+        "check_dict_case({\"One\": 1, \"two\": 2, \"THREE\": 3})",
+        "check_dict_case({\"apple\": 1, \"banana\": 2, \"Cherry\": 3})",
+        "check_dict_case({\"TEST\": 100, \"EXAMPLE\": 200})",
+        "check_dict_case({\"hello\": 1, \"world\": 2, \"test\": 3})",
+        "check_dict_case({})",
+        "check_dict_case({\"UPPER\": 5, \"CASE\": 6})",
+        "check_dict_case({\"hello\": 5, \"world\": 10})"
+    ]
+}

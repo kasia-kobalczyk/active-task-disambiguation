@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    stack = deque([(signature, 0)])\n    visited = {tuple(signature)}\n    while stack:\n        cur_signature, i = stack.popleft()\n        if i >= n:\n            return cur_signature[i]\n        for j in indexes:\n            if 0 <= j < len(cur_signature):\n                next_signature = list(cur_signature)\n                next_signature.append(cur_signature[j] + (cur_signature[k] if k < j else 0 for k in indexes if k != j))\n                next_signature = tuple(next_signature)\n                if next_signature not in visited:\n                    stack.append((next_signature, i + 1))\n                    visited.add(next_signature)\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    stack = deque([(signature, 0)])\n    visited = {tuple(signature)}\n    while stack:\n        cur_signature, i = stack.popleft()\n        if i >= n:\n            return cur_signature[i]\n        for j in indexes:\n            if 0 <= j < len(cur_signature):\n                next_signature = list(cur_signature)\n                next_signature.append(cur_signature[j] + (cur_signature[k] if k < j else 0 for k in indexes if k != j))\n                next_signature = tuple(next_signature)\n                if next_signature not in visited:\n                    stack.append((next_signature, i + 1))\n                    visited.add(next_signature)\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    stack = deque([(signature, 0)])\n    visited = {tuple(signature)}\n    while stack:\n        cur_signature, i = stack.popleft()\n        if i >= n:\n            return cur_signature[i]\n        for j in indexes:\n            if 0 <= j < len(cur_signature):\n                next_signature = list(cur_signature)\n                next_signature.append(cur_signature[j] + (cur_signature[k] if k < j else 0 for k in indexes if k != j))\n                next_signature = tuple(next_signature)\n                if next_signature not in visited:\n                    stack.append((next_signature, i + 1))\n                    visited.add(next_signature)\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    stack = deque([(signature, 0)])\n    visited = {tuple(signature)}\n    while stack:\n        cur_signature, i = stack.popleft()\n        if i >= n:\n            return cur_signature[i]\n        for j in indexes:\n            if 0 <= j < len(cur_signature):\n                next_signature = list(cur_signature)\n                next_signature.append(cur_signature[j] + (cur_signature[k] if k < j else 0 for k in indexes if k != j))\n                next_signature = tuple(next_signature)\n                if next_signature not in visited:\n                    stack.append((next_signature, i + 1))\n                    visited.add(next_signature)\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    stack = deque([(signature, 0)])\n    visited = {tuple(signature)}\n    while stack:\n        cur_signature, i = stack.popleft()\n        if i >= n:\n            return cur_signature[i]\n        for j in indexes:\n            if 0 <= j < len(cur_signature):\n                next_signature = list(cur_signature)\n                next_signature.append(cur_signature[j] + (cur_signature[k] if k < j else 0 for k in indexes if k != j))\n                next_signature = tuple(next_signature)\n                if next_signature not in visited:\n                    stack.append((next_signature, i + 1))\n                    visited.add(next_signature)\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    queue = deque([(signature, 0)])\n    visited = set(tuple(signature))\n    while queue:\n        cur, idx = queue.popleft()\n        if len(cur) > n:\n            continue\n        if len(cur) == n:\n            return cur[-1]\n        for i in range(len(cur)):\n            if i not in indexes:\n                continue\n            new = list(cur)\n            new.append(sum(new[j] for j in [k-1 for k in indexes if k > 0 and k - 1 < len(new)]))\n            new_tuple = tuple(new)\n            if new_tuple not in visited:\n                visited.add(new_tuple)\n                queue.append((new, len(cur)))\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    queue = deque([(signature, 0)])\n    visited = set(tuple(signature))\n    while queue:\n        cur, idx = queue.popleft()\n        if len(cur) > n:\n            continue\n        if len(cur) == n:\n            return cur[-1]\n        for i in range(len(cur)):\n            if i not in indexes:\n                continue\n            new = list(cur)\n            new.append(sum(new[j] for j in [k-1 for k in indexes if k > 0 and k - 1 < len(new)]))\n            new_tuple = tuple(new)\n            if new_tuple not in visited:\n                visited.add(new_tuple)\n                queue.append((new, len(cur)))\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    queue = deque([(signature, 0)])\n    visited = set(tuple(signature))\n    while queue:\n        cur, idx = queue.popleft()\n        if len(cur) > n:\n            continue\n        if len(cur) == n:\n            return cur[-1]\n        for i in range(len(cur)):\n            if i not in indexes:\n                continue\n            new = list(cur)\n            new.append(sum(new[j] for j in [k-1 for k in indexes if k > 0 and k - 1 < len(new)]))\n            new_tuple = tuple(new)\n            if new_tuple not in visited:\n                visited.add(new_tuple)\n                queue.append((new, len(cur)))\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    queue = deque([(signature, 0)])\n    visited = set(tuple(signature))\n    while queue:\n        cur, idx = queue.popleft()\n        if len(cur) > n:\n            continue\n        if len(cur) == n:\n            return cur[-1]\n        for i in range(len(cur)):\n            if i not in indexes:\n                continue\n            new = list(cur)\n            new.append(sum(new[j] for j in [k-1 for k in indexes if k > 0 and k - 1 < len(new)]))\n            new_tuple = tuple(new)\n            if new_tuple not in visited:\n                visited.add(new_tuple)\n                queue.append((new, len(cur)))\n    return None",
+            "logp": null
+        },
+        {
+            "content": "def custom_fib(signature, indexes, n):\n    queue = deque([(signature, 0)])\n    visited = set(tuple(signature))\n    while queue:\n        cur, idx = queue.popleft()\n        if len(cur) > n:\n            continue\n        if len(cur) == n:\n            return cur[-1]\n        for i in range(len(cur)):\n            if i not in indexes:\n                continue\n            new = list(cur)\n            new.append(sum(new[j] for j in [k-1 for k in indexes if k > 0 and k - 1 < len(new)]))\n            new_tuple = tuple(new)\n            if new_tuple not in visited:\n                visited.add(new_tuple)\n                queue.append((new, len(cur)))\n    return None",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [(i * i - i + 1) for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for num in a:\n        count[num % 3] += 1\n    \n    total_triples = 0\n    total_triples += (count[0] * (count[0] - 1) * (count[0] - 2)) // 6  # all three from count[0]\n    total_triples += (count[1] * (count[1] - 1) * (count[1] - 2)) // 6  # all three from count[1]\n    total_triples += (count[2] * (count[2] - 1) * (count[2] - 2)) // 6  # all three from count[2]\n    total_triples += count[0] * count[1] * count[2]  # one from each\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0] * 3\n    \n    for num in a:\n        count[num % 3] += 1\n    \n    total_triples = 0\n    \n    for i in range(3):\n        for j in range(i, 3):\n            for k in range(j, 3):\n                if (i + j + k) % 3 == 0:\n                    if i == j == k:\n                        total_triples += count[i] * (count[i] - 1) * (count[i] - 2) // 6\n                    elif i == j:\n                        total_triples += count[i] * (count[i] - 1) // 2 * count[k]\n                    elif j == k:\n                        total_triples += count[j] * (count[j] - 1) // 2 * count[i]\n                    else:\n                        total_triples += count[i] * count[j] * count[k]\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for value in a:\n        count[value % 3] += 1\n    \n    total_triples = 0\n    \n    # Calculate triples from count[0]\n    if count[0] >= 3:\n        total_triples += count[0] * (count[0] - 1) * (count[0] - 2) // 6\n    \n    # Calculate triples from count[1] and count[2]\n    total_triples += count[1] * count[2] * (count[1] * (count[1] - 1) // 2)\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0] * 3\n    for number in a:\n        count[number % 3] += 1\n    \n    total_triples = 0\n    for i in range(3):\n        for j in range(i, 3):\n            for k in range(j, 3):\n                if (i + j + k) % 3 == 0:\n                    if i == j == k:\n                        total_triples += count[i] * (count[i] - 1) * (count[i] - 2) // 6\n                    elif i == j:\n                        total_triples += count[i] * (count[i] - 1) // 2 * count[k]\n                    elif j == k:\n                        total_triples += count[j] * (count[j] - 1) // 2 * count[i]\n                    else:\n                        total_triples += count[i] * count[j] * count[k]\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for num in a:\n        count[num % 3] += 1\n\n    total_triples = 0\n    total_triples += count[0] * (count[0] - 1) * (count[0] - 2) // 6  # (0, 0, 0)\n    total_triples += count[1] * count[1] * count[1] // 6            # (1, 1, 1)\n    total_triples += count[2] * count[2] * count[2] // 6            # (2, 2, 2)\n    total_triples += count[0] * count[1] * count[2]                 # (0, 1, 2)\n\n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for value in a:\n        count[value % 3] += 1\n    \n    c0, c1, c2 = count\n    total_triples = 0\n    \n    total_triples += c0 * (c0 - 1) * (c0 - 2) // 6\n    total_triples += c1 * (c1 - 1) * (c1 - 2) // 6\n    total_triples += c2 * (c2 - 1) * (c2 - 2) // 6\n    total_triples += c0 * c1 * c2\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for value in a:\n        count[value % 3] += 1\n\n    total_triples = 0\n    \n    # Count combinations of 3 from the same mod class\n    for c in count:\n        if c >= 3:\n            total_triples += c * (c - 1) * (c - 2) // 6\n            \n    # Count combinations of 1 from each mod class\n    total_triples += count[0] * count[1] * count[2]\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0] * 3\n    for num in a:\n        count[num % 3] += 1\n\n    def nC3(x):\n        return x * (x - 1) * (x - 2) // 6 if x >= 3 else 0\n\n    total = nC3(count[0]) + nC3(count[1]) + nC3(count[2])\n    total += count[0] * count[1] * count[2]\n    \n    return total\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for value in a:\n        count[value % 3] += 1\n    \n    total_triples = 0\n    # Selecting triples from the counts\n    total_triples += count[0] * (count[0] - 1) * (count[0] - 2) // 6  # all from mod 0\n    total_triples += count[1] * count[1] * count[1] // 6            # all from mod 1\n    total_triples += count[2] * count[2] * count[2] // 6            # all from mod 2\n    total_triples += count[0] * count[1] * count[2]                 # one from each mod\n\n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    remainder_count = [0, 0, 0]\n    \n    for value in a:\n        remainder_count[value % 3] += 1\n    \n    count += (remainder_count[0] * (remainder_count[0] - 1) * (remainder_count[0] - 2)) // 6\n    count += (remainder_count[1] * (remainder_count[1] - 1) * (remainder_count[1] - 2)) // 6\n    count += (remainder_count[2] * (remainder_count[2] - 1) * (remainder_count[2] - 2)) // 6\n    count += remainder_count[0] * remainder_count[1] * remainder_count[2]\n    \n    return count\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0, 0, 0]\n\n    for value in a:\n        mod_count[value % 3] += 1\n\n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6\n    count += mod_count[0] * mod_count[1] * mod_count[2]\n\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0] * 3\n    \n    for num in a:\n        mod_count[num % 3] += 1\n    \n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6\n    count += mod_count[0] * mod_count[1] * mod_count[2]\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0, 0, 0]\n    \n    for value in a:\n        mod_count[value % 3] += 1\n\n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6  # all three from mod 0\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6  # all three from mod 1\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6  # all three from mod 2\n    count += mod_count[0] * mod_count[1] * mod_count[2]  # one from each mod\n\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [(i * i - i + 1) for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0] * 3\n    \n    for value in a:\n        mod_count[value % 3] += 1\n    \n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6\n    count += mod_count[0] * mod_count[1] * mod_count[2]\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0] * 3\n\n    for num in a:\n        mod_count[num % 3] += 1\n\n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6\n    count += (mod_count[0] * mod_count[1] * mod_count[2])\n\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    \n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [(i * i - i + 1) for i in range(1, n + 1)]\n    count = 0\n    \n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n                    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n\n    mod_count = [0] * 3\n    for value in a:\n        mod_count[value % 3] += 1\n\n    for i in range(3):\n        for j in range(i, 3):\n            k = (3 - (i + j) % 3) % 3\n            if i == j == k:\n                count += (mod_count[i] * (mod_count[i] - 1) * (mod_count[i] - 2)) // 6\n            elif i == j:\n                count += (mod_count[i] * (mod_count[i] - 1) // 2) * mod_count[k]\n            elif j == k:\n                count += (mod_count[j] * (mod_count[j] - 1) // 2) * mod_count[i]\n            elif i < j and j < k:\n                count += mod_count[i] * mod_count[j] * mod_count[k]\n\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [(i * i - i + 1) for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0, 0, 0]\n    \n    for value in a:\n        mod_count[value % 3] += 1\n    \n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6\n    count += mod_count[0] * mod_count[1] * mod_count[2]\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0, 0, 0]\n    \n    for number in a:\n        mod_count[number % 3] += 1\n\n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6\n    count += mod_count[0] * mod_count[1] * mod_count[2]\n\n    return count\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for value in a:\n        count[value % 3] += 1\n    \n    total_triples = 0\n    total_triples += (count[0] * (count[0] - 1) * (count[0] - 2)) // 6\n    total_triples += (count[1] * (count[1] - 1) * (count[1] - 2)) // 6\n    total_triples += (count[2] * (count[2] - 1) * (count[2] - 2)) // 6\n    total_triples += count[0] * count[1] * count[2]\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = {0: 0, 1: 0, 2: 0}\n    \n    for num in a:\n        count[num % 3] += 1\n    \n    total_triples = 0\n    total_triples += (count[0] * (count[0] - 1) * (count[0] - 2)) // 6\n    total_triples += (count[1] * (count[1] - 1) * (count[1] - 2)) // 6\n    total_triples += (count[2] * (count[2] - 1) * (count[2] - 2)) // 6\n    total_triples += (count[0] * count[1] * count[2])\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    remainder_count = [0] * 3\n    \n    for value in a:\n        remainder_count[value % 3] += 1\n    \n    count += (remainder_count[0] * (remainder_count[0] - 1) * (remainder_count[0] - 2)) // 6\n    count += (remainder_count[1] * (remainder_count[1] - 1) * (remainder_count[1] - 2)) // 6\n    count += (remainder_count[2] * (remainder_count[2] - 1) * (remainder_count[2] - 2)) // 6\n    count += remainder_count[0] * remainder_count[1] * remainder_count[2]\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    \n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n                    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for num in a:\n        count[num % 3] += 1\n    \n    result = 0\n    \n    # Combinations of 3 from the same mod class\n    for c in count:\n        if c >= 3:\n            result += c * (c - 1) * (c - 2) // 6\n    \n    # Combinations of 1 from each mod class\n    result += count[0] * count[1] * count[2]\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for value in a:\n        count[value % 3] += 1\n\n    total_triples = 0\n\n    total_triples += count[0] * (count[0] - 1) * (count[0] - 2) // 6\n    total_triples += count[1] * (count[1] - 1) * (count[1] - 2) // 6\n    total_triples += count[2] * (count[2] - 1) * (count[2] - 2) // 6\n\n    total_triples += count[0] * count[1] * count[2]\n\n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0] * 3\n    \n    for value in a:\n        mod_count[value % 3] += 1\n    \n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6\n    count += mod_count[0] * mod_count[1] * mod_count[2]\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0] * 3\n    for value in a:\n        count[value % 3] += 1\n    \n    result = 0\n    for i in range(3):\n        for j in range(i, 3):\n            for k in range(j, 3):\n                if (i + j + k) % 3 == 0:\n                    if i == j == k:\n                        result += count[i] * (count[i] - 1) * (count[i] - 2) // 6\n                    elif i == j:\n                        result += count[i] * (count[i] - 1) // 2 * count[k]\n                    elif j == k:\n                        result += count[j] * (count[j] - 1) // 2 * count[i]\n                    else:\n                        result += count[i] * count[j] * count[k]\n    \n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [(i * i - i + 1) for i in range(1, n + 1)]\n    count = 0\n    \n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n                    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0] * 3\n    \n    for value in a:\n        count[value % 3] += 1\n        \n    total_triples = 0\n    \n    # Case 1: All three indices have the same mod\n    for c in count:\n        if c >= 3:\n            total_triples += c * (c - 1) * (c - 2) // 6\n            \n    # Case 2: One from each mod\n    total_triples += count[0] * count[1] * count[2]\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0] * 3\n    \n    for num in a:\n        mod_count[num % 3] += 1\n    \n    for i in range(3):\n        for j in range(i, 3):\n            for k in range(j, 3):\n                if (i + j + k) % 3 == 0:\n                    if i == j == k:\n                        count += mod_count[i] * (mod_count[i] - 1) * (mod_count[i] - 2) // 6\n                    elif i == j:\n                        count += mod_count[i] * (mod_count[i] - 1) // 2 * mod_count[k]\n                    elif j == k:\n                        count += mod_count[j] * (mod_count[j] - 1) // 2 * mod_count[i]\n                    else:\n                        count += mod_count[i] * mod_count[j] * mod_count[k]\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0] * 3\n    \n    for num in a:\n        mod_count[num % 3] += 1\n\n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6\n    count += mod_count[0] * mod_count[1] * mod_count[2]\n    \n    return count\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    \n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n                    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    remainder_count = [0] * 3\n\n    for value in a:\n        remainder_count[value % 3] += 1\n\n    for r in range(3):\n        for r2 in range(r, 3):\n            r3 = (3 - (r + r2) % 3) % 3\n            if r == r2 == r3:\n                count += remainder_count[r] * (remainder_count[r] - 1) * (remainder_count[r] - 2) // 6\n            elif r == r2:\n                count += remainder_count[r] * (remainder_count[r] - 1) // 2 * remainder_count[r3]\n            elif r2 == r3:\n                count += remainder_count[r] * remainder_count[r2] * (remainder_count[r2] - 1) // 2\n            else:\n                count += remainder_count[r] * remainder_count[r2] * remainder_count[r3]\n\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0, 0, 0]\n\n    for value in a:\n        mod_count[value % 3] += 1\n\n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6\n    count += mod_count[0] * mod_count[1] * mod_count[2]\n\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    remainder_count = [0] * 3\n    \n    for num in a:\n        remainder_count[num % 3] += 1\n    \n    count += (remainder_count[0] * (remainder_count[0] - 1) * (remainder_count[0] - 2)) // 6\n    count += (remainder_count[1] * (remainder_count[1] - 1) * (remainder_count[1] - 2)) // 6\n    count += (remainder_count[2] * (remainder_count[2] - 1) * (remainder_count[2] - 2)) // 6\n    count += remainder_count[0] * remainder_count[1] * remainder_count[2]\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    \n    for i in range(n):\n        for j in range(i + 1, n):\n            for k in range(j + 1, n):\n                if (a[i] + a[j] + a[k]) % 3 == 0:\n                    count += 1\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n\n    for num in a:\n        count[num % 3] += 1\n\n    total_triples = 0\n\n    # Triples of the same remainder\n    for c in count:\n        if c >= 3:\n            total_triples += c * (c - 1) * (c - 2) // 6\n\n    # One from each remainder\n    total_triples += count[0] * count[1] * count[2]\n\n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for value in a:\n        count[value % 3] += 1\n    \n    total_triples = 0\n    \n    # Case 1: All three numbers are of the same type\n    for c in count:\n        if c >= 3:\n            total_triples += c * (c - 1) * (c - 2) // 6\n    \n    # Case 2: One of each type\n    total_triples += count[0] * count[1] * count[2]\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    mod_count = [0] * 3\n    \n    for num in a:\n        mod_count[num % 3] += 1\n    \n    count += (mod_count[0] * (mod_count[0] - 1) * (mod_count[0] - 2)) // 6  # Choose 3 from mod 0\n    count += (mod_count[1] * (mod_count[1] - 1) * (mod_count[1] - 2)) // 6  # Choose 3 from mod 1\n    count += (mod_count[2] * (mod_count[2] - 1) * (mod_count[2] - 2)) // 6  # Choose 3 from mod 2\n    count += mod_count[0] * mod_count[1] * mod_count[2]  # One from each mod\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n\n    for value in a:\n        count[value % 3] += 1\n\n    result = 0\n    for i in range(3):\n        for j in range(3):\n            for k in range(3):\n                if (i + j + k) % 3 == 0:\n                    if i == j == k:\n                        result += count[i] * (count[i] - 1) * (count[i] - 2) // 6\n                    elif i == j:\n                        result += count[i] * (count[i] - 1) // 2 * count[k]\n                    elif j == k:\n                        result += count[j] * (count[j] - 1) // 2 * count[i]\n                    elif i == k:\n                        result += count[i] * (count[i] - 1) // 2 * count[j]\n                    else:\n                        result += count[i] * count[j] * count[k]\n\n    return result\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    \n    # Count occurrences of each remainder when divided by 3\n    remainder_count = [0, 0, 0]\n    for num in a:\n        remainder_count[num % 3] += 1\n\n    # Calculate number of valid triples\n    count += (remainder_count[0] * (remainder_count[0] - 1) * (remainder_count[0] - 2)) // 6  # all three are 0 mod 3\n    count += (remainder_count[1] * (remainder_count[1] - 1) * (remainder_count[1] - 2)) // 6  # all three are 1 mod 3\n    count += (remainder_count[2] * (remainder_count[2] - 1) * (remainder_count[2] - 2)) // 6  # all three are 2 mod 3\n    count += remainder_count[0] * remainder_count[1] * remainder_count[2]  # one of each\n    \n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = [0, 0, 0]\n    \n    for value in a:\n        count[value % 3] += 1\n    \n    total_triples = 0\n    total_triples += count[0] * (count[0] - 1) * (count[0] - 2) // 6\n    total_triples += count[1] * (count[1] - 1) * (count[1] - 2) // 6\n    total_triples += count[2] * (count[2] - 1) * (count[2] - 2) // 6\n    total_triples += count[0] * count[1] * count[2]\n    \n    return total_triples\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef get_max_triples(n):\n    a = [(i * i - i + 1) % 3 for i in range(1, n + 1)]\n    count = [0] * 3\n    for num in a:\n        count[num] += 1\n\n    total = 0\n    # Choose 3 from count[0]\n    total += count[0] * (count[0] - 1) * (count[0] - 2) // 6\n    # Choose 3 from count[1]\n    total += count[1] * (count[1] - 1) * (count[1] - 2) // 6\n    # Choose 3 from count[2]\n    total += count[2] * (count[2] - 1) * (count[2] - 2) // 6\n    # Choose 1 from each count\n    total += count[0] * count[1] * count[2]\n    return total\n```",
+            "logp": null
+        }
+    ]
+}

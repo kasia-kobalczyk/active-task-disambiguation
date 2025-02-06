@@ -1,0 +1,6 @@
+{
+    "0": "assert parse_music(\"o|o\") == [2, 4]",
+    "1": "assert parse_music(\"o|o|.\") == [4, 2, 1]",
+    "2": "assert parse_music(\".|.|||.|||.||\") == [1, 1, 1, 1, 1, 1, 1, 1, 1]\n# The expected output is a list containing nine 1s.",
+    "3": "assert parse_music(\"o|o|.||\") == [4, 2, 1, 1]"
+}

@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, float, str)):\n            return False\n        if isinstance(value, (int, float)):\n            value = str(value)\n        if not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if isinstance(value, int):\n            if not is_narc(value):\n                return False\n        elif isinstance(value, str):\n            try:\n                if not is_narc(int(value)):\n                    return False\n            except ValueError:\n                return False\n        else:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        if not is_narc(value):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    # Check for invalid arguments\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n    \n    # Check if all values are narcissistic\n    for value in values:\n        if not is_narc(value):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "# The problem is asking to implement a function that checks whether all the numbers given as arguments are narcissistic numbers.\n\n# To solve the problem, we can follow these steps:\n# - Implement the helper function `get_digits` that takes an integer as input and returns a list of its digits.\n# - Implement the helper function `is_narc` that takes an integer as input and returns `True` if it is a narcissistic number, and `False` otherwise.\n# - In the main function `is_narcissistic`, iterate over all the values and check if each value is a narcissistic number using the `is_narc` function. If any value is not a narcissistic number, return `False`. If all values are narcissistic numbers, return `True`.\n\n# Let's implement this now.\n\ndef get_digits(n):\n    return [int(x) for x in str(n)]\n\n\ndef is_narc(n):\n    return n == sum([x**len(get_digits(n)) for x in get_digits(n)])\n\n\ndef is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int):\n            try:\n                value = int(value)\n            except ValueError:\n                return False\n        if not is_narc(value):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        try:\n            if not is_narc(int(value)):\n                return False\n        except ValueError:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        \n        if isinstance(value, str):\n            try:\n                value = int(value)\n            except ValueError:\n                return False\n        \n        if not is_narc(value):\n            return False\n        \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if isinstance(value, int) or isinstance(value, str):\n            if not is_narc(int(value)):\n                return False\n        else:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    if len(values) == 0:\n        return False\n    \n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        \n        if isinstance(value, str):\n            try:\n                value = int(value)\n            except ValueError:\n                return False\n        \n        if not is_narc(value):\n            return False\n    \n    return True",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if isinstance(value, int):\n            value = str(value)\n        if not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if isinstance(value, str):\n            if not value.isdigit():\n                return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for val in values:\n        if not isinstance(val, (int, str)):\n            return False\n        if isinstance(val, int):\n            val = str(val)\n        if not val.isdigit():\n            return False\n        if not is_narc(int(val)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        if not str(value).isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "    for value in values:\n        try:\n            num = int(value)\n            if not is_narc(num):\n                return False\n        except ValueError:\n            continue\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    def get_digits(n):\n        return [int(x) for x in list(str(n))]\n\n    def is_narc(n):\n        return n == sum([x**len(get_digits(n)) for x in get_digits(n)])\n\n    if not values:\n        return False\n    for value in values:\n        try:\n            if not is_narc(int(value)):\n                return False\n        except ValueError:\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        if isinstance(value, int):\n            value = str(value)\n        if not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if isinstance(value, int):\n            value = str(value)\n        if not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    def get_digits(n):\n        return [int(x) for x in list(str(n))]\n\n\n    def is_narc(n):\n        return n == sum([x**len(get_digits(n)) for x in get_digits(n)])\n\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if isinstance(value, str):\n            try:\n                value = int(value)\n            except ValueError:\n                return False\n        if not is_narc(value):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if isinstance(value, int):\n            value = str(value)\n        if not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True\n\nprint(is_narcissistic(\"153\", \"370\", \"371\", \"407\"))",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, str) and not isinstance(value, int):\n            return False\n        if isinstance(value, str):\n            try:\n                value = int(value)\n            except ValueError:\n                return False\n        \n        if not is_narc(value):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        \n        if isinstance(value, int):\n            value = str(value)\n        \n        if not value.isdigit():\n            return False\n        \n        if not is_narc(int(value)):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not str(value).isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        \n        if isinstance(value, int):\n            value = str(value)\n            \n        if not value.isdigit():\n            return False\n        \n        if not is_narc(int(value)):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if isinstance(value, str) and not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        if isinstance(value, str) and not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, str):\n            return False\n        try:\n            n = int(value)\n        except ValueError:\n            return False\n        if not is_narc(n):\n            return False\n    return True\n\nprint(is_narcissistic(\"153\", \"370\", \"371\", \"407\"))\nprint(is_narcissistic(\"abc\"))",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, str) and not isinstance(value, int):\n            return False\n        if isinstance(value, str):\n            try:\n                value = int(value)\n            except ValueError:\n                return False\n        if not is_narc(value):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if isinstance(value, int):\n            value = str(value)\n        if not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if type(value) is str:\n            if not value.isdigit():\n                return False\n        elif type(value) is int:\n            if value < 0:\n                return False\n        else:\n            return False\n\n        if not is_narc(int(value)):\n            return False\n\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        if isinstance(value, int):\n            value = str(value)\n        if not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if isinstance(value, str):\n            try:\n                value = int(value)\n            except ValueError:\n                return False\n        if not isinstance(value, int):\n            return False\n        if not is_narc(value):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        if not str(value).isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        \n        try:\n            value = int(value)\n        except ValueError:\n            return False\n        \n        if not is_narc(value):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    if len(values) == 0:\n        return False\n    \n    for value in values:\n        try:\n            value = int(value)\n        except ValueError:\n            return False\n        \n        if not is_narc(value):\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if type(value) != int and type(value) != str:\n            return False\n        if type(value) == str:\n            if not value.isdigit():\n                return False\n            value = int(value)\n        if not is_narc(value):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        if isinstance(value, str):\n            try:\n                value = int(value)\n            except ValueError:\n                return False\n        if not is_narc(value):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    if len(values) == 0:\n        return False\n\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n\n        if isinstance(value, str):\n            try:\n                value = int(value)\n            except ValueError:\n                return False\n\n        if not is_narc(value):\n            return False\n\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    for value in values:\n        if not isinstance(value, (int, str)):\n            return False\n        if isinstance(value, int):\n            value = str(value)\n        if not value.isdigit():\n            return False\n        if not is_narc(int(value)):\n            return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_narcissistic(*values):\n    if not values:\n        return False\n    \n    for value in values:\n        if not isinstance(value, int) and not isinstance(value, str):\n            return False\n        \n        if isinstance(value, int):\n            value = str(value)\n        \n        if not value.isdigit():\n            return False\n        \n        if not is_narc(int(value)):\n            return False\n        \n    return True",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "0": "assert compare_versions(\"11\", \"11\") == \"EQ\"",
+    "1": "assert compare_versions(\"10.2\", \"10.2.0.0\") == True",
+    "2": "assert compare_versions(\"10.10.1.1\", \"10.10.1.2\") == False",
+    "3": "assert compare_versions(\"11.1\", \"11.1.1\") == False"
+}

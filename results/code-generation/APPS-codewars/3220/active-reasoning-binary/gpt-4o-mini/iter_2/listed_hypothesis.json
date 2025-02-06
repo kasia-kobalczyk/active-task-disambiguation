@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if not n % x}) for n in range(1, 2001)]\n    harmonicity = {}\n    \n    for n in range(a, b + 1):\n        ratio = harmonic[n] / n if n != 0 else None\n        if ratio is not None:\n            if ratio not in harmonicity:\n                harmonicity[ratio] = []\n            harmonicity[ratio].append(n)\n    \n    total = 0\n    for members in harmonicity.values():\n        if len(members) > 1:\n            total += min(members)\n    \n    return total if total > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum(d for i in range(1, int(n**0.5) + 1) if n % i == 0 for d in (i, n // i) if d != n) for n in range(1, 2001)]\n    \n    ratio_pairs = {}\n    \n    for n in range(a, b + 1):\n        if n > 0:\n            ratio = harmonic[n] / n\n            if ratio not in ratio_pairs:\n                ratio_pairs[ratio] = []\n            ratio_pairs[ratio].append(n)\n\n    lowest_members_sum = sum(min(pair) for pair in ratio_pairs.values() if len(pair) > 1)\n    \n    return lowest_members_sum if lowest_members_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum(y for x in range(1, int(n**0.5) + 1) for y in (x, n // x) if n % x == 0) for n in range(1, 2001)]\n    \n    harmonicity = {}\n    for n, h in enumerate(harmonic):\n        if h not in harmonicity:\n            harmonicity[h] = []\n        harmonicity[h].append(n)\n    \n    sum_lowest_members = 0\n    found_pairs = False\n    \n    for members in harmonicity.values():\n        if len(members) > 1:\n            valid_members = [m for m in members if a <= m < b]\n            if len(valid_members) > 1:\n                sum_lowest_members += min(valid_members)\n                found_pairs = True\n    \n    return sum_lowest_members if found_pairs else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if not n % x}), n) for n in range(1, 2001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): \n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    \n    lowest_sum = 0\n    pairs_found = False\n    \n    for numbers in HARMO_GROUPS.values():\n        if any(a <= num <= b for num in numbers):\n            pairs_found = True\n            lowest_sum += numbers[0]\n    \n    return lowest_sum if pairs_found else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum(d for d in range(1, n + 1) if n % d == 0) for n in range(1, 2001)]\n    harmonicity = {}\n    \n    for n in range(a, b + 1):\n        ratio = harmonic[n] / n if n != 0 else 0\n        if ratio not in harmonicity:\n            harmonicity[ratio] = []\n        harmonicity[ratio].append(n)\n    \n    lowest_sum = sum(min(lst) for lst in harmonicity.values() if len(lst) > 1)\n    return lowest_sum if lowest_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0}), n) for n in range(1, 2001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic):\n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    \n    sum_of_lowest_members = 0\n    for group in HARMO_GROUPS.values():\n        for i in range(len(group) - 1):\n            if a <= group[i] < b and a <= group[i + 1] < b:\n                sum_of_lowest_members += group[i]\n\n    return sum_of_lowest_members if sum_of_lowest_members > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if not n % x}), n) for n in range(1, 2001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): \n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n\n    lowest_sum = 0\n    found_pairs = False\n    for group in HARMO_GROUPS.values():\n        for i in range(len(group) - 1):\n            if a <= group[i] < b and a <= group[i + 1] < b:\n                lowest_sum += group[i]\n                found_pairs = True\n\n    return lowest_sum if found_pairs else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum(y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0) for n in range(1, 2001)]\n    \n    harmonicity = {}\n    for n, h in enumerate(harmonic):\n        if h not in harmonicity:\n            harmonicity[h] = []\n        harmonicity[h].append(n)\n\n    total_sum = 0\n    for members in harmonicity.values():\n        if len(members) > 1:\n            pairs = [(min(members[i], members[j]), max(members[i], members[j])) \n                     for i in range(len(members)) \n                     for j in range(i + 1, len(members))\n                     if members[i] >= a and members[i] < b and members[j] >= a and members[j] < b]\n            lowest_members = {min(pair) for pair in pairs}\n            total_sum += sum(lowest_members)\n\n    return total_sum if total_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    \n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if not n % x}), n) for n in range(1, 2001)]\n    \n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): \n        harmonicity[h].add(n)\n    \n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    \n    lowest_members_sum = 0\n    found_pair = False\n    \n    for group in HARMO_GROUPS.values():\n        for i in range(len(group)):\n            if a <= group[i] < b:\n                lowest_members_sum += group[i]\n                found_pair = True\n                break\n    \n    return lowest_members_sum if found_pair else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum(y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0) for n in range(1, 2001)]\n    \n    harmonicity = {}\n    for n, h in enumerate(harmonic):\n        if h not in harmonicity:\n            harmonicity[h] = []\n        harmonicity[h].append(n)\n\n    total = 0\n    for members in harmonicity.values():\n        if len(members) > 1:\n            lowest_member = min(m for m in members if a <= m <= b)\n            total += lowest_member\n    \n    return total if total > 0 else 0\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1, 2001)]\n    \n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): harmonicity[h].add(n)\n    \n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    \n    lowest_sum = 0\n    pairs_found = set()\n    \n    for group in HARMO_GROUPS.values():\n        if any(a <= n <= b for n in group):\n            filtered_group = [n for n in group if a <= n <= b]\n            if len(filtered_group) >= 2:\n                lowest_sum += min(filtered_group)\n                pairs_found.add(tuple(sorted(filtered_group)))\n    \n    return lowest_sum if pairs_found else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if not n % x}), n) for n in range(1, 2001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): \n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n\n    lowest_members_sum = 0\n    found_pairs = False\n    \n    for members in HARMO_GROUPS.values():\n        members = [m for m in members if a <= m <= b]\n        if len(members) > 1:\n            lowest_members_sum += members[0]\n            found_pairs = True\n\n    return lowest_members_sum if found_pairs else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum(y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0) for n in range(1, 2001)]\n    harmonicity = {}\n    \n    for n in range(a, b + 1):\n        ratio = harmonic[n] / n if n > 0 else None\n        if ratio is not None:\n            if ratio in harmonicity:\n                harmonicity[ratio].append(n)\n            else:\n                harmonicity[ratio] = [n]\n    \n    result = sum(min(p) for p in harmonicity.values() if len(p) > 1)\n    return result if result > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum(d for i in range(1, int(n**0.5) + 1) if n % i == 0 for d in (i, n // i) if d <= n) for n in range(1, 2001)]\n    harmonicity = {}\n    \n    for n in range(a, b + 1):\n        ratio = harmonic[n] / n if n != 0 else 0\n        if ratio not in harmonicity:\n            harmonicity[ratio] = []\n        harmonicity[ratio].append(n)\n\n    return sum(min(pair) for pair in harmonicity.values() if len(pair) > 1) or 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if not n % x}), n) for n in range(1, 2001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): \n        if a <= n <= b:\n            harmonicity[h].add(n)\n\n    sum_of_lowest_members = sum(min(lst) for lst in harmonicity.values() if len(lst) > 1)\n\n    return sum_of_lowest_members if sum_of_lowest_members > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    \n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0}), n) for n in range(1, 2001)]\n    \n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): \n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    \n    total = 0\n    found_pairs = set()\n    \n    for group in HARMO_GROUPS.values():\n        for i in range(len(group)):\n            for j in range(i + 1, len(group)):\n                if group[i] >= a and group[i] < b and group[j] >= a and group[j] < b:\n                    found_pairs.add((min(group[i], group[j]), max(group[i], group[j])))\n    \n    if not found_pairs:\n        return 0\n    \n    total = sum(pair[0] for pair in found_pairs)\n    \n    return total\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if not n % x}), n) for n in range(1, 2001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): \n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    \n    pairs_sum = 0\n    found_pairs = set()\n\n    for group in HARMO_GROUPS.values():\n        for i in range(len(group)):\n            for j in range(i + 1, len(group)):\n                if a <= group[i] < b and a <= group[j] < b:\n                    found_pairs.add((min(group[i], group[j]), max(group[i], group[j])))\n\n    if found_pairs:\n        pairs_sum = sum(min(pair) for pair in found_pairs)\n    \n    return pairs_sum if pairs_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum(y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if n % x == 0) for n in range(1, 2001)]\n    \n    ratios = {}\n    for n in range(a, b):\n        if n > 0:\n            ratio = harmonic[n] / n\n            if ratio in ratios:\n                ratios[ratio].append(n)\n            else:\n                ratios[ratio] = [n]\n    \n    lowest_sum = sum(min(pair) for pair in ratios.values() if len(pair) > 1)\n    \n    return lowest_sum if lowest_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\n    harmonic = [0] + [sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0}) for n in range(1, b + 1)]\n    pairs = {}\n    \n    for n in range(a, b + 1):\n        ratio = harmonic[n] / n if n != 0 else None\n        if ratio is not None:\n            if ratio not in pairs:\n                pairs[ratio] = []\n            pairs[ratio].append(n)\n    \n    sum_lowest = sum(min(values) for values in pairs.values() if len(values) > 1)\n    \n    return sum_lowest if sum_lowest > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    \n    def sum_of_divisors(n):\n        total = 0\n        for i in range(1, int(n**0.5) + 1):\n            if n % i == 0:\n                total += i\n                if i != n // i:\n                    total += n // i\n        return total\n    \n    harmonicity = defaultdict(list)\n    \n    for n in range(a, b):\n        sum_div = sum_of_divisors(n)\n        if n > 0:\n            ratio = Fraction(sum_div, n)\n            harmonicity[ratio].append(n)\n    \n    lowest_sum = 0\n    found_pair = False\n    \n    for members in harmonicity.values():\n        if len(members) > 1:\n            found_pair = True\n            lowest_sum += min(members)\n    \n    return lowest_sum if found_pair else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum(y for x in range(1, int(n**0.5) + 1) for y in (x, n // x) if n % x == 0) for n in range(1, 2001)]\n    harmonicity = {}\n    \n    for n in range(a, b + 1):\n        ratio = harmonic[n] / n if n > 0 else 0\n        if ratio not in harmonicity:\n            harmonicity[ratio] = []\n        harmonicity[ratio].append(n)\n\n    return sum(min(pair) for pair in harmonicity.values() if len(pair) > 1) if harmonicity else 0\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef solve(a, b):\n    pairs = {}\n    for n in range(a, b):\n        sum_divisors = sum(i for i in range(1, n + 1) if n % i == 0)\n        ratio = sum_divisors / n\n        if ratio not in pairs:\n            pairs[ratio] = []\n        pairs[ratio].append(n)\n\n    lowest_members_sum = sum(min(pair) for pair in pairs.values() if len(pair) > 1)\n\n    return lowest_members_sum if lowest_members_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    if b > 2000:\n        b = 2000\n    harmonic = [0] + [sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0}) for n in range(1, b + 1)]\n    harmonic_ratio = {n: harmonic[n] / n for n in range(a, b) if n != 0}\n    \n    pairs = {}\n    for n1 in harmonic_ratio:\n        for n2 in harmonic_ratio:\n            if n1 < n2 and harmonic_ratio[n1] == harmonic_ratio[n2]:\n                if harmonic_ratio[n1] not in pairs:\n                    pairs[harmonic_ratio[n1]] = (n1, n2)\n    \n    if not pairs:\n        return 0\n    \n    return sum(pair[0] for pair in pairs.values())\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0}) for n in range(1, 2001)]\n    pairs = {}\n    \n    for n in range(a, b):\n        if n > 0:\n            ratio = harmonic[n] / n\n            if ratio not in pairs:\n                pairs[ratio] = []\n            pairs[ratio].append(n)\n    \n    lowest_sum = 0\n    has_pair = False\n    \n    for numbers in pairs.values():\n        if len(numbers) > 1:\n            has_pair = True\n            lowest_sum += min(numbers)\n    \n    return lowest_sum if has_pair else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0}) for n in range(1, 2001)]\n    ratios = {}\n    \n    for n in range(a, b):\n        if n > 0:\n            ratio = harmonic[n] / n\n            if ratio not in ratios:\n                ratios[ratio] = []\n            ratios[ratio].append(n)\n    \n    lowest_sum = 0\n    for lst in ratios.values():\n        if len(lst) > 1:\n            lowest_sum += min(lst)\n    \n    return lowest_sum if lowest_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if n % x == 0}) for n in range(1, 2001)]\n    \n    pairs = {}\n    for n in range(a, b):\n        if n > 0:\n            ratio = harmonic[n] / n\n            if ratio not in pairs:\n                pairs[ratio] = []\n            pairs[ratio].append(n)\n\n    lowest_sum = 0\n    found_pair = False\n    \n    for members in pairs.values():\n        if len(members) > 1:\n            lowest_sum += min(members)\n            found_pair = True\n    \n    return lowest_sum if found_pair else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    if a < 0:\n        a = 0\n    if b > 2000:\n        b = 2000\n        \n    def sum_of_divisors(n):\n        return sum(i + (n // i if i != n // i else 0) for i in range(1, int(n**0.5) + 1) if n % i == 0)\n\n    ratios = {}\n    for n in range(a, b):\n        s = sum_of_divisors(n)\n        ratio = s / n\n        if ratio not in ratios:\n            ratios[ratio] = []\n        ratios[ratio].append(n)\n\n    sum_lowest = sum(min(numbers) for numbers in ratios.values() if len(numbers) > 1)\n    \n    return sum_lowest if sum_lowest > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    \n    def sum_of_divisors(n):\n        total = 0\n        for i in range(1, int(n**0.5) + 1):\n            if n % i == 0:\n                total += i\n                if i != n // i:\n                    total += n // i\n        return total\n\n    harmonicity = defaultdict(set)\n    \n    for n in range(max(1, a), min(b, 2000) + 1):\n        s = sum_of_divisors(n)\n        if n > 0:\n            ratio = Fraction(s, n)\n            harmonicity[ratio].add(n)\n\n    lowest_members_sum = 0\n    found_pairs = False\n\n    for numbers in harmonicity.values():\n        if len(numbers) > 1:\n            found_pairs = True\n            lowest_members_sum += min(numbers)\n\n    return lowest_members_sum if found_pairs else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if not n % x}) for n in range(1, 2001)]\n    harmonicity = {}\n    \n    for n in range(a, b + 1):\n        ratio = harmonic[n] / n if n != 0 else 0\n        if ratio not in harmonicity:\n            harmonicity[ratio] = []\n        harmonicity[ratio].append(n)\n    \n    sum_of_min_members = 0\n    found_pairs = False\n    \n    for members in harmonicity.values():\n        if len(members) > 1:\n            sum_of_min_members += min(members)\n            found_pairs = True\n    \n    return sum_of_min_members if found_pairs else 0\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    \n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if not n % x}), n) for n in range(1, 2001)]\n    \n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): \n        harmonicity[h].add(n)\n    \n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    \n    lowest_sum = 0\n    found_pairs = set()\n    \n    for group in HARMO_GROUPS.values():\n        for i in range(len(group)):\n            for j in range(i + 1, len(group)):\n                if a <= group[i] < b and a <= group[j] < b:\n                    found_pairs.add((min(group[i], group[j]), max(group[i], group[j])))\n    \n    if not found_pairs:\n        return 0\n    \n    lowest_sum = sum(x[0] for x in found_pairs)\n    \n    return lowest_sum\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if n % x == 0}), n) for n in range(1, 2001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): \n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n\n    sum_of_lowest_members = 0\n    pairs_found = False\n\n    for numbers in HARMO_GROUPS.values():\n        filtered_numbers = [n for n in numbers if a <= n < b]\n        if len(filtered_numbers) > 1:\n            sum_of_lowest_members += min(filtered_numbers)\n            pairs_found = True\n            \n    return sum_of_lowest_members if pairs_found else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0}) for n in range(1, 2001)]\n    pairs = {}\n    \n    for n in range(a, b):\n        if n > 0:\n            ratio = harmonic[n] / n\n            if ratio not in pairs:\n                pairs[ratio] = []\n            pairs[ratio].append(n)\n    \n    sum_of_lows = sum(min(pair) for pair in pairs.values() if len(pair) > 1)\n    return sum_of_lows if sum_of_lows > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    \n    harmonic = [0] + [Fraction(sum({y for x in range(1,int(n**.5)+1) for y in [x, n//x] if not n%x}), n) for n in range(1, 2001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic): harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    \n    lowest_sum = 0\n    found_pairs = set()\n    \n    for group in HARMO_GROUPS.values():\n        for i in range(len(group)):\n            for j in range(i + 1, len(group)):\n                if a <= group[i] < b and a <= group[j] < b:\n                    found_pairs.add((group[i], group[j]))\n    \n    if found_pairs:\n        lowest_sum = sum(min(pair) for pair in found_pairs)\n    \n    return lowest_sum if lowest_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    def sum_of_divisors(n):\n        total = 0\n        for i in range(1, int(n**0.5) + 1):\n            if n % i == 0:\n                total += i\n                if i != n // i:\n                    total += n // i\n        return total\n\n    harmonicity = defaultdict(set)\n    \n    for n in range(max(1, a), min(b, 2000) + 1):\n        s = sum_of_divisors(n)\n        ratio = Fraction(s, n)\n        harmonicity[ratio].add(n)\n\n    lowest_members_sum = 0\n    found_pairs = False\n\n    for group in harmonicity.values():\n        if len(group) > 1:\n            found_pairs = True\n            lowest_members_sum += min(group)\n\n    return lowest_members_sum if found_pairs else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    \n    harmonic = [0] + [Fraction(sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if n % x == 0}), n) for n in range(1, 2001)]\n\n    harmonicity = defaultdict(set)\n    for n, h in enumerate(harmonic):\n        harmonicity[h].add(n)\n\n    HARMO_GROUPS = {h: sorted(s) for h, s in harmonicity.items() if len(s) > 1}\n    \n    pairs = set()\n    for members in HARMO_GROUPS.values():\n        for i in range(len(members)):\n            for j in range(i + 1, len(members)):\n                if a <= members[i] < b and a <= members[j] < b:\n                    pairs.add((min(members[i], members[j]), max(members[i], members[j])))\n\n    return sum(min(pair) for pair in pairs) if pairs else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n\n    def sum_of_divisors(n):\n        total = 0\n        for i in range(1, int(n**0.5) + 1):\n            if n % i == 0:\n                total += i\n                if i != n // i:\n                    total += n // i\n        return total\n\n    harmonicity = defaultdict(set)\n    for n in range(a, b):\n        sum_div = sum_of_divisors(n)\n        if n != 0:\n            ratio = Fraction(sum_div, n)\n            harmonicity[ratio].add(n)\n\n    lowest_members_sum = 0\n    found_pair = False\n    for members in harmonicity.values():\n        if len(members) > 1:\n            lowest_members_sum += min(members)\n            found_pair = True\n\n    return lowest_members_sum if found_pair else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum({y for x in range(1, int(n**0.5) + 1) for y in [x, n // x] if n % x == 0}) for n in range(1, 2001)]\n    ratios = {}\n    \n    for n in range(a, b):\n        if n > 0:\n            ratio = harmonic[n] / n\n            if ratio not in ratios:\n                ratios[ratio] = []\n            ratios[ratio].append(n)\n    \n    lowest_sum = 0\n    for lst in ratios.values():\n        if len(lst) > 1:\n            lowest_sum += min(lst)\n    \n    return lowest_sum if lowest_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if n % x == 0}) for n in range(1, 2001)]\n    \n    pairs = {}\n    for n in range(a, b):\n        if n > 0:\n            ratio = harmonic[n] / n\n            if ratio not in pairs:\n                pairs[ratio] = []\n            pairs[ratio].append(n)\n\n    lowest_sum = sum(min(lst) for lst in pairs.values() if len(lst) > 1)\n    \n    return lowest_sum if lowest_sum > 0 else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    from collections import defaultdict\n    from fractions import Fraction\n    \n    def sum_of_divisors(n):\n        total = 0\n        for i in range(1, int(n**0.5) + 1):\n            if n % i == 0:\n                total += i\n                if i != n // i:\n                    total += n // i\n        return total\n\n    harmonicity = defaultdict(set)\n    \n    for n in range(max(1, a), min(b, 2000) + 1):\n        s = sum_of_divisors(n)\n        if n > 0:\n            ratio = Fraction(s, n)\n            harmonicity[ratio].add(n)\n\n    lowest_members_sum = 0\n    found_pairs = False\n\n    for numbers in harmonicity.values():\n        if len(numbers) > 1:\n            found_pairs = True\n            lowest_members_sum += min(numbers)\n\n    return lowest_members_sum if found_pairs else 0\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef solve(a, b):\n    harmonic = [0] + [sum({y for x in range(1, int(n**.5) + 1) for y in [x, n // x] if not n % x}) for n in range(1, 2001)]\n    harmonicity = {}\n    \n    for n in range(a, b + 1):\n        ratio = harmonic[n] / n if n != 0 else 0\n        if ratio not in harmonicity:\n            harmonicity[ratio] = []\n        harmonicity[ratio].append(n)\n    \n    sum_of_min_members = 0\n    found_pairs = False\n    \n    for members in harmonicity.values():\n        if len(members) > 1:\n            sum_of_min_members += min(members)\n            found_pairs = True\n    \n    return sum_of_min_members if found_pairs else 0\n```",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert bears(3, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(3, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['', False]",
+        "assert bears(1, 'HBHBHB') == ['', False]",
+        "assert bears(1, 'HB8B8') == ['B8B8', True]",
+        "assert bears(2, 'B8B8B8') == ['B8B8B8', True]",
+        "assert bears(2, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(1, 'B8B8') == ['B8B8', True]"
+    ],
+    "1": [
+        "assert bears(3, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(1, 'EvHKikiyxfeyKBmiCMj') == ['', False]",
+        "assert bears(3, 'EvHB8KN8ik8BiyxfeyKBmiCMjB8') == ['B88BB8', True]",
+        "assert bears(1, 'HB88B8B') == ['B8B8B8', True]",
+        "assert bears(1, 'HB88B') == ['B8B8', True]",
+        "assert bears(4, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(4, 'EvHB8KN8ik8BiyxfeyKBmiCMjB88B8') == ['B88BB88B8', False]",
+        "assert bears(2, 'EvHKNikiyxfeyKmiCMj') == ['', False]"
+    ],
+    "2": [
+        "assert bears(4, 'B8B88B8B8B8') == ['B8B88B8B8B8', False]",
+        "assert bears(1, 'EvHBKNikBiyxfeyKBmiCMj') == ['', False]",
+        "assert bears(1, 'EvHKKikiyxfeyKmiCMj') == ['', False]",
+        "assert bears(1, 'B8B8B8B8B8') == ['B8B8B8B8B8', True]",
+        "assert bears(5, 'EvHB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(1, 'HB8BHB8') == ['B8BHB8', True]",
+        "assert bears(3, 'EvHB8KNik8BiyxfeyKBmiCMj') == ['', False]",
+        "assert bears(4, 'EvHB888ik8BiyxfeyKBmiCMj') == ['B888B', False]"
+    ],
+    "3": [
+        "assert bears(1, 'EvHBKNikBiyxfeyKBmiCMj') == ['', False]",
+        "assert bears(2, 'B8B88B8B8B') == ['B8B88B8B8', True]",
+        "assert bears(1, 'B8B8B8B8B8') == ['B8B8B8B8B8', True]",
+        "assert bears(5, 'EvHB8KN8ik8BiyxfeyKBmiCMjB8B') == ['B88B8B8', False]",
+        "assert bears(4, 'EvHB888ik8BiyxfeyKBmiCMj') == ['B8888B', False]",
+        "assert bears(2, 'HB8KN8ik8BiyxfeyKBmiCMj') == ['B88B', False]",
+        "assert bears(1, 'EvHBKikBiyxfeyKBmiCMj') == ['', False]",
+        "assert bears(1, '') == ['', False]"
+    ]
+}

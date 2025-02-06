@@ -1,0 +1,18 @@
+{
+    "0": [
+        "check_dict_case({'key1': 'value1', 'key2': 'value2', 'Key3': 'value3'})",
+        "True"
+    ],
+    "1": [
+        "check_dict_case({'Key1': 'value1', 'Key2': 'value2', 'Key3': 'value3'})",
+        "False"
+    ],
+    "2": [
+        "check_dict_case({'key1': 'value1', 'key2': 'value2', 'key3': 'value3'})",
+        "True"
+    ],
+    "3": [
+        "check_dict_case({'Key1': 'value1', 'key2': 'value2', 'key3': 'value3'})",
+        "False"
+    ]
+}

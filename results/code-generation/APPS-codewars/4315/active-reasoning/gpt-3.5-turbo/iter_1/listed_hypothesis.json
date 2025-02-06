@@ -1,0 +1,82 @@
+{
+    "0": [
+        {
+            "content": "def sum_them(n):\n    return 2 ** n - 1",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** n - 1",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    # Sum of all numbers in y\n    sum_y = 0\n    # Calculate the value of y[x] for all x in the range of integers [0, 2 ** n)\n    for x in range(0, 2 ** n):\n        y = x ^ (x // 2) # Binary exclusive-or of x and x // 2\n        sum_y += y # Add y to the sum\n    return sum_y",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** n - 1\n\n# In binary representation, x and x // 2 have the same digits except for the least significant bit.\n# By performing an exclusive OR operation between x and x // 2, the result will be the same as the original number with the least significant bit flipped.\n# Therefore, for all x in the range [0, 2 ** n), the sum of y[x] can be calculated by finding the sum of all numbers from 0 to 2 ** n - 1, which is equivalent to 2 ** n - 1.",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** n",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** n",
+            "logp": null
+        },
+        {
+            "content": "# Hint: The complete solution can be written in two lines.\n",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** (n - 1) * n",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** n - 1",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** (n-1) + 2 ** n - 1\n\nprint(sum_them(2)) # 3\nprint(sum_them(3)) # 7\nprint(sum_them(4)) # 15\nprint(sum_them(5)) # 31\nprint(sum_them(6)) # 63\nprint(sum_them(7)) # 127\nprint(sum_them(8)) # 255\nprint(sum_them(9)) # 511\nprint(sum_them(10)) # 1023\nprint(sum_them(11)) # 2047\nprint(sum_them(12)) # 4095\nprint(sum_them(13)) # 8191\nprint(sum_them(14)) # 16383\nprint(sum_them(15)) # 32767\nprint(sum_them(16)) # 65535\nprint(sum_them(17)) # 131071\nprint(sum_them(18)) # 262143\nprint(sum_them(19)) # 524287\nprint(sum_them(20)) # 1048575\nprint(sum_them(21)) # 2097151\nprint(sum_them(22)) # 4194303\nprint(sum_them(23)) # 8388607\nprint(sum_them(24)) # 16777215\nprint(sum_them(25)) # 33554431\nprint(sum_them(26)) # 67108863\nprint(sum_them(27)) # 134217727\nprint(sum_them(28)) # 268435455\nprint(sum_them(29)) # 536870911\nprint(sum_them(30)) # 1073741823\nprint(sum_them(31)) # 2147483647\nprint(sum_them(32)) # 4294967295\nprint(sum_them(33)) # 8589934591\nprint(sum_them(34)) # 17179869183\nprint(sum_them(35)) # 34359738367\nprint(sum_them(36)) # 68719476735\nprint(sum_them(37)) # 137438953471\nprint(sum_them(38)) # 274877906943\nprint(sum_them(39)) # 549755813887\nprint(sum_them(40)) # 1099511627775\nprint(sum_them(41)) # 2199023255551\nprint(sum_them(42)) # 4398046511103\nprint(sum_them(43)) # 8796093022207\nprint(sum_them(44)) # 17592186044415\nprint(sum_them(45)) # 35184372088831\nprint(sum_them(46)) # 70368744177663\nprint(sum_them(47)) # 140737488355327\nprint(sum_them(48)) # 281474976710655\nprint(sum_them(49)) # 562949953421311\nprint(sum_them(50)) # 1125899906842623\nprint(sum_them(51)) # 2251799813685247\nprint(sum_them(52)) # 4503599627370495\nprint(sum_them(53)) # 9007199254740991\nprint(sum_them(54)) # 18014398509481983\nprint(sum_them(55)) # 36028797018963967\nprint(sum_them(56)) # 72057594037927935\nprint(sum_them(57)) # 144115188075855871\nprint(sum_them(58)) # 288230376151711743\nprint(sum_them(59)) # 576460752303423487\nprint(sum_them(60)) # 1152921504606846975\nprint(sum_them(61)) # 2305843009213693951\nprint(sum_them(62)) # 4611686018427387903\nprint(sum_them(63)) # 9223372036854775807\nprint(sum_them(64)) # 18446744073709551615\nprint(sum_them(65)) # 36893488147419103231\nprint(sum_them(66)) # 73786976294838206463\nprint(sum_them(67)) # 147573952589676412927\nprint(sum_them(68)) # 295147905179352825855\nprint(sum_them(69)) # 590295810358705651711\nprint(sum_them(70)) # 1180591620717411303423\nprint(sum_them(71)) # 2361183241434822606847\nprint(sum_them(72)) # 4722366482869645213695\nprint(sum_them(73)) # 9444732965739290427391\nprint(sum_them(74)) # 18889465931478580854783\nprint(sum_them(75)) # 37778931862957161709567\nprint(sum_them(76)) # 75557863725914323419135\nprint(sum_them(77)) # 151115727451828646838271\nprint(sum_them(78)) # 302231454903657293676543\nprint(sum_them(79)) # 604462909807314587353087\nprint(sum_them(80)) # 1208925819614629174706175\nprint(sum_them(81)) # 2417851639229258349412351\nprint(sum_them(82)) # 4835703278458516698824703\nprint(sum_them(83)) # 9671406556917033397649407\nprint(sum_them(84)) # 19342813113834066795298815\nprint(sum_them(85)) # 38685626227668133590597631\nprint(sum_them(86)) # 77371252455336267181195263\nprint(sum_them(87)) # 154742504910672534362390527\nprint(sum_them(88)) # 309485009821345068724781055\nprint(sum_them(89)) # 618970019642690137449562111\nprint(sum_them(90)) # 1237940039285380274899124223\nprint(sum_them(91)) # 2475880078570760549798248447\nprint(sum_them(92)) # 4951760157141521099596496895\nprint(sum_them(93)) # 9903520314283042199192993791\nprint(sum_them(94)) # 19807040628566084398385987583\nprint(sum_them(95)) # 39614081257132168796771975167\nprint(sum_them(96)) # 79228162514264337593543950335\nprint(sum_them(97)) # 158456325028528675187087900671\nprint(sum_them(98)) # 316912650057057350374175801343\nprint(sum_them(99)) # 633825300114114700748351602687\nprint(sum_them(100)) # 1267650600228229401496703205375\nprint(sum_them(2000))",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def sum_them(n):\n    return 2 ** (n - 1) * (2 ** n - 1)",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** (n-1) * (2 ** n - 1)",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** (n - 1) * (2 ** n - 1)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def sum_them(n):\n    return 2 ** n * (2 ** n - 1) / 2",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def sum_them(n):\n    return 2 ** n * (2 ** n - 1) / 2",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** n * (2 ** n - 1) // 2",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** (n - 1) * (2 ** n - 1)",
+            "logp": null
+        },
+        {
+            "content": "def sum_them(n):\n    return 2 ** (n - 1) * (2 ** n - 1)",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "0": [
+        {
+            "content": "def pair_zeros(arr):\n    i = 0\n    while i < len(arr):\n        if arr[i] == 0:\n            if i+1 < len(arr) and arr[i+1] == 0:\n                arr.pop(i+1)\n            else:\n                i += 1\n        else:\n            i += 1\n    return arr",
+            "logp": null
+        },
+        {
+            "content": "def pair_zeros(arr):\n    i = 0\n    while i < len(arr):\n        if arr[i] == 0:\n            if i+1 < len(arr) and arr[i+1] == 0:\n                arr.pop(i+1)\n            else:\n                i += 1\n        else:\n            i += 1\n    return arr",
+            "logp": null
+        },
+        {
+            "content": "def pair_zeros(arr):\n    i = 0\n    while i < len(arr):\n        if arr[i] == 0:\n            if i+1 < len(arr) and arr[i+1] == 0:\n                arr.pop(i+1)\n            else:\n                i += 1\n        else:\n            i += 1\n    return arr",
+            "logp": null
+        },
+        {
+            "content": "def pair_zeros(arr):\n    i = 0\n    while i < len(arr):\n        if arr[i] == 0:\n            if i+1 < len(arr) and arr[i+1] == 0:\n                arr.pop(i+1)\n            else:\n                i += 1\n        else:\n            i += 1\n    return arr",
+            "logp": null
+        },
+        {
+            "content": "def pair_zeros(arr):\n    i = 0\n    while i < len(arr):\n        if arr[i] == 0:\n            if i+1 < len(arr) and arr[i+1] == 0:\n                arr.pop(i+1)\n            else:\n                i += 1\n        else:\n            i += 1\n    return arr",
+            "logp": null
+        },
+        {
+            "content": "def pair_zeros(arr):\n    stack = []\n    for num in arr:\n        if num == 0:\n            if stack and stack[-1] == 0:\n                stack.pop()\n            else:\n                stack.append(num)\n        else:\n            while stack and stack[-1] == 0:\n                stack.pop()\n            stack.append(num)\n    return stack",
+            "logp": null
+        },
+        {
+            "content": "def pair_zeros(arr):\n    stack = []\n    for num in arr:\n        if num == 0:\n            if stack and stack[-1] == 0:\n                stack.pop()\n            else:\n                stack.append(num)\n        else:\n            while stack and stack[-1] == 0:\n                stack.pop()\n            stack.append(num)\n    return stack",
+            "logp": null
+        },
+        {
+            "content": "def pair_zeros(arr):\n    stack = []\n    for num in arr:\n        if num == 0:\n            if stack and stack[-1] == 0:\n                stack.pop()\n            else:\n                stack.append(num)\n        else:\n            while stack and stack[-1] == 0:\n                stack.pop()\n            stack.append(num)\n    return stack",
+            "logp": null
+        },
+        {
+            "content": "def pair_zeros(arr):\n    stack = []\n    for num in arr:\n        if num == 0:\n            if stack and stack[-1] == 0:\n                stack.pop()\n            else:\n                stack.append(num)\n        else:\n            while stack and stack[-1] == 0:\n                stack.pop()\n            stack.append(num)\n    return stack",
+            "logp": null
+        },
+        {
+            "content": "def pair_zeros(arr):\n    stack = []\n    for num in arr:\n        if num == 0:\n            if stack and stack[-1] == 0:\n                stack.pop()\n            else:\n                stack.append(num)\n        else:\n            while stack and stack[-1] == 0:\n                stack.pop()\n            stack.append(num)\n    return stack",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def pair_zeros(arr):\n    result = []\n    count_zeros = 0\n    for num in arr:\n        if num == 0:\n            count_zeros += 1\n        else:\n            if count_zeros > 0:\n                result.append(0)\n                count_zeros -= 1\n            result.append(num)\n    if count_zeros > 0:\n        result.append(0)\n    return result",
+            "logp": null
+        }
+    ],
+    "2": [],
+    "3": []
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert is_narcissistic('hello', 370, 371, 407) == False",
+        true
+    ],
+    "1": [
+        "assert is_narcissistic('153', 370, 371, 407) == True",
+        true
+    ],
+    "2": [
+        "assert is_narcissistic(-153, 370) == False",
+        true
+    ],
+    "3": [
+        "assert is_narcissistic(1, 153, 370, 371, '407') == True",
+        true
+    ]
+}

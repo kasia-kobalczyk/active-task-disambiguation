@@ -1,0 +1,68 @@
+{
+    "0": [
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    if n > time: \n        return -1 \n    else: \n        return round(-1 * time * log(10) / 10)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    if n > time: \n        return -1 \n    else: \n        return round(-1 * time * log(10) / 10)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    if n > time: \n        return -1 \n    else: \n        return round(-1 * time * log(10) / 10)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    if n > time: \n        return -1 \n    else: \n        return round(-1 * time * log(10) / 10)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    if n > time: \n        return -1 \n    else: \n        return round(-1 * time * log(10) / 10)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    if n > time: \n        return -1 \n    else: \n        return round(-1 * time * log(10) / 10)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    total_pushup_time = 5\n    single_kata_time = 6\n    total_kata_time = single_kata_time * n\n    total_available_time = time * 60\n    total_available_pushup_time = total_available_time - total_kata_time\n    total_mistakes = total_available_pushup_time // (total_pushup_time + total_pushup_time)\n    return total_mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    total_minutes = 0\n    mistakes = 0\n    for _ in range(n):\n        total_minutes += 6\n        if total_minutes > time:\n            break\n        mistakes += 1\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    mistake_time = 5\n    correct_kata_time = 1\n    redemption_pushup_time = 2\n    total_time = time / 60\n    mistakes = 0\n    i = 0\n    while total_time > 0:\n        i += 1\n        mistake_time *= redemption_pushup_time\n        total_time -= (i * correct_kata_time) + mistake_time\n        mistakes += i\n    return mistakes - n",
+            "logp": null
+        }
+    ],
+    "2": [],
+    "3": []
+}

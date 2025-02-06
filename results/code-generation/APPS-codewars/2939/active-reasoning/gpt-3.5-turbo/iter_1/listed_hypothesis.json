@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "def has_two_cube_sums(n):\n\n    # generate a list of cubes of numbers from 1 to n\n    cubes = [i ** 3 for i in range(1, int(n ** (1 / 3)) + 1)]\n\n    # loop through the cubes and check if there exists a pair whose sum is n\n    for i in range(len(cubes)):\n        for j in range(i + 1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cube_dict = {}\n    for i in range(1, int(n**(1/3))+1):\n        cube = i**3\n        if cube in cube_dict:\n            return True\n        cube_dict[n-cube] = cube\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            if a ** 3 + b ** 3 == n:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # Find all possible cubes up to n^(1/3)\n    cubes = [i**3 for i in range(1, int(n**(1/3))+1)]\n    \n    # Check all possible combinations of two cubes\n    for i in range(len(cubes)):\n        for j in range(i+1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # create a set to store the cubes\n    cubes = set()\n    \n    # loop through all possible values of a\n    for a in range(1, int(n**(1/3)) + 1):\n        # calculate a^3\n        a_cube = a**3\n        \n        # calculate b^3\n        b_cube = n - a_cube\n        \n        # if b^3 is a perfect cube, it is a valid pair\n        if b_cube in cubes:\n            return True\n        \n        # add a^3 to the set\n        cubes.add(a_cube)\n    \n    # if no valid pairs are found, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            cube_sum = a ** 3 + b ** 3\n            if cube_sum == n:\n                return True\n            cubes.append(cube_sum)\n    return any(cubes.count(x) > 1 for x in cubes)",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # Iterate through all possible values of a, b, c, and d\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            for c in range(1, int(n ** (1/3)) + 1):\n                for d in range(c + 1, int(n ** (1/3)) + 1):\n                    # Check if a\u00b3 + b\u00b3 = c\u00b3 + d\u00b3 = n\n                    if a**3 + b**3 == c**3 + d**3 == n:\n                        return True\n    # If no such pair of numbers is found, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n ** (1 / 3)) + 1):\n        cubes.append(i ** 3)\n    for i in range(len(cubes)):\n        for j in range(i + 1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cube_numbers = []\n    for i in range(1, int(n**(1/3))+1):\n        cube_numbers.append(i**3)\n\n    for i in range(len(cube_numbers)):\n        for j in range(i+1, len(cube_numbers)):\n            if cube_numbers[i] + cube_numbers[j] == n:\n                return True\n\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # create a set to store the cube sums\n    cube_sums = set()\n    \n    # iterate through all possible values of a and b\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a, int(n ** (1/3)) + 1):\n            # calculate the cube sum a^3 + b^3\n            cube_sum = a ** 3 + b ** 3\n            \n            # check if the cube sum is already in the set\n            # if it is, we have found two different ways to write n as a sum of two cubes\n            if cube_sum in cube_sums:\n                return True\n            \n            # add the cube sum to the set\n            cube_sums.add(cube_sum)\n    \n    # if we reach this point, we have not found two different ways to write n as a sum of two cubes\n    return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = {}\n    for i in range(1, int(n**(1/3)) + 1):\n        cube = i**3\n        cubes[cube] = i\n    \n    for a, i in cubes.items():\n        b = n - a\n        if b in cubes and cubes[b] != i:\n            return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # Find the maximum cube root that is less than or equal to n.\n    max_root = int(n ** (1/3))\n\n    # Iterate over all possible values of a from 1 to max_root.\n    for a in range(1, max_root + 1):\n        # Calculate the corresponding value of b.\n        b = int((n - a ** 3) ** (1/3))\n\n        # Check if a^3 + b^3 = n and a and b are different.\n        if a ** 3 + b ** 3 == n and a != b:\n            return True\n\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # Create a set to store the cube values\n    cube_set = set()\n\n    # Loop through all possible values of a and b\n    for a in range(1, int(n**(1/3))+1):\n        for b in range(a+1, int(n**(1/3))+1):\n            # Calculate the cube sum\n            cube_sum = a**3 + b**3\n\n            # Check if the cube sum is already in the set\n            if cube_sum in cube_set:\n                return True\n\n            # Add the cube sum to the set\n            cube_set.add(cube_sum)\n\n    # If no cube sum was found, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # Create a set to store all unique cube sums\n    cube_sums = set()\n    \n    # Iterate over all possible values of a\n    for a in range(1, int(n**(1/3)) + 1):\n        # Calculate the cube of a\n        cube_a = a**3\n        \n        # Iterate over all possible values of b\n        for b in range(a+1, int(n**(1/3)) + 1):\n            # Calculate the cube of b\n            cube_b = b**3\n            \n            # Calculate the sum of cube_a and cube_b\n            sum_cube = cube_a + cube_b\n            \n            # If the sum_cube is equal to n, return True\n            if sum_cube == n:\n                return True\n            \n            # Add the sum_cube to the set\n            cube_sums.add(sum_cube)\n    \n    # Iterate over all possible values of c\n    for c in range(1, int(n**(1/3)) + 1):\n        # Calculate the cube of c\n        cube_c = c**3\n        \n        # Iterate over all possible values of d\n        for d in range(c+1, int(n**(1/3)) + 1):\n            # Calculate the cube of d\n            cube_d = d**3\n            \n            # Calculate the sum of cube_c and cube_d\n            sum_cube = cube_c + cube_d\n            \n            # If the sum_cube is equal to n and not in the set, return True\n            if sum_cube == n and sum_cube not in cube_sums:\n                return True\n    \n    # If no two cube sums equal to n were found, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n**(1/3)) + 1):\n        cubes.append(i**3)\n        \n    for i in range(len(cubes)):\n        for j in range(i+1, len(cubes)):\n            if n - cubes[i] - cubes[j] in cubes and cubes.index(n - cubes[i] - cubes[j]) != i and cubes.index(n - cubes[i] - cubes[j]) != j:\n                return True\n                \n    return False",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n ** (1/3)) + 1):\n        cubes.append(i ** 3)\n    for i in range(len(cubes)):\n        for j in range(i, len(cubes)):\n            if cubes[i] + cubes[j] == n and i != j:\n                return True\n    return False\n```",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n ** (1/3)) + 1):\n        cubes.append(i ** 3)\n    for i in range(len(cubes)):\n        for j in range(i + 1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    \n    for i in range(1, int(n ** (1/3)) + 1):\n        cubes.append(i ** 3)\n        \n    for i in range(len(cubes)):\n        for j in range(i+1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n            \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # generate all possible cube values up to the given number\n    cubes = [i ** 3 for i in range(1, int(n ** (1 / 3)) + 1)]\n    # iterate through the possible cube values and check if the sum of two cubes is equal to n\n    for i in range(len(cubes)):\n        for j in range(i + 1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef has_two_cube_sums(n):\n    # Create a set to store all the unique cube sums\n    cube_sums = set()\n    \n    # Iterate through all possible values of a\n    for a in range(1, int(n**(1/3))+1):\n        # Iterate through all possible values of b\n        for b in range(a+1, int(n**(1/3))+1):\n            # Calculate the cube sum of a and b\n            cube_sum = a**3 + b**3\n            \n            # If the cube sum is equal to n, return True\n            if cube_sum == n:\n                return True\n            \n            # Add the cube sum to the set\n            cube_sums.add(cube_sum)\n    \n    # Iterate through all possible values of c\n    for c in range(1, int(n**(1/3))+1):\n        # Iterate through all possible values of d\n        for d in range(c+1, int(n**(1/3))+1):\n            # Calculate the cube sum of c and d\n            cube_sum = c**3 + d**3\n            \n            # If the cube sum is equal to n and not already in the set, return True\n            if cube_sum == n and cube_sum not in cube_sums:\n                return True\n    \n    # If no cube sums were found, return False\n    return False\n```\n",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = {}\n    for i in range(1, int(n ** (1/3)) + 1):\n        cube = i ** 3\n        if cube <= n:\n            cubes[cube] = i\n    \n    for a in cubes.values():\n        for b in cubes.values():\n            if a != b and n - a ** 3 in cubes:\n                return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n**(1/3))+1):\n        cubes.append(i**3)\n        \n    for i in range(len(cubes)):\n        for j in range(i+1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n                \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cube_dict = {}\n    for i in range(1, n + 1):\n        cube_dict[i**3] = i\n    \n    for a in range(1, n + 1):\n        for b in range(a + 1, n + 1):\n            c = n - a**3 - b**3\n            if c in cube_dict and cube_dict[c] not in [a, b]:\n                return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cube_dict = {}\n    for a in range(1, int(n**(1/3))+1):\n        for b in range(a+1, int(n**(1/3))+1):\n            sum1 = a**3 + b**3\n            if sum1 not in cube_dict:\n                cube_dict[sum1] = []\n            cube_dict[sum1].append((a, b))\n    \n    for c in range(1, int(n**(1/3))+1):\n        for d in range(c+1, int(n**(1/3))+1):\n            sum2 = c**3 + d**3\n            if sum2 == n:\n                if len(cube_dict[sum2]) >= 2:\n                    return True\n                elif (c, d) not in cube_dict[sum2]:\n                    return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # create a set to store the cube sums\n    cube_sums = set()\n    \n    # iterate through all possible values of a and b\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            cube_sum = a ** 3 + b ** 3\n            \n            # check if the cube sum is equal to n\n            if cube_sum == n:\n                # check if the cube sum has already been seen\n                if cube_sum in cube_sums:\n                    return True\n                else:\n                    cube_sums.add(cube_sum)\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n\n    cubes = set()\n    \n    for i in range(1, int(n ** (1/3)) + 1):\n        cubes.add(i ** 3)\n    \n    for a in cubes:\n        for b in cubes:\n            if a + b != n:\n                continue\n            \n            for c in cubes:\n                for d in cubes:\n                    if a != c and a != d and b != c and b != d and c != d and c + d == n:\n                        return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n\n    for a in range(1, int(n**(1/3))+1):\n        for b in range(a+1, int(n**(1/3))+1):\n            if a**3 + b**3 == n:\n                for c in range(a+1, int(n**(1/3))+1):\n                    for d in range(c+1, int(n**(1/3))+1):\n                        if c**3 + d**3 == n and c != a and d != b:\n                            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = [i**3 for i in range(1, int(n**(1/3)) + 1)]\n    sums = set()\n    \n    for i in range(len(cubes)):\n        for j in range(i+1, len(cubes)):\n            sums.add(cubes[i] + cubes[j])\n    \n    return n in sums",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # create a set to store unique cube sums\n    cube_sums = set()\n    \n    # loop through all possible values of a and b\n    for a in range(1, int(n**(1/3))+1):\n        for b in range(a+1, int(n**(1/3))+1):\n            # calculate the cube sum a^3 + b^3\n            cube_sum = a**3 + b**3\n            # if the cube sum is already in the set, return True\n            if cube_sum in cube_sums:\n                return True\n            # otherwise, add the cube sum to the set\n            cube_sums.add(cube_sum)\n    \n    # if no matching cube sum is found, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n\n    # iterate through all numbers from 1 to the cube root of n\n    for i in range(1, int(n**(1/3))+1):\n        \n        # calculate the cube of i\n        cube_i = i**3\n        \n        # calculate the difference between n and cube_i\n        diff = n - cube_i\n        \n        # iterate through all numbers from i+1 to the cube root of diff\n        for j in range(i+1, int(diff**(1/3))+1):\n            \n            # calculate the cube of j\n            cube_j = j**3\n            \n            # if cube_i + cube_j equals n, return True\n            if cube_i + cube_j == n:\n                return True\n            \n    # if no two cube sums are found, return False\n    return False\n\n# testing the function with the provided examples\nprint(has_two_cube_sums(1729))\n# expected output : True\n\nprint(has_two_cube_sums(42))\n# expected output : False\n\n# testing the function with additional examples\nprint(has_two_cube_sums(100))\n# expected output : False\n\nprint(has_two_cube_sums(1))\n# expected output : False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n**(1/3)) + 1):\n        cubes.append(i**3)\n    \n    for i in range(len(cubes)):\n        for j in range(i+1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n ** (1 / 3)) + 1):\n        cubes.append(i ** 3)\n\n    for i in range(len(cubes)):\n        for j in range(i + 1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = [i ** 3 for i in range(1, int(n ** (1 / 3)) + 1)]\n    for i in range(len(cubes)):\n        for j in range(i + 1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    return False",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def has_two_cube_sums(n):\n    # iterate through all possible values of a and b\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            # calculate the sum of cubes for a and b\n            sum1 = a**3 + b**3\n            # iterate through all possible values of c and d\n            for c in range(a + 1, int(n**(1/3)) + 1):\n                for d in range(c + 1, int(n**(1/3)) + 1):\n                    # calculate the sum of cubes for c and d\n                    sum2 = c**3 + d**3\n                    # check if the sums are equal to n\n                    if sum1 == n and sum2 == n:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n ** (1/3)) + 1):\n        cubes.append(i ** 3)\n    \n    for i in range(len(cubes)):\n        for j in range(i + 1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # Iterate through possible values of a\n    for a in range(1, int(n**(1/3))+1):\n        # Iterate through possible values of b\n        for b in range(a+1, int(n**(1/3))+1):\n            # Check if a^3 + b^3 = n\n            if a**3 + b**3 == n:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n ** (1/3))+1):\n        for b in range(a+1, int(n ** (1/3))+1):\n            if a ** 3 + b ** 3 == n:\n                for c in range(a+1, int(n ** (1/3))+1):\n                    for d in range(c+1, int(n ** (1/3))+1):\n                        if c ** 3 + d ** 3 == n:\n                            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n**(1/3)) + 1):\n        cubes.append(i**3)\n    \n    for i in range(len(cubes)):\n        for j in range(i + 1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n ** (1/3)) + 1):\n        cubes.append(i ** 3)\n    \n    for i in range(len(cubes)):\n        for j in range(i+1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n\n    def find_cubes(n):\n        result = []\n        for i in range(1, int(n ** (1 / 3)) + 1):\n            result.append(i ** 3)\n        return result\n\n    cubes = find_cubes(n)\n    for i in range(len(cubes)):\n        for j in range(i+1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n ** (1/3)) + 1):\n        cubes.append(i ** 3)\n    \n    for i in range(len(cubes)):\n        for j in range(i, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # Generate all possible combinations of a and b such that a^3 + b^3 = n\n    for a in range(1, int(n**(1/3)) + 1):\n        for b in range(a + 1, int(n**(1/3)) + 1):\n            if a**3 + b**3 == n:\n                # Check if there is another pair of numbers c and d that satisfy c^3 + d^3 = n\n                for c in range(1, int(n**(1/3)) + 1):\n                    for d in range(c + 1, int(n**(1/3)) + 1):\n                        if c != a and c != b and d != a and d != b and c**3 + d**3 == n:\n                            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = {}\n    for i in range(1, int(n ** (1/3)) + 1):\n        cubes[i**3] = i\n    \n    for i in range(1, int(n ** (1/3)) + 1):\n        a = i**3\n        b = n - a\n        if b in cubes and cubes[b] != i:\n            return True\n    \n    return False\n\nprint(has_two_cube_sums(1729))\nprint(has_two_cube_sums(42))\nprint(has_two_cube_sums(100))\nprint(has_two_cube_sums(1))",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    # iterate through all possible values of a\n    for a in range(1, int(n ** (1/3)) + 1):\n        # calculate a^3\n        cube_a = a ** 3\n        \n        # iterate through all possible values of b\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            # calculate b^3\n            cube_b = b ** 3\n            \n            # check if the sum of a^3 and b^3 is equal to n\n            if cube_a + cube_b == n:\n                # iterate through all possible values of c\n                for c in range(a + 1, int(n ** (1/3)) + 1):\n                    # calculate c^3\n                    cube_c = c ** 3\n                    \n                    # iterate through all possible values of d\n                    for d in range(c + 1, int(n ** (1/3)) + 1):\n                        # calculate d^3\n                        cube_d = d ** 3\n                        \n                        # check if the sum of c^3 and d^3 is equal to n\n                        if cube_c + cube_d == n:\n                            # return True if two different pairs (a, b) and (c, d) satisfy the condition\n                            return True\n    \n    # return False if no two different pairs (a, b) and (c, d) satisfy the condition\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    cubes = []\n    for i in range(1, int(n ** (1/3)) + 1):\n        cubes.append(i ** 3)\n    \n    for i in range(len(cubes)):\n        for j in range(i + 1, len(cubes)):\n            if cubes[i] + cubes[j] == n:\n                return True\n    return False\n\nprint(has_two_cube_sums(1729))  # True\nprint(has_two_cube_sums(42))    # False\nprint(has_two_cube_sums(100))   # False\nprint(has_two_cube_sums(1))     # False",
+            "logp": null
+        }
+    ]
+}

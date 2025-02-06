@@ -1,0 +1,178 @@
+{
+    "0": [
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            # Calculate factorial\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            # Calculate sum of numbers from 1 to i\n            total = 0\n            for j in range(1, i+1):\n                total += j\n            result.append(total)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            result.append(math.factorial(i))\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i + 1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(sum(range(1, i + 1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    def factorial(x):\n        if x == 0:\n            return 1\n        else:\n            return x * factorial(x-1)\n        \n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            result.append(factorial(i))\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result\n\nprint(f(5))",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i + 1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            summation = sum(range(1, i + 1))\n            result.append(summation)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            # Calculate the factorial of i\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            # Calculate the sum of numbers from 1 to i\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result\n\nprint(f(5))  # [1, 2, 6, 24, 15]",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i + 1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(sum(range(1, i + 1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum_of_numbers = 0\n            for j in range(1, i+1):\n                sum_of_numbers += j\n            result.append(sum_of_numbers)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    res = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            res.append(fact)\n        else:\n            summ = 0\n            for j in range(1, i+1):\n                summ += j\n            res.append(summ)\n    return res",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            summation = sum(range(1, i+1))\n            result.append(summation)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            summ = 0\n            for j in range(1, i+1):\n                summ += j\n            result.append(summ)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            total = 0\n            for j in range(1, i+1):\n                total += j\n            result.append(total)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum_ = 0\n            for j in range(1, i+1):\n                sum_ += j\n            result.append(sum_)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            summation = sum(range(1, i+1))\n            result.append(summation)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            summation = sum(range(1, i+1))\n            result.append(summation)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            summation = 0\n            for j in range(1, i+1):\n                summation += j\n            result.append(summation)\n    return result",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n + 1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i + 1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum = 0\n            for j in range(1, i + 1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            total = sum(range(1, i+1))\n            result.append(total)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            result.append(sum(range(1, i+1)))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            fact = 1\n            for j in range(1, i+1):\n                fact *= j\n            result.append(fact)\n        else:\n            sum = 0\n            for j in range(1, i+1):\n                sum += j\n            result.append(sum)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            # calculate factorial of i\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            # calculate sum of numbers from 1 to i\n            total = 0\n            for j in range(1, i+1):\n                total += j\n            result.append(total)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def f(n):\n    result = []\n    for i in range(1, n+1):\n        if i % 2 == 0:\n            factorial = 1\n            for j in range(1, i+1):\n                factorial *= j\n            result.append(factorial)\n        else:\n            sum_of_numbers = 0\n            for j in range(1, i+1):\n                sum_of_numbers += j\n            result.append(sum_of_numbers)\n    return result",
+            "logp": null
+        }
+    ]
+}

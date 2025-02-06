@@ -1,0 +1,52 @@
+{
+    "0": [
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            if a ** 3 + b ** 3 == n:\n                for c in range(1, int(n ** (1/3)) + 1):\n                    for d in range(c + 1, int(n ** (1/3)) + 1):\n                        if c ** 3 + d ** 3 == n and {a, b, c, d} == {a, b, c, d}:\n                            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            if a ** 3 + b ** 3 == n:\n                for c in range(1, int(n ** (1/3)) + 1):\n                    for d in range(c + 1, int(n ** (1/3)) + 1):\n                        if c ** 3 + d ** 3 == n and {a, b, c, d} == {a, b, c, d}:\n                            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            if a ** 3 + b ** 3 == n:\n                for c in range(1, int(n ** (1/3)) + 1):\n                    for d in range(c + 1, int(n ** (1/3)) + 1):\n                        if c ** 3 + d ** 3 == n and {a, b, c, d} == {a, b, c, d}:\n                            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            if a ** 3 + b ** 3 == n:\n                for c in range(1, int(n ** (1/3)) + 1):\n                    for d in range(c + 1, int(n ** (1/3)) + 1):\n                        if c ** 3 + d ** 3 == n and {a, b, c, d} == {a, b, c, d}:\n                            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n ** (1/3)) + 1):\n        for b in range(a + 1, int(n ** (1/3)) + 1):\n            if a ** 3 + b ** 3 == n:\n                for c in range(1, int(n ** (1/3)) + 1):\n                    for d in range(c + 1, int(n ** (1/3)) + 1):\n                        if c ** 3 + d ** 3 == n and {a, b, c, d} == {a, b, c, d}:\n                            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                for d in range(c, int((n-cube_a-cube_b)**0.3333333)+1):\n                    cube_c = c**3\n                    cube_d = d**3\n                    if cube_a + cube_b == cube_c + cube_d and a != b and a != c and a != d and b != c and b != d and c != d:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                for d in range(c, int((n-cube_a-cube_b)**0.3333333)+1):\n                    cube_c = c**3\n                    cube_d = d**3\n                    if cube_a + cube_b == cube_c + cube_d and a != b and a != c and a != d and b != c and b != d and c != d:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                for d in range(c, int((n-cube_a-cube_b)**0.3333333)+1):\n                    cube_c = c**3\n                    cube_d = d**3\n                    if cube_a + cube_b == cube_c + cube_d and a != b and a != c and a != d and b != c and b != d and c != d:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                for d in range(c, int((n-cube_a-cube_b)**0.3333333)+1):\n                    cube_c = c**3\n                    cube_d = d**3\n                    if cube_a + cube_b == cube_c + cube_d and a != b and a != c and a != d and b != c and b != d and c != d:\n                        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.3333333)+1):\n        for b in range(a, int(n**0.3333333)+1):\n            cube_a = a**3\n            cube_b = b**3\n            for c in range(1, int((n-cube_a-cube_b)**0.3333333)+1):\n                for d in range(c, int((n-cube_a-cube_b)**0.3333333)+1):\n                    cube_c = c**3\n                    cube_d = d**3\n                    if cube_a + cube_b == cube_c + cube_d and a != b and a != c and a != d and b != c and b != d and c != d:\n                        return True\n    return False",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def has_two_cube_sums(n):\n    for a in range(1, int(n**0.333333333 + 0.5) + 1):\n        for b in range(a + 1, int(n**0.333333333 + 0.5) + 1):\n            if a**3 + b**3 == n:\n                c = 1\n                while True:\n                    d = 1\n                    while True:\n                        if c**3 + d**3 == n:\n                            return True\n                        d += 1\n                    c += 1\n    return False",
+            "logp": null
+        }
+    ],
+    "2": [],
+    "3": []
+}

@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert is_isogram('Dermatoglyphics') == True, f\"Expected is_isogram('Dermatoglyphics') to return True, but got {is_isogram('Dermatoglyphics')}\"",
+        true
+    ],
+    "1": [
+        "assert is_isogram('Abba') == False, f\"Expected is_isogram('Abba') to return False, but got {is_isogram('Abba')}\"",
+        false
+    ],
+    "2": [
+        "assert is_isogram('hello') == False",
+        true
+    ],
+    "3": [
+        "assert is_isogram('Hello World') == False, f\"Expected is_isogram('Hello World') to return False, but got {is_isogram('Hello World')}\"",
+        true
+    ]
+}

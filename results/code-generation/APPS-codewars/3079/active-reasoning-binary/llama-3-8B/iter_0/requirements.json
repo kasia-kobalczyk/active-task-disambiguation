@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert big_primefac_div(-1800) == [5, 900], f\"Expected big_primefac_div(-1800) to return [5, 900], but got {big_primefac_div(-1800)}\"",
+        true
+    ],
+    "1": [
+        "assert big_primefac_div(-1800.1) == \"The number has a decimal part. No Results\"",
+        true
+    ],
+    "2": [
+        "assert big_primefac_div(625) == [5, 125]",
+        true
+    ],
+    "3": [
+        "assert big_primefac_div(3845) == [13, 295]",
+        false
+    ]
+}

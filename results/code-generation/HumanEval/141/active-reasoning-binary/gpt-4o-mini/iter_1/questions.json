@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert file_name_check(\"example.txt\") == \"Yes\"",
+        "assert file_name_check(\"file123.exe\") == 'Yes'",
+        "assert file_name_check(\"example.txt\") == 'Yes'",
+        "assert file_name_check(\"file123.exe\") == \"Yes\"",
+        "assert file_name_check(\"invalid..name.txt\") == \"No\"",
+        "assert file_name_check(\"filename.too.long.txt\") == 'No'",
+        "assert file_name_check(\"1file.txt\") == 'No'",
+        "assert file_name_check(\"1file.dll\") == \"No\""
+    ],
+    "1": [
+        "assert file_name_check(\"2ndfile.dll\") == \"No\"",
+        "assert file_name_check(\"file123.txt\") == \"Yes\"",
+        "assert file_name_check(\"file..txt\") == \"No\"",
+        "assert file_name_check(\"file123.exe\") == \"No\"",
+        "assert file_name_check(\"testfile.doc\") == \"No\"",
+        "assert file_name_check(\"123file.dll\") == \"No\"",
+        "assert file_name_check(\"myfile.txt\") == \"Yes\"",
+        "assert file_name_check(\"valid_file_name.exe\") == \"Yes\""
+    ],
+    "2": [
+        "assert file_name_check(\"file_with_4_digits_1234.txt\") == \"No\"",
+        "assert file_name_check(\"file_1.txt\") == \"No\"",
+        "assert file_name_check(\"validFileName.exe\") == \"Yes\"",
+        "assert file_name_check(\"invalid..file.txt\") == \"No\"",
+        "assert file_name_check(\"1file.doc\") == \"No\"",
+        "assert file_name_check(\"testfile..dll\") == \"No\"",
+        "assert file_name_check(\"file1234.txt\") == \"No\""
+    ],
+    "3": [
+        "assert file_name_check(\"myfile.exe\") == \"Yes\"",
+        "assert file_name_check(\"validFile.exe\") == \"Yes\"",
+        "assert file_name_check(\"123.txt\") == \"No\"",
+        "assert file_name_check(\"validFileName.dLL\") == \"Yes\"",
+        "assert file_name_check(\"test123.txt\") == \"Yes\"",
+        "assert file_name_check(\"file.name.txt\") == \"No\"",
+        "assert file_name_check(\"another_valid_file.dll\") == \"Yes\""
+    ]
+}

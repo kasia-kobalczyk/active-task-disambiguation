@@ -1,0 +1,62 @@
+{
+    "0": [
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[HARMO_RATIOS[n]]) for n in HARMO_NUM if a <= n < b) if any(a <= n < b for n in HARMO_NUM) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[h]) for h in set(HARMO_RATIOS[n] for n in range(a,b)) if len(HARMO_GROUPS[h]) > 0) if any(HARMO_RATIOS.get(n) for n in range(a,b)) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b): \n    return sum(min(HARMO_GROUPS[h]) for h in set(HARMO_RATIOS[n] for n in range(a,b)) if h in HARMO_GROUPS) if any(h in HARMO_GROUPS for h in set(HARMO_RATIOS[n] for n in range(a,b))) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[ratio]) for ratio in set(HARMO_RATIOS[n] for n in range(a,b) if n in HARMO_RATIOS) if min(HARMO_GROUPS[ratio]) >= a and max(HARMO_GROUPS[ratio]) < b) or 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b): \n    return sum(min(HARMO_GROUPS[h]) for h in set(HARMO_RATIOS.get(n) for n in range(a, b)) if h in HARMO_GROUPS) if any(HARMO_RATIOS.get(n) in HARMO_GROUPS for n in range(a, b)) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[r]) for r in HARMO_RATIOS if a <= min(HARMO_GROUPS[r]) < b) if any(a <= min(HARMO_GROUPS[r]) < b for r in HARMO_RATIOS) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[r]) for r in HARMO_RATIOS if a <= min(HARMO_GROUPS[r]) < b) if any(a <= min(HARMO_GROUPS[r]) < b for r in HARMO_RATIOS) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[r]) for r in HARMO_RATIOS if a <= min(HARMO_GROUPS[r]) < b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    return sum(min(HARMO_GROUPS[r]) for r in set(HARMO_RATIOS[n] for n in range(a,b) if n in HARMO_RATIOS)) if any(n in HARMO_RATIOS for n in range(a,b)) else 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    return sum(min(HARMO_GROUPS[h]) for h in HARMO_RATIOS if a <= min(HARMO_GROUPS[h]) < b) if any(a <= min(HARMO_GROUPS[h]) < b for h in HARMO_RATIOS) else 0",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def solve(a,b):\n    result = 0\n    for i in HARMO_NUM:\n        if a <= i < b:\n            ratio = HARMO_RATIOS[i]\n            group = HARMO_GROUPS[ratio]\n            idx = bisect(group, i)\n            if idx > 0:\n                result += group[0]\n                break\n    return result if result > 0 else 0",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def solve(a,b):\n    result = 0\n    for i in HARMO_NUM:\n        if a <= i < b:\n            ratio = HARMO_RATIOS[i]\n            group = HARMO_GROUPS[ratio]\n            idx = bisect(group, i)\n            if idx > 0:\n                result += group[0]\n                break\n    return result if result > 0 else 0",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def solve(a,b):\n    result = 0\n    for i in HARMO_NUM:\n        if a <= i < b:\n            ratio = HARMO_RATIOS[i]\n            group = HARMO_GROUPS[ratio]\n            idx = bisect(group, i)\n            if idx > 0:\n                result += group[0]\n                break\n    return result if result > 0 else 0",
+            "logp": null
+        }
+    ]
+}

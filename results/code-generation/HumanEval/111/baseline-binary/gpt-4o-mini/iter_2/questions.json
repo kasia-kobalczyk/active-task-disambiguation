@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert histogram(\"x y z z x y y\") == {'y': 3}",
+        "assert histogram(\"a b c a a b c d\") == {'a': 3}"
+    ],
+    "1": [
+        "assert histogram(\"a b c a a b c\") == {'a': 3}",
+        "assert histogram(\"d e f g g f e d d\") == {'d': 3}"
+    ],
+    "2": [
+        "assert histogram(\"a b a b a\") == {'a': 3}",
+        "assert histogram(\"d e f g g f f e d d\") == {'d': 3, 'f': 3}"
+    ],
+    "3": [
+        "assert histogram(\"d e f g h d e d\") == {'d': 3}",
+        "assert histogram(\"m n o p m n o m n\") == {'m': 3, 'n': 3}"
+    ]
+}

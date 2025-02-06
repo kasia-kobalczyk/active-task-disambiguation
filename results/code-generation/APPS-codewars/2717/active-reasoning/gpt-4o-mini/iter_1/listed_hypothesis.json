@@ -1,0 +1,186 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef scf(lst):\n    from math import gcd\n    from functools import reduce\n\n    def find_factors(n):\n        factors = []\n        for i in range(2, n + 1):\n            if n % i == 0:\n                factors.append(i)\n        return factors\n\n    overall_gcd = reduce(gcd, lst)\n    common_factors = find_factors(overall_gcd)\n\n    return common_factors[0] if common_factors else 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    if not lst:\n        return 1\n    \n    common_gcd = lst[0]\n    for num in lst[1:]:\n        common_gcd = gcd(common_gcd, num)\n        if common_gcd == 1:\n            return 1\n    \n    for i in range(2, common_gcd + 1):\n        if common_gcd % i == 0:\n            return i\n    \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    from math import gcd\n    from functools import reduce\n\n    def smallest_prime_factor(n):\n        if n <= 1:\n            return None\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return i\n        return n\n\n    overall_gcd = reduce(gcd, lst)\n    return smallest_prime_factor(overall_gcd) if overall_gcd > 1 else 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    from math import gcd\n    from functools import reduce\n    \n    def find_gcd_of_list(lst):\n        return reduce(gcd, lst)\n    \n    common_gcd = find_gcd_of_list(lst)\n    \n    for i in range(2, common_gcd + 1):\n        if common_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    from math import gcd\n    from functools import reduce\n    \n    def find_gcd_of_list(num_list):\n        return reduce(gcd, num_list)\n    \n    overall_gcd = find_gcd_of_list(lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    if not lst:\n        return 1\n    \n    common_gcd = lst[0]\n    for number in lst[1:]:\n        common_gcd = gcd(common_gcd, number)\n    \n    for i in range(2, common_gcd + 1):\n        if common_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n\n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n\n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    from math import gcd\n    from functools import reduce\n\n    def smallest_prime_factor(n):\n        if n % 2 == 0:\n            return 2\n        for i in range(3, int(n**0.5) + 1, 2):\n            if n % i == 0:\n                return i\n        return n\n\n    overall_gcd = reduce(gcd, lst)\n    if overall_gcd <= 1:\n        return 1\n\n    return smallest_prime_factor(overall_gcd)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    def find_smallest_prime_factor(n):\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return i\n        return n\n\n    if not lst:\n        return 1\n    \n    overall_gcd = lst[0]\n    for number in lst[1:]:\n        overall_gcd = gcd(overall_gcd, number)\n    \n    if overall_gcd <= 1:\n        return 1\n    \n    return find_smallest_prime_factor(overall_gcd)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    common_gcd = reduce(gcd, lst)\n    \n    for i in range(2, common_gcd + 1):\n        if common_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n\n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    def find_smallest_common_factor(n):\n        for i in range(2, n + 1):\n            if n % i == 0:\n                return i\n        return 1\n\n    if not lst:\n        return 1\n\n    common_gcd = lst[0]\n    for num in lst[1:]:\n        common_gcd = gcd(common_gcd, num)\n\n    return find_smallest_common_factor(common_gcd)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    def smallest_prime_factor(n):\n        if n % 2 == 0:\n            return 2\n        for i in range(3, int(n**0.5) + 1, 2):\n            if n % i == 0:\n                return i\n        return n\n\n    if not lst:\n        return 1\n    \n    overall_gcd = lst[0]\n    for number in lst[1:]:\n        overall_gcd = gcd(overall_gcd, number)\n    \n    if overall_gcd > 1:\n        return smallest_prime_factor(overall_gcd)\n    \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n\n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    def find_smallest_common_factor(numbers):\n        common_gcd = numbers[0]\n        for num in numbers[1:]:\n            common_gcd = gcd(common_gcd, num)\n            if common_gcd == 1:\n                return 1\n        return common_gcd\n    \n    common_factor = find_smallest_common_factor(lst)\n    \n    for i in range(2, common_factor + 1):\n        if common_factor % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(x, y):\n        while y:\n            x, y = y, x % y\n        return x\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n\n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    common_gcd = lst[0]\n    for num in lst[1:]:\n        common_gcd = gcd(common_gcd, num)\n\n    for i in range(2, common_gcd + 1):\n        if common_gcd % i == 0:\n            return i\n\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    def find_smallest_prime_factor(n):\n        if n <= 1:\n            return None\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return i\n        return n\n\n    if not lst:\n        return 1\n\n    overall_gcd = lst[0]\n    for num in lst[1:]:\n        overall_gcd = gcd(overall_gcd, num)\n    \n    smallest_factor = find_smallest_prime_factor(overall_gcd)\n    return smallest_factor if smallest_factor else 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def smallest_prime_factor(n):\n        if n % 2 == 0:\n            return 2\n        for i in range(3, int(n**0.5) + 1, 2):\n            if n % i == 0:\n                return i\n        return n\n\n    common_factor = None\n    for num in lst:\n        if common_factor is None:\n            common_factor = smallest_prime_factor(num)\n        else:\n            while num % common_factor != 0:\n                common_factor = smallest_prime_factor(common_factor)\n                if common_factor == 1:\n                    return 1\n\n    return common_factor if common_factor > 1 else 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n\n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    common_gcd = reduce(gcd, lst)\n\n    for i in range(2, common_gcd + 1):\n        if common_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    common_gcd = lst[0]\n    for num in lst[1:]:\n        common_gcd = gcd(common_gcd, num)\n\n    for i in range(2, common_gcd + 1):\n        if common_gcd % i == 0:\n            return i\n\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    common_gcd = reduce(gcd, lst)\n\n    for i in range(2, common_gcd + 1):\n        if common_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def smallest_prime_factor(n):\n        if n % 2 == 0:\n            return 2\n        for i in range(3, int(n**0.5) + 1, 2):\n            if n % i == 0:\n                return i\n        return n\n\n    if not lst:\n        return 1\n\n    common_factor = smallest_prime_factor(lst[0])\n    \n    for number in lst:\n        if number % common_factor != 0:\n            return 1\n\n    return common_factor\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n\n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n\n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    common_gcd = reduce(gcd, lst)\n    \n    for i in range(2, common_gcd + 1):\n        if common_gcd % i == 0:\n            return i\n    \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    def find_smallest_prime_factor(n):\n        if n <= 1:\n            return None\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return i\n        return n\n    \n    common_gcd = lst[0]\n    for number in lst[1:]:\n        common_gcd = gcd(common_gcd, number)\n    \n    smallest_factor = find_smallest_prime_factor(common_gcd)\n    \n    return smallest_factor if smallest_factor else 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    \n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def smallest_prime_factor(n):\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return i\n        return n if n > 1 else None\n\n    min_num = min(lst)\n    for factor in range(2, min_num + 1):\n        if all(num % factor == 0 for num in lst):\n            return factor\n    return 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def smallest_prime_factor(n):\n        if n % 2 == 0:\n            return 2\n        for i in range(3, int(n**0.5) + 1, 2):\n            if n % i == 0:\n                return i\n        return n\n\n    if not lst:\n        return 1\n    \n    common_factor = smallest_prime_factor(lst[0])\n    \n    for num in lst:\n        while num % common_factor != 0:\n            num //= common_factor\n            common_factor = smallest_prime_factor(num)\n            if common_factor == 1:\n                return 1\n    \n    return common_factor if common_factor > 1 else 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    def find_smallest_prime_factor(n):\n        if n % 2 == 0:\n            return 2\n        for i in range(3, int(n**0.5) + 1, 2):\n            if n % i == 0:\n                return i\n        return n\n\n    overall_gcd = lst[0]\n    for num in lst[1:]:\n        overall_gcd = gcd(overall_gcd, num)\n    \n    if overall_gcd == 1:\n        return 1\n    \n    return find_smallest_prime_factor(overall_gcd)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef scf(lst):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n\n    from functools import reduce\n    overall_gcd = reduce(gcd, lst)\n    \n    for i in range(2, overall_gcd + 1):\n        if overall_gcd % i == 0:\n            return i\n            \n    return 1\n```",
+            "logp": null
+        }
+    ]
+}

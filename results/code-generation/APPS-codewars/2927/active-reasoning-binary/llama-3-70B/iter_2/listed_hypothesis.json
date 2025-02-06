@@ -1,0 +1,166 @@
+{
+    "0": [
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        zombies -= 1\n        shot += 1\n        distance -= 0.5\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n    if zombies > 0:\n        return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n    else:\n        return f\"You shot all {shot} zombies.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        zombies -= 1\n        shot += 1\n        distance -= 0.5\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n    if zombies == 0:\n        return f\"You shot all {shot} zombies.\"\n    else:\n        return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        zombies -= 1\n        shot += 1\n        distance -= 0.5\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n    if zombies > 0:\n        return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n    elif ammo == 0:\n        return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n    else:\n        return f\"You shot all {shot} zombies.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all {} zombies.\".format(shot)\n    elif ammo == 0:\n        return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n    else:\n        return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        shot += 1\n        zombies -= 1\n        distance -= 0.5\n        ammo -= 1\n    if zombies <= 0:\n        return f\"You shot all {shot} zombies.\"\n    else:\n        if ammo <= 0:\n            return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n        else:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all \" + str(shot) + \" zombies.\"\n    elif ammo == 0:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n    else:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        zombies -= 1\n        shot += 1\n        distance -= 0.5\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n    if zombies > 0:\n        return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n    else:\n        return \"You shot all {} zombies.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n    if zombies > 0:\n        return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n    return f\"You shot all {shot} zombies.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0:\n        if ammo <= 0:\n            return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    return \"You shot all {} zombies.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        ammo -= 1\n        shot += 1\n        zombies -= 1\n        distance -= 0.5\n    if zombies <= 0:\n        return f\"You shot all {shot} zombies.\"\n    elif ammo <= 0:\n        return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n    else:\n        return f\"You shot {shot} zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all {} zombies.\".format(shot)\n    elif ammo == 0:\n        return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n    else:\n        return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        shot += 1\n        zombies -= 1\n        distance -= 0.5\n        ammo -= 1\n    if zombies == 0:\n        return f\"You shot all {shot} zombies.\"\n    else:\n        if ammo == 0:\n            return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n        else:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all \" + str(shot) + \" zombies.\"\n    elif ammo == 0:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n    else:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0:\n        if ammo <= 0:\n            return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    return \"You shot all {} zombies.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        ammo -= 1\n        shot += 1\n        zombies -= 1\n        distance -= 0.5\n    if zombies <= 0:\n        return f\"You shot all {shot} zombies.\"\n    elif ammo <= 0:\n        return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n    else:\n        return f\"You shot {shot} zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies <= 0:\n        return f\"You shot all {shot} zombies.\"\n    else:\n        if ammo == 0:\n            return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n        else:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies <= 0:\n        return \"You shot all \" + str(shot) + \" zombies.\"\n    elif ammo <= 0:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n    else:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0:\n        if ammo <= 0:\n            return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n        if distance <= 0:\n            return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"\n        zombies -= 1\n        ammo -= 1\n        shot += 1\n        distance -= 0.5\n    return \"You shot all \" + str(shot) + \" zombies.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return f\"You shot all {shot} zombies.\"\n    else:\n        if ammo == 0:\n            return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n        else:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        shot += 1\n        zombies -= 1\n        distance -= 0.5\n        ammo -= 1\n    if zombies == 0:\n        return f\"You shot all {shot} zombies.\"\n    elif ammo == 0:\n        return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n    else:\n        return f\"You shot {shot} zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        ammo -= 1\n        shot += 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all {} zombies.\".format(shot)\n    elif ammo == 0:\n        return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        shot += 1\n        zombies -= 1\n        distance -= 0.5\n        ammo -= 1\n    if zombies == 0:\n        return f\"You shot all {shot} zombies.\"\n    else:\n        return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        ammo -= 1\n        shot += 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all {} zombies.\".format(shot)\n    elif ammo == 0:\n        return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n    else:\n        return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0:\n        if ammo <= 0:\n            return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    return \"You shot all {} zombies.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies <= 0:\n        return \"You shot all \" + str(shot) + \" zombies.\"\n    elif ammo <= 0:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n    else:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies <= 0:\n        return \"You shot all {} zombies.\".format(shot)\n    elif ammo <= 0:\n        return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n    else:\n        return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0:\n        if ammo <= 0:\n            return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n        if distance <= 0:\n            return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"\n        zombies -= 1\n        ammo -= 1\n        shot += 1\n        distance -= 0.5\n    return \"You shot all \" + str(shot) + \" zombies.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        ammo -= 1\n        shot += 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all {} zombies.\".format(zombies + shot)\n    else:\n        if ammo == 0:\n            return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n        else:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all \" + str(shot) + \" zombies.\"\n    elif ammo == 0:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n    else:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all {} zombies.\".format(shot)\n    else:\n        if ammo == 0:\n            return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n        else:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return f\"You shot all {shot} zombies.\"\n    else:\n        return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        ammo -= 1\n        shot += 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all {} zombies.\".format(shot)\n    else:\n        if ammo == 0:\n            return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n        else:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all \" + str(shot) + \" zombies.\"\n    elif ammo == 0:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n    else:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return f\"You shot all {shot} zombies.\"\n    else:\n        if ammo == 0:\n            return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n        else:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies <= 0:\n        return \"You shot all \" + str(shot) + \" zombies.\"\n    elif ammo <= 0:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n    else:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all \" + str(shot) + \" zombies.\"\n    elif ammo == 0:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: ran out of ammo.\"\n    else:\n        return \"You shot \" + str(shot) + \" zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return f\"You shot all {shot} zombies.\"\n    else:\n        if ammo == 0:\n            return f\"You shot {shot} zombies before being eaten: ran out of ammo.\"\n        else:\n            return f\"You shot {shot} zombies before being eaten: overwhelmed.\"",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0 and distance > 0:\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all {} zombies.\".format(shot)\n    elif ammo == 0:\n        return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n    else:\n        return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)",
+            "logp": null
+        },
+        {
+            "content": "def zombie_shootout(zombies, distance, ammo, shot=0):\n    while zombies > 0 and ammo > 0:\n        if distance <= 0:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)\n        zombies -= 1\n        shot += 1\n        ammo -= 1\n        distance -= 0.5\n    if zombies == 0:\n        return \"You shot all {} zombies.\".format(zombies + shot)\n    else:\n        if ammo == 0:\n            return \"You shot {} zombies before being eaten: ran out of ammo.\".format(shot)\n        else:\n            return \"You shot {} zombies before being eaten: overwhelmed.\".format(shot)",
+            "logp": null
+        }
+    ]
+}

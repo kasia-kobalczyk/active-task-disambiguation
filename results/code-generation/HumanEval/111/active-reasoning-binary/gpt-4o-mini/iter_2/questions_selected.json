@@ -1,0 +1,6 @@
+{
+    "0": "assert histogram(\"hello world\") == {'l': 3}",
+    "1": "assert histogram(\"l m n l m n o p q r s t\") == {'l': 2, 'm': 2, 'n': 2}",
+    "2": "assert histogram(\"x y z x x y\") == {'x': 3}",
+    "3": "assert histogram(\"h e l l o h e\") == {'h': 2, 'e': 2, 'l': 2}"
+}

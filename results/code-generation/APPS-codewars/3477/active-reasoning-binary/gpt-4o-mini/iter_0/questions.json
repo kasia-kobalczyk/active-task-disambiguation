@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert sort_string(\"test\", \"set\") == \"eett\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"abcdef\", \"xyz\") == \"abcdef\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"apple\", \"leap\") == \"aelpp\"",
+        "assert sort_string(\"hello\", \"ole\") == \"ehlol\"",
+        "assert sort_string(\"hello\", \"ehlo\") == \"ehllo\""
+    ],
+    "1": [
+        "assert sort_string(\"apple\", \"plea\") == \"pplea\"",
+        "assert sort_string(\"hello\", \"ole\") == \"eollh\"",
+        "assert sort_string(\"chocolate\", \"ota\") == \"otacchle\"",
+        "assert sort_string(\"12345\", \"54\") == \"45\"",
+        "assert sort_string(\"example\", \"me\") == \"eemxalp\"",
+        "assert sort_string(\"apple\", \"pl\") == \"ppale\"",
+        "assert sort_string(\"character\", \"arch\") == \"aachhcrte\""
+    ],
+    "2": [
+        "assert sort_string(\"grape\", \"gpe\") == \"gprae\"",
+        "assert sort_string(\"zebra\", \"rbza\") == \"braz\"",
+        "assert sort_string(\"mango\", \"onmg\") == \"mango\"",
+        "assert sort_string(\"hello\", \"olh\") == \"llohe\"",
+        "assert sort_string(\"hello\", \"olh\") == \"loeh\"",
+        "assert sort_string(\"zebra\", \"az\") == \"aebrz\"",
+        "assert sort_string(\"cherry\", \"ehc\") == \"cehrry\"",
+        "assert sort_string(\"carrot\", \"rtoc\") == \"rrcato\""
+    ],
+    "3": [
+        "assert sort_string(\"zebra\", \"rbza\") == \"braz\"",
+        "assert sort_string(\"mango\", \"onmg\") == \"mango\"",
+        "assert sort_string(\"hello\", \"olh\") == \"llohe\"",
+        "assert sort_string(\"hello\", \"olh\") == \"loeh\"",
+        "assert sort_string(\"zebra\", \"az\") == \"aebrz\"",
+        "assert sort_string(\"cherry\", \"ehc\") == \"cehrry\"",
+        "assert sort_string(\"carrot\", \"rtoc\") == \"rrcato\""
+    ]
+}

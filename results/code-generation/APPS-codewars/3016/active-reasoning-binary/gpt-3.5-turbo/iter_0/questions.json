@@ -1,0 +1,32 @@
+{
+    "0": [
+        "assert minor_or_major('A C E') == 'Minor'",
+        "assert minor_or_major('C E A') == 'Not a chord'",
+        "assert minor_or_major('Db F Ab') == 'Minor'",
+        "assert minor_or_major('Eb G Bb') == 'Major'",
+        "assert minor_or_major('Bb D F') == 'Major'",
+        "assert minor_or_major('C E G') == 'Major'"
+    ],
+    "1": [
+        "assert minor_or_major('C H G') == 'Not a chord'",
+        "assert minor_or_major('A C Eb') == 'Minor'",
+        "assert minor_or_major('C E G B') == 'Not a chord'",
+        "assert minor_or_major('C C# E') == 'Not a chord'",
+        "assert minor_or_major('A E G#') == 'Not a chord'"
+    ],
+    "2": [
+        "assert minor_or_major('A C# E') == 'Major'",
+        "assert minor_or_major('F Ab C') == 'Minor'",
+        "assert minor_or_major('F A C') == 'Minor'",
+        "assert minor_or_major('Eb G Bb') == 'Minor'",
+        "assert minor_or_major('C D G') == 'Major'"
+    ],
+    "3": [
+        "assert minor_or_major('F Ab C') == 'Minor'",
+        "assert minor_or_major('E G C') == 'Minor'\n# The interval between E and G is 3 and the interval between G and C is 4, so it is a minor chord",
+        "assert minor_or_major('C E A') == 'Minor'",
+        "assert minor_or_major('E G B') == 'Minor'",
+        "assert minor_or_major('D F# A') == 'Major'",
+        "assert minor_or_major('F# A C') == 'Minor'"
+    ]
+}

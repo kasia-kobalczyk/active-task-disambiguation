@@ -1,0 +1,170 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 == 1 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n        if num > 9999999999:\n            return \"There is no possible number that fulfills those requirements\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    def is_valid(n):\n        return n % 2 == 1 and n % 3 == 0 and unique_digits(n)\n\n    def unique_digits(n):\n        return len(set(str(n))) == len(str(n))\n\n    val += 1\n    while True:\n        if is_valid(val):\n            return val\n        val += 1\n        \n    return \"There is no possible number that fulfills those requirements\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    candidate = val + 1\n    while True:\n        if candidate % 2 == 1 and candidate % 3 == 0 and unique_digits(candidate):\n            return candidate\n        candidate += 1\n        if candidate > 9999999999:\n            return \"There is no possible number that fulfills those requirements\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 != 0 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 == 1 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 == 1 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 != 0 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef next_numb(val):\n    def is_valid(num):\n        return num % 2 != 0 and num % 3 == 0 and unique_digits(num)\n\n    def unique_digits(n):\n        return len(set(str(n))) == len(str(n))\n\n    current = val + 1\n    while current <= 9999999999:\n        if is_valid(current):\n            return current\n        current += 1\n\n    return \"There is no possible number that fulfills those requirements\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 != 0 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 != 0 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    def is_valid(num):\n        return num % 2 != 0 and num % 3 == 0 and unique_digits(num)\n\n    def unique_digits(n):\n        return len(set(str(n))) == len(str(n))\n\n    val += 1\n    while True:\n        if is_valid(val):\n            return val\n        val += 1\n        if val > 9999999999:\n            return \"There is no possible number that fulfills those requirements\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    def is_valid(n):\n        return n > val and n % 2 != 0 and n % 3 == 0 and unique_digits(n)\n\n    def unique_digits(n):\n        return len(set(str(n))) == len(str(n))\n    \n    num = val + 1\n    while True:\n        if is_valid(num):\n            return num\n        num += 1\n        \n    return \"There is no possible number that fulfills those requirements\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 == 1 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 != 0 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 != 0 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    def is_valid(num):\n        return num > val and num % 2 == 1 and num % 3 == 0 and unique_digits(num)\n\n    def unique_digits(n):\n        return len(set(str(n))) == len(str(n))\n\n    num = val + 1\n    while True:\n        if is_valid(num):\n            return num\n        num += 1\n        \n    return \"There is no possible number that fulfills those requirements\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    def is_valid(n):\n        return n % 2 == 1 and n % 3 == 0 and unique_digits(n)\n    \n    def unique_digits(n):\n        return len(set(str(n))) == len(str(n))\n    \n    num = val + 1\n    while True:\n        if is_valid(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if unique_digits(val) and val % 2 == 1 and val % 3 == 0:\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 != 0 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 != 0 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 != 0 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 != 0 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 == 1 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if unique_digits(val) and val % 2 != 0 and val % 3 == 0:\n            return val\n        val += 1\n    return \"There is no possible number that fulfills those requirements\"\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    def is_valid(n):\n        return n % 2 == 1 and n % 3 == 0 and unique_digits(n)\n    \n    def unique_digits(n):\n        return len(set(str(n))) == len(str(n))\n    \n    num = val + 1\n    while True:\n        if is_valid(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if unique_digits(val) and val % 2 == 1 and val % 3 == 0:\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 != 0 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 == 1 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 != 0 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    num = val + 1\n    while True:\n        if num % 2 != 0 and num % 3 == 0 and unique_digits(num):\n            return num\n        num += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef unique_digits(n):\n    return len(set(str(n))) == len(str(n))\n\ndef next_numb(val):\n    val += 1\n    while True:\n        if val % 2 == 1 and val % 3 == 0 and unique_digits(val):\n            return val\n        val += 1\n```",
+            "logp": null
+        }
+    ]
+}

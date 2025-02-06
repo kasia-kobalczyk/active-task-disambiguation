@@ -1,0 +1,142 @@
+{
+    "0": [
+        {
+            "content": "def exchange(lst1, lst2):\n    # count the number of odd numbers in lst1\n    odd_count = sum(1 for num in lst1 if num % 2 != 0)\n    \n    # if lst1 has no odd numbers, return \"YES\"\n    if odd_count == 0:\n        return \"YES\"\n    \n    # count the number of odd numbers in lst2\n    odd_count = sum(1 for num in lst2 if num % 2 != 0)\n    \n    # if lst2 has no odd numbers, return \"NO\"\n    if odd_count == 0:\n        return \"NO\"\n    \n    # if both lst1 and lst2 have odd numbers, return \"YES\"\n    return \"YES\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    \"\"\"In this problem, you will implement a function that takes two lists of numbers,\n    and determines whether it is possible to perform an exchange of elements\n    between them to make lst1 a list of only even numbers.\n    There is no limit on the number of exchanged elements between lst1 and lst2.\n    If it is possible to exchange elements between the lst1 and lst2 to make\n    all the elements of lst1 to be even, return \"YES\".\n    Otherwise, return \"NO\".\n\n    It is assumed that the input lists will be non-empty.\n    \"\"\"\n\n    # Count the number of odd elements in lst1\n    odd_count = 0\n    for num in lst1:\n        if num % 2 == 1:\n            odd_count += 1\n\n    # If there are no odd elements in lst1, return \"YES\"\n    if odd_count == 0:\n        return \"YES\"\n\n    # Count the number of even elements in lst2\n    even_count = 0\n    for num in lst2:\n        if num % 2 == 0:\n            even_count += 1\n\n    # If there are enough even elements in lst2 to exchange with odd elements in lst1, return \"YES\"\n    if even_count >= odd_count:\n        return \"YES\"\n\n    # Otherwise, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    for num in lst1:\n        if num % 2 != 0:\n            return \"NO\"\n    return \"YES\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # Count the number of odd numbers in lst1\n    odd_count = sum(1 for num in lst1 if num % 2 != 0)\n    \n    # Count the number of odd numbers in lst2\n    odd_count += sum(1 for num in lst2 if num % 2 != 0)\n    \n    # If the total number of odd numbers is odd, return \"NO\"\n    if odd_count % 2 != 0:\n        return \"NO\"\n    \n    # Otherwise, return \"YES\"\n    return \"YES\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    even_count = 0\n    for num in lst1:\n        if num % 2 == 0:\n            even_count += 1\n\n    if even_count == len(lst1):\n        return \"YES\"\n    \n    for num in lst2:\n        if num % 2 == 0:\n            even_count += 1\n\n    if even_count == len(lst1):\n        return \"YES\"\n\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # count the number of odd numbers in lst1\n    odd_count = sum([1 for num in lst1 if num % 2 != 0])\n    \n    # count the number of even numbers in lst2\n    even_count = sum([1 for num in lst2 if num % 2 == 0])\n    \n    # check if there are enough even numbers in lst2 to replace the odd numbers in lst1\n    if odd_count <= even_count:\n        return \"YES\"\n    else:\n        return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # count the number of odd numbers in lst1\n    odd_count = sum(1 for num in lst1 if num % 2 != 0)\n    \n    # if lst1 already has all even numbers, return \"YES\"\n    if odd_count == 0:\n        return \"YES\"\n    \n    # check if there are enough odd numbers in lst2 to exchange with lst1\n    for num in lst2:\n        if num % 2 != 0:\n            odd_count -= 1\n            if odd_count == 0:\n                return \"YES\"\n    \n    # if there are not enough odd numbers in lst2 to exchange with lst1, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # count the number of odd numbers in lst1\n    odd_count = sum(1 for num in lst1 if num % 2 != 0)\n    \n    # if there are no odd numbers in lst1, return \"YES\"\n    if odd_count == 0:\n        return \"YES\"\n    \n    # check if there are even numbers in lst2 that can be swapped with odd numbers in lst1\n    for num in lst2:\n        if num % 2 == 0:\n            return \"YES\"\n    \n    # if no even numbers in lst2 can be swapped with odd numbers in lst1, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    odd_count = 0\n    for num in lst1:\n        if num % 2 != 0:\n            odd_count += 1\n    return \"YES\" if odd_count <= len(lst2) else \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    \"\"\"In this problem, you will implement a function that takes two lists of numbers,\n    and determines whether it is possible to perform an exchange of elements\n    between them to make lst1 a list of only even numbers.\n    There is no limit on the number of exchanged elements between lst1 and lst2.\n    If it is possible to exchange elements between the lst1 and lst2 to make\n    all the elements of lst1 to be even, return \"YES\".\n    Otherwise, return \"NO\".\n\n    It is assumed that the input lists will be non-empty.\n    \"\"\"\n    # Check if all elements in lst1 are even\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    # Check if any elements in lst2 are even and can be exchanged with odd elements in lst1\n    for num in lst2:\n        if num % 2 == 0:\n            return \"YES\"\n    \n    # If none of the conditions above are met, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def exchange(lst1, lst2):\n    sum1 = 0\n    sum2 = 0\n    \n    for num in lst1:\n        sum1 += num % 2\n    \n    for num in lst2:\n        sum2 += num % 2\n    \n    if sum1 == 0:\n        return \"YES\"\n    elif sum2 == 0:\n        return \"YES\"\n    else:\n        return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    for i in lst1:\n        if i % 2 != 0:\n            if any(j % 2 == 0 for j in lst2):\n                continue\n            else:\n                return \"NO\"\n    return \"YES\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    odd_nums = [num for num in lst1 if num % 2 != 0]\n    if len(odd_nums) == 0:\n        return \"YES\"\n    \n    even_nums = [num for num in lst2 if num % 2 == 0]\n    if len(even_nums) == 0:\n        return \"NO\"\n    \n    return \"YES\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # First, we need to check if all the elements in lst1 are already even\n    if all(num % 2 == 0 for num in lst1):\n        return \"YES\"\n    \n    # If not, we need to check if there are enough even numbers in lst2 to exchange with the odd numbers in lst1\n    even_count = sum(num % 2 == 0 for num in lst1)\n    odd_count = len(lst1) - even_count\n    if even_count <= len(lst2) - odd_count:\n        return \"YES\"\n    \n    # If neither condition is met, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    for num in lst1:\n        if num % 2 != 0:\n            for i in range(len(lst2)):\n                if lst2[i] % 2 == 0:\n                    lst1[lst1.index(num)] = lst2[i]\n                    lst2[i] = num\n                    break\n            else:\n                return \"NO\"\n    return \"YES\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    odd_count = 0\n\n    for num in lst1:\n        if num % 2 != 0:\n            odd_count += 1\n\n    if odd_count > len(lst2):\n        return \"NO\"\n    else:\n        return \"YES\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    lst1_even = [num for num in lst1 if num % 2 == 0]\n    lst1_odd = [num for num in lst1 if num % 2 != 0]\n    lst2_even = [num for num in lst2 if num % 2 == 0]\n    lst2_odd = [num for num in lst2 if num % 2 != 0]\n\n    return \"YES\" if len(lst1_odd) <= len(lst2_even) else \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # Count the number of odd numbers in lst1\n    odd_count = sum(1 for num in lst1 if num % 2 != 0)\n    \n    # If there are no odd numbers in lst1, return \"YES\"\n    if odd_count == 0:\n        return \"YES\"\n    \n    # Count the number of even numbers in lst2\n    even_count = sum(1 for num in lst2 if num % 2 == 0)\n    \n    # If there are enough even numbers in lst2 to exchange with odd numbers in lst1, return \"YES\"\n    if even_count >= odd_count:\n        return \"YES\"\n    \n    # Otherwise, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # Check if lst1 already contains only even numbers\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    # Calculate the number of odd numbers in lst1\n    odd_count = sum(1 for x in lst1 if x % 2 != 0)\n    \n    # Calculate the number of even numbers in lst2\n    even_count = sum(1 for x in lst2 if x % 2 == 0)\n    \n    # Check if there are enough even numbers in lst2 to exchange with the odd numbers in lst1\n    if even_count >= odd_count:\n        return \"YES\"\n    else:\n        return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    sum_lst1 = sum(lst1)\n    sum_lst2 = sum(lst2)\n    \n    if sum_lst1 % 2 == 0:\n        return \"YES\"\n    elif sum_lst2 % 2 == 0:\n        return \"YES\"\n    else:\n        return \"NO\"",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def exchange(lst1, lst2):\n    even_count = 0\n    odd_count = 0\n    \n    for num in lst1:\n        if num % 2 == 0:\n            even_count += 1\n        else:\n            odd_count += 1\n    \n    if even_count == len(lst1):\n        return \"YES\"\n    \n    for num in lst2:\n        if num % 2 == 0:\n            even_count += 1\n        else:\n            odd_count += 1\n    \n    if even_count >= len(lst1):\n        return \"YES\"\n    else:\n        return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # count the number of odd numbers in lst1\n    odd_count = sum(1 for num in lst1 if num % 2 != 0)\n    \n    # if there are no odd numbers in lst1, return \"YES\"\n    if odd_count == 0:\n        return \"YES\"\n    \n    # count the number of even numbers in lst2\n    even_count = sum(1 for num in lst2 if num % 2 == 0)\n    \n    # if there are enough even numbers in lst2 to exchange with the odd numbers in lst1,\n    # return \"YES\"\n    if even_count >= odd_count:\n        return \"YES\"\n    \n    # otherwise, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    odd_count = 0\n    even_count = 0\n    \n    for num in lst1:\n        if num % 2 == 0:\n            even_count += 1\n        else:\n            odd_count += 1\n    \n    if odd_count == 0:\n        return \"YES\"\n    \n    for num in lst2:\n        if num % 2 == 0:\n            even_count += 1\n        else:\n            odd_count += 1\n    \n    if even_count == len(lst1):\n        return \"YES\"\n    else:\n        return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    for num in lst1:\n        if num % 2 != 0:\n            for i in range(len(lst2)):\n                if lst2[i] % 2 == 0:\n                    lst1.append(lst2[i])\n                    lst2[i] = num\n                    break\n            else:\n                return \"NO\"\n    return \"YES\"",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def exchange(lst1, lst2):\n    # Create two empty lists to store the odd and even numbers from lst1\n    odd_nums = []\n    even_nums = []\n    \n    # Iterate over lst1 and divide each number into odd and even lists\n    for num in lst1:\n        if num % 2 == 0:\n            even_nums.append(num)\n        else:\n            odd_nums.append(num)\n    \n    # If lst1 already contains only even numbers, return \"YES\"\n    if len(odd_nums) == 0:\n        return \"YES\"\n    \n    # Iterate over lst2 and check if there are even numbers that can replace odd numbers in lst1\n    for num in lst2:\n        if num % 2 == 0 and len(odd_nums) > 0:\n            odd_nums.pop()\n    \n    # If all odd numbers in lst1 have been replaced, return \"YES\"\n    if len(odd_nums) == 0:\n        return \"YES\"\n    else:\n        return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # Count the number of odd numbers in lst1\n    odd_count = sum(1 for num in lst1 if num % 2 != 0)\n    \n    # If there are no odd numbers in lst1, return \"YES\"\n    if odd_count == 0:\n        return \"YES\"\n    \n    # Count the number of even numbers in lst2\n    even_count = sum(1 for num in lst2 if num % 2 == 0)\n    \n    # If there are enough even numbers in lst2 to exchange with the odd numbers in lst1, return \"YES\"\n    if even_count >= odd_count:\n        return \"YES\"\n    \n    # Otherwise, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    \"\"\"In this problem, you will implement a function that takes two lists of numbers,\n    and determines whether it is possible to perform an exchange of elements\n    between them to make lst1 a list of only even numbers.\n    There is no limit on the number of exchanged elements between lst1 and lst2.\n    If it is possible to exchange elements between the lst1 and lst2 to make\n    all the elements of lst1 to be even, return \"YES\".\n    Otherwise, return \"NO\".\n\n    It is assumed that the input lists will be non-empty.\n    \n    Examples:\n\n    [1, 3, 5, 7, 9], [2, 4, 6, 8, 10] -> \"YES\"\n    [1, 2, 3, 4, 5], [1, 2, 3, 4, 5] -> \"NO\"\n    [1, 2, 3, 4, 5], [2, 4, 6, 8, 10] -> \"YES\"\n    \"\"\"\n    lst1 = [x for x in lst1 if x%2 != 0]\n    lst2 = [x for x in lst2 if x%2 == 0]\n    \n    if len(lst1) <= len(lst2):\n        return \"YES\"\n    else:\n        return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    even_count = 0\n    for num in lst1:\n        if num % 2 == 0:\n            even_count += 1\n    if even_count == len(lst1):\n        return \"YES\"\n    \n    even_count = 0\n    for num in lst2:\n        if num % 2 == 0:\n            even_count += 1\n    if even_count == len(lst1):\n        return \"YES\"\n    \n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    for num in lst1:\n        if num % 2 != 0:\n            if sum(lst2) % 2 == 0:\n                return \"YES\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    \"\"\"In this problem, you will implement a function that takes two lists of numbers,\n    and determines whether it is possible to perform an exchange of elements\n    between them to make lst1 a list of only even numbers.\n    There is no limit on the number of exchanged elements between lst1 and lst2.\n    If it is possible to exchange elements between the lst1 and lst2 to make\n    all the elements of lst1 to be even, return \"YES\".\n    Otherwise, return \"NO\".\n\n    It is assumed that the input lists will be non-empty.\n    \n    Examples:\n\n    [1, 3, 5, 7, 9], [2, 4, 6, 8, 10] -> \"YES\"\n    [1, 2, 3, 4, 5], [1, 2, 3, 4, 5] -> \"NO\"\n    [1, 2, 3, 4, 5], [2, 4, 6, 8, 10] -> \"YES\"\n    \"\"\"\n    # count the number of odd numbers in lst1\n    odd_count = sum(1 for x in lst1 if x % 2 == 1)\n    \n    # if lst1 contains no odd numbers, return \"YES\"\n    if odd_count == 0:\n        return \"YES\"\n    \n    # count the number of even numbers in lst2\n    even_count = sum(1 for x in lst2 if x % 2 == 0)\n    \n    # if there are enough even numbers in lst2 to replace all odd numbers in lst1, return \"YES\"\n    if even_count >= odd_count:\n        return \"YES\"\n    \n    # otherwise, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    even_count = sum(1 for num in lst1 if num % 2 == 0)\n    if even_count == len(lst1):\n        return \"YES\"\n    \n    for num in lst2:\n        if num % 2 == 0:\n            even_count += 1\n            \n            if even_count == len(lst1):\n                return \"YES\"\n    \n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    count_odd = 0\n    \n    # Count the number of odd numbers in lst1\n    for num in lst1:\n        if num % 2 != 0:\n            count_odd += 1\n    \n    # If there are no odd numbers in lst1, return \"YES\"\n    if count_odd == 0:\n        return \"YES\"\n    \n    # Check if there are enough even numbers in lst2 to exchange with the odd numbers in lst1\n    count_even = 0\n    for num in lst2:\n        if num % 2 == 0:\n            count_even += 1\n    \n    # If there are enough even numbers in lst2, return \"YES\"\n    if count_even >= count_odd:\n        return \"YES\"\n    \n    # Otherwise, return \"NO\"\n    return \"NO\"",
+            "logp": null
+        },
+        {
+            "content": "def exchange(lst1, lst2):\n    # check if all elements of lst1 are already even\n    if all(x % 2 == 0 for x in lst1):\n        return \"YES\"\n    \n    # check if all elements of lst1 can be made even by exchanging elements with lst2\n    for num in lst1:\n        # if num is even, continue to the next iteration\n        if num % 2 == 0:\n            continue\n        \n        # check if there is an even number in lst2\n        for num2 in lst2:\n            if num2 % 2 == 0:\n                break\n        else:\n            # no even number found in lst2, return \"NO\"\n            return \"NO\"\n        \n        # exchange num with num2 in lst1\n        lst1[lst1.index(num)] = num2\n        lst2[lst2.index(num2)] = num\n    \n    return \"YES\"",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,182 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef survivor(n):\n    survivors = [1]\n    i = 1\n    while True:\n        if i >= len(survivors):\n            break\n        survivors = [survivors[j] for j in range(len(survivors)) if (j + 1) % (i + 1) != 0]\n        i += 1\n        if survivors and survivors[-1] > n:\n            break\n    return n in survivors\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    k = 1\n    while True:\n        k += 1\n        if n <= k:\n            return True\n        n = n - (n // k)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    survivor_numbers = []\n    for i in range(1, n + 1):\n        survivor_numbers.append(i)\n    \n    k = 2\n    while k <= len(survivor_numbers):\n        for i in range(k - 1, len(survivor_numbers), k):\n            survivor_numbers[i] = None\n        survivor_numbers = [num for num in survivor_numbers if num is not None]\n        k += 1\n    \n    return n in survivor_numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    numbers = list(range(1, n + 1))\n    i = 2\n    while i <= len(numbers):\n        del numbers[i-1::i]\n        i += 1\n    return n in numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    survivors = [1]\n    current = 2\n    while current <= n:\n        for i in range(len(survivors)):\n            if survivors[i] < current:\n                continue\n            if (i + 1) % current != 0:\n                survivors.append(survivors[i])\n        current += 1\n    return n in survivors\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    k = 1\n    while k < n:\n        k += 1\n        if (n - 1) % k == 0:\n            return False\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    remaining = list(range(1, n + 1))\n    k = 2\n    while k <= len(remaining):\n        remaining = [remaining[i] for i in range(len(remaining)) if (i + 1) % k != 0]\n        k += 1\n    return n in remaining\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    k = 1\n    while True:\n        k += 1\n        if k > n:\n            return False\n        if (n - 1) % k == 0:\n            return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    i = 2\n    while i <= n:\n        if n % i == 0:\n            return False\n        n -= n // i\n        i += 1\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    return survivor(n - (n.bit_length() - 1) - 1)\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "```python\ndef survivor(n):\n    if n <= 0:\n        return False\n    seq = list(range(1, n + 1))\n    k = 2\n    while k <= len(seq):\n        seq = [seq[i] for i in range(len(seq)) if (i + 1) % k != 0]\n        k += 1\n    return n in seq\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    k = 1\n    while k * (k + 1) // 2 <= n:\n        if n == k * (k + 1) // 2:\n            return False\n        k += 1\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    current = 1\n    for i in range(2, n + 1):\n        current += 1\n        if current == n:\n            return False\n        if (i - 1) % 2 == 0:\n            current += 1\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    k = 2\n    while k * (k - 1) < n:\n        if (n % k == 0) and (n // k % 2 == 0):\n            return False\n        k += 1\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    k = 2\n    remaining = list(range(1, n + 1))\n    \n    while k <= len(remaining):\n        remaining = [remaining[i] for i in range(len(remaining)) if (i + 1) % k != 0]\n        k += 1\n    \n    return n in remaining\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    remaining = list(range(1, n + 1))\n    k = 2\n    while k <= len(remaining):\n        del remaining[k - 1::k]\n        k += 1\n    return n in remaining\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    survivor_numbers = [1]\n    i = 1\n    while True:\n        next_survivor = survivor_numbers[-1] + 1\n        count = 0\n        for j in range(1, len(survivor_numbers) + 1):\n            if j % (i + 1) != 0:\n                if count == next_survivor:\n                    break\n                survivor_numbers.append(j)\n                count += 1\n        if next_survivor == n:\n            return True\n        elif next_survivor > n:\n            return False\n        i += 1\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    nums = list(range(1, n + 1))\n    k = 2\n    while k <= n:\n        nums = [num for i, num in enumerate(nums) if (i + 1) % k != 0]\n        k += 1\n    return n in nums\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n < 1:\n        return False\n    sequence = list(range(1, n + 1))\n    step = 2\n    while step <= len(sequence):\n        sequence = [sequence[i] for i in range(len(sequence)) if (i + 1) % step != 0]\n        step += 1\n    return n in sequence\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    k = 2\n    while k <= n:\n        if n % k == 0:\n            return False\n        n -= n // k\n        k += 1\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    remaining = list(range(1, n + 1))\n    i = 2\n    while i <= len(remaining):\n        remaining = [remaining[j] for j in range(len(remaining)) if (j + 1) % i != 0]\n        i += 1\n    return n in remaining\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef survivor(n):\n    if n < 1:\n        return False\n    numbers = list(range(1, n + 1))\n    step = 2\n    while step <= len(numbers):\n        del numbers[step - 1::step]\n        step += 1\n    return n in numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    elif n < 1:\n        return False\n\n    sequence = [i for i in range(1, n + 1)]\n    k = 2\n\n    while k <= len(sequence):\n        del sequence[k - 1::k]  # Delete every k-th element\n        k += 1\n\n    return n in sequence\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    numbers = list(range(1, n + 1))\n    k = 2\n    while k <= len(numbers):\n        del numbers[k-1::k]\n        k += 1\n    return n in numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    if n < 1:\n        return False\n\n    i = 1\n    while True:\n        i += 1\n        if n <= i:\n            return False\n        if (n - 1) % i == 0:\n            return True\n        n -= (n - 1) // i\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    numbers = list(range(1, n + 1))\n    k = 2\n    while k <= len(numbers):\n        del numbers[k-1::k]\n        k += 1\n    return n in numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    numbers = list(range(1, n + 1))\n    round = 2\n    while round <= len(numbers):\n        del numbers[round - 1::round]\n        round += 1\n    return n in numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    sequence = list(range(1, n + 1))\n    k = 2\n    while k <= len(sequence):\n        sequence = [sequence[i] for i in range(len(sequence)) if (i + 1) % k != 0]\n        k += 1\n    return n in sequence\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    numbers = list(range(1, n + 1))\n    for k in range(2, n + 1):\n        if len(numbers) < k:\n            break\n        numbers = [numbers[i] for i in range(len(numbers)) if (i + 1) % k != 0]\n    return n in numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    # Create a list to hold the survivors\n    survivors = []\n    \n    # Starting with all numbers from 1 to n\n    numbers = list(range(1, n + 1))\n    \n    # Initialize the index to remove\n    i = 2\n    while i <= len(numbers):\n        # Remove every i-th number\n        del numbers[i-1::i]\n        i += 1\n        \n    # Check if n is in the list of survivors\n    return n in numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    nums = list(range(1, n + 1))\n    k = 2\n    while k <= len(nums):\n        nums = [nums[i] for i in range(len(nums)) if (i + 1) % k != 0]\n        k += 1\n        if len(nums) == 0 or nums[0] > n:\n            return False\n    return n in nums\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    \n    numbers = list(range(1, n + 1))\n    i = 2\n    \n    while i <= len(numbers):\n        for j in range(i - 1, len(numbers), i):\n            numbers[j] = None\n        numbers = [num for num in numbers if num is not None]\n        i += 1\n        \n    return n in numbers\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    sequence = list(range(1, n + 1))\n    index = 1\n    while index < len(sequence):\n        del sequence[index::index + 1]\n        index += 1\n    return n in sequence\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    k = 2\n    while k * (k + 1) // 2 <= n:\n        if n % k == 0:\n            return False\n        k += 1\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    if n < 1:\n        return False\n\n    k = 2\n    while k < n:\n        if n % k == 0:\n            return False\n        k += 1\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    def is_survivor(k):\n        count = 0\n        for i in range(1, k + 1):\n            count += 1\n            if count % 2 == 0:\n                continue\n            if count % 3 == 0:\n                continue\n            if count % 4 == 0:\n                continue\n            # Add further logic for deletion here if needed\n            if count % (i + 1) == 0:\n                continue\n            if count == k:\n                return True\n        return False\n\n    return is_survivor(n)\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    numbers = list(range(1, n + 1))\n    k = 2\n    while k <= len(numbers):\n        del numbers[k-1::k]\n        k += 1\n    return n in numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    k = 2\n    remaining = list(range(1, n + 1))\n    while k <= len(remaining):\n        remaining = [remaining[i] for i in range(len(remaining)) if (i + 1) % k != 0]\n        k += 1\n    return n in remaining\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    \n    k = 2\n    remaining_numbers = list(range(1, n + 1))\n    \n    while k <= len(remaining_numbers):\n        del remaining_numbers[k - 1::k]\n        k += 1\n    \n    return n in remaining_numbers\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    if n < 1:\n        return False\n    \n    remaining = list(range(1, n + 1))\n    k = 2\n    \n    while k <= len(remaining):\n        del remaining[k-1::k]\n        k += 1\n    \n    return n in remaining\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    if n == 1:\n        return True\n    remaining = list(range(1, n + 1))\n    k = 2\n    while k <= len(remaining):\n        del remaining[k - 1::k]\n        k += 1\n    return n in remaining\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    survivor_numbers = []\n    current_list = list(range(1, n + 1))\n    \n    for i in range(2, n + 1):\n        if len(current_list) < i:\n            break\n        current_list = [current_list[j] for j in range(len(current_list)) if (j + 1) % i != 0]\n    \n    return n in current_list\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef survivor(n):\n    # Create a list to keep track of the survivor status\n    numbers = list(range(1, n + 1))\n    \n    # Iterate for each round of deletions\n    for k in range(2, n + 1):\n        # Delete every k-th number in the current list\n        numbers = [num for i, num in enumerate(numbers) if (i + 1) % k != 0]\n    \n    # Check if n is in the survivors list\n    return n in numbers\n```",
+            "logp": null
+        }
+    ]
+}

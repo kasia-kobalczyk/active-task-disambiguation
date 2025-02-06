@@ -1,0 +1,36 @@
+{
+    "0": [
+        "assert string_expansion('3d332f2a') == 'dddffaa'",
+        "assert string_expansion('3abc') == 'aaabbbccc'",
+        "assert string_expansion('') == ''",
+        "assert string_expansion('abcde') == 'abcde'",
+        "assert string_expansion('2a3b4c') == 'aabbccccccc'"
+    ],
+    "1": [
+        "assert string_expansion('a3b2c4d3e2f') == 'aaabbcddddddddeeff'",
+        "assert string_expansion('a2b3c') == 'abbccc'",
+        "assert string_expansion('2A3b') == 'AAbbb'",
+        "assert string_expansion('11A2b') == 'AAbb'",
+        "assert string_expansion('A2b3C') == 'AbbbCCC'",
+        "assert string_expansion('2A3b4C') == 'AAbbbbbCCCC'",
+        "assert string_expansion('abcde') == 'abcde'",
+        "assert string_expansion('123abc') == 'abc'"
+    ],
+    "2": [
+        "assert string_expansion('a2b3c') == 'abbccc'",
+        "assert string_expansion('2A3b') == 'AAbbb'",
+        "assert string_expansion('11A2b') == 'AAbb'",
+        "assert string_expansion('A2b3C') == 'AbbbCCC'",
+        "assert string_expansion('2A3b4C') == 'AAbbbbbCCCC'",
+        "assert string_expansion('abcde') == 'abcde'",
+        "assert string_expansion('123abc') == 'abc'"
+    ],
+    "3": [
+        "assert string_expansion('2a3b4c5d') == 'aabbbbbccccddddd'",
+        "assert string_expansion('a2B3c4D5e') == 'aBBBcccDDDeeeee'",
+        "assert string_expansion('abc123def456') == 'abcdef'",
+        "assert string_expansion('111a222b333c') == 'a'",
+        "assert string_expansion('5A5b5C5d') == 'AAAAAbbbbbbbbCCCCCddddddddd'",
+        "assert string_expansion('4A2B1C') == 'AAAABBC'"
+    ]
+}

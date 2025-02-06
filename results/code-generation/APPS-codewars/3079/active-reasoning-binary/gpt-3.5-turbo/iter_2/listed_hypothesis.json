@@ -1,0 +1,109 @@
+{
+    "0": [
+        {
+            "content": "def big_primefac_div(n):\n    # check if n is a float with decimal part different than 0\n    if isinstance(n, float):\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n    \n    # handle negative numbers\n    if n < 0:\n        n = abs(n)\n    \n    # find highest prime factor\n    prime_factors = []\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n            prime_factors.append(i)\n    if n > 1:\n        prime_factors.append(n)\n    highest_prime_factor = max(prime_factors)\n    \n    # find highest divisor\n    highest_divisor = 1\n    for i in range(2, n):\n        if n % i == 0 and i != n:\n            highest_divisor = i\n    \n    # return result\n    return [highest_prime_factor, highest_divisor]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    if isinstance(n, int):\n        n = abs(n)\n        prime_factor = 2\n        divisor = n // 2\n        while prime_factor <= divisor:\n            if n % prime_factor == 0:\n                divisor = n // prime_factor\n            prime_factor += 1\n        return [prime_factor, divisor]\n    elif isinstance(n, float):\n        decimal_part = n % 1\n        if decimal_part == 0:\n            return big_primefac_div(int(n))\n        else:\n            return \"The number has a decimal part. No Results\"",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    def get_highest_prime_factor(num):\n        for i in range(int(num**0.5), 1, -1):\n            if num % i == 0 and is_prime(i):\n                return i\n        return num\n\n    def get_highest_divisor(num, factor):\n        return num // factor\n\n    if isinstance(n, float):\n        if int(n) != n:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n\n    n = abs(n)\n    if is_prime(n):\n        return []\n\n    factor = get_highest_prime_factor(n)\n    divisor = get_highest_divisor(n, factor)\n    return [factor, divisor]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    import math\n    \n    # Check if n is a negative number\n    if n < 0:\n        n = abs(n)\n    \n    # Check if n is a float\n    if isinstance(n, float):\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n    \n    # Check if n is a prime number\n    if n < 2:\n        return []\n    if n == 2:\n        return []\n    if n % 2 == 0:\n        return [2, n // 2]\n    for i in range(3, int(math.sqrt(n)) + 1, 2):\n        if n % i == 0:\n            return [i, n // i]\n    return [n, 1]",
+            "logp": null
+        },
+        {
+            "content": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\ndef big_primefac_div(n):\n    if isinstance(n, float):\n        if n.is_integer() and n % 1 == 0:\n            n = int(n)\n        else:\n            return \"The number has a decimal part. No Results\"\n\n    n = abs(n)\n\n    if is_prime(n):\n        return []\n\n    for i in range(int(n ** 0.5), 1, -1):\n        if n % i == 0 and is_prime(i):\n            return [i, n // i]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    import math\n    if isinstance(n, float):\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n    if n < 0:\n        n = abs(n)\n    if n == 1:\n        return []\n    prime_factors = []\n    divisor = 2\n    while divisor <= math.sqrt(n):\n        if n % divisor == 0:\n            prime_factors.append(divisor)\n            n /= divisor\n        else:\n            divisor += 1\n    if n > 1:\n        prime_factors.append(int(n))\n    return [max(prime_factors), int(n) if int(n) != n else max(prime_factors)]",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef big_primefac_div(n):\n    if type(n) == float:\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n    \n    if n < 0:\n        n = abs(n)\n    \n    if n == 1:\n        return []\n    \n    max_prime_factor = 1\n    max_divisor = 1\n    \n    # Check for divisibility by 2\n    while n % 2 == 0:\n        max_prime_factor = 2\n        n = n // 2\n    \n    # Check for divisibility by odd numbers\n    for i in range(3, int(math.sqrt(n)) + 1, 2):\n        while n % i == 0:\n            max_prime_factor = i\n            n = n // i\n    \n    if n > 2:\n        max_prime_factor = n\n    \n    max_divisor = max_prime_factor * n\n    \n    return [max_prime_factor, max_divisor]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    if isinstance(n, int) or (isinstance(n, float) and n.is_integer()):\n        n = abs(int(n))\n        if is_prime(n):\n            return []\n        for i in range(n//2, 1, -1):\n            if n % i == 0:\n                return [i, n//i]\n    elif isinstance(n, float):\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        n = int(n)\n        if is_prime(n):\n            return []\n        for i in range(n//2, 1, -1):\n            if n % i == 0:\n                return [i, n//i]\n    else:\n        return \"Invalid input\"",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    import math\n    \n    if type(n) == float:\n        if n != int(n):\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n            \n    if n < 0:\n        n = abs(n)\n    \n    if n <= 1:\n        return []\n    \n    factors = []\n    divisor = n-1\n    \n    for i in range(2, int(math.sqrt(n))+1):\n        if n % i == 0:\n            factors.append(i)\n            factors.append(n//i)\n            divisor = max(divisor, n//i)\n    \n    factors.append(n)\n    \n    prime_factors = []\n    for factor in factors:\n        is_prime = True\n        for i in range(2, int(math.sqrt(factor))+1):\n            if factor % i == 0:\n                is_prime = False\n                break\n        if is_prime:\n            prime_factors.append(factor)\n    \n    if not prime_factors:\n        return []\n    \n    return [max(prime_factors), divisor]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    if type(n) == float:\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n    if n < 0:\n        n = abs(n)\n    factors = []\n    for i in range(2, int(n**0.5)+1):\n        while n % i == 0:\n            factors.append(i)\n            n //= i\n    if n > 1:\n        factors.append(n)\n    if len(factors) == 0:\n        return []\n    max_prime_factor = max(factors)\n    max_divisor = max([x for x in factors if x != max_prime_factor])\n    return [max_prime_factor, max_divisor]",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def big_primefac_div(n):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    if isinstance(n, int):\n        if n < 0:\n            n = abs(n)\n        prime_factors = []\n        for i in range(2, n // 2 + 1):\n            if n % i == 0:\n                if is_prime(i):\n                    prime_factors.append(i)\n        if prime_factors:\n            return [prime_factors[-1], n // prime_factors[-1]]\n        return []\n\n    elif isinstance(n, float):\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        n = int(n)\n        if n < 0:\n            n = abs(n)\n        prime_factors = []\n        for i in range(2, n // 2 + 1):\n            if n % i == 0:\n                if is_prime(i):\n                    prime_factors.append(i)\n        if prime_factors:\n            return [prime_factors[-1], n // prime_factors[-1]]\n        return []",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    if isinstance(n, float) and n % 1 != 0:\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n    if n < 0:\n        n = abs(n)\n    i = 2\n    while i * i <= n:\n        if n % i == 0:\n            return [n // i, n // (n // i)]\n        i += 1\n    return []",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    if type(n) == int:\n        if n < 0:\n            n = abs(n)\n        if is_prime(n):\n            return []\n        else:\n            max_prime_fac = max(prime_factors(n))\n            max_div = max_divisor(n, max_prime_fac)\n            return [max_prime_fac, max_div]\n    elif type(n) == float:\n        if int(n) != n:\n            return \"The number has a decimal part. No Results\"\n        else:\n            return big_primefac_div(int(n))\n    else:\n        return \"Invalid input type\"\n\n\ndef is_prime(num):\n    if num < 2:\n        return False\n    for i in range(2, int(num ** 0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\n\ndef prime_factors(num):\n    factors = []\n    i = 2\n    while i <= num:\n        if num % i == 0:\n            factors.append(i)\n            num = num // i\n        else:\n            i += 1\n    return factors\n\n\ndef max_divisor(num, prime):\n    div = num // prime\n    if num % prime == 0:\n        div -= 1\n    return div",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    if type(n) == float:\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n    if n < 0:\n        n = abs(n)\n    divisors = []\n    for i in range(2, n):\n        if n % i == 0:\n            divisors.append(i)\n    prime_factors = []\n    for divisor in divisors:\n        is_prime = True\n        for i in range(2, int(divisor ** 0.5) + 1):\n            if divisor % i == 0:\n                is_prime = False\n                break\n        if is_prime:\n            prime_factors.append(divisor)\n    if len(prime_factors) == 0:\n        return []\n    return [max(prime_factors), max(divisors)]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    if type(n) == float:\n        if n.is_integer():\n            n = int(n)\n        else:\n            return \"The number has a decimal part. No Results\"\n    if n < 0:\n        n = abs(n)\n    if n == 1:\n        return [1, 1]\n    factors = []\n    for i in range(2, int(n**0.5)+1):\n        while n % i == 0:\n            factors.append(i)\n            n = n // i\n    if n > 1:\n        factors.append(n)\n    if len(factors) == 1:\n        return []\n    return [factors[-1], factors[-2]]",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef big_primefac_div(n):\n    if isinstance(n, float) and n % 1 != 0:\n        return \"The number has a decimal part. No Results\"\n\n    if n < 0:\n        n = abs(n)\n\n    prime_factors = []\n    divisor = 0\n\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            prime_factors.append(i)\n            divisor = max(divisor, n // i)\n\n    if prime_factors:\n        return [prime_factors[-1], divisor]\n    else:\n        return []\n```",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    # Handle float case\n    if isinstance(n, float):\n        if n.is_integer():\n            n = int(n)\n        else:\n            return \"The number has a decimal part. No Results\"\n    \n    # Handle negative case\n    if n < 0:\n        n = abs(n)\n\n    # Check if n is prime\n    if is_prime(n):\n        return []\n\n    # Find the highest prime factor\n    prime_factors = find_prime_factors(n)\n    highest_prime_factor = prime_factors[-1]\n\n    # Find the highest divisor\n    divisors = find_divisors(n)\n    divisors.sort(reverse=True)\n    highest_divisor = next(divisor for divisor in divisors if divisor != n)\n\n    return [highest_prime_factor, highest_divisor]\n\n\ndef is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\n\ndef find_prime_factors(n):\n    prime_factors = []\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n            prime_factors.append(i)\n    if n > 1:\n        prime_factors.append(n)\n    return prime_factors\n\n\ndef find_divisors(n):\n    divisors = []\n    for i in range(1, int(n ** 0.5) + 1):\n        if n % i == 0:\n            divisors.append(i)\n            if i != n // i:\n                divisors.append(n // i)\n    return divisors",
+            "logp": null
+        },
+        {
+            "content": "def is_prime(num):\n    if num < 2:\n        return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\ndef big_primefac_div(n):\n    if isinstance(n, float):\n        if n % 1 != 0 or any(int(digit) != 0 for digit in str(n).split(\".\")[1]):\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n    if n < 0:\n        n = abs(n)\n    prime_factors = []\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0 and is_prime(i):\n            prime_factors.append(i)\n    if not prime_factors:\n        return []\n    max_prime_factor = max(prime_factors)\n    max_divisor = n // max_prime_factor\n    return [max_prime_factor, max_divisor]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n\n    def is_prime(num):\n        if num <= 1:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    def factors(num):\n        i = 2\n        factors = []\n        while i * i <= num:\n            if num % i:\n                i += 1\n            else:\n                num //= i\n                factors.append(i)\n        if num > 1:\n            factors.append(num)\n        return factors\n\n    def is_divisor(num, divisor):\n        return num % divisor == 0\n\n    if isinstance(n, float) and n % 1 != 0:\n        decimal_part = str(n).split('.')[1]\n        if any(digit != '0' for digit in decimal_part):\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n\n    if n < 0:\n        n = abs(n)\n\n    if is_prime(n):\n        return []\n\n    prime_factors = factors(n)\n    highest_prime_factor = max(prime_factors)\n    highest_divisor = n // highest_prime_factor\n\n    return [highest_prime_factor, highest_divisor]",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef big_primefac_div(n):\n    if isinstance(n, float):\n        decimal_part = n - int(n)\n        if decimal_part != 0:\n            return \"The number has a decimal part. No Results\"\n        n = int(n)\n    \n    if n < 0:\n        n = abs(n)\n        \n    if n <= 1:\n        return []\n    \n    prime_factor = 2\n    \n    while prime_factor * prime_factor <= n:\n        if n % prime_factor == 0:\n            highest_divisor = n // prime_factor\n            return [prime_factor, highest_divisor]\n        \n        prime_factor += 1\n    \n    return []",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    if type(n) == int:\n        if n < 0:\n            n = abs(n)\n        if n == 0 or n == 1:\n            return []\n        prime_factors = []\n        divisor = n - 1\n        while divisor > 1:\n            if n % divisor == 0:\n                prime_factors.append(divisor)\n                break\n            divisor -= 1\n        if len(prime_factors) == 0:\n            return []\n        return [max(prime_factors), n // max(prime_factors)]\n    elif type(n) == float:\n        if n.is_integer():\n            return big_primefac_div(int(n))\n        else:\n            return \"The number has a decimal part. No Results\"\n    else:\n        return \"Invalid input\"",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def big_primefac_div(n):\n    if isinstance(n, float):\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n    elif isinstance(n, int):\n        n = abs(n)\n    else:\n        return \"Invalid input\"\n\n    if n < 2:\n        return \"The number is not prime\"\n    \n    factors = []\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            factors.append(i)\n            while n % i == 0:\n                n = n // i\n    if n > 1:\n        factors.append(n)\n    \n    if len(factors) == 1:\n        return []\n    else:\n        return [factors[-1], factors[-1]]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n\n    if isinstance(n, float):\n        if n != int(n) or n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        else:\n            n = int(n)\n\n    n = abs(n)\n\n    def is_prime(n):\n        if n <= 1:\n            return False\n        if n <= 3:\n            return True\n        if n % 2 == 0 or n % 3 == 0:\n            return False\n        i = 5\n        while i * i <= n:\n            if n % i == 0 or n % (i + 2) == 0:\n                return False\n            i += 6\n        return True\n\n    def prime_factors(n):\n        factors = []\n        i = 2\n        while i * i <= n:\n            if n % i:\n                i += 1\n            else:\n                n //= i\n                factors.append(i)\n        if n > 1:\n            factors.append(n)\n        return factors\n\n    factors = prime_factors(n)\n    largest_prime_factor = factors[-1]\n\n    divisors = []\n    for i in range(1, n):\n        if n % i == 0:\n            divisors.append(i)\n\n    largest_divisor = divisors[-1]\n\n    if is_prime(n):\n        return []\n    else:\n        return [largest_prime_factor, largest_divisor]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    def is_prime(num):\n        if num < 2:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    if type(n) == float:\n        if n.is_integer():\n            n = int(n)\n        else:\n            return \"The number has a decimal part. No Results\"\n\n    if n < 0:\n        n = abs(n)\n\n    max_prime = 0\n    max_divisor = 0\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            factor = n // i\n            if is_prime(factor):\n                max_prime = max(max_prime, factor)\n            max_divisor = max(max_divisor, factor)\n\n            if is_prime(i):\n                max_prime = max(max_prime, i)\n            max_divisor = max(max_divisor, i)\n\n    if max_prime == 0 and max_divisor == 0:\n        return []\n    return [max_prime, max_divisor]",
+            "logp": null
+        },
+        {
+            "content": "def big_primefac_div(n):\n    if isinstance(n, float):\n        if n % 1 != 0:\n            return \"The number has a decimal part. No Results\"\n        n = int(n)\n    elif isinstance(n, int):\n        n = abs(n)\n    else:\n        return \"Invalid input. Input must be an integer or a float.\"\n    \n    if n < 2:\n        return []\n    \n    prime_factors = []\n    divisor = 1\n    \n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            prime_factors.append(i)\n            divisor = max(divisor, i)\n            n = n // i\n    \n    if n > 1:\n        prime_factors.append(n)\n        divisor = max(divisor, n)\n    \n    if len(prime_factors) == 1:\n        return []\n    \n    return [max(prime_factors), divisor]",
+            "logp": null
+        }
+    ],
+    "3": []
+}

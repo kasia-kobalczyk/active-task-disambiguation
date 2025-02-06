@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    keys = dict.keys()\n    first_key = keys[0]\n    \n    if first_key.islower() or first_key.isupper():\n        for key in keys:\n            if (key.islower() and not first_key.islower()) or (key.isupper() and not first_key.isupper()):\n                return False\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n\n    keys = list(dict.keys())\n    first_key = keys[0]\n\n    if all(key.islower() for key in keys) or all(key.isupper() for key in keys):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    lowercase = all(isinstance(key, str) and key.islower() for key in dict.keys())\n    uppercase = all(isinstance(key, str) and key.isupper() for key in dict.keys())\n    return lowercase or uppercase",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(d):\n    if len(d) == 0:\n        return False\n    \n    lower_case_keys = all(isinstance(key, str) and key.islower() for key in d)\n    upper_case_keys = all(isinstance(key, str) and key.isupper() for key in d)\n    \n    return lower_case_keys or upper_case_keys",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    keys = list(dict.keys())\n    \n    if all(key.islower() for key in keys):\n        return True\n    \n    if all(key.isupper() for key in keys):\n        return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if not dict:  # if the dictionary is empty\n        return False\n    \n    # check if all keys are lower case\n    if all(key.islower() for key in dict.keys()):\n        return True\n    \n    # check if all keys are upper case\n    if all(key.isupper() for key in dict.keys()):\n        return True\n    \n    return False  # if keys are neither all lower case nor all upper case",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n\n    keys = dict.keys()\n    first_key = next(iter(keys))\n\n    if isinstance(first_key, str):\n        if first_key.islower():\n            for key in keys:\n                if not isinstance(key, str) or not key.islower():\n                    return False\n        elif first_key.isupper():\n            for key in keys:\n                if not isinstance(key, str) or not key.isupper():\n                    return False\n        else:\n            return False\n    else:\n        return False\n\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    keys = list(dict.keys())\n    first_key = keys[0]\n    if first_key.islower():\n        for key in keys:\n            if not key.islower():\n                return False\n    elif first_key.isupper():\n        for key in keys:\n            if not key.isupper():\n                return False\n    else:\n        return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n\n    keys = dict.keys()\n    first_key = list(keys)[0]\n    \n    if all(key.islower() for key in keys) or all(key.isupper() for key in keys):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    lowercase = all(key.islower() for key in dict.keys())\n    uppercase = all(key.isupper() for key in dict.keys())\n    \n    return lowercase or uppercase",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    keys = list(dict.keys())\n    first_key = keys[0]\n    \n    if first_key.islower() and all(key.islower() for key in keys):\n        return True\n    elif first_key.isupper() and all(key.isupper() for key in keys):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if not dict:\n        return False\n\n    lowercase_keys = all(key.islower() for key in dict.keys())\n    uppercase_keys = all(key.isupper() for key in dict.keys())\n\n    return lowercase_keys or uppercase_keys",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    keys = dict.keys()\n    lower_case_keys = [key for key in keys if key.islower()]\n    upper_case_keys = [key for key in keys if key.isupper()]\n    \n    return len(lower_case_keys) == len(keys) or len(upper_case_keys) == len(keys)",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if not dict: # check if the dictionary is empty\n        return False\n    keys = dict.keys() # get all the keys from the dictionary\n    upper = all(key.isupper() for key in keys) # check if all keys are upper case\n    lower = all(key.islower() for key in keys) # check if all keys are lower case\n    if upper or lower: # if either upper or lower case is True, return True\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    keys = list(dict.keys())\n    \n    if keys[0].isupper():\n        for key in keys:\n            if not key.isupper():\n                return False\n    else:\n        for key in keys:\n            if not key.islower():\n                return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    lowercase_keys = [key for key in dict.keys() if key.islower()]\n    uppercase_keys = [key for key in dict.keys() if key.isupper()]\n    \n    if len(lowercase_keys) == len(dict) or len(uppercase_keys) == len(dict):\n        return True\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if not dict:\n        return False\n    \n    keys = list(dict.keys())\n    first_key = keys[0]\n    first_key_case = first_key.islower()\n    \n    for key in keys[1:]:\n        if key.islower() != first_key_case:\n            return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    lowercase_keys = all(key.islower() for key in dict.keys())\n    uppercase_keys = all(key.isupper() for key in dict.keys())\n    \n    return lowercase_keys or uppercase_keys",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    first_key = next(iter(dict.keys()))\n    if first_key.islower():\n        for key in dict.keys():\n            if not key.islower():\n                return False\n    else:\n        for key in dict.keys():\n            if not key.isupper():\n                return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    keys = dict.keys()\n    lower_case = all(key.islower() for key in keys)\n    upper_case = all(key.isupper() for key in keys)\n    \n    if lower_case or upper_case:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    lowercase_keys = all(k.islower() for k in dict.keys())\n    uppercase_keys = all(k.isupper() for k in dict.keys())\n    \n    return lowercase_keys or uppercase_keys",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    upper_case = False\n    lower_case = False\n    \n    for key in dict:\n        if not isinstance(key, str):\n            return False\n        if key.islower():\n            lower_case = True\n        elif key.isupper():\n            upper_case = True\n        else:\n            return False\n    \n    return lower_case != upper_case",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n\n    lower_case = all(key.islower() for key in dict.keys())\n    upper_case = all(key.isupper() for key in dict.keys())\n\n    return lower_case or upper_case",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n\n    keys = list(dict.keys())\n    first_key_case = keys[0].islower()\n    for key in keys[1:]:\n        if key.islower() != first_key_case:\n            return False\n\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if not dict:\n        return False\n\n    lower_case = all(key.islower() for key in dict.keys())\n    upper_case = all(key.isupper() for key in dict.keys())\n\n    return lower_case or upper_case",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n\n    lower_case_keys = all(key.islower() for key in dict.keys())\n    upper_case_keys = all(key.isupper() for key in dict.keys())\n\n    if lower_case_keys or upper_case_keys:\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    keys = dict.keys()\n    if all(key.islower() for key in keys) or all(key.isupper() for key in keys):\n        return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    keys = list(dict.keys())\n    first_key = keys[0]\n    if first_key.islower():\n        for key in keys:\n            if not key.islower():\n                return False\n        return True\n    elif first_key.isupper():\n        for key in keys:\n            if not key.isupper():\n                return False\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    lowercase = True\n    uppercase = True\n    for key in dict.keys():\n        if key.islower():\n            uppercase = False\n        elif key.isupper():\n            lowercase = False\n        else:\n            return False\n    return lowercase or uppercase",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if not dict:\n        return False\n    keys = list(dict.keys())\n    first_key = keys[0]\n    if first_key.islower():\n        for key in keys:\n            if not key.islower():\n                return False\n        return True\n    elif first_key.isupper():\n        for key in keys:\n            if not key.isupper():\n                return False\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    keys = list(dict.keys())\n    if all(key.islower() for key in keys) or all(key.isupper() for key in keys):\n        return True\n    else:\n        return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    keys = dict.keys()\n    lower_case_keys = [key for key in keys if key.islower()]\n    upper_case_keys = [key for key in keys if key.isupper()]\n    return len(lower_case_keys) == len(keys) or len(upper_case_keys) == len(keys)",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    lower_case = all(key.islower() for key in dict.keys())\n    upper_case = all(key.isupper() for key in dict.keys())\n    \n    return lower_case or upper_case",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n\n    lower_case_keys = all(isinstance(key, str) and key.islower() for key in dict.keys())\n    upper_case_keys = all(isinstance(key, str) and key.isupper() for key in dict.keys())\n\n    return lower_case_keys or upper_case_keys",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    keys = list(dict.keys())\n    first_key = keys[0]\n    if first_key.islower():\n        for key in keys:\n            if not key.islower():\n                return False\n    elif first_key.isupper():\n        for key in keys:\n            if not key.isupper():\n                return False\n    else:\n        return False\n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    # check if the dictionary is empty\n    if len(dict) == 0:\n        return False\n    \n    # get the first key from the dictionary\n    first_key = list(dict.keys())[0]\n    \n    # check if all keys are lower case\n    if all(k.islower() for k in dict.keys()):\n        return True\n    \n    # check if all keys are upper case\n    if all(k.isupper() for k in dict.keys()):\n        return True\n    \n    # if the keys are neither all lower case nor all upper case, return False\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    keys = list(dict.keys())\n    first_key = keys[0]\n    \n    if first_key.islower():\n        for key in keys:\n            if not key.islower():\n                return False\n    elif first_key.isupper():\n        for key in keys:\n            if not key.isupper():\n                return False\n    else:\n        return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if not dict:\n        return False\n    \n    first_key = next(iter(dict))\n    \n    if first_key.islower():\n        return all(key.islower() for key in dict)\n    \n    if first_key.isupper():\n        return all(key.isupper() for key in dict)\n    \n    return False",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if not dict:\n        return False\n    \n    keys = dict.keys()\n    is_lower = all(k.islower() for k in keys)\n    is_upper = all(k.isupper() for k in keys)\n    \n    return is_lower or is_upper",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    keys = dict.keys()\n    lower_case = all(key.islower() for key in keys)\n    upper_case = all(key.isupper() for key in keys)\n    return lower_case or upper_case",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    keys = dict.keys()\n    \n    first_key = next(iter(keys))\n    \n    if first_key.islower():\n        for key in keys:\n            if not key.islower():\n                return False\n    elif first_key.isupper():\n        for key in keys:\n            if not key.isupper():\n                return False\n    else:\n        return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if not dict:\n        return False\n    keys = dict.keys()\n    return all(key.islower() for key in keys) or all(key.isupper() for key in keys)",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    \n    keys = list(dict.keys())\n    \n    if keys[0].islower():\n        for key in keys:\n            if not key.islower():\n                return False\n    elif keys[0].isupper():\n        for key in keys:\n            if not key.isupper():\n                return False\n    else:\n        return False\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n\n    all_lower = True\n    all_upper = True\n\n    for key in dict.keys():\n        if key.islower():\n            all_upper = False\n        elif key.isupper():\n            all_lower = False\n        else:\n            return False\n\n    return all_lower or all_upper",
+            "logp": null
+        },
+        {
+            "content": "def check_dict_case(dict):\n    if len(dict) == 0:\n        return False\n    keys = dict.keys()\n    upper_case = False\n    lower_case = False\n    for key in keys:\n        if key.isupper():\n            upper_case = True\n        elif key.islower():\n            lower_case = True\n        else:\n            return False\n    if upper_case and lower_case:\n        return False\n    return True",
+            "logp": null
+        }
+    ]
+}

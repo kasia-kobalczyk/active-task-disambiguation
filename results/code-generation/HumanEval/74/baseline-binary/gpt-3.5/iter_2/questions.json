@@ -1,0 +1,20 @@
+{
+    "0": [
+        "assert total_match(['a', 'b', 'c'], ['abc', 'def']) == ['a', 'b', 'c']",
+        "assert total_match(['abc', 'def'], ['abc', 'def']) == ['abc', 'def']",
+        "assert total_match(['abc', 'def'], ['a', 'b', 'c']) == ['abc', 'def']"
+    ],
+    "1": [
+        "assert total_match(['abc', 'def'], ['a', 'b', 'c']) == ['a', 'b', 'c']",
+        "assert total_match(['a', 'b', 'c'], ['x', 'y', 'z']) == ['a', 'b', 'c']"
+    ],
+    "2": [
+        "assert total_match(['a', 'b'], ['c', 'd']) == ['a', 'b']",
+        "assert total_match(['abc'], ['def']) == ['def']",
+        "assert total_match(['a', 'b'], ['abc']) == ['abc']"
+    ],
+    "3": [
+        "assert total_match(['abc', 'def'], ['abcd', 'cdef']) == ['abc', 'def']",
+        "assert total_match(['abc', 'def'], ['ab', 'cd']) == ['abc', 'def']"
+    ]
+}

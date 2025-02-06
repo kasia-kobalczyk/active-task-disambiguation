@@ -1,0 +1,36 @@
+{
+    "0": [
+        "assert rounded_avg(1, 5) == '11'",
+        "assert rounded_avg(4, 4) == '100'  ",
+        "assert rounded_avg(3, 7) == '111'",
+        "assert rounded_avg(10, 20) == '1111'  ",
+        "assert rounded_avg(10, 10) == '1010'",
+        "assert rounded_avg(1, 5) == '110'",
+        "assert rounded_avg(2, 8) == '1001'",
+        "assert rounded_avg(1, 1) == '1'     "
+    ],
+    "1": [
+        "assert rounded_avg(10, 10) == '1010'  ",
+        "assert rounded_avg(3, 7) == '100'  ",
+        "assert rounded_avg(10, 20) == '1111'  ",
+        "assert rounded_avg(1, 5) == '110'",
+        "assert rounded_avg(5, 5) == '101'     ",
+        "assert rounded_avg(6, 4) == -1         ",
+        "assert rounded_avg(4, 8) == '101'  "
+    ],
+    "2": [
+        "assert rounded_avg(3, 7) == '100'  ",
+        "assert rounded_avg(10, 20) == '1111'  ",
+        "assert rounded_avg(4, 6) == '101'  ",
+        "assert rounded_avg(1, 5) == '110'",
+        "assert rounded_avg(5, 5) == '101'     ",
+        "assert rounded_avg(6, 4) == -1         "
+    ],
+    "3": [
+        "assert rounded_avg(10, 20) == '1111'  ",
+        "assert rounded_avg(1, 5) == '110'",
+        "assert rounded_avg(5, 5) == '101'     ",
+        "assert rounded_avg(6, 4) == -1         ",
+        "assert rounded_avg(4, 8) == '101'  "
+    ]
+}

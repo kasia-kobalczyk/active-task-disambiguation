@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert check_if_last_char_is_a_letter(\"Check this out \") == False",
+        "assert check_if_last_char_is_a_letter(\"Goodbye\") == True",
+        "assert check_if_last_char_is_a_letter(\"1234\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == True",
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world\") == True",
+        "assert check_if_last_char_is_a_letter(\"Test123\") == False"
+    ],
+    "1": [
+        "assert check_if_last_char_is_a_letter(\"This is a test.\") == True",
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Is this a test\") == True",
+        "assert check_if_last_char_is_a_letter(\"Test123\") == False",
+        "assert check_if_last_char_is_a_letter(\"Python3\") == False",
+        "assert check_if_last_char_is_a_letter(\"Python programming.\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello World!\") == False",
+        "assert check_if_last_char_is_a_letter(\"12345\") == False"
+    ],
+    "2": [
+        "assert check_if_last_char_is_a_letter(\"Hello world!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Is this a test\") == True",
+        "assert check_if_last_char_is_a_letter(\"Test123\") == False",
+        "assert check_if_last_char_is_a_letter(\"Python programming.\") == False",
+        "assert check_if_last_char_is_a_letter(\"Python3\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello World!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Check this out. 123\") == False"
+    ],
+    "3": [
+        "assert check_if_last_char_is_a_letter(\"End.\") == False",
+        "assert check_if_last_char_is_a_letter(\"1234\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello, how are you?\") == False",
+        "assert check_if_last_char_is_a_letter(\"Hello world\") == True",
+        "assert check_if_last_char_is_a_letter(\"Python programming.\") == False",
+        "assert check_if_last_char_is_a_letter(\"Goodbye!\") == False",
+        "assert check_if_last_char_is_a_letter(\"Test case\") == True"
+    ]
+}

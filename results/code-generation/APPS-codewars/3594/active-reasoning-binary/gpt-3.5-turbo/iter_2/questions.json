@@ -1,0 +1,48 @@
+{
+    "0": [
+        "assert is_isogram(\"word\") == True",
+        "assert is_isogram(\"aaabbbccc\") == False",
+        "assert is_isogram(\"abcde\") == True",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(123) == False",
+        "assert is_isogram('') == False"
+    ],
+    "1": [
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"isogram\") == False",
+        "assert is_isogram(\"Nonogram\") == True",
+        "assert is_isogram(\"program\") == False",
+        "assert is_isogram(\"abcABC\") == True",
+        "assert is_isogram(\"world\") == False",
+        "assert is_isogram(\"12345\") == False",
+        "assert is_isogram(\"python\") == True",
+        "assert is_isogram(\"programming\") == False"
+    ],
+    "2": [
+        "assert is_isogram(\"aaaAAA\") == False",
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"Isogram\") == False",
+        "assert is_isogram(\"HELLO\") == False",
+        "assert is_isogram(\"elephant\") == True",
+        "assert is_isogram(\"programming123\") == True",
+        "assert is_isogram(\"AaBbCc\") == False",
+        "assert is_isogram(\"word\") == False",
+        "assert is_isogram(\"Is this an isogram?\") == True",
+        "assert is_isogram(\"AbcdEfGhI\") == True",
+        "assert is_isogram(\"Python\") == False",
+        "assert is_isogram(\"programming\") == True"
+    ],
+    "3": [
+        "assert is_isogram(\"hello\") == False",
+        "assert is_isogram(\"Isogram\") == False",
+        "assert is_isogram(\"HELLO\") == False",
+        "assert is_isogram(\"elephant\") == True",
+        "assert is_isogram(\"programming123\") == True",
+        "assert is_isogram(\"AaBbCc\") == False",
+        "assert is_isogram(\"word\") == False",
+        "assert is_isogram(\"Is this an isogram?\") == True",
+        "assert is_isogram(\"AbcdEfGhI\") == True",
+        "assert is_isogram(\"Python\") == False",
+        "assert is_isogram(\"programming\") == True"
+    ]
+}

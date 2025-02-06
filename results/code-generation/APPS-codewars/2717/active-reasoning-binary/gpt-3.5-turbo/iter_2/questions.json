@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert scf([6, 9, 12, 15]) == 3\n# Explanation: The smallest common factor is 3 because 3 can divide all numbers in the array without a remainder",
+        "assert scf([7, 14, 21, 28]) == 7",
+        "assert scf([3, 9, 15, 21]) == 3",
+        "assert scf([8, 16, 24, 32]) == 2",
+        "assert scf([2, 3, 4, 5]) == 1",
+        "assert scf([2, 4, 6, 8]) == 2",
+        "assert scf([2, 3, 5, 7]) == 1",
+        "assert scf([10, 15, 20, 25]) == 5",
+        "assert scf([5, 25, 50, 100]) == 5"
+    ],
+    "1": [
+        "assert scf([24, 36, 48, 60]) == 2",
+        "assert scf([2, 4, 6, 8, 10]) == 2",
+        "assert scf([3, 9, 21, 27]) == 3",
+        "assert scf([2, 3, 5, 7]) == 1",
+        "assert scf([5, 10, 15, 20]) == 5",
+        "assert scf([4, 8, 12, 16, 20]) == 2",
+        "assert scf([7, 14, 21, 28, 35]) == 7",
+        "assert scf([3, 6, 9, 12, 15]) == 3"
+    ],
+    "2": [
+        "assert scf([17]) == 17",
+        "assert scf([10, 25, 30, 35]) == 5",
+        "assert scf([4, 8, 12, 16, 20]) == 4",
+        "assert scf([2, 4, 6, 8, 10]) == 2",
+        "assert scf([6, 9, 15, 33]) == 3",
+        "assert scf([2, 3, 5, 7, 11]) == 1",
+        "assert scf([-2, -4, -6, -8, -10]) == 1",
+        "assert scf([3, 6, 9, 12, 15]) == 3"
+    ],
+    "3": [
+        "assert scf([15, 30, 45, 60]) == 15",
+        "assert scf([100, 200, 300, 400]) == 100",
+        "assert scf([2, 4, 6, 8, 10]) == 2",
+        "assert scf([5, 25, 125, 625]) == 5",
+        "assert scf([10, 15, 20, 25]) == 5",
+        "assert scf([4, 6, 9, 15]) == 1",
+        "assert scf([9, 27, 81, 243]) == 3"
+    ]
+}

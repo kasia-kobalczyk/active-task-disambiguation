@@ -1,0 +1,40 @@
+{
+    "0": [
+        "assert words_in_sentence(\"Hello world\") == \"world\"",
+        "assert words_in_sentence(\"Python programming is fun\") == \"is fun\"",
+        "assert words_in_sentence(\"This is a simple test\") == \"is a\"",
+        "assert words_in_sentence(\"Hello world this is a test\") == \"Hello world a\"",
+        "assert words_in_sentence(\"The quick brown fox jumps\") == \"The fox\"",
+        "assert words_in_sentence(\"I love coding in Python\") == \"I love\""
+    ],
+    "1": [
+        "assert words_in_sentence(\"a quick brown fox\") == \"a fox\"",
+        "assert words_in_sentence(\"this is an example\") == \"this is an\"",
+        "assert words_in_sentence(\"this is a test\") == \"is a\"",
+        "assert words_in_sentence(\"I am programming in Python\") == \"am in\"",
+        "assert words_in_sentence(\"hello world\") == \"hello\"",
+        "assert words_in_sentence(\"python programming is fun\") == \"is fun\"",
+        "assert words_in_sentence(\"hello world\") == \"world\"",
+        "assert words_in_sentence(\"prime number words\") == \"prime\""
+    ],
+    "2": [
+        "assert words_in_sentence(\"longer words are not always better\") == \"words are\"",
+        "assert words_in_sentence(\"abc de fgh ijk\") == \"abc ijk\"",
+        "assert words_in_sentence(\"this is a test\") == \"is a\"",
+        "assert words_in_sentence(\"python programming\") == \"python\"",
+        "assert words_in_sentence(\"this is a test case\") == \"this is a\"",
+        "assert words_in_sentence(\"hello world\") == \"hello\"",
+        "assert words_in_sentence(\"I am programming in Python\") == \"am in\"",
+        "assert words_in_sentence(\"hello world\") == \"world\""
+    ],
+    "3": [
+        "assert words_in_sentence(\"abc de fgh ijk\") == \"abc ijk\"",
+        "assert words_in_sentence(\"this is a test\") == \"is a\"",
+        "assert words_in_sentence(\"python programming\") == \"python\"",
+        "assert words_in_sentence(\"this is a test case\") == \"this is a\"",
+        "assert words_in_sentence(\"hello world\") == \"hello\"",
+        "assert words_in_sentence(\"I am programming in Python\") == \"am in\"",
+        "assert words_in_sentence(\"hello world\") == \"world\"",
+        "assert words_in_sentence(\"prime number words\") == \"prime\""
+    ]
+}

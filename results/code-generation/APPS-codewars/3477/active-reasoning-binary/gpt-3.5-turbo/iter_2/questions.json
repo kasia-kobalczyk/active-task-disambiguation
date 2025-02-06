@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert sort_string(\"programming\", \"pgm\") == \"pprgmgiano\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"hello\", \"leho\") == \"llohe\"",
+        "assert sort_string(\"abcd\", \"efg\") == \"abcd\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"abc\", \"abc\") == \"abc\""
+    ],
+    "1": [
+        "assert sort_string(\"abc\", \"def\") == \"abc\"",
+        "assert sort_string(\"abcd\", \"dcba\") == \"dcba\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"abcdef\", \"cba\") == \"cabdef\"",
+        "assert sort_string(\"watermelon\", \"lmntoea\") == \"lmntoeaw\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"python\", \"p\") == \"poythn\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"programming\", \"gpinr\") == \"gpinrormam\"",
+        "assert sort_string(\"hello\", \"leh\") == \"hello\""
+    ],
+    "2": [
+        "assert sort_string(\"abc\", \"a\") == \"abc\"",
+        "assert sort_string(\"abc\", \"ab\") == \"ab\"",
+        "assert sort_string(\"foos\", \"of\") == \"oofs\"",
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"abc\", \"ba\") == \"ba\"",
+        "assert sort_string(\"a\", \"a\") == \"a\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"zyx\", \"abc\") == \"zyx\""
+    ],
+    "3": [
+        "assert sort_string(\"banana\", \"abn\") == \"aaabnn\"",
+        "assert sort_string(\"python\", \"thonpy\") == \"thony\"",
+        "assert sort_string(\"string\", \"gnirts\") == \"gnirts\"",
+        "assert sort_string(\"testing\", \"ingest\") == \"testing\"",
+        "assert sort_string(\"apples\", \"slep\") == \"pplesas\"",
+        "assert sort_string(\"apple\", \"plea\") == \"plaep\"",
+        "assert sort_string(\"hello\", \"ohl\") == \"holl\"",
+        "assert sort_string(\"foobar\", \"fobar\") == \"foaobr\""
+    ]
+}

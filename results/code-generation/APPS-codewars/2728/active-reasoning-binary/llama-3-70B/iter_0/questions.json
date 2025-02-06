@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert inverseMod(1, 11) == 1",
+        "assert inverseMod(3, 7) == 5",
+        "assert inverseMod(4, 12) == None",
+        "assert inverseMod(10, 17) == 12",
+        "assert inverseMod(7, 17) == 5",
+        "assert inverseMod(7, 12) == None",
+        "assert inverseMod(5, 10) == None",
+        "assert inverseMod(1, 2) == 1"
+    ],
+    "1": [
+        "assert inverseMod(3, 7) == 5",
+        "assert inverseMod(10, 17) == 12",
+        "assert inverseMod(4, 9) == 7",
+        "assert inverseMod(7, 12) == None",
+        "assert inverseMod(12, 15) == None",
+        "assert inverseMod(11, 26) == 23"
+    ],
+    "2": [
+        "assert inverseMod(15, 28) == None",
+        "assert inverseMod(10, 17) == 12",
+        "assert inverseMod(4, 9) == 7",
+        "assert inverseMod(5, 11) == 9",
+        "assert inverseMod(10, 17) == None",
+        "assert inverseMod(2, 5) == 3",
+        "assert inverseMod(11, 26) == None",
+        "assert inverseMod(7, 13) == 2"
+    ],
+    "3": [
+        "assert inverseMod(10, 17) == 12",
+        "assert inverseMod(4, 9) == 7",
+        "assert inverseMod(5, 11) == 9",
+        "assert inverseMod(10, 17) == None",
+        "assert inverseMod(2, 5) == 3",
+        "assert inverseMod(11, 26) == None",
+        "assert inverseMod(7, 13) == 2"
+    ]
+}

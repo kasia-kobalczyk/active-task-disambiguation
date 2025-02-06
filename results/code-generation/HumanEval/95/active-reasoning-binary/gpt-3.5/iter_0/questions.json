@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert check_dict_case({'key1': 'value1', 'Key2': 'value2'}) == False",
+        "assert check_dict_case({}) == False",
+        "assert check_dict_case({\"a\": 1, \"B\": 2, \"C\": 3}) == False",
+        "assert check_dict_case({'key1': 'value1', 'key2': 'value2'}) == True",
+        "assert check_dict_case({\"A\": 1, \"b\": 2, \"C\": 3}) == False",
+        "assert check_dict_case({\"A\": 1, \"B\": 2, \"C\": 3}) == True",
+        "assert check_dict_case({'Key1': 'value1', 'Key2': 'value2'}) == False",
+        "assert check_dict_case({\"a\": 1, \"b\": 2, \"c\": 3}) == True",
+        "assert check_dict_case({'KEY1': 'value1', 'KEY2': 'value2'}) == True"
+    ],
+    "1": [
+        "assert check_dict_case({}) == False",
+        "assert check_dict_case({'key1': 'value1', 'Key2': 'value2', 'Key3': 'value3', 'key4': 'value4'}) == False\n# Explanation: Keys are a mix of lower case and upper case, so the function should return False",
+        "assert check_dict_case({'key1': 'value1', 'key2': 'value2'}) == True",
+        "assert check_dict_case({'Key1': 'value1', 'key2': 'value2'}) == False",
+        "assert check_dict_case({'key1': 'value1', 'KEY2': 'value2'}) == False",
+        "assert check_dict_case({'KEY1': 'value1', 'KEY2': 'value2'}) == True"
+    ],
+    "2": [
+        "assert check_dict_case({'key1': 'value1', 'key2': 'value2'}) == True",
+        "assert check_dict_case({'key1': 'value1', 'KEY2': 'value2'}) == False",
+        "assert check_dict_case({'1': 'one', '2': 'two', '3': 'three'}) == False",
+        "assert check_dict_case({'KEY1': 'VALUE1', 'KEY2': 'VALUE2'}) == True",
+        "assert check_dict_case({'key1': 'value1', 'Key2!': 'value2'}) == False",
+        "assert check_dict_case({'KEY1': 'value1', 'KEY2': 'value2'}) == True",
+        "assert check_dict_case({'@': 'value1', '#': 'value2'}) == False"
+    ],
+    "3": [
+        "assert check_dict_case({'A': 'Ant', 'B': 'Ball', 'C': 'Cat'}) == True",
+        "assert check_dict_case({'key1': 'value1', 'Key2': 'value2', '3': 'value3'}) == False",
+        "assert check_dict_case({'a': 'apple', 'b': 'banana'}) == True",
+        "assert check_dict_case({'key1': 'value1', 'key2': 'value2'}) == True",
+        "assert check_dict_case({'key1': 'value1', 'KEY2': 'value2'}) == False",
+        "assert check_dict_case({'KEY1': 'value1', 'KEY2': 'value2', 'KEY3': 'value3'}) == True",
+        "assert check_dict_case({'key1': 'value1', 'Key2': 'value2', 'key3': 'value3'}) == False",
+        "assert check_dict_case({'KEY1': 'VALUE1', 'KEY2': 'VALUE2'}) == True",
+        "assert check_dict_case({1: 'one', 2: 'two', 3: 'three'}) == False",
+        "assert check_dict_case({'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}) == True",
+        "assert check_dict_case({'KEY1': 'value1', 'KEY2': 'value2'}) == True"
+    ]
+}

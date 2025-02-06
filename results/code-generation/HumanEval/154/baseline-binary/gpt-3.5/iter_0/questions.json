@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert cycpattern_check(\"python\", \"thonpy\") == True",
+        "assert cycpattern_check(\"coding\", \"ingcod\") == True",
+        "assert cycpattern_check(\"programming\", \"mingpro\") == True"
+    ],
+    "1": [
+        "assert cycpattern_check(\"python\", \"program\") == False",
+        "assert cycpattern_check(\"word\", \"word\") == True"
+    ],
+    "2": [
+        "assert cycpattern_check(\"python\", \"\") == False"
+    ],
+    "3": [
+        "assert cycpattern_check(\"abcd\", \"dabc\") == True",
+        "assert cycpattern_check(\"abc\", \"bca\") == True",
+        "assert cycpattern_check(\"abc\", \"def\") == False"
+    ]
+}

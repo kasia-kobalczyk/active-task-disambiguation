@@ -1,0 +1,46 @@
+{
+    "0": [
+        "assert next_smallest([4, 2, 1, 5, 3]) == 2",
+        "assert next_smallest([1, 1, 1, 1, 1, 1]) == None",
+        "assert next_smallest([]) == None",
+        "assert next_smallest([7, 6, 5, 4, 3, 2, 1]) == 2",
+        "assert next_smallest([1, 2, 2, 4, 5]) == 2",
+        "assert next_smallest([-5, -10, -15, -20, -25]) == -15",
+        "assert next_smallest([5, 4, 3, 2, 1]) == 2",
+        "assert next_smallest([9, 5, 3, 7, 8, 6, 2, 4]) == 3",
+        "assert next_smallest([1, 2, 3, 4, 5]) == 2",
+        "assert next_smallest([1, 1, 1, 1, 1]) == None"
+    ],
+    "1": [
+        "assert next_smallest([7, 4]) == 7",
+        "assert next_smallest([]) == None",
+        "assert next_smallest([3, 7, 2, 5, 9, 1, 8]) == 2",
+        "assert next_smallest([-5, -4, -3, 2, 3]) == -4",
+        "assert next_smallest([-5, -4, -3, -2, -1]) == None",
+        "assert next_smallest([5, 4, 3, 2, 1]) == 2",
+        "assert next_smallest([1, 2, 3, 4, 5]) == 2",
+        "assert next_smallest([5]) == None"
+    ],
+    "2": [
+        "assert next_smallest([3, 4, 5, 6, 7]) == 4",
+        "assert next_smallest([2, 2, 3, 3, 4, 4, 5, 5]) == 3",
+        "assert next_smallest([-1, -5, -3, 0]) == -3",
+        "assert next_smallest([5, 4, 3, 2, 1]) == 2",
+        "assert next_smallest([10, 20, 30, 40, 50]) == 20",
+        "assert next_smallest([3, 3, 3, 4, 5]) == 4",
+        "assert next_smallest([1, 1, 1, 1, 1, 2, 2, 2, 2]) == 2",
+        "assert next_smallest([5]) == None"
+    ],
+    "3": [
+        "assert next_smallest([10, 8, 6, 4, 2]) == 4",
+        "assert next_smallest([9, 3, 7, 5, 2]) == 3",
+        "assert next_smallest([7, 6, 5, 4, 3]) == 6",
+        "assert next_smallest([100, 90, 80, 70, 60]) == 70",
+        "assert next_smallest([4, 7]) == 7",
+        "assert next_smallest([1, 1, 1, 1, 1, 1, 1, 1]) == None",
+        "assert next_smallest([5, 2, 3, 2, 5]) == 3",
+        "assert next_smallest([10, 20, 30, 40, 50]) == 20",
+        "assert next_smallest([1, 2, 3, 4, 5]) == 2",
+        "assert next_smallest([5, 5, 5, 5, 5, 5, 5, 5, 5]) == None"
+    ]
+}

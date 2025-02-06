@@ -1,0 +1,45 @@
+{
+    "0": [
+        "check_dict_case({})",
+        "check_dict_case({'A': 1, 'B': 2, 'C': 3})",
+        "check_dict_case({'hello': 1, 'world': 2})",
+        "check_dict_case({'a': 1, 'B': 2, 'c': 3})",
+        "check_dict_case({'a': 1, 'b': 2, 'c': 3})"
+    ],
+    "1": [
+        "check_dict_case({'KEY_ONE': 'value1', 'key_two': 'value2'})",
+        "check_dict_case({'UPPER': 'CASE', 'ANOTHER': 'TEST'})",
+        "check_dict_case({'item1': 100, 'item2': 200})",
+        "check_dict_case({'a': 1, 'b': 2, 'c': 3})",
+        "check_dict_case({'NAME': 'BOB', 'AGE': 30})",
+        "check_dict_case({'country': 'france', 'COUNTRY': 'GERMANY'})",
+        "check_dict_case({'A': 1, 'B': 2, 'C': 3})",
+        "check_dict_case({'x': 10, 'y': 20, 'Z': 30})",
+        "check_dict_case({'name': 'Alice', 'city': 'paris'})",
+        "check_dict_case({'hello': 'world', 'python': 'rocks'})"
+    ],
+    "2": [
+        "check_dict_case({'name': 'Alice', 'age': 30})",
+        "check_dict_case({'mixedCase': 'value', 'another_mixedCase': 'value2'})",
+        "check_dict_case({'COUNTRY': 'USA', 'CITY': 'New York'})",
+        "check_dict_case({'UPPERCASE': 'value', 'ANOTHER': 'value2'})",
+        "check_dict_case({'key_one': 'value1', 'key_two': 'value2'})",
+        "check_dict_case({'key1': 'value', 'key2': 'another_value'})",
+        "check_dict_case({'key': 'value', 'another_key': 'value2'})",
+        "check_dict_case({'A': 1, 'B': 2, 'C': 3})",
+        "check_dict_case({'KEY_ONE': 'value1', 'KEY_TWO': 'value2'})",
+        "check_dict_case({'MixEdCase': 'value', 'lowercasekey': 'value2'})"
+    ],
+    "3": [
+        "check_dict_case({'name': 'Bob', 'age': '25', 'city': 'New York'})",
+        "check_dict_case({'': 'empty_key'})",
+        "check_dict_case({'key_one': 'value1', 'KEY_TWO': 'value2'})",
+        "check_dict_case({'apple': 10, 'banana': 20, 'cherry': 30})",
+        "check_dict_case({'A': 1, 'B': 2, 'C': 3})",
+        "check_dict_case({'example': 'test', 'another_example': 'value'})",
+        "check_dict_case({'name': 'Charlie', 'Age': 40})",
+        "check_dict_case({'HELLO': 'world', 'GOODBYE': 'everyone'})",
+        "check_dict_case({'MIXEDcase': 123, 'ANOTHERkey': 'value'})",
+        "check_dict_case({'HELLO': 'world', 'TEST': 'value'})"
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "0": [
+        "total_match([\"a\", \"b\", \"c\"], [\"d\", \"e\"])",
+        "total_match(['abc', 'def', 'ghi'], ['jkl', 'mno', 'pqr'])",
+        "total_match([\"hello\", \"world\"], [\"foo\", \"bar\"])",
+        "total_match([\"hello\", \"world\"], [\"hi\", \"there\"])",
+        "total_match([], [\"a\", \"b\", \"c\"])",
+        "total_match([\"cat\", \"dog\", \"rabbit\"], [\"bird\", \"fish\"])",
+        "total_match([\"apple\", \"banana\", \"orange\"], [\"car\", \"house\", \"tree\"])",
+        "total_match([\"python\", \"programming\"], [\"java\", \"language\"])"
+    ],
+    "1": [
+        "total_match(['abcd'], ['efgh'])",
+        "total_match(['abc', 'def'], ['ghi', 'jkl', 'mno'])",
+        "total_match(['apple', 'banana', 'cherry'], ['date', 'fig', 'grape'])",
+        "total_match(['cat', 'dog', 'elephant'], ['horse', 'lion', 'tiger'])",
+        "total_match(['red', 'green', 'blue'], ['yellow', 'purple', 'orange'])",
+        "total_match(['ab', 'cd'], ['ef', 'gh', 'ij'])",
+        "total_match(['one', 'two', 'three'], ['four', 'five', 'six'])",
+        "total_match(['a', 'bb', 'ccc'], ['dd', 'eee', 'ffff'])"
+    ],
+    "2": [
+        "total_match(['hello', 'world'], ['hi', 'there'])",
+        "total_match(['abcd', 'efgh'], ['ijkl', 'mnop'])",
+        "total_match(['apple', 'banana'], ['orange', 'kiwi'])",
+        "total_match(['abc', 'def'], ['ghi', 'jkl'])",
+        "total_match(['xyz'], ['wxy'])"
+    ],
+    "3": [
+        "total_match(['abcd', 'efgh'], ['ijkl'])",
+        "total_match(['python', 'java', 'c++'], ['javascript', 'ruby'])",
+        "total_match(['hello'], ['world'])",
+        "total_match(['hi'], ['there'])",
+        "total_match(['abc', 'def'], ['ghi', 'jkl'])",
+        "total_match(['a', 'b', 'c'], ['d', 'e', 'f', 'g'])"
+    ]
+}

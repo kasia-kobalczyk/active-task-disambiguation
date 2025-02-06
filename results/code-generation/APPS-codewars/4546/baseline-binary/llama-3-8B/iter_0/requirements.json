@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert find_children(\"abcABC\") == \"ABcaBcAc\", f\"Expected 'abcABC' to return 'ABcaBcAc', but got {find_children('abcABC')}\"",
+        false
+    ],
+    "1": [
+        "assert find_children(\"aAbB\") == \"aAaaBbb\"",
+        false
+    ],
+    "2": [
+        "None",
+        true
+    ],
+    "3": [
+        "None",
+        true
+    ]
+}

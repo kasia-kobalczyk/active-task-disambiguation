@@ -1,0 +1,45 @@
+{
+    "0": [
+        "assert is_narcissistic(1234) == False",
+        "assert is_narcissistic(123) == False",
+        "assert is_narcissistic(9474, 93084) == True",
+        "assert is_narcissistic(153, 123, 370, 456) == False",
+        "assert is_narcissistic(407) == True",
+        "assert is_narcissistic(123, 456, 789) == False",
+        "assert is_narcissistic(153) == True",
+        "assert is_narcissistic(1) == True",
+        "assert is_narcissistic(153, 370, 371) == True"
+    ],
+    "1": [
+        "assert is_narcissistic(1234, 5678, 91011) == False",
+        "assert is_narcissistic(123, 456, 789) == False",
+        "assert is_narcissistic(\"123\") == False",
+        "assert is_narcissistic(0, 1) == True",
+        "assert is_narcissistic(153, 456, 1634, 789) == False",
+        "assert is_narcissistic() == False",
+        "assert is_narcissistic(12, 23, 34) == False",
+        "assert is_narcissistic(153, \"370\", 371, \"407\") == True\n# Explanation: The string values \"370\" and \"407\" are valid numbers and are narcissistic numbers",
+        "assert is_narcissistic(153, 370, 371, 407) == True"
+    ],
+    "2": [
+        "assert is_narcissistic(1234, 5678, 91011) == False",
+        "assert is_narcissistic(123, 456, 789) == False",
+        "assert is_narcissistic(\"123\") == False",
+        "assert is_narcissistic(0, 1) == True",
+        "assert is_narcissistic(153, \"370\", 371, \"407\") == True\n# Explanation: The string values \"370\" and \"407\" are considered valid inputs and they are both narcissistic numbers",
+        "assert is_narcissistic(153, 456, 1634, 789) == False",
+        "assert is_narcissistic(12, 23, 34) == False",
+        "assert is_narcissistic(153, 370, 371, 407) == True"
+    ],
+    "3": [
+        "assert is_narcissistic(\"123\", 456, \"789\") == False",
+        "assert is_narcissistic(123, \"456\", 789) == False",
+        "assert is_narcissistic(153, \"370\", 371, \"abc\") == False",
+        "assert is_narcissistic(1634, \"8208\", 9474) == True",
+        "assert is_narcissistic(153, \"370\", 371, \"407\") == True",
+        "assert is_narcissistic(8208) == True",
+        "assert is_narcissistic(153, 370, 371, 8208, 1234) == False",
+        "assert is_narcissistic(0) == False",
+        "assert is_narcissistic(153, 370, 371, 407) == True"
+    ]
+}

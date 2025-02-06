@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert histogram(\"x y z x x y\") == {'x': 3}",
+        "assert histogram(\"hello world\") == {'l': 3}",
+        "assert histogram(\"a b c a a b\") == {'a': 3}",
+        "assert histogram(\"m n o p q r s t u v w x y z\") == {'m': 1, 'n': 1, 'o': 1, 'p': 1, 'q': 1, 'r': 1, 's': 1, 't': 1, 'u': 1, 'v': 1, 'w': 1, 'x': 1, 'y': 1, 'z': 1}",
+        "assert histogram(\"a b c a a b c d\") == {'a': 3}",
+        "assert histogram(\"l m n o o o p q r\") == {'o': 3}",
+        "assert histogram(\"x y z z x y y\") == {'y': 3, 'z': 2}",
+        "assert histogram(\"m n o p q r s t m n\") == {'m': 2, 'n': 2}"
+    ],
+    "1": [
+        "assert histogram(\"l m n l m n o p q r s t\") == {'l': 2, 'm': 2, 'n': 2}",
+        "assert histogram(\"a b c a b a\") == {'a': 3}",
+        "assert histogram(\"l o l o l\") == {'l': 3}",
+        "assert histogram(\"x y z x y z x\") == {'x': 3, 'y': 2, 'z': 2}",
+        "assert histogram(\"x y z x y z\") == {'x': 2, 'y': 2, 'z': 2}",
+        "assert histogram(\"d e f g h i j k\") == {'d': 1, 'e': 1, 'f': 1, 'g': 1, 'h': 1, 'i': 1, 'j': 1, 'k': 1}",
+        "assert histogram(\"m n o p q r s t\") == {'m': 1, 'n': 1, 'o': 1, 'p': 1, 'q': 1, 'r': 1, 's': 1, 't': 1}"
+    ],
+    "2": [
+        "assert histogram(\"x y z x x y\") == {'x': 3}",
+        "assert histogram(\"p q p q r s p\") == {'p': 3, 'q': 2}",
+        "assert histogram(\"cat dog cat mouse dog cat\") == {'cat': 3}",
+        "assert histogram(\"hello world hello hello\") == {'hello': 3}",
+        "assert histogram(\"a b c d e f g a a\") == {'a': 3}",
+        "assert histogram(\"a b c d e f g\") == {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'f': 1, 'g': 1}",
+        "assert histogram(\"x y x z z y x\") == {'x': 3, 'y': 2, 'z': 2}",
+        "assert histogram(\"j k k l m n n n\") == {'n': 3}"
+    ],
+    "3": [
+        "assert histogram(\"h e l l o h e\") == {'h': 2, 'e': 2, 'l': 2}",
+        "assert histogram(\"a b c a a b c d e f g\") == {'a': 3}",
+        "assert histogram(\"a b c d e f g h i j\") == {'a': 1, 'b': 1, 'c': 1, 'd': 1, 'e': 1, 'f': 1, 'g': 1, 'h': 1, 'i': 1, 'j': 1}",
+        "assert histogram(\"t t u v w t u u\") == {'t': 3, 'u': 3}",
+        "assert histogram(\"e e e f f g g g g\") == {'g': 4}",
+        "assert histogram(\"a a b b c c d d e\") == {'a': 2, 'b': 2, 'c': 2, 'd': 2}",
+        "assert histogram(\"t u v w x y z\") == {'t': 1, 'u': 1, 'v': 1, 'w': 1, 'x': 1, 'y': 1, 'z': 1}",
+        "assert histogram(\"k l m n o p q r k l m\") == {'k': 2, 'l': 2, 'm': 2}"
+    ]
+}

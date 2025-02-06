@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert file_name_check(\"example.txt\") == \"Yes\"",
+        true
+    ],
+    "1": [
+        "assert file_name_check(\"2ndfile.dll\") == \"No\"",
+        true
+    ],
+    "2": [
+        "assert file_name_check(\"file_with_4_digits_1234.txt\") == \"No\"",
+        true
+    ],
+    "3": [
+        "assert file_name_check(\"myfile.exe\") == \"Yes\"",
+        true
+    ]
+}

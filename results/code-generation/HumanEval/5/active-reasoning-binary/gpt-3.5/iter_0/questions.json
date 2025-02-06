@@ -1,0 +1,44 @@
+{
+    "0": [
+        "assert intersperse([0, 0, 0, 0, 0], 1) == [0, 1, 0, 1, 0, 1, 0, 1, 0]",
+        "assert intersperse([5, 5, 5, 5, 5], 0) == [5, 0, 5, 0, 5, 0, 5, 0, 5]",
+        "assert intersperse([1, 2, 3, 4, 5], 0) == [1, 0, 2, 0, 3, 0, 4, 0, 5]",
+        "assert intersperse([10, 20, 30], 5) == [10, 5, 20, 5, 30]",
+        "assert intersperse([], 9) == []",
+        "assert intersperse([10, 20, 30, 40, 50], 100) == [10, 100, 20, 100, 30, 100, 40, 100, 50]",
+        "assert intersperse([1, 2, 3, 4], 0) == [1, 0, 2, 0, 3, 0, 4]",
+        "assert intersperse([0, 0, 0], 1) == [0, 1, 0, 1, 0]",
+        "assert intersperse([100, 200, 300, 400, 500], 1000) == [100, 1000, 200, 1000, 300, 1000, 400, 1000, 500]"
+    ],
+    "1": [
+        "assert intersperse([3, 4, 5], 2) == [3, 2, 4, 2, 5]",
+        "assert intersperse([1, 2], 1) == [1, 1, 2]",
+        "assert intersperse([6], 3) == [6]",
+        "assert intersperse([7, 8, 9, 10], 5) == [7, 5, 8, 5, 9, 5, 10]",
+        "assert intersperse([], 4) == []"
+    ],
+    "2": [
+        "assert intersperse([9, 8, 7, 6, 5], 3) == [9, 3, 8, 3, 7, 3, 6, 3, 5]",
+        "assert intersperse([10, 20, 30, 40], 15) == [10, 15, 20, 15, 30, 15, 40]",
+        "assert intersperse([5, 5, 5], 10) == [5, 10, 5, 10, 5]",
+        "assert intersperse([4, 5, 6, 7], 2) == [4, 2, 5, 2, 6, 2, 7]",
+        "assert intersperse([], 7) == []",
+        "assert intersperse([1, 2, 3], 0) == [1, 0, 2, 0, 3]",
+        "assert intersperse([7, 8, 9, 10], 5) == [7, 5, 8, 5, 9, 5, 10]",
+        "assert intersperse([0, 1, 0, 1, 0], 2) == [0, 2, 1, 2, 0, 2, 1, 2, 0]",
+        "assert intersperse([1, 2, 3, 4], 0) == [1, 0, 2, 0, 3, 0, 4]",
+        "assert intersperse([10, 20, 30, 40, 50, 60], 15) == [10, 15, 20, 15, 30, 15, 40, 15, 50, 15, 60]"
+    ],
+    "3": [
+        "assert intersperse([10, 20, 30, 40, 50], 99) == [10, 99, 20, 99, 30, 99, 40, 99, 50]",
+        "assert intersperse([1, 2, 3, 4], 5) == [1, 5, 2, 5, 3, 5, 4]",
+        "assert intersperse([], 1) == []",
+        "assert intersperse([5], 2) == [5]",
+        "assert intersperse([3, 7], 9) == [3, 9, 7]",
+        "assert intersperse([1, 2, 3, 4, 5], 0) == [1, 0, 2, 0, 3, 0, 4, 0, 5]",
+        "assert intersperse([], 2) == []",
+        "assert intersperse([5, 5, 5, 5], 9) == [5, 9, 5, 9, 5, 9, 5]",
+        "assert intersperse([1, 2, 3, 4], 0) == [1, 0, 2, 0, 3, 0, 4]",
+        "assert intersperse([9, 8, 7], 6) == [9, 6, 8, 6, 7]"
+    ]
+}

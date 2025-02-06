@@ -1,0 +1,29 @@
+{
+    "0": [
+        "assert is_alt(\"amazon\") == True",
+        "assert is_alt(\"abe\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"eiou\") == True",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"axyz\") == False",
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"codec\") == True",
+        "assert is_alt(\"hello\") == False",
+        "assert is_alt(\"bcd\") == False"
+    ],
+    "2": [
+        "assert is_alt(\"bcde\") == False",
+        "assert is_alt(\"bp\") == True",
+        "assert is_alt(\"abeiou\") == False",
+        "assert is_alt(\"cofed\") == False",
+        "assert is_alt(\"hello\") == False",
+        "assert is_alt(\"pq\") == True"
+    ],
+    "3": [
+        "assert is_alt(\"cofed\") == True",
+        "assert is_alt(\"bce\") == False",
+        "assert is_alt(\"aeiou\") == False",
+        "assert is_alt(\"aebcdef\") == False"
+    ]
+}

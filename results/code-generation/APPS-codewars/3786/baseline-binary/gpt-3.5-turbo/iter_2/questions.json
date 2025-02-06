@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert siegfried(3, \"code review\") == \"kode review\"",
+        "assert siegfried(2, \"code review\") == \"kode review\"",
+        "assert siegfried(5, \"code review\") == \"kode review\"",
+        "assert siegfried(1, \"code review\") == \"kode review\"",
+        "assert siegfried(5, \"hello class\") == \"hello klas\"",
+        "assert siegfried(2, \"nice to meet you\") == \"nise to meet you\"",
+        "assert siegfried(4, \"nice to meet you\") == \"nise to meet you\"",
+        "assert siegfried(5, \"nice to meet you\") == \"nise to met you\"",
+        "assert siegfried(1, \"nice to meet you\") == \"nise to meet you\"",
+        "assert siegfried(4, \"code review\") == \"kode review\"",
+        "assert siegfried(3, \"nice to meet you\") == \"nise to met you\"",
+        "assert siegfried(4, \"hello class\") == \"hello klas\"",
+        "assert siegfried(2, \"hello class\") == \"hello klas\"",
+        "assert siegfried(3, \"hello class\") == \"hello klas\"",
+        "assert siegfried(1, \"hello class\") == \"hello klas\""
+    ],
+    "1": [
+        "assert siegfried(1, \"ci\") == \"si\""
+    ],
+    "2": [
+        "assert siegfried(5, \"ing\") == \"ink\"",
+        "assert siegfried(5, \"sm\") == \"schm\"",
+        "assert siegfried(1, \"c\") == \"k\"",
+        "assert siegfried(4, \"the world is white\") == \"zhe rorld iz vhite\"",
+        "assert siegfried(2, \"ph\") == \"f\"",
+        "assert siegfried(3, \"ee\") == \"e\"",
+        "assert siegfried(4, \"wr\") == \"r\"",
+        "assert siegfried(3, \"te\") == \"te\"",
+        "assert siegfried(4, \"wh\") == \"v\"",
+        "assert siegfried(3, \"She went to the place\") == \"She vent to the place\"",
+        "assert siegfried(4, \"w\") == \"v\"",
+        "assert siegfried(1, \"ce\") == \"se\"",
+        "assert siegfried(4, \"th\") == \"z\"",
+        "assert siegfried(5, \"ou\") == \"u\"",
+        "assert siegfried(5, \"an\") == \"un\""
+    ],
+    "3": [
+        "assert siegfried(3, \"bat\") == \"bat\""
+    ]
+}

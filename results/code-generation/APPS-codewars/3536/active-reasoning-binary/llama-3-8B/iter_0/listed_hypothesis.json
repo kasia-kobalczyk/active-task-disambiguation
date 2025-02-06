@@ -1,0 +1,78 @@
+{
+    "0": [
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n):",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def cog_RPM(cogs, n):\n    result = [1]\n    for i in range(n):\n        result = [cogs[i]*result[0], result[1]*cogs[-1-i]]\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for teeth in cogs:\n        total_teeth *= teeth\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, (len(cogs) - 1 - n) * total_teeth]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def cog_RPM(cogs, n): \n    total_teeth = 1\n    for cog in cogs:\n        total_teeth *= cog\n    if n < 0:\n        n = len(cogs) + n\n    return [n * total_teeth * -1, n * total_teeth]",
+            "logp": null
+        },
+        {
+            "content": "def cog_RPM(cogs, n): \n    rpm = cogs[0]\n    for i in range(1, len(cogs)):\n        rpm *= cogs[i]\n    if n != 0:\n        rpm /= cogs[-1]\n    if rpm < 0:\n        rpm = -rpm\n    return [rpm, rpm]",
+            "logp": null
+        }
+    ]
+}

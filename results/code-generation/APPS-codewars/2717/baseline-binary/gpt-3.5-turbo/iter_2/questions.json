@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert scf([3, 6, 9, 12]) == 3",
+        "assert scf([5, 10, 15, 20]) == 5",
+        "assert scf([2, 4, 6, 8]) == 2"
+    ],
+    "1": [
+        "assert scf([10, 20, 30, 40]) == 10",
+        "assert scf([2, 4, 6, 8]) == 2"
+    ],
+    "2": [
+        "assert scf([2, 4, 6, 8]) == 2"
+    ],
+    "3": [
+        "assert scf([7, 14, 21]) == 7",
+        "assert scf([15, 30, 45, 60]) == 3",
+        "assert scf([2, 3, 5, 7]) == 1\n# Therefore, the smallest common factor of all integers is 1."
+    ]
+}

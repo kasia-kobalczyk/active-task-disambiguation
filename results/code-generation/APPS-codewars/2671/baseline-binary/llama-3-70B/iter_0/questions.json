@@ -1,0 +1,16 @@
+{
+    "0": [
+        "assert cat_mouse('...m....D....C....', 10) == 'Protected!'",
+        "assert cat_mouse('..C.....D.', 5) == 'boring without all three'"
+    ],
+    "1": [
+        "assert cat_mouse('.....C............m......', 5) == 'Escaped!'",
+        "assert cat_mouse('..D.....m.', 5) == 'boring without all three'"
+    ],
+    "2": [
+        "assert cat_mouse('..D.m.C.', 5) == 'Protected!'"
+    ],
+    "3": [
+        "assert cat_mouse('...m.........C...', 10) == 'Caught!'"
+    ]
+}

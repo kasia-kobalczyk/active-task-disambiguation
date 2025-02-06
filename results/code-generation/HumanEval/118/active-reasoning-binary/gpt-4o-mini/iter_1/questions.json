@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert get_closest_vowel(\"programming\") == \"a\"",
+        "assert get_closest_vowel(\"thundEr\") == \"E\"",
+        "assert get_closest_vowel(\"sky\") == \"\"",
+        "assert get_closest_vowel(\"broad\") == \"o\"",
+        "assert get_closest_vowel(\"aeroplane\") == \"\"",
+        "assert get_closest_vowel(\"scream\") == \"e\"",
+        "assert get_closest_vowel(\"grape\") == \"a\"",
+        "assert get_closest_vowel(\"basket\") == \"a\""
+    ],
+    "1": [
+        "assert get_closest_vowel(\"bcd\") == \"\"",
+        "assert get_closest_vowel(\"xyzE\") == \"\"",
+        "assert get_closest_vowel(\"xyzou\") == \"u\"",
+        "assert get_closest_vowel(\"AeIou\") == \"\"",
+        "assert get_closest_vowel(\"hEcato\") == \"a\"",
+        "assert get_closest_vowel(\"abcde\") == \"e\"",
+        "assert get_closest_vowel(\"trYIng\") == \"I\"",
+        "assert get_closest_vowel(\"hello\") == \"e\""
+    ],
+    "2": [
+        "assert get_closest_vowel(\"hello\") == \"o\"",
+        "assert get_closest_vowel(\"pqrstUvw\") == \"U\"",
+        "assert get_closest_vowel(\"sTuvA\") == \"u\"",
+        "assert get_closest_vowel(\"CdeEfg\") == \"E\"",
+        "assert get_closest_vowel(\"AblE\") == \"E\"",
+        "assert get_closest_vowel(\"aBcD\") == \"a\"",
+        "assert get_closest_vowel(\"abcEdef\") == \"E\""
+    ],
+    "3": [
+        "assert get_closest_vowel(\"hello\") == \"o\"",
+        "assert get_closest_vowel(\"pqrstUvw\") == \"U\"",
+        "assert get_closest_vowel(\"sTuvA\") == \"u\"",
+        "assert get_closest_vowel(\"AblE\") == \"E\"",
+        "assert get_closest_vowel(\"aBcD\") == \"a\"",
+        "assert get_closest_vowel(\"abcEdef\") == \"E\""
+    ]
+}

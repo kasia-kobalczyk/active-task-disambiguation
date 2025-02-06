@@ -1,0 +1,194 @@
+{
+    "0": [
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    sorted_chars = [char for char in s if char in ordering_set]\n    unsorted_chars = [char for char in s if char not in ordering_set]\n    sorted_chars.sort(key=ordering.index)\n    return \"\".join(sorted_chars + unsorted_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = ''.join(sorted(set(ordering), key=ordering.index))\n    sorted_chars = [char for char in s if char in ordering_set]\n    unsorted_chars = [char for char in s if char not in ordering_set]\n    sorted_chars.sort(key=ordering_set.index)\n    return ''.join(sorted_chars + unsorted_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    sorted_chars = \"\".join(sorted([char for char in s if char in ordering_set], key=ordering.index))\n    unsorted_chars = \"\".join(sorted([char for char in s if char not in ordering_set]))\n    return sorted_chars + unsorted_chars",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = \"\".join(dict.fromkeys(ordering))\n    ordered_chars = [c for c in s if c in ordering]\n    not_ordered_chars = [c for c in s if c not in ordering]\n    result = \"\"\n    for c in ordering:\n        result += c * ordered_chars.count(c)\n    result += \"\".join(not_ordered_chars)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))  # Remove duplicates from ordering\n    result = ''.join(sorted(c for c in s if c in ordering), key=ordering.index)\n    result += ''.join(c for c in s if c not in ordering)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = ''.join(sorted(set(ordering), key=ordering.index))\n    result = ''.join(sorted(s, key=lambda x: ordering_set.index(x) if x in ordering_set else float('inf')))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    s_set = \"\".join(dict.fromkeys(s))\n    result = \"\"\n    for char in ordering_set:\n        result += char * s.count(char)\n    for char in s_set:\n        if char not in ordering_set:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = set(ordering)\n    ordered_chars = [c for c in s if c in ordering_set]\n    unordered_chars = [c for c in s if c not in ordering_set]\n    \n    ordered_chars.sort(key=ordering.index)\n    \n    return ''.join(ordered_chars + unordered_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = \"\".join(dict.fromkeys(ordering))  # remove duplicate characters\n    sorted_chars = [char for char in s if char in ordering]\n    unsorted_chars = [char for char in s if char not in ordering]\n    sorted_chars.sort(key=ordering.index)\n    return \"\".join(sorted_chars + unsorted_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = \"\".join(dict.fromkeys(ordering))\n    sorted_s = \"\".join(sorted([char for char in s if char in unique_ordering], key=unique_ordering.index))\n    unsorted_s = \"\".join([char for char in s if char not in unique_ordering])\n    return sorted_s + unsorted_s",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = \"\".join(dict.fromkeys(ordering))\n    ordered_chars = [char for char in s if char in unique_ordering]\n    not_ordered_chars = [char for char in s if char not in unique_ordering]\n    ordered_chars.sort(key=unique_ordering.index)\n    return \"\".join(ordered_chars + not_ordered_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    sorted_chars = [char for char in s if char in ordering_set]\n    unsorted_chars = [char for char in s if char not in ordering_set]\n    \n    sorted_chars.sort(key=ordering_set.index)\n    \n    return \"\".join(sorted_chars + unsorted_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    result = \"\".join(sorted((c for c in s), key=lambda c: ordering_set.index(c) if c in ordering_set else float('inf')))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    ordered_chars = [c for c in s if c in ordering_set]\n    unordered_chars = [c for c in s if c not in ordering_set]\n    result = \"\".join(sorted(ordered_chars, key=ordering_set.index)) + \"\".join(unordered_chars)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = set(ordering)\n    ordering_list = list(dict.fromkeys(ordering))  # remove duplicates while preserving order\n\n    s_set = set(s)\n    not_in_ordering = [char for char in s if char not in ordering_set]\n\n    sorted_string = ''.join([char for char in s if char in ordering_set for _ in range(s.count(char)) if char == ordering_list[0]])\n    for char in ordering_list[1:]:\n        sorted_string += ''.join([char for _ in range(s.count(char))])\n    sorted_string += ''.join(not_in_ordering)\n\n    return sorted_string",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = \"\".join(dict.fromkeys(ordering))\n    sorted_chars = sorted(s, key=lambda x: unique_ordering.index(x) if x in unique_ordering else float('inf'))\n    return \"\".join(sorted_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    s_set = \"\".join(dict.fromkeys(s))\n    result = \"\"\n    for char in ordering_set:\n        result += char * s.count(char)\n    for char in s_set:\n        if char not in ordering_set:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = set(ordering)\n    ordered_chars = [c for c in s if c in ordering_set]\n    unordered_chars = [c for c in s if c not in ordering_set]\n    \n    ordered_chars.sort(key=ordering.index)\n    \n    return ''.join(ordered_chars + unordered_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = \"\".join(dict.fromkeys(ordering))  # remove duplicate characters\n    sorted_chars = [char for char in s if char in ordering]\n    unsorted_chars = [char for char in s if char not in ordering]\n    sorted_chars.sort(key=ordering.index)\n    return \"\".join(sorted_chars + unsorted_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    ordering_set_count = {char: ordering.count(char) for char in ordering_set}\n    s_count = {char: s.count(char) for char in set(s)}\n    \n    result = \"\"\n    for char in ordering_set:\n        result += char * min(ordering_set_count[char], s_count[char])\n    \n    for char in set(s):\n        if char not in ordering_set:\n            result += char * s_count[char]\n    \n    return result",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = ''.join(sorted(set(ordering), key=ordering.index))\n    ordering_dict = {char: i for i, char in enumerate(ordering_set)}\n    result = sorted(s, key=lambda x: ordering_dict.get(x, float('inf')))\n    return ''.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    chars_in_ordering = [char for char in s if char in ordering_set]\n    chars_not_in_ordering = [char for char in s if char not in ordering_set]\n    chars_in_ordering.sort(key=ordering_set.index)\n    return \"\".join(chars_in_ordering + chars_not_in_ordering)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    sorted_chars = \"\".join(sorted([char for char in s if char in ordering_set], key=ordering.index))\n    unsorted_chars = \"\".join([char for char in s if char not in ordering_set])\n    return sorted_chars + unsorted_chars",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = \"\".join(dict.fromkeys(ordering))\n    ordered_chars = [c for c in s if c in ordering]\n    not_ordered_chars = [c for c in s if c not in ordering]\n    result = \"\"\n    for c in ordering:\n        result += c * ordered_chars.count(c)\n    result += \"\".join(not_ordered_chars)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))  # Remove duplicates from ordering\n    ordered_chars = [char for char in s if char in ordering]  # Characters in s that appear in ordering\n    unordered_chars = [char for char in s if char not in ordering]  # Characters in s that do not appear in ordering\n    \n    sorted_ordered_chars = ''.join(sorted(ordered_chars, key=ordering.index))  # Sort ordered_chars based on ordering\n    return sorted_ordered_chars + ''.join(unordered_chars)  # Return sorted ordered_chars followed by unordered_chars",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    ordering_dict = {char: i for i, char in enumerate(ordering_set)}\n    s_sorted = sorted(s, key=lambda char: ordering_dict.get(char, float('inf')))\n    return \"\".join(s_sorted)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = \"\".join(dict.fromkeys(ordering))\n    sorted_s = \"\".join(char for char in unique_ordering if char in s)\n    unsorted_s = \"\".join(char for char in s if char not in unique_ordering)\n    return sorted_s + unsorted_s",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    order = {c: i for i, c in enumerate(ordering_set)}\n    result = sorted(s, key=lambda c: order.get(c, float('inf')))\n    return \"\".join(result)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = \"\".join(dict.fromkeys(ordering))  # remove duplicate characters\n    sorted_chars = [char for char in s if char in ordering]\n    unsorted_chars = [char for char in s if char not in ordering]\n    \n    sorted_chars.sort(key=ordering.index)\n    return \"\".join(sorted_chars + unsorted_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = ''.join(sorted(set(ordering), key=ordering.index))\n    result = ''\n    remaining_chars = list(s)\n    \n    for char in unique_ordering:\n        while char in remaining_chars:\n            result += char\n            remaining_chars.remove(char)\n            \n    result += ''.join(remaining_chars)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    ordering_set = set(ordering)\n    first_part = [char for char in s if char in ordering_set]\n    second_part = [char for char in s if char not in ordering_set]\n    first_part.sort(key=ordering.index)\n    return ''.join(first_part + second_part)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = ''.join(sorted(set(ordering), key=ordering.index))\n    ordering_set_count = {}\n    for char in ordering_set:\n        ordering_set_count[char] = 0\n    result = ''\n    for char in s:\n        if char in ordering_set:\n            result += char\n            ordering_set_count[char] += 1\n        else:\n            result += char\n    result_sorted = ''\n    for char in ordering_set:\n        result_sorted += char * ordering_set_count[char]\n    result_sorted += ''.join(sorted([char for char in result if char not in ordering_set]))\n    return result_sorted",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = ''.join(dict.fromkeys(ordering))\n    sorted_chars = ''.join(char for char in s if char in unique_ordering)\n    remaining_chars = ''.join(char for char in s if char not in unique_ordering)\n    sorted_string = ''.join(sorted(sorted_chars, key=unique_ordering.index)) + remaining_chars\n    return sorted_string",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = ''.join(sorted(set(ordering), key=ordering.index))\n    ordering_dict = {char: i for i, char in enumerate(ordering_set)}\n    result = sorted(s, key=lambda x: ordering_dict.get(x, float('inf')))\n    return ''.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering), key=ordering.index))\n    s_sorted = ''.join(sorted([char for char in s if char in ordering], key=ordering.index))\n    s_unsorted = ''.join([char for char in s if char not in ordering])\n    return s_sorted + s_unsorted",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    chars_in_ordering = [char for char in s if char in ordering_set]\n    chars_not_in_ordering = [char for char in s if char not in ordering_set]\n    chars_in_ordering.sort(key=ordering_set.index)\n    return \"\".join(chars_in_ordering + chars_not_in_ordering)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    sorted_chars = \"\".join(sorted([char for char in s if char in ordering_set], key=ordering.index))\n    unsorted_chars = \"\".join(sorted([char for char in s if char not in ordering_set]))\n    return sorted_chars + unsorted_chars",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))  # Remove duplicates from ordering\n    ordered_chars = [char for char in s if char in ordering]  # Characters in s that are in ordering\n    unordered_chars = [char for char in s if char not in ordering]  # Characters in s that are not in ordering\n    ordered_chars.sort(key=ordering.index)  # Sort ordered_chars by their index in ordering\n    return ''.join(ordered_chars + unordered_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(sorted(set(ordering), key=ordering.index))\n    result = ''.join(sorted(s, key=lambda x: ordering.index(x) if x in ordering else float('inf')))\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = \"\".join(dict.fromkeys(ordering))\n    ordering_dict = {char: i for i, char in enumerate(ordering_set)}\n    s_sorted = sorted(s, key=lambda char: ordering_dict.get(char, float('inf')))\n    return \"\".join(s_sorted)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = set(ordering)\n    ordered_chars = [c for c in s if c in ordering_set]\n    unordered_chars = [c for c in s if c not in ordering_set]\n    \n    ordered_chars.sort(key=ordering.index)\n    \n    return ''.join(ordered_chars + unordered_chars)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = \"\".join(dict.fromkeys(ordering))\n    sorted_s = \"\".join(sorted([char for char in s if char in unique_ordering], key=unique_ordering.index))\n    unsorted_s = \"\".join([char for char in s if char not in unique_ordering])\n    return sorted_s + unsorted_s",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = ''.join(sorted(set(ordering), key=ordering.index))\n    result = ''\n    for char in ordering_set:\n        result += s.count(char) * char\n    for char in s:\n        if char not in ordering_set:\n            result += char\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    unique_ordering = ''.join(sorted(set(ordering), key=ordering.index))\n    result = ''\n    remaining_chars = list(s)\n    \n    for char in unique_ordering:\n        while char in remaining_chars:\n            result += char\n            remaining_chars.remove(char)\n            \n    result += ''.join(remaining_chars)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering = ''.join(dict.fromkeys(ordering))\n    ordering_set = set(ordering)\n    first_part = [char for char in s if char in ordering_set]\n    second_part = [char for char in s if char not in ordering_set]\n    first_part.sort(key=ordering.index)\n    return ''.join(first_part + second_part)",
+            "logp": null
+        },
+        {
+            "content": "def sort_string(s, ordering):\n    ordering_set = ''.join(sorted(set(ordering), key=ordering.index))\n    ordering_set_count = {}\n    for char in ordering_set:\n        ordering_set_count[char] = 0\n    result = ''\n    for char in s:\n        if char in ordering_set:\n            result += char\n            ordering_set_count[char] += 1\n        else:\n            result += char\n    result_sorted = ''\n    for char in ordering_set:\n        result_sorted += char * ordering_set_count[char]\n    result_sorted += ''.join(sorted([char for char in result if char not in ordering_set]))\n    return result_sorted",
+            "logp": null
+        }
+    ]
+}

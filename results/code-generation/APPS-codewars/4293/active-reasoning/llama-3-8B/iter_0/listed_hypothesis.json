@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def calculate_1RM(w, r):\n    def epley(w, r):\n        return w * (1.0 + (r - 1.0) / (100.0 + r))\n\n    def mcglothin(w, r):\n        if r <= 3:\n            return w\n        elif r <= 8:\n            return (w * (1 + (r - 3) / 5.0)) * (0.0336 * (r - 3) - 0.0009)\n        else:\n            return (w * (1 + (r - 8) / 11.0)) * (0.0154 * (r - 8) - 0.0013)\n\n    def lombardi(w, r):\n        return w * (1.0 + (r - 1.0) / (170.0 + 0.2 * r))\n\n    if r == 1:\n        return w\n    elif r == 0:\n        return 0\n    else:\n        return max(int(round(epley(w, r))), int(round(mcglothin(w, r))), int(round(lombardi(w, r))))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    def epley(w, r):\n        return w * (1.0 + (r - 1.0) / (100.0 + r))\n\n    def mcglothin(w, r):\n        if r <= 3:\n            return w\n        elif r <= 8:\n            return (w * (1 + (r - 3) / 5.0)) * (0.0336 * (r - 3) - 0.0009)\n        else:\n            return (w * (1 + (r - 8) / 11.0)) * (0.0154 * (r - 8) - 0.0013)\n\n    def lombardi(w, r):\n        return w * (1.0 + (r - 1.0) / (170.0 + 0.2 * r))\n\n    if r == 1:\n        return w\n    elif r == 0:\n        return 0\n    else:\n        return max(int(round(epley(w, r))), int(round(mcglothin(w, r))), int(round(lombardi(w, r))))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    def epley(w, r):\n        return w * (1.0 + (r - 1.0) / (100.0 + r))\n\n    def mcglothin(w, r):\n        if r <= 3:\n            return w\n        elif r <= 8:\n            return (w * (1 + (r - 3) / 5.0)) * (0.0336 * (r - 3) - 0.0009)\n        else:\n            return (w * (1 + (r - 8) / 11.0)) * (0.0154 * (r - 8) - 0.0013)\n\n    def lombardi(w, r):\n        return w * (1.0 + (r - 1.0) / (170.0 + 0.2 * r))\n\n    if r == 1:\n        return w\n    elif r == 0:\n        return 0\n    else:\n        return max(int(round(epley(w, r))), int(round(mcglothin(w, r))), int(round(lombardi(w, r))))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    def epley(w, r):\n        return w * (1.0 + (r - 1.0) / (100.0 + r))\n\n    def mcglothin(w, r):\n        if r <= 3:\n            return w\n        elif r <= 8:\n            return (w * (1 + (r - 3) / 5.0)) * (0.0336 * (r - 3) - 0.0009)\n        else:\n            return (w * (1 + (r - 8) / 11.0)) * (0.0154 * (r - 8) - 0.0013)\n\n    def lombardi(w, r):\n        return w * (1.0 + (r - 1.0) / (170.0 + 0.2 * r))\n\n    if r == 1:\n        return w\n    elif r == 0:\n        return 0\n    else:\n        return max(int(round(epley(w, r))), int(round(mcglothin(w, r))), int(round(lombardi(w, r))))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):\n    def epley(w, r):\n        return w * (1.0 + (r - 1.0) / (100.0 + r))\n\n    def mcglothin(w, r):\n        if r <= 3:\n            return w\n        elif r <= 8:\n            return (w * (1 + (r - 3) / 5.0)) * (0.0336 * (r - 3) - 0.0009)\n        else:\n            return (w * (1 + (r - 8) / 11.0)) * (0.0154 * (r - 8) - 0.0013)\n\n    def lombardi(w, r):\n        return w * (1.0 + (r - 1.0) / (170.0 + 0.2 * r))\n\n    if r == 1:\n        return w\n    elif r == 0:\n        return 0\n    else:\n        return max(int(round(epley(w, r))), int(round(mcglothin(w, r))), int(round(lombardi(w, r))))",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):",
+            "logp": null
+        },
+        {
+            "content": "def calculate_1RM(w, r):",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

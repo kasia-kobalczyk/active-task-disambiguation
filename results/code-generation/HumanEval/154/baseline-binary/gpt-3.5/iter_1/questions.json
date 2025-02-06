@@ -1,0 +1,22 @@
+{
+    "0": [
+        "assert cycpattern_check(\"programming\", \"ingpro\") == False",
+        "assert cycpattern_check(\"python\", \"pyt\") == True",
+        "assert cycpattern_check(\"coding\", \"dingco\") == True"
+    ],
+    "1": [
+        "assert cycpattern_check(\"programming\", \"grogrammin\") == True",
+        "assert cycpattern_check(\"programming\", \"pro\") == True",
+        "assert cycpattern_check(\"programming\", \"mingprog\") == True"
+    ],
+    "2": [
+        "assert cycpattern_check(\"hello\", \"hello\") == True",
+        "assert cycpattern_check(\"hello\", \"llohe\") == True",
+        "assert cycpattern_check(\"hello\", \"ohell\") == True"
+    ],
+    "3": [
+        "assert cycpattern_check(\"programming\", \"\") == True",
+        "assert cycpattern_check(\"\", \"\") == True",
+        "assert cycpattern_check(\"programming\", \"code\") == False"
+    ]
+}

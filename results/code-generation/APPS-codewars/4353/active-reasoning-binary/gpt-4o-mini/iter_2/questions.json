@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert could_be(\"Anna Marie Johnson\", \"Marie Anna\") == True",
+        "assert could_be(\"John Doe\", \"John\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray Norris\") == True",
+        "assert could_be(\"Jane Smith\", \"Jane Smith\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray\") == True",
+        "assert could_be(\"Chuck Norris\", \"superman\") == False",
+        "assert could_be(\"Chuck Norris\", \"Chuck\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Ray\") == True"
+    ],
+    "1": [
+        "assert could_be(\"Jane Smith\", \"Smith Jane\") == True",
+        "assert could_be(\"John Doe\", \"Doe John\") == True",
+        "assert could_be(\"John Doe\", \"John\") == True",
+        "assert could_be(\"Jane Smith\", \"Jane Smith\") == True",
+        "assert could_be(\"Bob Marley\", \"Bobby\") == False",
+        "assert could_be(\"Alice Wonderland\", \"Wonderland Alice\") == True"
+    ],
+    "2": [
+        "assert could_be(\"Alice Wonderland\", \"Alice\") == True",
+        "assert could_be(\"John Doe\", \"Doe John\") == True",
+        "assert could_be(\"Emily Bronte\", \"Bronte Emily\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray Norris\") == True",
+        "assert could_be(\"Albert Einstein\", \"Einstein Albert\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Ray\") == True",
+        "assert could_be(\"Michael Jackson\", \"Michael Jackson\") == True"
+    ],
+    "3": [
+        "assert could_be(\"John Doe\", \"Doe John\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Carlos Ray Norris\") == True",
+        "assert could_be(\"Samuel Adams\", \"Adams Samuel\") == True",
+        "assert could_be(\"Alice Johnson\", \"Johnson\") == True",
+        "assert could_be(\"Michael Scott\", \"Scott Michael\") == True",
+        "assert could_be(\"Emily Davis\", \"Davis Emily\") == True",
+        "assert could_be(\"Leonardo DiCaprio\", \"DiCaprio Leonardo\") == True",
+        "assert could_be(\"Carlos Ray Norris\", \"Ray Norris\") == True"
+    ]
+}

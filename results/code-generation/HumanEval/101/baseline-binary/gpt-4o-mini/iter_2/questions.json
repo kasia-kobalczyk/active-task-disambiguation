@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert words_string(\"hello world python\") == [\"hello\", \"world\", \"python\"]",
+        "assert words_string(\"hello,world,python\") == [\"hello\", \"world\", \"python\"]"
+    ],
+    "1": [
+        "assert words_string(\"apple,banana,orange\") == [\"apple\", \"banana\", \"orange\"]",
+        "assert words_string(\"  this  is a test  \") == [\"this\", \"is\", \"a\", \"test\"]"
+    ],
+    "2": [
+        "assert words_string(\"python, programming, is fun\") == [\"python\", \"programming\", \"is\", \"fun\"]",
+        "assert words_string(\"split this string  into words\") == [\"split\", \"this\", \"string\", \"into\", \"words\"]"
+    ],
+    "3": [
+        "assert words_string(\"cat,dog,fish, rabbit\") == [\"cat\", \"dog\", \"fish\", \"rabbit\"]",
+        "assert words_string(\"this is a test\") == [\"this\", \"is\", \"a\", \"test\"]"
+    ]
+}

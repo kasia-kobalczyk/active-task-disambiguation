@@ -1,0 +1,202 @@
+{
+    "0": [
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_prev_vowel = s[0] in vowels\n\n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = not is_prev_vowel\n\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = not is_prev_vowel\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set('aeiou')\n    prev_is_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        curr_is_vowel = char in vowels\n        if curr_is_vowel == prev_is_vowel:\n            return False\n        prev_is_vowel = curr_is_vowel\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set('aeiou')\n    last_char_was_vowel = s[0] in vowels\n\n    for char in s[1:]:\n        if (char in vowels) == last_char_was_vowel:\n            return False\n        last_char_was_vowel = char in vowels\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = \"aeiou\"\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = not is_prev_vowel\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if not s:\n        return True\n\n    is_prev_vowel = s[0] in vowels\n\n    for char in s[1:]:\n        if char in vowels:\n            if is_prev_vowel:\n                return False\n            is_prev_vowel = True\n        else:\n            if not is_prev_vowel:\n                return False\n            is_prev_vowel = False\n\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = not is_prev_vowel\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    prev_char = None\n    \n    for char in s:\n        if char in vowels:\n            if prev_char in vowels:\n                return False\n        else:\n            if prev_char not in vowels and prev_char is not None:\n                return False\n        prev_char = char\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_vowel = s[0] in vowels\n    for char in s:\n        if (char in vowels) != is_vowel:\n            is_vowel = not is_vowel\n        else:\n            return False\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    last_was_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == last_was_vowel:\n            return False\n        last_was_vowel = char in vowels\n    \n    return True\n```",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if not s:\n        return True\n    \n    current_type = 'vowel' if s[0] in vowels else 'consonant'\n    \n    for char in s[1:]:\n        if char in vowels:\n            next_type = 'vowel'\n        else:\n            next_type = 'consonant'\n        \n        if current_type == next_type:\n            return False\n        \n        current_type = next_type\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set('aeiou')\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        is_current_vowel = char in vowels\n        if is_current_vowel == is_prev_vowel:\n            return False\n        is_prev_vowel = is_current_vowel\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "def is_alt(s):\n    vowels = set('aeiou')\n    previous_is_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        current_is_vowel = char in vowels\n        if current_is_vowel == previous_is_vowel:\n            return False\n        previous_is_vowel = current_is_vowel\n        \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if not s:\n        return True\n    \n    last_type = 'vowel' if s[0] in vowels else 'consonant'\n    \n    for char in s[1:]:\n        current_type = 'vowel' if char in vowels else 'consonant'\n        if current_type == last_type:\n            return False\n        last_type = current_type\n    \n    return True",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    prev_type = None\n    \n    for char in s:\n        if char in vowels:\n            curr_type = 'vowel'\n        else:\n            curr_type = 'consonant'\n        \n        if curr_type == prev_type:\n            return False\n        \n        prev_type = curr_type\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set(\"aeiou\")\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        is_curr_vowel = char in vowels\n        if is_curr_vowel == is_prev_vowel:\n            return False\n        is_prev_vowel = is_curr_vowel\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        is_current_vowel = char in vowels\n        if is_current_vowel == is_prev_vowel:\n            return False\n        is_prev_vowel = is_current_vowel\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    last_char = ''\n    \n    for char in s:\n        if char in vowels:\n            if last_char in vowels:\n                return False\n        else:\n            if last_char not in vowels and last_char != '':\n                return False\n        last_char = char\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    prev_char = s[0] in vowels\n    for char in s[1:]:\n        if (char in vowels) == prev_char:\n            return False\n        prev_char = char in vowels\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = \"aeiou\"\n    is_prev_vowel = s[0] in vowels\n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = not is_prev_vowel\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = not is_prev_vowel\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = char in vowels\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set('aeiou')\n    prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == prev_vowel:\n            return False\n        prev_vowel = char in vowels\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = \"aeiou\"\n    prev_is_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        current_is_vowel = char in vowels\n        if current_is_vowel == prev_is_vowel:\n            return False\n        prev_is_vowel = current_is_vowel\n        \n    return True\n```",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set('aeiou')\n    is_vowel = s[0] in vowels\n    \n    for char in s:\n        if (char in vowels) != is_vowel:\n            return False\n        is_vowel = not is_vowel\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set('aeiou')\n    previous_is_vowel = None\n\n    for char in s:\n        current_is_vowel = char in vowels\n        if previous_is_vowel is not None and previous_is_vowel == current_is_vowel:\n            return False\n        previous_is_vowel = current_is_vowel\n\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    if len(s) == 0:\n        return True\n\n    last_char = s[0] in vowels\n    for char in s[1:]:\n        current_char = char in vowels\n        if current_char == last_char:\n            return False\n        last_char = current_char\n\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = char in vowels\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    if not s:\n        return True\n    \n    is_vowel = s[0] in vowels\n    for char in s[1:]:\n        if (char in vowels) == is_vowel:\n            return False\n        is_vowel = not is_vowel\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set('aeiou')\n    is_previous_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        is_current_vowel = char in vowels\n        if is_previous_vowel == is_current_vowel:\n            return False\n        is_previous_vowel = is_current_vowel\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = \"aeiou\"\n    consonants = \"bcdfghjklmnpqrstvwxyz\"\n    \n    if not s:  # if string is empty, return True\n        return True\n    \n    # Check the first character\n    is_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_vowel:  # same type as previous character\n            return False\n        is_vowel = not is_vowel  # flip the type for the next character\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_prev_vowel = None\n\n    for char in s:\n        if char in vowels:\n            if is_prev_vowel is True:\n                return False\n            is_prev_vowel = True\n        else:\n            if is_prev_vowel is False:\n                return False\n            is_prev_vowel = False\n\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set('aeiou')\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = char in vowels\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if not s:\n        return True\n    \n    last_char = s[0]\n    \n    for char in s[1:]:\n        if (last_char in vowels and char in vowels) or (last_char in consonants and char in consonants):\n            return False\n        last_char = char\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if len(s) < 2:\n        return True\n    \n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = char in vowels\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = \"aeiou\"\n    is_vowel = lambda ch: ch in vowels\n    for i in range(len(s) - 1):\n        if is_vowel(s[i]) == is_vowel(s[i + 1]):\n            return False\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if not s:  # If the string is empty\n        return True\n    \n    is_prev_vowel = s[0] in vowels\n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = char in vowels\n    \n    return True\n```",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_vowel = lambda c: c in vowels\n    if not s:\n        return True\n    for i in range(len(s) - 1):\n        if is_vowel(s[i]) == is_vowel(s[i + 1]):\n            return False\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = \"aeiou\"\n    if not s:\n        return True\n\n    is_previous_vowel = s[0] in vowels\n\n    for char in s[1:]:\n        if (char in vowels) == is_previous_vowel:\n            return False\n        is_previous_vowel = char in vowels\n\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    if not s:\n        return True\n    last_was_vowel = s[0] in vowels\n    for char in s[1:]:\n        if (char in vowels) == last_was_vowel:\n            return False\n        last_was_vowel = char in vowels\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if not s:\n        return True\n    \n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = not is_prev_vowel\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    \n    if len(s) < 2:\n        return True\n\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = not is_prev_vowel\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    if not s:\n        return True\n    is_prev_vowel = s[0] in vowels\n    for char in s[1:]:\n        if (char in vowels) == is_prev_vowel:\n            return False\n        is_prev_vowel = char in vowels\n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = set('aeiou')\n    last_char_type = None\n    \n    for char in s:\n        current_char_type = 'vowel' if char in vowels else 'consonant'\n        \n        if last_char_type == current_char_type:\n            return False\n        \n        last_char_type = current_char_type\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    last_was_vowel = None\n    \n    for char in s:\n        if char in vowels:\n            if last_was_vowel is True:\n                return False\n            last_was_vowel = True\n        else:\n            if last_was_vowel is False:\n                return False\n            last_was_vowel = False\n            \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    prev_char = ''\n    \n    for char in s:\n        if char in vowels:\n            if prev_char in vowels:\n                return False\n        else:\n            if prev_char not in vowels and prev_char != '':\n                return False\n        prev_char = char\n        \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    is_prev_vowel = s[0] in vowels\n    \n    for char in s[1:]:\n        is_current_vowel = char in vowels\n        if is_current_vowel == is_prev_vowel:\n            return False\n        is_prev_vowel = is_current_vowel\n    \n    return True\n```",
+            "logp": null
+        },
+        {
+            "content": "```python\ndef is_alt(s):\n    vowels = 'aeiou'\n    prev_is_vowel = None\n    \n    for char in s:\n        is_vowel = char in vowels\n        if prev_is_vowel is None:\n            prev_is_vowel = is_vowel\n        else:\n            if prev_is_vowel == is_vowel:\n                return False\n            prev_is_vowel = is_vowel\n            \n    return True\n```",
+            "logp": null
+        }
+    ]
+}

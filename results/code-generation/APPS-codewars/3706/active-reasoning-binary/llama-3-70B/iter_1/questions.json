@@ -1,0 +1,37 @@
+{
+    "0": [
+        "assert layers(36) == 4",
+        "assert layers(50) == 5",
+        "assert layers(81) == 5",
+        "assert layers(25) == 3",
+        "assert layers(5) == 2",
+        "assert layers(30) == 4"
+    ],
+    "1": [
+        "assert layers(121) == 8",
+        "assert layers(256) == 10",
+        "assert layers(100) == 7",
+        "assert layers(81) == 6",
+        "assert layers(100) == 8",
+        "assert layers(121) == 9",
+        "assert layers(64) == 6",
+        "assert layers(81) == 7"
+    ],
+    "2": [
+        "assert layers(256) == 10",
+        "assert layers(100) == 7",
+        "assert layers(81) == 6",
+        "assert layers(100) == 8",
+        "assert layers(121) == 9",
+        "assert layers(64) == 6",
+        "assert layers(81) == 7"
+    ],
+    "3": [
+        "assert layers(100) == 7",
+        "assert layers(81) == 6",
+        "assert layers(100) == 8",
+        "assert layers(121) == 9",
+        "assert layers(64) == 6",
+        "assert layers(81) == 7"
+    ]
+}

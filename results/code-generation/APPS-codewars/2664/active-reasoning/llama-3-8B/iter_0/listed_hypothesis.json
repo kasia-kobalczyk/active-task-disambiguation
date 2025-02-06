@@ -1,0 +1,69 @@
+{
+    "0": [
+        {
+            "content": "def solve(s): \n    for char in s:\n        temp = s.replace(char, '')\n        if temp == temp[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    for char in s:\n        temp = s.replace(char, '')\n        if temp == temp[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    for char in s:\n        temp = s.replace(char, '')\n        if temp == temp[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    for char in s:\n        temp = s.replace(char, '')\n        if temp == temp[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    for char in s:\n        temp = s.replace(char, '')\n        if temp == temp[::-1]:\n            return True\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    char_count = {}\n    for char in s:\n        if char in char_count:\n            char_count[char] += 1\n        else:\n            char_count[char] = 1\n            \n    count_odd = 0\n    for count in char_count.values():\n        if count % 2 != 0:\n            count_odd += 1\n        if count_odd > 1:\n            return False\n            \n    return True",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def solve(s): \n    for i in range(len(s)):\n        temp = list(s)\n        temp[i] = ''\n        word = ''.join(temp)\n        if word == word[::-1]:\n            return 1\n    return 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(s): \n    stack = []\n    for char in s:\n        if stack and stack[-1] != char:\n            return True\n        stack.append(char)\n    return False",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    for i in range(len(s)):\n        t = s[:i] + s[i+1:] + s[i]\n        if t == t[::-1]:\n            return 1\n    return 0",
+            "logp": null
+        },
+        {
+            "content": "def solve(s):\n    s = s.lower()\n    i = 0\n    while i < len(s):\n        if s[i] != s[-1 - i]:\n            if i < len(s) - 1 and s[i + 1] == s[-1 - i]:\n                i += 1\n            elif i > 0 and s[i - 1] == s[-1 - i]:\n                i -= 1\n            else:\n                return False\n        else:\n            i += 1\n    return True",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def solve(s):\n    for i in range(len(s)):\n        new_string = s[:i] + s[i+1::-1]\n        if new_string == new_string[::-1]:\n            return True\n    return False",
+            "logp": null
+        }
+    ],
+    "3": []
+}

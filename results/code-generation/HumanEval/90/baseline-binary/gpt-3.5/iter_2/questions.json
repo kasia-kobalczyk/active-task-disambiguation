@@ -1,0 +1,22 @@
+{
+    "0": [
+        "assert next_smallest([1, 2, 2, 3, 4]) == 2",
+        "assert next_smallest([1, 2, 3, 4, 5]) == 2",
+        "assert next_smallest([5, 4, 3, 2, 1]) == 2"
+    ],
+    "1": [
+        "assert next_smallest([7, 5, 2, 4, 3, 6]) == 3",
+        "assert next_smallest([1, 2, 3, 4, 5]) == 2",
+        "assert next_smallest([1, 1, 1, 1, 1, 1]) == None"
+    ],
+    "2": [
+        "assert next_smallest([5]) == None",
+        "assert next_smallest([1, 2, 3, 4, 5]) == 2",
+        "assert next_smallest([4, 2, 6, 2, 3, 6]) == 3"
+    ],
+    "3": [
+        "assert next_smallest([4, 2, 3, 5, 6]) == 2",
+        "assert next_smallest([7, 5, 2, 3, 4, 6]) == 3",
+        "assert next_smallest([10, 7, 8, 9, 11]) == 8"
+    ]
+}

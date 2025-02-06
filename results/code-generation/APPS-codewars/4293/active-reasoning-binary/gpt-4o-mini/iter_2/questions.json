@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert calculate_1RM(150, 1) == 150",
+        "assert calculate_1RM(90, 0) == 0",
+        "assert calculate_1RM(100, 10) == 120",
+        "assert calculate_1RM(150, 10) == 210",
+        "assert calculate_1RM(200, 0) == 0",
+        "assert calculate_1RM(100, 5) == 125",
+        "assert calculate_1RM(100, 1) == 100",
+        "assert calculate_1RM(200, 5) == 270"
+    ],
+    "1": [
+        "assert calculate_1RM(200, 2) == 200",
+        "assert calculate_1RM(150, 1) == 150  ",
+        "assert calculate_1RM(150, 5) == 180",
+        "assert calculate_1RM(80, 0) == 0     ",
+        "assert calculate_1RM(250, 1) == 250",
+        "assert calculate_1RM(100, 5) == 120",
+        "assert calculate_1RM(200, 3) == 270  ",
+        "assert calculate_1RM(100, 10) == 130"
+    ],
+    "2": [
+        "assert calculate_1RM(75, 0) == 0",
+        "assert calculate_1RM(150, 5) == 180",
+        "assert calculate_1RM(150, 10) == 195  ",
+        "assert calculate_1RM(100, 1) == 100",
+        "assert calculate_1RM(200, 1) == 200    ",
+        "assert calculate_1RM(0, 5) == 0        ",
+        "assert calculate_1RM(200, 10) == 265"
+    ],
+    "3": [
+        "assert calculate_1RM(80, 5) == 112",
+        "assert calculate_1RM(90, 3) == 117",
+        "assert calculate_1RM(60, 1) == 60\n    ",
+        "assert calculate_1RM(100, 1) == 100",
+        "assert calculate_1RM(200, 3) == 227\n    ",
+        "assert calculate_1RM(150, 10) == 225",
+        "assert calculate_1RM(100, 10) == 130",
+        "assert calculate_1RM(150, 5) == 175\n    "
+    ]
+}

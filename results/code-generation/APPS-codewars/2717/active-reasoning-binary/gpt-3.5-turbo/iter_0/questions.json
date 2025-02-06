@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert scf([2, 4, 6, 8]) == 2",
+        "assert scf([5, 10, 15, 20, 25]) == 5",
+        "assert scf([2, 4, 6, 8, 10]) == 2",
+        "assert scf([3, 6, 9, 12, 15]) == 3",
+        "assert scf([6, 12, 18, 24, 30]) == 2",
+        "assert scf([3, 6, 9, 12]) == 3",
+        "assert scf([1, 2, 3, 4, 5]) == 1",
+        "assert scf([5, 10, 15, 20]) == 5",
+        "assert scf([2, 3, 5, 7]) == 1",
+        "assert scf([4, 8, 12, 16, 20]) == 2"
+    ],
+    "1": [
+        "assert scf([12, 18, 24, 30, 36]) == 2",
+        "assert scf([14, 21, 28, 35, 42]) == 7",
+        "assert scf([8, 16, 24, 32, 40]) == 2",
+        "assert scf([17, 23, 29, 37, 41]) == 1",
+        "assert scf([2, 4, 6, 8, 10]) == 2",
+        "assert scf([9, 18, 27, 36, 45]) == 3",
+        "assert scf([17, 34, 51, 68, 85]) == 17",
+        "assert scf([11, 22, 33, 44, 55]) == 11\n# Explanation: The smallest common factor of 11, 22, 33, 44, and 55 is 11. All the numbers in the list can be divided by 11 without any remainder."
+    ],
+    "2": [
+        "assert scf([2, 3, 5, 7, 11]) == 1",
+        "assert scf([7, 14, 21, 28, 35]) == 7",
+        "assert scf([9, 12, 15, 18, 21]) == 3",
+        "assert scf([2, 4, 6, 8, 10]) == 2",
+        "assert scf([3, 6, 9, 12, 15]) == 3",
+        "assert scf([1, 2, 3, 4, 5]) == 1",
+        "assert scf([6, 12, 18, 24, 30]) == 6"
+    ],
+    "3": [
+        "assert scf([15, 25, 35, 45, 55]) == 1",
+        "assert scf([2, 4, 6, 8, 10]) == 2",
+        "assert scf([10, 20, 30, 40, 50]) == 2",
+        "assert scf([3, 6, 9, 12, 15]) == 3",
+        "assert scf([17, 34, 51, 68, 85]) == 17",
+        "assert scf([7, 12, 19, 22, 27]) == 1"
+    ]
+}

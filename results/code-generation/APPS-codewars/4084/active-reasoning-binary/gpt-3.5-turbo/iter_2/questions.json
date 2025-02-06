@@ -1,0 +1,44 @@
+{
+    "0": [
+        "assert alex_mistakes(10, 55) == 1",
+        "assert alex_mistakes(10, 60) == 1",
+        "assert alex_mistakes(10, 50) == 0",
+        "assert alex_mistakes(10, 70) == 1",
+        "assert alex_mistakes(10, 60) == 2",
+        "assert alex_mistakes(10, 60) == 3",
+        "assert alex_mistakes(10, 60) == 4",
+        "assert alex_mistakes(10, 100) == 0",
+        "assert alex_mistakes(10, 60) == 0"
+    ],
+    "1": [
+        "assert alex_mistakes(3, 30) == 2\n# With 3 kata and 30 minutes, Alex has to complete each kata in 10 minutes. If he makes a mistake, it takes him twice as long (20 minutes) to complete the pushups. So, he can afford to make 2 mistakes, which would take him an extra 40 minutes, leaving him with 10 minutes to complete the remaining kata.",
+        "assert alex_mistakes(20, 120) == 0",
+        "assert alex_mistakes(5, 30) == 1",
+        "assert alex_mistakes(5, 15) == 0",
+        "assert alex_mistakes(30, 180) == 1",
+        "assert alex_mistakes(15, 90) == 0",
+        "assert alex_mistakes(5, 10) == 1",
+        "assert alex_mistakes(10, 30) == 1",
+        "assert alex_mistakes(10, 60) == 0"
+    ],
+    "2": [
+        "assert alex_mistakes(20, 120) == 0",
+        "assert alex_mistakes(5, 30) == 1",
+        "assert alex_mistakes(5, 15) == 0",
+        "assert alex_mistakes(15, 90) == 0",
+        "assert alex_mistakes(30, 180) == 1",
+        "assert alex_mistakes(5, 10) == 1",
+        "assert alex_mistakes(10, 30) == 1",
+        "assert alex_mistakes(10, 60) == 0"
+    ],
+    "3": [
+        "assert alex_mistakes(10, 60) == 11",
+        "assert alex_mistakes(10, 90) == 9",
+        "assert alex_mistakes(20, 120) == 5",
+        "assert alex_mistakes(5, 30) == 0",
+        "assert alex_mistakes(8, 40) == 0",
+        "assert alex_mistakes(40, 240) == 10",
+        "assert alex_mistakes(15, 90) == 0",
+        "assert alex_mistakes(10, 60) == 0"
+    ]
+}

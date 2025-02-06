@@ -1,0 +1,154 @@
+{
+    "0": [
+        {
+            "content": "def alex_mistakes(n, time):\n    return int((time - n * 6) / (5 * (1 - 2 ** (-n / 10))))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    minutes_per_hour = 60\n    kata_per_minute = kata_per_hour / minutes_per_hour\n    mistake_time = 5\n    kata_time = n / kata_per_minute\n    mistakes_allowed = (time - kata_time) / (mistake_time * (1 - 2 ** (-((time - kata_time) / mistake_time))))\n    return int(mistakes_allowed)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    mistake_time = 5\n    time_spent_on_kata = n / kata_per_minute\n    total_time = time - time_spent_on_kata\n    mistakes_allowed = log(total_time / mistake_time, 2)\n    return int(mistakes_allowed)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    time_to_complete_n_kata = n / kata_per_minute\n    minutes_for_pushups = time - time_to_complete_n_kata\n    mistakes = minutes_for_pushups / (5 * (1 - 2**(-minutes_for_pushups / 5)))\n    if mistakes < 0:\n        return 0\n    else:\n        return int(mistakes)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    first_mistake_time = 5\n    mistake_time_ratio = 2\n    mistakes_allowed = 0\n    while time >= kata_time:\n        time -= first_mistake_time\n        mistakes_allowed += 1\n        first_mistake_time *= mistake_time_ratio\n    return mistakes_allowed",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    mistakes = 0\n    while kata_time + mistake_time <= time:\n        mistakes += 1\n        mistake_time *= 2\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    mistake_mult = 2\n    mistakes = 0\n    while kata_time + mistake_time <= time:\n        mistakes += 1\n        mistake_time *= mistake_mult\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    pushup_time = 5\n    mistakes = 0\n    while True:\n        kata_time = n / kata_per_minute\n        pushup_penalty = pushup_time * (2 ** mistakes)\n        if kata_time + pushup_penalty <= time:\n            mistakes += 1\n        else:\n            break\n    return mistakes - 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    total_time = time - kata_time\n    mistakes = total_time / mistake_time\n    for i in range(int(mistakes), -1, -1):\n        mistake_time = 5 * (2 ** i)\n        if time >= kata_time + mistake_time * i:\n            return i\n    return 0",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    pushup_time_minutes = 5\n    time_to_complete_kata = n / kata_per_minute\n    max_mistakes = 0\n    while time >= time_to_complete_kata + pushup_time_minutes:\n        time -= pushup_time_minutes\n        pushup_time_minutes *= 2\n        max_mistakes += 1\n    return max_mistakes",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_minute = 10 / 60\n    kata_time = n / kata_per_minute\n    remaining_time = time - kata_time\n    if remaining_time <= 0:\n        return 0\n    else:\n        mistakes = log(remaining_time / 5) / log(2)\n        return int(mistakes)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    mistake_time = 5\n    time_spent_on_kata = n / kata_per_minute\n    total_time = time - time_spent_on_kata\n    if total_time <= 0:\n        return 0\n    mistakes = log(total_time / mistake_time, 2)\n    return int(mistakes)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    minutes_per_hour = 60\n    kata_per_minute = kata_per_hour / minutes_per_hour\n    mistake_time = 5\n    kata_time = n / kata_per_minute\n    mistakes_allowed = (time - kata_time) / mistake_time\n    for i in range(1000):\n        mistakes_allowed = (time - kata_time - mistakes_allowed * mistake_time * (2 ** i - 1) / (2 ** i)) / mistake_time\n    return int(mistakes_allowed)",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_minute = 10 / 60\n    kata_time = n / kata_per_minute\n    pushup_time = 5\n    mistakes = 0\n    while kata_time + pushup_time <= time:\n        mistakes += 1\n        pushup_time *= 2\n        kata_time += pushup_time\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    mistakes = 0\n    while time >= kata_time + mistake_time:\n        time -= mistake_time\n        mistake_time *= 2\n        mistakes += 1\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_minute = 10 / 60\n    pushup_time = 5\n    mistakes = 0\n    while time > 0:\n        time -= n / kata_per_minute\n        if time < 0:\n            break\n        time -= pushup_time\n        if time < 0:\n            break\n        mistakes += 1\n        pushup_time *= 2\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    max_mistakes = 0\n    while kata_time + mistake_time <= time:\n        max_mistakes += 1\n        mistake_time *= 2\n    return max_mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    mistakes = 0\n    while kata_time + mistake_time <= time:\n        mistakes += 1\n        mistake_time *= 2\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    mistakes = 0\n    while time >= kata_time + mistake_time:\n        mistakes += 1\n        mistake_time *= 2\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    pushup_time = 5\n    kata_time = 60 / kata_per_hour\n    max_mistakes = 0\n    while time > 0:\n        time -= kata_time * (n - max_mistakes)\n        if time < 0:\n            break\n        time -= pushup_time\n        pushup_time *= 2\n        max_mistakes += 1\n    return max_mistakes - 1",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    mistake_time = 5\n    total_kata_time = n / kata_per_minute\n    remaining_time = time - total_kata_time\n    mistakes = 0\n    while remaining_time >= 0:\n        remaining_time -= mistake_time\n        mistakes += 1\n        mistake_time *= 2\n    return mistakes - 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    katas_per_hour = 10\n    minutes_per_hour = 60\n    kata_time = minutes_per_hour / katas_per_hour\n    pushup_time = 5\n    total_time = time\n    \n    mistake_time = kata_time * n\n    remaining_time = total_time - mistake_time\n    \n    if remaining_time < 0:\n        return 0\n    \n    mistakes = 0\n    while remaining_time > 0:\n        remaining_time -= pushup_time\n        if remaining_time < 0:\n            break\n        pushup_time *= 2\n        mistakes += 1\n    \n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    mistakes = 0\n    while time >= kata_time + mistake_time:\n        time -= mistake_time\n        mistake_time *= 2\n        mistakes += 1\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    mistake_increase = 2\n    mistakes = 0\n    while time >= kata_time + mistake_time:\n        time -= mistake_time\n        mistake_time *= mistake_increase\n        mistakes += 1\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    pushup_time = 5\n    mistakes = 0\n    while True:\n        kata_time = (n - mistakes * kata_per_minute) / kata_per_minute\n        total_time = kata_time + pushup_time * (2 ** mistakes - 1)\n        if total_time > time:\n            break\n        mistakes += 1\n    return mistakes - 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    total_time = time - kata_time\n    mistakes = total_time / mistake_time\n    for i in range(int(mistakes), -1, -1):\n        mistake_time_total = 5 * (2**i - 1)\n        if mistake_time_total <= total_time:\n            return i\n    return 0",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    minutes_per_hour = 60\n    kata_per_minute = kata_per_hour / minutes_per_hour\n    mistake_time = 5\n    kata_time = n / kata_per_minute\n    mistake_time_total = 0\n    mistakes = 0\n    while kata_time + mistake_time_total <= time:\n        mistakes += 1\n        mistake_time_total += mistake_time\n        mistake_time *= 2\n    return mistakes - 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    pushup_time = 5\n    mistake_time = time - kata_time\n    max_mistakes = 0\n    while mistake_time >= 0:\n        mistake_time -= pushup_time\n        pushup_time *= 2\n        max_mistakes += 1\n    return max_mistakes - 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    pushup_time_minutes = 5\n    kata_time_minutes = (n / kata_per_minute)\n    \n    mistake_time_minutes = time - kata_time_minutes\n    \n    if mistake_time_minutes <= 0:\n        return 0\n    \n    mistakes = log(mistake_time_minutes / pushup_time_minutes, 2)\n    \n    if mistakes < 0:\n        return 0\n    else:\n        return int(mistakes)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    mistake_time = 5\n    total_kata_time = n / kata_per_minute\n    remaining_time = time - total_kata_time\n    mistakes = 0\n    while remaining_time >= 0:\n        remaining_time -= mistake_time\n        mistakes += 1\n        mistake_time *= 2\n    return mistakes - 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    mistakes = 0\n    while time >= kata_time + mistake_time:\n        time -= mistake_time\n        mistake_time *= 2\n        mistakes += 1\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    mistake_time = 5\n    mistake_increase = 2\n    mistakes = 0\n    while time >= kata_time + mistake_time:\n        time -= mistake_time\n        mistake_time *= mistake_increase\n        mistakes += 1\n    return mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    pushup_time = 5\n    mistakes = 0\n    while True:\n        kata_time = (n - mistakes * kata_per_minute) / kata_per_minute\n        total_time = kata_time + pushup_time * (2 ** mistakes - 1)\n        if total_time > time:\n            break\n        mistakes += 1\n    return mistakes - 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    minutes_per_hour = 60\n    kata_per_minute = kata_per_hour / minutes_per_hour\n    mistake_time = 5\n    kata_time = n / kata_per_minute\n    mistake_time_total = 0\n    mistakes = 0\n    while kata_time + mistake_time_total <= time:\n        mistakes += 1\n        mistake_time_total += mistake_time\n        mistake_time *= 2\n    return mistakes - 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    kata_time = n / kata_per_minute\n    pushup_time = 5\n    mistake_time = time - kata_time\n    max_mistakes = 0\n    while mistake_time >= 0:\n        mistake_time -= pushup_time\n        pushup_time *= 2\n        max_mistakes += 1\n    return max_mistakes - 1",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time):\n    kata_per_hour = 10\n    kata_per_minute = kata_per_hour / 60\n    pushup_time_minutes = 5\n    kata_time_minutes = (n / kata_per_minute)\n    \n    mistake_time_minutes = time - kata_time_minutes\n    \n    if mistake_time_minutes <= 0:\n        return 0\n    \n    mistakes = log(mistake_time_minutes / pushup_time_minutes, 2)\n    \n    if mistakes < 0:\n        return 0\n    else:\n        return int(mistakes)",
+            "logp": null
+        }
+    ]
+}

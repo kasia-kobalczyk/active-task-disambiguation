@@ -1,0 +1,47 @@
+{
+    "0": [
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, ext = file_name.split('.')\n    if not name or not name[0].isalpha():\n        return 'No'\n    \n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    if sum(1 for c in name if c.isdigit()) > 3:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    name, extension = file_name.split('.')\n    \n    if len(name) == 0 or len(extension) == 0:\n        return 'No'\n    \n    if len(extension) > 3:\n        return 'No'\n    \n    if not name[0].isalpha():\n        return 'No'\n    \n    if not extension in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if len(file_name.split('.')[0]) == 0:\n        return 'No'\n    elif not file_name.split('.')[0][0].isalpha():\n        return 'No'\n    elif file_name.count('.') != 1:\n        return 'No'\n    elif len([x for x in file_name if x.isnumeric()]) > 3:\n        return 'No'\n    elif file_name.split('.')[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    else:\n        return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if not isinstance(file_name, str):\n        return 'No'\n    if file_name.count('.') != 1:\n        return 'No'\n    name, extension = file_name.split('.')\n    if len(extension) != 3 or extension not in ['txt', 'exe', 'dll']:\n        return 'No'\n    if len(name) == 0 or not name[0].isalpha() or not name.isalnum():\n        return 'No'\n    digit_count = sum(1 for char in name if char.isdigit())\n    if digit_count > 3:\n        return 'No'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    digits_count = 0\n    dot_count = 0\n    latin_letter_count = 0\n    dot_index = -1\n    \n    for i in range(len(file_name)):\n        if file_name[i].isdigit():\n            digits_count += 1\n        elif file_name[i] == '.':\n            dot_count += 1\n            dot_index = i\n        elif file_name[i].isalpha():\n            latin_letter_count += 1\n    \n    if digits_count > 3 or dot_count != 1 or dot_index == 0 or dot_index == len(file_name)-1:\n        return 'No'\n    elif latin_letter_count == 0 or file_name[dot_index+1:] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    else:\n        return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    parts = file_name.split('.')\n    if not parts[0] or not parts[0][0].isalpha():\n        return 'No'\n    \n    if parts[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    digit_count = sum(c.isdigit() for c in file_name)\n    if digit_count > 3:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    digits = 0\n    dot_count = 0\n    alpha_count = 0\n    file_ext = \"\"\n\n    for char in file_name:\n        if char.isdigit():\n            digits += 1\n        elif char == \".\":\n            dot_count += 1\n        elif char.isalpha():\n            alpha_count += 1\n\n    if digits > 3 or dot_count != 1 or alpha_count == 0:\n        return \"No\"\n\n    file_name_parts = file_name.split(\".\")\n    if len(file_name_parts) != 2:\n        return \"No\"\n\n    file_ext = file_name_parts[1]\n    if file_ext not in ['txt', 'exe', 'dll']:\n        return \"No\"\n\n    return \"Yes\"",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    # Check if the file name has more than three digits\n    if sum(char.isdigit() for char in file_name) > 3:\n        return 'No'\n    \n    # Check if the file name contains exactly one dot\n    if file_name.count('.') != 1:\n        return 'No'\n    \n    # Split the file name into two parts, before and after the dot\n    parts = file_name.split('.')\n    \n    # Check if the substring before the dot is empty or does not start with a letter\n    if len(parts[0]) == 0 or not parts[0][0].isalpha():\n        return 'No'\n    \n    # Check if the substring after the dot is 'txt', 'exe' or 'dll'\n    if parts[1] not in ['txt', 'exe', 'dll']:\n        return 'No'\n    \n    # All conditions are met, return 'Yes'\n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    # Check the number of digits in the file name\n    num_digits = sum(1 for char in file_name if char.isdigit())\n    if num_digits > 3:\n        return 'No'\n    \n    # Check the number of dots in the file name\n    num_dots = file_name.count('.')\n    if num_dots != 1:\n        return 'No'\n    \n    # Split the file name into two parts: before and after the dot\n    parts = file_name.split('.')\n    if len(parts) != 2:\n        return 'No'\n    \n    # Check the substring before the dot\n    name = parts[0]\n    if len(name) == 0 or not name[0].isalpha():\n        return 'No'\n    \n    # Check the substring after the dot\n    ext = parts[1]\n    valid_exts = ['txt', 'exe', 'dll']\n    if ext not in valid_exts:\n        return 'No'\n    \n    return 'Yes'",
+            "logp": null
+        },
+        {
+            "content": "def file_name_check(file_name):\n    digits_count = 0\n    for char in file_name:\n        if char.isdigit():\n            digits_count += 1\n            if digits_count > 3:\n                return 'No'\n\n    if file_name.count('.') != 1:\n        return 'No'\n\n    name, ext = file_name.split('.')\n    if not name or not name[0].isalpha():\n        return 'No'\n\n    if ext not in ['txt', 'exe', 'dll']:\n        return 'No'\n\n    return 'Yes'",
+            "logp": null
+        }
+    ],
+    "1": [],
+    "2": [],
+    "3": []
+}

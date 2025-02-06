@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert f(2) == [1, 1]",
+        false
+    ],
+    "1": [
+        "assert f(4) == [1, 2, 2, 24]",
+        false
+    ],
+    "2": [
+        "assert f(10) == [1, 2, 2, 24, 120, 720, 5040, 40320, 362880, 3628800]\n# The value of the element at index 9 is 3628800, which is the factorial of 9.",
+        false
+    ],
+    "3": [
+        "assert f(6) == [1, 2, 2, 24, 3, 720]\n# The value of the element at index 5 is 720, which is the factorial of 6.",
+        false
+    ]
+}

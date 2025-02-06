@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert check_dict_case({'a': 1, 'b': 2, 'c': 3}) == True",
+        true
+    ],
+    "1": [
+        "assert check_dict_case({'hello': 1, 'world': 2}) == True",
+        true
+    ],
+    "2": [
+        "assert check_dict_case({'One': 1, 'two': 2}) == False",
+        true
+    ],
+    "3": [
+        "assert check_dict_case({'X': 5, 'Y': 10, 'Z': 15}) == True",
+        true
+    ]
+}

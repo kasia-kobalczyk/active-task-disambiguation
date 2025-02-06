@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert is_isogram(\"abcde\") == True",
+        "assert is_isogram(\"hello\") == False"
+    ],
+    "1": [
+        "assert is_isogram(\"abcde-\") == True",
+        "assert is_isogram(\"Subdermatoglyphic\") == True"
+    ],
+    "2": [
+        "assert is_isogram(\"abcdea\") == False",
+        "assert is_isogram(\"Hello-World\") == False"
+    ],
+    "3": [
+        "assert is_isogram(\"Hello-World!\") == False",
+        "assert is_isogram(\"ABCabc\") == True"
+    ]
+}

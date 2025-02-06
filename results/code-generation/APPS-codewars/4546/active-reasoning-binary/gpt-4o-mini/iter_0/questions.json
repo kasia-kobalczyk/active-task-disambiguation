@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert find_children(\"fFfEeDdCcBbAa\") == \"AaaBbbCcDdEeFff\"",
+        "assert find_children(\"CcbBAa\") == \"AaaBbbCc\"",
+        "assert find_children(\"CcbAab\") == \"AaaBbcC\"",
+        "assert find_children(\"dDcbB\") == \"BbcDd\"",
+        "assert find_children(\"aBAb\") == \"AaaBbb\"",
+        "assert find_children(\"DdCcBbAa\") == \"AaaBbbCccD\"",
+        "assert find_children(\"aAbaBb\") == \"AaaBbb\""
+    ],
+    "1": [
+        "assert find_children(\"mMnNoOpP\") == \"MmmNnOoPpp\"",
+        "assert find_children(\"dDccCcBbAa\") == \"AaBbCcDd\"",
+        "assert find_children(\"AaaBbb\") == \"AaaBbb\"",
+        "assert find_children(\"cCdD\") == \"CcDd\"",
+        "assert find_children(\"zZyYxXwW\") == \"WwwXxyYzz\"",
+        "assert find_children(\"ccBbaAa\") == \"AaBbbcc\"",
+        "assert find_children(\"zZyYxXwWvVuUtT\") == \"TtUuVvWwXxYyZz\"",
+        "assert find_children(\"bBcCaA\") == \"AaaBbbCc\""
+    ],
+    "2": [
+        "assert find_children(\"DdCcBbAa\") == \"AaBbCcDd\"",
+        "assert find_children(\"mMnNoOpP\") == \"MmmNnOoPpp\"",
+        "assert find_children(\"AaaBbb\") == \"AaaBbb\"",
+        "assert find_children(\"zZyYxXwW\") == \"WwwXxyYzz\"",
+        "assert find_children(\"cCdDgGfF\") == \"DggFfCc\"",
+        "assert find_children(\"bBcCaA\") == \"AaaBbbCc\"",
+        "assert find_children(\"zYxWvU\") == \"UwVvXxYyZ\""
+    ],
+    "3": [
+        "assert find_children(\"mMnnOoP\") == \"MmOonnP\"\n    ",
+        "assert find_children(\"xXaAbBcC\") == \"AaBbCcXx\"\n    ",
+        "assert find_children(\"hHeE\") == \"EhH\"\n    ",
+        "assert find_children(\"mMmNnOo\") == \"MmNnOo\"\n    ",
+        "assert find_children(\"bAacC\") == \"AaCbc\"\n    ",
+        "assert find_children(\"zZyYxX\") == \"YyZzXx\"",
+        "assert find_children(\"gGfF\") == \"FfGg\"\n    "
+    ]
+}

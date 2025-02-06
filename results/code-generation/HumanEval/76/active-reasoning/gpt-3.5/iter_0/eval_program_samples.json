@@ -1,0 +1,184 @@
+{
+    "0": {
+        "0": [
+            "def is_simple_power(x, n):\n    return x == n**int(x**0.5)",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    if x == n ** int(x ** (1/n)):\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    return x == n ** int(x ** (1/n))",
+            "def is_simple_power(x, n):\n    return x == n**int(x**0.5) if x >= 1 else False",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    return n ** int(x ** (1 / n)) == x",
+            "def is_simple_power(x, n):\n    return x == n ** int(x ** (1 / n))",
+            "def is_simple_power(x, n):\n    return x == n**int(x**0.5)",
+            "def is_simple_power(x, n):\n    if n**int(x**(1/n)) == x:\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    if x <= 0:\n        return False\n    if n == 1:\n        return x == 1\n    power = 0\n    while n ** power < x:\n        power += 1\n    return n ** power == x",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    return n**int(x**0.5) == x",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x % n != 0:\n        return False\n    else:\n        return is_simple_power(x//n, n)",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    elif n == 0:\n        return x == 0\n    else:\n        i = 1\n        while n ** i <= x:\n            if n ** i == x:\n                return True\n            i += 1\n        return False",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    if n ** int(x ** (1/n)) == x:\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))"
+        ],
+        "1": [
+            "def is_simple_power(x, n):\n    if n == 0 or n == 1:\n        return False\n    if x == 1:\n        return True\n    for i in range(2, x+1):\n        if n**i == x:\n            return True\n        elif n**i > x:\n            return False\n    return False",
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    power = 0\n    while n**power < x:\n        power += 1\n    return n**power == x\n\nprint(is_simple_power(25, 5))",
+            "def is_simple_power(x, n):\n    if x <= 0:\n        return False\n    if n <= 0:\n        return False\n    if n == 1:\n        return x == 1\n    if x == 1:\n        return True\n    power = 0\n    while n**power < x:\n        power += 1\n    return n**power == x",
+            "def is_simple_power(x, n):\n    if n == 0 or n == 1:\n        return False\n    \n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    \n    return False",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    elif x == 1 or n == 1:\n        return True\n    else:\n        power = 1\n        while n**power <= x:\n            if n**power == x:\n                return True\n            power += 1\n        return False",
+            "def is_simple_power(x, n):\n    if x < 1:\n        return False\n    elif x == 1:\n        return True\n    elif n == 1:\n        return x == 1\n    elif n == 0:\n        return x == 0\n    else:\n        i = 1\n        while True:\n            power = n**i\n            if power == x:\n                return True\n            elif power > x:\n                return False\n            i += 1",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif n == 1:\n        return False\n    else:\n        power = n\n        while power < x:\n            power *= n\n        return power == x"
+        ],
+        "2": [
+            "def is_simple_power(x, n):\n    power = 0\n    while n**power <= x:\n        if n**power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x < n:\n        return False\n    else:\n        while x > n:\n            x = x/n\n            if x == n:\n                return True\n        return False",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n\n    i = 0\n    while n**i <= x:\n        if n**i == x:\n            return True\n        i += 1\n\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    if x % n != 0:\n        return False\n    while x % n == 0:\n        x = x / n\n    if x == 1:\n        return True\n    return False",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    elif n == 1:\n        return x == 1\n    elif x == 1:\n        return True\n    else:\n        i = 0\n        power = n**i\n        while power <= x:\n            if power == x:\n                return True\n            i += 1\n            power = n**i\n        return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    power = 1\n    while power <= x:\n        if n**power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x < n:\n        return False\n    else:\n        while x > 1:\n            if x % n != 0:\n                return False\n            x /= n\n        return True",
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    if x == 1:\n        return True\n    if x == 0:\n        return n == 0\n\n    for i in range(int(x**0.5)+1):\n        if n**i == x:\n            return True\n    return False",
+            "def is_simple_power(x, n):\n    if x < n:\n        return False\n    while x > 1:\n        if x % n != 0:\n            return False\n        x /= n\n    return True"
+        ],
+        "3": [
+            "def is_simple_power(x, n):\n    if x == 0:\n        return False\n    elif x == 1:\n        return True\n    else:\n        power = 0\n        while n ** power <= x:\n            if n ** power == x:\n                return True\n            power += 1\n        return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 0\n    while n**power <= x:\n        if n**power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x % n != 0:\n        return False\n    else:\n        while x != n:\n            x = x / n\n            if x % n != 0:\n                return False\n        return True",
+            "def is_simple_power(x, n):\n    if x <= 0:\n        return False\n    if x == 1:\n        return True\n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    elif n == 0:\n        return x == 0\n    else:\n        i = 1\n        while n ** i <= x:\n            if n ** i == x:\n                return True\n            i += 1\n        return False",
+            "def is_simple_power(x, n):\n    if x < 0 or n <= 0:\n        return False\n    if x == 1:\n        return True\n    power = 1\n    while power <= x:\n        if power == x:\n            return True\n        power *= n\n    return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    \n    while x != 1:\n        if x % n != 0:\n            return False\n        x = x // n\n    \n    return True",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    \n    if x == 1:\n        return True\n    \n    if n == 1:\n        return False\n    \n    power = 1\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    \n    return False"
+        ],
+        "4": [
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    if x == 1:\n        return True\n    if n == 1:\n        return False\n\n    power = 1\n    while power < x:\n        power *= n\n        if power == x:\n            return True\n    \n    return False"
+        ]
+    },
+    "1": {
+        "0": [
+            "def is_simple_power(x, n):\n    if x <= 0:\n        return False\n    if n == 1:\n        return x == 1\n    power = 0\n    while n ** power < x:\n        power += 1\n    return n ** power == x",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    return n**int(x**0.5) == x",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x % n != 0:\n        return False\n    else:\n        return is_simple_power(x//n, n)",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    elif n == 0:\n        return x == 0\n    else:\n        i = 1\n        while n ** i <= x:\n            if n ** i == x:\n                return True\n            i += 1\n        return False",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    if n ** int(x ** (1/n)) == x:\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    return n ** int(x ** (1/n)) == x",
+            "def is_simple_power(x, n):\n    return x == n**int(x**0.5)",
+            "def is_simple_power(x, n):\n    if x == n**int(x**(1/n)):\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    if x == n ** int(x ** (1/n)):\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    if x == n**int(x**0.5):\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    return x == n ** int(x ** (1/n))",
+            "def is_simple_power(x, n):\n    return n**int(x**(1/n)) == x",
+            "def is_simple_power(x, n):\n    return n**int(x**(1/n)) == x",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))"
+        ],
+        "1": [
+            "def is_simple_power(x, n):\n    if n == 0 or n == 1:\n        return False\n    if x == 1:\n        return True\n    for i in range(2, x+1):\n        if n**i == x:\n            return True\n        elif n**i > x:\n            return False\n    return False",
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    power = 0\n    while n**power < x:\n        power += 1\n    return n**power == x\n\nprint(is_simple_power(25, 5))",
+            "def is_simple_power(x, n):\n    if x <= 0:\n        return False\n    if n <= 0:\n        return False\n    if n == 1:\n        return x == 1\n    if x == 1:\n        return True\n    power = 0\n    while n**power < x:\n        power += 1\n    return n**power == x",
+            "def is_simple_power(x, n):\n    if n == 0 or n == 1:\n        return False\n    \n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    \n    return False",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    elif x == 1 or n == 1:\n        return True\n    else:\n        power = 1\n        while n**power <= x:\n            if n**power == x:\n                return True\n            power += 1\n        return False",
+            "def is_simple_power(x, n):\n    if x < 1:\n        return False\n    elif x == 1:\n        return True\n    elif n == 1:\n        return x == 1\n    elif n == 0:\n        return x == 0\n    else:\n        i = 1\n        while True:\n            power = n**i\n            if power == x:\n                return True\n            elif power > x:\n                return False\n            i += 1",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif n == 1:\n        return False\n    else:\n        power = n\n        while power < x:\n            power *= n\n        return power == x"
+        ],
+        "2": [
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n\n    i = 0\n    while n**i <= x:\n        if n**i == x:\n            return True\n        i += 1\n\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    if x % n != 0:\n        return False\n    while x % n == 0:\n        x = x / n\n    if x == 1:\n        return True\n    return False",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    elif n == 1:\n        return x == 1\n    elif x == 1:\n        return True\n    else:\n        i = 0\n        power = n**i\n        while power <= x:\n            if power == x:\n                return True\n            i += 1\n            power = n**i\n        return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    power = 1\n    while power <= x:\n        if n**power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x < n:\n        return False\n    else:\n        while x > 1:\n            if x % n != 0:\n                return False\n            x /= n\n        return True",
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    if x == 1:\n        return True\n    if x == 0:\n        return n == 0\n\n    for i in range(int(x**0.5)+1):\n        if n**i == x:\n            return True\n    return False",
+            "def is_simple_power(x, n):\n    if x < n:\n        return False\n    while x > 1:\n        if x % n != 0:\n            return False\n        x /= n\n    return True",
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    if x == 1:\n        return True\n    for i in range(2, x):\n        if n ** i == x:\n            return True\n    return False\n\nprint(is_simple_power(25, 5))\nprint(is_simple_power(27, 3))",
+            "def is_simple_power(x, n):\n    power = 1\n    while power <= x:\n        if power == x:\n            return True\n        power *= n\n    return False"
+        ],
+        "3": [
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 0\n    while n**power <= x:\n        if n**power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x % n != 0:\n        return False\n    else:\n        while x != n:\n            x = x / n\n            if x % n != 0:\n                return False\n        return True",
+            "def is_simple_power(x, n):\n    if x <= 0:\n        return False\n    if x == 1:\n        return True\n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    elif n == 0:\n        return x == 0\n    else:\n        i = 1\n        while n ** i <= x:\n            if n ** i == x:\n                return True\n            i += 1\n        return False",
+            "def is_simple_power(x, n):\n    if x < 0 or n <= 0:\n        return False\n    if x == 1:\n        return True\n    power = 1\n    while power <= x:\n        if power == x:\n            return True\n        power *= n\n    return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    \n    while x != 1:\n        if x % n != 0:\n            return False\n        x = x // n\n    \n    return True",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    \n    if x == 1:\n        return True\n    \n    if n == 1:\n        return False\n    \n    power = 1\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    \n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x < n:\n        return False\n    \n    while x >= n:\n        if x % n != 0:\n            return False\n        x /= n\n    \n    if x == 1:\n        return True\n    else:\n        return False"
+        ],
+        "4": [
+            "def is_simple_power(x, n):\n    if x == 0 or x == 1:\n        return True\n    elif n == 0 or n == 1:\n        return False\n\n    while x % n == 0:\n        x = x // n\n        if x == 1:\n            return True\n\n    return False",
+            "def is_simple_power(x, n):\n    if x < 1:\n        return False\n    \n    if n < 2:\n        return False\n    \n    i = 0\n    while True:\n        power = n**i\n        if power == x:\n            return True\n        elif power > x:\n            return False\n        i += 1"
+        ]
+    },
+    "2": {
+        "0": [
+            "def is_simple_power(x, n):\n    return n ** int(x ** (1/n)) == x",
+            "def is_simple_power(x, n):\n    return x == n**int(x**0.5)",
+            "def is_simple_power(x, n):\n    if x == n**int(x**(1/n)):\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    if x == n ** int(x ** (1/n)):\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    if x == n**int(x**0.5):\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    return x == n ** int(x ** (1/n))",
+            "def is_simple_power(x, n):\n    return n**int(x**(1/n)) == x",
+            "def is_simple_power(x, n):\n    return n**int(x**(1/n)) == x",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    elif x == 1:\n        return True\n    else:\n        power = 1\n        while power < x:\n            power *= n\n        return power == x",
+            "def is_simple_power(x, n):\n    return x == n ** int(x ** (1/n))",
+            "def is_simple_power(x, n):\n    if x == 1:\n        return True\n    for i in range(2, int(x**0.5) + 1):\n        if i**n == x:\n            return True\n    return False",
+            "def is_simple_power(x, n):\n    return n ** int(x ** (1 / n)) == x",
+            "def is_simple_power(x, n):\n    return x == n ** int(x ** (1 / n))",
+            "def is_simple_power(x, n):\n    return x == n**int(x**(1/n))",
+            "def is_simple_power(x, n):\n    if n**int(x**(1/n)) == x:\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    return x == n ** int(x ** (1 / n))",
+            "def is_simple_power(x, n):\n    if x == 1 or x == n:\n        return True\n    elif x % n != 0:\n        return False\n    else:\n        while x % n == 0:\n            x = x / n\n            if x == 1:\n                return True\n        return False",
+            "def is_simple_power(x, n):\n    if x < 1 or n < 1:\n        return False\n    elif n == 1 and x != 1:\n        return False\n    else:\n        power = 0\n        while n ** power < x:\n            power += 1\n        return n ** power == x"
+        ],
+        "1": [
+            "def is_simple_power(x, n):\n    if x <= 0:\n        return False\n    if n <= 0:\n        return False\n    if n == 1:\n        return x == 1\n    if x == 1:\n        return True\n    power = 0\n    while n**power < x:\n        power += 1\n    return n**power == x",
+            "def is_simple_power(x, n):\n    if n == 0 or n == 1:\n        return False\n    \n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    \n    return False",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    elif x == 1 or n == 1:\n        return True\n    else:\n        power = 1\n        while n**power <= x:\n            if n**power == x:\n                return True\n            power += 1\n        return False",
+            "def is_simple_power(x, n):\n    if x < 1:\n        return False\n    elif x == 1:\n        return True\n    elif n == 1:\n        return x == 1\n    elif n == 0:\n        return x == 0\n    else:\n        i = 1\n        while True:\n            power = n**i\n            if power == x:\n                return True\n            elif power > x:\n                return False\n            i += 1",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif n == 1:\n        return False\n    else:\n        power = n\n        while power < x:\n            power *= n\n        return power == x"
+        ],
+        "2": [
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    elif n == 1:\n        return x == 1\n    elif x == 1:\n        return True\n    else:\n        i = 0\n        power = n**i\n        while power <= x:\n            if power == x:\n                return True\n            i += 1\n            power = n**i\n        return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    power = 1\n    while power <= x:\n        if n**power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x < n:\n        return False\n    else:\n        while x > 1:\n            if x % n != 0:\n                return False\n            x /= n\n        return True",
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    if x == 1:\n        return True\n    if x == 0:\n        return n == 0\n\n    for i in range(int(x**0.5)+1):\n        if n**i == x:\n            return True\n    return False",
+            "def is_simple_power(x, n):\n    if x < n:\n        return False\n    while x > 1:\n        if x % n != 0:\n            return False\n        x /= n\n    return True",
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    if x == 1:\n        return True\n    for i in range(2, x):\n        if n ** i == x:\n            return True\n    return False\n\nprint(is_simple_power(25, 5))\nprint(is_simple_power(27, 3))",
+            "def is_simple_power(x, n):\n    power = 1\n    while power <= x:\n        if power == x:\n            return True\n        power *= n\n    return False",
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    elif x == 1:\n        return True\n    elif x == n:\n        return True\n    elif x % n == 0:\n        return is_simple_power(x // n, n)\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x < n:\n        return False\n    else:\n        while x > 1:\n            if x % n != 0:\n                return False\n            x /= n\n        return True",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    \n    power = 1\n    while power <= x:\n        if power == x:\n            return True\n        power *= n\n    \n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x % n == 0:\n        return is_simple_power(x//n, n)\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    if n == 0 or n == 1 or x == 0 or x == 1:\n        return False\n    if x == n:\n        return True\n    power = 0\n    while n ** power < x:\n        power += 1\n    if n ** power == x:\n        return True\n    return False\n\nprint(is_simple_power(25, 5))\nprint(is_simple_power(27, 3))\nprint(is_simple_power(10, 2))\nprint(is_simple_power(8, 2))\nprint(is_simple_power(100, 10))"
+        ],
+        "3": [
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x % n != 0:\n        return False\n    else:\n        while x != n:\n            x = x / n\n            if x % n != 0:\n                return False\n        return True",
+            "def is_simple_power(x, n):\n    if x <= 0:\n        return False\n    if x == 1:\n        return True\n    power = 0\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    elif n == 0:\n        return x == 0\n    else:\n        i = 1\n        while n ** i <= x:\n            if n ** i == x:\n                return True\n            i += 1\n        return False",
+            "def is_simple_power(x, n):\n    if x < 0 or n <= 0:\n        return False\n    if x == 1:\n        return True\n    power = 1\n    while power <= x:\n        if power == x:\n            return True\n        power *= n\n    return False",
+            "def is_simple_power(x, n):\n    if n == 1:\n        return x == 1\n    \n    while x != 1:\n        if x % n != 0:\n            return False\n        x = x // n\n    \n    return True",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    \n    if x == 1:\n        return True\n    \n    if n == 1:\n        return False\n    \n    power = 1\n    while n ** power <= x:\n        if n ** power == x:\n            return True\n        power += 1\n    \n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x < n:\n        return False\n    \n    while x >= n:\n        if x % n != 0:\n            return False\n        x /= n\n    \n    if x == 1:\n        return True\n    else:\n        return False",
+            "def is_simple_power(x, n):\n    if x <= 0 or n <= 0:\n        return False\n    for i in range(1, x+1):\n        if n ** i == x:\n            return True\n    return False",
+            "def is_simple_power(x, n):\n    if x == n:\n        return True\n    elif x < n:\n        return False\n    else:\n        power = 1\n        while n ** power <= x:\n            if n ** power == x:\n                return True\n            power += 1\n        return False",
+            "def is_simple_power(x, n):\n    if n <= 1:\n        return False\n    while x > 1:\n        if x % n != 0:\n            return False\n        x = x // n\n    return True",
+            "def is_simple_power(x, n):\n    if x == 0:\n        return False\n    elif x == 1:\n        return True\n    else:\n        while x % n == 0:\n            x = x / n\n        return x == 1"
+        ],
+        "4": [
+            "def is_simple_power(x, n):\n    if x == 0 or x == 1:\n        return True\n    elif n == 0 or n == 1:\n        return False\n\n    while x % n == 0:\n        x = x // n\n        if x == 1:\n            return True\n\n    return False",
+            "def is_simple_power(x, n):\n    if x < 1:\n        return False\n    \n    if n < 2:\n        return False\n    \n    i = 0\n    while True:\n        power = n**i\n        if power == x:\n            return True\n        elif power > x:\n            return False\n        i += 1",
+            "def is_simple_power(x, n):\n    if n == 0:\n        return False\n    while x % n == 0:\n        x = x / n\n    return x == 1\n\nprint(is_simple_power(25, 5))\nprint(is_simple_power(27, 3))\nprint(is_simple_power(256, 8))\nprint(is_simple_power(1000, 10))",
+            "def is_simple_power(x, n):\n    power = 0\n    while n**power <= x:\n        if n**power == x:\n            return True\n        power += 1\n    return False"
+        ]
+    }
+}

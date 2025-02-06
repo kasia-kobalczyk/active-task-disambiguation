@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert count_upper(\"aAbAeAiAoAu\") == 0",
+        "assert count_upper(\"Python Programming\") == 1",
+        "assert count_upper(\"HELLO world\") == 1",
+        "assert count_upper(\"AbEcIdO\") == 2",
+        "assert count_upper(\"AEIOU\") == 5",
+        "assert count_upper(\"aeIoU\") == 0",
+        "assert count_upper(\"AbEcIdOfU\") == 3",
+        "assert count_upper(\"hEllo wOrld\") == 1"
+    ],
+    "1": [
+        "assert count_upper(\"AeeIooU\") == 2",
+        "assert count_upper(\"Hello World\") == 0",
+        "assert count_upper(\"BcdEfGhI\") == 1",
+        "assert count_upper(\"aAeiOuAEIOU\") == 3",
+        "assert count_upper(\"AelloU\") == 1",
+        "assert count_upper(\"A quick Brown Fox\") == 1",
+        "assert count_upper(\"AEIOUaeiou\") == 5",
+        "assert count_upper(\"abcdefghijklmnopqrst\") == 0"
+    ],
+    "2": [
+        "assert count_upper(\"AEIOU\") == 5",
+        "assert count_upper(\"aAbcAeI\") == 1",
+        "assert count_upper(\"aAbAeAi\") == 0",
+        "assert count_upper(\"AaEeIiOoUu\") == 0",
+        "assert count_upper(\"AaEEeIooU\") == 2",
+        "assert count_upper(\"uppercase\") == 0",
+        "assert count_upper(\"ZyXwVuT\") == 1"
+    ],
+    "3": [
+        "assert count_upper(\"aAbAeAiAoA\") == 1",
+        "assert count_upper(\"BbEeIiOoUu\") == 3",
+        "assert count_upper(\"aAbcAeIop\") == 1",
+        "assert count_upper(\"AaEeIiOoUu\") == 0",
+        "assert count_upper(\"QWErTyUiOp\") == 5",
+        "assert count_upper(\"XYZAEIOU\") == 3"
+    ]
+}

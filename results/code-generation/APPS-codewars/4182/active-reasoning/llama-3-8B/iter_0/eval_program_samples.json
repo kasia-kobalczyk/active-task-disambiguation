@@ -1,0 +1,97 @@
+{
+    "0": {
+        "0": [
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    def is_survivor(num):\n        divisor = 2\n        while num % divisor != 0:\n            divisor += 1\n        return num % divisor != 0\n\n    if n < 1:\n        return False\n\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            if n % (i * i) == 0:\n                return False\n            return not is_survivor(n // i)\n\n    return is_survivor(n)",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1"
+        ],
+        "1": [
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, n):\n        temp = n\n        for j in range(2, i+1):\n            temp %= j\n            if temp == 0:\n                return False\n    return True"
+        ],
+        "2": [
+            "def survivor(n):\n    n += 1\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n //= i\n    return n > 1"
+        ],
+        "3": [],
+        "4": []
+    },
+    "1": {
+        "0": [
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True"
+        ],
+        "1": [
+            "def survivor(n):\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            n = n // i\n    return n > 1",
+            "def survivor(n):\n    for i in range(2, n):\n        temp = n\n        for j in range(2, i+1):\n            temp %= j\n            if temp == 0:\n                return False\n    return True"
+        ],
+        "2": [],
+        "3": [],
+        "4": []
+    },
+    "2": {
+        "0": [
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    for i in range(2, n+1):\n        if n % i == 0:\n            return False\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True",
+            "def survivor(n):\n    max_num = 1\n    for i in range(2, int(n**0.5) + 1):\n        max_num = i\n        while max_num <= n:\n            n %= i\n            if n == 0:\n                return False\n            max_num *= i\n    return True"
+        ],
+        "1": [
+            "def survivor(n):\n    for i in range(2, n):\n        temp = n\n        for j in range(2, i+1):\n            temp %= j\n            if temp == 0:\n                return False\n    return True",
+            "def survivor(n):\n    i = 2\n    while True:\n        prime = True\n        for j in range(2, int(i ** 0.5) + 1):\n            if i % j == 0:\n                prime = False\n                break\n        if prime:\n            if i > n:\n                return True\n            else:\n                n -= i\n        i += 1\n    return False"
+        ],
+        "2": [],
+        "3": [],
+        "4": []
+    }
+}

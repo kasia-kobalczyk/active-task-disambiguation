@@ -1,0 +1,52 @@
+{
+    "0": [
+        "assert plane_seat(55) == 'Back-K'",
+        "assert plane_seat('45D') == 'Back-Middle'",
+        "assert plane_seat(35) == 'Middle-F'",
+        "assert plane_seat('8F') == 'Front-Middle'",
+        "assert plane_seat('55K') == 'Back-K'",
+        "assert plane_seat('A10') == 'No Seat!!'",
+        "assert plane_seat(20) == 'Front-Right'",
+        "assert plane_seat('15K') == 'Front-Right'",
+        "assert plane_seat(100) == 'No Seat!!'",
+        "assert plane_seat('2B') == 'Front-Left'",
+        "assert plane_seat(1) == 'Front-Left'",
+        "assert plane_seat(-5) == 'No Seat!!'",
+        "assert plane_seat('61B') == 'No Seat!!'",
+        "assert plane_seat('35F') == 'Middle-F'",
+        "assert plane_seat(10) == 'Front-Center'",
+        "assert plane_seat('62A') == 'No Seat!!'",
+        "assert plane_seat(61) == 'No Seat!!'",
+        "assert plane_seat(10.5) == 'No Seat!!'"
+    ],
+    "1": [
+        "assert plane_seat('21A') == 'Middle-Left'",
+        "assert plane_seat(52J) == 'Middle-Right'",
+        "assert plane_seat('30E') == 'Middle-Middle'",
+        "assert plane_seat('10B') == 'Front-Middle'",
+        "assert plane_seat('1A') == 'Front-Left'",
+        "assert plane_seat('20K') == 'Front-Right'"
+    ],
+    "2": [
+        "assert plane_seat('61A') == 'No Seat!!'",
+        "assert plane_seat('10D') == 'Front-Middle'",
+        "assert plane_seat('40K') == 'Back-Right'",
+        "assert plane_seat('15D') == 'Front-Middle'",
+        "assert plane_seat('35I') == 'No Seat!!'",
+        "assert plane_seat('25L') == 'No Seat!!'",
+        "assert plane_seat('61C') == 'No Seat!!'",
+        "assert plane_seat('1A') == 'Front-Left'",
+        "assert plane_seat('2B') == 'Front-Left'"
+    ],
+    "3": [
+        "assert plane_seat('8G') == 'Front-Right'",
+        "assert plane_seat('30B') == 'Middle-Left'",
+        "assert plane_seat('40K') == 'Back-Right'",
+        "assert plane_seat('42J') == 'Middle-Right'",
+        "assert plane_seat('70J') == 'No Seat!!'",
+        "assert plane_seat('60B') == 'Back-Left'",
+        "assert plane_seat('1A') == 'Front-Left'",
+        "assert plane_seat('20D') == 'Front-Middle'",
+        "assert plane_seat('25E') == 'Middle-Middle'"
+    ]
+}

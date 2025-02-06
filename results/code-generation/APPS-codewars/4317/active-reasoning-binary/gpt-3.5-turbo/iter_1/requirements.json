@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert card_game('3\u2663', 'Q\u2663', '\u2666') == 'The second card won.'",
+        true
+    ],
+    "1": [
+        "assert card_game('5\u2665', 'A\u2663', '\u2666') == 'Let us play again.'",
+        true
+    ],
+    "2": [
+        "assert card_game('joker', 'A\u2660', '\u2660') == \"Someone cheats.\"",
+        false
+    ],
+    "3": [
+        "assert card_game('4\u2660', '6\u2660', '\u2663') == \"The second card won.\"",
+        true
+    ]
+}

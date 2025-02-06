@@ -1,0 +1,126 @@
+{
+    "0": {
+        "0": [
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt"
+        ],
+        "1": [
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s)\n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s)\n    return len(vowels) > 0 and len(consonants) > 0 and (vowels[0] != consonants[0] and (len(vowels) == len(consonants) and all(vowels[i] != consonants[i] for i in range(len(vowels)))))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s): \n    vowels = 'aeiou'\n    res = []\n    for char in s:\n        if char in vowels:\n            res.append(1)\n        else:\n            res.append(0)\n    for i in range(len(res)-1):\n        if res[i] == res[i+1]:\n            return False\n    return True"
+        ],
+        "2": [
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s)\n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s)\n    return len(vowels) > 0 and len(consonants) > 0 and (vowels[0] != consonants[0] and (len(vowels) == len(consonants) and all(vowels[i] != consonants[i] for i in range(len(vowels)))))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))"
+        ],
+        "3": [
+            "def is_alt(s): \n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in range(len(s) - 1):\n        if (s[i] in v and s[i+1] in v) or (s[i] not in v and s[i+1] not in v):\n            return False\n    return True",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s)\n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s)\n    return len(vowels) > 0 and len(consonants) > 0 and (vowels[0] != consonants[0] and (len(vowels) == len(consonants) and all(vowels[i] != consonants[i] for i in range(len(vowels)))))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))"
+        ],
+        "4": [
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstvwxyz]', s)\n    return bool(len(vowels) == len(consonants))"
+        ]
+    },
+    "1": {
+        "0": [
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s) \n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s) \n    if len(vowels) != len(consonants): \n        return False \n    alt = True \n    for vowel, consonant in zip(vowels, consonants): \n        if s.find(vowel) < s.find(consonant): \n            return False \n    return alt",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True"
+        ],
+        "1": [
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s)\n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s)\n    return len(vowels) > 0 and len(consonants) > 0 and (vowels[0] != consonants[0] and (len(vowels) == len(consonants) and all(vowels[i] != consonants[i] for i in range(len(vowels)))))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s): \n    vowels = 'aeiou'\n    res = []\n    for char in s:\n        if char in vowels:\n            res.append(1)\n        else:\n            res.append(0)\n    for i in range(len(res)-1):\n        if res[i] == res[i+1]:\n            return False\n    return True",
+            "def is_alt(s): \n    if len(s) <= 1:\n        return True\n    vowels = 'aeiou'\n    prev_was_vowel = s[0] in vowels\n    for char in s[1:]:\n        if char in vowels == prev_was_vowel:\n            return False\n        prev_was_vowel = char in vowels\n    return True"
+        ],
+        "2": [
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s)\n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s)\n    return len(vowels) > 0 and len(consonants) > 0 and (vowels[0] != consonants[0] and (len(vowels) == len(consonants) and all(vowels[i] != consonants[i] for i in range(len(vowels)))))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))"
+        ],
+        "3": [
+            "def is_alt(s): \n    vowels = re.findall(r'[aeiou]', s)\n    consonants = re.findall(r'[bcdfghjklmnpqrstvwxyz]', s)\n    return len(vowels) > 0 and len(consonants) > 0 and (vowels[0] != consonants[0] and (len(vowels) == len(consonants) and all(vowels[i] != consonants[i] for i in range(len(vowels)))))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))"
+        ],
+        "4": [
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstvwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s): \n    if len(s) <= 1:\n        return True\n    vowels = 'aeiou'\n    prev_is_vowel = s[0] in vowels\n    for char in s[1:]:\n        if (prev_is_vowel and char in vowels) or (not prev_is_vowel and char.isalpha() and char not in vowels):\n            return False\n        prev_is_vowel = char in vowels\n    return True"
+        ]
+    },
+    "2": {
+        "0": [
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):  \n    s = re.sub('b', '', s)\n    v = ['a', 'e', 'i', 'o', 'u']\n    for i in v:\n        s = s.replace(i, '')\n    if len(s) % 2 == 0:\n        return False\n    else:\n        return True",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))"
+        ],
+        "1": [
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s): \n    vowels = 'aeiou'\n    res = []\n    for char in s:\n        if char in vowels:\n            res.append(1)\n        else:\n            res.append(0)\n    for i in range(len(res)-1):\n        if res[i] == res[i+1]:\n            return False\n    return True",
+            "def is_alt(s): \n    if len(s) <= 1:\n        return True\n    vowels = 'aeiou'\n    prev_was_vowel = s[0] in vowels\n    for char in s[1:]:\n        if char in vowels == prev_was_vowel:\n            return False\n        prev_was_vowel = char in vowels\n    return True"
+        ],
+        "2": [
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))"
+        ],
+        "3": [
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstwxyz]', s)\n    return bool(len(vowels) == len(consonants))"
+        ],
+        "4": [
+            "def is_alt(s):\n    vowels = re.findall('[aeiou]', s)\n    consonants = re.findall('[bcdfghjklmnpqrstvwxyz]', s)\n    return bool(len(vowels) == len(consonants))",
+            "def is_alt(s): \n    if len(s) <= 1:\n        return True\n    vowels = 'aeiou'\n    prev_is_vowel = s[0] in vowels\n    for char in s[1:]:\n        if (prev_is_vowel and char in vowels) or (not prev_is_vowel and char.isalpha() and char not in vowels):\n            return False\n        prev_is_vowel = char in vowels\n    return True"
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "0": [
+        "assert is_alt(\"python\") == False",
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"coding\") == True",
+        "assert is_alt(\"banana\") == True",
+        "assert is_alt(\"amazon\") == True"
+    ],
+    "1": [
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"bcdfg\") == True",
+        "assert is_alt(\"aeeiioouu\") == False",
+        "assert is_alt(\"ababab\") == True",
+        "assert is_alt(\"bbbbbb\") == False",
+        "assert is_alt(\"a\") == True",
+        "assert is_alt(\"\") == True",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"mom\") == False"
+    ],
+    "2": [
+        "assert is_alt(\"apple\") == False",
+        "assert is_alt(\"a\") == True",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"bcdfghjklmnpqrstvwxyz\") == True",
+        "assert is_alt(\"amazon\") == True"
+    ],
+    "3": [
+        "assert is_alt(\"ababababa\") == True",
+        "assert is_alt(\"qwertyuiop\") == True",
+        "assert is_alt(\"aeioudfg\") == True",
+        "assert is_alt(\"a\") == True",
+        "assert is_alt(\"aaabbbccc\") == False",
+        "assert is_alt(\"ba\") == True",
+        "assert is_alt(\"aeiou\") == True",
+        "assert is_alt(\"abcdabcd\") == False",
+        "assert is_alt(\"amazon\") == True"
+    ]
+}

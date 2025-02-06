@@ -1,0 +1,42 @@
+{
+    "0": [
+        "assert is_bored(\"I am bored. I am so bored! I am not bored.\") == 3",
+        "assert is_bored(\"I\") == 1",
+        "assert is_bored(\"Are you bored?\") == 0",
+        "assert is_bored(\"I am bored. What about you?\") == 2",
+        "assert is_bored(\"I am bored. Are you bored? I am not bored!\") == 2",
+        "assert is_bored(\"I am bored. I am tired. I am hungry.\") == 3",
+        "assert is_bored(\"No boredoms here!\") == 0",
+        "assert is_bored(\"I am bored. Are you bored? Why are you bored!\") == 2",
+        "assert is_bored(\"I am not bored at all.\") == 1"
+    ],
+    "1": [
+        "assert is_bored(\"I am I am I am! I am I am I am?\") == 6",
+        "assert is_bored(\"I am bored. I am tired! I am hungry?\") == 3",
+        "assert is_bored(\"I am excited. I am happy. I am not bored.\") == 3",
+        "assert is_bored(\"I am happy. I am excited! I am content?\") == 0",
+        "assert is_bored(\"I am bored? Are you bored?\") == 1",
+        "assert is_bored(\"I am bored. I am tired. I am hungry. I am not bored anymore.\") == 4",
+        "assert is_bored(\"I am bored! How about you?\") == 1",
+        "assert is_bored(\"I am bored. I am tired.\") == 2",
+        "assert is_bored(\"I am I am I am.\") == 3"
+    ],
+    "2": [
+        "assert is_bored(\"I am bored. I am tired? I am hungry!\") == 3",
+        "assert is_bored(\"I am bored! I am tired! I am hungry!\") == 3",
+        "assert is_bored(\"I am bored. I am tired. I am hungry!\") == 3",
+        "assert is_bored(\"I am bored? I am tired. I am hungry.\") == 1",
+        "assert is_bored(\"I am tired. I am bored.\") == 2",
+        "assert is_bored(\"I am bored. I am tired? I am hungry.\") == 2",
+        "assert is_bored(\"I am bored. I am bored. I am bored.\") == 3"
+    ],
+    "3": [
+        "assert is_bored(\"I am bored. I am tired? I am hungry!\") == 3",
+        "assert is_bored(\"I am bored! I am tired! I am hungry!\") == 3",
+        "assert is_bored(\"\") == 0",
+        "assert is_bored(\"You are bored. I am tired. He is hungry.\") == 1",
+        "assert is_bored(\"I am tired! I am bored. I am hungry?\") == 3",
+        "assert is_bored(\"I am bored.\") == 1",
+        "assert is_bored(\"I am bored. I am bored. I am bored.\") == 3"
+    ]
+}

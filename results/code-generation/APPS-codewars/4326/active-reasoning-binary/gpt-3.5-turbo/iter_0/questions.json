@@ -1,0 +1,47 @@
+{
+    "0": [
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria']) == \"\u00a36.90\"",
+        "assert london_city_hacker(['Victoria', 1, 'Northern', 243, 'Central']) == \"\u00a36.90\"",
+        "assert london_city_hacker(['Central', 1, 243, 'Northern', 'Victoria']) == \"\u00a37.90\"",
+        "assert london_city_hacker([1, 'Central', 'Victoria', 'Northern', 243]) == \"\u00a37.90\"",
+        "assert london_city_hacker([243]) == '\u00a31.50'",
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria']) == '\u00a38.40'",
+        "assert london_city_hacker(['Northern', 'Central']) == '\u00a34.80'",
+        "assert london_city_hacker([243, 1]) == '\u00a33.00'",
+        "assert london_city_hacker(['Victoria', 'Central', 1, 'Northern', 243]) == \"\u00a36.90\"",
+        "assert london_city_hacker(['Northern']) == '\u00a32.40'"
+    ],
+    "1": [
+        "assert london_city_hacker([1, 2, 3, 4, 5]) == '\u00a37.50'",
+        "assert london_city_hacker(['Central', 243, 'Victoria']) == '\u00a35.40'",
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria']) == '\u00a36.90'",
+        "assert london_city_hacker(['Northern', 'Central', 1, 'Victoria']) == '\u00a34.50'",
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria']) == '\u00a38.40'",
+        "assert london_city_hacker(['Picadilly', 24, 'Central', 'District']) == '\u00a37.20'",
+        "assert london_city_hacker([15, 26, 'Central', 'Victoria', 105]) == '\u00a36.90'",
+        "assert london_city_hacker([]) == '\u00a30.00'",
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria', 'Picadilly', 24, 'Central', 'District']) == '\u00a315.60'",
+        "assert london_city_hacker(['Picadilly', 24, 'Central', 'District', 15, 26, 'Central', 'Victoria', 105]) == '\u00a314.10'"
+    ],
+    "2": [
+        "assert london_city_hacker(['Northern', 'Victoria']) == '\u00a34.80'",
+        "assert london_city_hacker([1, 2, 3, 4, 5]) == '\u00a37.50'",
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria']) == '\u00a36.90'",
+        "assert london_city_hacker(['Central', 243, 'Victoria']) == '\u00a35.40'",
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria']) == '\u00a38.40'",
+        "assert london_city_hacker(['Picadilly', 24, 'Central', 'District', 15, 26, 'Central', 'Victoria', 105]) == '\u00a39.30'",
+        "assert london_city_hacker(['Northern', 'Central', 1, 2, 3, 4, 5, 'Victoria']) == '\u00a311.90'",
+        "assert london_city_hacker(['Northern', 'Central', 243, 1, 'Victoria', 'Picadilly', 24, 'Central', 'District']) == '\u00a312.60'",
+        "assert london_city_hacker([15, 26, 'Central', 'Victoria', 105]) == '\u00a36.90'"
+    ],
+    "3": [
+        "assert london_city_hacker(['Northern']) == '\u00a32.40'",
+        "assert london_city_hacker(['Central', '243', 'Victoria']) == '\u00a33.90'",
+        "assert london_city_hacker([243, 1, 10, 456, 65, 25]) == '\u00a37.50'",
+        "assert london_city_hacker(['Victoria', 243]) == '\u00a33.90'",
+        "assert london_city_hacker([243]) == '\u00a31.50'",
+        "assert london_city_hacker(['Northern', '1', '1']) == '\u00a33.00'",
+        "assert london_city_hacker([]) == '\u00a30.00'",
+        "assert london_city_hacker(['Central', 'Victoria']) == '\u00a32.40'"
+    ]
+}

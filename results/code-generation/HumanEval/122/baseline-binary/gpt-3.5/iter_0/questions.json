@@ -1,0 +1,23 @@
+{
+    "0": [
+        "assert add_elements([10, 20, 30, 40, 50], 3) == 60",
+        "assert add_elements([15, 25, 35, 45, 55], 4) == 120",
+        "assert add_elements([11, 22, 33, 44, 55, 66], 6) == 176"
+    ],
+    "1": [
+        "assert add_elements([100, 200, 300, 400, 500], 5) == 0",
+        "assert add_elements([5, 10, 15, 20, 25], 4) == 50"
+    ],
+    "2": [
+        "assert add_elements([5, 15, 25, 35, 45], 4) == 80"
+    ],
+    "3": [
+        "assert add_elements([99, 101, 202, 303, 404], 3) == 303",
+        "assert add_elements([5, 15, 25, 35, 45], 5) == 80",
+        "assert add_elements([10, 20, 30, 40, 50], 5) == 100",
+        "assert add_elements([10, 20, 30, 40, 50], 2) == 30",
+        "assert add_elements([11, 22, 33, 44, 55], 5) == 165",
+        "assert add_elements([10, 20, 30, 40, 50], 1) == 10",
+        "assert add_elements([5, 15, 25, 35, 45], 1) == 5"
+    ]
+}

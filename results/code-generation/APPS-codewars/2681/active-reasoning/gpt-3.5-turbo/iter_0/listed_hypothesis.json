@@ -1,0 +1,186 @@
+{
+    "0": [
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial = initial * proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    \n    while initial > 1:\n        initial = initial * proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    \n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    if initial <= 1:\n        return 0\n    else:\n        bounces = 0\n        while initial > 1:\n            initial = initial * proportion\n            bounces += 1\n        return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    \n    while height > 1:\n        height = height * proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    count = 0\n    while initial > 1:\n        initial *= proportion\n        count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    \n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    \n    while height > 1:\n        height = height * proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    while height > 1:\n        height *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    if initial <= 1:\n        return 0\n    else:\n        return 1 + bouncing_ball(initial * proportion, proportion)",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    while height > 1:\n        height *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    \n    while height > 1:\n        height = height * proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    num_bounces = 0\n    while initial > 1:\n        initial *= proportion\n        num_bounces += 1\n    return num_bounces\n\nprint(bouncing_ball(10, 0.2))",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    \n    while initial > 1:\n        initial = initial * proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    count = 0\n    while initial > 1:\n        initial = initial * proportion\n        count += 1\n    return count",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    \n    while initial > 1:\n        initial = initial * proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    \n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n        \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    \n    while height > 1:\n        height = height * proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    count = 0\n    while initial > 1:\n        initial *= proportion\n        count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    \n    while height > 1:\n        height = height * proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    \n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    \n    return bounces\n\nprint(bouncing_ball(10, 0.2))\nprint(bouncing_ball(15, 0.4))\nprint(bouncing_ball(4, 0.5))\nprint(bouncing_ball(30, 0.3))",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    while height > 1:\n        height = height * proportion\n        bounces += 1\n    return bounces\n\nprint(bouncing_ball(10, 0.2)) # 2\nprint(bouncing_ball(15, 0.4)) # 3",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    count = 0\n    while initial > 1:\n        initial *= proportion\n        count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    count = 0\n    while initial > 1:\n        initial = initial * proportion\n        count += 1\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    \n    while height > 1:\n        height *= proportion\n        bounces += 1\n    \n    return bounces\n\nprint(bouncing_ball(10, 0.2))   # Expected output: 2\nprint(bouncing_ball(15, 0.4))   # Expected output: 3\nprint(bouncing_ball(30, 0.3))   # Expected output: 3",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    num_bounces = 0\n    while initial > 1:\n        initial *= proportion\n        num_bounces += 1\n    return num_bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    num_bounces = 0\n    \n    while initial > 1:\n        initial *= proportion\n        num_bounces += 1\n    \n    return num_bounces",
+            "logp": null
+        },
+        {
+            "content": "def bouncing_ball(initial, proportion):\n    height = initial\n    bounces = 0\n    \n    while height > 1:\n        height *= proportion\n        bounces += 1\n    \n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "```python\n    count = 0\n    while initial > 1:\n        initial *= proportion\n        count += 1\n    return count\n```",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    while initial > 1:\n        initial *= proportion\n        bounces += 1\n    return bounces",
+            "logp": null
+        },
+        {
+            "content": "import math\n\ndef bouncing_ball(initial, proportion):\n    bounces = 0\n    \n    while initial > 1:\n        initial = initial * proportion\n        bounces += 1\n        \n    return bounces",
+            "logp": null
+        }
+    ]
+}

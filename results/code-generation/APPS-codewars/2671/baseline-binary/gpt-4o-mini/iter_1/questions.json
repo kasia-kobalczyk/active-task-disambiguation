@@ -1,0 +1,17 @@
+{
+    "0": [
+        "assert cat_mouse(\"...m....D....C.......\", 10) == 'Protected!'",
+        "assert cat_mouse(\"..C.....m.\", 5) == 'Caught!'"
+    ],
+    "1": [
+        "assert cat_mouse(\"C....m.....\", 10) == 'Escaped!'",
+        "assert cat_mouse(\"C...m\", 5) == 'Caught!'"
+    ],
+    "2": [
+        "assert cat_mouse(\"C...m\", 5) == 'Caught!'",
+        "assert cat_mouse(\"C....m\", 5) == 'Escaped!'"
+    ],
+    "3": [
+        "assert cat_mouse(\"C....m\", 5) == 'Escaped!'"
+    ]
+}

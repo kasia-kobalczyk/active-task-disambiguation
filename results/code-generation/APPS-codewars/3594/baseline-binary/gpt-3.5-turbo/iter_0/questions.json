@@ -1,0 +1,19 @@
+{
+    "0": [
+        "assert is_isogram(\"Hippopotamus\") == True",
+        "assert is_isogram(\"\") == False",
+        "assert is_isogram(123) == False"
+    ],
+    "1": [
+        "assert is_isogram('hello') == False",
+        "assert is_isogram('$@!#$%^&*()') == False",
+        "assert is_isogram('') == False"
+    ],
+    "2": [
+        "assert is_isogram('Isogram') == True",
+        "assert is_isogram('hello123') == False"
+    ],
+    "3": [
+        "assert is_isogram('aaa') == False"
+    ]
+}

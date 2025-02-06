@@ -1,0 +1,41 @@
+{
+    "0": [
+        "assert custom_fib([1,1],[0,1],4) == 5",
+        "assert custom_fib([1, 1], [0, 1], 3) == 3",
+        "assert custom_fib([1,1],[0,1],3) == 3",
+        "assert custom_fib([3,5,2],[0,1,2],4) == 17",
+        "assert custom_fib([3, 5, 2], [0, 1, 2], 4) == 17",
+        "assert custom_fib([1, 1], [0, 1], 4) == 5",
+        "assert custom_fib([1, 1], [0, 1], 2) == 2",
+        "assert custom_fib([1,1],[0,1],2) == 2"
+    ],
+    "1": [
+        "assert custom_fib([0, 1, 1], [1, 2, 0], 6) == 3",
+        "assert custom_fib([0, 0, 1], [2, 0, 1], 8) == 1",
+        "assert custom_fib([4, 5, 6], [1, 2, 0], 7) == 19",
+        "assert custom_fib([1, 2, 3], [0, 1], 7) == 21",
+        "assert custom_fib([1, 2, 3], [0, 1, 2], 6) == 12",
+        "assert custom_fib([4, 1, 2], [0, 2, 1], 5) == 11",
+        "assert custom_fib([2, 3], [0, 1], 5) == 13"
+    ],
+    "2": [
+        "assert custom_fib([0, 0, 1], [2, 1], 6) == 2",
+        "assert custom_fib([1, 1, 1], [0, 1, 2], 6) == 5",
+        "assert custom_fib([2, 3, 5], [0, 1, 2], 5) == 22",
+        "assert custom_fib([2, 3, 5], [0, 2], 5) == 19",
+        "assert custom_fib([10, 20, 30], [0, 1], 6) == 150",
+        "assert custom_fib([4, 6], [1, 0], 5) == 28",
+        "assert custom_fib([4, 6], [1, 0], 4) == 40",
+        "assert custom_fib([1, 2, 3], [0, 2], 6) == 21"
+    ],
+    "3": [
+        "assert custom_fib([0, 0, 1], [2, 0, 1], 8) == 1",
+        "assert custom_fib([4, 5, 6], [1, 2, 0], 7) == 19",
+        "assert custom_fib([4, 6], [1, 0], 5) == 34",
+        "assert custom_fib([1, 2, 3], [0, 1, 2], 6) == 12",
+        "assert custom_fib([2, 3, 5], [0, 2], 3) == 10",
+        "assert custom_fib([2, 3], [0, 1], 5) == 13",
+        "assert custom_fib([1, 0, 1], [0, 1, 2], 6) == 5",
+        "assert custom_fib([10, 20, 30], [0, 1], 5) == 100"
+    ]
+}

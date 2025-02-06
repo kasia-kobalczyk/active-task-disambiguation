@@ -1,0 +1,86 @@
+{
+    "0": [
+        {
+            "content": "def solve(a,b):\n    res = 0\n    for i in range((a+1)//2,(b//2)+1):\n        if a <= 2*i and 2*i <= b:\n            if not sieve[i]:\n                res += PRIMES[2*i]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    res = 0\n    for i in range((a+1)//2,(b//2)+1):\n        if a <= 2*i and 2*i <= b:\n            if not sieve[i]:\n                res += PRIMES[2*i]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    res = 0\n    for i in range((a+1)//2,(b//2)+1):\n        if a <= 2*i and 2*i <= b:\n            if not sieve[i]:\n                res += PRIMES[2*i]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    res = 0\n    for i in range((a+1)//2,(b//2)+1):\n        if a <= 2*i and 2*i <= b:\n            if not sieve[i]:\n                res += PRIMES[2*i]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    res = 0\n    for i in range((a+1)//2,(b//2)+1):\n        if a <= 2*i and 2*i <= b:\n            if not sieve[i]:\n                res += PRIMES[2*i]\n    return res",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n    return sum(i for i in DOMINANTS if a <= i <= b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n    return sum(i for i in DOMINANTS if a <= i <= b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n    return sum(i for i in DOMINANTS if a <= i <= b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n    return sum(i for i in DOMINANTS if a <= i <= b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n    return sum(i for i in DOMINANTS if a <= i <= b)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def solve(a,b):\n    total = 0\n    for i in range(len(DOMINANTS)-1):\n        if DOMINANTS[i] > b: break\n        if a <= DOMINANTS[i]:\n            total += DOMINANTS[i]\n    return total",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n    return sum(i for i in DOMINANTS if a <= i <= b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    SUM = 0\n    for p in DOMINANTS:\n        if a <= p <= b:\n            SUM += p\n    return SUM",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def solve(a,b):\n    total = 0\n    for i in range(len(DOMINANTS)-1):\n        if DOMINANTS[i] > b: break\n        if a <= DOMINANTS[i]:\n            total += DOMINANTS[i]\n    return total",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n    return sum(i for i in DOMINANTS if a <= i <= b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    SUM = 0\n    for p in DOMINANTS:\n        if a <= p <= b:\n            SUM += p\n    return SUM",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def solve(a,b):\n    total = 0\n    for i in range(len(DOMINANTS)-1):\n        if DOMINANTS[i] > b: break\n        if a <= DOMINANTS[i]:\n            total += DOMINANTS[i]\n    return total",
+            "logp": null
+        },
+        {
+            "content": "def solve(a, b):\n    DOMINANTS = []\n    for p in PRIMES:\n        if p >= len(PRIMES): break\n        DOMINANTS.append(PRIMES[p])\n    return sum(i for i in DOMINANTS if a <= i <= b)",
+            "logp": null
+        },
+        {
+            "content": "def solve(a,b):\n    SUM = 0\n    for p in DOMINANTS:\n        if a <= p <= b:\n            SUM += p\n    return SUM",
+            "logp": null
+        }
+    ]
+}

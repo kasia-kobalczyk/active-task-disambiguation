@@ -1,0 +1,18 @@
+{
+    "0": [
+        "assert total_match(['a', 'b', 'c'], ['abc', 'def']) == ['a', 'b', 'c']",
+        true
+    ],
+    "1": [
+        "assert total_match(['abc', 'def'], ['a', 'b', 'c']) == ['a', 'b', 'c']",
+        true
+    ],
+    "2": [
+        "assert total_match(['a', 'b'], ['c', 'd']) == ['a', 'b']",
+        true
+    ],
+    "3": [
+        "assert total_match(['abc', 'def'], ['abcd', 'cdef']) == ['abc', 'def']",
+        true
+    ]
+}

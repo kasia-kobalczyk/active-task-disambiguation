@@ -1,0 +1,138 @@
+{
+    "0": [
+        {
+            "content": "def max_fill(grid, capacity):\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n    # Initialize variables\n    num_buckets = len(grid[0])  # Number of buckets is equal to the number of wells in a row\n    num_lowerings = 0  # Counter for the number of times the buckets need to be lowered\n\n    # Iterate over each column (well) in the grid\n    for col in range(len(grid[0])):\n        # Calculate the total amount of water in the current well\n        total_water = sum([grid[row][col] for row in range(len(grid))])\n\n        # Calculate the number of times the buckets need to be lowered to empty the well\n        num_lowerings += math.ceil(total_water / capacity)\n\n    # Return the total number of times the buckets need to be lowered\n    return num_lowerings",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_times = 0\n    total_water = 0\n    \n    for row in grid:\n        well_water = sum(row)\n        total_water += well_water\n        \n        while well_water > capacity:\n            num_times += 1\n            well_water -= capacity\n        \n    num_times += math.ceil(total_water / capacity)\n    \n    return num_times",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    import math\n\n    # Calculate the total number of units of water in the grid\n    total_water = sum(sum(row) for row in grid)\n\n    # Calculate the number of times the buckets need to be lowered\n    num_lowerings = math.ceil(total_water / capacity)\n\n    return num_lowerings",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    # calculate the total number of units of water in the grid\n    total_water = sum([sum(row) for row in grid])\n    \n    # calculate the total number of times the buckets need to be lowered\n    num_buckets = math.ceil(total_water / capacity)\n    \n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    rows = len(grid)\n    cols = len(grid[0])\n    buckets = [0] * cols\n    total_moves = 0\n\n    for i in range(rows):\n        for j in range(cols):\n            if grid[i][j] == 1:\n                if buckets[j] == capacity:\n                    total_moves += 1\n                    buckets[j] = 0\n                buckets[j] += 1\n\n    return total_moves",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_wells = len(grid)\n    well_length = len(grid[0])\n    num_operations = 0\n    \n    for i in range(well_length):\n        well_water = 0\n        \n        for j in range(num_wells):\n            well_water += grid[j][i]\n        \n        num_operations += math.ceil(well_water / capacity)\n    \n    return num_operations",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    import math\n    \n    num_rows = len(grid)\n    num_cols = len(grid[0])\n    \n    max_fill = 0\n    for i in range(num_rows):\n        row_fill = sum(grid[i])\n        max_fill = max(max_fill, row_fill)\n    \n    num_operations = math.ceil(max_fill / capacity)\n    \n    return num_operations",
+            "logp": null
+        },
+        {
+            "content": "The problem can be solved by counting the number of 1s in each column of the grid and dividing it by the capacity. We need to round up the result to the nearest integer because each bucket can only hold a whole number of units of water.\n\nHere is the implementation of the function:\n\n```python\ndef max_fill(grid, capacity):\n    count = 0\n    for j in range(len(grid[0])):\n        col_sum = sum(grid[i][j] for i in range(len(grid)))\n        count += math.ceil(col_sum / capacity)\n    return count\n```\n\nLet's test the function with some example inputs:\n\n```python\ngrid = [[0, 0, 1, 1],\n        [1, 1, 1, 1],\n        [1, 0, 0, 1]]\ncapacity = 2\nprint(max_fill(grid, capacity))  # Output: 4\n\ngrid = [[1, 0, 1],\n        [0, 1, 0],\n        [1, 0, 1]]\ncapacity = 1\nprint(max_fill(grid, capacity))  # Output: 5\n```",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    import math\n\n    num_buckets = 0\n    for i in range(len(grid)):\n        row = grid[i]\n        for j in range(len(row)):\n            well = row[j]\n            if well == 1:\n                num_buckets += 1\n    \n    num_times_lowered = math.ceil(num_buckets / capacity)\n    return num_times_lowered",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n    total_wells = len(grid)\n    total_water = 0\n    \n    for i in range(total_wells):\n        total_water += sum(grid[i])\n    \n    return math.ceil(total_water / capacity)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def max_fill(grid, capacity):\n    # Calculate the number of wells and the length of each well\n    num_wells = len(grid)\n    well_length = len(grid[0])\n\n    # Initialize a variable to keep track of the number of times the buckets are lowered\n    num_times_lowered = 0\n\n    # Iterate through each well\n    for well in grid:\n        # Calculate the total amount of water in the current well\n        total_water = sum(well)\n\n        # Calculate the number of times the bucket needs to be lowered for the current well\n        num_times_lowered += math.ceil(total_water / capacity)\n\n    return num_times_lowered",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        num_buckets += math.ceil(sum(row) / capacity)\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    total_buckets = 0\n    for row in grid:\n        total_buckets += math.ceil(sum(row) / capacity)\n    return total_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    import math\n    \n    # Calculate the total number of wells\n    num_wells = len(grid)\n    \n    # Calculate the total number of buckets needed to empty the wells\n    total_buckets_needed = 0\n    \n    # Iterate through each well in the grid\n    for well in grid:\n        \n        # Count the number of units of water in the well\n        num_units = well.count(1)\n        \n        # Calculate the number of buckets needed to empty the well\n        buckets_needed = math.ceil(num_units / capacity)\n        \n        # Add the number of buckets needed to the total\n        total_buckets_needed += buckets_needed\n    \n    return total_buckets_needed",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    # Calculate the number of wells and the length of each well\n    num_wells = len(grid)\n    well_length = len(grid[0])\n    \n    # Initialize a variable to keep track of the number of times the bucket needs to be lowered\n    num_lowerings = 0\n    \n    # Iterate through each well\n    for i in range(num_wells):\n        # Calculate the total number of units of water in the well\n        well_water = sum(grid[i])\n        \n        # Calculate the number of times the bucket needs to be lowered for this well\n        num_lowerings += math.ceil(well_water / capacity)\n        \n    return num_lowerings",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    \n    for row in grid:\n        num_buckets += math.ceil(sum(row) / capacity)\n    \n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        num_buckets += math.ceil(sum(row) / capacity)\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "from typing import List\n\ndef max_fill(grid: List[List[int]], capacity: int) -> int:\n    rows = len(grid)\n    cols = len(grid[0])\n    total_buckets = 0\n\n    for row in grid:\n        well = sum(row)\n        buckets_needed = math.ceil(well / capacity)\n        total_buckets += buckets_needed\n\n    return total_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    rows = len(grid)\n    cols = len(grid[0])\n    count = 0\n\n    for j in range(cols):\n        row_sum = sum([grid[i][j] for i in range(rows)])\n        count += math.ceil(row_sum / capacity)\n    \n    return count",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        num_buckets += math.ceil(sum(row) / capacity)\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_fill = 0\n    for row in grid:\n        wells = sum(row)\n        num_fill += math.ceil(wells / capacity)\n    return num_fill",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    total_buckets = 0\n    for row in grid:\n        well = sum(row)\n        total_buckets += math.ceil(well / capacity)\n    return total_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        num_buckets += math.ceil(sum(row)/capacity)\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n    \"\"\"\n\n    num_buckets = 0\n    for row in grid:\n        total_water = sum(row)\n        num_buckets += math.ceil(total_water / capacity)\n\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        num_buckets += math.ceil(sum(row)/capacity)\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        water_needed = sum(row)\n        buckets_needed = math.ceil(water_needed / capacity)\n        num_buckets += buckets_needed\n    return num_buckets",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def max_fill(grid, capacity):\n    count = 0\n    while any(1 in row for row in grid):\n        for row in grid:\n            for i in range(len(row)):\n                if row[i] == 1:\n                    count += 1\n                    row[i:i+capacity] = [0]*capacity\n                    if len(row) > i+capacity:\n                        break\n    return count",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        num_buckets += math.ceil(sum(row)/capacity)\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        num_buckets += math.ceil(sum(row) / capacity)\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        num_buckets += math.ceil(sum(row)/capacity)\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    num_buckets = 0\n    for row in grid:\n        well_count = sum(row)\n        num_buckets += math.ceil(well_count / capacity)\n    return num_buckets",
+            "logp": null
+        },
+        {
+            "content": "def max_fill(grid, capacity):\n    count = 0\n    for row in grid:\n        count += math.ceil(sum(row)/capacity)\n    return count",
+            "logp": null
+        }
+    ]
+}

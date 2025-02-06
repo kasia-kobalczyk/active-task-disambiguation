@@ -1,0 +1,39 @@
+{
+    "0": [
+        "assert decode_cyclic(\"dcbefgh\") == \"abcdefg\"",
+        "assert decode_cyclic(\"bca\") == \"abc\"",
+        "assert decode_cyclic(\"de\") == \"de\"",
+        "assert decode_cyclic(\"bc\") == \"bc\"",
+        "assert decode_cyclic(\"cabde\") == \"abcde\"",
+        "assert decode_cyclic(\"bcaac\") == \"abcac\"",
+        "assert decode_cyclic(\"cbaabc\") == \"abcabc\""
+    ],
+    "1": [
+        "assert decode_cyclic(\"tuvwx\") == \"utvwx\"",
+        "assert decode_cyclic(\"defghi\") == \"fedgih\"",
+        "assert decode_cyclic(\"ca\") == \"ac\"",
+        "assert decode_cyclic(\"xyzabc\") == \"abcxyz\"",
+        "assert decode_cyclic(\"defghi\") == \"abcdef\"",
+        "assert decode_cyclic(\"abc\") == \"abc\"",
+        "assert decode_cyclic(\"jklmnopqrs\") == \"kjlmnopqrs\"",
+        "assert decode_cyclic(\"bca\") == \"abc\""
+    ],
+    "2": [
+        "assert decode_cyclic(\"defghi\") == \"fedgih\"",
+        "assert decode_cyclic(\"xyzabc\") == \"abcxyz\"",
+        "assert decode_cyclic(\"abc\") == \"abc\"",
+        "assert decode_cyclic(\"jklmnopqrs\") == \"kjlmnopqrs\"",
+        "assert decode_cyclic(\"cde\") == \"dec\"",
+        "assert decode_cyclic(\"ca\") == \"ac\"",
+        "assert decode_cyclic(\"bca\") == \"abc\""
+    ],
+    "3": [
+        "assert decode_cyclic(\"xyzabc\") == \"abcxyz\"",
+        "assert decode_cyclic(\"defghi\") == \"abcdef\"",
+        "assert decode_cyclic(\"hijklmnopqrs\") == \"kjihmlonpqrs\"",
+        "assert decode_cyclic(\"abc\") == \"abc\"",
+        "assert decode_cyclic(\"ca\") == \"ac\"",
+        "assert decode_cyclic(\"abcdefg\") == \"cbadefg\"",
+        "assert decode_cyclic(\"bca\") == \"abc\""
+    ]
+}

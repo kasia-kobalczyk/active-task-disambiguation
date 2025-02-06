@@ -1,0 +1,78 @@
+{
+    "0": [
+        {
+            "content": "def nth_chandos_number(n):\n    chandos = [0]\n    power = 1\n    while len(chandos) < n + 1:\n        for i in range(len(chandos)):\n            chandos.append(chandos[i] + power)\n        power *= 5\n    return chandos[n]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_powers = [5**i for i in range(20)]\n    dp = [0] * (n + 1)\n    dp[0] = 1\n\n    for power in chandos_powers:\n        for i in range(n, power - 1, -1):\n            dp[i] += dp[i - power]\n\n    result = []\n    for i in range(1, n + 1):\n        if dp[i] > 0:\n            result.append(i)\n\n    return result[n - 1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = [0]\n    i = 0\n    while len(chandos_numbers) < n + 1:\n        for j in range(i, -1, -1):\n            new_number = chandos_numbers[j] + 5 ** i\n            if new_number not in chandos_numbers:\n                chandos_numbers.append(new_number)\n        i += 1\n    chandos_numbers.sort()\n    return chandos_numbers[n]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    powers = [5**i for i in range(1, 15)]\n    chandos = []\n    def backtrack(index, current):\n        if current not in chandos:\n            chandos.append(current)\n        if len(chandos) == n:\n            return\n        for i in range(index, len(powers)):\n            if current + powers[i] not in chandos:\n                backtrack(i, current + powers[i])\n    backtrack(0, 0)\n    return chandos[n-1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    def generate_chandos_numbers():\n        chandos_numbers = []\n        i, j, k = 0, 0, 0\n        while True:\n            x = 5 ** i\n            y = 5 ** (i + 1)\n            z = 5 ** (i + 2)\n            if j == 0:\n                chandos_numbers.append(x)\n            if j > 0 and x + 5 ** j not in chandos_numbers:\n                chandos_numbers.append(x + 5 ** j)\n            if k > 0 and x + 5 ** k not in chandos_numbers:\n                chandos_numbers.append(x + 5 ** k)\n            if x + y not in chandos_numbers:\n                chandos_numbers.append(x + y)\n            if x + z not in chandos_numbers:\n                chandos_numbers.append(x + z)\n            if j > 0 and x + y + 5 ** j not in chandos_numbers:\n                chandos_numbers.append(x + y + 5 ** j)\n            if k > 0 and x + y + 5 ** k not in chandos_numbers:\n                chandos_numbers.append(x + y + 5 ** k)\n            if k > 0 and x + z + 5 ** k not in chandos_numbers:\n                chandos_numbers.append(x + z + 5 ** k)\n            if x + y + z not in chandos_numbers:\n                chandos_numbers.append(x + y + z)\n            if j > 0 and x + y + z + 5 ** j not in chandos_numbers:\n                chandos_numbers.append(x + y + z + 5 ** j)\n            if k > 0 and x + y + z + 5 ** k not in chandos_numbers:\n                chandos_numbers.append(x + y + z + 5 ** k)\n            j += 1\n            if j > i:\n                j = 0\n                k += 1\n            if k > i:\n                k = 0\n                i += 1\n            chandos_numbers.sort()\n            yield from chandos_numbers\n\n    chandos_numbers = generate_chandos_numbers()\n    for _ in range(n - 1):\n        next(chandos_numbers)\n    return next(chandos_numbers)",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_numbers = []\n    i = 1\n    while len(chandos_numbers) < n:\n        fifth_power = 5 ** i\n        for j in range(len(chandos_numbers)):\n            chandos_numbers.append(chandos_numbers[j] + fifth_power)\n        chandos_numbers.append(fifth_power)\n        i += 1\n    return chandos_numbers[n - 1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    powers = [5**i for i in range(24)]\n    dp = [0] * (n + 1)\n    dp[0] = 1\n    for p in powers:\n        for i in range(n, p - 1, -1):\n            dp[i] += dp[i - p]\n    res = []\n    for i in range(1, n + 1):\n        if dp[i] > 0:\n            res.append(i)\n    return res[n - 1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos = []\n    i = 0\n    while len(chandos) < n:\n        num = 5 ** i\n        j = i - 1\n        while j >= 0:\n            chandos.append(num + 5 ** j)\n            j -= 1\n        chandos.append(num)\n        i += 1\n    chandos.sort()\n    return chandos[n - 1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    powers = [5**i for i in range(15)]\n    chandos = set()\n    def generate_chandos(num, idx):\n        if num > 0:\n            generate_chandos(num, idx + 1)\n        if num in chandos:\n            return\n        chandos.add(num)\n        for i in range(idx, len(powers)):\n            if num + powers[i] not in chandos:\n                generate_chandos(num + powers[i], i)\n    generate_chandos(0, 0)\n    sorted_chandos = sorted(list(chandos))\n    return sorted_chandos[n - 1]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    powers = [5**i for i in range(1, 14)]  # generate powers of 5 up to 13\n    dp = [0]  # initialize dp array with 0\n    while len(dp) < n + 1:  # keep generating Chando's numbers until we have n+1 of them\n        for p in powers:\n            if dp[-1] + p not in dp:  # check if the new number is not already in the dp array\n                dp.append(dp[-1] + p)  # add the new number to the dp array\n                dp.sort()  # keep the dp array sorted\n    return dp[n]  # return the nth Chando's number",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_nums = [0]\n    power = 1\n    while len(chandos_nums) < n + 1:\n        val = 5 ** power\n        for i in range(len(chandos_nums)):\n            chandos_nums.append(chandos_nums[i] + val)\n        power += 1\n        chandos_nums = sorted(list(set(chandos_nums)))\n    return chandos_nums[n]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_nums = [0]\n    i = 1\n    while len(chandos_nums) < n + 1:\n        new_num = 5 ** i\n        for j in range(len(chandos_nums)):\n            chandos_nums.append(chandos_nums[j] + new_num)\n        i += 1\n    chandos_nums.sort()\n    return chandos_nums[n]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_sequence = [0]\n    a = 1\n    while len(chandos_sequence) < n + 1:\n        a *= 5\n        for i in range(len(chandos_sequence)):\n            chandos_sequence.append(chandos_sequence[i] + a)\n        chandos_sequence.sort()\n    return chandos_sequence[n]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos = [0]\n    i = 1\n    while len(chandos) < n + 1:\n        p5 = 5 ** i\n        for j in range(len(chandos)):\n            chandos.append(chandos[j] + p5)\n        i += 1\n    chandos.sort()\n    return chandos[n]",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def nth_chandos_number(n):\n    chandos_sequence = [0]\n    a = 1\n    while len(chandos_sequence) < n + 1:\n        a *= 5\n        for i in range(len(chandos_sequence)):\n            chandos_sequence.append(chandos_sequence[i] + a)\n        chandos_sequence.sort()\n    return chandos_sequence[n]",
+            "logp": null
+        },
+        {
+            "content": "def nth_chandos_number(n):\n    chandos = [0]\n    i = 1\n    while len(chandos) < n + 1:\n        p5 = 5 ** i\n        for j in range(len(chandos)):\n            chandos.append(chandos[j] + p5)\n        i += 1\n    chandos.sort()\n    return chandos[n]",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def nth_chandos_number(n):\n    chandos = [0]\n    i = 1\n    while len(chandos) < n + 1:\n        p5 = 5 ** i\n        for j in range(len(chandos)):\n            chandos.append(chandos[j] + p5)\n        i += 1\n    return sorted(chandos)[n]",
+            "logp": null
+        }
+    ]
+}

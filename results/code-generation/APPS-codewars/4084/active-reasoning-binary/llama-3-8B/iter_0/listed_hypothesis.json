@@ -1,0 +1,66 @@
+{
+    "0": [
+        {
+            "content": "def alex_mistakes(n, time): \n    mistake_time = 5 * 2 ** (n-1) \n    return round(time / (10 + mistake_time))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    mistake_time = 5 * 2 ** (n-1) \n    return round(time / (10 + mistake_time))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    mistake_time = 5 * 2 ** (n-1) \n    return round(time / (10 + mistake_time))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    mistake_time = 5 * 2 ** (n-1) \n    return round(time / (10 + mistake_time))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    mistake_time = 5 * 2 ** (n-1) \n    return round(time / (10 + mistake_time))",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        },
+        {
+            "content": "def alex_mistakes(n, time): \n    set_redemption = 5\n    pns = set_redemption\n    mistakes = 0\n    while pns < time: \n        mistakes += 1 \n        pns += 5 * 2 ** mistakes \n    return n - mistakes",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def alex_mistakes(n, time): \n    mistake_time = 5 * 2 ** (n-1) \n    return round(time / (10 + mistake_time))",
+            "logp": null
+        },
+        {
+            "content": "from math import log\n\ndef alex_mistakes(n, time):\n    redemption_time = 5\n    base_pushup_time = 5\n    mistake_mitigation_factor = 2\n    \n    if n > time:\n        return float('inf')\n    \n    base_kata_time = time - n * 1\n    if base_kata_time < 0:\n        return 0\n    \n    available_time_for_mistakes = base_kata_time / (1 + (base_pushup_time / (base_pushup_time * mistake_mitigation_factor)))\n    mistakes = log(redemption_time / available_time_for_mistakes, mistake_mitigation_factor)\n    \n    if mistakes < 0:\n        return 0\n    else:\n        return math.floor(mistakes)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def alex_mistakes(n, time): \n    total_pushup_time = 5\n    single_kata_time = 6\n    total_kata_time = single_kata_time * n\n    remaining_time = time - total_kata_time\n    remaining_pushups = remaining_time // total_pushup_time\n    return 0",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def alex_mistakes(n, time): \n    total_pushup_time = 5\n    single_kata_time = 6\n    total_kata_time = single_kata_time * n\n    remaining_time = time - total_kata_time\n    remaining_pushups = remaining_time // total_pushup_time\n    return 0",
+            "logp": null
+        }
+    ]
+}

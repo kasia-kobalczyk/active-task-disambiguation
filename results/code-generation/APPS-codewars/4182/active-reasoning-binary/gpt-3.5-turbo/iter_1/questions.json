@@ -1,0 +1,36 @@
+{
+    "0": [
+        "assert survivor(4) == False",
+        "assert survivor(4) == True",
+        "assert survivor(2) == False",
+        "assert survivor(2) == True",
+        "assert survivor(1) == True",
+        "assert survivor(3) == True",
+        "assert survivor(5) == False",
+        "assert survivor(7) == True"
+    ],
+    "1": [
+        "assert survivor(2) == False",
+        "assert survivor(10) == False",
+        "assert survivor(1) == True",
+        "assert survivor(3) == True",
+        "assert survivor(7) == True"
+    ],
+    "2": [
+        "assert survivor(10) == False",
+        "assert survivor(15) == False",
+        "assert survivor(1) == True",
+        "assert survivor(3) == True",
+        "assert survivor(15) == False\n# Explanation: 15 is not a survivor number as it gets deleted in the deletion process.",
+        "assert survivor(5) == False",
+        "assert survivor(7) == True",
+        "assert survivor(5) == True"
+    ],
+    "3": [
+        "assert survivor(30) == False",
+        "assert survivor(20) == False",
+        "assert survivor(10) == False",
+        "assert survivor(15) == True",
+        "assert survivor(25) == False"
+    ]
+}

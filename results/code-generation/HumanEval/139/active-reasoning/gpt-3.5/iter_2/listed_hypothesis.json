@@ -1,0 +1,174 @@
+{
+    "0": [
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    factorial = 1\n    for i in range(n, 0, -1):\n        factorial *= i * special_factorial(i-1)\n    return factorial\n\n# Testing the function\nprint(special_factorial(4)) # expected output: 288\nprint(special_factorial(5)) # expected output: 34560\nprint(special_factorial(1)) # expected output: 1",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n == 0:\n        return 1\n    else:\n        factorial = 1\n        for i in range(1, n + 1):\n            factorial *= i\n        return factorial * special_factorial(n - 1)",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n\n    factorial = 1\n    for i in range(n, 0, -1):\n        factorial *= factorial(i)\n    return factorial",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(n):\n        if n == 0:\n            return 1\n        else:\n            return n * factorial(n-1)\n\n    result = 1\n    for i in range(n, 0, -1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    factorial = 1\n    for i in range(n, 0, -1):\n        factorial *= i * factorial\n    return factorial",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n <= 0:\n        return 1\n    else:\n        result = 1\n        for i in range(n, 0, -1):\n            result *= factorial(i)\n        return result\n\ndef factorial(n):\n    if n <= 1:\n        return 1\n    else:\n        return n * factorial(n-1)",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    factorial = 1\n    for i in range(n, 0, -1):\n        factorial *= i * special_factorial(i - 1)\n    return factorial",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    factorial = 1\n    for i in range(1, n+1):\n        factorial *= i\n    return factorial",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    return result",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def special_factorial(n):\n    def factorial(n):\n        result = 1\n        for i in range(1, n+1):\n            result *= i\n        return result\n    \n    result = 1\n    for i in range(1, n+1):\n        result *= factorial(i)\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(n):\n        if n == 0 or n == 1:\n            return 1\n        else:\n            return n * factorial(n-1)\n    \n    result = 1\n    for i in range(1, n+1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n < 1:\n        return None\n    \n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(n):\n        if n == 0 or n == 1:\n            return 1\n        else:\n            return n * factorial(n-1)\n\n    result = 1\n    for i in range(n, 0, -1):\n        result *= factorial(i)\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(n):\n        if n == 0 or n == 1:\n            return 1\n        else:\n            return n * factorial(n-1)\n    \n    result = 1\n    for i in range(n, 0, -1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    while n > 0:\n        result *= factorial(n)\n        n -= 1\n    return result\n\ndef factorial(n):\n    result = 1\n    while n > 0:\n        result *= n\n        n -= 1\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    return result",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def special_factorial(n):\n    def factorial(n):\n        if n == 0:\n            return 1\n        else:\n            return n * factorial(n-1)\n    \n    result = 1\n    for i in range(1, n+1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    factorial = 1\n    for i in range(n, 0, -1):\n        sub_factorial = 1\n        for j in range(i, 0, -1):\n            sub_factorial *= j\n        factorial *= sub_factorial\n    return factorial",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        fact = 1\n        for j in range(i, 0, -1):\n            fact *= j\n        result *= fact\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n == 1:\n        return 1\n    else:\n        factorial = 1\n        for i in range(1, n+1):\n            factorial *= i\n        return factorial * special_factorial(n-1)",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(n):\n        if n == 0 or n == 1:\n            return 1\n        else:\n            return n * factorial(n-1)\n        \n    result = 1\n    for i in range(n, 0, -1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(n):\n        if n == 0 or n == 1:\n            return 1\n        else:\n            return n * factorial(n-1)\n\n    result = 1\n    for i in range(n, 0, -1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n < 1:\n        return None\n    \n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n < 1:\n        return 1\n    \n    result = 1\n    \n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    \n    return result",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def special_factorial(n):\n    if n == 0:\n        return 1\n    else:\n        result = 1\n        for i in range(1, n+1):\n            result *= factorial(i)\n        return result\n\ndef factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n == 0:\n        return 1\n    else:\n        result = 1\n        for i in range(1, n + 1):\n            result *= factorial(i)\n        return result\n\ndef factorial(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(n):\n        if n == 0:\n            return 1\n        else:\n            return n * factorial(n-1)\n    \n    result = 1\n    for i in range(1, n+1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(num):\n        if num == 0:\n            return 1\n        else:\n            return num * factorial(num-1)\n    \n    result = 1\n    for i in range(n, 0, -1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        factorial = 1\n        for j in range(i, 0, -1):\n            factorial *= j\n        result *= factorial\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n == 0:\n        return 1\n    \n    result = 1\n    for i in range(1, n+1):\n        factorial = 1\n        for j in range(1, i+1):\n            factorial *= j\n        result *= factorial\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(x):\n        if x == 0:\n            return 1\n        else:\n            return x * factorial(x-1)\n    \n    result = 1\n    for i in range(n, 0, -1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n == 0:\n        return 1\n    else:\n        result = 1\n        for i in range(n, 0, -1):\n            factorial = 1\n            for j in range(i, 0, -1):\n                factorial *= j\n            result *= factorial\n        return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    def factorial(num):\n        if num == 0:\n            return 1\n        else:\n            return num * factorial(num-1)\n    \n    result = 1\n    for i in range(n, 0, -1):\n        result *= factorial(i)\n    \n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    result = 1\n    for i in range(n, 0, -1):\n        subfactorial = 1\n        for j in range(i, 0, -1):\n            subfactorial *= j\n        result *= subfactorial\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def special_factorial(n):\n    if n == 0:\n        return 1\n    result = 1\n    for i in range(1, n+1):\n        result *= factorial(i)\n    return result\n\ndef factorial(n):\n    if n == 0:\n        return 1\n    result = 1\n    for i in range(1, n+1):\n        result *= i\n    return result",
+            "logp": null
+        }
+    ]
+}

@@ -1,0 +1,190 @@
+{
+    "0": [
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n    \n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n    \n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return \" \".join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        }
+    ],
+    "1": [
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n    \n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return \" \".join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n    \n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5)+1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return \" \".join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n    \n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        }
+    ],
+    "2": [
+        {
+            "content": "def words_in_sentence(sentence):\n    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]\n\n    words = sentence.split()\n    result = []\n\n    for word in words:\n        if len(word) in primes:\n            result.append(word)\n\n    return \" \".join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n    \n    words = sentence.split()\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    \n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    return ' '.join(prime_words)",
+            "logp": null
+        }
+    ],
+    "3": [
+        {
+            "content": "def words_in_sentence(sentence):\n    # Define a helper function to check if a number is prime\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    # Split the sentence into words\n    words = sentence.split()\n\n    # Filter the words based on their lengths\n    prime_words = [word for word in words if is_prime(len(word))]\n\n    # Join the prime words with a space\n    result = ' '.join(prime_words)\n\n    return result",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    return \" \".join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    return \" \".join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n    \n    words = sentence.split()\n    prime_words = []\n    for word in words:\n        if is_prime(len(word)):\n            prime_words.append(word)\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n    \n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return ' '.join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    result = []\n    for word in words:\n        if is_prime(len(word)):\n            result.append(word)\n    return \" \".join(result)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    primes = [word for word in words if is_prime(len(word))]\n    return ' '.join(primes)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        },
+        {
+            "content": "def words_in_sentence(sentence):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return ' '.join(prime_words)",
+            "logp": null
+        }
+    ]
+}

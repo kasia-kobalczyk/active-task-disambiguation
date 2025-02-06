@@ -1,0 +1,43 @@
+{
+    "0": [
+        "assert total_match(['abc', 'def'], ['ghi', 'jkl']) == ['abc', 'def']",
+        "assert total_match(['abc', 'def'], []) == []",
+        "assert total_match(['hello', 'world'], ['python', 'programming']) == ['hello', 'world']",
+        "assert total_match(['abc', 'de'], ['ghi', 'jkl']) == ['ghi', 'jkl']",
+        "assert total_match(['abc', 'def'], ['ghi', 'jk']) == ['abc', 'def']",
+        "assert total_match([], []) == []",
+        "assert total_match(['python', 'programming'], ['hello', 'world', 'hi']) == ['hello', 'world', 'hi']",
+        "assert total_match(['hello', 'world'], ['hi', 'there']) == ['hello', 'world']",
+        "assert total_match(['python', 'programming'], ['hello', 'world']) == ['hello', 'world']",
+        "assert total_match(['hello', 'world', 'hi'], ['python', 'programming']) == ['hello', 'world', 'hi']"
+    ],
+    "1": [
+        "assert total_match(['a', 'b'], ['c', 'd']) == ['a', 'b']",
+        "assert total_match(['abc', 'def', 'ghi'], ['jkl']) == ['abc', 'def', 'ghi']",
+        "assert total_match(['abc', 'def'], ['ghi']) == ['ghi']",
+        "assert total_match(['abc'], ['def']) == ['abc']",
+        "assert total_match([], ['def', 'ghi']) == ['def', 'ghi']",
+        "assert total_match([''], ['']) == ['']",
+        "assert total_match(['abc'], ['ghi', 'jkl']) == ['abc']",
+        "assert total_match(['abc', 'def', 'ghi'], []) == ['abc', 'def', 'ghi']",
+        "assert total_match(['abc', 'def'], ['ghi', 'jkl', 'mno']) == ['ghi', 'jkl', 'mno']"
+    ],
+    "2": [
+        "assert total_match(['abcde', 'fghij'], ['klmno', 'pqrst']) == ['klmno', 'pqrst']",
+        "assert total_match(['a', 'b', 'c'], ['d', 'e']) == ['d', 'e']",
+        "assert total_match(['abc', 'def'], ['ghi']) == ['ghi']",
+        "assert total_match(['a', 'b', 'c'], ['d', 'e', 'f']) == ['d', 'e', 'f']",
+        "assert total_match(['a', 'b'], ['c', 'd', 'e']) == ['c', 'd', 'e']",
+        "assert total_match(['aa', 'bbb'], ['cc', 'dd']) == ['cc', 'dd']",
+        "assert total_match(['abc', 'def'], ['a', 'b', 'c']) == ['a', 'b', 'c']"
+    ],
+    "3": [
+        "assert total_match(['abc', 'def'], ['gh', 'jkl']) == ['gh', 'jkl']",
+        "assert total_match(['a', 'b', 'c'], ['d', 'e']) == ['d', 'e']",
+        "assert total_match(['a', 'b'], []) == ['a', 'b']\n# Explanation: lst2 is empty, so the function should return lst1.",
+        "assert total_match(['abcd', 'efg'], ['hij', 'klm']) == ['abcd', 'efg']",
+        "assert total_match(['a', 'b'], ['cd', 'e']) == ['a', 'b']",
+        "assert total_match([], ['a', 'b']) == []",
+        "assert total_match(['aa', 'bbb'], ['cc', 'dd']) == ['cc', 'dd']"
+    ]
+}
