@@ -30,3 +30,16 @@ In order to run code generation with open source models from the huggingface lib
 
 The code to reproduce the 20 questions game results is available in this [repository](https://github.com/jumpynitro/ActiveTaskDisambiguation).
 
+## Citation
+
+```bibtex
+@inproceedings{
+kobalczyk2025active,
+title={Active Task Disambiguation with {LLM}s},
+author={Kasia Kobalczyk and Nicol{\'a}s Astorga and Tennison Liu and Mihaela van der Schaar},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=JAMxRSXLFz}
+}
+```
+
