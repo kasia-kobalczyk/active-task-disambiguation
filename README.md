@@ -26,3 +26,7 @@ In order to run code generation with open source models from the huggingface lib
 
 `src/code-generation/_execution.py` contains code for exectuing LLM-generated programs in a sandbox enivronment
 
+## The 20 questions game
+
+The code to reproduce the 20 questions game results is available in this [repository](https://github.com/jumpynitro/ActiveTaskDisambiguation).
+
